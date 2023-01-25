@@ -20,4 +20,5 @@ This repo will follow the development of an Home Assistant project based on real
 
 - C++
 - OpenCV
+- CMake
 - Some Web Framework
