@@ -1,0 +1,5 @@
+/home/savan/Downloads/HomeGPT Test/Intruder Detection/CMakeFiles/rebuild_cache.dir
+/home/savan/Downloads/HomeGPT Test/Intruder Detection/CMakeFiles/edit_cache.dir
+/home/savan/Downloads/HomeGPT Test/Intruder Detection/CMakeFiles/Detector.dir
+/home/savan/Downloads/HomeGPT Test/Intruder Detection/CMakeFiles/Trainner.dir
+/home/savan/Downloads/HomeGPT Test/Intruder Detection/CMakeFiles/DatasetCreator.dir
