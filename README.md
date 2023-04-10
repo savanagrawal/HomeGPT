@@ -9,8 +9,8 @@ This repo will follow the development of an Home Assistant project based on real
 ## Team Members
 
 [@savanagrawal](https://github.com/savanagrawal) - Savan Agrawal (GUID: 2781593A) - MSc in Robotics and AI<br>
-[@hrushisanap](https://github.com/hrushisanap) - Hrushi Sanap (GUID: 2819312S) - MSc in Robotics and AI<br>
-[@Adit-Chauhan](https://github.com/Adit-Chauhan) - Adit Chauhan (GUID: 2816809C) - MSc in Computer Systems Engineering<br>
+[@hrushisanap](https://github.com/hrushisanap) - Hrushikesh Sanap (GUID: 2819312S) - MSc in Robotics and AI<br>
+[@MustafaZari](https://github.com/MustafaZari) - Mustafa Zariwala (GUID: 2617991Z) - MSc in Robotics and AI<br>
 [@MiB3Avenger](https://github.com/MiB3Avenger) - Chinmay Nagrale (GUID: 2788044N) - MSc in Computer Systems Engineering<br>
 
 
@@ -28,4 +28,10 @@ To Build & Run (Windows)
 - C++
 - OpenCV
 - CMake
-- Some Web Framework
+- Raspbian
+
+## Hardware Requirements
+
+- Raspberry Pi 3 B
+- Camera
+- Microphone
