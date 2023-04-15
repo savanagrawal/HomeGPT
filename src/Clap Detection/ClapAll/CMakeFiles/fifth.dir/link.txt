@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/fifth.dir/fifth.cpp.o  -o fifth  /usr/local/lib/libportaudio.a -lm -lpthread 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/detectmic.dir/detectmic.cpp.o  -o detectmic  /usr/local/lib/libportaudio.a -lm -lpthread 

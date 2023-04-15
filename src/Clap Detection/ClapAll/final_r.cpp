@@ -6,34 +6,53 @@
 #include <complex>
 #include <limits>
 
-// Compute the FFT of a vector
+// Helper function to reverse bits of a number
+int reverse_bits(int num, int bit_length) {
+    int result = 0;
+    for (int i = 0; i < bit_length; i++) {
+        result = (result << 1) | (num & 1);
+        num >>= 1;
+    }
+    return result;
+}
+
+// Compute the iterative in-place FFT of a vector
 void fft(std::vector<std::complex<double>>& a, bool inverse) {
     int n = a.size();
-    if (n == 1) {
-        return;
+    int log_n = std::log2(n);
+
+    // Bit-reverse permutation
+    for (int i = 0; i < n; i++) {
+        int j = reverse_bits(i, log_n);
+        if (i < j) {
+            std::swap(a[i], a[j]);
+        }
     }
-    std::vector<std::complex<double>> a0(n / 2), a1(n / 2);
-    for (int i = 0; i < n / 2; i++) {
-        a0[i] = a[2 * i];
-        a1[i] = a[2 * i + 1];
+
+    // Iterative FFT
+    for (int len = 2; len <= n; len <<= 1) {
+        double angle = 2 * M_PI / len * (inverse ? -1 : 1);
+        std::complex<double> wn(std::cos(angle), std::sin(angle));
+        for (int i = 0; i < n; i += len) {
+            std::complex<double> w(1);
+            for (int j = 0; j < len / 2; j++) {
+                std::complex<double> u = a[i + j];
+                std::complex<double> v = a[i + j + len / 2] * w;
+                a[i + j] = u + v;
+                a[i + j + len / 2] = u - v;
+                w *= wn;
+            }
+        }
     }
-    fft(a0, inverse);
-    fft(a1, inverse);
-    std::complex<double> w(1, 0), wn(std::cos(2 * M_PI / n), std::sin(2 * M_PI / n));
+
+    // If inverse FFT, divide by n
     if (inverse) {
-        wn = std::conj(wn);
-    }
-    for (int i = 0; i < n / 2; i++) {
-        std::complex<double> t = w * a1[i];
-        a[i] = a0[i] + t;
-        a[i + n / 2] = a0[i] - t;
-        w *= wn;
-        if (inverse) {
-            a[i] /= 2.0;
-            a[i + n / 2] /= 2.0;
+        for (auto& x : a) {
+            x /= n;
         }
     }
 }
+
 
 //Compute the circular convolution of two vectors using the DFT
 std::vector<double> convolve(const std::vector<double>& a, const std::vector<double>& b) {

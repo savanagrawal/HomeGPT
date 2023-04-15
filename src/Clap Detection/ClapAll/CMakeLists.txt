@@ -1,15 +1,11 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 2.8)
+project( ClapDetection )
+find_package( portaudio REQUIRED )
+add_executable( fifth fifth.cpp )
+TARGET_LINK_LIBRARIES(fifth portaudio_static)
 
-project(FIRdemo)
+add_executable( detectmic detectmic.cpp )
+TARGET_LINK_LIBRARIES(detectmic portaudio_static)
 
-set (CMAKE_CXX_STANDARD 11)
-include(GNUInstallDirs)
-
-if (MSVC)
-	add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-endif()
-
-add_executable (second second.cpp)
-target_link_libraries(second fir_static)
-target_include_directories(second PRIVATE ..)
-
+add_executable( detectclap detectclap.cpp )
+TARGET_LINK_LIBRARIES(detectclap portaudio)

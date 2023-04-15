@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/detectclap.cpp
+iostream
+-
+cmath
+-
+portaudio.h
+-
+
