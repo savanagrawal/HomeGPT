@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/detectclap.dir/detectclap.cpp.o  -o detectclap  -Wl,-rpath,/usr/local/lib /usr/local/lib/libportaudio.so -lm -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/detectclap.dir/detectclap.cpp.o  -o detectclap  -Wl,-rpath,/usr/local/lib/portaudio/lib /usr/local/lib/portaudio/lib/libportaudio.so -lasound -lm -lpthread 

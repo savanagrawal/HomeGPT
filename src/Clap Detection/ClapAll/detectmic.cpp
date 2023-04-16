@@ -3,7 +3,7 @@
 #include <cstring>
 #include "portaudio.h"
 
-#define SAMPLE_RATE (44100)
+#define SAMPLE_RATE (8000)
 #define FRAMES_PER_BUFFER (1024)
 #define NUM_SECONDS (5)
 #define NUM_CHANNELS (1)
@@ -86,69 +86,69 @@ int main() {
 
     inputParameters.device = defaultDeviceIndex;
     inputParameters.channelCount = NUM_CHANNELS;
-inputParameters.sampleFormat = PA_SAMPLE_TYPE;
-inputParameters.suggestedLatency = 0.1; // Increase the suggested latency
-inputParameters.hostApiSpecificStreamInfo = NULL;
-numSamples = NUM_SECONDS * SAMPLE_RATE * NUM_CHANNELS;
-numBytes = numSamples * sizeof(float);
-recordedSamples = new (nothrow) float[numSamples];
-if (recordedSamples == nullptr) {
-    cout << "Error: Failed to allocate memory for recordedSamples." << endl;
+    inputParameters.sampleFormat = PA_SAMPLE_TYPE;
+    inputParameters.suggestedLatency = 0.1; // Increase the suggested latency
+    inputParameters.hostApiSpecificStreamInfo = NULL;
+    numSamples = NUM_SECONDS * SAMPLE_RATE * NUM_CHANNELS;
+    numBytes = numSamples * sizeof(float);
+    recordedSamples = new (nothrow) float[numSamples];
+    if (recordedSamples == nullptr) {
+        cout << "Error: Failed to allocate memory for recordedSamples." << endl;
+        Pa_Terminate();
+        return 1;
+    }
+    memset(recordedSamples, 0, numBytes);
+
+    UserData data;
+    data.recordedSamples = recordedSamples;
+    data.numSamples = numSamples;
+    data.frameIndex = 0;
+    data.outputFile = &outputFile;
+
+    err = Pa_OpenStream(&stream, &inputParameters, NULL, SAMPLE_RATE, FRAMES_PER_BUFFER,
+                        paClipOff, recordingCallback, &data);
+    if (err != paNoError) {
+        cout << "Error: Pa_OpenStream returned " << err << endl;
+        Pa_Terminate();
+        return 1;
+    }
+
+    err = Pa_StartStream(stream);
+    if (err != paNoError) {
+        cout << "Error: Pa_StartStream returned " << err << endl;
+        Pa_Terminate();
+        return 1;
+    }
+
+    cout << "Recording started..." << endl;
+
+    Pa_Sleep(NUM_SECONDS * 1000);
+
+    err = Pa_StopStream(stream);
+    if (err != paNoError) {
+        cout << "Error: Pa_StopStream returned " << err << endl;
+        Pa_Terminate();
+        return 1;
+    }
+
+    err = Pa_CloseStream(stream);
+    if (err != paNoError) {
+        cout << "Error: Pa_CloseStream returned " << err << endl;
+        Pa_Terminate();
+        return 1;
+    }
+
+    for (int i = 0; i < numSamples; i++) {
+        outputFile.write((const char *) &recordedSamples[i], sizeof(float));
+    }
+
+    outputFile.close();
+
     Pa_Terminate();
-    return 1;
-}
-memset(recordedSamples, 0, numBytes);
 
-UserData data;
-data.recordedSamples = recordedSamples;
-data.numSamples = numSamples;
-data.frameIndex = 0;
-data.outputFile = &outputFile;
+    delete[] recordedSamples;
 
-err = Pa_OpenStream(&stream, &inputParameters, NULL, SAMPLE_RATE, FRAMES_PER_BUFFER,
-                    paClipOff, recordingCallback, &data);
-if (err != paNoError) {
-    cout << "Error: Pa_OpenStream returned " << err << endl;
-    Pa_Terminate();
-    return 1;
-}
+    cout << "Recording stopped." << endl;
 
-err = Pa_StartStream(stream);
-if (err != paNoError) {
-    cout << "Error: Pa_StartStream returned " << err << endl;
-    Pa_Terminate();
-    return 1;
-}
-
-cout << "Recording started..." << endl;
-
-Pa_Sleep(NUM_SECONDS * 1000);
-
-err = Pa_StopStream(stream);
-if (err != paNoError) {
-    cout << "Error: Pa_StopStream returned " << err << endl;
-    Pa_Terminate();
-    return 1;
-}
-
-err = Pa_CloseStream(stream);
-if (err != paNoError) {
-    cout << "Error: Pa_CloseStream returned " << err << endl;
-    Pa_Terminate();
-    return 1;
-}
-
-for (int i = 0; i < numSamples; i++) {
-    outputFile.write((const char *) &recordedSamples[i], sizeof(float));
-}
-
-outputFile.close();
-
-Pa_Terminate();
-
-delete[] recordedSamples;
-
-cout << "Recording stopped." << endl;
-
-return 0;
+    return 0;
 }

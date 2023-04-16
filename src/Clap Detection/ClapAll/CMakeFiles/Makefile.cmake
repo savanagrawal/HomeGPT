@@ -11,10 +11,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "/usr/local/lib/cmake/portaudio/portaudioConfig.cmake"
-  "/usr/local/lib/cmake/portaudio/portaudioConfigVersion.cmake"
-  "/usr/local/lib/cmake/portaudio/portaudioTargets-debug.cmake"
-  "/usr/local/lib/cmake/portaudio/portaudioTargets.cmake"
+  "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioConfig.cmake"
+  "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioConfigVersion.cmake"
+  "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioTargets-debug.cmake"
+  "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioTargets.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -49,7 +49,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/third.dir/DependInfo.cmake"
+  "CMakeFiles/paex_record_c.dir/DependInfo.cmake"
+  "CMakeFiles/detectmic.dir/DependInfo.cmake"
   "CMakeFiles/detectclap.dir/DependInfo.cmake"
   "CMakeFiles/fifth.dir/DependInfo.cmake"
-  "CMakeFiles/detectmic.dir/DependInfo.cmake"
+  "CMakeFiles/paex_record.dir/DependInfo.cmake"
   )

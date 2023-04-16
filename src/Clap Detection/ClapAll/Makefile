@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll"
+CMAKE_SOURCE_DIR = "/home/pi/homegpt/src/Clap Detection/ClapAll"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll"
+CMAKE_BINARY_DIR = "/home/pi/homegpt/src/Clap Detection/ClapAll"
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named third
+
+# Build rule for target.
+third: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 third
+.PHONY : third
+
+# fast build rule for target.
+third/fast:
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/build
+.PHONY : third/fast
+
+#=============================================================================
+# Target rules for targets named paex_record_c
+
+# Build rule for target.
+paex_record_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 paex_record_c
+.PHONY : paex_record_c
+
+# fast build rule for target.
+paex_record_c/fast:
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/build
+.PHONY : paex_record_c/fast
+
+#=============================================================================
+# Target rules for targets named detectmic
+
+# Build rule for target.
+detectmic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detectmic
+.PHONY : detectmic
+
+# fast build rule for target.
+detectmic/fast:
+	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/build
+.PHONY : detectmic/fast
+
+#=============================================================================
 # Target rules for targets named detectclap
 
 # Build rule for target.
@@ -137,17 +176,17 @@ fifth/fast:
 .PHONY : fifth/fast
 
 #=============================================================================
-# Target rules for targets named detectmic
+# Target rules for targets named paex_record
 
 # Build rule for target.
-detectmic: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 detectmic
-.PHONY : detectmic
+paex_record: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 paex_record
+.PHONY : paex_record
 
 # fast build rule for target.
-detectmic/fast:
-	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/build
-.PHONY : detectmic/fast
+paex_record/fast:
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/build
+.PHONY : paex_record/fast
 
 detectclap.o: detectclap.cpp.o
 
@@ -230,17 +269,101 @@ fifth.cpp.s:
 	$(MAKE) -f CMakeFiles/fifth.dir/build.make CMakeFiles/fifth.dir/fifth.cpp.s
 .PHONY : fifth.cpp.s
 
+paex_record.o: paex_record.c.o
+
+.PHONY : paex_record.o
+
+# target to build an object file
+paex_record.c.o:
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/paex_record.c.o
+.PHONY : paex_record.c.o
+
+paex_record.i: paex_record.c.i
+
+.PHONY : paex_record.i
+
+# target to preprocess a source file
+paex_record.c.i:
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/paex_record.c.i
+.PHONY : paex_record.c.i
+
+paex_record.s: paex_record.c.s
+
+.PHONY : paex_record.s
+
+# target to generate assembly for a file
+paex_record.c.s:
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/paex_record.c.s
+.PHONY : paex_record.c.s
+
+paex_record.o: paex_record.cpp.o
+
+.PHONY : paex_record.o
+
+# target to build an object file
+paex_record.cpp.o:
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/paex_record.cpp.o
+.PHONY : paex_record.cpp.o
+
+paex_record.i: paex_record.cpp.i
+
+.PHONY : paex_record.i
+
+# target to preprocess a source file
+paex_record.cpp.i:
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/paex_record.cpp.i
+.PHONY : paex_record.cpp.i
+
+paex_record.s: paex_record.cpp.s
+
+.PHONY : paex_record.s
+
+# target to generate assembly for a file
+paex_record.cpp.s:
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/paex_record.cpp.s
+.PHONY : paex_record.cpp.s
+
+third.o: third.cpp.o
+
+.PHONY : third.o
+
+# target to build an object file
+third.cpp.o:
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/third.cpp.o
+.PHONY : third.cpp.o
+
+third.i: third.cpp.i
+
+.PHONY : third.i
+
+# target to preprocess a source file
+third.cpp.i:
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/third.cpp.i
+.PHONY : third.cpp.i
+
+third.s: third.cpp.s
+
+.PHONY : third.s
+
+# target to generate assembly for a file
+third.cpp.s:
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/third.cpp.s
+.PHONY : third.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... third"
+	@echo "... rebuild_cache"
+	@echo "... paex_record_c"
+	@echo "... detectmic"
 	@echo "... detectclap"
 	@echo "... fifth"
-	@echo "... detectmic"
+	@echo "... paex_record"
 	@echo "... detectclap.o"
 	@echo "... detectclap.i"
 	@echo "... detectclap.s"
@@ -250,6 +373,15 @@ help:
 	@echo "... fifth.o"
 	@echo "... fifth.i"
 	@echo "... fifth.s"
+	@echo "... paex_record.o"
+	@echo "... paex_record.i"
+	@echo "... paex_record.s"
+	@echo "... paex_record.o"
+	@echo "... paex_record.i"
+	@echo "... paex_record.s"
+	@echo "... third.o"
+	@echo "... third.i"
+	@echo "... third.s"
 .PHONY : help
 
 

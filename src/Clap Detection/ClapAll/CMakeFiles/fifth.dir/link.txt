@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/fifth.dir/fifth.cpp.o  -o fifth  /usr/local/lib/libportaudio.a -lm -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/fifth.dir/fifth.cpp.o  -o fifth  -Wl,-rpath,/usr/local/lib/portaudio/lib /usr/local/lib/portaudio/lib/libportaudio.so -lasound -lm -lpthread 

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/detectmic.cpp
+/home/pi/homegpt/src/Clap Detection/ClapAll/detectmic.cpp
 iostream
 -
 fstream
@@ -14,5 +14,7 @@ fstream
 cstring
 -
 portaudio.h
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/portaudio.h
+/home/pi/homegpt/src/Clap Detection/ClapAll/portaudio.h
+
+/usr/local/lib/portaudio/include/portaudio.h
 

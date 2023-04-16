@@ -1,5 +1,8 @@
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles/rebuild_cache.dir
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles/edit_cache.dir
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles/detectclap.dir
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles/fifth.dir
-/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles/detectmic.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/edit_cache.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/third.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/rebuild_cache.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/paex_record_c.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/detectmic.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/detectclap.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/fifth.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/paex_record.dir

@@ -44,18 +44,21 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll"
+CMAKE_SOURCE_DIR = "/home/pi/homegpt/src/Clap Detection/ClapAll"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll"
+CMAKE_BINARY_DIR = "/home/pi/homegpt/src/Clap Detection/ClapAll"
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/third.dir/all
+all: CMakeFiles/paex_record_c.dir/all
+all: CMakeFiles/detectmic.dir/all
 all: CMakeFiles/detectclap.dir/all
 all: CMakeFiles/fifth.dir/all
-all: CMakeFiles/detectmic.dir/all
+all: CMakeFiles/paex_record.dir/all
 
 .PHONY : all
 
@@ -65,11 +68,95 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/third.dir/clean
+clean: CMakeFiles/paex_record_c.dir/clean
+clean: CMakeFiles/detectmic.dir/clean
 clean: CMakeFiles/detectclap.dir/clean
 clean: CMakeFiles/fifth.dir/clean
-clean: CMakeFiles/detectmic.dir/clean
+clean: CMakeFiles/paex_record.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/third.dir
+
+# All Build rule for target.
+CMakeFiles/third.dir/all:
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/depend
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" --progress-num=11,12 "Built target third"
+.PHONY : CMakeFiles/third.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/third.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/third.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
+.PHONY : CMakeFiles/third.dir/rule
+
+# Convenience name for target.
+third: CMakeFiles/third.dir/rule
+
+.PHONY : third
+
+# clean rule for target.
+CMakeFiles/third.dir/clean:
+	$(MAKE) -f CMakeFiles/third.dir/build.make CMakeFiles/third.dir/clean
+.PHONY : CMakeFiles/third.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/paex_record_c.dir
+
+# All Build rule for target.
+CMakeFiles/paex_record_c.dir/all:
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/depend
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" --progress-num=9,10 "Built target paex_record_c"
+.PHONY : CMakeFiles/paex_record_c.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/paex_record_c.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/paex_record_c.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
+.PHONY : CMakeFiles/paex_record_c.dir/rule
+
+# Convenience name for target.
+paex_record_c: CMakeFiles/paex_record_c.dir/rule
+
+.PHONY : paex_record_c
+
+# clean rule for target.
+CMakeFiles/paex_record_c.dir/clean:
+	$(MAKE) -f CMakeFiles/paex_record_c.dir/build.make CMakeFiles/paex_record_c.dir/clean
+.PHONY : CMakeFiles/paex_record_c.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/detectmic.dir
+
+# All Build rule for target.
+CMakeFiles/detectmic.dir/all:
+	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/depend
+	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" --progress-num=3,4 "Built target detectmic"
+.PHONY : CMakeFiles/detectmic.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/detectmic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectmic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
+.PHONY : CMakeFiles/detectmic.dir/rule
+
+# Convenience name for target.
+detectmic: CMakeFiles/detectmic.dir/rule
+
+.PHONY : detectmic
+
+# clean rule for target.
+CMakeFiles/detectmic.dir/clean:
+	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/clean
+.PHONY : CMakeFiles/detectmic.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/detectclap.dir
@@ -78,14 +165,14 @@ clean: CMakeFiles/detectmic.dir/clean
 CMakeFiles/detectclap.dir/all:
 	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/depend
 	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" --progress-num=1,2 "Built target detectclap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" --progress-num=1,2 "Built target detectclap"
 .PHONY : CMakeFiles/detectclap.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/detectclap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectclap.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
 .PHONY : CMakeFiles/detectclap.dir/rule
 
 # Convenience name for target.
@@ -105,14 +192,14 @@ CMakeFiles/detectclap.dir/clean:
 CMakeFiles/fifth.dir/all:
 	$(MAKE) -f CMakeFiles/fifth.dir/build.make CMakeFiles/fifth.dir/depend
 	$(MAKE) -f CMakeFiles/fifth.dir/build.make CMakeFiles/fifth.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" --progress-num=5,6 "Built target fifth"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" --progress-num=5,6 "Built target fifth"
 .PHONY : CMakeFiles/fifth.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fifth.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/fifth.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
 .PHONY : CMakeFiles/fifth.dir/rule
 
 # Convenience name for target.
@@ -126,31 +213,31 @@ CMakeFiles/fifth.dir/clean:
 .PHONY : CMakeFiles/fifth.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/detectmic.dir
+# Target rules for target CMakeFiles/paex_record.dir
 
 # All Build rule for target.
-CMakeFiles/detectmic.dir/all:
-	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/depend
-	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" --progress-num=3,4 "Built target detectmic"
-.PHONY : CMakeFiles/detectmic.dir/all
+CMakeFiles/paex_record.dir/all:
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/depend
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" --progress-num=7,8 "Built target paex_record"
+.PHONY : CMakeFiles/paex_record.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/detectmic.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectmic.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/CMakeFiles" 0
-.PHONY : CMakeFiles/detectmic.dir/rule
+CMakeFiles/paex_record.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/paex_record.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles" 0
+.PHONY : CMakeFiles/paex_record.dir/rule
 
 # Convenience name for target.
-detectmic: CMakeFiles/detectmic.dir/rule
+paex_record: CMakeFiles/paex_record.dir/rule
 
-.PHONY : detectmic
+.PHONY : paex_record
 
 # clean rule for target.
-CMakeFiles/detectmic.dir/clean:
-	$(MAKE) -f CMakeFiles/detectmic.dir/build.make CMakeFiles/detectmic.dir/clean
-.PHONY : CMakeFiles/detectmic.dir/clean
+CMakeFiles/paex_record.dir/clean:
+	$(MAKE) -f CMakeFiles/paex_record.dir/build.make CMakeFiles/paex_record.dir/clean
+.PHONY : CMakeFiles/paex_record.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

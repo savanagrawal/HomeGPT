@@ -1,4 +1,4 @@
-# Install script for directory: /home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll
+# Install script for directory: /home/pi/homegpt/src/Clap Detection/ClapAll
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/pi/Downloads/HomeGPT-Savan/Clap Detection/ClapAll/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/homegpt/src/Clap Detection/ClapAll/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

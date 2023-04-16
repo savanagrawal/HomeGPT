@@ -159,6 +159,52 @@ int paCallback(const void *inputBuffer, void *outputBuffer, unsigned long frames
     return paContinue;
 }
 
+void write_wav_header(std::ofstream& file, int num_channels, int sample_rate, int bits_per_sample, int num_samples) {
+    file.write("RIFF", 4);
+    int chunk_size = 36 + num_samples * num_channels * bits_per_sample / 8;
+    file.write(reinterpret_cast<const char*>(&chunk_size), 4);
+    file.write("WAVE", 4);
+    file.write("fmt ", 4);
+    int sub_chunk1_size = 16;
+    file.write(reinterpret_cast<const char*>(&sub_chunk1_size), 4);
+    short audio_format = 1; // PCM
+    file.write(reinterpret_cast<const char*>(&audio_format), 2);
+    file.write(reinterpret_cast<const char*>(&num_channels), 2);
+    file.write(reinterpret_cast<const char*>(&sample_rate), 4);
+    int byte_rate = sample_rate * num_channels * bits_per_sample / 8;
+    file.write(reinterpret_cast<const char*>(&byte_rate), 4);
+    short block_align = num_channels * bits_per_sample / 8;
+    file.write(reinterpret_cast<const char*>(&block_align), 2);
+    file.write(reinterpret_cast<const char*>(&bits_per_sample), 2);
+    file.write("data", 4);
+    int sub_chunk2_size = num_samples * num_channels * bits_per_sample / 8;
+    file.write(reinterpret_cast<const char*>(&sub_chunk2_size), 4);
+}
+
+void save_audio_to_file(const std::vector<double>& audio_data, const std::string& filename) {
+    std::ofstream file(filename, std::ios::binary);
+    if (!file) {
+        throw std::runtime_error("Unable to open file!");
+    }
+
+    int num_channels = 1;
+    int sample_rate = 44100;
+    int bits_per_sample = 16;
+    int num_samples = audio_data.size();
+    
+    
+
+    // Write the WAV header
+    write_wav_header(file, num_channels, sample_rate, bits_per_sample, num_samples);
+
+    // Write the audio data
+    for (const double& sample : audio_data) {
+        short s = static_cast<short>(sample * std::numeric_limits<short>::max());
+        file.write(reinterpret_cast<const char*>(&s), sizeof(short));
+    }
+}
+
+
 
 void initializePortAudio(PaStream **stream, std::vector<double> *buffer) {
     PaError err = Pa_Initialize();
@@ -210,6 +256,11 @@ int main() {
 
     stopPortAudioStream(stream);
     terminatePortAudio();
+    
+    std::cout << buffer.size() << std::endl;
+    std::cout << "Saving audio to file..." << std::endl;
+    save_audio_to_file(buffer, "output.wav");
+    std::cout << "Audio saved to output.wav" << std::endl;
 
     return 0;
 }
