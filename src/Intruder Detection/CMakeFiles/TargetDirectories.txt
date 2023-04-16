@@ -1,0 +1,5 @@
+/home/pi/homegpt/src/Intruder Detection/CMakeFiles/edit_cache.dir
+/home/pi/homegpt/src/Intruder Detection/CMakeFiles/Detector.dir
+/home/pi/homegpt/src/Intruder Detection/CMakeFiles/DatasetCreator.dir
+/home/pi/homegpt/src/Intruder Detection/CMakeFiles/rebuild_cache.dir
+/home/pi/homegpt/src/Intruder Detection/CMakeFiles/Trainner.dir

@@ -4,7 +4,7 @@
 #include <fstream>
 #include <algorithm>
 #include <complex>
-#include <bits/stdc++.h>
+#include <limits>
 
 // Compute the FFT of a vector
 void fft(std::vector<std::complex<double>>& a, bool inverse) {
@@ -60,7 +60,6 @@ std::vector<double> convolve(const std::vector<double>& a, const std::vector<dou
     return result;
 }
 
-
 std::vector<double> load_audio_file(const std::string& filename) {
     std::ifstream file(filename, std::ios::binary);
     if (!file) {
@@ -89,8 +88,7 @@ double percentage_above_threshold(const std::vector<double>& a, double threshold
     return static_cast<double>(count) / static_cast<double>(a.size()) * 100.0;
 }
 
-double find_per(const std::string& within_file, const std::string& find_file, int window) {
-    double sr_within, sr_find;
+double find_per(const std::string& within_file, const std::string& find_file) {
     std::vector<double> y_within = load_audio_file(within_file);
     std::vector<double> y_find = load_audio_file(find_file);
 
@@ -112,7 +110,7 @@ void result(double per, double check){
 
 void ClapDetection() {
     std::cout << "Correlating the two sounds..." << std::endl;
-    double per = find_per("sample3.wav", "sample.wav", 10);
+    double per = find_per("sample3.wav", "sample.wav");
     result(per, 0.5);
 }
 

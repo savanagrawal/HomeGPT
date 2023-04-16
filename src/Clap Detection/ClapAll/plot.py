@@ -11,6 +11,7 @@ data = [float(x.strip()) for x in data]
 
 # Convert the list to a numpy array
 data = np.array(data)
+print(data)
 
 # Plot the data using Gnuplot
 plt.plot(data)
