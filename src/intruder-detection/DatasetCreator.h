@@ -9,34 +9,41 @@
 #define DATASET_CREATOR_H
 
 #include "CppTimer.h"
+#include "../utils/Events.h"
 
 #include <opencv2/opencv.hpp>
 #include <fstream>
-
-
+#include <iostream>
+#include "../utils/EventHandler.h"
 
 class IntruderDatasetCreator : public CppTimer {
     /** Timer function for intruder detector's dataset creation functionality. */
     void timerEvent() {
+        // std::cout<<"Hi"<<std::endl;
+
+        EventHandler& eventHandler = EventHandler::getInstance();
+
+
         // break if the sample number is more than 200
-        if (samples > 200){
+        if (samples > 20){
             std::cout << "Exiting dataset creator, expect a segmentation fault." << std::endl;
-            raise(SIGHUP);
+            // eventHandler.getDispatcher().dispatch(EVENT_CODES::DATASET_CREATOR_COMPLETE);
+            // eventHandler.getDispatcher().Dispatch(static_cast<eventpp::Event>(EVENT_CODES::DATASET_CREATOR_COMPLETE));
+            std::cout<<(eventHandler.isEventRegistered(Event::DatasetCreatorComplete))<<std::endl;
+            eventHandler.emit(Event::DatasetCreatorComplete);
             return;
         }
 
         if(newUser.empty()) {
-            std::cerr << "Error: No User found. Try to initialize the dataset creator first then start the loop." << std::endl;
+            std::cerr << "Error: No User ID found. Try to initialize the dataset creator first then start the loop." << std::endl;
             raise(SIGHUP);
             return;
         }
+        
+        cv::Mat img;
 
-        bool ret = masterCamera.read(img);
-
-        if (!ret) {
-            std::cerr << "Error: Failed to read camera frame" << std::endl;
-            return;
-        }
+        masterCamera >> img;
+        if(img.empty()) return;
 
         cvtColor(img, gray, cv::COLOR_BGR2GRAY);
 
@@ -162,18 +169,26 @@ class IntruderDatasetCreator : public CppTimer {
             std::ofstream file(fileName, std::ios_base::app);
             file << line << std::endl;
         }
-    
+        
+        
+        int checkCameraOpen(cv::VideoCapture camera);
     private:
         cv::VideoCapture masterCamera;
 
         cv::CascadeClassifier detector;
         std::string cascadePath = "../src/resources/haarcascade_frontalface_default.xml";
+        // EventHandler& eventHandler = EventHandler::getInstance();
+
+
+        // Events& eventHandler = Events::getInstance();
+        // using EVENT_CODES = Events::EVENT_CODES;
 
         std::string fileName = "../src/resources/intruder-detection/Users.txt";
         std::string newUser;
-        int samples = 0;
 
-        cv::Mat img;
+        int samples = 0;
+        int CameraID = 0;
+
         cv::Mat gray;
 
         std::vector<cv::Rect> faces;

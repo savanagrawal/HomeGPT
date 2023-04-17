@@ -1,6 +1,6 @@
 /**
  * @file IntruderThread.h
- * @author Chinmay Nagrale
+ * @author Chinmay Nagrale & Savan Agrawal
  * @version 0.1
  * 
  * Handle our intruder detection thread.
@@ -10,6 +10,7 @@
 
 #include "../CppThread.h"
 #include "../../utils/Globals.h"
+#include "../../utils/Events.h"
 
 #include "IntruderDetection.h"
 #include "DatasetCreator.h"
@@ -17,6 +18,7 @@
 #include <opencv2/opencv.hpp>
 #include <memory>
 #include <string>
+#include "../utils/EventHandler.h"
 
 /**
  * @brief Intruder Thread to manage intruder detection functionality.
@@ -42,14 +44,19 @@ class IntruderThread : public CppThread {
 
         void stop(){
             // intruderDetection.stop();
+            intruderDetection.stop();
             datasetCreator.stop();
+            
+            camera.release();
         }
 
     private:
-        void run();
+        // void run();
+        void run(void);
     
     private:
         Globals globals;
+
 
         cv::VideoCapture camera;
 
