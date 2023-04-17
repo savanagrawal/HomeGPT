@@ -215,6 +215,9 @@ ClapDetection_BINARY_DIR:STATIC=/home/pi/homegpt/src/Clap Detection/ClapAll
 //Value Computed by CMake
 ClapDetection_SOURCE_DIR:STATIC=/home/pi/homegpt/src/Clap Detection/ClapAll
 
+//The directory containing a CMake configuration file for SndFile.
+SndFile_DIR:PATH=/usr/local/lib/cmake/SndFile
+
 //The directory containing a CMake configuration file for portaudio.
 portaudio_DIR:PATH=/usr/local/lib/portaudio/lib/cmake/portaudio
 

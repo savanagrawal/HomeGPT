@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/homegpt/src/Clap Detection/final_r.cpp
+iostream
+-
+vector
+-
+cmath
+-
+fstream
+-
+algorithm
+-
+complex
+-
+limits
+-
+

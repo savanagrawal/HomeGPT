@@ -11,6 +11,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "/usr/local/lib/cmake/SndFile/SndFileConfig.cmake"
+  "/usr/local/lib/cmake/SndFile/SndFileConfigVersion.cmake"
+  "/usr/local/lib/cmake/SndFile/SndFileTargets-noconfig.cmake"
+  "/usr/local/lib/cmake/SndFile/SndFileTargets.cmake"
   "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioConfig.cmake"
   "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioConfigVersion.cmake"
   "/usr/local/lib/portaudio/lib/cmake/portaudio/portaudioTargets-debug.cmake"
@@ -19,6 +23,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake"
+  "/usr/share/cmake-3.16/Modules/CMakeFindDependencyMacro.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake"
@@ -49,10 +54,15 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/third.dir/DependInfo.cmake"
+  "CMakeFiles/ninth.dir/DependInfo.cmake"
+  "CMakeFiles/eight.dir/DependInfo.cmake"
+  "CMakeFiles/seventh.dir/DependInfo.cmake"
+  "CMakeFiles/sixth.dir/DependInfo.cmake"
   "CMakeFiles/paex_record_c.dir/DependInfo.cmake"
+  "CMakeFiles/third.dir/DependInfo.cmake"
   "CMakeFiles/detectmic.dir/DependInfo.cmake"
   "CMakeFiles/detectclap.dir/DependInfo.cmake"
+  "CMakeFiles/clapcustomfft.dir/DependInfo.cmake"
   "CMakeFiles/fifth.dir/DependInfo.cmake"
   "CMakeFiles/paex_record.dir/DependInfo.cmake"
   )
