@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/detectClapAMP.dir/detectClapAMP.cpp.o  -o detectClapAMP  -Wl,-rpath,/usr/local/lib/portaudio/lib /usr/local/lib/portaudio/lib/libportaudio.so -lasound -lm -lpthread 

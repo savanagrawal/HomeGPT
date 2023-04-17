@@ -47,7 +47,8 @@ class ControllerThread : public CppThread {
         enum argvEnum {
             CreateIntruderDataset,
             TrainIntruderModel,
-            DetectIntruder
+            DetectIntruder,
+            DetectClap
         };
 
         std::map<std::string, argvEnum> argvValues = {
@@ -57,6 +58,8 @@ class ControllerThread : public CppThread {
             {"--tim", TrainIntruderModel},
             {"--detect-intruder", DetectIntruder},
             {"--di", DetectIntruder},
+            {"--detect-clap", DetectClap},
+            {"--dc", DetectClap},
         };
 };
 

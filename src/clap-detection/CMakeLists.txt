@@ -1,11 +1,38 @@
-cmake_minimum_required(VERSION 2.8)
-project( ClapDetection )
+# Project Details
+cmake_minimum_required( VERSION 3.0 )
 
-LIST(APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/)
+project( HomeGPT VERSION 0.1 )
+
+# Find packages
+list(APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/)
 find_package( portaudio REQUIRED )
 
-add_executable( detectClapAMP detectClapAMP.cpp )
-TARGET_LINK_LIBRARIES(detectClapAMP portaudio)
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../peripherals )
 
-add_executable( detectClapFFT detectClapFFT.cpp )
-TARGET_LINK_LIBRARIES(detectClapFFT portaudio)
+# Set include directories
+set( include_directories
+)
+
+# Set source files
+set( SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/ClapDetection.cpp
+)
+
+# Set header files
+set( HEADERS
+    ${CMAKE_CURRENT_SOURCE_DIR}/ClapDetection.h
+
+)
+
+# Create mood detection library
+add_library( ${PROJECT_NAME}_ClapDetectionLib SHARED ${SOURCES} )
+
+# Link directories or libraries
+target_include_directories( ${PROJECT_NAME}_ClapDetectionLib PUBLIC ${INCLUDE_DIRS} )
+target_link_libraries( ${PROJECT_NAME}_ClapDetectionLib 
+    cpptimer
+    portaudio
+)
+
+set_target_properties( ${PROJECT_NAME}_ClapDetectionLib PROPERTIES
+  PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/ClapDetection.h )
