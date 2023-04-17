@@ -1,5 +1,3 @@
-HomeGPT {#mainpage}
-=========
 
 <a href="https://github.com/savanagrawal/HomeGPT" target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png" alt="HomeGPT" width="200" height="200" /></a>
 
