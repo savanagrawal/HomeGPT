@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/paex_record_c.dir/paex_record.c.o  -o paex_record_c  -Wl,-rpath,/usr/local/lib/portaudio/lib /usr/local/lib/portaudio/lib/libportaudio.so -lasound -lm -lpthread 

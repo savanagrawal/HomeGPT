@@ -1,3 +1,0 @@
-/home/pi/homegpt/src/Mood Detection/CMakeFiles/rebuild_cache.dir
-/home/pi/homegpt/src/Mood Detection/CMakeFiles/detection.dir
-/home/pi/homegpt/src/Mood Detection/CMakeFiles/edit_cache.dir
