@@ -1,7 +1,0 @@
-[
-{
-  "directory": "D:/UofG/RTES/Project/HomeGPT/build",
-  "command": "C:/cygwin64/bin/c++.exe   -g -o CMakeFiles/HomeGPT.dir/src/main.cpp.obj -c D:/UofG/RTES/Project/HomeGPT/src/main.cpp",
-  "file": "D:/UofG/RTES/Project/HomeGPT/src/main.cpp"
-}
-]
