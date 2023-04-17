@@ -111,84 +111,84 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named final_r
+# Target rules for targets named detectClapAMP
 
 # Build rule for target.
-final_r: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 final_r
-.PHONY : final_r
+detectClapAMP: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detectClapAMP
+.PHONY : detectClapAMP
 
 # fast build rule for target.
-final_r/fast:
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/build
-.PHONY : final_r/fast
+detectClapAMP/fast:
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/build
+.PHONY : detectClapAMP/fast
 
 #=============================================================================
-# Target rules for targets named detectclap
+# Target rules for targets named detectClapFFT
 
 # Build rule for target.
-detectclap: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 detectclap
-.PHONY : detectclap
+detectClapFFT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 detectClapFFT
+.PHONY : detectClapFFT
 
 # fast build rule for target.
-detectclap/fast:
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/build
-.PHONY : detectclap/fast
+detectClapFFT/fast:
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/build
+.PHONY : detectClapFFT/fast
 
-detectclap.o: detectclap.cpp.o
+detectClapAMP.o: detectClapAMP.cpp.o
 
-.PHONY : detectclap.o
-
-# target to build an object file
-detectclap.cpp.o:
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/detectclap.cpp.o
-.PHONY : detectclap.cpp.o
-
-detectclap.i: detectclap.cpp.i
-
-.PHONY : detectclap.i
-
-# target to preprocess a source file
-detectclap.cpp.i:
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/detectclap.cpp.i
-.PHONY : detectclap.cpp.i
-
-detectclap.s: detectclap.cpp.s
-
-.PHONY : detectclap.s
-
-# target to generate assembly for a file
-detectclap.cpp.s:
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/detectclap.cpp.s
-.PHONY : detectclap.cpp.s
-
-final_r.o: final_r.cpp.o
-
-.PHONY : final_r.o
+.PHONY : detectClapAMP.o
 
 # target to build an object file
-final_r.cpp.o:
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/final_r.cpp.o
-.PHONY : final_r.cpp.o
+detectClapAMP.cpp.o:
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/detectClapAMP.cpp.o
+.PHONY : detectClapAMP.cpp.o
 
-final_r.i: final_r.cpp.i
+detectClapAMP.i: detectClapAMP.cpp.i
 
-.PHONY : final_r.i
+.PHONY : detectClapAMP.i
 
 # target to preprocess a source file
-final_r.cpp.i:
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/final_r.cpp.i
-.PHONY : final_r.cpp.i
+detectClapAMP.cpp.i:
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/detectClapAMP.cpp.i
+.PHONY : detectClapAMP.cpp.i
 
-final_r.s: final_r.cpp.s
+detectClapAMP.s: detectClapAMP.cpp.s
 
-.PHONY : final_r.s
+.PHONY : detectClapAMP.s
 
 # target to generate assembly for a file
-final_r.cpp.s:
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/final_r.cpp.s
-.PHONY : final_r.cpp.s
+detectClapAMP.cpp.s:
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/detectClapAMP.cpp.s
+.PHONY : detectClapAMP.cpp.s
+
+detectClapFFT.o: detectClapFFT.cpp.o
+
+.PHONY : detectClapFFT.o
+
+# target to build an object file
+detectClapFFT.cpp.o:
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/detectClapFFT.cpp.o
+.PHONY : detectClapFFT.cpp.o
+
+detectClapFFT.i: detectClapFFT.cpp.i
+
+.PHONY : detectClapFFT.i
+
+# target to preprocess a source file
+detectClapFFT.cpp.i:
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/detectClapFFT.cpp.i
+.PHONY : detectClapFFT.cpp.i
+
+detectClapFFT.s: detectClapFFT.cpp.s
+
+.PHONY : detectClapFFT.s
+
+# target to generate assembly for a file
+detectClapFFT.cpp.s:
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/detectClapFFT.cpp.s
+.PHONY : detectClapFFT.cpp.s
 
 # Help Target
 help:
@@ -198,14 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... final_r"
-	@echo "... detectclap"
-	@echo "... detectclap.o"
-	@echo "... detectclap.i"
-	@echo "... detectclap.s"
-	@echo "... final_r.o"
-	@echo "... final_r.i"
-	@echo "... final_r.s"
+	@echo "... detectClapAMP"
+	@echo "... detectClapFFT"
+	@echo "... detectClapAMP.o"
+	@echo "... detectClapAMP.i"
+	@echo "... detectClapAMP.s"
+	@echo "... detectClapFFT.o"
+	@echo "... detectClapFFT.i"
+	@echo "... detectClapFFT.s"
 .PHONY : help
 
 

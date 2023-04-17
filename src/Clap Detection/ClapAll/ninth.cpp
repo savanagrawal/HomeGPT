@@ -137,9 +137,9 @@ double find_per_data(const std::vector<double>& within_data, const std::vector<d
 
 void result(double per, double check){
     if (per <= check) {
-        std::cout << "Match Found" << std::endl;
+        std::cout << "Clap Detected" << std::endl;
     } else {
-        std::cout << "Match not found" << std::endl;
+        std::cout << "Clap not Detected" << std::endl;
     }
 }
 

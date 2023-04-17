@@ -5,6 +5,9 @@
 #include <algorithm>
 #include <complex>
 #include <limits>
+#include <stdexcept>
+#include <portaudio.h>
+#include <cstring>
 
 // Helper function to reverse bits of a number
 int reverse_bits(int num, int bit_length) {
@@ -113,27 +116,125 @@ double find_per(const std::string& within_file, const std::string& find_file) {
 
     std::vector<double> c = convolve(y_within, y_find);
     
-    double thres = *std::max_element(c.begin(), c.end()) / 10.0;
+    double thres = *std::max_element(c.begin(), c.end()) / 8.0;
     double count = percentage_above_threshold(c, thres);
+
+
+    return count;
+}
+
+double find_per_data(const std::vector<double>& within_data, const std::vector<double>& y_find) {
+
+
+    std::vector<double> c = convolve(within_data, y_find);
+    
+    double thres = *std::max_element(c.begin(), c.end()) / 8.0;
+    double count = percentage_above_threshold(c, thres);
+
 
     return count;
 }
 
 void result(double per, double check){
     if (per <= check) {
-        std::cout << "Match Found" << std::endl;
+        std::cout << "Clap Detected" << std::endl;
     } else {
-        std::cout << "Match not found" << std::endl;
+        std::cout << "Clap not Detected" << std::endl;
     }
 }
 
-void ClapDetection() {
-    std::cout << "Correlating the two sounds..." << std::endl;
-    double per = find_per("sample3.wav", "sample.wav");
-    result(per, 0.5);
+
+
+
+int paCallback(const void *inputBuffer, void *outputBuffer,
+               unsigned long framesPerBuffer,
+               const PaStreamCallbackTimeInfo *timeInfo,
+               PaStreamCallbackFlags statusFlags,
+               void *userData) {
+    std::vector<float> *audioData = reinterpret_cast<std::vector<float> *>(userData);
+    const float *readPtr = (const float *)inputBuffer;
+    audioData->insert(audioData->end(), readPtr, readPtr + framesPerBuffer);
+    return paContinue;
 }
 
 int main() {
-    ClapDetection();
+    std::vector<double> y_find = load_audio_file("sample.wav");
+
+    // Initialize PortAudio
+    PaError err = Pa_Initialize();
+    if (err != paNoError) {
+        std::cerr << "PortAudio error: " << Pa_GetErrorText(err) << std::endl;
+        return 1;
+    }
+
+    PaStreamParameters inputParameters;
+    inputParameters.device = Pa_GetDefaultInputDevice();
+    inputParameters.channelCount = 1;
+    inputParameters.sampleFormat = paFloat32;
+    inputParameters.suggestedLatency = Pa_GetDeviceInfo(inputParameters.device)->defaultLowInputLatency;
+    inputParameters.hostApiSpecificStreamInfo = nullptr;
+
+    
+    // Open audio stream
+    PaStream *stream;
+
+    while(1){
+
+    std::vector<float> audioData;
+    
+    err = Pa_OpenStream(&stream,
+                        &inputParameters,
+                        nullptr, // No output
+                        44100,   // Sample rate
+                        256,     // Frames per buffer
+                        paClipOff,
+                        paCallback,
+                        &audioData);
+    if (err != paNoError) {
+        std::cerr << "PortAudio error: " << Pa_GetErrorText(err) << std::endl;
+        return 1;
+    }
+
+    err = Pa_StartStream(stream);
+    if (err != paNoError) {
+        std::cerr << "PortAudio error: " << Pa_GetErrorText(err) << std::endl;
+        Pa_CloseStream(stream);
+        Pa_Terminate();
+        return 1;
+    }
+
+    // Record for 1 seconds
+    std::cout << "Recording audio for 1.0 seconds..." << std::endl;
+    Pa_Sleep(1000);
+
+
+    // Run clap detection
+    std::cout << "Running clap detection on recorded audio..." << std::endl;
+
+    std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
+    double per = find_per_data(audioDataDouble, y_find);
+
+    // double per = find_per("recorded_audio.wav", "sample4.wav");
+    result(per, 0.5);
+    
+
+    // Stop audio stream
+    err = Pa_StopStream(stream);
+    if (err != paNoError) {
+        std::cerr << "PortAudio error: " << Pa_GetErrorText(err) << std::endl;
+        return 1;
+    }
+
+    // Close audio stream
+    err = Pa_CloseStream(stream);
+    if (err != paNoError) {
+        std::cerr << "Portudio error: " << Pa_GetErrorText(err) << std::endl;
+        return 1;
+    }
+
+    }
+
+    // Terminate PortAudio
+    err = Pa_Terminate();
     return 0;
 }

@@ -1,4 +1,4 @@
 /home/pi/homegpt/src/Clap Detection/CMakeFiles/rebuild_cache.dir
 /home/pi/homegpt/src/Clap Detection/CMakeFiles/edit_cache.dir
-/home/pi/homegpt/src/Clap Detection/CMakeFiles/final_r.dir
-/home/pi/homegpt/src/Clap Detection/CMakeFiles/detectclap.dir
+/home/pi/homegpt/src/Clap Detection/CMakeFiles/detectClapAMP.dir
+/home/pi/homegpt/src/Clap Detection/CMakeFiles/detectClapFFT.dir

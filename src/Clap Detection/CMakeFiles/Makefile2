@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = "/home/pi/homegpt/src/Clap Detection"
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/final_r.dir/all
-all: CMakeFiles/detectclap.dir/all
+all: CMakeFiles/detectClapAMP.dir/all
+all: CMakeFiles/detectClapFFT.dir/all
 
 .PHONY : all
 
@@ -64,64 +64,64 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/final_r.dir/clean
-clean: CMakeFiles/detectclap.dir/clean
+clean: CMakeFiles/detectClapAMP.dir/clean
+clean: CMakeFiles/detectClapFFT.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/final_r.dir
+# Target rules for target CMakeFiles/detectClapAMP.dir
 
 # All Build rule for target.
-CMakeFiles/final_r.dir/all:
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/depend
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/CMakeFiles" --progress-num=3,4 "Built target final_r"
-.PHONY : CMakeFiles/final_r.dir/all
+CMakeFiles/detectClapAMP.dir/all:
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/depend
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/CMakeFiles" --progress-num=1,2 "Built target detectClapAMP"
+.PHONY : CMakeFiles/detectClapAMP.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/final_r.dir/rule: cmake_check_build_system
+CMakeFiles/detectClapAMP.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/final_r.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectClapAMP.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/CMakeFiles" 0
-.PHONY : CMakeFiles/final_r.dir/rule
+.PHONY : CMakeFiles/detectClapAMP.dir/rule
 
 # Convenience name for target.
-final_r: CMakeFiles/final_r.dir/rule
+detectClapAMP: CMakeFiles/detectClapAMP.dir/rule
 
-.PHONY : final_r
+.PHONY : detectClapAMP
 
 # clean rule for target.
-CMakeFiles/final_r.dir/clean:
-	$(MAKE) -f CMakeFiles/final_r.dir/build.make CMakeFiles/final_r.dir/clean
-.PHONY : CMakeFiles/final_r.dir/clean
+CMakeFiles/detectClapAMP.dir/clean:
+	$(MAKE) -f CMakeFiles/detectClapAMP.dir/build.make CMakeFiles/detectClapAMP.dir/clean
+.PHONY : CMakeFiles/detectClapAMP.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/detectclap.dir
+# Target rules for target CMakeFiles/detectClapFFT.dir
 
 # All Build rule for target.
-CMakeFiles/detectclap.dir/all:
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/depend
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/CMakeFiles" --progress-num=1,2 "Built target detectclap"
-.PHONY : CMakeFiles/detectclap.dir/all
+CMakeFiles/detectClapFFT.dir/all:
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/depend
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/pi/homegpt/src/Clap Detection/CMakeFiles" --progress-num=3,4 "Built target detectClapFFT"
+.PHONY : CMakeFiles/detectClapFFT.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/detectclap.dir/rule: cmake_check_build_system
+CMakeFiles/detectClapFFT.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectclap.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/detectClapFFT.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/pi/homegpt/src/Clap Detection/CMakeFiles" 0
-.PHONY : CMakeFiles/detectclap.dir/rule
+.PHONY : CMakeFiles/detectClapFFT.dir/rule
 
 # Convenience name for target.
-detectclap: CMakeFiles/detectclap.dir/rule
+detectClapFFT: CMakeFiles/detectClapFFT.dir/rule
 
-.PHONY : detectclap
+.PHONY : detectClapFFT
 
 # clean rule for target.
-CMakeFiles/detectclap.dir/clean:
-	$(MAKE) -f CMakeFiles/detectclap.dir/build.make CMakeFiles/detectclap.dir/clean
-.PHONY : CMakeFiles/detectclap.dir/clean
+CMakeFiles/detectClapFFT.dir/clean:
+	$(MAKE) -f CMakeFiles/detectClapFFT.dir/build.make CMakeFiles/detectClapFFT.dir/clean
+.PHONY : CMakeFiles/detectClapFFT.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -21,7 +21,7 @@ static int clapCallback(const void *inputBuffer, void *outputBuffer,
             maxAmplitude = amplitude;
         }
     }
-    cout<<maxAmplitude<<endl;
+    // cout<<maxAmplitude<<endl;
     if (maxAmplitude > THRESHOLD) {
         cout << "Clap detected!" << endl;
     }

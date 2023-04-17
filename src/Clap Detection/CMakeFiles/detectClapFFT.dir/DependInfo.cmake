@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/homegpt/src/Clap Detection/final_r.cpp" "/home/pi/homegpt/src/Clap Detection/CMakeFiles/final_r.dir/final_r.cpp.o"
+  "/home/pi/homegpt/src/Clap Detection/detectClapFFT.cpp" "/home/pi/homegpt/src/Clap Detection/CMakeFiles/detectClapFFT.dir/detectClapFFT.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/lib/portaudio/include"
   )
 
 # Targets to which this target links.

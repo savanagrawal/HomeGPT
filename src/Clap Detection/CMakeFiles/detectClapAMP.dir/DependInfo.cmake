@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/homegpt/src/Clap Detection/detectclap.cpp" "/home/pi/homegpt/src/Clap Detection/CMakeFiles/detectclap.dir/detectclap.cpp.o"
+  "/home/pi/homegpt/src/Clap Detection/detectClapAMP.cpp" "/home/pi/homegpt/src/Clap Detection/CMakeFiles/detectClapAMP.dir/detectClapAMP.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

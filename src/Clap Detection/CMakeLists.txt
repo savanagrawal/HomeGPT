@@ -4,7 +4,8 @@ project( ClapDetection )
 LIST(APPEND CMAKE_PREFIX_PATH /usr/local/lib/portaudio/)
 find_package( portaudio REQUIRED )
 
-add_executable( final_r final_r.cpp )
+add_executable( detectClapAMP detectClapAMP.cpp )
+TARGET_LINK_LIBRARIES(detectClapAMP portaudio)
 
-add_executable( detectclap detectclap.cpp )
-TARGET_LINK_LIBRARIES(detectclap portaudio)
+add_executable( detectClapFFT detectClapFFT.cpp )
+TARGET_LINK_LIBRARIES(detectClapFFT portaudio)

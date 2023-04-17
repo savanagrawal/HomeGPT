@@ -120,6 +120,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/final_r.dir/DependInfo.cmake"
-  "CMakeFiles/detectclap.dir/DependInfo.cmake"
+  "CMakeFiles/detectClapAMP.dir/DependInfo.cmake"
+  "CMakeFiles/detectClapFFT.dir/DependInfo.cmake"
   )
