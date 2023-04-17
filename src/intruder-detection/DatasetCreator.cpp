@@ -44,6 +44,16 @@ void IntruderDatasetCreator::Initialize(cv::VideoCapture camera) {
     }
 }
 
+int IntruderDatasetCreator::checkCameraOpen(cv::VideoCapture camera){
+    if(!camera.isOpened()){
+        std::cerr<<"Failed to open camera at ID = "<<IntruderDatasetCreator::CameraID<<std::endl;
+        return -1;
+    } else {
+        std::cout<<"Camera opened successfully."<<std::endl;
+    }
+    return 0;
+}
+
 // void IntruderDatasetCreator::setParentCallback(CppTimerCallback callback) {
 //     IntruderDatasetCreator::parentCallback = callback;
 // }
