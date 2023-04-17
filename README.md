@@ -78,7 +78,6 @@ To Test
 To Build & Run (Windows)
 ```cd build && make && HomeGPT.exe && cd ..```
 
-
 ---
 <a id='4'></a>
 
