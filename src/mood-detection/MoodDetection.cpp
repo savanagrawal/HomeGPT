@@ -12,19 +12,25 @@
 /**
  * Initializes our Mood Detection
  * 
- * @param
+ * @param camera Camera object.
  * 
  * @return
  */
 void MoodDetection::Initialize(cv::VideoCapture camera) {
     MoodDetection::masterCamera = camera;
     faceCascade.load(cascadePath);
+
+    std::cout << "Loading SVM Model file..." << std::endl;
+    MoodDetection::globals.setMoodSvm();
+    std::cout << "Loaded SVM Model file. Mood detection initialized..." << std::endl;
+
+    MoodDetection::svm = MoodDetection::globals.getMoodSvm();
 }
 
 /**
  * Set the Mood Detection Camera ID object.
  * 
- * @param id 
+ * @param id Set a Camera ID.
  * 
  * @return Updated MoodDetection::CameraID
  */
@@ -35,18 +41,16 @@ void MoodDetection::setCameraId(int id) {
 /**
  * Checks if camera is open. Mainly used for debugging.
  *
- * @param camera 
+ * @param camera Camera object.
  *
- * @return
+ * @return Error Code
  */
 int MoodDetection::checkCameraOpen(cv::VideoCapture camera){
     if(!camera.isOpened()){
         std::cerr<<"Failed to open camera at ID = "<<MoodDetection::CameraID<<std::endl;
-        return -1; //Should I change this to a specific error code within the camera class?
-    }
-    else{
+        return -1;
+    } else {
         std::cout<<"Camera opened successfully."<<std::endl;
-        //do nothing; camera has opened.
     }
     return 0;
 }

@@ -1,6 +1,6 @@
 /**
  * @file MoodDetection.h
- * @author Chinmay Nagrale
+ * @author Savan Agrawal & Chinmay Nagrale
  * @version 0.1
  * 
  * Header file for mood detection.
@@ -9,7 +9,9 @@
 #define MOOD_DETECTION_H
 
 #include "CppTimer.h"
-#include "Camera.h"
+// #include "Camera.h"
+
+#include "../utils/Globals.h"
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -52,10 +54,17 @@ class MoodDetection : public CppTimer {
             putText(im, emotion[pred], cv::Point(face.x, face.y - 5), cv::FONT_HERSHEY_SIMPLEX, 1, color, 2);
         }
 
-        imshow("im", im);
+        try {
+            imshow("im", im);
+        } catch (cv::Exception e) {
+            std::cout << "Expect a segmentation fault to stop mood detection." << std::endl;
+            raise(SIGHUP);
+        }
 
-        char c = (char)cv::waitKey(10);
-        if (c == 'q') return;
+        // wait for 10 milliseconds
+        cv::waitKey(10);
+        // char c = (char)cv::waitKey(10);
+        // if (c == 'q') raise(SIGHUP);
     }
 
     public:
@@ -70,7 +79,7 @@ class MoodDetection : public CppTimer {
         }
 
         /** Handling class functions */
-        void stopMoodDetection() {
+        void stop() {
             masterCamera.release();
             cv::destroyAllWindows();
 
@@ -101,6 +110,8 @@ class MoodDetection : public CppTimer {
         int CameraID = 0;
         int nbins = 9;
 
+        Globals globals;
+
 	    cv::VideoCapture masterCamera;
 
         /** Variables */
@@ -112,7 +123,7 @@ class MoodDetection : public CppTimer {
         cv::Scalar color;
 
         std::string cascadePath = "../src/resources/haarcascade_frontalface_default.xml";
-        cv::Ptr<cv::ml::SVM> svm = cv::ml::SVM::load("../src/resources/svmhog.xml");
+        cv::Ptr<cv::ml::SVM> svm;
 
         cv::Size block_size;
         cv::Size block_stride;

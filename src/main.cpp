@@ -13,49 +13,28 @@
 #include <fstream>
 #include <string>
 #include <boost/filesystem.hpp>
-#include <unistd.h>
-#define GetCurrentDir getcwd
 
-int main(int argc, const char* argv[] ){
+int main(int argc, const char* argv[]){
 
-	/* Initialize thread objects */ 
+	/* Initialize thread objects */
 	ControllerThread controllerThread;
 
-	// char buff[FILENAME_MAX];
-	// GetCurrentDir( buff, FILENAME_MAX );
-	// std::string current_working_dir(buff);
+	std::cout << argc << std::endl;
 
-	// // std::string path = realpath();
-  	// char* curr_working_dir = get_current_dir_name();
+	/* Check if there's any agruments worth storing. */
+	if(argc > 1) {
+		std::vector<std::string> args(argc);
+		
+		for(int i = 0; i < argc; i++){
+			args[i] = argv[i];
+		}
 
-	// std::cout << current_working_dir << std::endl;
-	
-	// boost::filesystem::path path = boost::filesystem::current_path();
+		std::cout << args[1];
 
-	// std::cout << path;
+		controllerThread.setArgs(argc, args);
+	}
 
-	// std::fstream my_file;
-	// my_file.open(path.string(), std::ios::in);
-	// if (!my_file) {
-	// 	std::cout << "No such file";
-	// }
-	// else {
-	// 	char ch;
 
-	// 	while (1) {
-	// 		my_file >> ch;
-	// 		if (my_file.eof())
-	// 			break;
-
-	// 		std::cout << ch;
-	// 	}
-
-	// }
-	// my_file.close();
-
-	// printf(""+path);
-
-	// return 0;
 	/* Run Controller Thread */ 
 	controllerThread.start();
   

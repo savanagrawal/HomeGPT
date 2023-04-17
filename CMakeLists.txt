@@ -17,7 +17,7 @@ add_subdirectory( src/peripherals )
 # add_subdirectory( src/controller )
 add_subdirectory( src/thread )
 # add_subdirectory( src/clap-detection )
-# add_subdirectory( src/intruder-detection )
+add_subdirectory( src/intruder-detection )
 add_subdirectory( src/mood-detection )
 
 include_directories( src/thread
