@@ -11,7 +11,9 @@
 #include "CppTimer.h"
 
 #include <opencv2/opencv.hpp>
-#include <iostream>
+#include <fstream>
+
+
 
 class IntruderDatasetCreator : public CppTimer {
     /** Timer function for intruder detector's dataset creation functionality. */
@@ -23,8 +25,8 @@ class IntruderDatasetCreator : public CppTimer {
             return;
         }
 
-        if(Id.empty()) {
-            std::cerr << "Error: No User ID found. Try to initialize the dataset creator first then start the loop." << std::endl;
+        if(newUser.empty()) {
+            std::cerr << "Error: No User found. Try to initialize the dataset creator first then start the loop." << std::endl;
             raise(SIGHUP);
             return;
         }
@@ -47,7 +49,7 @@ class IntruderDatasetCreator : public CppTimer {
             samples++;
 
             // saving the captured face in the dataset folder
-            std::string filename = "../src/resources/intruder-detection/dataset/User." + Id + "." + std::to_string(samples) + ".jpg";
+            std::string filename = "../src/resources/intruder-detection/dataset/User." + newUser + "." + std::to_string(samples) + ".jpg";
             imwrite(filename, gray(face));
 
             imshow("frame", img);
@@ -121,6 +123,45 @@ class IntruderDatasetCreator : public CppTimer {
         
             return has_alpha;
         }
+
+        bool findStringInFile(const std::string& fileName, const std::string& searchString) {
+            std::ifstream file(fileName);
+            std::string line;
+
+            while (std::getline(file, line)) {
+                std::istringstream iss(line);
+                std::string name;
+                std::getline(iss, name, ',');
+                if (name == searchString) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        int getLastIntegerInFile(const std::string& fileName) {
+            std::ifstream file(fileName);
+            std::string line;
+            int lastInteger = 0;
+
+            while (std::getline(file, line)) {
+                std::istringstream iss(line);
+                std::string name;
+                std::string numStr;
+                std::getline(iss, name, ',');
+                std::getline(iss, numStr);
+                int num = std::stoi(numStr);
+                lastInteger = num;
+            }
+
+            return lastInteger;
+        }
+
+        void appendLineToFile(const std::string& fileName, const std::string& line) {
+            std::ofstream file(fileName, std::ios_base::app);
+            file << line << std::endl;
+        }
     
     private:
         cv::VideoCapture masterCamera;
@@ -128,8 +169,8 @@ class IntruderDatasetCreator : public CppTimer {
         cv::CascadeClassifier detector;
         std::string cascadePath = "../src/resources/haarcascade_frontalface_default.xml";
 
-
-        std::string Id;
+        std::string fileName = "../src/resources/intruder-detection/Users.txt";
+        std::string newUser;
         int samples = 0;
 
         cv::Mat img;

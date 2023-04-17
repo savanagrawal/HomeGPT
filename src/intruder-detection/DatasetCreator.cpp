@@ -19,24 +19,29 @@ void IntruderDatasetCreator::Initialize(cv::VideoCapture camera) {
     IntruderDatasetCreator::masterCamera = camera;
     detector.load(cascadePath);
     
-    std::string name;
 
-    std::cout << "Enter your name: ";
+    std::cout << "Enter new user: ";
     while (true) {
-        std::getline(std::cin, name);
-        name = IntruderDatasetCreator::trim(name);
- 
-        if (IntruderDatasetCreator::is_valid_name(name) && (IntruderDatasetCreator::count_name(name) <= 8)) {
-            break;
+        std::getline(std::cin, IntruderDatasetCreator::newUser);
+        IntruderDatasetCreator::newUser = IntruderDatasetCreator::trim(newUser);
+
+        if (IntruderDatasetCreator::is_valid_name(IntruderDatasetCreator::newUser)) {
+            IntruderDatasetCreator::newUser = IntruderDatasetCreator::replace_spaces_with_underscores(IntruderDatasetCreator::newUser);
+            if (!IntruderDatasetCreator::findStringInFile(IntruderDatasetCreator::fileName, IntruderDatasetCreator::newUser)) {
+                int lastInteger = IntruderDatasetCreator::getLastIntegerInFile(IntruderDatasetCreator::fileName);
+                std::string newLine = IntruderDatasetCreator::newUser + ", " + std::to_string(lastInteger + 1);
+                IntruderDatasetCreator::appendLineToFile(IntruderDatasetCreator::fileName, newLine);
+                std::cout << "Added new user: " << newLine << std::endl;
+                break;
+            } else {
+                std::cout << "User " << IntruderDatasetCreator::newUser << " already exists in the file." << std::endl;
+                continue;
+            }
         } 
         else {
             std::cout << "Invalid name. Please enter a valid name: ";
         }
     }
-    name = IntruderDatasetCreator::replace_spaces_with_underscores(name);
-    std::cout << "Valid name entered: " << name << std::endl;
-
-    IntruderDatasetCreator::Id = name;
 }
 
 // void IntruderDatasetCreator::setParentCallback(CppTimerCallback callback) {
