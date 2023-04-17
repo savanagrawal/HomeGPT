@@ -1,3 +1,4 @@
+
 <a href="https://github.com/savanagrawal/HomeGPT" target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png" alt="HomeGPT" width="200" height="200" /></a>
 
 \
@@ -37,6 +38,7 @@ The HomeGPT project is a smart home automation system that makes use of cutting-
 
 With the use of facial recognition, the user is able to enter the residence thanks to the face detection capability. The same functionality is employed to identify unauthorised entrance by intruders.
 
+![RFID](https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg)
 
 In accordance with mood, the device may also manage lighting. Based on the user's facial expressions, it can tell how they are feeling. Based on mood detection, it modifies light hue to calm the user. 
 
@@ -60,12 +62,11 @@ Last but not least, the fire detection feature activates fire alarms when smoke 
 <a id='2'></a>
 
 ### Getting Started
-\
-\
-\
-\
-\
-\
+1. Clone the repository
+```sh
+git clone https://github.com/savanagrawal/HomeGPT
+```
+
 </br>
 
 

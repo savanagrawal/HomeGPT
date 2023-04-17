@@ -1,0 +1,7 @@
+<map id="CppThread" name="CppThread">
+<area shape="rect" id="node1" title=" " alt="" coords="199,5,283,31"/>
+<area shape="rect" id="node2" href="$class_clap_thread.html" title=" " alt="" coords="5,79,92,104"/>
+<area shape="rect" id="node3" href="$class_controller_thread.html" title="Controller Thread to manage all child threads." alt="" coords="116,79,232,104"/>
+<area shape="rect" id="node4" href="$class_intruder_thread.html" title="Intruder Thread to manage intruder detection functionality." alt="" coords="257,79,361,104"/>
+<area shape="rect" id="node5" href="$class_mood_thread.html" title="Mood Thread to manage mood detection functionality." alt="" coords="385,79,478,104"/>
+</map>
