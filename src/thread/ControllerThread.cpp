@@ -6,6 +6,8 @@
  * Functions related to controller thread. We will initialize more child threads from here.
  */
 
+#include "../utils/Events.h"
+
 #include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
 #include "clap-detection/ClapThread.h"
@@ -86,6 +88,11 @@ void ControllerThread::run(void) {
     ClapThread clapThread;
 
     std::cout << ControllerThread::argc << std::endl;
+
+    eventHandler.getDispatcher().appendListener(EVENT_CODES::INTRUDER_THREAD_KILL, [&](){
+        // Kill intruder thread.
+        intruderThread.stop();
+    });
 
     if(ControllerThread::argc > 1) {
         switch(ControllerThread::argvValues.at(ControllerThread::argv[1])){

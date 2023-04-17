@@ -9,6 +9,7 @@
 #define CLAP_DETECTION_H
 
 #include "CppTimer.h"
+#include "../utils/Events.h"
 
 #include <iostream>
 #include <vector>
@@ -22,6 +23,10 @@
 #include <cstring>
 #include <stdio.h>
 
+// enum SIGNAL_CODES {
+//     CLAP_DETECTED = 1
+// };
+
 class ClapDetection {
     public:
         ClapDetection() {
@@ -31,9 +36,7 @@ class ClapDetection {
         void Initialize();
 
         void start() {
-            running = 1;
-            
-            while(running) { 
+            while(true) { 
                 std::vector<float> audioData;
             
                 err = Pa_OpenStream(&stream,
@@ -72,9 +75,8 @@ class ClapDetection {
                 double per = find_per_data(audioDataDouble, y_find);
 
                 // double per = find_per("recorded_audio.wav", "sample4.wav");
-                result(per, 0.5);
+                bool found = result(per, 0.5);
                 
-
                 // Stop audio stream
                 err = Pa_AbortStream(stream);
                 if (err != paNoError) {
@@ -90,12 +92,17 @@ class ClapDetection {
                     raise(SIGHUP);
                     return;
                 }
+
+                if(found){
+                    eventHandler.dispatch(EVENT_CODES::CLAP_DETECTED);
+                    Pa_Terminate();
+                    break;
+                }
             }
         }
 
-        void stop() {
+        void stop() const {
             // Terminate PortAudio
-            running = 0;
             Pa_Terminate();
         }
 
@@ -227,12 +234,11 @@ class ClapDetection {
         }
 
         // 
-        static void result(double per, double check){
+        static bool result(double per, double check){
             if (per <= check) {
-                std::cout << "Clap Detected" << std::endl;
-            } else {
-                std::cout << "Clap not Detected" << std::endl;
+                return true;
             }
+            return false;
         }
 
         static int paCallback(const void *inputBuffer, void *outputBuffer,
@@ -247,14 +253,15 @@ class ClapDetection {
         }
 
     private:
+        Events& eventHandler = Events::getInstance();
+        using EVENT_CODES = Events::EVENT_CODES;
+
         std::vector<double> y_find;
         std::string clapSamplePath = "../src/resources/clap-detection/sample.wav";
         
         PaError err;
         PaStream *stream;
         PaStreamParameters inputParameters;
-
-        int running = 0;
 };
 
 #endif

@@ -6,10 +6,12 @@
  * Functions related to intruder detection thread.
  */
 
-// #include "IntruderDetection.h"
+#include "../../utils/Events.h"
 #include "ClapDetection.h"
 #include "ClapThread.h"
 #include <stdio.h>
+#include <iostream>
+#include <chrono>
 #include <thread>
 
 enum EVENT_OP_CODES {
@@ -26,6 +28,11 @@ void ClapThread::run(void) {
 
     clapDetection.Initialize();
     clapDetection.start();
+
+    eventHandler.getDispatcher().appendListener(EVENT_CODES::CLAP_DETECTED, [&]() {
+        std::cout << "Clap detected" << std::endl;
+        eventHandler.getDispatcher().dispatch(EVENT_CODES::CLAP_DETECTED_THREAD);
+    });
     
 
     // switch(IntruderThread::modules.at(IntruderThread::module)) {

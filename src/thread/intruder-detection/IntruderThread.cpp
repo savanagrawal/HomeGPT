@@ -7,6 +7,7 @@
  */
 
 // #include "IntruderDetection.h"
+#include "../../utils/Events.h"
 #include "DatasetCreator.h"
 #include "DatasetTrainer.h"
 #include "IntruderThread.h"
@@ -30,10 +31,26 @@ void IntruderThread::run(void) {
     printf("Intruder Thread...\n");
 
     // std::exception_ptr eptr;
+    eventHandler.getDispatcher().appendListener(EVENT_CODES::DATASET_CREATOR_COMPLETE, [&]() {
+        // Now we can queue our model generation.
+        std::cout << "test" << std::endl;
+        
+        datasetCreator.stop();
+        datasetTrainer.Initialize();
+        datasetTrainer.generateModel();
+        
+        eventHandler.getDispatcher().dispatch(EVENT_CODES::DATASET_TRAINER_COMPLETE);
+    });
+
+    eventHandler.getDispatcher().appendListener(EVENT_CODES::DATASET_TRAINER_COMPLETE, [&]() {
+        // Time to kill the thread.
+        eventHandler.getDispatcher().dispatch(EVENT_CODES::INTRUDER_THREAD_KILL);
+    });
 
     switch(IntruderThread::modules.at(IntruderThread::module)) {
         case 1:
             datasetCreator.Initialize(IntruderThread::camera);
+            datasetCreator.checkCameraOpen(IntruderThread::camera);
             datasetCreator.startms(100);
         break;
         case 2:

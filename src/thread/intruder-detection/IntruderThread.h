@@ -10,6 +10,7 @@
 
 #include "../CppThread.h"
 #include "../../utils/Globals.h"
+#include "../../utils/Events.h"
 
 #include "IntruderDetection.h"
 #include "DatasetCreator.h"
@@ -42,7 +43,10 @@ class IntruderThread : public CppThread {
 
         void stop(){
             // intruderDetection.stop();
+            intruderDetection.stop();
             datasetCreator.stop();
+            
+            camera.release();
         }
 
     private:
@@ -50,6 +54,9 @@ class IntruderThread : public CppThread {
     
     private:
         Globals globals;
+
+        Events& eventHandler = Events::getInstance();
+        using EVENT_CODES = Events::EVENT_CODES;
 
         cv::VideoCapture camera;
 
