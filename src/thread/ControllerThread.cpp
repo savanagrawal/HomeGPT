@@ -7,6 +7,7 @@
  */
 
 #include "mood-detection/MoodThread.h"
+#include "intruder-detection/IntruderThread.h"
 #include "ControllerThread.h"
 #include "Controller.h"
 #include "Camera.h"
@@ -14,12 +15,14 @@
 #include <stdio.h>
 #include <thread>
 
+#include <typeinfo>
+
 // Global variable for detecting if the program is running or not.
 int running = 1;
 
 // A ctrl+c handler. Basically handles exiting the program safely.
 void sigHandler(int sig) {
-    if((sig == SIGHUP) || (sig == SIGINT)) {
+    if((sig == SIGHUP) || (sig == SIGINT) || (sig == SIGTERM)) {
         running = 0;
     }
 }
@@ -30,9 +33,17 @@ void setHUPHandler() {
 
     memset (&act, 0, sizeof(act));
 
+    sigemptyset(&act.sa_mask);
+    act.sa_flags = 0;
+
     act.sa_handler = sigHandler;
 
     if(sigaction(SIGHUP, &act, NULL) < 0) {
+        perror("sigaction");
+        exit(-1);
+    }
+
+    if(sigaction(SIGTERM, &act, NULL) < 0) {
         perror("sigaction");
         exit(-1);
     }
@@ -67,13 +78,51 @@ void ControllerThread::run(void) {
 
     MoodThread moodThread(cam);
 
-    moodThread.start();
+    // moodThread.start();
 
-    moodThread.join();
+    // moodThread.join();
+
+    IntruderThread intruderThread(cam);
+
+    std::cout << ControllerThread::argc << std::endl;
+
+    if(ControllerThread::argc > 1) {
+        switch(ControllerThread::argvValues.at(ControllerThread::argv[1])){
+            case CreateIntruderDataset:
+                intruderThread.setModule("create-dataset");
+
+                intruderThread.start();
+                intruderThread.join();
+            break;
+            case TrainIntruderModel:
+                intruderThread.setModule("train-model");
+
+                intruderThread.start();
+                intruderThread.join();
+            break;
+            case DetectIntruder:
+                intruderThread.setModule("detect-intruder");
+
+                intruderThread.start();
+                intruderThread.join();
+            break;
+            default:
+
+                // moodThread.start();
+
+                // moodThread.join();
+            break;
+        }
+    } else {
+        moodThread.start();
+        moodThread.join();
+    }
 
     printf("Main Loop...\n");
     while(running) sleep(1);
 
     moodThread.stop();
+
+    intruderThread.stop();
     printf("Shutting down...\n");
 }

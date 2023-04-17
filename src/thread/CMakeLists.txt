@@ -11,6 +11,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../peripherals )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../controller )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../mood-detection )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../intruder-detection )
 
 # Set include directories
 set(INCLUDE_DIRS
@@ -22,6 +23,7 @@ set(INCLUDE_DIRS
 set( SOURCES 
     ${CMAKE_CURRENT_SOURCE_DIR}/ControllerThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.cpp
 
 )
 
@@ -29,6 +31,7 @@ set( SOURCES
 set( HEADERS 
     ${CMAKE_CURRENT_SOURCE_DIR}/CppThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/ControllerThread.h
 
 )
@@ -40,4 +43,5 @@ add_library( ${PROJECT_NAME}_ThreadLib SHARED ${SOURCES} )
 target_link_libraries( ${PROJECT_NAME}_ThreadLib
     ${OpenCV_LIBS}
     ${PROJECT_NAME}_MoodDetectionLib
+    ${PROJECT_NAME}_IntruderDetectionLib
 )
