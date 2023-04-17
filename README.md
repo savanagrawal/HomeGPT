@@ -1,8 +1,8 @@
-<a href="https://github.com/savanagrawal/HomeGPT" target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT.png" alt="HomeGPT" width="200" height="200" /></a>
+<a href="https://github.com/savanagrawal/HomeGPT" target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png" alt="HomeGPT" width="200" height="200" /></a>
 
-
-
-
+\
+\
+</br>
 This repository will follow the development of an Home Assistant project HomeGPT based on real-time embedded system. This is a post-graduate project for the [University of Glasgow](https://gla.ac.uk).
 
 
@@ -23,10 +23,13 @@ This repository will follow the development of an Home Assistant project HomeGPT
 - [Libraries/Dependencies/Softwarers](#4)
 - [Data Sheets](#5) 
 - [Team Members](#6)
+- [LicenE](#7)
 
 ---
 
+
 <a id='1'></a>
+
 ### About
 The HomeGPT project is a smart home automation system that makes use of cutting-edge technologies to provide a secure and comfortable living space. These technologies include face detection, mood-based lighting controls, RFID-based garage entry, and fire warning.
 
@@ -36,17 +39,37 @@ With the use of facial recognition, the user is able to enter the residence than
 In accordance with mood, the device may also manage lighting. Based on the user's facial expressions, it can tell how they are feeling. Based on mood detection, it modifies light hue to calm the user. 
 
 User may enter a home or garage with an RFID key. As a result, the homeowner doesn't require standard keys to enter the residence.
+\
+</br>
+
+![RFID](https://github.com/savanagrawal/HomeGPT/img/RFID_RC522_and_Raspberry_pi_bb.png)
+
 
 Last but not least, the fire detection feature activates fire alarms when smoke or fire is detected using the MQ2 smoke detector sensor. An effective, practical, and secure home automation solution is provided by HomeGPT.
+\
+</br>
+
+![MQ2Sensor](https://github.com/savanagrawal/HomeGPT/img/MQ2_ADC_and_Raspberry_pi.png)
+
+
 
 
 ---
 <a id='2'></a>
+
 ### Getting Started
+\
+\
+\
+\
+\
+\
+</br>
 
 
 ---
 <a id='3'></a>
+
 ### Codes
 
 To Test
@@ -58,28 +81,21 @@ To Build & Run (Windows)
 
 ---
 <a id='4'></a>
+
 ### Libraries / Dependencies / Softwares
 
+- Raspbian (Debian 10 : Buster/Legacy)
 - C++
-- OpenCV
-- CMake
-- Raspbian
+- OpenCV (Version: 4.7.0)
+- CMake (Version: 3.0)
+- Boost (Version: 1.80)
+- PortAudio
+
 
 
 
 ---
 <a id='5'></a>
-### Data Sheets
-- [Raspberry Pi 3 : Model B : V1.2](https://www.distrelec.biz/Web/Downloads/_t/ds/RASPBERRY%20PI%203%20B_eng_tds.pdf)
-- [Raspberry Pi Camera Module 1080P 5MP](https://cdn.sparkfun.com/datasheets/Dev/RaspberryPi/RPiCamMod2.pdf)
-- [BOB-12009: Bidirectional Logic Level Converter Board](http://cdn.sparkfun.com/datasheets/BreakoutBoards/BSS138.pdf)
-- [ADS1115 16-Bit ADC : 4 Channel with Programmable Gain Amplifier](https://cdn-shop.adafruit.com/datasheets/ads1115.pdf)
-- [TowerPro Servo Motor - SG90 Digital](https://datasheetspdf.com/pdf-file/791970/TowerPro/SG90/1)
-- [MQ-2 : Butane Hydrogen LPG Gas Smoke Detector](https://datasheetspdf.com/pdf-file/622943/Hanwei/MQ-2/1)
-- [RC522 RFID Module 13.56MHz](https://www.hobbytronics.co.uk/datasheets/sensors/MFRC522.pdf)
-
-https://github.com/savanagrawal/HomeGPT/hardware/Raspberry Pi 3 - Model B - V1.2.pdf
-
 
 ### Data Sheets
 - [Raspberry Pi 3 : Model B : V1.2](https://github.com/savanagrawal/HomeGPT/hardware/Raspberry_Pi_3_Model_B_V1.2.pdf)
@@ -100,3 +116,7 @@ https://github.com/savanagrawal/HomeGPT/hardware/Raspberry Pi 3 - Model B - V1.2
 [@hrushisanap](https://github.com/hrushisanap) - Hrushikesh Sanap (GUID: 2819312S) - MSc in Robotics and AI<br>
 [@MustafaZari](https://github.com/MustafaZari) - Mustafa Zariwala (GUID: 2617991Z) - MSc in Robotics and AI<br>
 [@MiB3Avenger](https://github.com/MiB3Avenger) - Chinmay Nagrale (GUID: 2788044N) - MSc in Computer Systems Engineering<br>
+
+<a id='7'></a>
+## License
+Link to [LICENSE](https://github.com/savanagrawal/HomeGPT/LICENSE) doc
