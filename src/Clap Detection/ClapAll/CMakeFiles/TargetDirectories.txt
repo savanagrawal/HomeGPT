@@ -1,0 +1,13 @@
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/edit_cache.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/ninth.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/eight.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/seventh.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/sixth.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/rebuild_cache.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/paex_record_c.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/third.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/detectmic.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/detectclap.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/clapcustomfft.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/fifth.dir
+/home/pi/homegpt/src/Clap Detection/ClapAll/CMakeFiles/paex_record.dir

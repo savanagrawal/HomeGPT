@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/sixth.dir/sixth.cpp.o  -o sixth  -Wl,-rpath,/usr/local/lib/portaudio/lib /usr/local/lib/portaudio/lib/libportaudio.so -lsndfile -lasound -lm -lpthread 

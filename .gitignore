@@ -7,8 +7,6 @@ build/
 # Ignore Mood Detection model
 svmhog.xml
 
-src/**/ClapAll/
-
 # Ignore CMake Cache and other CMake Files.
 CMakeLists.txt.user
 CMakeCache.txt

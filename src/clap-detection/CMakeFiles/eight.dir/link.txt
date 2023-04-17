@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/eight.dir/eight.cpp.o  -o eight  -Wl,-rpath,/usr/local/lib/portaudio/lib /usr/local/lib/portaudio/lib/libportaudio.so -lsndfile -lasound -lm -lpthread 
