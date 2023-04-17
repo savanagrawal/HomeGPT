@@ -23,7 +23,9 @@ This repository will follow the development of an Home Assistant project HomeGPT
 - [Libraries/Dependencies/Softwarers](#4)
 - [Data Sheets](#5) 
 - [Team Members](#6)
-- [LicenE](#7)
+- [License](#7)
+- [Code of Conduct](#8)
+- [Contributing](#9)
 
 ---
 
@@ -42,14 +44,14 @@ User may enter a home or garage with an RFID key. As a result, the homeowner do
 \
 </br>
 
-![RFID](https://github.com/savanagrawal/HomeGPT/img/RFID_RC522_and_Raspberry_pi_bb.png)
+![RFID](https://mib3avenger.com/raspberry-pi/images/RFID_RC522_and_Raspberry_pi_bb.png)
 
 
 Last but not least, the fire detection feature activates fire alarms when smoke or fire is detected using the MQ2 smoke detector sensor. An effective, practical, and secure home automation solution is provided by HomeGPT.
 \
 </br>
 
-![MQ2Sensor](https://github.com/savanagrawal/HomeGPT/img/MQ2_ADC_and_Raspberry_pi.png)
+![MQ2Sensor](https://mib3avenger.com/raspberry-pi/images/MQ2_ADC_and_Raspberry_pi.png)
 
 
 
@@ -118,4 +120,13 @@ To Build & Run (Windows)
 
 <a id='7'></a>
 ## License
-Link to [LICENSE](https://github.com/savanagrawal/HomeGPT/LICENSE) doc
+Link to [LICENSE](https://github.com/savanagrawal/HomeGPT/blob/main/LICENSE) doc
+
+
+<a id='8'></a>
+## Code of Conduct
+Link to [CODE OF CONDUCT](https://github.com/savanagrawal/HomeGPT/blob/main/CODE_OF_CONDUCT) doc
+
+<a id='9'></a>
+## Contributing Guidelines
+Link to [CONTRIBUTING](https://github.com/savanagrawal/HomeGPT/blob/main/CONTRIBUTING) doc
