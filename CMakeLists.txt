@@ -16,7 +16,7 @@ find_package( Boost COMPONENTS system filesystem REQUIRED)
 add_subdirectory( src/peripherals )
 # add_subdirectory( src/controller )
 add_subdirectory( src/thread )
-# add_subdirectory( src/clap-detection )
+add_subdirectory( src/clap-detection )
 add_subdirectory( src/intruder-detection )
 add_subdirectory( src/mood-detection )
 
@@ -31,7 +31,7 @@ set(INCLUDE_DIRS
     ${CMAKE_CURRENT_SOURCE_DIR}/src/clap-detection
     ${CMAKE_CURRENT_SOURCE_DIR}/src/thread
     # ${CMAKE_CURRENT_SOURCE_DIR}/src/controller
-    # ${CMAKE_CURRENT_SOURCE_DIR}/src/Clap-detection
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/clap-detection
 )
 
 # Set source files
@@ -55,9 +55,9 @@ target_link_libraries( ${PROJECT_NAME}_Lib
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_FILESYSTEM_LIBRARY}
     # ${PROJECT_NAME}_PeripheralsLib
-    # ${PROJECT_NAME}_ClapDetectionLib
+    ${PROJECT_NAME}_ClapDetectionLib
     ${PROJECT_NAME}_MoodDetectionLib
-    # ${PROJECT_NAME}_IntruderDetectionLib
+    ${PROJECT_NAME}_IntruderDetectionLib
     ${PROJECT_NAME}_ThreadLib
 )
 
