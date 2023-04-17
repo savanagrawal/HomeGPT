@@ -27,5 +27,6 @@ void MoodThread::run(void) {
     moodDetection.Initialize(MoodThread::camera);
 
     // Detect mood every 10ms.
+    std::cout << "Running mood detection..." << std::endl;
     moodDetection.startms(10);
 }
