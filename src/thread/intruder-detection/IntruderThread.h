@@ -40,7 +40,6 @@ class IntruderThread : public CppThread {
             }
         }
 
-    public:
         void stop(){
             // intruderDetection.stop();
             datasetCreator.stop();

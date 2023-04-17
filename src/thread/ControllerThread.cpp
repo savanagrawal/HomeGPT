@@ -8,10 +8,10 @@
 
 #include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
+#include "clap-detection/ClapThread.h"
 #include "ControllerThread.h"
 #include "Controller.h"
 #include "Camera.h"
-#include "MoodDetection.h"
 #include <stdio.h>
 #include <thread>
 
@@ -83,6 +83,7 @@ void ControllerThread::run(void) {
     // moodThread.join();
 
     IntruderThread intruderThread(cam);
+    ClapThread clapThread;
 
     std::cout << ControllerThread::argc << std::endl;
 
@@ -105,6 +106,10 @@ void ControllerThread::run(void) {
 
                 intruderThread.start();
                 intruderThread.join();
+            break;
+            case DetectClap:
+                clapThread.start();
+                clapThread.join();
             break;
             default:
 
