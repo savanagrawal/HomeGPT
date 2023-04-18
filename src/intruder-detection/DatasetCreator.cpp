@@ -15,8 +15,9 @@
  * 
  * @return
  */
-void IntruderDatasetCreator::Initialize(cv::VideoCapture camera) {
+void IntruderDatasetCreator::Initialize(cv::VideoCapture camera, Events* eventHandler) {
     IntruderDatasetCreator::masterCamera = camera;
+    IntruderDatasetCreator::eventHandler = eventHandler;
     detector.load(cascadePath);
     
 

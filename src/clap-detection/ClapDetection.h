@@ -9,7 +9,7 @@
 #define CLAP_DETECTION_H
 
 #include "CppTimer.h"
-#include "../utils/Events.h"
+// #include "../utils/Events.h"
 
 #include <iostream>
 #include <vector>
@@ -34,9 +34,54 @@ class ClapDetection {
         }
 
         void Initialize();
+        
+        void openStream() {
+            err = Pa_OpenStream(&stream,
+                                &inputParameters,
+                                nullptr, // No output
+                                44100,   // Sample rate
+                                256,     // Frames per buffer
+                                paClipOff,
+                                paCallback,
+                                &audioData);
+            
+            if (err != paNoError) {
+                std::cerr << "PortAudio error open stream: " << Pa_GetErrorText(err) << std::endl;
+                raise(SIGHUP);
+                return;
+            }
+
+            err = Pa_StartStream(stream);
+            if (err != paNoError) {
+                std::cerr << "PortAudio error start stream: " << Pa_GetErrorText(err) << std::endl;
+                Pa_CloseStream(stream);
+                Pa_Terminate();
+                raise(SIGHUP);
+                return;
+            }
+        }
+        
+        void closeStream() {
+            // Stop audio stream
+            err = Pa_AbortStream(stream);
+            if (err != paNoError) {
+                std::cerr << "PortAudio error abort stream: " << Pa_GetErrorText(err) << std::endl;
+                raise(SIGHUP);
+                return;
+            }
+
+            // Close audio stream
+            err = Pa_CloseStream(stream);
+            if (err != paNoError) {
+                std::cerr << "Portudio error close stream: " << Pa_GetErrorText(err) << std::endl;
+                raise(SIGHUP);
+                return;
+            }
+        }
 
         void start() {
-            while(true) { 
+            return;
+            while(true) {
                 std::vector<float> audioData;
             
                 err = Pa_OpenStream(&stream,
@@ -72,6 +117,7 @@ class ClapDetection {
                 std::cout << "Running clap detection on recorded audio..." << std::endl;
 
                 std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
+                std::cout << audioData.size() << std::endl;
                 double per = find_per_data(audioDataDouble, y_find);
 
                 // double per = find_per("recorded_audio.wav", "sample4.wav");
@@ -94,7 +140,7 @@ class ClapDetection {
                 }
 
                 if(found){
-                    eventHandler.dispatch(EVENT_CODES::CLAP_DETECTED);
+                    // eventHandler->dispatch(EVENT_CODES::CLAP_DETECTED);
                     Pa_Terminate();
                     break;
                 }
@@ -105,7 +151,33 @@ class ClapDetection {
             // Terminate PortAudio
             Pa_Terminate();
         }
+        
+        void record() {
+            // Record for 1 seconds
+            std::cout << "Recording audio for 1.0 seconds..." << std::endl;
+            Pa_Sleep(1000);
+            
+            recorded = true;
+        }
+        
+        bool detectClap() {
+            std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
+            std::cout << audioData.size() << std::endl;
+            double per = find_per_data(audioDataDouble, y_find);
 
+            // double per = find_per("recorded_audio.wav", "sample4.wav");
+            bool found = result(per, 0.5);
+            
+            if(!found){
+                audioData.clear();
+            } else {
+                closeStream();
+                stop();
+            }
+            
+            return found;
+        }
+        
         // Helper function to reverse bits of a number
         static int reverse_bits(int num, int bit_length) {
             int result = 0;
@@ -234,7 +306,7 @@ class ClapDetection {
         }
 
         // 
-        static bool result(double per, double check){
+        bool result(double per, double check){
             if (per <= check) {
                 return true;
             }
@@ -253,11 +325,20 @@ class ClapDetection {
         }
 
     private:
-        Events& eventHandler = Events::getInstance();
-        using EVENT_CODES = Events::EVENT_CODES;
+        
+        // Events* eventHandler = nullptr;
+        // using EVENT_CODES = Events::EVENT_CODES;
+
+        // Events& eventHandler = Events::getInstance();
+        // using EVENT_CODES = Events::EVENT_CODES;
 
         std::vector<double> y_find;
         std::string clapSamplePath = "../src/resources/clap-detection/sample.wav";
+        
+        std::vector<double> audioData = std::vector<double>(44000,0.0);
+        static std::vector<double>* y_findPtr;
+        
+        bool recorded = false;
         
         PaError err;
         PaStream *stream;

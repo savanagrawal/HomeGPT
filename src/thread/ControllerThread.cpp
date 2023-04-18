@@ -11,7 +11,9 @@
 #include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
 #include "clap-detection/ClapThread.h"
+#include "clap-detection/AudioRecordThread.h"
 #include "ControllerThread.h"
+#include "ClapDetection.h"
 #include "Controller.h"
 #include "Camera.h"
 #include <stdio.h>
@@ -83,13 +85,18 @@ void ControllerThread::run(void) {
     // moodThread.start();
 
     // moodThread.join();
+    
+    ClapDetection clapDetection;
+    clapDetection.Initialize();
+    clapDetection.openStream();
 
-    IntruderThread intruderThread(cam);
-    ClapThread clapThread;
+    IntruderThread intruderThread(cam, &eventHandler);
+    ClapThread clapThread(&clapDetection);
+    AudioRecordThread audioRecordThread(&clapDetection);
 
     std::cout << ControllerThread::argc << std::endl;
 
-    eventHandler.getDispatcher().appendListener(EVENT_CODES::INTRUDER_THREAD_KILL, [&](){
+    eventHandler.getDispatcher()->appendListener(EVENT_CODES::INTRUDER_THREAD_KILL, [&](){
         // Kill intruder thread.
         intruderThread.stop();
     });
@@ -115,6 +122,9 @@ void ControllerThread::run(void) {
                 intruderThread.join();
             break;
             case DetectClap:
+                audioRecordThread.start();
+                audioRecordThread.join();
+                
                 clapThread.start();
                 clapThread.join();
             break;

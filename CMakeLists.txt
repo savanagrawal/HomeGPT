@@ -56,7 +56,7 @@ target_link_libraries( ${PROJECT_NAME}_Lib
     eventpp::eventpp
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_FILESYSTEM_LIBRARY}
-    # ${PROJECT_NAME}_PeripheralsLib
+    ${PROJECT_NAME}_PeripheralsLib
     ${PROJECT_NAME}_ClapDetectionLib
     ${PROJECT_NAME}_MoodDetectionLib
     ${PROJECT_NAME}_IntruderDetectionLib

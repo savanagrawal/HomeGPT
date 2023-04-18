@@ -1,9 +1,9 @@
 /**
- * @file IntruderThread.cpp
+ * @file ClapThread.cpp
  * @author Chinmay Nagrale
  * @version 0.1
  * 
- * Functions related to intruder detection thread.
+ * Functions related to clap detection thread.
  */
 
 #include "../../utils/Events.h"
@@ -25,30 +25,18 @@ enum EVENT_OP_CODES {
  */
 void ClapThread::run(void) {
     printf("Clap Thread...\n");
-
-    clapDetection.Initialize();
-    clapDetection.start();
-
-    eventHandler.getDispatcher().appendListener(EVENT_CODES::CLAP_DETECTED, [&]() {
-        std::cout << "Clap detected" << std::endl;
-        eventHandler.getDispatcher().dispatch(EVENT_CODES::CLAP_DETECTED_THREAD);
-    });
     
-
-    // switch(IntruderThread::modules.at(IntruderThread::module)) {
-    //     case 1:
-    //         datasetCreator.Initialize(IntruderThread::camera);
-    //         datasetCreator.startms(100);
-    //     break;
-    //     case 2:
-    //         datasetTrainer.Initialize();
-    //         datasetTrainer.generateModel();
-    //         globals.killProcess();
-    //     break;
-    //     case 3:
-    //     default:
-    //         intruderDetection.Initialize(IntruderThread::camera);
-    //         intruderDetection.startms(100);
-    //     break;
-    // }
+    while(true) {
+        std::cout << "Detecting clap..." << std::endl;
+        bool found = clapDetection->detectClap();
+        
+        if(!found) {
+            std::cout << "Clap not found... Recording..." << std::endl;
+            clapDetection->record();
+        } else {
+            std::cout << "Found clap..." << std::endl;
+            clapDetection->stop();
+            break;
+        }
+    }
 }
