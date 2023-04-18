@@ -21,7 +21,7 @@ enum EVENT_OP_CODES {
  * Manage the mood thread runnable.
  */
 void RFIDThread::run(void) {
-    printf("Mood Thread...\n");
+    printf("RFID Thread...\n");
 
     // Initialize mood detection controller.
     rfid.Initialize();

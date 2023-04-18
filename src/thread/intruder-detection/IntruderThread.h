@@ -1,6 +1,6 @@
 /**
  * @file IntruderThread.h
- * @author Chinmay Nagrale
+ * @author Chinmay Nagrale & Savan Agrawal
  * @version 0.1
  * 
  * Handle our intruder detection thread.
@@ -18,6 +18,7 @@
 #include <opencv2/opencv.hpp>
 #include <memory>
 #include <string>
+#include "../utils/EventHandler.h"
 
 /**
  * @brief Intruder Thread to manage intruder detection functionality.
@@ -51,7 +52,8 @@ class IntruderThread : public CppThread {
         }
 
     private:
-        void run();
+        // void run();
+        void run(void);
     
     private:
         Globals globals;
@@ -61,6 +63,7 @@ class IntruderThread : public CppThread {
 
         // Events& eventHandler = Events::getInstance();
         // using EVENT_CODES = Events::EVENT_CODES;
+
 
         cv::VideoCapture camera;
 

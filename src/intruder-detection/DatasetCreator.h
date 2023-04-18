@@ -14,16 +14,23 @@
 #include <opencv2/opencv.hpp>
 #include <fstream>
 #include <iostream>
+#include "../utils/EventHandler.h"
 
 class IntruderDatasetCreator : public CppTimer {
     /** Timer function for intruder detector's dataset creation functionality. */
     void timerEvent() {
+        // std::cout<<"Hi"<<std::endl;
+
+        EventHandler& eventHandler = EventHandler::getInstance();
+
+
         // break if the sample number is more than 200
-        std::cout << eventHandler->getDispatcher()->hasAnyListener(EVENT_CODES::DATASET_CREATOR_COMPLETE) << std::endl;
-        
         if (samples > 20){
             std::cout << "Exiting dataset creator, expect a segmentation fault." << std::endl;
-            eventHandler->getDispatcher()->dispatch(EVENT_CODES::DATASET_CREATOR_COMPLETE);
+            // eventHandler.getDispatcher().dispatch(EVENT_CODES::DATASET_CREATOR_COMPLETE);
+            // eventHandler.getDispatcher().Dispatch(static_cast<eventpp::Event>(EVENT_CODES::DATASET_CREATOR_COMPLETE));
+            std::cout<<(eventHandler.isEventRegistered(Event::DatasetCreatorComplete))<<std::endl;
+            eventHandler.emit(Event::DatasetCreatorComplete);
             return;
         }
 
@@ -170,16 +177,10 @@ class IntruderDatasetCreator : public CppTimer {
 
         cv::CascadeClassifier detector;
         std::string cascadePath = "../src/resources/haarcascade_frontalface_default.xml";
-        
-        Events* eventHandler = nullptr;
-        using EVENT_CODES = Events::EVENT_CODES;
-
-        // Events& eventHandler = Events::getInstance();
-        // using EVENT_CODES = Events::EVENT_CODES;
 
         std::string fileName = "../src/resources/intruder-detection/Users.txt";
         std::string newUser;
-
+  
         int samples = 0;
         int CameraID = 0;
 

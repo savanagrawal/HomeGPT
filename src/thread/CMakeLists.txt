@@ -27,6 +27,7 @@ set( SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/ClapThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/AudioRecordThread.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/../utils/EventHandler.cpp
 
 )
 
@@ -38,6 +39,7 @@ set( HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/ClapThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/AudioRecordThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/ControllerThread.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/../utils/EventHandler.h
 
 )
 

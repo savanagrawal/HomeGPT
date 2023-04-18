@@ -10,9 +10,6 @@
 
 #include "eventpp/eventdispatcher.h"
 
-
-
-
 class Events {
     public:
         enum EVENT_CODES {
@@ -24,9 +21,17 @@ class Events {
             DATASET_TRAINER_ERROR,
             INTRUDER_THREAD_KILL
         };
+        
+        static Events& getInstance() {
+            static Events instance;
+            return instance; 
+        }
+        
+        Events(const Events&) = delete;
+        Events& operator = (const Events&) = delete;
 
-        eventpp::EventDispatcher<EVENT_CODES, void ()>* getDispatcher() {
-             return &dispatcher;
+        eventpp::EventDispatcher<EVENT_CODES, void ()> getDispatcher() {
+             return dispatcher;
         }
         
         void appendListener(EVENT_CODES ev, std::function<void()> cb){
@@ -38,7 +43,12 @@ class Events {
         }
 
     private:
+        Events() = default;
+        ~Events() = default;
+        
         eventpp::EventDispatcher<EVENT_CODES, void ()> dispatcher;
+
+        // eventpp::CallbackList<void (const EVENT_CODES)>
 };
 
 #endif
