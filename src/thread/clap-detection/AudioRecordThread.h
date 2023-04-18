@@ -1,24 +1,23 @@
 /**
- * @file ClapThread.h
+ * @file AudioRecordThread.h
  * @author Chinmay Nagrale
  * @version 0.1
  * 
- * Handle our clap detection thread.
+ * Handle our audio record thread.
  */
-#ifndef CLAP_THREAD_H
-#define CLAP_THREAD_H
+#ifndef AUDIO_RECORD_THREAD_H
+#define AUDIO_RECORD_THREAD_H
 
 #include "../CppThread.h"
 #include "../../utils/Globals.h"
-#include "../../utils/Events.h"
 
 #include "ClapDetection.h"
 #include <string>
 
-class ClapThread : public CppThread {
+class AudioRecordThread : public CppThread {
     public:
-        ClapThread(ClapDetection* clapDetection) {
-            ClapThread::clapDetection = clapDetection;
+        AudioRecordThread(ClapDetection* clapDetection) {
+            AudioRecordThread::clapDetection = clapDetection;
         }
 
     private:

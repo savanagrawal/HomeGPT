@@ -11,6 +11,7 @@ project( HomeGPT VERSION 0.1 )
 # Find packages
 find_package( Threads REQUIRED )
 find_package( Boost COMPONENTS system filesystem REQUIRED)
+find_package( eventpp REQUIRED )
 
 # Add all subdirectories for project
 add_subdirectory( src/peripherals )
@@ -52,9 +53,10 @@ target_link_libraries( ${PROJECT_NAME}_Lib
     rt
     stdc++fs
     cpptimer
+    eventpp::eventpp
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_FILESYSTEM_LIBRARY}
-    # ${PROJECT_NAME}_PeripheralsLib
+    ${PROJECT_NAME}_PeripheralsLib
     ${PROJECT_NAME}_ClapDetectionLib
     ${PROJECT_NAME}_MoodDetectionLib
     ${PROJECT_NAME}_IntruderDetectionLib

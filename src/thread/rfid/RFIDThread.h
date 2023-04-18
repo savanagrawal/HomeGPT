@@ -14,13 +14,13 @@
 #include <memory>
 
 /**
- * @brief Mood Thread to manage mood detection functionality.
+ * @brief Rfid Thread to manage rfid detection functionality.
  * @author Chinmay Nagrale
  */
 class RFIDThread : public CppThread {
     public:
         /**
-         * Contructor for our mood thread.
+         * Contructor for our rfid thread.
          * 
          * @param 
          */
@@ -40,5 +40,4 @@ class RFIDThread : public CppThread {
     private:
         RFID rfid;
 };
-
 #endif
