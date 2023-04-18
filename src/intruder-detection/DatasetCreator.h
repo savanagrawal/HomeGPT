@@ -9,32 +9,41 @@
 #define DATASET_CREATOR_H
 
 #include "CppTimer.h"
+#include "../utils/Events.h"
 
 #include <opencv2/opencv.hpp>
+#include <fstream>
 #include <iostream>
+#include "../utils/EventHandler.h"
 
 class IntruderDatasetCreator : public CppTimer {
     /** Timer function for intruder detector's dataset creation functionality. */
     void timerEvent() {
+        // std::cout<<"Hi"<<std::endl;
+
+        EventHandler& eventHandler = EventHandler::getInstance();
+
+
         // break if the sample number is more than 200
-        if (samples > 200){
+        if (samples > 20){
             std::cout << "Exiting dataset creator, expect a segmentation fault." << std::endl;
-            raise(SIGHUP);
+            // eventHandler.getDispatcher().dispatch(EVENT_CODES::DATASET_CREATOR_COMPLETE);
+            // eventHandler.getDispatcher().Dispatch(static_cast<eventpp::Event>(EVENT_CODES::DATASET_CREATOR_COMPLETE));
+            std::cout<<(eventHandler.isEventRegistered(Event::DatasetCreatorComplete))<<std::endl;
+            eventHandler.emit(Event::DatasetCreatorComplete);
             return;
         }
 
-        if(Id.empty()) {
+        if(newUser.empty()) {
             std::cerr << "Error: No User ID found. Try to initialize the dataset creator first then start the loop." << std::endl;
             raise(SIGHUP);
             return;
         }
+        
+        cv::Mat img;
 
-        bool ret = masterCamera.read(img);
-
-        if (!ret) {
-            std::cerr << "Error: Failed to read camera frame" << std::endl;
-            return;
-        }
+        masterCamera >> img;
+        if(img.empty()) return;
 
         cvtColor(img, gray, cv::COLOR_BGR2GRAY);
 
@@ -47,7 +56,7 @@ class IntruderDatasetCreator : public CppTimer {
             samples++;
 
             // saving the captured face in the dataset folder
-            std::string filename = "../src/resources/intruder-detection/dataset/User." + Id + "." + std::to_string(samples) + ".jpg";
+            std::string filename = "../src/resources/intruder-detection/dataset/User." + newUser + "." + std::to_string(samples) + ".jpg";
             imwrite(filename, gray(face));
 
             imshow("frame", img);
@@ -121,18 +130,65 @@ class IntruderDatasetCreator : public CppTimer {
         
             return has_alpha;
         }
-    
+
+        bool findStringInFile(const std::string& fileName, const std::string& searchString) {
+            std::ifstream file(fileName);
+            std::string line;
+
+            while (std::getline(file, line)) {
+                std::istringstream iss(line);
+                std::string name;
+                std::getline(iss, name, ',');
+                if (name == searchString) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        int getLastIntegerInFile(const std::string& fileName) {
+            std::ifstream file(fileName);
+            std::string line;
+            int lastInteger = 0;
+
+            while (std::getline(file, line)) {
+                std::istringstream iss(line);
+                std::string name;
+                std::string numStr;
+                std::getline(iss, name, ',');
+                std::getline(iss, numStr);
+                int num = std::stoi(numStr);
+                lastInteger = num;
+            }
+
+            return lastInteger;
+        }
+
+        void appendLineToFile(const std::string& fileName, const std::string& line) {
+            std::ofstream file(fileName, std::ios_base::app);
+            file << line << std::endl;
+        }
+        
+        
+        int checkCameraOpen(cv::VideoCapture camera);
     private:
         cv::VideoCapture masterCamera;
 
         cv::CascadeClassifier detector;
         std::string cascadePath = "../src/resources/haarcascade_frontalface_default.xml";
+        // EventHandler& eventHandler = EventHandler::getInstance();
 
 
-        std::string Id;
+        // Events& eventHandler = Events::getInstance();
+        // using EVENT_CODES = Events::EVENT_CODES;
+
+        std::string fileName = "../src/resources/intruder-detection/Users.txt";
+        std::string newUser;
+
         int samples = 0;
+        int CameraID = 0;
 
-        cv::Mat img;
         cv::Mat gray;
 
         std::vector<cv::Rect> faces;

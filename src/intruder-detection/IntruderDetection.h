@@ -15,6 +15,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
+#include <sstream>
+#include <map>
 
 class IntruderDetection : public CppTimer {
     void timerEvent () {
@@ -22,6 +25,8 @@ class IntruderDetection : public CppTimer {
             std::cerr << "Error opening camera." << std::endl;
             return;
         }
+
+        users = readFileToMap(fileName);
 
         masterCamera >> im;
         if(im.empty()) return;
@@ -39,18 +44,16 @@ class IntruderDetection : public CppTimer {
             int predictedLabel = -1;
             double confidence = 0.0;
             recognizer->predict(gray(faces[i]), predictedLabel, confidence);
-            std::cout << "Predicted label: " << predictedLabel << ", Confidence: " << confidence << std::endl;
 
             std::string label;
-            if (confidence < 90) {
-                if (predictedLabel == 1) {
-                    label = "Savan";
-                } else if (predictedLabel == 22) {
-                    label = "Chinmay";
-                }
+            auto it = users.find(predictedLabel);
+            if (confidence < 90 && it != users.end()) {
+                label = it->second;
             } else {
                 label = "Intruder";
             }
+
+            std::cout << "Predicted label: " << predictedLabel << ", Name: " << label << ", Confidence: " << confidence << std::endl;
             putText(im, label, cv::Point(faces[i].x, faces[i].y - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(225, 0, 0), 2);
         }
         
@@ -77,6 +80,24 @@ class IntruderDetection : public CppTimer {
             stop();
         }
 
+        std::map<int, std::string> readFileToMap(const std::string& fileName) {
+            std::ifstream file(fileName);
+            std::string line;
+            std::map<int, std::string> users;
+
+            while (std::getline(file, line)) {
+                std::istringstream iss(line);
+                std::string name;
+                std::getline(iss, name, ',');
+                std::string numStr;
+                std::getline(iss, numStr);
+                int num = std::stoi(numStr);
+                users[num] = name;
+            }
+
+            return users;
+        }
+
     private:
         cv::VideoCapture masterCamera;
 
@@ -87,6 +108,9 @@ class IntruderDetection : public CppTimer {
         std::string trainedModelPath = "../src/resources/intruder-detection/trainer/trainer.yml";
 
         cv::Ptr<cv::face::LBPHFaceRecognizer> recognizer = cv::face::LBPHFaceRecognizer::create();
+
+        std::string fileName = "../src/resources/intruder-detection/Users.txt";
+        std::map<int, std::string> users;
 };
 
 #endif
