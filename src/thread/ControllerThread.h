@@ -8,13 +8,12 @@
 #ifndef CONTROLLER_THREAD_H
 #define CONTROLLER_THREAD_H
 
+#include "../utils/Events.h"
 #include "CppThread.h"
 #include <vector>
 #include <iostream>
 #include <map>
 // #include "Controller.h"
-
-
 
 /**
  * @brief Controller Thread to manage all child threads.
@@ -41,6 +40,12 @@ class ControllerThread : public CppThread {
     
     private:
         int argc = 1;
+        
+        Events eventHandler;
+        using EVENT_CODES = Events::EVENT_CODES;
+        
+        // Events& eventHandler = Events::getInstance();
+        // using EVENT_CODES = Events::EVENT_CODES;
 
         std::vector<std::string> argv;
 
@@ -48,7 +53,8 @@ class ControllerThread : public CppThread {
             CreateIntruderDataset,
             TrainIntruderModel,
             DetectIntruder,
-            DetectClap
+            DetectClap,
+            RfidStart
         };
 
         std::map<std::string, argvEnum> argvValues = {
@@ -60,6 +66,7 @@ class ControllerThread : public CppThread {
             {"--di", DetectIntruder},
             {"--detect-clap", DetectClap},
             {"--dc", DetectClap},
+            {"--rfid", RfidStart},
         };
 };
 
