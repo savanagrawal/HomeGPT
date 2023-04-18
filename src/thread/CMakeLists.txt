@@ -12,6 +12,7 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../peripherals )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../controller )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../mood-detection )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../intruder-detection )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../intruder-mood-detection )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../clap-detection )
 
 # Set include directories
@@ -25,8 +26,8 @@ set( SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/ControllerThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/intruder-mood-detection/IntruderMoodThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/ClapThread.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/AudioRecordThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/../utils/EventHandler.cpp
 
 )
@@ -36,8 +37,8 @@ set( HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/CppThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/intruder-mood-detection/IntruderMoodThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/ClapThread.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/AudioRecordThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/ControllerThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/../utils/EventHandler.h
 
@@ -51,5 +52,6 @@ target_link_libraries( ${PROJECT_NAME}_ThreadLib
     ${OpenCV_LIBS}
     ${PROJECT_NAME}_MoodDetectionLib
     ${PROJECT_NAME}_IntruderDetectionLib
+    ${PROJECT_NAME}_IntruderMoodDetectionLib
     ${PROJECT_NAME}_ClapDetectionLib
 )

@@ -29,9 +29,8 @@ class IntruderThread : public CppThread {
         /**
          * Contructor for our intruder thread.
          */
-        IntruderThread(cv::VideoCapture camera, Events* eventHandler) {
+        IntruderThread(cv::VideoCapture camera) {
             IntruderThread::camera = camera;
-            IntruderThread::eventHandler = eventHandler;
         }
 
         void setModule(std::string module) {
@@ -57,12 +56,6 @@ class IntruderThread : public CppThread {
     
     private:
         Globals globals;
-        
-        Events* eventHandler = nullptr;
-        using EVENT_CODES = Events::EVENT_CODES;
-
-        // Events& eventHandler = Events::getInstance();
-        // using EVENT_CODES = Events::EVENT_CODES;
 
 
         cv::VideoCapture camera;
