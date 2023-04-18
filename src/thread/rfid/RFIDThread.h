@@ -10,8 +10,6 @@
 
 #include "../CppThread.h"
 #include "RFID.h"
-#include <opencv2/opencv.hpp>
-#include <memory>
 
 /**
  * @brief Rfid Thread to manage rfid detection functionality.
@@ -30,9 +28,7 @@ class RFIDThread : public CppThread {
         /**
          * Stop our thread's inner functionality.
          */
-        void stop(){
-            moodDetection.stop();
-        }
+        void stop(){}
 
     private:
         void run();

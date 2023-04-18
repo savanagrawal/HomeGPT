@@ -8,7 +8,6 @@
 #ifndef CONTROLLER_THREAD_H
 #define CONTROLLER_THREAD_H
 
-#include "../utils/Events.h"
 #include "CppThread.h"
 #include <vector>
 #include <iostream>
@@ -40,12 +39,6 @@ class ControllerThread : public CppThread {
     
     private:
         int argc = 1;
-        
-        Events eventHandler;
-        using EVENT_CODES = Events::EVENT_CODES;
-        
-        // Events& eventHandler = Events::getInstance();
-        // using EVENT_CODES = Events::EVENT_CODES;
 
         std::vector<std::string> argv;
 

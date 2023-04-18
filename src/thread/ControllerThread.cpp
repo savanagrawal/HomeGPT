@@ -6,16 +6,16 @@
  * Functions related to controller thread. We will initialize more child threads from here.
  */
 
-#include "../utils/Events.h"
-
 #include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
 #include "clap-detection/ClapThread.h"
 #include "clap-detection/AudioRecordThread.h"
+
 #include "ControllerThread.h"
+
 #include "ClapDetection.h"
 #include "Controller.h"
-#include "Camera.h"
+
 #include <stdio.h>
 #include <thread>
 
@@ -90,16 +90,11 @@ void ControllerThread::run(void) {
     clapDetection.Initialize();
     clapDetection.openStream();
 
-    IntruderThread intruderThread(cam, &eventHandler);
+    IntruderThread intruderThread(cam);
     ClapThread clapThread(&clapDetection);
     AudioRecordThread audioRecordThread(&clapDetection);
 
     std::cout << ControllerThread::argc << std::endl;
-
-    eventHandler.getDispatcher()->appendListener(EVENT_CODES::INTRUDER_THREAD_KILL, [&](){
-        // Kill intruder thread.
-        intruderThread.stop();
-    });
 
     if(ControllerThread::argc > 1) {
         switch(ControllerThread::argvValues.at(ControllerThread::argv[1])){

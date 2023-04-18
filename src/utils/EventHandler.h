@@ -15,7 +15,12 @@
 enum class Event {
     DatasetCreatorComplete,
     DatasetTrainerComplete,
-    IntruderThreadKill
+    IntruderThreadKill,
+    RfidAuthenticated,
+    OpenGarageDoor,
+    OpenedGarageDoor,
+    CloseGarageDoor,
+    ClosedGarageDoor
 };
 
 class EventHandler {

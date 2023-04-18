@@ -1,8 +1,8 @@
 // Copyright (C) 2021 twyleg
 #pragma once
 
-#include "ispi.h"
-#include "igpio.h"
+#include "bcm2835/ispi.h"
+#include "bcm2835/igpio.h"
 
 #include <stdint.h>
 #include <stdio.h>

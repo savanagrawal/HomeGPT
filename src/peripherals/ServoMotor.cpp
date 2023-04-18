@@ -5,10 +5,11 @@
  * 
  * Servo Moto cpp file to take pin and angle of motor
  */
- #include <iostream>
+#include "ServoMotor.h"
+
+#include <iostream>
 #include <unistd.h>
 #include <pigpio.h>
-#include "ServoMotor.h"
 
 ServoMotor::ServoMotor(int pin) {
     _pin = pin;
@@ -32,28 +33,27 @@ void ServoMotor::write(int angle) {
     gpioServo(_pin, pulseWidth);
 }
 
-int main() {
-    if (gpioInitialise() < 0) {
-        std::cerr << "Error initializing pigpio" << std::endl;
-        return 1;
-    }
+// int main() {
+//     if (gpioInitialise() < 0) {
+//         std::cerr << "Error initializing pigpio" << std::endl;
+//         return 1;
+//     }
 
-    ServoMotor servo(27); 
-    int angle;
+//     ServoMotor servo(27); 
+//     int angle;
 
-    while (true) {
-        std::cout << "Enter angle (0-180, -1 to exit): ";
-        std::cin >> angle;
+//     while (true) {
+//         std::cout << "Enter angle (0-180, -1 to exit): ";
+//         std::cin >> angle;
 
-        if (angle == -1) {
-            break;
-        }
+//         if (angle == -1) {
+//             break;
+//         }
 
-        servo.write(angle);
-        sleep(1);
-    }
+//         servo.write(angle);
+//         sleep(1);
+//     }
 
-    gpioTerminate();
-    return 0;
-}
-
+//     gpioTerminate();
+//     return 0;
+// }

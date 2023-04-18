@@ -4,7 +4,7 @@
  * Released into the public domain.
  */
 
-#include "libmfrc522.h"
+#include "MFRC522.h"
 
 #include <linux/types.h>
 #include <stdint.h>

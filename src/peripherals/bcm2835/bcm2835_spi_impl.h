@@ -1,7 +1,7 @@
 // Copyright (C) 2021 twyleg
 #pragma once
 
-#include "./ispi.h"
+#include "ispi.h"
 
 #include "bcm2835.h"
 

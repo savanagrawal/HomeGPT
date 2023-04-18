@@ -6,6 +6,7 @@ project( HomeGPT VERSION 0.1 )
 # Find packages
 find_package( OpenCV REQUIRED )
 
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../utils )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../peripherals )
 
 # Set Include Directories
@@ -38,13 +39,14 @@ target_include_directories( ${PROJECT_NAME}_IntruderDetectionLib PUBLIC ${INCLUD
 target_link_libraries( ${PROJECT_NAME}_IntruderDetectionLib 
     cpptimer
     ${OpenCV_LIBS}
+    ${PROJECT_NAME}_UtilsLib
 )
 
 set_target_properties( ${PROJECT_NAME}_IntruderDetectionLib PROPERTIES
-  PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/DatasetCreator.h )
+    PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/DatasetCreator.h )
 
 set_target_properties( ${PROJECT_NAME}_IntruderDetectionLib PROPERTIES
-  PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/DatasetTrainer.h )
+    PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/DatasetTrainer.h )
 
 set_target_properties( ${PROJECT_NAME}_IntruderDetectionLib PROPERTIES
-  PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/IntruderDetection.h )
+    PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/IntruderDetection.h )

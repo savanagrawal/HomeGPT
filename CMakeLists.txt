@@ -16,6 +16,7 @@ find_package( eventpp REQUIRED )
 # Add all subdirectories for project
 add_subdirectory( src/peripherals )
 # add_subdirectory( src/controller )
+add_subdirectory( src/utils )
 add_subdirectory( src/thread )
 add_subdirectory( src/clap-detection )
 add_subdirectory( src/intruder-detection )
