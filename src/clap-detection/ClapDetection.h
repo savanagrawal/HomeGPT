@@ -98,7 +98,36 @@ class ClapDetection {
             running = 0;
             Pa_Terminate();
         }
-
+  
+        void record() {
+            // Record for 1 seconds
+            Pa_Sleep(500);
+            std::cout << "Recording audio for 1.0 seconds..." << std::endl;
+            Pa_Sleep(500);
+            
+            recorded = true;
+        }
+        
+        bool detectClap() {
+            if(!recorded) return false;
+            
+            std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
+            std::cout << audioData.size() << std::endl;
+            double per = find_per_data(audioDataDouble, y_find);
+            
+            // double per = find_per("recorded_audio.wav", "sample4.wav");
+            bool found = result(per, 0.5);
+            
+            if(!found){
+                audioData.clear();
+            } else {
+                closeStream();
+                stop();
+            }
+            
+            return found;
+        }
+  
         // Helper function to reverse bits of a number
         static int reverse_bits(int num, int bit_length) {
             int result = 0;

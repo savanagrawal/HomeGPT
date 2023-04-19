@@ -4,7 +4,7 @@
  * Released into the public domain.
  */
 
-#include "libmfrc522.h"
+#include "mfrc522.h"
 
 #include <linux/types.h>
 #include <stdint.h>
@@ -25,7 +25,7 @@ MFRC522::MFRC522(ISpi& spi, IGpio& resetPin) :
 	mSpi(spi),
 	mResetPin(resetPin){
 
-	mResetPin.setValue(IGpio::Value::l);
+	mResetPin.setValue(IGpio::Value::low);
 
 } // End constructor
 
@@ -180,7 +180,7 @@ uint8_t MFRC522::PCD_CalculateCRC(uint8_t *data,		///< In: Pointer to the data t
  */
 void MFRC522::PCD_Init() {
 //	digitalWrite(RSTPIN, 1);		// Exit power down mode. This triggers a hard reset.
-	mResetPin.setValue(IGpio::Value::h);
+	mResetPin.setValue(IGpio::Value::high);
 	// Section 8.8.2 in the datasheet says the oscillator start-up time is the start up time of the crystal + 37,74�s. Let us be generous: 50ms.
 	std::this_thread::sleep_for(std::chrono::milliseconds(50));
 

@@ -7,8 +7,7 @@
  */
 
 // #include "IntruderDetection.h"
-#include "../../utils/Events.h"
-#include "../utils/EventHandler.h"
+#include "EventHandler.h"
 #include "DatasetCreator.h"
 #include "DatasetTrainer.h"
 #include "IntruderThread.h"
@@ -35,20 +34,20 @@ void IntruderThread::run(void) {
         // Do something if the event is registered
         
         // std::cout<<"Not Reg"<<std::endl ;
-    } 
-    else{
+    } else {
         
         // std::cout<<"Reg"<<std::endl;
-        eventHandler.addListener(Event::DatasetCreatorComplete, [&]() {
-        datasetCreator.stop();
-        datasetTrainer.Initialize();
-        datasetTrainer.generateModel();
-        eventHandler.emit(Event::DatasetTrainerComplete);
-    });
 
-    eventHandler.addListener(Event::DatasetTrainerComplete, [&]() {
-        eventHandler.emit(Event::IntruderThreadKill);
-    });
+        eventHandler.addListener(Event::DatasetTrainerComplete, [&]() {
+            eventHandler.emit(Event::IntruderThreadKill);
+        });
+        
+        eventHandler.addListener(Event::DatasetCreatorComplete, [&]() {
+            datasetCreator.stop();
+            datasetTrainer.Initialize();
+            datasetTrainer.generateModel();
+            eventHandler.emit(Event::DatasetTrainerComplete);
+        });
     }
     
     switch (IntruderThread::modules.at(IntruderThread::module)) {

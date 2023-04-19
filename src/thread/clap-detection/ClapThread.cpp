@@ -6,9 +6,9 @@
  * Functions related to intruder detection thread.
  */
 
-// #include "IntruderDetection.h"
 #include "ClapDetection.h"
 #include "ClapThread.h"
+#include "EventHandler.h"
 #include <stdio.h>
 #include <thread>
 
@@ -27,21 +27,25 @@ void ClapThread::run(void) {
     clapDetection.Initialize();
     clapDetection.start();
     
-
-    // switch(IntruderThread::modules.at(IntruderThread::module)) {
-    //     case 1:
-    //         datasetCreator.Initialize(IntruderThread::camera);
-    //         datasetCreator.startms(100);
-    //     break;
-    //     case 2:
-    //         datasetTrainer.Initialize();
-    //         datasetTrainer.generateModel();
-    //         globals.killProcess();
-    //     break;
-    //     case 3:
-    //     default:
-    //         intruderDetection.Initialize(IntruderThread::camera);
-    //         intruderDetection.startms(100);
-    //     break;
-    // }
+    while(true) {
+        std::cout << "Detecting clap..." << std::endl;
+        bool found = clapDetection->detectClap();
+        
+        if(!found) {
+            std::cout << "Clap not found... Recording..." << std::endl;
+            clapDetection->record();
+        } else {
+            std::cout << "Found clap..." << std::endl;
+    
+            EventHandler& eventHandler = EventHandler::getInstance();
+            
+            ServoMotor mainDoor(globals.getGarageDoorPin());
+            
+            mainDoor.write(90);
+            eventHandler.emit(Event::OpenedGarageDoor);
+            
+            clapDetection->stop();
+            break;
+        }
+    }
 }

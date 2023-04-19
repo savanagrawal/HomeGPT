@@ -23,8 +23,8 @@ class ClapThread : public CppThread {
 
     private:
         Globals globals;
-
-        ClapDetection clapDetection;
+  
+        ClapDetection* clapDetection;
 };
 
 #endif

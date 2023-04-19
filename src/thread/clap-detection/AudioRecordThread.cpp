@@ -6,7 +6,6 @@
  * Functions related to audio recording thread.
  */
 
-#include "../../utils/Events.h"
 #include "ClapDetection.h"
 #include "AudioRecordThread.h"
 #include <stdio.h>
