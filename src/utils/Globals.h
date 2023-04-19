@@ -20,12 +20,22 @@ class Globals {
         cv::Ptr<cv::ml::SVM> getMoodSvm() {
             return mood_svm;
         }
+        
+        int getGarageDoorPin() {
+            return garageDoorPin;
+        }
+        
+        int getMainDoorPin() {
+            return mainDoorPin;
+        }
 
         void killProcess() {
             raise(SIGHUP);
         }
     private:
         cv::Ptr<cv::ml::SVM> mood_svm;
+        int garageDoorPin = 16;
+        int mainDoorPin = 16;
 };
 
 #endif

@@ -26,9 +26,6 @@ class AudioRecordThread : public CppThread {
     private:
         Globals globals;
 
-        // Events& eventHandler = Events::getInstance();
-        // using EVENT_CODES = Events::EVENT_CODES;
-
         ClapDetection* clapDetection;
 };
 

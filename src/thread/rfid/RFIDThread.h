@@ -32,8 +32,5 @@ class RFIDThread : public CppThread {
 
     private:
         void run();
-    
-    private:
-        RFID rfid;
 };
 #endif

@@ -20,7 +20,11 @@ enum class Event {
     OpenGarageDoor,
     OpenedGarageDoor,
     CloseGarageDoor,
-    ClosedGarageDoor
+    ClosedGarageDoor,
+    OpenMainDoor,
+    OpenedMainDoor,
+    CloseMainDoor,
+    ClosedMainDoor
 };
 
 class EventHandler {

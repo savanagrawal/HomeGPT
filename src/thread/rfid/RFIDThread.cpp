@@ -25,17 +25,12 @@ void RFIDThread::run(void) {
     printf("RFID Thread...\n");
     EventHandler& eventHandler = EventHandler::getInstance();
 
-    if(!eventHandler.isEventRegistered(Event::RfidAuthenticated)){
-        eventHandler.addListener(Event::RfidAuthenticated, [&](){
-            // We are authenticated, so we will open our garage door.
-            eventHandler.emit(Event::OpenGarageDoor);
-        });
-    }
-
-    // Initialize rfid detection controller.
-    rfid.Initialize();
+    eventHandler.addListener(Event::RfidAuthenticated, [&](){
+        // We are authenticated, so we will open our garage door.
+        eventHandler.emit(Event::OpenGarageDoor);
+    });
 
     // Detect rfid.
     std::cout << "Running rfid detection..." << std::endl;
-    rfid.start();
+    RFID rfid;
 }

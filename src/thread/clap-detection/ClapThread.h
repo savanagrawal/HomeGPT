@@ -10,7 +10,6 @@
 
 #include "../CppThread.h"
 #include "../../utils/Globals.h"
-#include "../../utils/Events.h"
 
 #include "ClapDetection.h"
 #include <string>
@@ -26,10 +25,7 @@ class ClapThread : public CppThread {
 
     private:
         Globals globals;
-
-        // Events& eventHandler = Events::getInstance();
-        // using EVENT_CODES = Events::EVENT_CODES;
-
+        
         ClapDetection* clapDetection;
 };
 

@@ -6,9 +6,9 @@
  * Functions related to clap detection thread.
  */
 
-#include "../../utils/Events.h"
 #include "ClapDetection.h"
 #include "ClapThread.h"
+#include "EventHandler.h"
 #include <stdio.h>
 #include <iostream>
 #include <chrono>
@@ -35,6 +35,14 @@ void ClapThread::run(void) {
             clapDetection->record();
         } else {
             std::cout << "Found clap..." << std::endl;
+    
+            EventHandler& eventHandler = EventHandler::getInstance();
+            
+            ServoMotor mainDoor(globals.getGarageDoorPin());
+            
+            mainDoor.write(90);
+            eventHandler.emit(Event::OpenedGarageDoor);
+            
             clapDetection->stop();
             break;
         }

@@ -9,7 +9,10 @@
 #include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
 #include "clap-detection/ClapThread.h"
-#include "clap-detection/AudioRecordThread.h"
+// #include "clap-detection/AudioRecordThread.h"
+#include "rfid/RFIDThread.h"
+#include "doors/DoorsThread.h"
+#include "ServoMotor.h"
 
 #include "ControllerThread.h"
 
@@ -92,10 +95,18 @@ void ControllerThread::run(void) {
 
     IntruderThread intruderThread(cam);
     ClapThread clapThread(&clapDetection);
-    AudioRecordThread audioRecordThread(&clapDetection);
+    // AudioRecordThread audioRecordThread(&clapDetection);
+    
+    RFIDThread rfidThread;
+    DoorsThread doorsThread;
 
     std::cout << ControllerThread::argc << std::endl;
-
+    
+    doorsThread.start();
+    doorsThread.join();
+    
+    EventHandler& eventHandler = EventHandler::getInstance();
+    
     if(ControllerThread::argc > 1) {
         switch(ControllerThread::argvValues.at(ControllerThread::argv[1])){
             case CreateIntruderDataset:
@@ -117,11 +128,15 @@ void ControllerThread::run(void) {
                 intruderThread.join();
             break;
             case DetectClap:
-                audioRecordThread.start();
-                audioRecordThread.join();
+                // audioRecordThread.start();
+                // audioRecordThread.join();
                 
                 clapThread.start();
                 clapThread.join();
+            break;
+            case RfidStart:
+                rfidThread.start();
+                rfidThread.join();
             break;
             default:
 

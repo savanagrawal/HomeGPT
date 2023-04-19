@@ -59,7 +59,7 @@ class ControllerThread : public CppThread {
             {"--di", DetectIntruder},
             {"--detect-clap", DetectClap},
             {"--dc", DetectClap},
-            {"--rfid", RfidStart},
+            {"--rfid", RfidStart}
         };
 };
 

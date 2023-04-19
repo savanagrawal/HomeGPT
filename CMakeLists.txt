@@ -12,9 +12,12 @@ project( HomeGPT VERSION 0.1 )
 find_package( Threads REQUIRED )
 find_package( Boost COMPONENTS system filesystem REQUIRED)
 find_package( eventpp REQUIRED )
+find_library( BCM2835_LIB bcm2835 )
 
 # Add all subdirectories for project
 add_subdirectory( src/peripherals )
+add_subdirectory( src/dependencies/spidevpp/libs )
+add_subdirectory( src/dependencies/mfrc522 )
 # add_subdirectory( src/controller )
 add_subdirectory( src/utils )
 add_subdirectory( src/thread )
@@ -52,9 +55,11 @@ add_library( ${PROJECT_NAME}_Lib SHARED ${SOURCES} )
 target_link_libraries( ${PROJECT_NAME}_Lib 
     ${CMAKE_THREAD_LIBS_INIT}
     rt
+    pigpio
     stdc++fs
     cpptimer
     eventpp::eventpp
+    ${BCM2835_LIB}
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_FILESYSTEM_LIBRARY}
     ${PROJECT_NAME}_PeripheralsLib

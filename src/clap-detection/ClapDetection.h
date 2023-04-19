@@ -154,17 +154,20 @@ class ClapDetection {
         
         void record() {
             // Record for 1 seconds
+            Pa_Sleep(500);
             std::cout << "Recording audio for 1.0 seconds..." << std::endl;
-            Pa_Sleep(1000);
+            Pa_Sleep(500);
             
             recorded = true;
         }
         
         bool detectClap() {
+            if(!recorded) return false;
+            
             std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
             std::cout << audioData.size() << std::endl;
             double per = find_per_data(audioDataDouble, y_find);
-
+            
             // double per = find_per("recorded_audio.wav", "sample4.wav");
             bool found = result(per, 0.5);
             

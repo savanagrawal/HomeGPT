@@ -29,15 +29,10 @@ class DoorsThread : public CppThread {
          * Stop our thread's inner functionality.
          */
         void stop(){}
-
+        
     private:
         void run();
     
     private:
-        int garageDoorPin = 27;
-        int mainDoorPin = 22;
-
-        // ServoMotor garageDoor(garageDoorPin);
-        // ServoMotor mainDoor(garageDoorPin);
 };
 #endif
