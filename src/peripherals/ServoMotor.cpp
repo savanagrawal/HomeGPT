@@ -12,8 +12,8 @@
 #include <pigpio.h>
 
 ServoMotor::ServoMotor(int pin) {
-    _pin = pin;
-    _angle = 0;
+    ServoMotor::_pin = pin;
+    ServoMotor::_angle = 0;
     gpioSetMode(_pin, PI_OUTPUT);
 }
 
@@ -21,16 +21,16 @@ ServoMotor::~ServoMotor() {
 }
 
 void ServoMotor::write(int angle) {
-    _angle = angle;
-    if (_angle < 0) _angle = 0;
-    if (_angle > 180) _angle = 180;
+    ServoMotor::_angle = angle;
+    if (ServoMotor::_angle < 0) ServoMotor::_angle = 0;
+    if (ServoMotor::_angle > 180) ServoMotor::_angle = 180;
 
     int pulseWidthMin = 500; 
     int pulseWidthMax = 2500; 
 
-    int pulseWidth = pulseWidthMin + (_angle * (pulseWidthMax - pulseWidthMin) / 180);
+    int pulseWidth = pulseWidthMin + (ServoMotor::_angle * (pulseWidthMax - pulseWidthMin) / 180);
     std::cout << "Pulse width: " << pulseWidth << std::endl;
-    gpioServo(_pin, pulseWidth);
+    gpioServo(ServoMotor::_pin, pulseWidth);
 }
 
 // int main() {
