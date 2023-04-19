@@ -16,7 +16,9 @@
 
 class ClapThread : public CppThread {
     public:
-        ClapThread() {}
+        ClapThread(ClapDetection* clapDetection) {
+            ClapThread::clapDetection = clapDetection;
+        }
 
     private:
         void run();

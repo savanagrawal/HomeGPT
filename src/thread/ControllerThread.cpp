@@ -75,20 +75,16 @@ enum EVENT_OP_CODES {
 void ControllerThread::run(void) {
     printf("Main Controller Thread...\n");
 
-                std::cout << "IMDS";
     // Proper termination catcher.
-    // setHUPHandler();
-                std::cout << "IMDS";
+    setHUPHandler();
 
     // Initialize main controller.
     Controller controller;
-                std::cout << "IMDS";
 
     cv::VideoCapture cam(0);
     // Camera cam(0);
 
     MoodThread moodThread(cam);
-                std::cout << "IMDS";
 
     // moodThread.start();
 
@@ -99,6 +95,7 @@ void ControllerThread::run(void) {
     clapDetection.openStream();
 
     IntruderThread intruderThread(cam);
+    IntruderMoodThread intruderMoodThread(cam);
     ClapThread clapThread(&clapDetection);
     // AudioRecordThread audioRecordThread(&clapDetection);
     
@@ -140,7 +137,6 @@ void ControllerThread::run(void) {
                  clapThread.join();
             break;
             case IntruderMoodDetectionStart:
-                std::cout << "IMDS";
                 intruderMoodThread.start();
                 intruderMoodThread.join();
             break;
@@ -156,6 +152,8 @@ void ControllerThread::run(void) {
             break;
         }
     } else {
+        
+        
         moodThread.start();
         moodThread.join();
     }

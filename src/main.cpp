@@ -17,10 +17,10 @@
 
 int main(int argc, const char* argv[]){
 	
-    if (gpioInitialise() < 0) {
-         std::cerr << "Error initializing pigpio" << std::endl;
-         return 1;
-     }
+	if (gpioInitialise() < 0) {
+		std::cerr << "Error initializing pigpio" << std::endl;
+		return 1;
+	}
 
 	/* Initialize thread objects */
 	ControllerThread controllerThread;

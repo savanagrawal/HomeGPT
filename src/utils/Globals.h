@@ -28,10 +28,7 @@ class Globals {
         int getMainDoorPin() {
             return mainDoorPin;
         }
-
-        void killProcess() {
-            raise(SIGHUP);
-        }
+        
     private:
         cv::Ptr<cv::ml::SVM> mood_svm;
         int garageDoorPin = 16;

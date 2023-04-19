@@ -10,6 +10,7 @@
 
 #include "../CppThread.h"
 #include "ServoMotor.h"
+#include "../../utils/Globals.h"
 
 /**
  * @brief Doors Thread to manage doors detection functionality.
@@ -34,5 +35,6 @@ class DoorsThread : public CppThread {
         void run();
     
     private:
+        Globals globals;
 };
 #endif

@@ -60,7 +60,7 @@ void IntruderThread::run(void) {
         case 2:
             datasetTrainer.Initialize();
             datasetTrainer.generateModel();
-            globals.killProcess();
+            raise(SIGHUP);
             break;
         case 3:
         default:

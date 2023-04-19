@@ -23,9 +23,6 @@ enum EVENT_OP_CODES {
  */
 void ClapThread::run(void) {
     printf("Clap Thread...\n");
-
-    clapDetection.Initialize();
-    clapDetection.start();
     
     while(true) {
         std::cout << "Detecting clap..." << std::endl;
@@ -36,14 +33,6 @@ void ClapThread::run(void) {
             clapDetection->record();
         } else {
             std::cout << "Found clap..." << std::endl;
-    
-            EventHandler& eventHandler = EventHandler::getInstance();
-            
-            ServoMotor mainDoor(globals.getGarageDoorPin());
-            
-            mainDoor.write(90);
-            eventHandler.emit(Event::OpenedGarageDoor);
-            
             clapDetection->stop();
             break;
         }

@@ -29,7 +29,7 @@ void DoorsThread::run(void) {
     if(!eventHandler.isEventRegistered(Event::OpenGarageDoor)){
         eventHandler.addListener(Event::OpenGarageDoor, [&](){
             // We are authenticated, so we will open our garage door.
-            ServoMotor garageDoor(DoorsThread::garageDoorPin);
+            ServoMotor garageDoor(globals.getGarageDoorPin());
             
             garageDoor.write(90);
             eventHandler.emit(Event::OpenedGarageDoor);
