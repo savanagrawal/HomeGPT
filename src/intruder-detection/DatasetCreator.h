@@ -172,10 +172,15 @@ class IntruderDatasetCreator : public CppTimer {
 
         cv::CascadeClassifier detector;
         std::string cascadePath = "../src/resources/haarcascade_frontalface_default.xml";
+        // EventHandler& eventHandler = EventHandler::getInstance();
+
+
+        // Events& eventHandler = Events::getInstance();
+        // using EVENT_CODES = Events::EVENT_CODES;
 
         std::string fileName = "../src/resources/intruder-detection/Users.txt";
         std::string newUser;
-  
+
         int samples = 0;
         int CameraID = 0;
 

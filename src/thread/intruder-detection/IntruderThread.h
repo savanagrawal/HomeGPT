@@ -55,7 +55,7 @@ class IntruderThread : public CppThread {
     
     private:
         Globals globals;
-        
+  
         cv::VideoCapture camera;
 
         IntruderDetection intruderDetection;

@@ -16,16 +16,14 @@
 
 class ClapThread : public CppThread {
     public:
-        ClapThread(ClapDetection* clapDetection) {
-            ClapThread::clapDetection = clapDetection;
-        }
+        ClapThread() {}
 
     private:
         void run();
 
     private:
         Globals globals;
-        
+  
         ClapDetection* clapDetection;
 };
 

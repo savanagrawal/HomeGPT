@@ -21,6 +21,7 @@ This repository will follow the development of an Home Assistant project HomeGPT
 - [About](#1)
 - [Getting Started](#2)
 - [Code](#3)
+- [Docs](https://savanagrawal.github.io/HomeGPT/html/index.html)
 - [Libraries/Dependencies/Softwarers](#4)
 - [Data Sheets](#5) 
 - [Team Members](#6)
