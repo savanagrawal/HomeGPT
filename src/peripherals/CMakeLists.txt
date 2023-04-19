@@ -53,3 +53,4 @@ set_target_properties( ${PROJECT_NAME}_PeripheralsLib PROPERTIES
 
 set_target_properties( ${PROJECT_NAME}_PeripheralsLib PROPERTIES
   PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/ServoMotor.h )
+)

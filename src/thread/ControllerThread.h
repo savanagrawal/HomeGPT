@@ -1,6 +1,6 @@
 /**
  * @file ControllerThread.h
- * @author Chinmay Nagrale
+ * @author Chinmay Nagrale & Savan Agrawal
  * @version 0.1
  * 
  * Create a controller thread for whole program.
@@ -16,7 +16,7 @@
 
 /**
  * @brief Controller Thread to manage all child threads.
- * @author Chinmay Nagrale
+ * @author Chinmay Nagrale & Savan Agrawal
  */
 class ControllerThread : public CppThread {
     public:
@@ -47,7 +47,8 @@ class ControllerThread : public CppThread {
             TrainIntruderModel,
             DetectIntruder,
             DetectClap,
-            RfidStart
+            RfidStart,
+            IntruderMoodDetectionStart
         };
 
         std::map<std::string, argvEnum> argvValues = {
@@ -59,7 +60,8 @@ class ControllerThread : public CppThread {
             {"--di", DetectIntruder},
             {"--detect-clap", DetectClap},
             {"--dc", DetectClap},
-            {"--rfid", RfidStart}
+            {"--rfid", RfidStart},
+            {"--imd", IntruderMoodDetectionStart}
         };
 };
 

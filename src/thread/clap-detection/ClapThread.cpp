@@ -1,17 +1,15 @@
 /**
- * @file ClapThread.cpp
+ * @file IntruderThread.cpp
  * @author Chinmay Nagrale
  * @version 0.1
  * 
- * Functions related to clap detection thread.
+ * Functions related to intruder detection thread.
  */
 
 #include "ClapDetection.h"
 #include "ClapThread.h"
 #include "EventHandler.h"
 #include <stdio.h>
-#include <iostream>
-#include <chrono>
 #include <thread>
 
 enum EVENT_OP_CODES {
@@ -25,6 +23,9 @@ enum EVENT_OP_CODES {
  */
 void ClapThread::run(void) {
     printf("Clap Thread...\n");
+
+    clapDetection.Initialize();
+    clapDetection.start();
     
     while(true) {
         std::cout << "Detecting clap..." << std::endl;

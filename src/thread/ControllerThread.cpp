@@ -8,6 +8,7 @@
 
 #include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
+#include "intruder-mood-detection/IntruderMoodThread.h"
 #include "clap-detection/ClapThread.h"
 // #include "clap-detection/AudioRecordThread.h"
 #include "rfid/RFIDThread.h"
@@ -74,16 +75,20 @@ enum EVENT_OP_CODES {
 void ControllerThread::run(void) {
     printf("Main Controller Thread...\n");
 
+                std::cout << "IMDS";
     // Proper termination catcher.
-    setHUPHandler();
+    // setHUPHandler();
+                std::cout << "IMDS";
 
     // Initialize main controller.
     Controller controller;
+                std::cout << "IMDS";
 
     cv::VideoCapture cam(0);
     // Camera cam(0);
 
     MoodThread moodThread(cam);
+                std::cout << "IMDS";
 
     // moodThread.start();
 
@@ -130,9 +135,14 @@ void ControllerThread::run(void) {
             case DetectClap:
                 // audioRecordThread.start();
                 // audioRecordThread.join();
-                
-                clapThread.start();
-                clapThread.join();
+            
+                 clapThread.start();
+                 clapThread.join();
+            break;
+            case IntruderMoodDetectionStart:
+                std::cout << "IMDS";
+                intruderMoodThread.start();
+                intruderMoodThread.join();
             break;
             case RfidStart:
                 rfidThread.start();
