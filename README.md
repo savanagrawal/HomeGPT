@@ -55,6 +55,8 @@ Last but not least -> the fire detection feature activates fire alarms when smok
 1. Clone the repository.
 ```sh
 git clone https://github.com/savanagrawal/HomeGPT
+git submodule init
+git submodule update
 ```
 2. Create build directory.
 ```sh
@@ -126,7 +128,7 @@ View our [License](https://github.com/savanagrawal/HomeGPT/blob/main/LICENSE) he
 
 <a id='7'></a>
 ## Code of Conduct
-We follow our [Code of Conduct](https://github.com/savanagrawal/HomeGPT/blob/main/CODE_OF_CONDUCT) strictly.
+We follow our [Code of Conduct](https://github.com/savanagrawal/HomeGPT/blob/main/CODE_OF_CONDUCT.md) strictly.
 
 <a id='8'></a>
 ## Contribution Guidelines
