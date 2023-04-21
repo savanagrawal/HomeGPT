@@ -20,6 +20,7 @@ set( SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/RFID.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/RelayBoard.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/ServoMotor.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/LEDController.cpp
 )
 
 # Set header files
@@ -29,6 +30,7 @@ set( HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/RFID.h
     ${CMAKE_CURRENT_SOURCE_DIR}/RelayBoard.h
     ${CMAKE_CURRENT_SOURCE_DIR}/ServoMotor.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/LEDController.h
 )
 
 # Create peripherals library
@@ -53,4 +55,6 @@ set_target_properties( ${PROJECT_NAME}_PeripheralsLib PROPERTIES
 
 set_target_properties( ${PROJECT_NAME}_PeripheralsLib PROPERTIES
   PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/ServoMotor.h )
-)
+  
+set_target_properties( ${PROJECT_NAME}_PeripheralsLib PROPERTIES
+  PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/LEDController.h )

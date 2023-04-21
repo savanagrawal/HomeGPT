@@ -9,6 +9,8 @@
 #include "ClapDetection.h"
 #include "ClapThread.h"
 #include "EventHandler.h"
+#include "ServoMotor.h"
+#include "LEDController.h"
 #include <stdio.h>
 #include <thread>
 
@@ -22,10 +24,8 @@ enum EVENT_OP_CODES {
  * Manage the intruder detection thread runnable.
  */
 void ClapThread::run(void) {
+            std::cout << "Hello" << std::endl;
     printf("Clap Thread...\n");
-
-    clapDetection.Initialize();
-    clapDetection.start();
     
     while(true) {
         std::cout << "Detecting clap..." << std::endl;
@@ -35,14 +35,21 @@ void ClapThread::run(void) {
             std::cout << "Clap not found... Recording..." << std::endl;
             clapDetection->record();
         } else {
-            std::cout << "Found clap..." << std::endl;
-    
             EventHandler& eventHandler = EventHandler::getInstance();
             
-            ServoMotor mainDoor(globals.getGarageDoorPin());
+            std::cout << "Found clap..." << std::endl;
             
-            mainDoor.write(90);
-            eventHandler.emit(Event::OpenedGarageDoor);
+            ServoMotor mainDoor(globals.getMainDoorPin());
+            
+            mainDoor.write(0);
+            
+            LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
+    
+            ledController.turnOnLED();
+            std::this_thread::sleep_for(std::chrono::seconds(3));
+            ledController.turnOffLED();
+            
+            eventHandler.emit(Event::ClosedMainDoor);
             
             clapDetection->stop();
             break;

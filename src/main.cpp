@@ -17,15 +17,13 @@
 
 int main(int argc, const char* argv[]){
 	
-    if (gpioInitialise() < 0) {
-         std::cerr << "Error initializing pigpio" << std::endl;
-         return 1;
-     }
+	if (gpioInitialise() < 0) {
+		std::cerr << "Error initializing pigpio" << std::endl;
+		return 1;
+	}
 
 	/* Initialize thread objects */
 	ControllerThread controllerThread;
-
-	std::cout << argc << std::endl;
 
 	/* Check if there's any agruments worth storing. */
 	if(argc > 1) {
@@ -34,9 +32,7 @@ int main(int argc, const char* argv[]){
 		for(int i = 0; i < argc; i++){
 			args[i] = argv[i];
 		}
-
-		std::cout << args[1] << std::endl;
-
+		
 		controllerThread.setArgs(argc, args);
 	}
 

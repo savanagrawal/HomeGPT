@@ -48,6 +48,14 @@ const char* EventHandler::eventToString(Event event) {
             return "CloseGarageDoor";
         case Event::ClosedGarageDoor:
             return "ClosedGarageDoor";
+        case Event::OpenMainDoor:
+            return "OpenMainDoor";
+        case Event::OpenedMainDoor:
+            return "OpenedMainDoor";
+        case Event::CloseMainDoor:
+            return "CloseMainDoor";
+        case Event::ClosedMainDoor:
+            return "ClosedMainDoor";
         default:
             return "Unknown Event";
     }

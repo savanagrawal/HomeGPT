@@ -35,7 +35,21 @@ void LEDController::setRGBColor(const std::string& color) {
     } else if (color == "white") {
         setColor(255, 255, 255);
     } else {
-        setColor(0, 0, 0);
+        if (color == "Angry") {
+            setColor(255, 0, 0);
+        } else if (color == "Disgust") {
+            setColor(0, 255, 0);
+        } else if (color == "Fear") {
+            setColor(0, 0, 255);
+        } else if (color == "Happy") {
+            setColor(255, 255, 0);
+        } else if (color == "Neutral") {
+            setColor(255, 0, 255);
+        } else if (color == "Sad") {
+            setColor(0, 255, 255);
+        } else {
+            setColor(255, 255, 255);
+        }
     }
 }
 
