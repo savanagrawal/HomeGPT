@@ -9,12 +9,11 @@
 #define DATASET_CREATOR_H
 
 #include "CppTimer.h"
-#include "../utils/Events.h"
+#include "EventHandler.h"
 
 #include <opencv2/opencv.hpp>
 #include <fstream>
 #include <iostream>
-#include "../utils/EventHandler.h"
 
 class IntruderDatasetCreator : public CppTimer {
     /** Timer function for intruder detector's dataset creation functionality. */
@@ -23,13 +22,9 @@ class IntruderDatasetCreator : public CppTimer {
 
         EventHandler& eventHandler = EventHandler::getInstance();
 
-
         // break if the sample number is more than 200
-        if (samples > 20){
-            std::cout << "Exiting dataset creator, expect a segmentation fault." << std::endl;
-            // eventHandler.getDispatcher().dispatch(EVENT_CODES::DATASET_CREATOR_COMPLETE);
-            // eventHandler.getDispatcher().Dispatch(static_cast<eventpp::Event>(EVENT_CODES::DATASET_CREATOR_COMPLETE));
-            std::cout<<(eventHandler.isEventRegistered(Event::DatasetCreatorComplete))<<std::endl;
+        if (samples > 200){
+            std::cout << "Exiting dataset creator..." << std::endl;
             eventHandler.emit(Event::DatasetCreatorComplete);
             return;
         }
@@ -158,6 +153,11 @@ class IntruderDatasetCreator : public CppTimer {
                 std::string numStr;
                 std::getline(iss, name, ',');
                 std::getline(iss, numStr);
+                
+                if(numStr == "") {
+                    break;
+                }
+                
                 int num = std::stoi(numStr);
                 lastInteger = num;
             }
@@ -170,8 +170,8 @@ class IntruderDatasetCreator : public CppTimer {
             file << line << std::endl;
         }
         
-        
         int checkCameraOpen(cv::VideoCapture camera);
+
     private:
         cv::VideoCapture masterCamera;
 

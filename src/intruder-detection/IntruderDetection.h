@@ -45,10 +45,12 @@ class IntruderDetection : public CppTimer {
             double confidence = 0.0;
             recognizer->predict(gray(faces[i]), predictedLabel, confidence);
 
-            std::string label;
+            std::string label = "Intruder";
             auto it = users.find(predictedLabel);
-            if (confidence < 90 && it != users.end()) {
+            if (confidence < 55 && it != users.end()) {
+            //if (confidence < 55 ) {
                 label = it->second;
+                //label = predictedLabel;
             } else {
                 label = "Intruder";
             }

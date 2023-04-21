@@ -13,13 +13,17 @@
 #include <fstream>
 #include <string>
 #include <boost/filesystem.hpp>
+#include <pigpio.h>
 
 int main(int argc, const char* argv[]){
+	
+	if (gpioInitialise() < 0) {
+		std::cerr << "Error initializing pigpio" << std::endl;
+		return 1;
+	}
 
 	/* Initialize thread objects */
 	ControllerThread controllerThread;
-
-	std::cout << argc << std::endl;
 
 	/* Check if there's any agruments worth storing. */
 	if(argc > 1) {
@@ -28,9 +32,7 @@ int main(int argc, const char* argv[]){
 		for(int i = 0; i < argc; i++){
 			args[i] = argv[i];
 		}
-
-		std::cout << args[1];
-
+		
 		controllerThread.setArgs(argc, args);
 	}
 
@@ -40,6 +42,8 @@ int main(int argc, const char* argv[]){
   
 	/* Join to the thread */
 	controllerThread.join();
+	
+	gpioTerminate();
   
 	return 0;
 }

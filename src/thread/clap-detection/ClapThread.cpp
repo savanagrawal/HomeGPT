@@ -6,9 +6,11 @@
  * Functions related to intruder detection thread.
  */
 
-// #include "IntruderDetection.h"
 #include "ClapDetection.h"
 #include "ClapThread.h"
+#include "EventHandler.h"
+#include "ServoMotor.h"
+#include "LEDController.h"
 #include <stdio.h>
 #include <thread>
 
@@ -22,26 +24,35 @@ enum EVENT_OP_CODES {
  * Manage the intruder detection thread runnable.
  */
 void ClapThread::run(void) {
+            std::cout << "Hello" << std::endl;
     printf("Clap Thread...\n");
-
-    clapDetection.Initialize();
-    clapDetection.start();
     
-
-    // switch(IntruderThread::modules.at(IntruderThread::module)) {
-    //     case 1:
-    //         datasetCreator.Initialize(IntruderThread::camera);
-    //         datasetCreator.startms(100);
-    //     break;
-    //     case 2:
-    //         datasetTrainer.Initialize();
-    //         datasetTrainer.generateModel();
-    //         globals.killProcess();
-    //     break;
-    //     case 3:
-    //     default:
-    //         intruderDetection.Initialize(IntruderThread::camera);
-    //         intruderDetection.startms(100);
-    //     break;
-    // }
+    while(true) {
+        std::cout << "Detecting clap..." << std::endl;
+        bool found = clapDetection->detectClap();
+        
+        if(!found) {
+            std::cout << "Clap not found... Recording..." << std::endl;
+            clapDetection->record();
+        } else {
+            EventHandler& eventHandler = EventHandler::getInstance();
+            
+            std::cout << "Found clap..." << std::endl;
+            
+            ServoMotor mainDoor(globals.getMainDoorPin());
+            
+            mainDoor.write(0);
+            
+            LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
+    
+            ledController.turnOnLED();
+            std::this_thread::sleep_for(std::chrono::seconds(3));
+            ledController.turnOffLED();
+            
+            eventHandler.emit(Event::ClosedMainDoor);
+            
+            clapDetection->stop();
+            break;
+        }
+    }
 }

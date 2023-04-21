@@ -3,11 +3,14 @@
  * @author Chinmay Nagrale
  * @version 0.1
  * 
- * Functions related to mood detection thread.
+ * Functions related to rfid detection thread.
  */
 
+#include "EventHandler.h"
 #include "RFID.h"
 #include "RFIDThread.h"
+#include "LEDController.h"
+#include "../utils/Globals.h"
 #include <stdio.h>
 #include <thread>
 
@@ -18,15 +21,18 @@ enum EVENT_OP_CODES {
 };
 
 /**
- * Manage the mood thread runnable.
+ * Manage the rfid thread runnable.
  */
 void RFIDThread::run(void) {
     printf("RFID Thread...\n");
+    EventHandler& eventHandler = EventHandler::getInstance();
 
-    // Initialize mood detection controller.
-    rfid.Initialize();
+    eventHandler.addListener(Event::RfidAuthenticated, [&](){
+        // We are authenticated, so we will open our garage door.
+        eventHandler.emit(Event::OpenGarageDoor);
+    });
 
-    // Detect mood every 10ms.
+    // Detect rfid.
     std::cout << "Running rfid detection..." << std::endl;
-    rfid.startms(10);
+    RFID rfid;
 }

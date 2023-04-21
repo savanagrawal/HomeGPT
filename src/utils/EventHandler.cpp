@@ -38,6 +38,24 @@ const char* EventHandler::eventToString(Event event) {
             return "DatasetTrainerComplete";
         case Event::IntruderThreadKill:
             return "IntruderThreadKill";
+        case Event::RfidAuthenticated:
+            return "RfidAuthenticated";
+        case Event::OpenGarageDoor:
+            return "OpenGarageDoor";
+        case Event::OpenedGarageDoor:
+            return "OpenedGarageDoor";
+        case Event::CloseGarageDoor:
+            return "CloseGarageDoor";
+        case Event::ClosedGarageDoor:
+            return "ClosedGarageDoor";
+        case Event::OpenMainDoor:
+            return "OpenMainDoor";
+        case Event::OpenedMainDoor:
+            return "OpenedMainDoor";
+        case Event::CloseMainDoor:
+            return "CloseMainDoor";
+        case Event::ClosedMainDoor:
+            return "ClosedMainDoor";
         default:
             return "Unknown Event";
     }

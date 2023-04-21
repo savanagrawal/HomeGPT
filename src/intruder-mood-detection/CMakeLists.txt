@@ -6,6 +6,7 @@ project( HomeGPT VERSION 0.1 )
 # Find packages
 find_package( OpenCV REQUIRED )
 
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../utils )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../peripherals )
 
 # Set Include Directories
@@ -34,6 +35,7 @@ target_include_directories( ${PROJECT_NAME}_IntruderMoodDetectionLib PUBLIC ${IN
 target_link_libraries( ${PROJECT_NAME}_IntruderMoodDetectionLib 
     cpptimer
     ${OpenCV_LIBS}
+    ${PROJECT_NAME}_UtilsLib
 )
 
 set_target_properties( ${PROJECT_NAME}_IntruderMoodDetectionLib PROPERTIES

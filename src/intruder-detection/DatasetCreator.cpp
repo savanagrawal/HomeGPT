@@ -53,7 +53,3 @@ int IntruderDatasetCreator::checkCameraOpen(cv::VideoCapture camera){
     }
     return 0;
 }
-
-// void IntruderDatasetCreator::setParentCallback(CppTimerCallback callback) {
-//     IntruderDatasetCreator::parentCallback = callback;
-// }

@@ -13,9 +13,20 @@
 #include <vector>
 
 enum class Event {
+    test,
     DatasetCreatorComplete,
     DatasetTrainerComplete,
-    IntruderThreadKill
+    IntruderThreadKill,
+    IntruderMoodThreadKill,
+    RfidAuthenticated,
+    OpenGarageDoor,
+    OpenedGarageDoor,
+    CloseGarageDoor,
+    ClosedGarageDoor,
+    OpenMainDoor,
+    OpenedMainDoor,
+    CloseMainDoor,
+    ClosedMainDoor
 };
 
 class EventHandler {

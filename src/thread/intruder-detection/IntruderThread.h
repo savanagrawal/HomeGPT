@@ -10,7 +10,7 @@
 
 #include "../CppThread.h"
 #include "../../utils/Globals.h"
-#include "../../utils/Events.h"
+#include "EventHandler.h"
 
 #include "IntruderDetection.h"
 #include "DatasetCreator.h"
@@ -18,7 +18,6 @@
 #include <opencv2/opencv.hpp>
 #include <memory>
 #include <string>
-#include "../utils/EventHandler.h"
 
 /**
  * @brief Intruder Thread to manage intruder detection functionality.
@@ -56,8 +55,7 @@ class IntruderThread : public CppThread {
     
     private:
         Globals globals;
-
-
+  
         cv::VideoCapture camera;
 
         IntruderDetection intruderDetection;
