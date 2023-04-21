@@ -25,8 +25,6 @@ int main(int argc, const char* argv[]){
 	/* Initialize thread objects */
 	ControllerThread controllerThread;
 
-	std::cout << argc << std::endl;
-
 	/* Check if there's any agruments worth storing. */
 	if(argc > 1) {
 		std::vector<std::string> args(argc);
@@ -34,9 +32,7 @@ int main(int argc, const char* argv[]){
 		for(int i = 0; i < argc; i++){
 			args[i] = argv[i];
 		}
-
-		std::cout << args[1] << std::endl;
-
+		
 		controllerThread.setArgs(argc, args);
 	}
 

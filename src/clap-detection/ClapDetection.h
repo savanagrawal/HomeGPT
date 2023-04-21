@@ -161,6 +161,8 @@ class ClapDetection {
         }
         
         bool detectClap() {
+            if(!recorded) return false;
+            
             std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
             std::cout << audioData.size() << std::endl;
             double per = find_per_data(audioDataDouble, y_find);
@@ -295,7 +297,7 @@ class ClapDetection {
         }
 
         // 
-        static double find_per_data(const std::vector<double>& within_data, const std::vector<double>& y_find) {
+        double find_per_data(const std::vector<double>& within_data, const std::vector<double>& y_find) {
             std::vector<double> c = convolve(within_data, y_find);
             
             double thres = *std::max_element(c.begin(), c.end()) / 8.0;

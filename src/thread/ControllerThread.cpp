@@ -14,6 +14,10 @@
 #include "rfid/RFIDThread.h"
 #include "doors/DoorsThread.h"
 #include "ServoMotor.h"
+#include "LEDController.h"
+
+#include "../utils/Globals.h"
+#include "EventHandler.h"
 
 #include "ControllerThread.h"
 
@@ -85,14 +89,15 @@ void ControllerThread::run(void) {
     // Camera cam(0);
 
     MoodThread moodThread(cam);
-
+    
+    Globals globals;
+    
     // moodThread.start();
 
     // moodThread.join();
     
     ClapDetection clapDetection;
     clapDetection.Initialize();
-    clapDetection.openStream();
 
     IntruderThread intruderThread(cam);
     IntruderMoodThread intruderMoodThread(cam);
@@ -108,6 +113,69 @@ void ControllerThread::run(void) {
     doorsThread.join();
     
     EventHandler& eventHandler = EventHandler::getInstance();
+    
+    ServoMotor mainDoor(globals.getMainDoorPin());
+    ServoMotor garageDoor(globals.getGarageDoorPin());
+    
+    if(!eventHandler.isEventRegistered(Event::IntruderMoodThreadKill)) {
+        eventHandler.addListener(Event::IntruderMoodThreadKill, [&](){
+            intruderMoodThread.stop();
+        });
+    }
+    
+    std::map<int, std::string> emotionToLED = {
+        {0, "Angry"},
+        {1, "Disgust"},
+        {2, "Fear"},
+        {3, "Happy"},
+        {4, "Neutral"},
+        {5, "Sad"},
+        {6, "Surprise"}
+    };
+    
+    LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
+    
+    //ledController.turnOnLED();
+    //std::this_thread::sleep_for(std::chrono::seconds(3));
+    //ledController.turnOffLED();
+    
+    //ledController.setRGBColor("red");
+    //std::this_thread::sleep_for(std::chrono::seconds(3));
+    //ledController.turnOffRGBLED();
+    
+    //mainDoor.write(90);
+    //std::this_thread::sleep_for(std::chrono::seconds(3));
+    //mainDoor.write(0);
+    //std::this_thread::sleep_for(std::chrono::seconds(3));
+    
+    //garageDoor.write(90);
+    //std::this_thread::sleep_for(std::chrono::seconds(3));
+    //garageDoor.write(0);
+    //std::this_thread::sleep_for(std::chrono::seconds(3));
+    
+    if(!eventHandler.isEventRegistered(Event::OpenMainDoor)) {
+        eventHandler.addListener(Event::OpenMainDoor, [&](){
+            mainDoor.write(90);
+            
+            clapDetection.openStream();
+            
+            // mainDoor.write(0);
+            
+            std::cout << "test" << std::endl;
+            
+            clapThread.start();
+            clapThread.join();
+            
+            std::cout << "test" << std::endl;
+        });
+    }
+    
+    if(!eventHandler.isEventRegistered(Event::test)) {
+        eventHandler.addListener(Event::test, [&](){
+            
+            std::cout << "test" << std::endl;
+        });
+    }
     
     if(ControllerThread::argc > 1) {
         switch(ControllerThread::argvValues.at(ControllerThread::argv[1])){
@@ -130,11 +198,10 @@ void ControllerThread::run(void) {
                 intruderThread.join();
             break;
             case DetectClap:
-                // audioRecordThread.start();
-                // audioRecordThread.join();
-            
-                 clapThread.start();
-                 clapThread.join();
+                clapDetection.openStream();
+                
+                clapThread.start();
+                clapThread.join();
             break;
             case IntruderMoodDetectionStart:
                 intruderMoodThread.start();
@@ -144,15 +211,14 @@ void ControllerThread::run(void) {
                 rfidThread.start();
                 rfidThread.join();
             break;
+            case Debug:
+                //eventHandler.emit(Event::OpenMainDoor);
+                //eventHandler.emit(Event::test, 1) ;
+            break;
             default:
-
-                // moodThread.start();
-
-                // moodThread.join();
             break;
         }
     } else {
-        
         
         moodThread.start();
         moodThread.join();
@@ -164,5 +230,9 @@ void ControllerThread::run(void) {
     moodThread.stop();
 
     intruderThread.stop();
+    intruderMoodThread.stop();
+    rfidThread.stop();
+    doorsThread.stop();
+    
     printf("Shutting down...\n");
 }

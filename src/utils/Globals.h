@@ -29,10 +29,32 @@ class Globals {
             return mainDoorPin;
         }
         
+        int getLedPin() {
+            return ledPin;
+        }
+        
+        int getLedRedPin() {
+            return ledRedPin;
+        }
+        
+        int getLedGreenPin() {
+            return ledGreenPin;
+        }
+        
+        int getLedBluePin() {
+            return ledBluePin;
+        }
+        
     private:
         cv::Ptr<cv::ml::SVM> mood_svm;
-        int garageDoorPin = 16;
-        int mainDoorPin = 16;
+        int garageDoorPin = 27;
+        int mainDoorPin = 22;
+        
+        int ledPin = 16;
+        
+        int ledRedPin = 13;
+        int ledGreenPin = 19;
+        int ledBluePin = 12;
 };
 
 #endif

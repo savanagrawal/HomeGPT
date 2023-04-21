@@ -48,6 +48,7 @@ class ControllerThread : public CppThread {
             DetectIntruder,
             DetectClap,
             RfidStart,
+            Debug,
             IntruderMoodDetectionStart
         };
 
@@ -61,6 +62,7 @@ class ControllerThread : public CppThread {
             {"--detect-clap", DetectClap},
             {"--dc", DetectClap},
             {"--rfid", RfidStart},
+            {"--d", Debug},
             {"--imd", IntruderMoodDetectionStart}
         };
 };

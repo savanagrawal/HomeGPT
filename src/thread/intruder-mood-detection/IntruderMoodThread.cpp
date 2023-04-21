@@ -49,7 +49,7 @@ void IntruderMoodThread::run(void) {
     // });
     }
     intruderMoodDetection.Initialize(IntruderMoodThread::camera);
-    intruderMoodDetection.startms(100);
+    intruderMoodDetection.start();
 
 
     // switch (IntruderMoodThread::modules.at(IntruderMoodThread::module)) {

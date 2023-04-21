@@ -9,6 +9,8 @@
 #include "EventHandler.h"
 #include "RFID.h"
 #include "RFIDThread.h"
+#include "LEDController.h"
+#include "../utils/Globals.h"
 #include <stdio.h>
 #include <thread>
 
