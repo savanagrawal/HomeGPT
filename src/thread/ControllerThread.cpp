@@ -97,7 +97,7 @@ void ControllerThread::run(void) {
     // moodThread.join();
     
     ClapDetection clapDetection;
-    clapDetection.Initialize();
+    // clapDetection.Initialize();
 
     IntruderThread intruderThread(cam);
     IntruderMoodThread intruderMoodThread(cam);
@@ -105,17 +105,17 @@ void ControllerThread::run(void) {
     // AudioRecordThread audioRecordThread(&clapDetection);
     
     RFIDThread rfidThread;
-    DoorsThread doorsThread;
+    // DoorsThread doorsThread;
 
-    std::cout << ControllerThread::argc << std::endl;
+    // // std::cout << ControllerThread::argc << std::endl;
     
-    doorsThread.start();
-    doorsThread.join();
+    // doorsThread.start();
+    // doorsThread.join();
     
     EventHandler& eventHandler = EventHandler::getInstance();
     
-    ServoMotor mainDoor(globals.getMainDoorPin());
-    ServoMotor garageDoor(globals.getGarageDoorPin());
+    // ServoMotor mainDoor(globals.getMainDoorPin());
+    // ServoMotor garageDoor(globals.getGarageDoorPin());
     
     if(!eventHandler.isEventRegistered(Event::IntruderMoodThreadKill)) {
         eventHandler.addListener(Event::IntruderMoodThreadKill, [&](){
@@ -133,7 +133,7 @@ void ControllerThread::run(void) {
         {6, "Surprise"}
     };
     
-    LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
+    // LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
     
     //ledController.turnOnLED();
     //std::this_thread::sleep_for(std::chrono::seconds(3));
@@ -153,28 +153,29 @@ void ControllerThread::run(void) {
     //garageDoor.write(0);
     //std::this_thread::sleep_for(std::chrono::seconds(3));
     
-    if(!eventHandler.isEventRegistered(Event::OpenMainDoor)) {
-        eventHandler.addListener(Event::OpenMainDoor, [&](){
-            mainDoor.write(90);
+    // if(!eventHandler.isEventRegistered(Event::OpenMainDoor)) {
+    //     eventHandler.addListener(Event::OpenMainDoor, [&](){
+    //         mainDoor.write(90);
             
-            clapDetection.openStream();
+    //         clapDetection.openStream();
             
-            // mainDoor.write(0);
+    //         // mainDoor.write(0);
             
-            std::cout << "test" << std::endl;
+    //         std::cout << "test" << std::endl;
             
-            clapThread.start();
-            clapThread.join();
+    //         clapThread.start();
+    //         clapThread.join();
             
-            std::cout << "test" << std::endl;
-        });
-    }
+    //         std::cout << "test" << std::endl;
+    //     });
+    // }
+    
     
     if(!eventHandler.isEventRegistered(Event::test)) {
-        eventHandler.addListener(Event::test, [&](){
-            
-            std::cout << "test" << std::endl;
-        });
+        std::cout << "hy" <<std::endl;
+        eventHandler.addListener(Event::test, make_function([](int a, float b) {
+            std::cout << "Received event with args: " << a << ", " << b << std::endl;
+        }));
     }
     
     if(ControllerThread::argc > 1) {
@@ -212,8 +213,9 @@ void ControllerThread::run(void) {
                 rfidThread.join();
             break;
             case Debug:
-                //eventHandler.emit(Event::OpenMainDoor);
-                //eventHandler.emit(Event::test, 1) ;
+                // eventHandler.emit(Event::OpenMainDoor);
+                std::cout << "hy" << std::endl;
+                eventHandler.emit<int, float>(Event::test, 42, 3.14f);
             break;
             default:
             break;
@@ -232,7 +234,7 @@ void ControllerThread::run(void) {
     intruderThread.stop();
     intruderMoodThread.stop();
     rfidThread.stop();
-    doorsThread.stop();
+    // doorsThread.stop();
     
     printf("Shutting down...\n");
 }
