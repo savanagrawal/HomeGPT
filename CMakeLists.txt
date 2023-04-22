@@ -24,7 +24,7 @@ add_subdirectory( src/thread )
 add_subdirectory( src/clap-detection )
 add_subdirectory( src/intruder-detection )
 add_subdirectory( src/intruder-mood-detection )
-add_subdirectory( src/mood-detection )
+#add_subdirectory( src/mood-detection )
 
 include_directories( src/thread
     ${Boost_INCLUDE_DIRS}
@@ -33,7 +33,7 @@ include_directories( src/thread
 
 # Set include directories
 set(INCLUDE_DIRS
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/mood-detection
+    #${CMAKE_CURRENT_SOURCE_DIR}/src/mood-detection
     ${CMAKE_CURRENT_SOURCE_DIR}/src/intruder-mood-detection
     ${CMAKE_CURRENT_SOURCE_DIR}/src/clap-detection
     ${CMAKE_CURRENT_SOURCE_DIR}/src/thread
@@ -65,7 +65,7 @@ target_link_libraries( ${PROJECT_NAME}_Lib
     ${Boost_FILESYSTEM_LIBRARY}
     # ${PROJECT_NAME}_PeripheralsLib
     ${PROJECT_NAME}_ClapDetectionLib
-    ${PROJECT_NAME}_MoodDetectionLib
+    #${PROJECT_NAME}_MoodDetectionLib
     ${PROJECT_NAME}_IntruderDetectionLib
     ${PROJECT_NAME}_IntruderMoodDetectionLib
     ${PROJECT_NAME}_ThreadLib

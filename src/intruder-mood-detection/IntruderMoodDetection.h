@@ -63,11 +63,11 @@ class IntruderMoodDetection : public CppTimer {
 
             this->roi = gray(face);
 
-            resize(this->roi, this->roi, cv::Size(64, 128));
+            //resize(this->roi, this->roi, cv::Size(64, 128));
             
-            std::vector<float> hog_features;
+            //std::vector<float> hog_features;
 			
-            hog.compute(roi, hog_features);
+            //hog.compute(roi, hog_features);
             float pred = -1;
 
             // Update intruderValue queue
@@ -84,14 +84,14 @@ class IntruderMoodDetection : public CppTimer {
             if (confidence < 90 && it != users.end()) {
                 label = it->second;
 
-                hog.compute(roi, hog_features);
-                float prediction = svm->predict(hog_features);
+                //hog.compute(roi, hog_features);
+                //float prediction = svm->predict(hog_features);
                 
-                pred = static_cast<int>(prediction);
+                //pred = static_cast<int>(prediction);
                 
                 //intruderValue.push_back(label);
                 //predValue.push_back(pred);
-                eventHandler.emit(Event::OpenMainDoor);
+                eventHandler.emit<int>(Event::OpenMainDoor, 0);
                 eventHandler.emit(Event::IntruderMoodThreadKill);
             } else {        
                 label = "Intruder";
@@ -122,7 +122,7 @@ class IntruderMoodDetection : public CppTimer {
 
 
             std::cout << "Predicted label: " << predictedLabel << ", Name: " << label << ", Confidence: " << confidence << std::endl;
-            std::cout << "Emotion: " << emotion[pred] << std::endl;
+            //std::cout << "Emotion: " << emotion[pred] << std::endl;
             putText(im, label, cv::Point(face.x, face.y - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(225, 0, 0), 2);
         }
         // Clean up the memory
@@ -209,33 +209,57 @@ class IntruderMoodDetection : public CppTimer {
                         
                         pred = static_cast<int>(prediction);
                         
-                        eventHandler.emit(Event::OpenMainDoor);
-                        
                         //ledControllerPtr->setRGBColor(emotion.at(pred));
                         //sleep(3);
                         //ledControllerPtr->turnOffRGBLED();
+                        running = false;
+
+                        std::cout << "Predicted label: " << predictedLabel << ", Name: " << label << ", Confidence: " << confidence << std::endl;
+                        std::cout << "Emotion: " << emotion[pred] << std::endl;
+                        putText(im, label+", "+emotion[pred], cv::Point(face.x, face.y - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(225, 0, 0), 2);
+                
+                        try {
+                            imshow("Face & Mood Recognition", im);
+                        } catch (cv::Exception e) {
+                            std::cout << "Expect a segmentation fault to stop intruder detection." << std::endl;
+                            raise(SIGHUP);
+                        }
+                
+                        // wait for 10 milliseconds
+                        cv::waitKey(10);
                         
-                        eventHandler.emit(Event::IntruderMoodThreadKill);
-                        // break;
-                    } else {        
+                        eventHandler.emit<int>(Event::OpenMainDoor, pred);
+                        //sleep(2);
+                        //eventHandler.emit(Event::IntruderMoodThreadKill);
+                        //return;
+                    } else {
                         label = "Intruder";
+
+                        std::cout << "Predicted label: " << predictedLabel << ", Name: " << label << ", Confidence: " << confidence << std::endl;
+                        std::cout << "Emotion: " << emotion[pred] << std::endl;
+                        putText(im, label+", "+emotion[pred], cv::Point(face.x, face.y - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(225, 0, 0), 2);
+                
+                        try {
+                            imshow("Face & Mood Recognition", im);
+                        } catch (cv::Exception e) {
+                            std::cout << "Expect a segmentation fault to stop intruder detection." << std::endl;
+                            raise(SIGHUP);
+                        }
+                
+                        // wait for 10 milliseconds
+                        cv::waitKey(10);
                     }
 
-                    std::cout << "Predicted label: " << predictedLabel << ", Name: " << label << ", Confidence: " << confidence << std::endl;
-                    std::cout << "Emotion: " << emotion[pred] << std::endl;
-                    putText(im, label, cv::Point(face.x, face.y - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(225, 0, 0), 2);
+                    //std::cout << "Predicted label: " << predictedLabel << ", Name: " << label << ", Confidence: " << confidence << std::endl;
+                    //std::cout << "Emotion: " << emotion[pred] << std::endl;
+                    //putText(im, label+", "+emotion[pred], cv::Point(face.x, face.y - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, cv::Scalar(225, 0, 0), 2);
                 }
-                
-                try {
-                    imshow("Face & Mood Recognition", im);
-                } catch (cv::Exception e) {
-                    std::cout << "Expect a segmentation fault to stop intruder detection." << std::endl;
-                    raise(SIGHUP);
-                }
-                
-                // wait for 10 milliseconds
-                cv::waitKey(10);
             }
+        }
+        
+        void unlock() {
+            running = true;
+            start();
         }
         
         std::map<int, std::string> readFileToMap(const std::string& fileName) {
@@ -255,7 +279,11 @@ class IntruderMoodDetection : public CppTimer {
 
             return users;
         }
-
+        
+        void restart() {
+            masterCamera.open(CameraID);
+        }
+        
         /** Camera setup functions */
         void setCameraId(int id);
 
@@ -298,6 +326,10 @@ class IntruderMoodDetection : public CppTimer {
         cv::HOGDescriptor hog;
         
         bool running = true;
+        
+        bool locked = false;
+        
+        int emits = 0;
         
         // LEDController* ledControllerPtr;
 
