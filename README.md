@@ -42,7 +42,7 @@ This feature ensures **SAFETY** of your home by recognizing entrants at the main
 Real Time feed of camera at the door compares an entrant's image using HOG Classifier to generate signal for welcoming the person by opening the door.
 You have new friend coming in, No problemo! we have feature to train the model and add new allies in real time as well!
 
-<a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg" alt="HomeGPT" width="400" style="display:flex;margin: auto;justify-content: center;"/></a>
+<div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg" alt="HomeGPT" width="400" style="display:flex;margin: auto;justify-content: center;"/></a></div>
 
 
 #### 2. Mood based Lighting Control
@@ -54,7 +54,7 @@ Camera feed detects facial gestures in real time and uses SVM Model that has bee
 This feature lets you sit comfortably in the car when you reach your house and lets you park the car in garage comfortably by subtarcting the hustle of getting out of the car and **open the garage door*. ***RFID** Sensor detects the unique identity of your car at arrival and opens the garage door for your ease of parking! 
 
 
-<a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/RFID_RC522_and_Raspberry_pi_bb.png" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a>
+<div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/RFID_RC522_and_Raspberry_pi_bb.png" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a></div>
 
 
 #### 4. Clap Detection for Door Shut using FFT (Fast Fourier Transform) & DFT (Discrete Fourier Transform) 
