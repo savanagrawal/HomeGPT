@@ -1,4 +1,4 @@
-<a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png" alt="HomeGPT" width="200" height="200" style="display:flex;margin: auto;justify-content: center;" /></a>
+<a target="_blank" align="center"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png" alt="HomeGPT" width="200" height="200" /></a>
 
 <div style="display:flex;margin: auto;justify-content: center;"><img style="margin-right:0.15rem;" src="https://img.shields.io/badge/LICENSE-MIT-yellow"/> <img src="https://img.shields.io/badge/Source-open-green"/></div>
 
