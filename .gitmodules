@@ -1,0 +1,3 @@
+[submodule "src/dependencies/spidevpp"]
+	path = src/dependencies/spidevpp
+	url = https://github.com/mib3avenger/spidevpp-homegpt

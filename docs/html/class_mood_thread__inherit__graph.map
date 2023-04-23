@@ -1,0 +1,4 @@
+<map id="MoodThread" name="MoodThread">
+<area shape="rect" id="node1" title="Mood Thread to manage mood detection functionality." alt="" coords="5,79,99,104"/>
+<area shape="rect" id="node2" href="$class_cpp_thread.html" title=" " alt="" coords="10,5,94,31"/>
+</map>

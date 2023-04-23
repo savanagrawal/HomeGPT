@@ -3,13 +3,10 @@
 <div style="display:flex;margin: auto;justify-content: center;"><img style="margin-right:0.15rem;" src="https://img.shields.io/badge/LICENSE-MIT-yellow"/> <img src="https://img.shields.io/badge/Source-open-green"/></div>
 
 \
-\
-</br>
-<b><p style="text-align: center;"> HomeGPT: Transforming Homes with a CLAP, SMILE and a WAVE!! </p></b>
+<b><p style="text-align: center;"> HomeGPT: Transforming Homes with a clap, smile and a wave!! </p></b>
 
 
 \
-</br>
 This repository will follow the development of an Home Assistant project HomeGPT based on real-time embedded system. This is a post-graduate project for the [University of Glasgow](https://gla.ac.uk).
 
 
@@ -26,13 +23,12 @@ This repository will follow the development of an Home Assistant project HomeGPT
 - [Getting Started](#2)
 - [Docs](https://savanagrawal.github.io/HomeGPT/html/index.html)
 - [Libraries/Dependencies/Softwarers](#3)
-- [Hardware Description and Data Sheets](#4) 
-- [Team Members](#5)
-- [License](#6)
-- [Code of Conduct](#7)
-- [Contributing](#8)
-
-
+- [Hardware Description](#4) 
+- [Data Sheets](#5) 
+- [Team Members](#6)
+- [License](#7)
+- [Code of Conduct](#8)
+- [Contributing](#9)
 
 
 <a id='1'></a>
@@ -49,36 +45,23 @@ You have new friend coming in, No problemo! we have feature to train the model a
 <a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg" alt="HomeGPT" width="400" style="display:flex;margin: auto;justify-content: center;"/></a>
 
 
-
 #### 2. Mood based Lighting Control
 This state of art feature detects the mood of a person in room and **adjusts the lights** accordingly. Researchers believe that lighting levels have effect on the intensity of emotions. So now we can **lighten up the moods** and make the feel joyous in the house at all times!
 Camera feed detects facial gestures in real time and uses SVM Model that has been trained on **Kaggle** https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset dataset suing OpenCV and HOG to compare your mood and distinguish it between 7 different moods Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise in real time.
 
 
-
 #### 3. Key less Garage Entry for Vehicles
 This feature lets you sit comfortably in the car when you reach your house and lets you park the car in garage comfortably by subtarcting the hustle of getting out of the car and **open the garage door*. ***RFID** Sensor detects the unique identity of your car at arrival and opens the garage door for your ease of parking! 
 
-</br>
+
 <a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/RFID_RC522_and_Raspberry_pi_bb.png" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a>
-
-\
-</br>
-
-
 
 
 #### 4. Clap Detection for Door Shut using FFT (Fast Fourier Transform) & DFT (Discrete Fourier Transform) 
 One of the stand-out feature of this project is detecting your **Clap** to **shut that door behind you**. So you can move freely in your house and ensure privacy. It's annoying if you forget to close a door behind you cause you were busy imagining your fantasy! And someone shouts from behind just to get you back into this cruel world holding accountable for manners!
 Real Time feed of sound is convoluted on sample sets and peaks are evaluated to judge the clap intensity. In case of match, the signal is sent to actuator to shut the door.
 
-
-
-
-
-
-
-
+\
 <a id='2'></a>
 
 ## Getting Started
@@ -115,9 +98,10 @@ All the modules are listed as:
 "--dc" -> Detect Claps
 "--rfid" -> Read RFID.
 "--imd" -> Start Intruder and Mood detection together.
+"--d" -> All modules together.
 ```
 
-
+\
 <a id='3'></a>
 
 ## Libraries / Dependencies / Softwares
@@ -131,9 +115,9 @@ All the modules are listed as:
 - twyleg/spidevpp - A ported version to work with C++11.
 - twyleg/mfrc522-cpp
 
-
+\
 <a id='4'></a>
-## Hardware Description and Data Sheets 
+## Hardware Description
 
 **Raspberry pi 3:**
 
@@ -170,7 +154,9 @@ The RC522 sensor is capable of reading RFID tags and cards, and it can communica
 
 The Tower Pro SG90 is a digital servo motor, a type of motor that is widely used in robotics, RC (remote control) vehicles, and other applications that require precise and controlled angular movements. The SG90 is compact and lightweight, making it suitable for small-scale projects. It offers a torque of up to 1.8 kg/cm, a rotation range of 180 degrees, and operates on a voltage range of 4.8V to 6V. The digital technology in the SG90 provides improved accuracy, responsiveness, and reliability compared to analog servo motors. It is compatible with popular microcontrollers like Arduino and Raspberry Pi, and can be easily controlled using PWM (Pulse Width Modulation) signals. The Tower Pro SG90 digital servo motor is a popular choice for hobbyists and DIY enthusiasts due to its affordability, ease of use, and reliable performance in various applications.
 
-
+\
+<a id='5'></a>
+## Data Sheets
 - [Raspberry Pi 3 : Model B : V1.2](https://github.com/savanagrawal/HomeGPT/hardware/Raspberry_Pi_3_Model_B_V1.2.pdf)
 - [Raspberry Pi Camera Module 1080P 5MP](https://github.com/savanagrawal/HomeGPT/hardware/Raspberry_Pi_Camera_Module_1080P_5MP.pdf)
 - [BOB-12009: Bidirectional Logic Level Converter Board](https://github.com/savanagrawal/HomeGPT/hardware/BOB_12009_Bidirectional_Logic_Level_Converter_Board.pdf)
@@ -178,11 +164,11 @@ The Tower Pro SG90 is a digital servo motor, a type of motor that is widely used
 - [TowerPro Servo Motor - SG90 Digital](https://github.com/savanagrawal/HomeGPT/hardware/TowerPro_Servo_Motor_SG90_Digital.pdf)
 - [RC522 RFID Module 13.56MHz](https://github.com/savanagrawal/HomeGPT/hardware/RC522_RFID_Module_13.56MHz.pdf)
 
-
-<a id='5'></a>
+\
+<a id='6'></a>
 ## Team Members
 
-|Name|Github|ID|Course|Role|
+|Name|Github|GUID|Course|Role|
 |---|---|---|---|---|
 |Savan Agrawal|[@savanagrawal](https://github.com/savanagrawal)|2781593A|MSc in Robotics and AI| Intruder, Mood and Clap detection|
 |Chinmay Nagrale|[@MiB3Avenger](https://github.com/MiB3Avenger)|2788044N|MSc in Computer Systems Engineering|Threads, Peripherals Integration and Circuit Making|
@@ -190,16 +176,16 @@ The Tower Pro SG90 is a digital servo motor, a type of motor that is widely used
 |Mustafa Zariwala|[@MustafaZari](https://github.com/MustafaZari)|2617991Z|MSc in Robotics and AI|Fabrication and Documentation|
 
 \
-<a id='6'></a>
+<a id='7'></a>
 ## License
 View our [License](https://github.com/savanagrawal/HomeGPT/blob/main/LICENSE) here.
 
 \
-<a id='7'></a>
+<a id='8'></a>
 ## Code of Conduct
 We follow our [Code of Conduct](https://github.com/savanagrawal/HomeGPT/blob/main/CODE_OF_CONDUCT.md) strictly.
 
 \
-<a id='8'></a>
+<a id='9'></a>
 ## Contribution Guidelines
 Want to contribute? Read our [Contribution](https://github.com/savanagrawal/HomeGPT/blob/main/CONTRIBUTING) guidelines.
