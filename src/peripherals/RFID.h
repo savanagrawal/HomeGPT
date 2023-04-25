@@ -52,8 +52,8 @@ class RFID {
 					// Emit event.
 					printf("Welcome...\n");
 					eventHandler.emit(Event::RfidAuthenticated);
-					std::this_thread::sleep_for(std::chrono::seconds(3));
-					return;
+					//std::this_thread::sleep_for(std::chrono::seconds(3));
+					//return;
 				} else {
 					// Emit fail event.
 					printf("Invalid rfid! Try again in few seconds...\n");

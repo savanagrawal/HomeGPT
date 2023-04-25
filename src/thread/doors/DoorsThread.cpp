@@ -37,7 +37,6 @@ void DoorsThread::run(void) {
             LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
             
             ledController.turnOnLED();
-            ledController.setRGBColor("white");
             
             garageDoor.write(90);
             eventHandler.emit(Event::OpenedGarageDoor);
@@ -51,7 +50,6 @@ void DoorsThread::run(void) {
             std::this_thread::sleep_for(std::chrono::seconds(10));
             
             ledController.turnOffLED();
-            ledController.turnOffRGBLED();
         });
     }
 }

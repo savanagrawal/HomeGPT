@@ -6,7 +6,7 @@
  * Functions related to controller thread. We will initialize more child threads from here.
  */
 
-#include "mood-detection/MoodThread.h"
+//#include "mood-detection/MoodThread.h"
 #include "intruder-detection/IntruderThread.h"
 #include "intruder-mood-detection/IntruderMoodThread.h"
 #include "clap-detection/ClapThread.h"
@@ -88,7 +88,7 @@ void ControllerThread::run(void) {
     cv::VideoCapture cam(0);
     // Camera cam(0);
 
-    MoodThread moodThread(cam);
+    //MoodThread moodThread(cam);
     
     Globals globals;
     
@@ -97,7 +97,7 @@ void ControllerThread::run(void) {
     // moodThread.join();
     
     ClapDetection clapDetection;
-    // clapDetection.Initialize();
+    clapDetection.Initialize();
 
     IntruderThread intruderThread(cam);
     IntruderMoodThread intruderMoodThread(cam);
@@ -105,21 +105,21 @@ void ControllerThread::run(void) {
     // AudioRecordThread audioRecordThread(&clapDetection);
     
     RFIDThread rfidThread;
-    // DoorsThread doorsThread;
+    DoorsThread doorsThread;
 
     // // std::cout << ControllerThread::argc << std::endl;
     
-    // doorsThread.start();
-    // doorsThread.join();
+    doorsThread.start();
+    doorsThread.join();
     
     EventHandler& eventHandler = EventHandler::getInstance();
     
-    // ServoMotor mainDoor(globals.getMainDoorPin());
-    // ServoMotor garageDoor(globals.getGarageDoorPin());
+    ServoMotor mainDoor(globals.getMainDoorPin());
+    ServoMotor garageDoor(globals.getGarageDoorPin());
     
     if(!eventHandler.isEventRegistered(Event::IntruderMoodThreadKill)) {
         eventHandler.addListener(Event::IntruderMoodThreadKill, [&](){
-            intruderMoodThread.stop();
+            //intruderMoodThread.stop();
         });
     }
     
@@ -133,7 +133,7 @@ void ControllerThread::run(void) {
         {6, "Surprise"}
     };
     
-    // LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
+    LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
     
     //ledController.turnOnLED();
     //std::this_thread::sleep_for(std::chrono::seconds(3));
@@ -153,22 +153,63 @@ void ControllerThread::run(void) {
     //garageDoor.write(0);
     //std::this_thread::sleep_for(std::chrono::seconds(3));
     
-    // if(!eventHandler.isEventRegistered(Event::OpenMainDoor)) {
-    //     eventHandler.addListener(Event::OpenMainDoor, [&](){
-    //         mainDoor.write(90);
+    int eventRan = 0;
+    
+    if(!eventHandler.isEventRegistered(Event::OpenMainDoor)) {
+        eventHandler.addListener(Event::OpenMainDoor, make_function([&](int mood) {
+                       
+            // std::cout << "test" << std::endl;
             
-    //         clapDetection.openStream();
+            std::cout << emotionToLED[mood] << std::endl;
             
-    //         // mainDoor.write(0);
+            mainDoor.write(90);
             
-    //         std::cout << "test" << std::endl;
+            ledController.setRGBColor(emotionToLED[mood]);
+                       
+            std::cout << "Detecting clap..." << std::endl;
             
-    //         clapThread.start();
-    //         clapThread.join();
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+                       
+            std::cout << "Recording audio for 2.0 second..." << std::endl;
             
-    //         std::cout << "test" << std::endl;
-    //     });
-    // }
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+                       
+            std::cout << "Running clap detection..." << std::endl;
+            
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+                       
+            std::cout << "Clap Detected..." << std::endl;
+                       
+            //std::cout << "test" << std::endl;
+            
+            mainDoor.write(0);
+                       
+            //std::cout << "test" << std::endl;
+            
+            ledController.turnOffRGBLED();
+            
+            // eventHandler.emit(Event::ClosedMainDoor);
+            
+            // intruderMoodThread.stop();
+            
+            //std::this_thread::sleep_for(std::chrono::seconds(1));
+            
+            intruderMoodThread.unlock();
+            
+            //intruderMoodThread.restart();
+            
+            //clapDetection.openStream();
+            
+            // mainDoor.write(0);
+            
+            //std::cout << "test" << std::endl;
+            
+            //clapThread.start();
+            //clapThread.join();
+            
+            //std::cout << "test" << std::endl;
+        }));
+    }
     
     
     if(!eventHandler.isEventRegistered(Event::test)) {
@@ -213,28 +254,33 @@ void ControllerThread::run(void) {
                 rfidThread.join();
             break;
             case Debug:
+                rfidThread.start();
+                //rfidThread.join();
+                
+                intruderMoodThread.start();
+                //intruderMoodThread.join();
                 // eventHandler.emit(Event::OpenMainDoor);
-                std::cout << "hy" << std::endl;
-                eventHandler.emit<int, float>(Event::test, 42, 3.14f);
+                //std::cout << "hy" << std::endl;
+                //eventHandler.emit<int, float>(Event::test, 42, 3.14f);
             break;
             default:
             break;
         }
     } else {
         
-        moodThread.start();
-        moodThread.join();
+        //moodThread.start();
+        //moodThread.join();
     }
 
     printf("Main Loop...\n");
     while(running) sleep(1);
 
-    moodThread.stop();
+    //moodThread.stop();
 
     intruderThread.stop();
     intruderMoodThread.stop();
     rfidThread.stop();
-    // doorsThread.stop();
+    doorsThread.stop();
     
     printf("Shutting down...\n");
 }

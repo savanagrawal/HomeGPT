@@ -154,10 +154,10 @@ class ClapDetection {
         
         void record() {
             // Record for 1 seconds
-            std::cout << "Recording audio for 1.0 seconds..." << std::endl;
-            Pa_Sleep(1000);
+            std::cout << "Recording audio for 3.0 seconds..." << std::endl;
+            Pa_Sleep(3000);
             
-            recorded = true;
+            if(!recorded) recorded = true;
         }
         
         bool detectClap() {
@@ -166,9 +166,13 @@ class ClapDetection {
             std::vector<double> audioDataDouble(audioData.begin(), audioData.end());
             std::cout << audioData.size() << std::endl;
             double per = find_per_data(audioDataDouble, y_find);
-
+            
+            std::cout << per << std::endl;
+            
             // double per = find_per("recorded_audio.wav", "sample4.wav");
             bool found = result(per, 0.5);
+            
+            std::cout << found << std::endl;
             
             if(!found){
                 audioData.clear();
@@ -297,7 +301,7 @@ class ClapDetection {
         }
 
         // 
-        double find_per_data(const std::vector<double>& within_data, const std::vector<double>& y_find) {
+        static double find_per_data(const std::vector<double>& within_data, const std::vector<double>& y_find) {
             std::vector<double> c = convolve(within_data, y_find);
             
             double thres = *std::max_element(c.begin(), c.end()) / 8.0;
@@ -308,7 +312,7 @@ class ClapDetection {
         }
 
         // 
-        bool result(double per, double check){
+        static bool result(double per, double check){
             if (per <= check) {
                 return true;
             }
@@ -331,7 +335,7 @@ class ClapDetection {
         std::vector<double> y_find;
         std::string clapSamplePath = "../src/resources/clap-detection/sample.wav";
         
-        std::vector<double> audioData = std::vector<double>(44000,0.0);
+        std::vector<double> audioData = std::vector<double>(100,0.0);
         static std::vector<double>* y_findPtr;
         
         bool recorded = false;

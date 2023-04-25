@@ -45,13 +45,11 @@ void ClapThread::run(void) {
             
             LEDController ledController(globals.getLedPin(), globals.getLedRedPin(), globals.getLedGreenPin(), globals.getLedBluePin());
     
-            ledController.turnOnLED();
-            std::this_thread::sleep_for(std::chrono::seconds(3));
-            ledController.turnOffLED();
+            ledController.turnOffRGBLED();
             
             eventHandler.emit(Event::ClosedMainDoor);
             
-            clapDetection->stop();
+            //clapDetection->stop();
             break;
         }
     }
