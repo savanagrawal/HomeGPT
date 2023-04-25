@@ -1,6 +1,8 @@
 <div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png" alt="HomeGPT" width="200" height="200" /></a></div>
 
+
 <div align="center"><img style="margin-right:0.15rem;" src="https://img.shields.io/badge/LICENSE-MIT-yellow"/> <img src="https://img.shields.io/badge/Source-open-green"/></div>
+
 
 \
 <b><p style="text-align: center;"> HomeGPT: Transforming Homes with a clap, smile and a wave!! </p></b>
@@ -33,6 +35,7 @@ This repository will follow the development of an Home Assistant project HomeGPT
 
 
 
+
 <a id='0'></a>
 ## Commercial
 Watch our demo on Youtube.
@@ -42,9 +45,11 @@ Watch our demo on Youtube.
 
 
 
+
 <a id='1'></a>
 ## About
 HomeGPT revolutionizes home automation with advanced features such as facial recognition for secure access, mood-responsive lighting, RFID-enabled garage entry, and clap-activated door closures. This system elevates the living experience by seamlessly blending security, convenience, and ambiance-enhancing technology.
+
 
 #### Key Features
 
@@ -63,6 +68,22 @@ Camera feed detects facial gestures in real time and uses SVM Model that has bee
 <div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/clap-detection.gif" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a></div>
 
 
+#### Key Features
+
+#### 1.  Facial Recognition based Home Entry
+This feature ensures **SAFETY** of your home by recognizing entrants at the main door. A person can enter only if detected an ally for the people of the house. **Intruders** are **Not Allowed** as the doors won't open for you!
+Real Time feed of camera at the door compares an entrant's image using HOG Classifier to generate signal for welcoming the person by opening the door.
+You have new friend coming in, No problemo! we have feature to train the model and add new allies in real time as well!
+
+<div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg" alt="HomeGPT" width="400" style="display:flex;margin: auto;justify-content: center;"/></a></div>
+
+
+#### 2. Mood based Lighting Control
+This state of art feature detects the mood of a person in room and **adjusts the lights** accordingly. Researchers believe that lighting levels have effect on the intensity of emotions. So now we can **lighten up the moods** and make the feel joyous in the house at all times!
+Camera feed detects facial gestures in real time and uses SVM Model that has been trained on **Kaggle** https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset dataset suing OpenCV and HOG to compare your mood and distinguish it between 7 different moods Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise in real time.
+
+
+
 #### 3. Key less Garage Entry for Vehicles
 This feature lets you sit comfortably in the car when you reach your house and lets you park the car in garage comfortably by subtarcting the hustle of getting out of the car and **open the garage door*. ***RFID** Sensor detects the unique identity of your car at arrival and opens the garage door for your ease of parking! 
 
@@ -74,7 +95,9 @@ This feature lets you sit comfortably in the car when you reach your house and l
 One of the stand-out feature of this project is detecting your **Clap** to **shut that door behind you**. So you can move freely in your house and ensure privacy. It's annoying if you forget to close a door behind you cause you were busy imagining your fantasy! And someone shouts from behind just to get you back into this cruel world holding accountable for manners!
 Real Time feed of sound is convoluted on sample sets and peaks are evaluated to judge the clap intensity. In case of match, the signal is sent to actuator to shut the door.
 
+
 <div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/mood-detection.gif" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a></div>
+
 
 \
 <a id='2'></a>
