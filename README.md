@@ -19,6 +19,7 @@ This repository will follow the development of an Home Assistant project HomeGPT
 
 
 ## Contents
+- [Commercial](#0)
 - [About](#1)
 - [Getting Started](#2)
 - [Docs](https://savanagrawal.github.io/HomeGPT/html/index.html)
@@ -29,6 +30,16 @@ This repository will follow the development of an Home Assistant project HomeGPT
 - [License](#7)
 - [Code of Conduct](#8)
 - [Contributing](#9)
+
+
+
+<a id='0'></a>
+## Commercial
+Watch our demo on Youtube.
+
+<div align="center"><a href="https://youtu.be/LWb74aEaucY" target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/thumbnail.jpg" alt="HomeGPT" width="600"  /></a></div>
+
+
 
 
 <a id='1'></a>
@@ -49,6 +60,8 @@ You have new friend coming in, No problemo! we have feature to train the model a
 This state of art feature detects the mood of a person in room and **adjusts the lights** accordingly. Researchers believe that lighting levels have effect on the intensity of emotions. So now we can **lighten up the moods** and make the feel joyous in the house at all times!
 Camera feed detects facial gestures in real time and uses SVM Model that has been trained on **Kaggle** https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset dataset suing OpenCV and HOG to compare your mood and distinguish it between 7 different moods Angry, Disgust, Fear, Happy, Neutral, Sad, Surprise in real time.
 
+<div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/clap-detection.gif" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a></div>
+
 
 #### 3. Key less Garage Entry for Vehicles
 This feature lets you sit comfortably in the car when you reach your house and lets you park the car in garage comfortably by subtarcting the hustle of getting out of the car and **open the garage door*. ***RFID** Sensor detects the unique identity of your car at arrival and opens the garage door for your ease of parking! 
@@ -60,6 +73,8 @@ This feature lets you sit comfortably in the car when you reach your house and l
 #### 4. Clap Detection for Door Shut using FFT (Fast Fourier Transform) & DFT (Discrete Fourier Transform) 
 One of the stand-out feature of this project is detecting your **Clap** to **shut that door behind you**. So you can move freely in your house and ensure privacy. It's annoying if you forget to close a door behind you cause you were busy imagining your fantasy! And someone shouts from behind just to get you back into this cruel world holding accountable for manners!
 Real Time feed of sound is convoluted on sample sets and peaks are evaluated to judge the clap intensity. In case of match, the signal is sent to actuator to shut the door.
+
+<div align="center"><a target="_blank"><img src="https://mib3avenger.com/raspberry-pi/images/mood-detection.gif" alt="HomeGPT" width="500" style="display:flex;margin: auto;justify-content: center;" /></a></div>
 
 \
 <a id='2'></a>
