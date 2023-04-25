@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_6f0212c19bb1afa0d3827894a1d260c9">src/clap-detection</innerdir>
+    <innerdir refid="dir_41ef5d8a90b9cc03a02949a5c062e6f0">src/controller</innerdir>
+    <innerdir refid="dir_2676e00fd6700c28f8e3892c4c165cb2">src/dependencies</innerdir>
+    <innerdir refid="dir_84c01faae84cc359912680153beabf6c">src/intruder-detection</innerdir>
+    <innerdir refid="dir_6bdc88b2989357d4fa7c175bb154cd2d">src/intruder-mood-detection</innerdir>
+    <innerdir refid="dir_8eb9addc559afccb814fe5975f6c2253">src/mood-detection</innerdir>
+    <innerdir refid="dir_fbf0f2406da70b7242e9fe36900a795c">src/peripherals</innerdir>
+    <innerdir refid="dir_bfedb72b9d87795234454f6223b9ab1e">src/thread</innerdir>
+    <innerdir refid="dir_313caf1132e152dd9b58bea13a4052ca">src/utils</innerdir>
+    <innerfile refid="src_2main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+.TH "Events" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Events
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Events\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBEVENT_CODES\fP { \fBCLAP_DETECTED\fP, \fBCLAP_DETECTED_THREAD\fP, \fBDATASET_CREATOR_COMPLETE\fP, \fBDATASET_CREATOR_ERROR\fP, \fBDATASET_TRAINER_COMPLETE\fP, \fBDATASET_TRAINER_ERROR\fP, \fBINTRUDER_THREAD_KILL\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEvents\fP (const \fBEvents\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBEvents\fP & \fBoperator=\fP (const \fBEvents\fP &)=delete"
+.br
+.ti -1c
+.RI "eventpp::EventDispatcher< \fBEVENT_CODES\fP, void()> \fBgetDispatcher\fP ()"
+.br
+.ti -1c
+.RI "void \fBappendListener\fP (\fBEVENT_CODES\fP ev, std::function< void()> cb)"
+.br
+.ti -1c
+.RI "void \fBdispatch\fP (\fBEVENT_CODES\fP ev)"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBEvents\fP & \fBgetInstance\fP ()"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBEvents::EVENT_CODES\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICLAP_DETECTED \fP\fP
+.TP
+\fB\fICLAP_DETECTED_THREAD \fP\fP
+.TP
+\fB\fIDATASET_CREATOR_COMPLETE \fP\fP
+.TP
+\fB\fIDATASET_CREATOR_ERROR \fP\fP
+.TP
+\fB\fIDATASET_TRAINER_COMPLETE \fP\fP
+.TP
+\fB\fIDATASET_TRAINER_ERROR \fP\fP
+.TP
+\fB\fIINTRUDER_THREAD_KILL \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Events::Events (const \fBEvents\fP &)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Events::appendListener (\fBEVENT_CODES\fP ev, std::function< void()> cb)\fC [inline]\fP"
+
+.SS "void Events::dispatch (\fBEVENT_CODES\fP ev)\fC [inline]\fP"
+
+.SS "eventpp::EventDispatcher< \fBEVENT_CODES\fP, void()> Events::getDispatcher ()\fC [inline]\fP"
+
+.SS "static \fBEvents\fP & Events::getInstance ()\fC [inline]\fP, \fC [static]\fP"
+
+.SS "\fBEvents\fP & Events::operator= (const \fBEvents\fP &)\fC [delete]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

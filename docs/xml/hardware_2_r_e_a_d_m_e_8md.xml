@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="hardware_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">##<sp/>Hardware<sp/>Requirements</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Raspberry<sp/>Pi<sp/>3<sp/>:<sp/>Model<sp/>B<sp/>:<sp/>V1.2**<sp/></highlight></codeline>
+<codeline><highlight class="normal">A<sp/>single-board<sp/>computer<sp/>that<sp/>provides<sp/>an<sp/>accessible<sp/>and<sp/>affordable<sp/>platform<sp/>for<sp/>hobbyists,<sp/>educators,<sp/>and<sp/>professionals<sp/>to<sp/>learn,<sp/>develop,<sp/>and<sp/>innovate.<sp/>It<sp/>features<sp/>a<sp/>quad-core<sp/>ARM<sp/>Cortex-A53<sp/>processor,<sp/>1GB<sp/>of<sp/>RAM,<sp/>built-in<sp/>Wi-Fi<sp/>and<sp/>Bluetooth,<sp/>HDMI<sp/>and<sp/>Ethernet<sp/>ports,<sp/>and<sp/>GPIO<sp/>pins<sp/>for<sp/>interfacing<sp/>with<sp/>other<sp/>components.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Raspberry<sp/>Pi<sp/>Camera<sp/>Module<sp/>1080P<sp/>5MP:**</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>camera<sp/>module<sp/>specifically<sp/>designed<sp/>to<sp/>be<sp/>used<sp/>with<sp/>the<sp/>Raspberry<sp/>Pi.<sp/>It<sp/>features<sp/>a<sp/>5-megapixel<sp/>sensor<sp/>and<sp/>is<sp/>capable<sp/>of<sp/>recording<sp/>1080p<sp/>video<sp/>at<sp/>30<sp/>frames<sp/>per<sp/>second.<sp/>The<sp/>camera<sp/>can<sp/>be<sp/>used<sp/>for<sp/>various<sp/>applications<sp/>such<sp/>as<sp/>security<sp/>systems,<sp/>drones,<sp/>and<sp/>timelapse<sp/>photography.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**BOB-12009:<sp/>Bidirectional<sp/>Logic<sp/>Level<sp/>Converter<sp/>Board:**</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>level<sp/>shifter<sp/>that<sp/>allows<sp/>bidirectional<sp/>voltage<sp/>translation<sp/>between<sp/>different<sp/>logic<sp/>levels.<sp/>It<sp/>can<sp/>convert<sp/>signals<sp/>from<sp/>1.8V<sp/>to<sp/>5V<sp/>or<sp/>from<sp/>5V<sp/>to<sp/>1.8V,<sp/>making<sp/>it<sp/>useful<sp/>for<sp/>interfacing<sp/>components<sp/>with<sp/>different<sp/>voltage<sp/>requirements.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**ADS1115<sp/>16-Bit<sp/>ADC<sp/>:<sp/>4<sp/>Channel<sp/>with<sp/>Programmable<sp/>Gain<sp/>Amplifier:**</highlight></codeline>
+<codeline><highlight class="normal">4<sp/>Channel<sp/>with<sp/>Programmable<sp/>Gain<sp/>Amplifier:<sp/>An<sp/>analog-to-digital<sp/>converter<sp/>that<sp/>provides<sp/>16-bit<sp/>resolution<sp/>for<sp/>accurate<sp/>and<sp/>precise<sp/>measurements.<sp/>It<sp/>has<sp/>four<sp/>input<sp/>channels<sp/>and<sp/>a<sp/>programmable<sp/>gain<sp/>amplifier,<sp/>making<sp/>it<sp/>suitable<sp/>for<sp/>a<sp/>variety<sp/>of<sp/>applications<sp/>such<sp/>as<sp/>temperature<sp/>sensing,<sp/>current<sp/>sensing,<sp/>and<sp/>strain<sp/>gauges.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**TowerPro<sp/>Servo<sp/>Motor<sp/>-<sp/>SG90<sp/>Digital:**</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>small<sp/>and<sp/>lightweight<sp/>servo<sp/>motor<sp/>that<sp/>can<sp/>rotate<sp/>up<sp/>to<sp/>180<sp/>degrees.<sp/>It<sp/>is<sp/>commonly<sp/>used<sp/>in<sp/>RC<sp/>models,<sp/>robotics,<sp/>and<sp/>automation<sp/>projects<sp/>where<sp/>precise<sp/>control<sp/>of<sp/>position<sp/>or<sp/>movement<sp/>is<sp/>required.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**MQ-2<sp/>:<sp/>Butane<sp/>Hydrogen<sp/>LPG<sp/>Gas<sp/>Smoke<sp/>Detector:**</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>gas<sp/>sensor<sp/>module<sp/>that<sp/>can<sp/>detect<sp/>various<sp/>flammable<sp/>gases<sp/>such<sp/>as<sp/>butane,<sp/>propane,<sp/>and<sp/>methane.<sp/>It<sp/>is<sp/>commonly<sp/>used<sp/>in<sp/>gas<sp/>leak<sp/>detection<sp/>systems,<sp/>fire<sp/>alarms,<sp/>and<sp/>gas<sp/>monitoring<sp/>systems.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**RC522<sp/>RFID<sp/>Module<sp/>13.56MHz:**</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>radio<sp/>frequency<sp/>identification<sp/>(RFID)<sp/>module<sp/>that<sp/>can<sp/>read<sp/>and<sp/>write<sp/>data<sp/>to<sp/>RFID<sp/>tags<sp/>or<sp/>cards<sp/>at<sp/>a<sp/>frequency<sp/>of<sp/>13.56MHz.<sp/>It<sp/>is<sp/>commonly<sp/>used<sp/>in<sp/>access<sp/>control<sp/>systems,<sp/>inventory<sp/>management,<sp/>and<sp/>payment<sp/>systems.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Microphone:**</highlight></codeline>
+<codeline><highlight class="normal">It<sp/>is<sp/>used<sp/>in<sp/>audio<sp/>recording<sp/>so<sp/>that<sp/>clap<sp/>detection<sp/>can<sp/>be<sp/>acheived</highlight></codeline>
+    </programlisting>
+    <location file="hardware/README.md"/>
+  </compounddef>
+</doxygen>

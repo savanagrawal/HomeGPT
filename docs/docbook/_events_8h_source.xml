@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__events_8h_source" xml:lang="en-US">
+<title>Events.h</title>
+<indexterm><primary>src/utils/Events.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;EVENTS_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;EVENTS_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;eventpp/eventdispatcher.h&quot;</emphasis>
+12 
+13 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_events">Events</link>&#32;{
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca09696eae844ccb123b205d9d8acd149e">CLAP_DETECTED</link>,
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9b99fabdfb0f7ee9d5f3f1019d893a7a">CLAP_DETECTED_THREAD</link>,
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde">DATASET_CREATOR_COMPLETE</link>,
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7">DATASET_CREATOR_ERROR</link>,
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6">DATASET_TRAINER_COMPLETE</link>,
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088">DATASET_TRAINER_ERROR</link>,
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cac9e306cb81bc6f3653a8d5047bc0f0dc">INTRUDER_THREAD_KILL</link>
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_events">Events</link>&amp;&#32;<link linkend="_class_events_1a599a464388efa7cc667dee0f5acbaf62">getInstance</link>()&#32;{
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_events">Events</link>&#32;instance;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;instance;&#32;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events_1af492aa81f2ef321fff34e61d81531586">Events</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_events">Events</link>&amp;)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events">Events</link>&amp;&#32;<link linkend="_class_events_1a3ac3dea8075d8cb500fcef5d902e6146">operator = </link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_events">Events</link>&amp;)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+32 
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventpp::EventDispatcher&lt;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>,&#32;void&#32;()&gt;&#32;<link linkend="_class_events_1a1674530b62fa0bc5390d5bc6da484234">getDispatcher</link>()&#32;{
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;dispatcher;
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_events_1aa34d20a6375098cacbff1648b3047523">appendListener</link>(<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>&#32;ev,&#32;std::function&lt;<emphasis role="keywordtype">void</emphasis>()&gt;&#32;cb){
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dispatcher.appendListener(ev,&#32;cb);
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_events_1a72e92c46b35623f161d4800b50f36555">dispatch</link>(<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>&#32;ev)&#32;{
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dispatcher.dispatch(ev);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+44 
+45 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events">Events</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_events">~Events</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventpp::EventDispatcher&lt;<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>,&#32;void&#32;()&gt;&#32;dispatcher;
+50 
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;eventpp::CallbackList&lt;void&#32;(const&#32;EVENT_CODES)&gt;</emphasis>
+52 };
+53 
+54 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

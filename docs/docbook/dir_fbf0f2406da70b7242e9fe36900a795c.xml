@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_fbf0f2406da70b7242e9fe36900a795c" xml:lang="en-US">
+<title>src/peripherals Directory Reference</title>
+<indexterm><primary>src/peripherals Directory Reference</primary></indexterm>
+Directory dependency graph for peripherals:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_fbf0f2406da70b7242e9fe36900a795c_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_caead8f2f932779b81c885c4b6cdb410">bcm2835</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_816bb509503637d460c7583c6da44985">spi</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__camera_8cpp">Camera.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__camera_8h">Camera.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__g_p_i_o_driver_8cpp">GPIODriver.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__g_p_i_o_driver_8h">GPIODriver.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__i2_c_driver_8cpp">I2CDriver.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__i2_c_driver_8h">I2CDriver.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__i2_c_sensor_8h">I2CSensor.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__l_e_d_controller_8cpp">LEDController.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__l_e_d_controller_8h">LEDController.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__m_f_r_c522_8cpp">MFRC522.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_peripherals_2mfrc522_8h">MFRC522.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__relay_board_8cpp">RelayBoard.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__relay_board_8h">RelayBoard.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__r_f_i_d_8cpp">RFID.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__r_f_i_d_8h">RFID.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__servo_motor_8cpp">ServoMotor.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__servo_motor_8h">ServoMotor.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

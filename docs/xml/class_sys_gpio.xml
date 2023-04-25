@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_sys_gpio" kind="class" language="C++" prot="public">
+    <compoundname>SysGpio</compoundname>
+    <basecompoundref refid="structmfrc522_1_1_i_gpio" prot="public" virt="non-virtual">mfrc522::IGpio</basecompoundref>
+    <includes refid="sys__gpio__impl_8h" local="no">sys_gpio_impl.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" prot="public" static="no" mutable="no">
+        <type><ref refid="classspidevpp_1_1_gpio" kindref="compound">spidevpp::Gpio</ref></type>
+        <definition>spidevpp::Gpio SysGpio::mGpio</definition>
+        <argsstring></argsstring>
+        <name>mGpio</name>
+        <qualifiedname>SysGpio::mGpio</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/spi/sys_gpio_impl.h" line="22" column="16" bodyfile="src/peripherals/spi/sys_gpio_impl.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" compoundref="sys__gpio__impl_8h" startline="18" endline="20">getValue</referencedby>
+        <referencedby refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" compoundref="sys__gpio__impl_8h" startline="14" endline="16">setValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SysGpio::SysGpio</definition>
+        <argsstring>(unsigned int pin, spidevpp::Gpio::Direction direction, spidevpp::Gpio::Value value)</argsstring>
+        <name>SysGpio</name>
+        <qualifiedname>SysGpio::SysGpio</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type><ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kindref="member">spidevpp::Gpio::Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">spidevpp::Gpio::Value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/spi/sys_gpio_impl.h" line="10" column="1" bodyfile="src/peripherals/spi/sys_gpio_impl.h" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void SysGpio::setValue</definition>
+        <argsstring>(Value value) final</argsstring>
+        <name>setValue</name>
+        <qualifiedname>SysGpio::setValue</qualifiedname>
+        <reimplements refid="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188">setValue</reimplements>
+        <param>
+          <type><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/spi/sys_gpio_impl.h" line="14" column="6" bodyfile="src/peripherals/spi/sys_gpio_impl.h" bodystart="14" bodyend="16"/>
+        <references refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" compoundref="sys__gpio__impl_8h" startline="22">mGpio</references>
+        <references refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" compoundref="gpio_8cc" startline="56" endline="61">spidevpp::Gpio::setValue</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref></type>
+        <definition>Value SysGpio::getValue</definition>
+        <argsstring>() final</argsstring>
+        <name>getValue</name>
+        <qualifiedname>SysGpio::getValue</qualifiedname>
+        <reimplements refid="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2">getValue</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/spi/sys_gpio_impl.h" line="18" column="7" bodyfile="src/peripherals/spi/sys_gpio_impl.h" bodystart="18" bodyend="20"/>
+        <references refid="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" compoundref="gpio_8cc" startline="63" endline="69">spidevpp::Gpio::getValue</references>
+        <references refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" compoundref="sys__gpio__impl_8h" startline="22">mGpio</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Value</name>
+        <qualifiedname>mfrc522::IGpio::Value</qualifiedname>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" prot="public">
+          <name>low</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" prot="public">
+          <name>high</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" prot="public">
+          <name>l</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" prot="public">
+          <name>h</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/igpio.h" line="10" column="1" bodyfile="src/dependencies/mfrc522/igpio.h" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Value</name>
+        <qualifiedname>mfrc522::IGpio::Value</qualifiedname>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" prot="public">
+          <name>low</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" prot="public">
+          <name>high</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" prot="public">
+          <name>l</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" prot="public">
+          <name>h</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/igpio.h" line="11" column="1" bodyfile="src/peripherals/bcm2835/igpio.h" bodystart="11" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SysGpio</label>
+        <link refid="class_sys_gpio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mfrc522::IGpio</label>
+        <link refid="structmfrc522_1_1_i_gpio"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SysGpio</label>
+        <link refid="class_sys_gpio"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>mGpio</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mfrc522::IGpio</label>
+        <link refid="structmfrc522_1_1_i_gpio"/>
+      </node>
+      <node id="3">
+        <label>spidevpp::Gpio</label>
+        <link refid="classspidevpp_1_1_gpio"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/peripherals/spi/sys_gpio_impl.h" line="7" column="1" bodyfile="src/peripherals/spi/sys_gpio_impl.h" bodystart="7" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" prot="public" virt="virtual"><scope>SysGpio</scope><name>getValue</name></member>
+      <member refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" prot="public" virt="non-virtual"><scope>SysGpio</scope><name>mGpio</name></member>
+      <member refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" prot="public" virt="virtual"><scope>SysGpio</scope><name>setValue</name></member>
+      <member refid="class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309" prot="public" virt="non-virtual"><scope>SysGpio</scope><name>SysGpio</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" virt="non-virtual"><scope>SysGpio</scope><name>Value</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" virt="non-virtual"><scope>SysGpio</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

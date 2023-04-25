@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_816bb509503637d460c7583c6da44985" kind="dir">
+    <compoundname>src/peripherals/spi</compoundname>
+    <innerfile refid="spidev__impl_8h">spidev_impl.h</innerfile>
+    <innerfile refid="sys__gpio__impl_8h">sys_gpio_impl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/peripherals/spi/"/>
+  </compounddef>
+</doxygen>

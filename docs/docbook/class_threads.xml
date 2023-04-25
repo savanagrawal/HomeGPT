@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_threads" xml:lang="en-US">
+<title>Threads Class Reference</title>
+<indexterm><primary>Threads</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Threads.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_threads_1a5ecd94bd7d9420d676a75a4974f32e11">setIntruderThread</link> (<link linkend="_class_intruder_thread">IntruderThread</link> *it)</para>
+</listitem>
+            <listitem><para><link linkend="_class_intruder_thread">IntruderThread</link> <link linkend="_class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce">getIntruderThread</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce"/><section>
+    <title>getIntruderThread()</title>
+<indexterm><primary>getIntruderThread</primary><secondary>Threads</secondary></indexterm>
+<indexterm><primary>Threads</primary><secondary>getIntruderThread</secondary></indexterm>
+<para><computeroutput><link linkend="_class_intruder_thread">IntruderThread</link> Threads::getIntruderThread ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_threads_1a5ecd94bd7d9420d676a75a4974f32e11"/><section>
+    <title>setIntruderThread()</title>
+<indexterm><primary>setIntruderThread</primary><secondary>Threads</secondary></indexterm>
+<indexterm><primary>Threads</primary><secondary>setIntruderThread</secondary></indexterm>
+<para><computeroutput>void Threads::setIntruderThread (<link linkend="_class_intruder_thread">IntruderThread</link> * it)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/utils/<link linkend="__threads_8h">Threads.h</link></section>
+</section>

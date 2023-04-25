@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key" kind="struct" language="C++" prot="public">
+    <compoundname>mfrc522::MFRC522::MIFARE_Key</compoundname>
+    <includes refid="dependencies_2mfrc522_2mfrc522_8h" local="no">mfrc522.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key_1aa794e440258b611c8049d4f233b38bb9" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t mfrc522::MFRC522::MIFARE_Key::keyByte</definition>
+        <argsstring>[MF_KEY_SIZE]</argsstring>
+        <name>keyByte</name>
+        <qualifiedname>mfrc522::MFRC522::MIFARE_Key::keyByte</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/mfrc522.h" line="222" column="8" bodyfile="src/dependencies/mfrc522/mfrc522.h" bodystart="222" bodyend="-1"/>
+        <referencedby refid="classmfrc522_1_1_m_f_r_c522_1a86a252950d51b7cca3ca72f70d8cb24c" compoundref="mfrc522_8cc" startline="778" endline="798">mfrc522::MFRC522::PCD_Authenticate</referencedby>
+        <referencedby refid="classmfrc522_1_1_m_f_r_c522_1a98d66dfc8460ae366a56d3762bcd278a" compoundref="mfrc522_8cc" startline="1201" endline="1253">mfrc522::MFRC522::PICC_DumpToSerial</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/mfrc522/mfrc522.h" line="221" column="1" bodyfile="src/dependencies/mfrc522/mfrc522.h" bodystart="221" bodyend="223"/>
+    <listofallmembers>
+      <member refid="structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key_1aa794e440258b611c8049d4f233b38bb9" prot="public" virt="non-virtual"><scope>mfrc522::MFRC522::MIFARE_Key</scope><name>keyByte</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

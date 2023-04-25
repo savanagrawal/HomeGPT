@@ -1,0 +1,57 @@
+.TH "ControllerThread" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ControllerThread \- \fBController\fP Thread to manage all child threads\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ControllerThread\&.h>\fP
+.PP
+Inherits \fBCppThread\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBControllerThread\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetArgs\fP (int ac, std::vector< std::string > av)"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBjoin\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBController\fP Thread to manage all child threads\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale & Savan Agrawal 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ControllerThread::ControllerThread ()\fC [inline]\fP"
+Contructor for our controller thread\&. All child threads are initiallized here\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppThread::join ()\fC [inline]\fP, \fC [inherited]\fP"
+Waits for the thread to terminate\&. 
+.SS "void ControllerThread::setArgs (int ac, std::vector< std::string > av)\fC [inline]\fP"
+
+.SS "void CppThread::start ()\fC [inline]\fP, \fC [inherited]\fP"
+Starts the thread\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

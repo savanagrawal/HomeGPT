@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_fdf2be5c872b4412d2592845a31da987" kind="dir">
+    <compoundname>src/thread/clap-detection</compoundname>
+    <innerfile refid="_audio_record_thread_8cpp">AudioRecordThread.cpp</innerfile>
+    <innerfile refid="_audio_record_thread_8h">AudioRecordThread.h</innerfile>
+    <innerfile refid="_clap_thread_8cpp">ClapThread.cpp</innerfile>
+    <innerfile refid="_clap_thread_8h">ClapThread.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/thread/clap-detection/"/>
+  </compounddef>
+</doxygen>

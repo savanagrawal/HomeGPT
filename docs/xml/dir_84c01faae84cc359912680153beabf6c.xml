@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_84c01faae84cc359912680153beabf6c" kind="dir">
+    <compoundname>src/intruder-detection</compoundname>
+    <innerfile refid="_dataset_creator_8cpp">DatasetCreator.cpp</innerfile>
+    <innerfile refid="_dataset_creator_8h">DatasetCreator.h</innerfile>
+    <innerfile refid="_dataset_trainer_8cpp">DatasetTrainer.cpp</innerfile>
+    <innerfile refid="_dataset_trainer_8h">DatasetTrainer.h</innerfile>
+    <innerfile refid="_intruder_detection_8cpp">IntruderDetection.cpp</innerfile>
+    <innerfile refid="_intruder_detection_8h">IntruderDetection.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/intruder-detection/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_cpp_thread_8h" kind="file" language="C++">
+    <compoundname>CppThread.h</compoundname>
+    <includes local="no">thread</includes>
+    <includedby refid="_controller_thread_8h" local="yes">src/thread/ControllerThread.h</includedby>
+    <includedby refid="_audio_record_thread_8h" local="yes">src/thread/clap-detection/AudioRecordThread.h</includedby>
+    <includedby refid="_clap_thread_8h" local="yes">src/thread/clap-detection/ClapThread.h</includedby>
+    <includedby refid="_doors_thread_8h" local="yes">src/thread/doors/DoorsThread.h</includedby>
+    <includedby refid="_intruder_thread_8h" local="yes">src/thread/intruder-detection/IntruderThread.h</includedby>
+    <includedby refid="_intruder_mood_thread_8h" local="yes">src/thread/intruder-mood-detection/IntruderMoodThread.h</includedby>
+    <includedby refid="_mood_thread_8h" local="yes">src/thread/mood-detection/MoodThread.h</includedby>
+    <includedby refid="_r_f_i_d_thread_8h" local="yes">src/thread/rfid/RFIDThread.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/thread/CppThread.h</label>
+        <link refid="_cpp_thread_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>thread</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/main.cpp</label>
+        <link refid="src_2main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/thread/ControllerThread.cpp</label>
+        <link refid="_controller_thread_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/thread/ControllerThread.h</label>
+        <link refid="_controller_thread_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/thread/CppThread.h</label>
+        <link refid="_cpp_thread_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/thread/clap-detection/AudioRecordThread.cpp</label>
+        <link refid="_audio_record_thread_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/thread/clap-detection/AudioRecordThread.h</label>
+        <link refid="_audio_record_thread_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/thread/clap-detection/ClapThread.cpp</label>
+        <link refid="_clap_thread_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/thread/clap-detection/ClapThread.h</label>
+        <link refid="_clap_thread_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/thread/doors/DoorsThread.cpp</label>
+        <link refid="_doors_thread_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/thread/doors/DoorsThread.h</label>
+        <link refid="_doors_thread_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/thread/intruder-detection/IntruderThread.cpp</label>
+        <link refid="_intruder_thread_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/thread/intruder-detection/IntruderThread.h</label>
+        <link refid="_intruder_thread_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/thread/intruder-mood-detection/IntruderMoodThread.cpp</label>
+        <link refid="_intruder_mood_thread_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/thread/intruder-mood-detection/IntruderMoodThread.h</label>
+        <link refid="_intruder_mood_thread_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/thread/mood-detection/MoodThread.cpp</label>
+        <link refid="_mood_thread_8cpp"/>
+      </node>
+      <node id="16">
+        <label>src/thread/mood-detection/MoodThread.h</label>
+        <link refid="_mood_thread_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>src/thread/rfid/RFIDThread.cpp</label>
+        <link refid="_r_f_i_d_thread_8cpp"/>
+      </node>
+      <node id="18">
+        <label>src/thread/rfid/RFIDThread.h</label>
+        <link refid="_r_f_i_d_thread_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/utils/Threads.h</label>
+        <link refid="_threads_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_cpp_thread" prot="public">CppThread</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__CPP_THREAD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CPP_THREAD_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_cpp_thread" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cpp_thread" kindref="compound">CppThread</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kindref="member">start</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uthread<sp/>=<sp/>std::thread(&amp;<ref refid="class_cpp_thread_1a792b79e72250710147c452648def4a78" kindref="member">CppThread::run</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kindref="member">join</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uthread.join();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43" refid="class_cpp_thread_1a792b79e72250710147c452648def4a78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cpp_thread_1a792b79e72250710147c452648def4a78" kindref="member">run</ref>()<sp/>=<sp/>0;<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pointer<sp/>to<sp/>the<sp/>thread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>std::thread<sp/>uthread;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/thread/CppThread.h"/>
+  </compounddef>
+</doxygen>

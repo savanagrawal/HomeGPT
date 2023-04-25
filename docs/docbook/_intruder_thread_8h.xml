@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__intruder_thread_8h" xml:lang="en-US">
+<title>src/thread/intruder-detection/IntruderThread.h File Reference</title>
+<indexterm><primary>src/thread/intruder-detection/IntruderThread.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../CppThread.h&quot;<?linebreak?>#include &quot;../../utils/Globals.h&quot;<?linebreak?>#include &quot;EventHandler.h&quot;<?linebreak?>#include &quot;IntruderDetection.h&quot;<?linebreak?>#include &quot;DatasetCreator.h&quot;<?linebreak?>#include &quot;DatasetTrainer.h&quot;<?linebreak?>#include &lt;opencv2/opencv.hpp&gt;<?linebreak?>#include &lt;memory&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?></programlisting>Include dependency graph for IntruderThread.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_intruder_thread_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_intruder_thread_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_intruder_thread">IntruderThread</link></para>
+
+<para>Intruder Thread to manage intruder detection functionality. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale &amp; Savan Agrawal </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Handle our intruder detection thread. </para>
+</section>
+</section>

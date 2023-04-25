@@ -1,0 +1,114 @@
+.TH "src/thread/ControllerThread.cpp" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/thread/ControllerThread.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'intruder\-detection/IntruderThread\&.h'\fP
+.br
+\fC#include 'intruder\-mood\-detection/IntruderMoodThread\&.h'\fP
+.br
+\fC#include 'clap\-detection/ClapThread\&.h'\fP
+.br
+\fC#include 'rfid/RFIDThread\&.h'\fP
+.br
+\fC#include 'doors/DoorsThread\&.h'\fP
+.br
+\fC#include 'ServoMotor\&.h'\fP
+.br
+\fC#include 'LEDController\&.h'\fP
+.br
+\fC#include '\&.\&./utils/Globals\&.h'\fP
+.br
+\fC#include 'EventHandler\&.h'\fP
+.br
+\fC#include 'ControllerThread\&.h'\fP
+.br
+\fC#include 'ClapDetection\&.h'\fP
+.br
+\fC#include 'Controller\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <thread>\fP
+.br
+\fC#include <typeinfo>\fP
+.br
+
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBEVENT_OP_CODES\fP { \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255, \fBEXIT_APPLICATION\fP = 255 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsigHandler\fP (int sig)"
+.br
+.ti -1c
+.RI "void \fBsetHUPHandler\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBrunning\fP = 1"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+0\&.1
+.RE
+.PP
+Functions related to controller thread\&. We will initialize more child threads from here\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBEVENT_OP_CODES\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.TP
+\fB\fIEXIT_APPLICATION \fP\fP
+.SH "Function Documentation"
+.PP 
+.SS "void setHUPHandler ()"
+
+.SS "void sigHandler (int sig)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "int running = 1"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

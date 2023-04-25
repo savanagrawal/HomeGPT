@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_816bb509503637d460c7583c6da44985" xml:lang="en-US">
+<title>src/peripherals/spi Directory Reference</title>
+<indexterm><primary>src/peripherals/spi Directory Reference</primary></indexterm>
+Directory dependency graph for spi:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_816bb509503637d460c7583c6da44985_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_spidev__impl_8h">spidev_impl.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_sys__gpio__impl_8h">sys_gpio_impl.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

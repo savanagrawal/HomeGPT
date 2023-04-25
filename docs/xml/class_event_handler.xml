@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_event_handler" kind="class" language="C++" prot="public">
+    <compoundname>EventHandler</compoundname>
+    <includes refid="_event_handler_8h" local="no">EventHandler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_event_handler_1a419f3a7fb8376e0520c256c7d2bd0fac" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; <ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref>, std::vector&lt; std::function&lt; void(std::any)&gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt; Event, std::vector&lt; std::function&lt; void(std::any)&gt; &gt; &gt; EventHandler::listeners</definition>
+        <argsstring></argsstring>
+        <name>listeners</name>
+        <qualifiedname>EventHandler::listeners</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="124" column="24" bodyfile="src/utils/EventHandler.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        <definition>EventHandler &amp; EventHandler::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>EventHandler::getInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="103" column="25" bodyfile="src/utils/EventHandler.cpp" bodystart="84" bodyend="87"/>
+        <referencedby refid="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="src_2utils_2_event_test_2main_8cpp" startline="5" endline="31">main</referencedby>
+        <referencedby refid="class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed" compoundref="_r_f_i_d_8h" startline="18" endline="64">RFID::RFID</referencedby>
+        <referencedby refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" compoundref="_intruder_mood_detection_8h" startline="164" endline="258">IntruderMoodDetection::start</referencedby>
+        <referencedby refid="class_r_f_i_d_1a8a7a0e6133646a29c2102cc1b1633650" compoundref="_r_f_i_d_8h" startline="72" endline="110">RFID::start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1ad068c59fb303da8c70ec208c48d44550" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        <definition>static EventHandler &amp; EventHandler::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>EventHandler::getInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="30" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHandler::EventHandler</definition>
+        <argsstring>(const EventHandler &amp;)=delete</argsstring>
+        <name>EventHandler</name>
+        <qualifiedname>EventHandler::EventHandler</qualifiedname>
+        <param>
+          <type>const <ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="105" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1ab9a987809515877a612451f1afcb8089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        <definition>EventHandler &amp; EventHandler::operator=</definition>
+        <argsstring>(const EventHandler &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>EventHandler::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHandler::addListener</definition>
+        <argsstring>(Event event, std::function&lt; void()&gt; callback)</argsstring>
+        <name>addListener</name>
+        <qualifiedname>EventHandler::addListener</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="108" column="10" bodyfile="src/utils/EventHandler.cpp" bodystart="90" bodyend="95"/>
+        <referencedby refid="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="src_2utils_2_event_test_2main_8cpp" startline="5" endline="31">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a1e51daafb4d3a30c0182a5be27873473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void EventHandler::addListener</definition>
+        <argsstring>(Event event, std::function&lt; void(Args...)&gt; callback)</argsstring>
+        <name>addListener</name>
+        <qualifiedname>EventHandler::addListener</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(Args...)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="111" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHandler::emit</definition>
+        <argsstring>(Event event)</argsstring>
+        <name>emit</name>
+        <qualifiedname>EventHandler::emit</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="113" column="10" bodyfile="src/utils/EventHandler.cpp" bodystart="97" bodyend="104"/>
+        <referencedby refid="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="src_2utils_2_event_test_2main_8cpp" startline="5" endline="31">main</referencedby>
+        <referencedby refid="class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed" compoundref="_r_f_i_d_8h" startline="18" endline="64">RFID::RFID</referencedby>
+        <referencedby refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" compoundref="_intruder_mood_detection_8h" startline="164" endline="258">IntruderMoodDetection::start</referencedby>
+        <referencedby refid="class_r_f_i_d_1a8a7a0e6133646a29c2102cc1b1633650" compoundref="_r_f_i_d_8h" startline="72" endline="110">RFID::start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void EventHandler::emit</definition>
+        <argsstring>(Event event, Args... args)</argsstring>
+        <name>emit</name>
+        <qualifiedname>EventHandler::emit</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="116" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EventHandler::isEventRegistered</definition>
+        <argsstring>(Event event) const</argsstring>
+        <name>isEventRegistered</name>
+        <qualifiedname>EventHandler::isEventRegistered</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="118" column="10" bodyfile="src/utils/EventHandler.cpp" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHandler::EventHandler</definition>
+        <argsstring>(const EventHandler &amp;)=delete</argsstring>
+        <name>EventHandler</name>
+        <qualifiedname>EventHandler::EventHandler</qualifiedname>
+        <param>
+          <type>const <ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="32" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1ab9a987809515877a612451f1afcb8089" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        <definition>EventHandler &amp; EventHandler::operator=</definition>
+        <argsstring>(const EventHandler &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>EventHandler::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_event_handler" kindref="compound">EventHandler</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="33" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHandler::addListener</definition>
+        <argsstring>(Event event, std::function&lt; void()&gt; callback)</argsstring>
+        <name>addListener</name>
+        <qualifiedname>EventHandler::addListener</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a1e51daafb4d3a30c0182a5be27873473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void EventHandler::addListener</definition>
+        <argsstring>(Event event, std::function&lt; void(Args...)&gt; callback)</argsstring>
+        <name>addListener</name>
+        <qualifiedname>EventHandler::addListener</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(Args...)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EventHandler::emit</definition>
+        <argsstring>(Event event)</argsstring>
+        <name>emit</name>
+        <qualifiedname>EventHandler::emit</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void EventHandler::emit</definition>
+        <argsstring>(Event event, Args... args)</argsstring>
+        <name>emit</name>
+        <qualifiedname>EventHandler::emit</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="43" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool EventHandler::isEventRegistered</definition>
+        <argsstring>(Event event) const</argsstring>
+        <name>isEventRegistered</name>
+        <qualifiedname>EventHandler::isEventRegistered</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="45" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_event_handler_1a175f18f852b466f845ed9f2b011f2295" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHandler::EventHandler</definition>
+        <argsstring>()=default</argsstring>
+        <name>EventHandler</name>
+        <qualifiedname>EventHandler::EventHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="121" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a08c12344c83fd59f4e92e5892b7b139d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHandler::~EventHandler</definition>
+        <argsstring>()=default</argsstring>
+        <name>~EventHandler</name>
+        <qualifiedname>EventHandler::~EventHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="122" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a175f18f852b466f845ed9f2b011f2295" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHandler::EventHandler</definition>
+        <argsstring>()=default</argsstring>
+        <name>EventHandler</name>
+        <qualifiedname>EventHandler::EventHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="48" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1a08c12344c83fd59f4e92e5892b7b139d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EventHandler::~EventHandler</definition>
+        <argsstring>()=default</argsstring>
+        <name>~EventHandler</name>
+        <qualifiedname>EventHandler::~EventHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="49" column="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_event_handler_1a7a0b4392bbe6d546d0bbdd626d610a1d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * EventHandler::eventToString</definition>
+        <argsstring>(Event event)</argsstring>
+        <name>eventToString</name>
+        <qualifiedname>EventHandler::eventToString</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventHandler.h" line="125" column="23" bodyfile="src/utils/EventHandler.cpp" bodystart="111" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_event_handler_1af2dc7e6c2adde42ea9e57c8372e2c002" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char * EventHandler::eventToString</definition>
+        <argsstring>(Event event)</argsstring>
+        <name>eventToString</name>
+        <qualifiedname>EventHandler::eventToString</qualifiedname>
+        <param>
+          <type><ref refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kindref="member">Event</ref></type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/EventHandler.h" line="52" column="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/utils/EventHandler.h" line="101" column="1" bodyfile="src/utils/EventHandler.h" bodystart="101" bodyend="126"/>
+    <listofallmembers>
+      <member refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>addListener</name></member>
+      <member refid="class_event_handler_1a1e51daafb4d3a30c0182a5be27873473" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>addListener</name></member>
+      <member refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>addListener</name></member>
+      <member refid="class_event_handler_1a1e51daafb4d3a30c0182a5be27873473" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>addListener</name></member>
+      <member refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>emit</name></member>
+      <member refid="class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>emit</name></member>
+      <member refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>emit</name></member>
+      <member refid="class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>emit</name></member>
+      <member refid="class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>EventHandler</name></member>
+      <member refid="class_event_handler_1a175f18f852b466f845ed9f2b011f2295" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>EventHandler</name></member>
+      <member refid="class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>EventHandler</name></member>
+      <member refid="class_event_handler_1a175f18f852b466f845ed9f2b011f2295" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>EventHandler</name></member>
+      <member refid="class_event_handler_1a7a0b4392bbe6d546d0bbdd626d610a1d" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>eventToString</name></member>
+      <member refid="class_event_handler_1af2dc7e6c2adde42ea9e57c8372e2c002" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>eventToString</name></member>
+      <member refid="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>getInstance</name></member>
+      <member refid="class_event_handler_1ad068c59fb303da8c70ec208c48d44550" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>getInstance</name></member>
+      <member refid="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>isEventRegistered</name></member>
+      <member refid="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>isEventRegistered</name></member>
+      <member refid="class_event_handler_1a419f3a7fb8376e0520c256c7d2bd0fac" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>listeners</name></member>
+      <member refid="class_event_handler_1ab9a987809515877a612451f1afcb8089" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>operator=</name></member>
+      <member refid="class_event_handler_1ab9a987809515877a612451f1afcb8089" prot="public" virt="non-virtual"><scope>EventHandler</scope><name>operator=</name></member>
+      <member refid="class_event_handler_1a08c12344c83fd59f4e92e5892b7b139d" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>~EventHandler</name></member>
+      <member refid="class_event_handler_1a08c12344c83fd59f4e92e5892b7b139d" prot="private" virt="non-virtual"><scope>EventHandler</scope><name>~EventHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

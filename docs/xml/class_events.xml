@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_events" kind="class" language="C++" prot="public">
+    <compoundname>Events</compoundname>
+    <includes refid="_events_8h" local="no">Events.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EVENT_CODES</name>
+        <qualifiedname>Events::EVENT_CODES</qualifiedname>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca09696eae844ccb123b205d9d8acd149e" prot="public">
+          <name>CLAP_DETECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9b99fabdfb0f7ee9d5f3f1019d893a7a" prot="public">
+          <name>CLAP_DETECTED_THREAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde" prot="public">
+          <name>DATASET_CREATOR_COMPLETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7" prot="public">
+          <name>DATASET_CREATOR_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6" prot="public">
+          <name>DATASET_TRAINER_COMPLETE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088" prot="public">
+          <name>DATASET_TRAINER_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cac9e306cb81bc6f3653a8d5047bc0f0dc" prot="public">
+          <name>INTRUDER_THREAD_KILL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="15" column="9" bodyfile="src/utils/Events.h" bodystart="15" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_events_1a5835913d7c7f73cf0646c2f50bdc636c" prot="private" static="no" mutable="no">
+        <type>eventpp::EventDispatcher&lt; <ref refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" kindref="member">EVENT_CODES</ref>, void()&gt;</type>
+        <definition>eventpp::EventDispatcher&lt;EVENT_CODES, void ()&gt; Events::dispatcher</definition>
+        <argsstring></argsstring>
+        <name>dispatcher</name>
+        <qualifiedname>Events::dispatcher</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="49" column="34" bodyfile="src/utils/Events.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_events_1a599a464388efa7cc667dee0f5acbaf62" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_events" kindref="compound">Events</ref> &amp;</type>
+        <definition>static Events &amp; Events::getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <qualifiedname>Events::getInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="25" column="23" bodyfile="src/utils/Events.h" bodystart="25" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_events_1af492aa81f2ef321fff34e61d81531586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Events::Events</definition>
+        <argsstring>(const Events &amp;)=delete</argsstring>
+        <name>Events</name>
+        <qualifiedname>Events::Events</qualifiedname>
+        <param>
+          <type>const <ref refid="class_events" kindref="compound">Events</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="30" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_events_1a3ac3dea8075d8cb500fcef5d902e6146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_events" kindref="compound">Events</ref> &amp;</type>
+        <definition>Events &amp; Events::operator=</definition>
+        <argsstring>(const Events &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>Events::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="class_events" kindref="compound">Events</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="31" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_events_1a1674530b62fa0bc5390d5bc6da484234" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>eventpp::EventDispatcher&lt; <ref refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" kindref="member">EVENT_CODES</ref>, void()&gt;</type>
+        <definition>eventpp::EventDispatcher&lt; EVENT_CODES, void()&gt; Events::getDispatcher</definition>
+        <argsstring>()</argsstring>
+        <name>getDispatcher</name>
+        <qualifiedname>Events::getDispatcher</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="33" column="34" bodyfile="src/utils/Events.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_events_1aa34d20a6375098cacbff1648b3047523" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Events::appendListener</definition>
+        <argsstring>(EVENT_CODES ev, std::function&lt; void()&gt; cb)</argsstring>
+        <name>appendListener</name>
+        <qualifiedname>Events::appendListener</qualifiedname>
+        <param>
+          <type><ref refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" kindref="member">EVENT_CODES</ref></type>
+          <declname>ev</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void()&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="37" column="14" bodyfile="src/utils/Events.h" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_events_1a72e92c46b35623f161d4800b50f36555" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Events::dispatch</definition>
+        <argsstring>(EVENT_CODES ev)</argsstring>
+        <name>dispatch</name>
+        <qualifiedname>Events::dispatch</qualifiedname>
+        <param>
+          <type><ref refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" kindref="member">EVENT_CODES</ref></type>
+          <declname>ev</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="41" column="14" bodyfile="src/utils/Events.h" bodystart="41" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_events_1a0fd2c1f78be572e38245ac3551995c14" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Events::Events</definition>
+        <argsstring>()=default</argsstring>
+        <name>Events</name>
+        <qualifiedname>Events::Events</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="46" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="class_events_1a4304d47703bb8f2e6d377654b11d92bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Events::~Events</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Events</name>
+        <qualifiedname>Events::~Events</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Events.h" line="47" column="9"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/utils/Events.h" line="13" column="1" bodyfile="src/utils/Events.h" bodystart="13" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_events_1aa34d20a6375098cacbff1648b3047523" prot="public" virt="non-virtual"><scope>Events</scope><name>appendListener</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca09696eae844ccb123b205d9d8acd149e" prot="public" virt="non-virtual"><scope>Events</scope><name>CLAP_DETECTED</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9b99fabdfb0f7ee9d5f3f1019d893a7a" prot="public" virt="non-virtual"><scope>Events</scope><name>CLAP_DETECTED_THREAD</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde" prot="public" virt="non-virtual"><scope>Events</scope><name>DATASET_CREATOR_COMPLETE</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7" prot="public" virt="non-virtual"><scope>Events</scope><name>DATASET_CREATOR_ERROR</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6" prot="public" virt="non-virtual"><scope>Events</scope><name>DATASET_TRAINER_COMPLETE</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088" prot="public" virt="non-virtual"><scope>Events</scope><name>DATASET_TRAINER_ERROR</name></member>
+      <member refid="class_events_1a72e92c46b35623f161d4800b50f36555" prot="public" virt="non-virtual"><scope>Events</scope><name>dispatch</name></member>
+      <member refid="class_events_1a5835913d7c7f73cf0646c2f50bdc636c" prot="private" virt="non-virtual"><scope>Events</scope><name>dispatcher</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" prot="public" virt="non-virtual"><scope>Events</scope><name>EVENT_CODES</name></member>
+      <member refid="class_events_1af492aa81f2ef321fff34e61d81531586" prot="public" virt="non-virtual"><scope>Events</scope><name>Events</name></member>
+      <member refid="class_events_1a0fd2c1f78be572e38245ac3551995c14" prot="private" virt="non-virtual"><scope>Events</scope><name>Events</name></member>
+      <member refid="class_events_1a1674530b62fa0bc5390d5bc6da484234" prot="public" virt="non-virtual"><scope>Events</scope><name>getDispatcher</name></member>
+      <member refid="class_events_1a599a464388efa7cc667dee0f5acbaf62" prot="public" virt="non-virtual"><scope>Events</scope><name>getInstance</name></member>
+      <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cac9e306cb81bc6f3653a8d5047bc0f0dc" prot="public" virt="non-virtual"><scope>Events</scope><name>INTRUDER_THREAD_KILL</name></member>
+      <member refid="class_events_1a3ac3dea8075d8cb500fcef5d902e6146" prot="public" virt="non-virtual"><scope>Events</scope><name>operator=</name></member>
+      <member refid="class_events_1a4304d47703bb8f2e6d377654b11d92bd" prot="private" virt="non-virtual"><scope>Events</scope><name>~Events</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

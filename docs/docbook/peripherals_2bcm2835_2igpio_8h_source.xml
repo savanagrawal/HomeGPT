@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_peripherals_2bcm2835_2igpio_8h_source" xml:lang="en-US">
+<title>igpio.h</title>
+<indexterm><primary>src/peripherals/bcm2835/igpio.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;cstddef&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;cstdint&gt;</emphasis>
+6 
+7 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacemfrc522">mfrc522</link>&#32;{
+8 
+9 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>IGpio&#32;{
+10 
+11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">enum&#32;class</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>&#32;{
+12 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33">l</link>&#32;=&#32;0,
+13 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91">h</link>&#32;=&#32;1
+14 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+15 
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188">setValue</link>(<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>)&#32;=&#32;0;
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2">getValue</link>()&#32;=&#32;0;
+18 &#32;&#32;&#32;&#32;};
+19 
+20 }
+</programlisting></section>

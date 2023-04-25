@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__relay_board_8h_source" xml:lang="en-US">
+<title>RelayBoard.h</title>
+<indexterm><primary>src/peripherals/RelayBoard.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="preprocessor">#ifndef&#32;RELAY_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;RELAY_H</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__g_p_i_o_driver_8h">GPIODriver.h</link>&quot;</emphasis>
+12 
+20 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_relay_board">RelayBoard</link>&#32;{
+21 
+22 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_relay_board_1ad96963754490cea54db92cf32ccccf90">RelayBoard</link>()&#32;{
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Change&#32;this&#32;list&#32;to&#32;enum&#32;or&#32;defines</emphasis>
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_heaterGPIO&#32;=&#32;17;
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_lightsGPIO&#32;=&#32;27;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fanGPIO&#32;=&#32;22;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_waterPumpGPIO&#32;=&#32;23;
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_relay_board_1acda1026ec1a4a11016812efc2e7fe732">m_heaterGPIOState</link>&#32;=&#32;1;
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_relay_board_1aff19bd04e757a2442243d9f863b435ae">m_lightsGPIOState</link>&#32;=&#32;1;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98">m_fanGPIOState</link>&#32;=&#32;1;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d">m_waterPumpGPIOState</link>&#32;=&#32;1;
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+34 
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_relay_board_1af05bb34a287c76312104a427c86c658e">~RelayBoard</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Close_Device();</emphasis>
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+38 
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f">Initialize</link>(<link linkend="_class_g_p_i_o_driver">GPIODriver</link>&#32;&amp;driver);
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a0ce37124540bae0827a1b81e28841f70">Lighting</link>(<emphasis role="keywordtype">int</emphasis>&#32;state);
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98">Heating</link>(<emphasis role="keywordtype">int</emphasis>&#32;state);
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1aa14251b65f8b4872cdf95c56951f0959">Airflow</link>(<emphasis role="keywordtype">int</emphasis>&#32;state);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f">Watering</link>(<emphasis role="keywordtype">int</emphasis>&#32;state);
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a2339920ca78f22d9bbab349056ca261a">Turn_Relays_Off</link>();
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a8d4fba9b90f8a65a0f02ad9d5a35c148">Close_Relay_Board</link>();
+46 
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65">GetWateringState</link>();
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8">GetAirflowState</link>();
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a4725ac8db57d591dbe338f646cdda254">GetHeatingState</link>();
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a32270d45de9d23698cf85fd3224f88c6">GetLightingState</link>();
+51 
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1acda1026ec1a4a11016812efc2e7fe732">m_heaterGPIOState</link>;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1aff19bd04e757a2442243d9f863b435ae">m_lightsGPIOState</link>;
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98">m_fanGPIOState</link>;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d">m_waterPumpGPIOState</link>;
+56 
+57 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;m_heaterGPIO;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;m_lightsGPIO;
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;m_fanGPIO;
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;m_waterPumpGPIO;
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_p_i_o_driver">GPIODriver</link>*&#32;m_pGPIODriver&#32;=&#32;<emphasis role="keyword">nullptr</emphasis>;
+63 };
+64 
+65 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,25 @@
+digraph "CppThread"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="CppThread",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="AudioRecordThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_audio_record_thread.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="ClapThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_clap_thread.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="ControllerThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_controller_thread.html",tooltip="Controller Thread to manage all child threads."];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="DoorsThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_doors_thread.html",tooltip="Doors Thread to manage doors detection functionality."];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="IntruderMoodThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_intruder_mood_thread.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="IntruderThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_intruder_thread.html",tooltip="Intruder Thread to manage intruder detection functionality."];
+  Node1 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="MoodThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_mood_thread.html",tooltip="Mood Thread to manage mood detection functionality."];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="RFIDThread",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$class_r_f_i_d_thread.html",tooltip="Rfid Thread to manage rfid detection functionality."];
+}

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i2_c_sensor_8h_source" xml:lang="en-US">
+<title>I2CSensor.h</title>
+<indexterm><primary>src/peripherals/I2CSensor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+10 <emphasis role="preprocessor">#ifndef&#32;__GENERIC_I2C_SENSOR_H_</emphasis>
+11 <emphasis role="preprocessor">#define&#32;__GENERIC_I2C_SENSOR_H_</emphasis>
+12 
+13 <emphasis role="preprocessor">#include&#32;&lt;stdlib.h&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__i2_c_driver_8h">I2CDriver.h</link>&quot;</emphasis>
+17 
+18 
+22 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_i2_c_sensor">I2CSensor</link>&#32;{
+23 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+24 
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_sensor_1a0fb4755ddff3fe2cf5a9651d9d1fe5cd">Initialize</link>(<link linkend="_class_i2_c_driver">I2CDriver</link>&#32;&amp;i2c)&#32;=&#32;0;
+32 
+33 
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_sensor_1a0622266d335944782d2bfa6352f01095">Reset</link>()&#32;=&#32;0;
+38 
+39 
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//virtual&#32;int&#32;Get_Data()&#32;=&#32;0;</emphasis>
+44 
+45 
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_sensor_1acee1633439e97bae412441ac085fabba">Close_Device</link>()&#32;=&#32;0;
+51 
+52 
+53 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+54 
+55 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//m_pDriver&#32;=&#32;nullptr;</emphasis>
+56 };
+57 
+58 
+59 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_e923e1c0ad1632d573a60428a9bafaeb" kind="dir">
+    <compoundname>src/thread/mood-detection</compoundname>
+    <innerfile refid="_mood_thread_8cpp">MoodThread.cpp</innerfile>
+    <innerfile refid="_mood_thread_8h">MoodThread.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/thread/mood-detection/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__intruder_thread_8h_source" xml:lang="en-US">
+<title>IntruderThread.h</title>
+<indexterm><primary>src/thread/intruder-detection/IntruderThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;INTRUDER_THREAD_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;INTRUDER_THREAD_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;../CppThread.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;../../utils/Globals.h&quot;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&quot;EventHandler.h&quot;</emphasis>
+14 
+15 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__intruder_detection_8h">IntruderDetection.h</link>&quot;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__dataset_creator_8h">DatasetCreator.h</link>&quot;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__dataset_trainer_8h">DatasetTrainer.h</link>&quot;</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+20 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+21 
+26 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_intruder_thread">IntruderThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_cpp_thread">CppThread</link>&#32;{
+27 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_thread_1a25f3a0973f527ca005b0434bce782da0">IntruderThread</link>(cv::VideoCapture&#32;camera)&#32;{
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntruderThread::camera&#32;=&#32;camera;
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+34 
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_thread_1a12d01e47a01c1ca8975c8cb1efb7c135">setModule</link>(std::string&#32;module)&#32;{
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(modules.find(module)&#32;==&#32;modules.end())&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Invalid&#32;argument&#32;for&#32;module&#32;passed!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntruderThread::module&#32;=&#32;module;
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+43 
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d">stop</link>(){
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;intruderDetection.stop();</emphasis>
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;intruderDetection.<link linkend="_class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529">stop</link>();
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;datasetCreator.<link linkend="_class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900">stop</link>();
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;camera.release();
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+51 
+52 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;void&#32;run();</emphasis>
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;run(<emphasis role="keywordtype">void</emphasis>);
+55 &#32;&#32;&#32;&#32;
+56 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_globals">Globals</link>&#32;globals;
+58 &#32;&#32;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;camera;
+60 
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_detection">IntruderDetection</link>&#32;intruderDetection;
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_dataset_creator">IntruderDatasetCreator</link>&#32;datasetCreator;
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_dataset_trainer">IntruderDatasetTrainer</link>&#32;datasetTrainer;
+64 
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;module&#32;=&#32;<emphasis role="stringliteral">&quot;create-dataset&quot;</emphasis>;
+66 
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;int&gt;&#32;modules&#32;=&#32;{
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;create-dataset&quot;</emphasis>,&#32;1},
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;train-model&quot;</emphasis>,&#32;2},
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;detect-intruder&quot;</emphasis>,&#32;3}
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+72 };
+73 
+74 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

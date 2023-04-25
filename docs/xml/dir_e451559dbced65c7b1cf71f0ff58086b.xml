@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_e451559dbced65c7b1cf71f0ff58086b" kind="dir">
+    <compoundname>src/dependencies/spidevpp</compoundname>
+    <innerdir refid="dir_1d9436301166ba06e970b1b5ea20a1af">src/dependencies/spidevpp/apps</innerdir>
+    <innerdir refid="dir_0d8d94cdeec3d074a9579998e577f841">src/dependencies/spidevpp/libs</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,106 @@
+.TH "MoodDetection" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoodDetection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MoodDetection\&.h>\fP
+.PP
+Inherits CppTimer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoodDetection\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "void \fBsetCameraId\fP (int id)"
+.br
+.ti -1c
+.RI "void \fBsetContrasts\fP (int low, int high)"
+.br
+.ti -1c
+.RI "void \fBsetShutter\fP (int shutter)"
+.br
+.ti -1c
+.RI "int \fBcheckCameraOpen\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "cv::Mat \fBtakePicture\fP ()"
+.br
+.ti -1c
+.RI "void \fBsavePicture\fP (cv::VideoCapture *, std::string filename)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MoodDetection::MoodDetection ()\fC [inline]\fP"
+Constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "int MoodDetection::checkCameraOpen (cv::VideoCapture camera)"
+Checks if camera is open\&. Mainly used for debugging\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcamera\fP \fBCamera\fP object\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Error Code 
+.RE
+.PP
+
+.SS "void MoodDetection::Initialize (cv::VideoCapture camera)"
+Initializes our Mood Detection
+.PP
+\fBParameters\fP
+.RS 4
+\fIcamera\fP \fBCamera\fP object\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "void MoodDetection::savePicture (cv::VideoCapture *, std::string filename)"
+
+.SS "void MoodDetection::setCameraId (int id)"
+\fBCamera\fP setup functions
+.PP
+Set the Mood Detection \fBCamera\fP ID object\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP Set a \fBCamera\fP ID\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Updated MoodDetection::CameraID 
+.RE
+.PP
+
+.SS "void MoodDetection::setContrasts (int low, int high)"
+
+.SS "void MoodDetection::setShutter (int shutter)"
+
+.SS "void MoodDetection::stop ()\fC [inline]\fP"
+Handling class functions 
+.SS "cv::Mat MoodDetection::takePicture ()"
+\fBCamera\fP functions 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

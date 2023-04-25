@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_clap_detection" kind="class" language="C++" prot="public">
+    <compoundname>ClapDetection</compoundname>
+    <includes refid="_clap_detection_8h" local="no">ClapDetection.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_clap_detection_1ad92772919761201818620b973ba6313a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ClapDetection::y_find</definition>
+        <argsstring></argsstring>
+        <name>y_find</name>
+        <qualifiedname>ClapDetection::y_find</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="335" column="21" bodyfile="src/clap-detection/ClapDetection.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_detection_1a32308a76036ef1bba15fdc66e1c859c0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ClapDetection::clapSamplePath</definition>
+        <argsstring></argsstring>
+        <name>clapSamplePath</name>
+        <qualifiedname>ClapDetection::clapSamplePath</qualifiedname>
+        <initializer>= &quot;../src/resources/clap-detection/sample.wav&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="336" column="21" bodyfile="src/clap-detection/ClapDetection.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_detection_1a71c5cc0c68409c731c70c603c3d5d815" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; ClapDetection::audioData</definition>
+        <argsstring></argsstring>
+        <name>audioData</name>
+        <qualifiedname>ClapDetection::audioData</qualifiedname>
+        <initializer>= std::vector&lt;double&gt;(100,0.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="338" column="21" bodyfile="src/clap-detection/ClapDetection.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_detection_1a7b4f6e093066f87038a867b1bee8a869" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ClapDetection::recorded</definition>
+        <argsstring></argsstring>
+        <name>recorded</name>
+        <qualifiedname>ClapDetection::recorded</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="341" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_detection_1abc17556656b7faa4611b882507910cfe" prot="private" static="no" mutable="no">
+        <type>PaError</type>
+        <definition>PaError ClapDetection::err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <qualifiedname>ClapDetection::err</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="343" column="17" bodyfile="src/clap-detection/ClapDetection.h" bodystart="343" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_detection_1a9714e7ad360d57c3a6a1ff3856ed09c1" prot="private" static="no" mutable="no">
+        <type>PaStream *</type>
+        <definition>PaStream* ClapDetection::stream</definition>
+        <argsstring></argsstring>
+        <name>stream</name>
+        <qualifiedname>ClapDetection::stream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="344" column="18" bodyfile="src/clap-detection/ClapDetection.h" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_detection_1a5938b90c7e5183b075069bc44f323300" prot="private" static="no" mutable="no">
+        <type>PaStreamParameters</type>
+        <definition>PaStreamParameters ClapDetection::inputParameters</definition>
+        <argsstring></argsstring>
+        <name>inputParameters</name>
+        <qualifiedname>ClapDetection::inputParameters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="345" column="28" bodyfile="src/clap-detection/ClapDetection.h" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_clap_detection_1ad09d0337bddaa18620767867de175de5" prot="private" static="yes" mutable="no">
+        <type>std::vector&lt; double &gt; *</type>
+        <definition>std::vector&lt;double&gt;* ClapDetection::y_findPtr</definition>
+        <argsstring></argsstring>
+        <name>y_findPtr</name>
+        <qualifiedname>ClapDetection::y_findPtr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="339" column="28" bodyfile="src/clap-detection/ClapDetection.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_clap_detection_1aa18e197850922b6e636e0fdf76346204" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ClapDetection::ClapDetection</definition>
+        <argsstring>()</argsstring>
+        <name>ClapDetection</name>
+        <qualifiedname>ClapDetection::ClapDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="32" column="9" bodyfile="src/clap-detection/ClapDetection.h" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a93c7a6332be7f0b126135a9319daa745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClapDetection::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>ClapDetection::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes our Clap Detector.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+return </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="36" column="14" bodyfile="src/clap-detection/ClapDetection.cpp" bodystart="18" bodyend="33"/>
+        <references refid="class_clap_detection_1a955c7cf2960391a7af5309db688356e6" compoundref="_clap_detection_8h" startline="260" endline="281">load_audio_file</references>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a905ea0c10c5b8ce07c8cdda94e37535a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClapDetection::openStream</definition>
+        <argsstring>()</argsstring>
+        <name>openStream</name>
+        <qualifiedname>ClapDetection::openStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="38" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="38" bodyend="62"/>
+        <references refid="class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8" compoundref="_clap_detection_8h" startline="322" endline="331">paCallback</references>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a441f8b04980a0e2e7b20e83a6748ec8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClapDetection::closeStream</definition>
+        <argsstring>()</argsstring>
+        <name>closeStream</name>
+        <qualifiedname>ClapDetection::closeStream</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="64" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="64" bodyend="80"/>
+        <referencedby refid="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" compoundref="_clap_detection_8h" startline="163" endline="185">detectClap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a800366c00fe876aa905a59a072436957" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClapDetection::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>ClapDetection::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="82" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="82" bodyend="148"/>
+        <references refid="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" compoundref="_clap_detection_8h" startline="304" endline="312">find_per_data</references>
+        <references refid="class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8" compoundref="_clap_detection_8h" startline="322" endline="331">paCallback</references>
+        <references refid="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" compoundref="_clap_detection_8h" startline="315" endline="320">result</references>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a14d7a4329f238978b15abc40f6066340" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClapDetection::stop</definition>
+        <argsstring>() const</argsstring>
+        <name>stop</name>
+        <qualifiedname>ClapDetection::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="150" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="150" bodyend="153"/>
+        <referencedby refid="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" compoundref="_clap_detection_8h" startline="163" endline="185">detectClap</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a6505beb6c7931e5508b0b72d9365a387" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClapDetection::record</definition>
+        <argsstring>()</argsstring>
+        <name>record</name>
+        <qualifiedname>ClapDetection::record</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="155" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="155" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ClapDetection::detectClap</definition>
+        <argsstring>()</argsstring>
+        <name>detectClap</name>
+        <qualifiedname>ClapDetection::detectClap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="163" column="14" bodyfile="src/clap-detection/ClapDetection.h" bodystart="163" bodyend="185"/>
+        <references refid="class_clap_detection_1a441f8b04980a0e2e7b20e83a6748ec8a" compoundref="_clap_detection_8h" startline="64" endline="80">closeStream</references>
+        <references refid="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" compoundref="_clap_detection_8h" startline="304" endline="312">find_per_data</references>
+        <references refid="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" compoundref="_clap_detection_8h" startline="315" endline="320">result</references>
+        <references refid="class_clap_detection_1a14d7a4329f238978b15abc40f6066340" compoundref="_clap_detection_8h" startline="150" endline="153">stop</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ClapDetection::reverse_bits</definition>
+        <argsstring>(int num, int bit_length)</argsstring>
+        <name>reverse_bits</name>
+        <qualifiedname>ClapDetection::reverse_bits</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bit_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="188" column="20" bodyfile="src/clap-detection/ClapDetection.h" bodystart="188" bodyend="195"/>
+        <references refid="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" compoundref="_clap_detection_8h" startline="315" endline="320">result</references>
+        <referencedby refid="class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa" compoundref="_clap_detection_8h" startline="198" endline="232">fft</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ClapDetection::fft</definition>
+        <argsstring>(std::vector&lt; std::complex&lt; double &gt; &gt; &amp;a, bool inverse)</argsstring>
+        <name>fft</name>
+        <qualifiedname>ClapDetection::fft</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::complex&lt; double &gt; &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inverse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="198" column="21" bodyfile="src/clap-detection/ClapDetection.h" bodystart="198" bodyend="232"/>
+        <references refid="class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc" compoundref="_clap_detection_8h" startline="188" endline="195">reverse_bits</references>
+        <referencedby refid="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" compoundref="_clap_detection_8h" startline="235" endline="257">convolve</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>static std::vector&lt; double &gt; ClapDetection::convolve</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;a, const std::vector&lt; double &gt; &amp;b)</argsstring>
+        <name>convolve</name>
+        <qualifiedname>ClapDetection::convolve</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="235" column="28" bodyfile="src/clap-detection/ClapDetection.h" bodystart="235" bodyend="257"/>
+        <references refid="class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa" compoundref="_clap_detection_8h" startline="198" endline="232">fft</references>
+        <references refid="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" compoundref="_clap_detection_8h" startline="315" endline="320">result</references>
+        <referencedby refid="class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4" compoundref="_clap_detection_8h" startline="290" endline="301">find_per</referencedby>
+        <referencedby refid="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" compoundref="_clap_detection_8h" startline="304" endline="312">find_per_data</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a955c7cf2960391a7af5309db688356e6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>static std::vector&lt; double &gt; ClapDetection::load_audio_file</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>load_audio_file</name>
+        <qualifiedname>ClapDetection::load_audio_file</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="260" column="28" bodyfile="src/clap-detection/ClapDetection.h" bodystart="260" bodyend="281"/>
+        <referencedby refid="class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4" compoundref="_clap_detection_8h" startline="290" endline="301">find_per</referencedby>
+        <referencedby refid="class_clap_detection_1a93c7a6332be7f0b126135a9319daa745" compoundref="_clap_detection_8cpp" startline="18" endline="33">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double ClapDetection::percentage_above_threshold</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;a, double threshold)</argsstring>
+        <name>percentage_above_threshold</name>
+        <qualifiedname>ClapDetection::percentage_above_threshold</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="284" column="23" bodyfile="src/clap-detection/ClapDetection.h" bodystart="284" bodyend="287"/>
+        <referencedby refid="class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4" compoundref="_clap_detection_8h" startline="290" endline="301">find_per</referencedby>
+        <referencedby refid="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" compoundref="_clap_detection_8h" startline="304" endline="312">find_per_data</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double ClapDetection::find_per</definition>
+        <argsstring>(const std::string &amp;within_file, const std::string &amp;find_file)</argsstring>
+        <name>find_per</name>
+        <qualifiedname>ClapDetection::find_per</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>within_file</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>find_file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="290" column="23" bodyfile="src/clap-detection/ClapDetection.h" bodystart="290" bodyend="301"/>
+        <references refid="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" compoundref="_clap_detection_8h" startline="235" endline="257">convolve</references>
+        <references refid="class_clap_detection_1a955c7cf2960391a7af5309db688356e6" compoundref="_clap_detection_8h" startline="260" endline="281">load_audio_file</references>
+        <references refid="class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf" compoundref="_clap_detection_8h" startline="284" endline="287">percentage_above_threshold</references>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>static double ClapDetection::find_per_data</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;within_data, const std::vector&lt; double &gt; &amp;y_find)</argsstring>
+        <name>find_per_data</name>
+        <qualifiedname>ClapDetection::find_per_data</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>within_data</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>y_find</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="304" column="23" bodyfile="src/clap-detection/ClapDetection.h" bodystart="304" bodyend="312"/>
+        <references refid="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" compoundref="_clap_detection_8h" startline="235" endline="257">convolve</references>
+        <references refid="class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf" compoundref="_clap_detection_8h" startline="284" endline="287">percentage_above_threshold</references>
+        <referencedby refid="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" compoundref="_clap_detection_8h" startline="163" endline="185">detectClap</referencedby>
+        <referencedby refid="class_clap_detection_1a800366c00fe876aa905a59a072436957" compoundref="_clap_detection_8h" startline="82" endline="148">start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool ClapDetection::result</definition>
+        <argsstring>(double per, double check)</argsstring>
+        <name>result</name>
+        <qualifiedname>ClapDetection::result</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>per</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>check</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="315" column="21" bodyfile="src/clap-detection/ClapDetection.h" bodystart="315" bodyend="320"/>
+        <referencedby refid="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" compoundref="_clap_detection_8h" startline="235" endline="257">convolve</referencedby>
+        <referencedby refid="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" compoundref="_clap_detection_8h" startline="163" endline="185">detectClap</referencedby>
+        <referencedby refid="class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc" compoundref="_clap_detection_8h" startline="188" endline="195">reverse_bits</referencedby>
+        <referencedby refid="class_clap_detection_1a800366c00fe876aa905a59a072436957" compoundref="_clap_detection_8h" startline="82" endline="148">start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int ClapDetection::paCallback</definition>
+        <argsstring>(const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</argsstring>
+        <name>paCallback</name>
+        <qualifiedname>ClapDetection::paCallback</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>inputBuffer</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>outputBuffer</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>framesPerBuffer</declname>
+        </param>
+        <param>
+          <type>const PaStreamCallbackTimeInfo *</type>
+          <declname>timeInfo</declname>
+        </param>
+        <param>
+          <type>PaStreamCallbackFlags</type>
+          <declname>statusFlags</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/clap-detection/ClapDetection.h" line="322" column="20" bodyfile="src/clap-detection/ClapDetection.h" bodystart="322" bodyend="331"/>
+        <referencedby refid="class_clap_detection_1a905ea0c10c5b8ce07c8cdda94e37535a" compoundref="_clap_detection_8h" startline="38" endline="62">openStream</referencedby>
+        <referencedby refid="class_clap_detection_1a800366c00fe876aa905a59a072436957" compoundref="_clap_detection_8h" startline="82" endline="148">start</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/clap-detection/ClapDetection.h" line="30" column="1" bodyfile="src/clap-detection/ClapDetection.h" bodystart="30" bodyend="346"/>
+    <listofallmembers>
+      <member refid="class_clap_detection_1a71c5cc0c68409c731c70c603c3d5d815" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>audioData</name></member>
+      <member refid="class_clap_detection_1aa18e197850922b6e636e0fdf76346204" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>ClapDetection</name></member>
+      <member refid="class_clap_detection_1a32308a76036ef1bba15fdc66e1c859c0" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>clapSamplePath</name></member>
+      <member refid="class_clap_detection_1a441f8b04980a0e2e7b20e83a6748ec8a" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>closeStream</name></member>
+      <member refid="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>convolve</name></member>
+      <member refid="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>detectClap</name></member>
+      <member refid="class_clap_detection_1abc17556656b7faa4611b882507910cfe" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>err</name></member>
+      <member refid="class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>fft</name></member>
+      <member refid="class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>find_per</name></member>
+      <member refid="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>find_per_data</name></member>
+      <member refid="class_clap_detection_1a93c7a6332be7f0b126135a9319daa745" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>Initialize</name></member>
+      <member refid="class_clap_detection_1a5938b90c7e5183b075069bc44f323300" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>inputParameters</name></member>
+      <member refid="class_clap_detection_1a955c7cf2960391a7af5309db688356e6" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>load_audio_file</name></member>
+      <member refid="class_clap_detection_1a905ea0c10c5b8ce07c8cdda94e37535a" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>openStream</name></member>
+      <member refid="class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>paCallback</name></member>
+      <member refid="class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>percentage_above_threshold</name></member>
+      <member refid="class_clap_detection_1a6505beb6c7931e5508b0b72d9365a387" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>record</name></member>
+      <member refid="class_clap_detection_1a7b4f6e093066f87038a867b1bee8a869" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>recorded</name></member>
+      <member refid="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>result</name></member>
+      <member refid="class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>reverse_bits</name></member>
+      <member refid="class_clap_detection_1a800366c00fe876aa905a59a072436957" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>start</name></member>
+      <member refid="class_clap_detection_1a14d7a4329f238978b15abc40f6066340" prot="public" virt="non-virtual"><scope>ClapDetection</scope><name>stop</name></member>
+      <member refid="class_clap_detection_1a9714e7ad360d57c3a6a1ff3856ed09c1" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>stream</name></member>
+      <member refid="class_clap_detection_1ad92772919761201818620b973ba6313a" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>y_find</name></member>
+      <member refid="class_clap_detection_1ad09d0337bddaa18620767867de175de5" prot="private" virt="non-virtual"><scope>ClapDetection</scope><name>y_findPtr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

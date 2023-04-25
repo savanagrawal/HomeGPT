@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bcm2835__gpio__impl_8h_source" xml:lang="en-US">
+<title>bcm2835_gpio_impl.h</title>
+<indexterm><primary>src/peripherals/bcm2835/bcm2835_gpio_impl.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_peripherals_2bcm2835_2igpio_8h">igpio.h</link>&quot;</emphasis>
+5 
+6 <emphasis role="preprocessor">#include&#32;&quot;bcm2835.h&quot;</emphasis>
+7 
+8 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+9 
+10 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_bcm_gpio">BcmGpio</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio">mfrc522::IGpio</link>&#32;{
+11 
+12 <emphasis role="keyword">public</emphasis>:
+13 &#32;&#32;&#32;&#32;<link linkend="_class_bcm_gpio_1a6761a8868f49983abe1a9788c5aa958a">BcmGpio</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;pin)
+14 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;mPin(pin)
+15 &#32;&#32;&#32;&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_gpio_fsel(pin,&#32;BCM2835_GPIO_FSEL_OUTP);
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_gpio_write(pin,&#32;0x00);
+18 &#32;&#32;&#32;&#32;}
+19 
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_bcm_gpio_1a8e4bca04c8b1a4547b201d9db1ea5e79">setValue</link>(<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>&#32;value)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(value)&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33">mfrc522::IGpio::Value::l</link>:
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_gpio_write(mPin,&#32;0x00);
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91">mfrc522::IGpio::Value::h</link>:
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_gpio_write(mPin,&#32;0x01);
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+29 
+30 &#32;&#32;&#32;&#32;}
+31 
+32 &#32;&#32;&#32;&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>&#32;<link linkend="_class_bcm_gpio_1a48efab3311c06a6edfbdef5674463405">getValue</link>()&#32;final&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33">mfrc522::IGpio::Value::l</link>;
+34 &#32;&#32;&#32;&#32;}
+35 
+36 <emphasis role="keyword">private</emphasis>:
+37 
+38 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;mPin;
+39 
+40 };
+</programlisting></section>

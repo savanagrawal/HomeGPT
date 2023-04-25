@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__controller_thread_8h" xml:lang="en-US">
+<title>src/thread/ControllerThread.h File Reference</title>
+<indexterm><primary>src/thread/ControllerThread.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;CppThread.h&quot;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;map&gt;<?linebreak?></programlisting>Include dependency graph for ControllerThread.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_controller_thread_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_controller_thread_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_controller_thread">ControllerThread</link></para>
+
+<para><link linkend="_class_controller">Controller</link> Thread to manage all child threads. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale &amp; Savan Agrawal </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Create a controller thread for whole program. </para>
+</section>
+</section>

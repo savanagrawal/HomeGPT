@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__doors_thread_8h_source" xml:lang="en-US">
+<title>DoorsThread.h</title>
+<indexterm><primary>src/thread/doors/DoorsThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;DOORS_THREAD_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;DOORS_THREAD_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;../CppThread.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__servo_motor_8h">ServoMotor.h</link>&quot;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&quot;../../utils/Globals.h&quot;</emphasis>
+14 
+19 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_doors_thread">DoorsThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_cpp_thread">CppThread</link>&#32;{
+20 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_doors_thread_1a08b56bb7cccad9e7e3ec0ac6979015e6">DoorsThread</link>()&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+28 
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_doors_thread_1a5ea394ef57bc544806a7bfb2afb19003">stop</link>(){}
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+34 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;run();
+36 &#32;&#32;&#32;&#32;
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_globals">Globals</link>&#32;globals;
+39 };
+40 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="src_2utils_2_event_test_2main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes refid="_event_test_2_event_handler_8h" local="yes">EventHandler.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>EventHandler.h</label>
+        <link refid="_event_test_2_event_handler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/utils/EventTest/main.cpp</label>
+        <link refid="src_2utils_2_event_test_2main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>EventHandler.tpp</label>
+      </node>
+      <node id="6">
+        <label>any</label>
+      </node>
+      <node id="4">
+        <label>functional</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="3">
+        <label>unordered_map</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/EventTest/main.cpp" line="5" column="5" bodyfile="src/utils/EventTest/main.cpp" bodystart="5" bodyend="31"/>
+        <references refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" compoundref="_event_handler_8cpp" startline="90" endline="95">EventHandler::addListener</references>
+        <references refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62">DatasetCreatorComplete</references>
+        <references refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd">DatasetTrainerComplete</references>
+        <references refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" compoundref="_event_handler_8cpp" startline="97" endline="104">EventHandler::emit</references>
+        <references refid="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" compoundref="_event_handler_8cpp" startline="84" endline="87">EventHandler::getInstance</references>
+        <references refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6">test</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_event_test_2_event_handler_8h" kindref="compound">EventHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_event_handler" kindref="compound">EventHandler</ref>&amp;<sp/>eventHandler<sp/>=<sp/><ref refid="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" kindref="member">EventHandler::getInstance</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>and<sp/>emit<sp/>event<sp/>without<sp/>arguments<sp/>using<sp/>a<sp/>lambda<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" kindref="member">addListener</ref>(<ref refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6" kindref="member">Event::test</ref>,<sp/>[]<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Received<sp/>no<sp/>argument<sp/>event&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kindref="member">emit</ref>(<ref refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6" kindref="member">Event::test</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>and<sp/>emit<sp/>event<sp/>with<sp/>int<sp/>and<sp/>float<sp/>arguments<sp/>using<sp/>a<sp/>lambda<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" kindref="member">addListener</ref>(<ref refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62" kindref="member">Event::DatasetCreatorComplete</ref>,<sp/>make_function([](</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Received<sp/>event<sp/>with<sp/>args:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>a<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>b<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kindref="member">emit</ref>&lt;int,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&gt;(<ref refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62" kindref="member">Event::DatasetCreatorComplete</ref>,<sp/>42,<sp/>3.14f);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>and<sp/>emit<sp/>event<sp/>with<sp/>a<sp/>vector<sp/>of<sp/>integers<sp/>using<sp/>a<sp/>lambda<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" kindref="member">addListener</ref>(<ref refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd" kindref="member">Event::DatasetTrainerComplete</ref>,<sp/>make_function([](std::vector&lt;int&gt;<sp/>vec)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Received<sp/>event<sp/>with<sp/>vector:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>:<sp/>vec)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>i<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kindref="member">emit</ref>&lt;std::vector&lt;int&gt;&gt;(<ref refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd" kindref="member">Event::DatasetTrainerComplete</ref>,<sp/>std::vector&lt;int&gt;{1,<sp/>2,<sp/>3,<sp/>4,<sp/>5});</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/utils/EventTest/main.cpp"/>
+  </compounddef>
+</doxygen>

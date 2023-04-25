@@ -1,0 +1,62 @@
+.TH "IntruderThread" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntruderThread \- Intruder Thread to manage intruder detection functionality\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IntruderThread\&.h>\fP
+.PP
+Inherits \fBCppThread\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntruderThread\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "void \fBsetModule\fP (std::string module)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBjoin\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Intruder Thread to manage intruder detection functionality\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IntruderThread::IntruderThread (cv::VideoCapture camera)\fC [inline]\fP"
+Contructor for our intruder thread\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppThread::join ()\fC [inline]\fP, \fC [inherited]\fP"
+Waits for the thread to terminate\&. 
+.SS "void IntruderThread::setModule (std::string module)\fC [inline]\fP"
+
+.SS "void CppThread::start ()\fC [inline]\fP, \fC [inherited]\fP"
+Starts the thread\&. 
+.SS "void IntruderThread::stop ()\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

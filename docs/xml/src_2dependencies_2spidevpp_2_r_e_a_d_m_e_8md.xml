@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="src_2dependencies_2spidevpp_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>spidevpp<sp/>-<sp/>C++<sp/>wrapper<sp/>for<sp/>spidev</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">spidevpp<sp/>provides<sp/>a<sp/>simple<sp/>wrapper<sp/>to<sp/>easily<sp/>use<sp/>spidev<sp/>from<sp/>C++<sp/>applications.<sp/>Many<sp/>Raspberry<sp/>Pi<sp/>projects<sp/>use<sp/>the<sp/>[bcm2835<sp/>library](http://www.airspayce.com/mikem/bcm2835/)<sp/>to<sp/>access<sp/>the<sp/>SPI<sp/>interface.<sp/>The<sp/>downside<sp/>is<sp/>that<sp/>it<sp/>requires<sp/>root<sp/>privileges<sp/>to<sp/>access<sp/>/dev/mem<sp/>and<sp/>is<sp/>therefire<sp/>not<sp/>suitable<sp/>for<sp/>many<sp/>applications.<sp/>Using<sp/>spidev<sp/>to<sp/>access<sp/>the<sp/>SPI<sp/>interface<sp/>is<sp/>a<sp/>promising<sp/>alternative<sp/>that<sp/>allows<sp/>access<sp/>to<sp/>non-root<sp/>users<sp/>based<sp/>on<sp/>udev<sp/>rules.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>library<sp/>provides<sp/>the<sp/>spidev<sp/>interface<sp/>and<sp/>a<sp/>GPIO<sp/>interface<sp/>(without<sp/>any<sp/>dependencies<sp/>like<sp/>wiringPi<sp/>etc.)<sp/>to<sp/>drive<sp/>additional<sp/>CS<sp/>lines,<sp/>reset<sp/>lines<sp/>or<sp/>any<sp/>other<sp/>output<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>set<sp/>for<sp/>an<sp/>SPI<sp/>slave<sp/>device<sp/>to<sp/>work<sp/>properly.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>project<sp/>can<sp/>be<sp/>pulled<sp/>in<sp/>as<sp/>a<sp/>submodule<sp/>and<sp/>integrates<sp/>with<sp/>cmake<sp/>(Check<sp/>[mfrc522-cpp](https://github.com/twyleg/mfrc522-cpp)<sp/>for<sp/>an<sp/>example).<sp/>It<sp/>was<sp/>successfully<sp/>tested<sp/>on<sp/>a<sp/>Raspberry<sp/>Pi<sp/>3B+<sp/>with<sp/>Raspbian<sp/>GNU/Linux<sp/>10<sp/>(buster)<sp/>but<sp/>should<sp/>be<sp/>compatible<sp/>with<sp/>every<sp/>linux<sp/>that<sp/>provides<sp/>spidev<sp/>kernel<sp/>support.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Prerequisites</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>make<sp/>SPI<sp/>and<sp/>GPIO<sp/>accessible<sp/>to<sp/>non-root<sp/>users,<sp/>make<sp/>sure<sp/>that<sp/>you<sp/>have<sp/>udev<sp/>rules<sp/>like<sp/>the<sp/>following<sp/>in<sp/>place:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SUBSYSTEM==&quot;spidev&quot;,<sp/>GROUP=&quot;spi&quot;,<sp/>MODE=&quot;0660&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SUBSYSTEM==&quot;bcm2835-gpiomem&quot;,<sp/>GROUP=&quot;gpio&quot;,<sp/>MODE=&quot;0660&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">On<sp/>Raspbian/Raspberry<sp/>Pi<sp/>OS<sp/>this<sp/>should<sp/>already<sp/>be<sp/>included<sp/>in<sp/>**/dev/udev/rules.d/99-com.rules**<sp/>and<sp/>will<sp/>cause<sp/>the<sp/>spidev<sp/>and<sp/>GPIO<sp/>devices<sp/>to<sp/>be<sp/>assigned<sp/>to<sp/>the<sp/>spi/gpio<sp/>groups<sp/>with<sp/>read/write<sp/>access.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Make<sp/>sure<sp/>that<sp/>your<sp/>user<sp/>is<sp/>a<sp/>member<sp/>of<sp/>the<sp/>groups<sp/>**spi**<sp/>and<sp/>**gpio**<sp/>or<sp/>create<sp/>the<sp/>groups<sp/>and<sp/>add<sp/>the<sp/>user<sp/>witht<sp/>he<sp/>following<sp/>commands:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>groupadd<sp/>spi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>groupadd<sp/>gpio</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>adduser<sp/>opendashboard<sp/>spi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>adduser<sp/>opendashboard<sp/>gpio</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Building</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Clone<sp/>the<sp/>repo:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/twyleg/spidevpp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Create<sp/>a<sp/>build<sp/>directory:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cd<sp/>spidev</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mkdir<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Run<sp/>cmake:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cmake<sp/>..</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Build:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>make</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Example<sp/>application<sp/>for<sp/>smoke<sp/>testing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>project<sp/>provides<sp/>a<sp/>loopback<sp/>example<sp/>for<sp/>smoke<sp/>testing<sp/>that<sp/>expects<sp/>the<sp/>MISO<sp/>and<sp/>MOSI<sp/>pin<sp/>to<sp/>be<sp/>connected.<sp/>This<sp/>way<sp/>the<sp/>write<sp/>and<sp/>read<sp/>functionality<sp/>can<sp/>be<sp/>tested<sp/>without<sp/>an<sp/>additional<sp/>slave<sp/>device<sp/>by<sp/>simply<sp/>writting<sp/>some<sp/>data<sp/>and<sp/>receiving<sp/>the<sp/>data<sp/>at<sp/>the<sp/>same<sp/>time.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>cd<sp/>spidevpp/build/apps/loopback_example_app</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>./loopback_example_app<sp/>/dev/spidev0.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">This<sp/>should<sp/>create<sp/>the<sp/>following<sp/>result:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>read<sp/>check<sp/>PASSED</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>write<sp/>check<sp/>PASSED</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>readWrite<sp/>check<sp/>PASSED</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Troubleshooting</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Conflict<sp/>between<sp/>bcm2835<sp/>and<sp/>spidev<sp/>on<sp/>RPi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Be<sp/>aware<sp/>that<sp/>running<sp/>an<sp/>application<sp/>that<sp/>uses<sp/>the<sp/>bcm2835<sp/>spi<sp/>implementation<sp/>can<sp/>cause<sp/>spidev<sp/>to<sp/>malfunction.<sp/>The<sp/>reason<sp/>seem<sp/>to<sp/>be<sp/>that<sp/>bcm2835<sp/>keeps<sp/>ownership<sp/>of<sp/>the<sp/>CS<sp/>pins<sp/>which<sp/>makes<sp/>it<sp/>impossible<sp/>for<sp/>the<sp/>spidev<sp/>driver<sp/>to<sp/>drive<sp/>the<sp/>CS<sp/>lines<sp/>and<sp/>enable<sp/>the<sp/>slave<sp/>devices.<sp/>A<sp/>quick<sp/>and<sp/>dirty<sp/>fix<sp/>is<sp/>to<sp/>restart<sp/>the<sp/>RPi<sp/>or<sp/>to<sp/>simply<sp/>reload<sp/>the<sp/>following<sp/>kernel<sp/>modules:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>rmmod<sp/>spi_bcm2835</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>modprobe<sp/>spi_bcm2835</highlight></codeline>
+    </programlisting>
+    <location file="src/dependencies/spidevpp/README.md"/>
+  </compounddef>
+</doxygen>

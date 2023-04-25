@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_intruder_thread" kind="class" language="C++" prot="public">
+    <compoundname>IntruderThread</compoundname>
+    <basecompoundref refid="class_cpp_thread" prot="public" virt="non-virtual">CppThread</basecompoundref>
+    <includes refid="_intruder_thread_8h" local="no">IntruderThread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_intruder_thread_1abe4ebd54688af0b2122f52d3750227b2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_globals" kindref="compound">Globals</ref></type>
+        <definition>Globals IntruderThread::globals</definition>
+        <argsstring></argsstring>
+        <name>globals</name>
+        <qualifiedname>IntruderThread::globals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="57" column="17" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_thread_1a7382debe69565dea29e3bd1090cef517" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture IntruderThread::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <qualifiedname>IntruderThread::camera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="59" column="26" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_thread_1a7176a96009645a249de5f309382ff0bd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_intruder_detection" kindref="compound">IntruderDetection</ref></type>
+        <definition>IntruderDetection IntruderThread::intruderDetection</definition>
+        <argsstring></argsstring>
+        <name>intruderDetection</name>
+        <qualifiedname>IntruderThread::intruderDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="61" column="27" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_thread_1ab7f73a4a83066e719b91cf0fe4ea3a85" prot="private" static="no" mutable="no">
+        <type><ref refid="class_intruder_dataset_creator" kindref="compound">IntruderDatasetCreator</ref></type>
+        <definition>IntruderDatasetCreator IntruderThread::datasetCreator</definition>
+        <argsstring></argsstring>
+        <name>datasetCreator</name>
+        <qualifiedname>IntruderThread::datasetCreator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="62" column="32" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_thread_1a017765a14c49ebb7a3709453ad737be1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_intruder_dataset_trainer" kindref="compound">IntruderDatasetTrainer</ref></type>
+        <definition>IntruderDatasetTrainer IntruderThread::datasetTrainer</definition>
+        <argsstring></argsstring>
+        <name>datasetTrainer</name>
+        <qualifiedname>IntruderThread::datasetTrainer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="63" column="32" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_thread_1a6ef383b9e4d403db98b1b47002bacdd1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderThread::module</definition>
+        <argsstring></argsstring>
+        <name>module</name>
+        <qualifiedname>IntruderThread::module</qualifiedname>
+        <initializer>= &quot;create-dataset&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="65" column="9" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_thread_1aba91f64ea333b14ff62a6d528d719523" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, int &gt;</type>
+        <definition>std::map&lt;std::string, int&gt; IntruderThread::modules</definition>
+        <argsstring></argsstring>
+        <name>modules</name>
+        <qualifiedname>IntruderThread::modules</qualifiedname>
+        <initializer>= {
+            {&quot;create-dataset&quot;, 1},
+            {&quot;train-model&quot;, 2},
+            {&quot;detect-intruder&quot;, 3}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="67" column="18" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_intruder_thread_1a25f3a0973f527ca005b0434bce782da0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntruderThread::IntruderThread</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>IntruderThread</name>
+        <qualifiedname>IntruderThread::IntruderThread</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor for our intruder thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="31" column="9" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_thread_1a12d01e47a01c1ca8975c8cb1efb7c135" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderThread::setModule</definition>
+        <argsstring>(std::string module)</argsstring>
+        <name>setModule</name>
+        <qualifiedname>IntruderThread::setModule</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="35" column="14" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="35" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderThread::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>IntruderThread::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="44" column="14" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="44" bodyend="50"/>
+        <references refid="class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900" compoundref="_dataset_creator_8h" startline="74" endline="79">IntruderDatasetCreator::stop</references>
+        <references refid="class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529" compoundref="_intruder_detection_8h" startline="78" endline="83">IntruderDetection::stop</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_intruder_thread_1a8d9f8a138310a20a8539f78c8ebc8da8" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IntruderThread::run</definition>
+        <argsstring>(void)</argsstring>
+        <name>run</name>
+        <qualifiedname>IntruderThread::run</qualifiedname>
+        <reimplements refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manage the intruder detection thread runnable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-detection/IntruderThread.h" line="54" column="14" bodyfile="src/thread/intruder-detection/IntruderThread.cpp" bodystart="29" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Intruder Thread to manage intruder detection functionality. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>IntruderThread</label>
+        <link refid="class_intruder_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>IntruderThread</label>
+        <link refid="class_intruder_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/thread/intruder-detection/IntruderThread.h" line="26" column="1" bodyfile="src/thread/intruder-detection/IntruderThread.h" bodystart="26" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_intruder_thread_1a7382debe69565dea29e3bd1090cef517" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>camera</name></member>
+      <member refid="class_intruder_thread_1ab7f73a4a83066e719b91cf0fe4ea3a85" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>datasetCreator</name></member>
+      <member refid="class_intruder_thread_1a017765a14c49ebb7a3709453ad737be1" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>datasetTrainer</name></member>
+      <member refid="class_intruder_thread_1abe4ebd54688af0b2122f52d3750227b2" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>globals</name></member>
+      <member refid="class_intruder_thread_1a7176a96009645a249de5f309382ff0bd" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>intruderDetection</name></member>
+      <member refid="class_intruder_thread_1a25f3a0973f527ca005b0434bce782da0" prot="public" virt="non-virtual"><scope>IntruderThread</scope><name>IntruderThread</name></member>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>IntruderThread</scope><name>join</name></member>
+      <member refid="class_intruder_thread_1a6ef383b9e4d403db98b1b47002bacdd1" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>module</name></member>
+      <member refid="class_intruder_thread_1aba91f64ea333b14ff62a6d528d719523" prot="private" virt="non-virtual"><scope>IntruderThread</scope><name>modules</name></member>
+      <member refid="class_intruder_thread_1a8d9f8a138310a20a8539f78c8ebc8da8" prot="private" virt="virtual"><scope>IntruderThread</scope><name>run</name></member>
+      <member refid="class_intruder_thread_1a12d01e47a01c1ca8975c8cb1efb7c135" prot="public" virt="non-virtual"><scope>IntruderThread</scope><name>setModule</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>IntruderThread</scope><name>start</name></member>
+      <member refid="class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d" prot="public" virt="non-virtual"><scope>IntruderThread</scope><name>stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

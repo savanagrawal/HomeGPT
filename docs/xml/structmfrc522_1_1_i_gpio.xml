@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structmfrc522_1_1_i_gpio" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>mfrc522::IGpio</compoundname>
+    <derivedcompoundref refid="class_bcm_gpio" prot="public" virt="non-virtual">BcmGpio</derivedcompoundref>
+    <derivedcompoundref refid="class_sys_gpio" prot="public" virt="non-virtual">SysGpio</derivedcompoundref>
+    <includes refid="dependencies_2mfrc522_2igpio_8h" local="no">igpio.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Value</name>
+        <qualifiedname>mfrc522::IGpio::Value</qualifiedname>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" prot="public">
+          <name>low</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" prot="public">
+          <name>high</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" prot="public">
+          <name>l</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" prot="public">
+          <name>h</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/igpio.h" line="10" column="1" bodyfile="src/dependencies/mfrc522/igpio.h" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Value</name>
+        <qualifiedname>mfrc522::IGpio::Value</qualifiedname>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" prot="public">
+          <name>low</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" prot="public">
+          <name>high</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" prot="public">
+          <name>l</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" prot="public">
+          <name>h</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/igpio.h" line="11" column="1" bodyfile="src/peripherals/bcm2835/igpio.h" bodystart="11" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::IGpio::setValue</definition>
+        <argsstring>(Value)=0</argsstring>
+        <name>setValue</name>
+        <qualifiedname>mfrc522::IGpio::setValue</qualifiedname>
+        <reimplementedby refid="class_bcm_gpio_1a8e4bca04c8b1a4547b201d9db1ea5e79">setValue</reimplementedby>
+        <reimplementedby refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9">setValue</reimplementedby>
+        <param>
+          <type><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/igpio.h" line="15" column="14"/>
+        <referencedby refid="classmfrc522_1_1_m_f_r_c522_1a9c32316768c27c643781df0d0a0bf248" compoundref="mfrc522_8cc" startline="24" endline="30">mfrc522::MFRC522::MFRC522</referencedby>
+        <referencedby refid="classmfrc522_1_1_m_f_r_c522_1affff6fd4010044cc4337803de579b4f0" compoundref="mfrc522_8cc" startline="181" endline="199">mfrc522::MFRC522::PCD_Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref></type>
+        <definition>virtual Value mfrc522::IGpio::getValue</definition>
+        <argsstring>()=0</argsstring>
+        <name>getValue</name>
+        <qualifiedname>mfrc522::IGpio::getValue</qualifiedname>
+        <reimplementedby refid="class_bcm_gpio_1a48efab3311c06a6edfbdef5674463405">getValue</reimplementedby>
+        <reimplementedby refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b">getValue</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/igpio.h" line="16" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::IGpio::setValue</definition>
+        <argsstring>(Value)=0</argsstring>
+        <name>setValue</name>
+        <qualifiedname>mfrc522::IGpio::setValue</qualifiedname>
+        <reimplementedby refid="class_bcm_gpio_1a8e4bca04c8b1a4547b201d9db1ea5e79">setValue</reimplementedby>
+        <reimplementedby refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9">setValue</reimplementedby>
+        <param>
+          <type><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/igpio.h" line="16" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref></type>
+        <definition>virtual Value mfrc522::IGpio::getValue</definition>
+        <argsstring>()=0</argsstring>
+        <name>getValue</name>
+        <qualifiedname>mfrc522::IGpio::getValue</qualifiedname>
+        <reimplementedby refid="class_bcm_gpio_1a48efab3311c06a6edfbdef5674463405">getValue</reimplementedby>
+        <reimplementedby refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b">getValue</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/igpio.h" line="17" column="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BcmGpio</label>
+        <link refid="class_bcm_gpio"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SysGpio</label>
+        <link refid="class_sys_gpio"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mfrc522::IGpio</label>
+        <link refid="structmfrc522_1_1_i_gpio"/>
+      </node>
+    </inheritancegraph>
+    <location file="src/dependencies/mfrc522/igpio.h" line="8" column="1" bodyfile="src/dependencies/mfrc522/igpio.h" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2" prot="public" virt="pure-virtual"><scope>mfrc522::IGpio</scope><name>getValue</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2" prot="public" virt="pure-virtual"><scope>mfrc522::IGpio</scope><name>getValue</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188" prot="public" virt="pure-virtual"><scope>mfrc522::IGpio</scope><name>setValue</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188" prot="public" virt="pure-virtual"><scope>mfrc522::IGpio</scope><name>setValue</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" virt="non-virtual"><scope>mfrc522::IGpio</scope><name>Value</name></member>
+      <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" prot="public" virt="non-virtual"><scope>mfrc522::IGpio</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

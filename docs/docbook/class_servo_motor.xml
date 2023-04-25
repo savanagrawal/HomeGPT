@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_servo_motor" xml:lang="en-US">
+<title>ServoMotor Class Reference</title>
+<indexterm><primary>ServoMotor</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ServoMotor.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_servo_motor_1a72613ce89f6ab8b62c45ce4512d0488b">ServoMotor</link> (int pin)</para>
+</listitem>
+            <listitem><para><link linkend="_class_servo_motor_1a13ae02109c52def30f2ab15a8114436c">~ServoMotor</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d">write</link> (int angle)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_servo_motor_1a72613ce89f6ab8b62c45ce4512d0488b"/><section>
+    <title>ServoMotor()</title>
+<indexterm><primary>ServoMotor</primary><secondary>ServoMotor</secondary></indexterm>
+<indexterm><primary>ServoMotor</primary><secondary>ServoMotor</secondary></indexterm>
+<para><computeroutput>ServoMotor::ServoMotor (int pin)</computeroutput></para></section>
+<anchor xml:id="_class_servo_motor_1a13ae02109c52def30f2ab15a8114436c"/><section>
+    <title>~ServoMotor()</title>
+<indexterm><primary>~ServoMotor</primary><secondary>ServoMotor</secondary></indexterm>
+<indexterm><primary>ServoMotor</primary><secondary>~ServoMotor</secondary></indexterm>
+<para><computeroutput>ServoMotor::~ServoMotor ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>ServoMotor</secondary></indexterm>
+<indexterm><primary>ServoMotor</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>void ServoMotor::write (int angle)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/peripherals/<link linkend="__servo_motor_8h">ServoMotor.h</link>src/peripherals/<link linkend="__servo_motor_8cpp">ServoMotor.cpp</link></section>
+</section>

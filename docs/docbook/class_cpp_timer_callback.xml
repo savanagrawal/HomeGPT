@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_cpp_timer_callback" xml:lang="en-US">
+<title>CppTimerCallback Class Reference</title>
+<indexterm><primary>CppTimerCallback</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CppTimerCallback.h&gt;</computeroutput>
+</para>
+Inheritance diagram for CppTimerCallback:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_timer_callback__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for CppTimerCallback:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_timer_callback__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_cpp_timer_callback_1_1_runnable">Runnable</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_cpp_timer_callback_1ae6e815f1c3b65ea4f10fe0332e13acb9">registerEventRunnable</link> (<link linkend="_class_cpp_timer_callback_1_1_runnable">Runnable</link> &amp;h)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_timer_callback_1a29d8d5a426a3d15bca8a42c2c897f50f">unregisterEventRunnable</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_timer_callback_1af6b39f5eb8e98bfc1b301ac3f25276e9">timerEvent</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cpp_timer_callback_1ae6e815f1c3b65ea4f10fe0332e13acb9"/><section>
+    <title>registerEventRunnable()</title>
+<indexterm><primary>registerEventRunnable</primary><secondary>CppTimerCallback</secondary></indexterm>
+<indexterm><primary>CppTimerCallback</primary><secondary>registerEventRunnable</secondary></indexterm>
+<para><computeroutput>void CppTimerCallback::registerEventRunnable (<link linkend="_class_cpp_timer_callback_1_1_runnable">Runnable</link> &amp; h)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_cpp_timer_callback_1af6b39f5eb8e98bfc1b301ac3f25276e9"/><section>
+    <title>timerEvent()</title>
+<indexterm><primary>timerEvent</primary><secondary>CppTimerCallback</secondary></indexterm>
+<indexterm><primary>CppTimerCallback</primary><secondary>timerEvent</secondary></indexterm>
+<para><computeroutput>void CppTimerCallback::timerEvent ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_timer_callback_af6b39f5eb8e98bfc1b301ac3f25276e9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_cpp_timer_callback_1a29d8d5a426a3d15bca8a42c2c897f50f"/><section>
+    <title>unregisterEventRunnable()</title>
+<indexterm><primary>unregisterEventRunnable</primary><secondary>CppTimerCallback</secondary></indexterm>
+<indexterm><primary>CppTimerCallback</primary><secondary>unregisterEventRunnable</secondary></indexterm>
+<para><computeroutput>void CppTimerCallback::unregisterEventRunnable ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/utils/<link linkend="__cpp_timer_callback_8h">CppTimerCallback.h</link></section>
+</section>

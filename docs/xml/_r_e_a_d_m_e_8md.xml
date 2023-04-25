@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">Main<sp/>Page<sp/>{#mainpage}</highlight></codeline>
+<codeline><highlight class="normal">=========</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/HomeGPT_icon.png&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;200&quot;<sp/>height=&quot;200&quot;<sp/>/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;img<sp/>style=&quot;margin-right:0.15rem;&quot;<sp/>src=&quot;https://img.shields.io/badge/LICENSE-MIT-yellow&quot;/&gt;<sp/>&lt;img<sp/>src=&quot;https://img.shields.io/badge/Source-open-green&quot;/&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;b&gt;&lt;p<sp/>style=&quot;text-align:<sp/>center;&quot;&gt;<sp/>HomeGPT:<sp/>Transforming<sp/>Homes<sp/>with<sp/>a<sp/>clap,<sp/>smile<sp/>and<sp/>a<sp/>wave!!<sp/>&lt;/p&gt;&lt;/b&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>repository<sp/>will<sp/>follow<sp/>the<sp/>development<sp/>of<sp/>an<sp/>Home<sp/>Assistant<sp/>project<sp/>HomeGPT<sp/>based<sp/>on<sp/>real-time<sp/>embedded<sp/>system.<sp/>This<sp/>is<sp/>a<sp/>post-graduate<sp/>project<sp/>for<sp/>the<sp/>[University<sp/>of<sp/>Glasgow](https://gla.ac.uk).</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Linktr.ee](https://mib3avenger.com/raspberry-pi/images/icons8-link-48.png)](https://linktr.ee/homegpt)</highlight></codeline>
+<codeline><highlight class="normal">[![Instagram](https://mib3avenger.com/raspberry-pi/images/icons8-instagram-48.png)](https://www.instagram.com/homegpt/)</highlight></codeline>
+<codeline><highlight class="normal">[![Twitter](https://mib3avenger.com/raspberry-pi/images/icons8-twitter-48.png)](http://twitter.com/HomeGPT)</highlight></codeline>
+<codeline><highlight class="normal">[![Youtube](https://mib3avenger.com/raspberry-pi/images/icons8-youtube-48.png)](https://www.youtube.com/@HomeGPT)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contents</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Commercial](#0)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[About](#1)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Getting<sp/>Started](#2)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Docs](https://savanagrawal.github.io/HomeGPT/html/index.html)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Libraries/Dependencies/Softwarers](#3)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Hardware<sp/>Description](#4)<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Data<sp/>Sheets](#5)<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Team<sp/>Members](#6)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[License](#7)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Code<sp/>of<sp/>Conduct](#8)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Contributing](#9)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;0&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Commercial</highlight></codeline>
+<codeline><highlight class="normal">Watch<sp/>our<sp/>demo<sp/>on<sp/>Youtube.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>href=&quot;https://youtu.be/LWb74aEaucY&quot;<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/thumbnail.jpg&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;600&quot;<sp/><sp/>/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;1&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>About</highlight></codeline>
+<codeline><highlight class="normal">HomeGPT<sp/>revolutionizes<sp/>home<sp/>automation<sp/>with<sp/>advanced<sp/>features<sp/>such<sp/>as<sp/>facial<sp/>recognition<sp/>for<sp/>secure<sp/>access,<sp/>mood-responsive<sp/>lighting,<sp/>RFID-enabled<sp/>garage<sp/>entry,<sp/>and<sp/>clap-activated<sp/>door<sp/>closures.<sp/>This<sp/>system<sp/>elevates<sp/>the<sp/>living<sp/>experience<sp/>by<sp/>seamlessly<sp/>blending<sp/>security,<sp/>convenience,<sp/>and<sp/>ambiance-enhancing technology.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Key<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>1.<sp/><sp/>Facial<sp/>Recognition<sp/>based<sp/>Home<sp/>Entry</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>feature<sp/>ensures<sp/>**SAFETY**<sp/>of<sp/>your<sp/>home<sp/>by<sp/>recognizing<sp/>entrants<sp/>at<sp/>the<sp/>main<sp/>door.<sp/>A<sp/>person<sp/>can<sp/>enter<sp/>only<sp/>if<sp/>detected<sp/>an<sp/>ally<sp/>for<sp/>the<sp/>people<sp/>of<sp/>the<sp/>house.<sp/>**Intruders**<sp/>are<sp/>**Not<sp/>Allowed**<sp/>as<sp/>the<sp/>doors<sp/>won&apos;t<sp/>open<sp/>for<sp/>you!</highlight></codeline>
+<codeline><highlight class="normal">Real<sp/>Time<sp/>feed<sp/>of<sp/>camera<sp/>at<sp/>the<sp/>door<sp/>compares<sp/>an<sp/>entrant&apos;s<sp/>image<sp/>using<sp/>HOG<sp/>Classifier<sp/>to<sp/>generate<sp/>signal<sp/>for<sp/>welcoming<sp/>the<sp/>person<sp/>by<sp/>opening<sp/>the<sp/>door.</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>have<sp/>new<sp/>friend<sp/>coming<sp/>in,<sp/>No<sp/>problemo!<sp/>we<sp/>have<sp/>feature<sp/>to<sp/>train<sp/>the<sp/>model<sp/>and<sp/>add<sp/>new<sp/>allies<sp/>in<sp/>real<sp/>time<sp/>as<sp/>well!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;400&quot;<sp/>style=&quot;display:flex;margin:<sp/>auto;justify-content:<sp/>center;&quot;/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>2.<sp/>Mood<sp/>based<sp/>Lighting<sp/>Control</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>state<sp/>of<sp/>art<sp/>feature<sp/>detects<sp/>the<sp/>mood<sp/>of<sp/>a<sp/>person<sp/>in<sp/>room<sp/>and<sp/>**adjusts<sp/>the<sp/>lights**<sp/>accordingly.<sp/>Researchers<sp/>believe<sp/>that<sp/>lighting<sp/>levels<sp/>have<sp/>effect<sp/>on<sp/>the<sp/>intensity<sp/>of<sp/>emotions.<sp/>So<sp/>now<sp/>we<sp/>can<sp/>**lighten<sp/>up<sp/>the<sp/>moods**<sp/>and<sp/>make<sp/>the<sp/>feel<sp/>joyous<sp/>in<sp/>the<sp/>house<sp/>at<sp/>all<sp/>times!</highlight></codeline>
+<codeline><highlight class="normal">Camera<sp/>feed<sp/>detects<sp/>facial<sp/>gestures<sp/>in<sp/>real<sp/>time<sp/>and<sp/>uses<sp/>SVM<sp/>Model<sp/>that<sp/>has<sp/>been<sp/>trained<sp/>on<sp/>**Kaggle**<sp/>https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset<sp/>dataset<sp/>suing<sp/>OpenCV<sp/>and<sp/>HOG<sp/>to<sp/>compare<sp/>your<sp/>mood<sp/>and<sp/>distinguish<sp/>it<sp/>between<sp/>7<sp/>different<sp/>moods<sp/>Angry,<sp/>Disgust,<sp/>Fear,<sp/>Happy,<sp/>Neutral,<sp/>Sad,<sp/>Surprise<sp/>in<sp/>real<sp/>time.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/clap-detection.gif&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;500&quot;<sp/>style=&quot;display:flex;margin:<sp/>auto;justify-content:<sp/>center;&quot;<sp/>/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Key<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>1.<sp/><sp/>Facial<sp/>Recognition<sp/>based<sp/>Home<sp/>Entry</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>feature<sp/>ensures<sp/>**SAFETY**<sp/>of<sp/>your<sp/>home<sp/>by<sp/>recognizing<sp/>entrants<sp/>at<sp/>the<sp/>main<sp/>door.<sp/>A<sp/>person<sp/>can<sp/>enter<sp/>only<sp/>if<sp/>detected<sp/>an<sp/>ally<sp/>for<sp/>the<sp/>people<sp/>of<sp/>the<sp/>house.<sp/>**Intruders**<sp/>are<sp/>**Not<sp/>Allowed**<sp/>as<sp/>the<sp/>doors<sp/>won&apos;t<sp/>open<sp/>for<sp/>you!</highlight></codeline>
+<codeline><highlight class="normal">Real<sp/>Time<sp/>feed<sp/>of<sp/>camera<sp/>at<sp/>the<sp/>door<sp/>compares<sp/>an<sp/>entrant&apos;s<sp/>image<sp/>using<sp/>HOG<sp/>Classifier<sp/>to<sp/>generate<sp/>signal<sp/>for<sp/>welcoming<sp/>the<sp/>person<sp/>by<sp/>opening<sp/>the<sp/>door.</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>have<sp/>new<sp/>friend<sp/>coming<sp/>in,<sp/>No<sp/>problemo!<sp/>we<sp/>have<sp/>feature<sp/>to<sp/>train<sp/>the<sp/>model<sp/>and<sp/>add<sp/>new<sp/>allies<sp/>in<sp/>real<sp/>time<sp/>as<sp/>well!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/facial_recognition.jpg&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;400&quot;<sp/>style=&quot;display:flex;margin:<sp/>auto;justify-content:<sp/>center;&quot;/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>2.<sp/>Mood<sp/>based<sp/>Lighting<sp/>Control</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>state<sp/>of<sp/>art<sp/>feature<sp/>detects<sp/>the<sp/>mood<sp/>of<sp/>a<sp/>person<sp/>in<sp/>room<sp/>and<sp/>**adjusts<sp/>the<sp/>lights**<sp/>accordingly.<sp/>Researchers<sp/>believe<sp/>that<sp/>lighting<sp/>levels<sp/>have<sp/>effect<sp/>on<sp/>the<sp/>intensity<sp/>of<sp/>emotions.<sp/>So<sp/>now<sp/>we<sp/>can<sp/>**lighten<sp/>up<sp/>the<sp/>moods**<sp/>and<sp/>make<sp/>the<sp/>feel<sp/>joyous<sp/>in<sp/>the<sp/>house<sp/>at<sp/>all<sp/>times!</highlight></codeline>
+<codeline><highlight class="normal">Camera<sp/>feed<sp/>detects<sp/>facial<sp/>gestures<sp/>in<sp/>real<sp/>time<sp/>and<sp/>uses<sp/>SVM<sp/>Model<sp/>that<sp/>has<sp/>been<sp/>trained<sp/>on<sp/>**Kaggle**<sp/>https://www.kaggle.com/datasets/jonathanoheix/face-expression-recognition-dataset<sp/>dataset<sp/>suing<sp/>OpenCV<sp/>and<sp/>HOG<sp/>to<sp/>compare<sp/>your<sp/>mood<sp/>and<sp/>distinguish<sp/>it<sp/>between<sp/>7<sp/>different<sp/>moods<sp/>Angry,<sp/>Disgust,<sp/>Fear,<sp/>Happy,<sp/>Neutral,<sp/>Sad,<sp/>Surprise<sp/>in<sp/>real<sp/>time.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>3.<sp/>Key<sp/>less<sp/>Garage<sp/>Entry<sp/>for<sp/>Vehicles</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>feature<sp/>lets<sp/>you<sp/>sit<sp/>comfortably<sp/>in<sp/>the<sp/>car<sp/>when<sp/>you<sp/>reach<sp/>your<sp/>house<sp/>and<sp/>lets<sp/>you<sp/>park<sp/>the<sp/>car<sp/>in<sp/>garage<sp/>comfortably<sp/>by<sp/>subtarcting<sp/>the<sp/>hustle<sp/>of<sp/>getting<sp/>out<sp/>of<sp/>the<sp/>car<sp/>and<sp/>**open<sp/>the<sp/>garage<sp/>door*.<sp/>***RFID**<sp/>Sensor<sp/>detects<sp/>the<sp/>unique<sp/>identity<sp/>of<sp/>your<sp/>car<sp/>at<sp/>arrival<sp/>and<sp/>opens<sp/>the<sp/>garage<sp/>door<sp/>for<sp/>your<sp/>ease<sp/>of<sp/>parking!<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/RFID_RC522_and_Raspberry_pi_bb.png&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;500&quot;<sp/>style=&quot;display:flex;margin:<sp/>auto;justify-content:<sp/>center;&quot;<sp/>/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>4.<sp/>Clap<sp/>Detection<sp/>for<sp/>Door<sp/>Shut<sp/>using<sp/>FFT<sp/>(Fast<sp/>Fourier<sp/>Transform)<sp/>&amp;<sp/>DFT<sp/>(Discrete<sp/>Fourier<sp/>Transform)<sp/></highlight></codeline>
+<codeline><highlight class="normal">One<sp/>of<sp/>the<sp/>stand-out<sp/>feature<sp/>of<sp/>this<sp/>project<sp/>is<sp/>detecting<sp/>your<sp/>**Clap**<sp/>to<sp/>**shut<sp/>that<sp/>door<sp/>behind<sp/>you**.<sp/>So<sp/>you<sp/>can<sp/>move<sp/>freely<sp/>in<sp/>your<sp/>house<sp/>and<sp/>ensure<sp/>privacy.<sp/>It&apos;s<sp/>annoying<sp/>if<sp/>you<sp/>forget<sp/>to<sp/>close<sp/>a<sp/>door<sp/>behind<sp/>you<sp/>cause<sp/>you<sp/>were<sp/>busy<sp/>imagining<sp/>your<sp/>fantasy!<sp/>And<sp/>someone<sp/>shouts<sp/>from<sp/>behind<sp/>just<sp/>to<sp/>get<sp/>you<sp/>back<sp/>into<sp/>this<sp/>cruel<sp/>world<sp/>holding<sp/>accountable<sp/>for<sp/>manners!</highlight></codeline>
+<codeline><highlight class="normal">Real<sp/>Time<sp/>feed<sp/>of<sp/>sound<sp/>is<sp/>convoluted<sp/>on<sp/>sample<sp/>sets<sp/>and<sp/>peaks<sp/>are<sp/>evaluated<sp/>to<sp/>judge<sp/>the<sp/>clap<sp/>intensity.<sp/>In<sp/>case<sp/>of<sp/>match,<sp/>the<sp/>signal<sp/>is<sp/>sent<sp/>to<sp/>actuator<sp/>to shut the door.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/mood-detection.gif&quot;<sp/>alt=&quot;HomeGPT&quot;<sp/>width=&quot;500&quot;<sp/>style=&quot;display:flex;margin:<sp/>auto;justify-content:<sp/>center;&quot;<sp/>/&gt;&lt;/a&gt;&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;2&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>Clone<sp/>the<sp/>repository.</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/savanagrawal/HomeGPT</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>submodule<sp/>init</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>submodule<sp/>update</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Create<sp/>build<sp/>directory.</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">mkdir<sp/>build<sp/>&amp;&amp;<sp/>cd<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Build<sp/>the<sp/>binaries.</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">cmake<sp/>../</highlight></codeline>
+<codeline><highlight class="normal">make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Run<sp/>Program.</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>./HomeGPT<sp/>--module</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>the<sp/>modules<sp/>are<sp/>listed<sp/>as:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">&quot;--create-intruder-dataset&quot;<sp/>-&gt;<sp/>Create<sp/>Intruder<sp/>dataset</highlight></codeline>
+<codeline><highlight class="normal">&quot;--cid&quot;<sp/>-&gt;<sp/>Create<sp/>Intruder<sp/>dataset</highlight></codeline>
+<codeline><highlight class="normal">&quot;--train-intruder-model&quot;<sp/>-&gt;<sp/>Train<sp/>Intruder<sp/>model</highlight></codeline>
+<codeline><highlight class="normal">&quot;--tim&quot;<sp/>-&gt;<sp/>Train<sp/>Intruder<sp/>model</highlight></codeline>
+<codeline><highlight class="normal">&quot;--detect-intruder&quot;<sp/>-&gt;<sp/>Detect<sp/>Intruder</highlight></codeline>
+<codeline><highlight class="normal">&quot;--di&quot;<sp/>-&gt;<sp/>Detect<sp/>Intruder</highlight></codeline>
+<codeline><highlight class="normal">&quot;--detect-clap&quot;<sp/>-&gt;<sp/>Detect<sp/>Claps</highlight></codeline>
+<codeline><highlight class="normal">&quot;--dc&quot;<sp/>-&gt;<sp/>Detect<sp/>Claps</highlight></codeline>
+<codeline><highlight class="normal">&quot;--rfid&quot;<sp/>-&gt;<sp/>Read<sp/>RFID.</highlight></codeline>
+<codeline><highlight class="normal">&quot;--imd&quot;<sp/>-&gt;<sp/>Start<sp/>Intruder<sp/>and<sp/>Mood<sp/>detection<sp/>together.</highlight></codeline>
+<codeline><highlight class="normal">&quot;--d&quot;<sp/>-&gt;<sp/>All<sp/>modules<sp/>together.</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;3&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Libraries<sp/>/<sp/>Dependencies<sp/>/<sp/>Softwares</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Raspbian<sp/>(Debian<sp/>10<sp/>:<sp/>Buster/Legacy)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>C++</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>OpenCV</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>CMake</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Boost</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>PortAudio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>twyleg/spidevpp<sp/>-<sp/>A<sp/>ported<sp/>version<sp/>to<sp/>work<sp/>with<sp/>C++11.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>twyleg/mfrc522-cpp</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;4&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Hardware<sp/>Description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Raspberry<sp/>pi<sp/>3:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/raspberypi.jpg&quot;<sp/>alt=&quot;Rpi&quot;<sp/>width=&quot;300&quot;<sp/>/&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Raspberry<sp/>Pi<sp/>3<sp/>is<sp/>a<sp/>highly<sp/>versatile<sp/>and<sp/>affordable<sp/>single-board<sp/>computer<sp/>that<sp/>offers<sp/>impressive<sp/>computing<sp/>power<sp/>in<sp/>a<sp/>compact<sp/>form<sp/>factor.<sp/>Powered<sp/>by<sp/>a<sp/>quad-core<sp/>ARM<sp/>Cortex-A53<sp/>processor<sp/>running<sp/>at<sp/>1.2<sp/>GHz,<sp/>and<sp/>equipped<sp/>with<sp/>1<sp/>GB<sp/>of<sp/>RAM,<sp/>it<sp/>delivers<sp/>smooth<sp/>performance<sp/>for<sp/>a<sp/>wide<sp/>range<sp/>of<sp/>tasks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">With<sp/>its<sp/>various<sp/>ports,<sp/>including<sp/>USB,<sp/>HDMI,<sp/>Ethernet,<sp/>and<sp/>GPIO,<sp/>the<sp/>Raspberry<sp/>Pi<sp/>3<sp/>offers<sp/>extensive<sp/>connectivity<sp/>options<sp/>for<sp/>peripherals<sp/>and<sp/>accessories,<sp/>allowing<sp/>for<sp/>versatile<sp/>integration<sp/>into<sp/>different<sp/>projects.<sp/>This<sp/>makes<sp/>it<sp/>popular<sp/>among<sp/>hobbyists,<sp/>educators,<sp/>and<sp/>DIY<sp/>enthusiasts<sp/>for<sp/>a<sp/>wide<sp/>range<sp/>of<sp/>applications,<sp/>from<sp/>media<sp/>centers<sp/>and<sp/>retro<sp/>gaming<sp/>consoles<sp/>to<sp/>robotics<sp/>and<sp/>smart<sp/>home<sp/>systems.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Overall,<sp/>the<sp/>Raspberry<sp/>Pi<sp/>3<sp/>is<sp/>a<sp/>powerful<sp/>and<sp/>flexible<sp/>single-board<sp/>computer<sp/>that<sp/>offers<sp/>a<sp/>wide<sp/>range<sp/>of<sp/>possibilities<sp/>for<sp/>hobbyists,<sp/>students,<sp/>educators,<sp/>and<sp/>DIY<sp/>enthusiasts<sp/>alike.<sp/>Its<sp/>compact<sp/>size,<sp/>affordable<sp/>price,<sp/>and<sp/>impressive<sp/>performance<sp/>make<sp/>it<sp/>a<sp/>popular<sp/>choice<sp/>for<sp/>a<sp/>wide<sp/>range<sp/>of<sp/>computing<sp/>projects<sp/>and<sp/>applications.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">**Raspberry<sp/>pi<sp/>Camera<sp/>Module:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/camra.jpg&quot;<sp/>alt=&quot;rpicam&quot;<sp/>width=&quot;200&quot;<sp/>/&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>camera<sp/>module<sp/>is<sp/>compact<sp/>and<sp/>lightweight,<sp/>making<sp/>it<sp/>easy<sp/>to<sp/>integrate<sp/>into<sp/>various<sp/>projects.<sp/>It<sp/>connects<sp/>to<sp/>the<sp/>Raspberry<sp/>Pi<sp/>via<sp/>a<sp/>ribbon<sp/>cable,<sp/>and<sp/>the<sp/>camera<sp/>is<sp/>controlled<sp/>through<sp/>software<sp/>using<sp/>the<sp/>Raspberry<sp/>Pi&apos;s<sp/>GPIO<sp/>pins.<sp/>The<sp/>module<sp/>features<sp/>a<sp/>fixed-focus<sp/>lens<sp/>and<sp/>is<sp/>capable<sp/>of<sp/>capturing<sp/>still<sp/>images<sp/>with<sp/>a<sp/>resolution<sp/>of<sp/>up<sp/>to<sp/>8<sp/>megapixels,<sp/>as<sp/>well<sp/>as<sp/>high-definition<sp/>video<sp/>with<sp/>up<sp/>to<sp/>1080p<sp/>resolution.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Raspberry<sp/>Pi<sp/>Camera<sp/>Module<sp/>is<sp/>highly<sp/>versatile<sp/>and<sp/>can<sp/>be<sp/>used<sp/>for<sp/>a<sp/>wide<sp/>range<sp/>of<sp/>applications,<sp/>including<sp/>time-lapse<sp/>photography,<sp/>motion<sp/>detection,<sp/>facial<sp/>recognition,<sp/>object<sp/>tracking,<sp/>and<sp/>more.<sp/>It<sp/>can<sp/>be<sp/>used<sp/>in<sp/>combination<sp/>with<sp/>other<sp/>Raspberry<sp/>Pi<sp/>accessories<sp/>and<sp/>sensors<sp/>to<sp/>create<sp/>custom<sp/>camera<sp/>solutions<sp/>for<sp/>specific<sp/>projects<sp/>or<sp/>applications.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">**RC522<sp/>RFID<sp/>Module:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/F5MGYURIGGYFLK2.jpg&quot;<sp/>alt=&quot;rfid&quot;<sp/>width=&quot;350&quot;<sp/>/&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>RC522<sp/>RFID<sp/>sensor<sp/>is<sp/>a<sp/>small,<sp/>low-cost<sp/>module<sp/>that<sp/>allows<sp/>for<sp/>easy<sp/>integration<sp/>of<sp/>RFID<sp/>(Radio-Frequency<sp/>Identification)<sp/>technology<sp/>with<sp/>microcontroller<sp/>projects.<sp/>It<sp/>operates<sp/>at<sp/>13.56<sp/>MHz<sp/>frequency<sp/>and<sp/>uses<sp/>SPI<sp/>(Serial<sp/>Peripheral<sp/>Interface)<sp/>for<sp/>communication,<sp/>making<sp/>it<sp/>compatible<sp/>with<sp/>popular<sp/>microcontrollers<sp/>like<sp/>Arduino<sp/>and<sp/>Raspberry<sp/>Pi.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>RC522<sp/>sensor<sp/>is<sp/>capable<sp/>of<sp/>reading<sp/>RFID<sp/>tags<sp/>and<sp/>cards,<sp/>and<sp/>it<sp/>can<sp/>communicate<sp/>with<sp/>various<sp/>types<sp/>of<sp/>RFID<sp/>cards,<sp/>including<sp/>MIFARE<sp/>cards,<sp/>which<sp/>are<sp/>widely<sp/>used<sp/>in<sp/>access<sp/>control,<sp/>authentication,<sp/>and<sp/>identification<sp/>applications.<sp/>It<sp/>offers<sp/>a<sp/>reading<sp/>range<sp/>of<sp/>a<sp/>few<sp/>centimeters,<sp/>making<sp/>it<sp/>suitable<sp/>for<sp/>short-range<sp/>applications.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">**Tower<sp/>Pro<sp/>Servo<sp/>Motor<sp/>-<sp/>SG90<sp/>Digital:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>target=&quot;_blank&quot;&gt;&lt;img<sp/>src=&quot;https://mib3avenger.com/raspberry-pi/images/servo.jpg&quot;<sp/>alt=&quot;servo&quot;<sp/>width=&quot;350&quot;<sp/>/&gt;&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>Tower<sp/>Pro<sp/>SG90<sp/>is<sp/>a<sp/>digital<sp/>servo<sp/>motor,<sp/>a<sp/>type<sp/>of<sp/>motor<sp/>that<sp/>is<sp/>widely<sp/>used<sp/>in<sp/>robotics,<sp/>RC<sp/>(remote<sp/>control)<sp/>vehicles,<sp/>and<sp/>other<sp/>applications<sp/>that<sp/>require<sp/>precise<sp/>and<sp/>controlled<sp/>angular<sp/>movements.<sp/>The<sp/>SG90<sp/>is<sp/>compact<sp/>and<sp/>lightweight,<sp/>making<sp/>it<sp/>suitable<sp/>for<sp/>small-scale<sp/>projects.<sp/>It<sp/>offers<sp/>a<sp/>torque<sp/>of<sp/>up<sp/>to<sp/>1.8<sp/>kg/cm,<sp/>a<sp/>rotation<sp/>range<sp/>of<sp/>180<sp/>degrees,<sp/>and<sp/>operates<sp/>on<sp/>a<sp/>voltage<sp/>range<sp/>of<sp/>4.8V<sp/>to<sp/>6V.<sp/>The<sp/>digital<sp/>technology<sp/>in<sp/>the<sp/>SG90<sp/>provides<sp/>improved<sp/>accuracy,<sp/>responsiveness,<sp/>and<sp/>reliability<sp/>compared<sp/>to<sp/>analog<sp/>servo<sp/>motors.<sp/>It<sp/>is<sp/>compatible<sp/>with<sp/>popular<sp/>microcontrollers<sp/>like<sp/>Arduino<sp/>and<sp/>Raspberry<sp/>Pi,<sp/>and<sp/>can<sp/>be<sp/>easily<sp/>controlled<sp/>using<sp/>PWM<sp/>(Pulse<sp/>Width<sp/>Modulation)<sp/>signals.<sp/>The<sp/>Tower<sp/>Pro<sp/>SG90<sp/>digital<sp/>servo<sp/>motor<sp/>is<sp/>a<sp/>popular<sp/>choice<sp/>for<sp/>hobbyists<sp/>and<sp/>DIY<sp/>enthusiasts<sp/>due<sp/>to<sp/>its<sp/>affordability,<sp/>ease<sp/>of<sp/>use,<sp/>and<sp/>reliable<sp/>performance<sp/>in<sp/>various<sp/>applications.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;5&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Data<sp/>Sheets</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Raspberry<sp/>Pi<sp/>3<sp/>:<sp/>Model<sp/>B<sp/>:<sp/>V1.2](https://github.com/savanagrawal/HomeGPT/hardware/Raspberry_Pi_3_Model_B_V1.2.pdf)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Raspberry<sp/>Pi<sp/>Camera<sp/>Module<sp/>1080P<sp/>5MP](https://github.com/savanagrawal/HomeGPT/hardware/Raspberry_Pi_Camera_Module_1080P_5MP.pdf)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[BOB-12009:<sp/>Bidirectional<sp/>Logic<sp/>Level<sp/>Converter<sp/>Board](https://github.com/savanagrawal/HomeGPT/hardware/BOB_12009_Bidirectional_Logic_Level_Converter_Board.pdf)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[ADS1115<sp/>16-Bit<sp/>ADC<sp/>:<sp/>4<sp/>Channel<sp/>with<sp/>Programmable<sp/>Gain<sp/>Amplifier](https://github.com/savanagrawal/HomeGPT/hardware/ADS1115_16_Bit_ADC_4_Channel_with_Programmable_Gain_Amplifier.pdf)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[TowerPro<sp/>Servo<sp/>Motor<sp/>-<sp/>SG90<sp/>Digital](https://github.com/savanagrawal/HomeGPT/hardware/TowerPro_Servo_Motor_SG90_Digital.pdf)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[RC522<sp/>RFID<sp/>Module<sp/>13.56MHz](https://github.com/savanagrawal/HomeGPT/hardware/RC522_RFID_Module_13.56MHz.pdf)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;6&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Team<sp/>Members</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|Name|Github|GUID|Course|Role|</highlight></codeline>
+<codeline><highlight class="normal">|---|---|---|---|---|</highlight></codeline>
+<codeline><highlight class="normal">|Savan<sp/>Agrawal|[@savanagrawal](https://github.com/savanagrawal)|2781593A|MSc<sp/>in<sp/>Robotics<sp/>and<sp/>AI|<sp/>Intruder,<sp/>Mood<sp/>and<sp/>Clap<sp/>detection|</highlight></codeline>
+<codeline><highlight class="normal">|Chinmay<sp/>Nagrale|[@MiB3Avenger](https://github.com/MiB3Avenger)|2788044N|MSc<sp/>in<sp/>Computer<sp/>Systems<sp/>Engineering|Threads,<sp/>Peripherals<sp/>Integration<sp/>and<sp/>Circuit<sp/>Making|</highlight></codeline>
+<codeline><highlight class="normal">|Hrushikesh<sp/>Sanap|[@hrushisanap](https://github.com/hrushisanap)|2819312S|MSc<sp/>in<sp/>Robotics<sp/>and<sp/>AI|Fabrication,<sp/>Documentation<sp/>and<sp/>Circuit<sp/>Making|</highlight></codeline>
+<codeline><highlight class="normal">|Mustafa<sp/>Zariwala|[@MustafaZari](https://github.com/MustafaZari)|2617991Z|MSc<sp/>in<sp/>Robotics<sp/>and<sp/>AI|Fabrication<sp/>and<sp/>Documentation|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;7&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline><highlight class="normal">View<sp/>our<sp/>[License](https://github.com/savanagrawal/HomeGPT/blob/main/LICENSE)<sp/>here.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;8&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Code<sp/>of<sp/>Conduct</highlight></codeline>
+<codeline><highlight class="normal">We<sp/>follow<sp/>our<sp/>[Code<sp/>of<sp/>Conduct](https://github.com/savanagrawal/HomeGPT/blob/main/CODE_OF_CONDUCT.md)<sp/>strictly.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">\</highlight></codeline>
+<codeline><highlight class="normal">&lt;a<sp/>id=&apos;9&apos;&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contribution<sp/>Guidelines</highlight></codeline>
+<codeline><highlight class="normal">Want<sp/>to<sp/>contribute?<sp/>Read<sp/>our<sp/>[Contribution](https://github.com/savanagrawal/HomeGPT/blob/main/CONTRIBUTING)<sp/>guidelines.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

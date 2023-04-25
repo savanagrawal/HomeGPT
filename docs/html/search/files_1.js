@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['datasetcreator_2ecpp_0',['DatasetCreator.cpp',['../_dataset_creator_8cpp.html',1,'']]],
-  ['datasetcreator_2eh_1',['DatasetCreator.h',['../_dataset_creator_8h.html',1,'']]],
-  ['datasettrainer_2ecpp_2',['DatasetTrainer.cpp',['../_dataset_trainer_8cpp.html',1,'']]],
-  ['datasettrainer_2eh_3',['DatasetTrainer.h',['../_dataset_trainer_8h.html',1,'']]]
+  ['bcm2835_5fgpio_5fimpl_2eh_0',['bcm2835_gpio_impl.h',['../bcm2835__gpio__impl_8h.html',1,'']]],
+  ['bcm2835_5fspi_5fimpl_2eh_1',['bcm2835_spi_impl.h',['../bcm2835__spi__impl_8h.html',1,'']]]
 ];

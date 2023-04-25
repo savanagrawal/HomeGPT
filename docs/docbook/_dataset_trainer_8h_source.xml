@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__dataset_trainer_8h_source" xml:lang="en-US">
+<title>DatasetTrainer.h</title>
+<indexterm><primary>src/intruder-detection/DatasetTrainer.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;DATASET_TRAINER_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;DATASET_TRAINER_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&lt;opencv2/face.hpp&gt;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+18 
+19 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_intruder_dataset_trainer">IntruderDatasetTrainer</link>&#32;{
+20 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_dataset_trainer_1a0cdcc173875737dd676e397e939a04c9">IntruderDatasetTrainer</link>()&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+23 
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_dataset_trainer_1a5549116f8bbdfa9571aeb50031a11a07">Initialize</link>();
+25 
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_intruder_dataset_trainer_1a0a9936a9e4fc9250c4ad580b51051f79">extract_username</link>(std::string&#32;&amp;input)&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;input&#32;=&#32;input.substr(2);
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::size_t&#32;first_dot&#32;=&#32;input.find(<emphasis role="charliteral">&apos;.&apos;</emphasis>);
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::size_t&#32;second_dot&#32;=&#32;input.find(<emphasis role="charliteral">&apos;.&apos;</emphasis>,&#32;first_dot&#32;+&#32;1);
+30 
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;input.substr(first_dot&#32;+&#32;1,&#32;second_dot&#32;-&#32;first_dot&#32;-&#32;1);
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+33 
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;int&gt;&#32;<link linkend="_class_intruder_dataset_trainer_1aee1a34251ed611fb6c7499b4e034156b">readFileToMap</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;fileName)&#32;{
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ifstream&#32;file(fileName);
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;int&gt;&#32;users;
+38 
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(file,&#32;line))&#32;{
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(line);
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;name;
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;name,&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;numStr;
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;numStr);
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;num&#32;=&#32;std::stoi(numStr);
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users[name]&#32;=&#32;num;
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+48 
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;users;
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+51 
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_dataset_trainer_1a6d2299bbf12e0484dc930a7e53634c4a">generateModel</link>(){
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Started&#32;model&#32;trainer...&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+54 
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::glob(base_path&#32;+&#32;<emphasis role="stringliteral">&quot;/dataset/*.jpg&quot;</emphasis>,&#32;imagePaths,&#32;<emphasis role="keyword">false</emphasis>);
+56 
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users&#32;=&#32;<link linkend="_class_intruder_dataset_trainer_1aee1a34251ed611fb6c7499b4e034156b">readFileToMap</link>(fileName);
+58 
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(std::string&#32;imagePath&#32;:&#32;imagePaths)&#32;{
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;image&#32;=&#32;cv::imread(imagePath,&#32;cv::IMREAD_GRAYSCALE);
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;imagePath&#32;&lt;&lt;&#32;std::endl;
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;extracted_username&#32;=&#32;<link linkend="_class_intruder_dataset_trainer_1a0a9936a9e4fc9250c4ad580b51051f79">extract_username</link>(imagePath);
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;users.find(extracted_username);
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Id&#32;=&#32;it-&gt;second;
+65 
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;extracted_username&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;Id&#32;&lt;&lt;&#32;std::endl;
+67 
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;detector.detectMultiScale(image,&#32;faces,&#32;1.3,&#32;5);
+70 
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(cv::Rect&#32;face&#32;:&#32;faces)&#32;{
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;faceSamples.push_back(image(face));
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Ids.push_back(Id);
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+76 
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Completed&#32;training.&#32;Storing&#32;model&#32;to&#32;file&#32;storage...&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+78 
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recognizer-&gt;train(faceSamples,&#32;Ids);
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recognizer-&gt;save(base_path&#32;+&#32;<emphasis role="stringliteral">&quot;/trainer/trainer.yml&quot;</emphasis>);
+81 
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Done...&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+84 &#32;&#32;&#32;&#32;
+85 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::CascadeClassifier&#32;detector;
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;cascadePath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/haarcascade_frontalface_default.xml&quot;</emphasis>;
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::face::LBPHFaceRecognizer&gt;&#32;recognizer&#32;=&#32;cv::face::LBPHFaceRecognizer::create();
+90 
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Mat&gt;&#32;faceSamples;
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;int&gt;&#32;Ids;
+93 
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;base_path&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection&quot;</emphasis>;
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;imagePaths;
+96 
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;fileName&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/Users.txt&quot;</emphasis>;
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;int&gt;&#32;users;
+99 
+100 };
+101 
+102 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

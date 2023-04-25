@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__threads_8h_source" xml:lang="en-US">
+<title>Threads.h</title>
+<indexterm><primary>src/utils/Threads.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="preprocessor">#ifndef&#32;THREADS_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;THREADS_H</emphasis>
+11 
+12 <emphasis role="preprocessor">#include&#32;&quot;../thread/intruder-detection/IntruderThread.h&quot;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&quot;../thread/mood-detection/MoodThread.h&quot;</emphasis>
+14 
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_threads">Threads</link>&#32;{
+16 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_threads_1a5ecd94bd7d9420d676a75a4974f32e11">setIntruderThread</link>(<link linkend="_class_intruder_thread">IntruderThread</link>*&#32;it)&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;intruderThread&#32;=&#32;it;
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+20 
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_thread">IntruderThread</link>&#32;<link linkend="_class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce">getIntruderThread</link>()&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;&amp;intruderThread;
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+24 
+25 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_thread">IntruderThread</link>*&#32;intruderThread;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mood_thread">MoodThread</link>&#32;moodThread;
+28 }
+</programlisting></section>

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classspidevpp_1_1_spi" xml:lang="en-US">
+<title>spidevpp::Spi Class Reference</title>
+<indexterm><primary>spidevpp::Spi</primary></indexterm>
+<para>
+<computeroutput>#include &lt;spi.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classspidevpp_1_1_spi_1a1aeafa9a432b1132b1e741b00a2a9fbf">Spi</link> (const std::string &amp;device)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7">setBitsPerWord</link> (uint8_t bitsPerWord)</para>
+</listitem>
+            <listitem><para>uint8_t <link linkend="_classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2">getBitsPerWord</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb">setSpeed</link> (uint32_t speed)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207">getSpeed</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1">setMode</link> (uint32_t mode)</para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980">getMode</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849">setDelay</link> (std::chrono::microseconds)</para>
+</listitem>
+            <listitem><para>std::chrono::microseconds <link linkend="_classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e">getDelay</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4">write</link> (char *pData, size_t len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962">read</link> (char *pData, size_t len)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8">writeRead</link> (char *pData, size_t len)</para>
+</listitem>
+            <listitem><para>char <link linkend="_classspidevpp_1_1_spi_1a1979af4d7e1c36aefc7d5b011bcc2968">writeRead</link> (char data)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;class Stream &gt; </para><para>Stream &amp; <link linkend="_classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311">operator&lt;&lt;</link> (Stream &amp;out, const <link linkend="_classspidevpp_1_1_spi">Spi</link> &amp;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classspidevpp_1_1_spi_1a1aeafa9a432b1132b1e741b00a2a9fbf"/><section>
+    <title>Spi()</title>
+<indexterm><primary>Spi</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>Spi</secondary></indexterm>
+<para><computeroutput>spidevpp::Spi::Spi (const std::string &amp; device)<computeroutput>[explicit]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2"/><section>
+    <title>getBitsPerWord()</title>
+<indexterm><primary>getBitsPerWord</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>getBitsPerWord</secondary></indexterm>
+<para><computeroutput>uint8_t spidevpp::Spi::getBitsPerWord ( ) const</computeroutput></para></section>
+<anchor xml:id="_classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e"/><section>
+    <title>getDelay()</title>
+<indexterm><primary>getDelay</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>getDelay</secondary></indexterm>
+<para><computeroutput>std::chrono::microseconds spidevpp::Spi::getDelay ( ) const</computeroutput></para></section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980"/><section>
+    <title>getMode()</title>
+<indexterm><primary>getMode</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>getMode</secondary></indexterm>
+<para><computeroutput>uint32_t spidevpp::Spi::getMode ( ) const</computeroutput></para></section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207"/><section>
+    <title>getSpeed()</title>
+<indexterm><primary>getSpeed</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>getSpeed</secondary></indexterm>
+<para><computeroutput>uint32_t spidevpp::Spi::getSpeed ( ) const</computeroutput></para></section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::read (char * pData, size_t len)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_a4904e24513ca4bdeb3b1bfad23d49962_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7"/><section>
+    <title>setBitsPerWord()</title>
+<indexterm><primary>setBitsPerWord</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>setBitsPerWord</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::setBitsPerWord (uint8_t bitsPerWord)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_a11196eac443c99e4ff1aadfaab8e71c7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849"/><section>
+    <title>setDelay()</title>
+<indexterm><primary>setDelay</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>setDelay</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::setDelay (std::chrono::microseconds delay)</computeroutput></para></section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1"/><section>
+    <title>setMode()</title>
+<indexterm><primary>setMode</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>setMode</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::setMode (uint32_t mode)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_a86c0d72ac83f697168e200a13ed915b1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb"/><section>
+    <title>setSpeed()</title>
+<indexterm><primary>setSpeed</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>setSpeed</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::setSpeed (uint32_t speed)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_af1876959b848c59a9a7ff5a8db5399cb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::write (char * pData, size_t len)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_a43b2fea53e280e1a4bd6d29d969440a4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8"/><section>
+    <title>writeRead()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>void spidevpp::Spi::writeRead (char * pData, size_t len)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_a4ba82061fa64e934b0fdc1a10bcfccd8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_spi_1a1979af4d7e1c36aefc7d5b011bcc2968"/><section>
+    <title>writeRead()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>char spidevpp::Spi::writeRead (char data)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_spi_a1979af4d7e1c36aefc7d5b011bcc2968_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>spidevpp::Spi</secondary></indexterm>
+<indexterm><primary>spidevpp::Spi</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<computeroutput>template&lt;class Stream &gt; </computeroutput><para><computeroutput>Stream &amp; operator&lt;&lt; (Stream &amp; out, const <link linkend="_classspidevpp_1_1_spi">Spi</link> &amp; spi)<computeroutput>[friend]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/dependencies/spidevpp/libs/spidevpp/<link linkend="_spi_8h">spi.h</link>src/dependencies/spidevpp/libs/spidevpp/<link linkend="_spi_8cc">spi.cc</link></section>
+</section>

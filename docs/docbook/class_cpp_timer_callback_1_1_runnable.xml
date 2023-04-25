@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_cpp_timer_callback_1_1_runnable" xml:lang="en-US">
+<title>CppTimerCallback::Runnable Class Reference</title>
+<indexterm><primary>CppTimerCallback::Runnable</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CppTimerCallback.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_class_cpp_timer_callback_1_1_runnable_1af8d11a3b580e76431151e76ac1886e6e">run</link> ()=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cpp_timer_callback_1_1_runnable_1af8d11a3b580e76431151e76ac1886e6e"/><section>
+    <title>run()</title>
+<indexterm><primary>run</primary><secondary>CppTimerCallback::Runnable</secondary></indexterm>
+<indexterm><primary>CppTimerCallback::Runnable</primary><secondary>run</secondary></indexterm>
+<para><computeroutput>virtual void CppTimerCallback::Runnable::run ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_timer_callback_1_1_runnable_af8d11a3b580e76431151e76ac1886e6e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/utils/<link linkend="__cpp_timer_callback_8h">CppTimerCallback.h</link></section>
+</section>

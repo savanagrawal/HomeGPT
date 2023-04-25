@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_handler_8h" xml:lang="en-US">
+<title>src/utils/EventHandler.h File Reference</title>
+<indexterm><primary>src/utils/EventHandler.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;unordered_map&gt;<?linebreak?>#include &lt;functional&gt;<?linebreak?>#include &lt;vector&gt;<?linebreak?>#include &lt;any&gt;<?linebreak?>#include &lt;tuple&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &quot;EventHandler.tpp&quot;<?linebreak?></programlisting>Include dependency graph for EventHandler.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_event_handler_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_event_handler_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_event_handler">EventHandler</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> { <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6">test</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62">DatasetCreatorComplete</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd">DatasetTrainerComplete</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35">IntruderThreadKill</link>
+, <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120">IntruderMoodThreadKill</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b">RfidAuthenticated</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850">OpenGarageDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf">OpenedGarageDoor</link>
+, <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8">CloseGarageDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de">ClosedGarageDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329">OpenMainDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881">OpenedMainDoor</link>
+, <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93">CloseMainDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3">ClosedMainDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6">test</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62">DatasetCreatorComplete</link>
+, <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd">DatasetTrainerComplete</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35">IntruderThreadKill</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120">IntruderMoodThreadKill</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b">RfidAuthenticated</link>
+, <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850">OpenGarageDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf">OpenedGarageDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8">CloseGarageDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de">ClosedGarageDoor</link>
+, <?linebreak?><link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329">OpenMainDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881">OpenedMainDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93">CloseMainDoor</link>
+, <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3">ClosedMainDoor</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Savan Agrawal </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Storing all event codes and allowing interfacing with the event managment in global </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3"/><section>
+    <title>Event</title>
+<indexterm><primary>Event</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>Event</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>test</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>test</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6"/>test</entry><entry></entry></row><row><entry><indexterm><primary>DatasetCreatorComplete</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>DatasetCreatorComplete</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62"/>DatasetCreatorComplete</entry><entry></entry></row><row><entry><indexterm><primary>DatasetTrainerComplete</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>DatasetTrainerComplete</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd"/>DatasetTrainerComplete</entry><entry></entry></row><row><entry><indexterm><primary>IntruderThreadKill</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>IntruderThreadKill</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35"/>IntruderThreadKill</entry><entry></entry></row><row><entry><indexterm><primary>IntruderMoodThreadKill</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>IntruderMoodThreadKill</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120"/>IntruderMoodThreadKill</entry><entry></entry></row><row><entry><indexterm><primary>RfidAuthenticated</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>RfidAuthenticated</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b"/>RfidAuthenticated</entry><entry></entry></row><row><entry><indexterm><primary>OpenGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850"/>OpenGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>OpenedGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenedGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf"/>OpenedGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>CloseGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>CloseGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8"/>CloseGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>ClosedGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>ClosedGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de"/>ClosedGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>OpenMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329"/>OpenMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>OpenedMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenedMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881"/>OpenedMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>CloseMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>CloseMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93"/>CloseMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>ClosedMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>ClosedMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3"/>ClosedMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>test</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>test</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6"/>test</entry><entry></entry></row><row><entry><indexterm><primary>DatasetCreatorComplete</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>DatasetCreatorComplete</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62"/>DatasetCreatorComplete</entry><entry></entry></row><row><entry><indexterm><primary>DatasetTrainerComplete</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>DatasetTrainerComplete</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd"/>DatasetTrainerComplete</entry><entry></entry></row><row><entry><indexterm><primary>IntruderThreadKill</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>IntruderThreadKill</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35"/>IntruderThreadKill</entry><entry></entry></row><row><entry><indexterm><primary>IntruderMoodThreadKill</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>IntruderMoodThreadKill</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120"/>IntruderMoodThreadKill</entry><entry></entry></row><row><entry><indexterm><primary>RfidAuthenticated</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>RfidAuthenticated</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b"/>RfidAuthenticated</entry><entry></entry></row><row><entry><indexterm><primary>OpenGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850"/>OpenGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>OpenedGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenedGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf"/>OpenedGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>CloseGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>CloseGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8"/>CloseGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>ClosedGarageDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>ClosedGarageDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de"/>ClosedGarageDoor</entry><entry></entry></row><row><entry><indexterm><primary>OpenMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329"/>OpenMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>OpenedMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>OpenedMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881"/>OpenedMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>CloseMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>CloseMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93"/>CloseMainDoor</entry><entry></entry></row><row><entry><indexterm><primary>ClosedMainDoor</primary><secondary>EventHandler.h</secondary></indexterm>
+<indexterm><primary>EventHandler.h</primary><secondary>ClosedMainDoor</secondary></indexterm>
+<anchor xml:id="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3"/>ClosedMainDoor</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

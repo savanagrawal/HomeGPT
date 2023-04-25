@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_313caf1132e152dd9b58bea13a4052ca" kind="dir">
+    <compoundname>src/utils</compoundname>
+    <innerdir refid="dir_cadbc4a4244c254fcf188f6541d24429">src/utils/EventTest</innerdir>
+    <innerfile refid="_circular_queue_8h">CircularQueue.h</innerfile>
+    <innerfile refid="_cpp_timer_callback_8h">CppTimerCallback.h</innerfile>
+    <innerfile refid="_event_handler_8cpp">EventHandler.cpp</innerfile>
+    <innerfile refid="_event_handler_8h">EventHandler.h</innerfile>
+    <innerfile refid="_events_8h">Events.h</innerfile>
+    <innerfile refid="_globals_8h">Globals.h</innerfile>
+    <innerfile refid="_threads_8h">Threads.h</innerfile>
+    <innerfile refid="_utility_8h">Utility.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/utils/"/>
+  </compounddef>
+</doxygen>

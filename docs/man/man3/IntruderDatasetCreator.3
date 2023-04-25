@@ -1,0 +1,90 @@
+.TH "IntruderDatasetCreator" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntruderDatasetCreator
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DatasetCreator\&.h>\fP
+.PP
+Inherits CppTimer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntruderDatasetCreator\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBtrim\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "int \fBcount_name\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "std::string \fBreplace_spaces_with_underscores\fP (const std::string &str)"
+.br
+.ti -1c
+.RI "bool \fBis_valid_name\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "bool \fBfindStringInFile\fP (const std::string &fileName, const std::string &searchString)"
+.br
+.ti -1c
+.RI "int \fBgetLastIntegerInFile\fP (const std::string &fileName)"
+.br
+.ti -1c
+.RI "void \fBappendLineToFile\fP (const std::string &fileName, const std::string &line)"
+.br
+.ti -1c
+.RI "int \fBcheckCameraOpen\fP (cv::VideoCapture camera)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IntruderDatasetCreator::IntruderDatasetCreator ()\fC [inline]\fP"
+Constructor 
+.SH "Member Function Documentation"
+.PP 
+.SS "void IntruderDatasetCreator::appendLineToFile (const std::string & fileName, const std::string & line)\fC [inline]\fP"
+
+.SS "int IntruderDatasetCreator::checkCameraOpen (cv::VideoCapture camera)"
+
+.SS "int IntruderDatasetCreator::count_name (const std::string & str)\fC [inline]\fP"
+
+.SS "bool IntruderDatasetCreator::findStringInFile (const std::string & fileName, const std::string & searchString)\fC [inline]\fP"
+
+.SS "int IntruderDatasetCreator::getLastIntegerInFile (const std::string & fileName)\fC [inline]\fP"
+
+.SS "void IntruderDatasetCreator::Initialize (cv::VideoCapture camera)"
+Initializes our Dataset Creator\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcamera\fP \fBCamera\fP object\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+.RE
+.PP
+
+.SS "bool IntruderDatasetCreator::is_valid_name (const std::string & name)\fC [inline]\fP"
+
+.SS "std::string IntruderDatasetCreator::replace_spaces_with_underscores (const std::string & str)\fC [inline]\fP"
+
+.SS "void IntruderDatasetCreator::stop ()\fC [inline]\fP"
+
+.SS "std::string IntruderDatasetCreator::trim (const std::string & str)\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

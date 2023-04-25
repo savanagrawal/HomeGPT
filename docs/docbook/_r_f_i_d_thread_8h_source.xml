@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_i_d_thread_8h_source" xml:lang="en-US">
+<title>RFIDThread.h</title>
+<indexterm><primary>src/thread/rfid/RFIDThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;RFID_THREAD_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;RFID_THREAD_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;../CppThread.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__r_f_i_d_8h">RFID.h</link>&quot;</emphasis>
+13 
+18 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_r_f_i_d_thread">RFIDThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_cpp_thread">CppThread</link>&#32;{
+19 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_r_f_i_d_thread_1a591f7e463de5850c3ed2cc0617ce1d78">RFIDThread</link>()&#32;{
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+27 
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_r_f_i_d_thread_1ae23e0326ccb037b194d2ca6208cb6e13">stop</link>(){}
+32 
+33 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;run();
+35 };
+36 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

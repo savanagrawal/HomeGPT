@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmfrc522_1_1_i_spi" xml:lang="en-US">
+<title>mfrc522::ISpi Struct Reference</title>
+<indexterm><primary>mfrc522::ISpi</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ispi.h&gt;</computeroutput>
+</para>
+Inheritance diagram for mfrc522::ISpi:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structmfrc522_1_1_i_spi__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual void <link linkend="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed">write</link> (char *pData, size_t len)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7">read</link> (char *pData, size_t len)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac">writeRead</link> (char *pData, size_t len)=0</para>
+</listitem>
+            <listitem><para>virtual char <link linkend="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683">writeRead</link> (char data)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed">write</link> (char *pData, size_t len)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7">read</link> (char *pData, size_t len)=0</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac">writeRead</link> (char *pData, size_t len)=0</para>
+</listitem>
+            <listitem><para>virtual char <link linkend="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683">writeRead</link> (char data)=0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7"/><section>
+    <title>read()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>virtual void mfrc522::ISpi::read (char * pData, size_t len)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3">BcmSpi</link>, and <link linkend="_class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b">Spidev</link>.</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7"/><section>
+    <title>read()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>read</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>virtual void mfrc522::ISpi::read (char * pData, size_t len)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3">BcmSpi</link>, and <link linkend="_class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b">Spidev</link>.</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed"/><section>
+    <title>write()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>write</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>virtual void mfrc522::ISpi::write (char * pData, size_t len)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481">BcmSpi</link>, and <link linkend="_class_spidev_1a40c147da19e908a2e8e76b8b586b1170">Spidev</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structmfrc522_1_1_i_spi_a9f98a44742d44089eee210f9d5908bed_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed"/><section>
+    <title>write()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>write</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>virtual void mfrc522::ISpi::write (char * pData, size_t len)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481">BcmSpi</link>, and <link linkend="_class_spidev_1a40c147da19e908a2e8e76b8b586b1170">Spidev</link>.</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac"/><section>
+    <title>writeRead()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>virtual void mfrc522::ISpi::writeRead (char * pData, size_t len)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104">BcmSpi</link>, and <link linkend="_class_spidev_1a38c616bb4143f726ce083c947d7a6956">Spidev</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structmfrc522_1_1_i_spi_a251598542df9d4026fc28e832d4770ac_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac"/><section>
+    <title>writeRead()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>virtual void mfrc522::ISpi::writeRead (char * pData, size_t len)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104">BcmSpi</link>, and <link linkend="_class_spidev_1a38c616bb4143f726ce083c947d7a6956">Spidev</link>.</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683"/><section>
+    <title>writeRead()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>virtual char mfrc522::ISpi::writeRead (char data)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de">BcmSpi</link>, and <link linkend="_class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1">Spidev</link>.</para>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683"/><section>
+    <title>writeRead()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>mfrc522::ISpi</secondary></indexterm>
+<indexterm><primary>mfrc522::ISpi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>virtual char mfrc522::ISpi::writeRead (char data)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de">BcmSpi</link>, and <link linkend="_class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1">Spidev</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+src/dependencies/mfrc522/<link linkend="_dependencies_2mfrc522_2ispi_8h">ispi.h</link>src/peripherals/bcm2835/<link linkend="_peripherals_2bcm2835_2ispi_8h">ispi.h</link></section>
+</section>

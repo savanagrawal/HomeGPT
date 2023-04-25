@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__g_p_i_o_driver_8h_source" xml:lang="en-US">
+<title>GPIODriver.h</title>
+<indexterm><primary>src/peripherals/GPIODriver.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="preprocessor">#ifndef&#32;GPIO_DRIVER_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;GPIO_DRIVER_H</emphasis>
+11 
+19 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_g_p_i_o_driver">GPIODriver</link>&#32;{
+20 
+21 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_g_p_i_o_driver_1a74b0f69ce300c94de3d4fdd75042dec3">GPIODriver</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{}
+23 
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad">SetGPIOState</link>(<emphasis role="keywordtype">int</emphasis>&#32;gpioPinNumber,&#32;<emphasis role="keywordtype">int</emphasis>&#32;value);
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32">GPIORead</link>(<emphasis role="keywordtype">int</emphasis>&#32;gpioPinNumber);
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7">SetUpPin</link>(<emphasis role="keywordtype">int</emphasis>&#32;gpioPinNumber);
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+28 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ExportGPIO(<emphasis role="keywordtype">int</emphasis>&#32;gpioPinNumber);
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;UnexportGPIO(<emphasis role="keywordtype">int</emphasis>&#32;gpioPinNumber);&#32;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;SetGPIODirection(<emphasis role="keywordtype">int</emphasis>&#32;gpioPinNumber,&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction);
+32 };
+33 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

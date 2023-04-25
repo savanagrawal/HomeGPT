@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__m_f_r_c522_8cpp" xml:lang="en-US">
+<title>src/peripherals/MFRC522.cpp File Reference</title>
+<indexterm><primary>src/peripherals/MFRC522.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MFRC522.h&quot;<?linebreak?>#include &lt;linux/types.h&gt;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?>#include &lt;cstring&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;thread&gt;<?linebreak?></programlisting>Include dependency graph for MFRC522.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_m_f_r_c522_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacemfrc522">mfrc522</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

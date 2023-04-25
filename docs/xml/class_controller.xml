@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_controller" kind="class" language="C++" prot="public">
+    <compoundname>Controller</compoundname>
+    <includes refid="_controller_8h" local="no">Controller.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Controller::Controller</definition>
+        <argsstring>()</argsstring>
+        <name>Controller</name>
+        <qualifiedname>Controller::Controller</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/controller/Controller.h" line="14" column="9" bodyfile="src/controller/Controller.h" bodystart="14" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_controller_1a7fbcb9d38feea7c3ee105e77dbf2d2fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::RFIDHandler</definition>
+        <argsstring>()</argsstring>
+        <name>RFIDHandler</name>
+        <qualifiedname>Controller::RFIDHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/controller/Controller.h" line="19" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/controller/Controller.h" line="12" column="1" bodyfile="src/controller/Controller.h" bodystart="12" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" prot="public" virt="non-virtual"><scope>Controller</scope><name>Controller</name></member>
+      <member refid="class_controller_1a7fbcb9d38feea7c3ee105e77dbf2d2fa" prot="private" virt="non-virtual"><scope>Controller</scope><name>RFIDHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,46 @@
+.TH "CppThread" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CppThread
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CppThread\&.h>\fP
+.PP
+Inherited by \fBAudioRecordThread\fP, \fBClapThread\fP, \fBControllerThread\fP, \fBDoorsThread\fP, \fBIntruderMoodThread\fP, \fBIntruderThread\fP, \fBMoodThread\fP, and \fBRFIDThread\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBjoin\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBrun\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
+.PP
+(C) 2020-2022, Bernd Porr mail@bernporr.me.uk A thin wrapper around the C++ thread model to avoid a static callback\&. Instead just inherit this class and overload \fBrun()\fP which then runs in this thread\&. This is header-only so that it can be performed inline for max performance\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppThread::join ()\fC [inline]\fP"
+Waits for the thread to terminate\&. 
+.SS "virtual void CppThread::run ()\fC [protected]\fP, \fC [pure virtual]\fP"
+This method does all the work of this thread\&. Overload this abstract function with a real one doing the actual work of this thread\&. 
+.SS "void CppThread::start ()\fC [inline]\fP"
+Starts the thread\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

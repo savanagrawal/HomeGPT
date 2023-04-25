@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacespidevpp" xml:lang="en-US">
+<title>spidevpp Namespace Reference</title>
+<indexterm><primary>spidevpp</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classspidevpp_1_1_gpio">Gpio</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classspidevpp_1_1_spi">Spi</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;class Stream &gt; </para><para>Stream &amp; <link linkend="_namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e">operator&lt;&lt;</link> (Stream &amp;out, const <link linkend="_classspidevpp_1_1_spi">Spi</link> &amp;spi)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e"/><section>
+    <title>operator&lt;&lt;()</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>spidevpp</secondary></indexterm>
+<indexterm><primary>spidevpp</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<computeroutput>template&lt;class Stream &gt; </computeroutput><para><computeroutput>Stream &amp; spidevpp::operator&lt;&lt; (Stream &amp; out, const <link linkend="_classspidevpp_1_1_spi">Spi</link> &amp; spi)</computeroutput></para></section>
+</section>
+</section>

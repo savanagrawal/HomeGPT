@@ -1,0 +1,64 @@
+.TH "src/peripherals/I2CDriver.cpp" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/peripherals/I2CDriver.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'I2CDriver\&.h'\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+\fC#include <sys/ioctl\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'i2c/smbus\&.h'\fP
+.br
+\fC#include <linux/i2c\-dev\&.h>\fP
+.br
+\fC#include <linux/i2c\&.h>\fP
+.br
+\fC#include 'utils\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBCLOCKID\fP   CLOCK_MONOTONIC"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+0\&.1
+.RE
+.PP
+This file contains the functions for I2C Driver Class\&. Essentially this is a wrapper for the API provided for I2C Linux Driver\&. Conatins functions for plain I2C and SMBUS
+.PP
+https://www.kernel.org/doc/html/latest/driver-api/i2c\&. https://www.i2c-bus.org/smbus/ 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define CLOCKID   CLOCK_MONOTONIC"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

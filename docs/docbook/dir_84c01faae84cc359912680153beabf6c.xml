@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_84c01faae84cc359912680153beabf6c" xml:lang="en-US">
+<title>src/intruder-detection Directory Reference</title>
+<indexterm><primary>src/intruder-detection Directory Reference</primary></indexterm>
+Directory dependency graph for intruder-detection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_84c01faae84cc359912680153beabf6c_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__dataset_creator_8cpp">DatasetCreator.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__dataset_creator_8h">DatasetCreator.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__dataset_trainer_8cpp">DatasetTrainer.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__dataset_trainer_8h">DatasetTrainer.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__intruder_detection_8cpp">IntruderDetection.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__intruder_detection_8h">IntruderDetection.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_cpp_thread" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>CppThread</compoundname>
+    <derivedcompoundref refid="class_audio_record_thread" prot="public" virt="non-virtual">AudioRecordThread</derivedcompoundref>
+    <derivedcompoundref refid="class_clap_thread" prot="public" virt="non-virtual">ClapThread</derivedcompoundref>
+    <derivedcompoundref refid="class_controller_thread" prot="public" virt="non-virtual">ControllerThread</derivedcompoundref>
+    <derivedcompoundref refid="class_doors_thread" prot="public" virt="non-virtual">DoorsThread</derivedcompoundref>
+    <derivedcompoundref refid="class_intruder_mood_thread" prot="public" virt="non-virtual">IntruderMoodThread</derivedcompoundref>
+    <derivedcompoundref refid="class_intruder_thread" prot="public" virt="non-virtual">IntruderThread</derivedcompoundref>
+    <derivedcompoundref refid="class_mood_thread" prot="public" virt="non-virtual">MoodThread</derivedcompoundref>
+    <derivedcompoundref refid="class_r_f_i_d_thread" prot="public" virt="non-virtual">RFIDThread</derivedcompoundref>
+    <includes refid="_cpp_thread_8h" local="no">CppThread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cpp_thread_1ab66c0576f6f925bd5ce5ba714737b5e6" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread CppThread::uthread</definition>
+        <argsstring></argsstring>
+        <name>uthread</name>
+        <qualifiedname>CppThread::uthread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="47" column="13" bodyfile="src/thread/CppThread.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_cpp_thread_1a792b79e72250710147c452648def4a78" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void CppThread::run</definition>
+        <argsstring>()=0</argsstring>
+        <name>run</name>
+        <qualifiedname>CppThread::run</qualifiedname>
+        <reimplementedby refid="class_audio_record_thread_1aab437f1af45b9742868320900130f402">run</reimplementedby>
+        <reimplementedby refid="class_clap_thread_1ab13d24bd87c16181ba04b4d9847ecc70">run</reimplementedby>
+        <reimplementedby refid="class_controller_thread_1ae8206a23ab1a414f2956424def2e759c">run</reimplementedby>
+        <reimplementedby refid="class_doors_thread_1ac3a2de2984ec878b0c62a7c9efa071b8">run</reimplementedby>
+        <reimplementedby refid="class_mood_thread_1a11ebe69a8234c58fdb81e499dcfb7c63">run</reimplementedby>
+        <reimplementedby refid="class_r_f_i_d_thread_1a87a340c87736f22b96cc0fbaff2e67e4">run</reimplementedby>
+        <reimplementedby refid="class_intruder_thread_1a8d9f8a138310a20a8539f78c8ebc8da8">run</reimplementedby>
+        <reimplementedby refid="class_intruder_mood_thread_1a020deddefcdda0a02863f4e11a73dd31">run</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method does all the work of this thread. Overload this abstract function with a real one doing the actual work of this thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="43" column="14"/>
+        <referencedby refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" compoundref="_cpp_thread_8h" startline="26" endline="28">start</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</para>
+<para>(C) 2020-2022, Bernd Porr <ulink url="mailto:mail@bernporr.me.uk">mail@bernporr.me.uk</ulink> A thin wrapper around the C++ thread model to avoid a static callback. Instead just inherit this class and overload <ref refid="class_cpp_thread_1a792b79e72250710147c452648def4a78" kindref="member">run()</ref> which then runs in this thread. This is header-only so that it can be performed inline for max performance. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>AudioRecordThread</label>
+        <link refid="class_audio_record_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ClapThread</label>
+        <link refid="class_clap_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ControllerThread</label>
+        <link refid="class_controller_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="5">
+        <label>DoorsThread</label>
+        <link refid="class_doors_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>IntruderMoodThread</label>
+        <link refid="class_intruder_mood_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>IntruderThread</label>
+        <link refid="class_intruder_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MoodThread</label>
+        <link refid="class_mood_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>RFIDThread</label>
+        <link refid="class_r_f_i_d_thread"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="src/thread/CppThread.h" line="20" column="1" bodyfile="src/thread/CppThread.h" bodystart="20" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>CppThread</scope><name>join</name></member>
+      <member refid="class_cpp_thread_1a792b79e72250710147c452648def4a78" prot="protected" virt="pure-virtual"><scope>CppThread</scope><name>run</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>CppThread</scope><name>start</name></member>
+      <member refid="class_cpp_thread_1ab66c0576f6f925bd5ce5ba714737b5e6" prot="private" virt="non-virtual"><scope>CppThread</scope><name>uthread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

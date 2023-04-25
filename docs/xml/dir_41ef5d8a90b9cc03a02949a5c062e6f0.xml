@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_41ef5d8a90b9cc03a02949a5c062e6f0" kind="dir">
+    <compoundname>src/controller</compoundname>
+    <innerfile refid="_controller_8cpp">Controller.cpp</innerfile>
+    <innerfile refid="_controller_8h">Controller.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/controller/"/>
+  </compounddef>
+</doxygen>

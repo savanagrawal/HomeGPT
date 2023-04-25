@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_i_d_8cpp" xml:lang="en-US">
+<title>src/peripherals/RFID.cpp File Reference</title>
+<indexterm><primary>src/peripherals/RFID.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;RFID.h&quot;<?linebreak?></programlisting>Include dependency graph for RFID.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_r_f_i_d_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bcm2835__spi__impl_8h_source" xml:lang="en-US">
+<title>bcm2835_spi_impl.h</title>
+<indexterm><primary>src/peripherals/bcm2835/bcm2835_spi_impl.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_peripherals_2bcm2835_2ispi_8h">ispi.h</link>&quot;</emphasis>
+5 
+6 <emphasis role="preprocessor">#include&#32;&quot;bcm2835.h&quot;</emphasis>
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_bcm_spi">BcmSpi</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_spi">mfrc522::ISpi</link>{
+9 
+10 <emphasis role="keyword">public</emphasis>:
+11 &#32;&#32;&#32;&#32;<link linkend="_class_bcm_spi_1afb263d8e186dc50bfbe1f514f148ae08">BcmSpi</link>()&#32;{
+12 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_begin();
+13 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_setBitOrder(BCM2835_SPI_BIT_ORDER_MSBFIRST);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;default</emphasis>
+14 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_setDataMode(BCM2835_SPI_MODE0);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;default</emphasis>
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_setClockDivider(BCM2835_SPI_CLOCK_DIVIDER_64);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;~&#32;4&#32;MHz</emphasis>
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_chipSelect(BCM2835_SPI_CS0);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;The&#32;default</emphasis>
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_setChipSelectPolarity(BCM2835_SPI_CS0,&#32;0x00);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;the&#32;default</emphasis>
+18 &#32;&#32;&#32;&#32;}
+19 
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481">write</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_writenb(pData,&#32;len);
+22 &#32;&#32;&#32;&#32;}
+23 
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3">read</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_transfern(pData,&#32;len);
+26 &#32;&#32;&#32;&#32;}
+27 
+28 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104">writeRead</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;bcm2835_spi_transfern(pData,&#32;len);
+30 &#32;&#32;&#32;&#32;}
+31 
+32 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de">writeRead</link>(<emphasis role="keywordtype">char</emphasis>&#32;data)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;bcm2835_spi_transfer(data);
+34 &#32;&#32;&#32;&#32;}
+35 
+36 };
+</programlisting></section>

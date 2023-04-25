@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__clap_thread_8h_source" xml:lang="en-US">
+<title>ClapThread.h</title>
+<indexterm><primary>src/thread/clap-detection/ClapThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;CLAP_THREAD_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;CLAP_THREAD_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;../CppThread.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;../../utils/Globals.h&quot;</emphasis>
+13 
+14 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__clap_detection_8h">ClapDetection.h</link>&quot;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+16 
+17 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_clap_thread">ClapThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_cpp_thread">CppThread</link>&#32;{
+18 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_clap_thread_1a644933e1db3c5f968168dce690a63707">ClapThread</link>(<link linkend="_class_clap_detection">ClapDetection</link>*&#32;clapDetection)&#32;{
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ClapThread::clapDetection&#32;=&#32;clapDetection;
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+22 
+23 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;run();
+25 
+26 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_globals">Globals</link>&#32;globals;
+28 &#32;&#32;
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_clap_detection">ClapDetection</link>*&#32;clapDetection;
+30 };
+31 
+32 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

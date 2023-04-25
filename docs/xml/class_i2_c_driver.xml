@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_i2_c_driver" kind="class" language="C++" prot="public">
+    <compoundname>I2CDriver</compoundname>
+    <includes refid="_i2_c_driver_8h" local="no">I2CDriver.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i2_c_driver_1ae25c889f0a2540eee34d53e0228fe914" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Setup_File</definition>
+        <argsstring>(int addres)</argsstring>
+        <name>I2C_Setup_File</name>
+        <qualifiedname>I2CDriver::I2C_Setup_File</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>addres</declname>
+          <defname>addr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open I2C File descriptor for target slave device.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address of the slave device.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>I2C File descriptor for specified address of the slave device. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="38" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="59" bodyend="76"/>
+        <references refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faa978b8c99ba81b70dcb4a660ec190c8b" compoundref="_i2_c_driver_8h" startline="20">I2C_IOCTL_FAILED</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a6480a0e3e5022ac90944f319ca5a5f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Close_File</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>I2C_Close_File</name>
+        <qualifiedname>I2CDriver::I2C_Close_File</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close file descriptor</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result of file descriptor close operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="39" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="86" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f" kindref="member">I2C_Return</ref></type>
+        <definition>I2C_Return I2CDriver::Plain_I2C_Write_Read</definition>
+        <argsstring>(int fd, uint16_t command, uint8_t *buffer, uint8_t readLength, uint16_t delay=10)</argsstring>
+        <name>Plain_I2C_Write_Read</name>
+        <qualifiedname>I2CDriver::Plain_I2C_Write_Read</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>readLength</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>delay</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use Plain I2C to read n-bytes a using a 2byte command. Pass 0 for readLength to just write.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to read the data to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to recieve </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay between read and write (10ms by default)</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="42" column="12" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="148" bodyend="177"/>
+        <references refid="class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0" compoundref="_i2_c_driver_8cpp" startline="41" endline="48">Delay</references>
+        <references refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faeceba296bdda2b90e8835c431fe7a72a" compoundref="_i2_c_driver_8h" startline="19">I2C_OK</references>
+        <references refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fac86dfc8232f86c65e33a1b9491763a21" compoundref="_i2_c_driver_8h" startline="22">I2C_READ_FAILED</references>
+        <references refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa43b4aeb860553fe1c22ab94cb6b4a446" compoundref="_i2_c_driver_8h" startline="21">I2C_WRITE_FAILED</references>
+        <referencedby refid="class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572" compoundref="_i2_c_driver_8cpp" startline="105" endline="132">Plain_I2C_Write_Read_CRC8</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f" kindref="member">I2C_Return</ref></type>
+        <definition>I2C_Return I2CDriver::Plain_I2C_Write_Read_CRC8</definition>
+        <argsstring>(int fd, uint16_t command, uint16_t *buffer, uint8_t readlen, uint16_t delay=10)</argsstring>
+        <name>Plain_I2C_Write_Read_CRC8</name>
+        <qualifiedname>I2CDriver::Plain_I2C_Write_Read_CRC8</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>readlen</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>delay</declname>
+          <defval>10</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use Plain I2C to read n-bytes using a uint16_t command and perform a CRC8 on reply uint16_ts . Pass 0 for readLength to just write.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to read the data to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>readlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of uint16_t to read </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delay</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay between read and write</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else error number</para>
+</simplesect>
+<xrefsect id="todo_1_todo000001"><xreftitle>Todo</xreftitle><xrefdescription><para>: Appopriate command bytes </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="43" column="12" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="105" bodyend="132"/>
+        <references refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa2fa4d728abcc354ab37d4ff073289900" compoundref="_i2_c_driver_8h" startline="24">I2C_FAIL</references>
+        <references refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faeceba296bdda2b90e8835c431fe7a72a" compoundref="_i2_c_driver_8h" startline="19">I2C_OK</references>
+        <references refid="class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41" compoundref="_i2_c_driver_8cpp" startline="148" endline="177">Plain_I2C_Write_Read</references>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void I2CDriver::Delay</definition>
+        <argsstring>(unsigned int timeMs)</argsstring>
+        <name>Delay</name>
+        <qualifiedname>I2CDriver::Delay</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>timeMs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Suspends the execution of the calling thread until at least the time specified has elapsed.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Time to wait in miliseconds.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="46" column="6" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="41" bodyend="48"/>
+        <referencedby refid="class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41" compoundref="_i2_c_driver_8cpp" startline="148" endline="177">Plain_I2C_Write_Read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1acd90c5e9215accc2baf66757054e2906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Read_Byte</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>I2C_Read_Byte</name>
+        <qualifiedname>I2CDriver::I2C_Read_Byte</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to read one byte.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A data byte received from the device elese negative errno. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="49" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1aab652313af52fe19360bc928baf80fae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Read_8bitReg</definition>
+        <argsstring>(int fd, int command)</argsstring>
+        <name>I2C_Read_8bitReg</name>
+        <qualifiedname>I2CDriver::I2C_Read_8bitReg</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Write a byte word and read one byte from.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A data byte received from the device elese negative errno. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="50" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a8639cbc95b98be425f6b30dd591384c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Read_16bitReg</definition>
+        <argsstring>(int fd, int command)</argsstring>
+        <name>I2C_Read_16bitReg</name>
+        <qualifiedname>I2CDriver::I2C_Read_16bitReg</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Write a byte word and read 2 bytes.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A 16-bit unsigned word received from the device else negative errno </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="51" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="212" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a7b5eb92afa9ed0b5af264836d0944520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Write_Byte</definition>
+        <argsstring>(int fd, int data)</argsstring>
+        <name>I2C_Write_Byte</name>
+        <qualifiedname>I2CDriver::I2C_Write_Byte</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Write a byte word.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else negative errno </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="52" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="224" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a6ff7dfdd4aca26c83c6047f45cce1a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Write_8bitReg</definition>
+        <argsstring>(int fd, int command, int data)</argsstring>
+        <name>I2C_Write_8bitReg</name>
+        <qualifiedname>I2CDriver::I2C_Write_8bitReg</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Write a byte word uing a command / addressing specific register.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else negative errno </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="53" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="237" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a445d2ef0ba5f742fb8264c202dae4a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Write_16bitReg</definition>
+        <argsstring>(int fd, int command, int data)</argsstring>
+        <name>I2C_Write_16bitReg</name>
+        <qualifiedname>I2CDriver::I2C_Write_16bitReg</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Write a 2-byte word using a command / addressing specific register.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else negative errno </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="54" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="250" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a389bf23234176e0fd0421e078e1fa00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Write_Block</definition>
+        <argsstring>(int fd, int command, uint8_t length, uint8_t *buff)</argsstring>
+        <name>I2C_Write_Block</name>
+        <qualifiedname>I2CDriver::I2C_Write_Block</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buff</declname>
+          <defname>buffer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Write n-bytes using a command / addressing specific register.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to be written from the data buffer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer containing data to be written.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else negative errno </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="55" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="265" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_driver_1a3877a689d16c30835569c7fa5f064359" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int I2CDriver::I2C_Read_Block</definition>
+        <argsstring>(int fd, int command, uint8_t *buff)</argsstring>
+        <name>I2C_Read_Block</name>
+        <qualifiedname>I2CDriver::I2C_Read_Block</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buff</declname>
+          <defname>buffer</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Use SMBUS to Read n-bytes using a command / addressing specific register.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File descriptor of the device. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Command / Register to address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to read the data to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of read bytes </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CDriver.h" line="56" column="5" bodyfile="src/peripherals/I2CDriver.cpp" bodystart="279" bodyend="281"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>I2C Driver class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale</para>
+</simplesect>
+This is class is responsilbe for handling I2C communication. </para>
+    </detaileddescription>
+    <location file="src/peripherals/I2CDriver.h" line="35" column="1" bodyfile="src/peripherals/I2CDriver.h" bodystart="35" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>Delay</name></member>
+      <member refid="class_i2_c_driver_1a6480a0e3e5022ac90944f319ca5a5f4e" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Close_File</name></member>
+      <member refid="class_i2_c_driver_1a8639cbc95b98be425f6b30dd591384c6" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Read_16bitReg</name></member>
+      <member refid="class_i2_c_driver_1aab652313af52fe19360bc928baf80fae" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Read_8bitReg</name></member>
+      <member refid="class_i2_c_driver_1a3877a689d16c30835569c7fa5f064359" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Read_Block</name></member>
+      <member refid="class_i2_c_driver_1acd90c5e9215accc2baf66757054e2906" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Read_Byte</name></member>
+      <member refid="class_i2_c_driver_1ae25c889f0a2540eee34d53e0228fe914" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Setup_File</name></member>
+      <member refid="class_i2_c_driver_1a445d2ef0ba5f742fb8264c202dae4a8d" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Write_16bitReg</name></member>
+      <member refid="class_i2_c_driver_1a6ff7dfdd4aca26c83c6047f45cce1a9e" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Write_8bitReg</name></member>
+      <member refid="class_i2_c_driver_1a389bf23234176e0fd0421e078e1fa00d" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Write_Block</name></member>
+      <member refid="class_i2_c_driver_1a7b5eb92afa9ed0b5af264836d0944520" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>I2C_Write_Byte</name></member>
+      <member refid="class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>Plain_I2C_Write_Read</name></member>
+      <member refid="class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572" prot="public" virt="non-virtual"><scope>I2CDriver</scope><name>Plain_I2C_Write_Read_CRC8</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

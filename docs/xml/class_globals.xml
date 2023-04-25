@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_globals" kind="class" language="C++" prot="public">
+    <compoundname>Globals</compoundname>
+    <includes refid="_globals_8h" local="no">Globals.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_globals_1a925fb095d7649b46c33b64d49001d826" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; cv::ml::SVM &gt;</type>
+        <definition>cv::Ptr&lt;cv::ml::SVM&gt; Globals::mood_svm</definition>
+        <argsstring></argsstring>
+        <name>mood_svm</name>
+        <qualifiedname>Globals::mood_svm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="49" column="17" bodyfile="src/utils/Globals.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_globals_1a442b855f1d7cf07373bbb49bf8ed2fd1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Globals::garageDoorPin</definition>
+        <argsstring></argsstring>
+        <name>garageDoorPin</name>
+        <qualifiedname>Globals::garageDoorPin</qualifiedname>
+        <initializer>= 27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="50" column="13" bodyfile="src/utils/Globals.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_globals_1a3421d2a47f8be79fd41606664163daf0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Globals::mainDoorPin</definition>
+        <argsstring></argsstring>
+        <name>mainDoorPin</name>
+        <qualifiedname>Globals::mainDoorPin</qualifiedname>
+        <initializer>= 22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="51" column="13" bodyfile="src/utils/Globals.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_globals_1a35851fdb3cfc48107ae8759e39d50ec2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Globals::ledPin</definition>
+        <argsstring></argsstring>
+        <name>ledPin</name>
+        <qualifiedname>Globals::ledPin</qualifiedname>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="53" column="13" bodyfile="src/utils/Globals.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_globals_1abe1ccd3ba06e59c5f08189b3b42cf1a4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Globals::ledRedPin</definition>
+        <argsstring></argsstring>
+        <name>ledRedPin</name>
+        <qualifiedname>Globals::ledRedPin</qualifiedname>
+        <initializer>= 13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="55" column="13" bodyfile="src/utils/Globals.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_globals_1a642ad0cfe92e1ddce715a368defd6b04" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Globals::ledGreenPin</definition>
+        <argsstring></argsstring>
+        <name>ledGreenPin</name>
+        <qualifiedname>Globals::ledGreenPin</qualifiedname>
+        <initializer>= 19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="56" column="13" bodyfile="src/utils/Globals.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_globals_1a86f910f5b2d10c5f23347070b100d1bf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Globals::ledBluePin</definition>
+        <argsstring></argsstring>
+        <name>ledBluePin</name>
+        <qualifiedname>Globals::ledBluePin</qualifiedname>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="57" column="13" bodyfile="src/utils/Globals.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_globals_1a7e9e2b31d0484acc038684bd8aceff1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Globals::setMoodSvm</definition>
+        <argsstring>()</argsstring>
+        <name>setMoodSvm</name>
+        <qualifiedname>Globals::setMoodSvm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="16" column="14" bodyfile="src/utils/Globals.h" bodystart="16" bodyend="18"/>
+        <referencedby refid="class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de" compoundref="_intruder_mood_detection_8cpp" startline="22" endline="34">IntruderMoodDetection::Initialize</referencedby>
+        <referencedby refid="class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2" compoundref="_mood_detection_8cpp" startline="19" endline="28">MoodDetection::Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cv::Ptr&lt; cv::ml::SVM &gt;</type>
+        <definition>cv::Ptr&lt; cv::ml::SVM &gt; Globals::getMoodSvm</definition>
+        <argsstring>()</argsstring>
+        <name>getMoodSvm</name>
+        <qualifiedname>Globals::getMoodSvm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="20" column="17" bodyfile="src/utils/Globals.h" bodystart="20" bodyend="22"/>
+        <referencedby refid="class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de" compoundref="_intruder_mood_detection_8cpp" startline="22" endline="34">IntruderMoodDetection::Initialize</referencedby>
+        <referencedby refid="class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2" compoundref="_mood_detection_8cpp" startline="19" endline="28">MoodDetection::Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1a55bec70a13f8568891d2562c90a61aaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Globals::getGarageDoorPin</definition>
+        <argsstring>()</argsstring>
+        <name>getGarageDoorPin</name>
+        <qualifiedname>Globals::getGarageDoorPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="24" column="13" bodyfile="src/utils/Globals.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1ae6cfcdccf6b6a84f36b129bee772e349" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Globals::getMainDoorPin</definition>
+        <argsstring>()</argsstring>
+        <name>getMainDoorPin</name>
+        <qualifiedname>Globals::getMainDoorPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="28" column="13" bodyfile="src/utils/Globals.h" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Globals::getLedPin</definition>
+        <argsstring>()</argsstring>
+        <name>getLedPin</name>
+        <qualifiedname>Globals::getLedPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="32" column="13" bodyfile="src/utils/Globals.h" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1a01698796b983f7841a3b5511efdac98a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Globals::getLedRedPin</definition>
+        <argsstring>()</argsstring>
+        <name>getLedRedPin</name>
+        <qualifiedname>Globals::getLedRedPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="36" column="13" bodyfile="src/utils/Globals.h" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1a27e735a20b539795eaa6e85e0e11d439" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Globals::getLedGreenPin</definition>
+        <argsstring>()</argsstring>
+        <name>getLedGreenPin</name>
+        <qualifiedname>Globals::getLedGreenPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="40" column="13" bodyfile="src/utils/Globals.h" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_globals_1ad26e9e618106929950d8e3db73503192" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Globals::getLedBluePin</definition>
+        <argsstring>()</argsstring>
+        <name>getLedBluePin</name>
+        <qualifiedname>Globals::getLedBluePin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Globals.h" line="44" column="13" bodyfile="src/utils/Globals.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/utils/Globals.h" line="14" column="1" bodyfile="src/utils/Globals.h" bodystart="14" bodyend="58"/>
+    <listofallmembers>
+      <member refid="class_globals_1a442b855f1d7cf07373bbb49bf8ed2fd1" prot="private" virt="non-virtual"><scope>Globals</scope><name>garageDoorPin</name></member>
+      <member refid="class_globals_1a55bec70a13f8568891d2562c90a61aaf" prot="public" virt="non-virtual"><scope>Globals</scope><name>getGarageDoorPin</name></member>
+      <member refid="class_globals_1ad26e9e618106929950d8e3db73503192" prot="public" virt="non-virtual"><scope>Globals</scope><name>getLedBluePin</name></member>
+      <member refid="class_globals_1a27e735a20b539795eaa6e85e0e11d439" prot="public" virt="non-virtual"><scope>Globals</scope><name>getLedGreenPin</name></member>
+      <member refid="class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1" prot="public" virt="non-virtual"><scope>Globals</scope><name>getLedPin</name></member>
+      <member refid="class_globals_1a01698796b983f7841a3b5511efdac98a" prot="public" virt="non-virtual"><scope>Globals</scope><name>getLedRedPin</name></member>
+      <member refid="class_globals_1ae6cfcdccf6b6a84f36b129bee772e349" prot="public" virt="non-virtual"><scope>Globals</scope><name>getMainDoorPin</name></member>
+      <member refid="class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd" prot="public" virt="non-virtual"><scope>Globals</scope><name>getMoodSvm</name></member>
+      <member refid="class_globals_1a86f910f5b2d10c5f23347070b100d1bf" prot="private" virt="non-virtual"><scope>Globals</scope><name>ledBluePin</name></member>
+      <member refid="class_globals_1a642ad0cfe92e1ddce715a368defd6b04" prot="private" virt="non-virtual"><scope>Globals</scope><name>ledGreenPin</name></member>
+      <member refid="class_globals_1a35851fdb3cfc48107ae8759e39d50ec2" prot="private" virt="non-virtual"><scope>Globals</scope><name>ledPin</name></member>
+      <member refid="class_globals_1abe1ccd3ba06e59c5f08189b3b42cf1a4" prot="private" virt="non-virtual"><scope>Globals</scope><name>ledRedPin</name></member>
+      <member refid="class_globals_1a3421d2a47f8be79fd41606664163daf0" prot="private" virt="non-virtual"><scope>Globals</scope><name>mainDoorPin</name></member>
+      <member refid="class_globals_1a925fb095d7649b46c33b64d49001d826" prot="private" virt="non-virtual"><scope>Globals</scope><name>mood_svm</name></member>
+      <member refid="class_globals_1a7e9e2b31d0484acc038684bd8aceff1a" prot="public" virt="non-virtual"><scope>Globals</scope><name>setMoodSvm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

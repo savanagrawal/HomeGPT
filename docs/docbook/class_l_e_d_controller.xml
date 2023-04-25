@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_l_e_d_controller" xml:lang="en-US">
+<title>LEDController Class Reference</title>
+<indexterm><primary>LEDController</primary></indexterm>
+<para>
+<computeroutput>#include &lt;LEDController.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823">LEDController</link> (int ledPin, int redPin, int greenPin, int bluePin)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a">turnOnLED</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de">turnOffLED</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108">setRGBColor</link> (const std::string &amp;color)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa">turnOffRGBLED</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823"/><section>
+    <title>LEDController()</title>
+<indexterm><primary>LEDController</primary><secondary>LEDController</secondary></indexterm>
+<indexterm><primary>LEDController</primary><secondary>LEDController</secondary></indexterm>
+<para><computeroutput>LEDController::LEDController (int ledPin, int redPin, int greenPin, int bluePin)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108"/><section>
+    <title>setRGBColor()</title>
+<indexterm><primary>setRGBColor</primary><secondary>LEDController</secondary></indexterm>
+<indexterm><primary>LEDController</primary><secondary>setRGBColor</secondary></indexterm>
+<para><computeroutput>void LEDController::setRGBColor (const std::string &amp; color)</computeroutput></para></section>
+<anchor xml:id="_class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de"/><section>
+    <title>turnOffLED()</title>
+<indexterm><primary>turnOffLED</primary><secondary>LEDController</secondary></indexterm>
+<indexterm><primary>LEDController</primary><secondary>turnOffLED</secondary></indexterm>
+<para><computeroutput>void LEDController::turnOffLED ( )</computeroutput></para></section>
+<anchor xml:id="_class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa"/><section>
+    <title>turnOffRGBLED()</title>
+<indexterm><primary>turnOffRGBLED</primary><secondary>LEDController</secondary></indexterm>
+<indexterm><primary>LEDController</primary><secondary>turnOffRGBLED</secondary></indexterm>
+<para><computeroutput>void LEDController::turnOffRGBLED ( )</computeroutput></para></section>
+<anchor xml:id="_class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a"/><section>
+    <title>turnOnLED()</title>
+<indexterm><primary>turnOnLED</primary><secondary>LEDController</secondary></indexterm>
+<indexterm><primary>LEDController</primary><secondary>turnOnLED</secondary></indexterm>
+<para><computeroutput>void LEDController::turnOnLED ( )</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/peripherals/<link linkend="__l_e_d_controller_8h">LEDController.h</link>src/peripherals/<link linkend="__l_e_d_controller_8cpp">LEDController.cpp</link></section>
+</section>

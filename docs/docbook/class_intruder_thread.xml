@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_intruder_thread" xml:lang="en-US">
+<title>IntruderThread Class Reference</title>
+<indexterm><primary>IntruderThread</primary></indexterm>
+<para>
+
+<para>Intruder Thread to manage intruder detection functionality. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;IntruderThread.h&gt;</computeroutput>
+</para>
+Inheritance diagram for IntruderThread:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_thread__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for IntruderThread:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_thread__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_intruder_thread_1a25f3a0973f527ca005b0434bce782da0">IntruderThread</link> (cv::VideoCapture camera)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_thread_1a12d01e47a01c1ca8975c8cb1efb7c135">setModule</link> (std::string module)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d">stop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_thread_1a1be46d1be000f41a763289300623c609">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f">join</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Intruder Thread to manage intruder detection functionality. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_intruder_thread_1a25f3a0973f527ca005b0434bce782da0"/><section>
+    <title>IntruderThread()</title>
+<indexterm><primary>IntruderThread</primary><secondary>IntruderThread</secondary></indexterm>
+<indexterm><primary>IntruderThread</primary><secondary>IntruderThread</secondary></indexterm>
+<para><computeroutput>IntruderThread::IntruderThread (cv::VideoCapture camera)<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Contructor for our intruder thread. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f"/><section>
+    <title>join()</title>
+<indexterm><primary>join</primary><secondary>IntruderThread</secondary></indexterm>
+<indexterm><primary>IntruderThread</primary><secondary>join</secondary></indexterm>
+<para><computeroutput>void CppThread::join ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para>
+<para>Waits for the thread to terminate. </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a8ff0fda6b913cc53764caef0e1200f3f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_thread_1a12d01e47a01c1ca8975c8cb1efb7c135"/><section>
+    <title>setModule()</title>
+<indexterm><primary>setModule</primary><secondary>IntruderThread</secondary></indexterm>
+<indexterm><primary>IntruderThread</primary><secondary>setModule</secondary></indexterm>
+<para><computeroutput>void IntruderThread::setModule (std::string module)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_cpp_thread_1a1be46d1be000f41a763289300623c609"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>IntruderThread</secondary></indexterm>
+<indexterm><primary>IntruderThread</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void CppThread::start ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para>
+<para>Starts the thread. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a1be46d1be000f41a763289300623c609_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a1be46d1be000f41a763289300623c609_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>IntruderThread</secondary></indexterm>
+<indexterm><primary>IntruderThread</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void IntruderThread::stop ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_thread_adca3a9fd9fadc77fa40e2a36dbd7df7d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/thread/intruder-detection/<link linkend="__intruder_thread_8h">IntruderThread.h</link>src/thread/intruder-detection/<link linkend="__intruder_thread_8cpp">IntruderThread.cpp</link></section>
+</section>

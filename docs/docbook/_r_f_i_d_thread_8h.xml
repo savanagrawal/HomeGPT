@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_i_d_thread_8h" xml:lang="en-US">
+<title>src/thread/rfid/RFIDThread.h File Reference</title>
+<indexterm><primary>src/thread/rfid/RFIDThread.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../CppThread.h&quot;<?linebreak?>#include &quot;RFID.h&quot;<?linebreak?></programlisting>Include dependency graph for RFIDThread.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_r_f_i_d_thread_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_r_f_i_d_thread_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_r_f_i_d_thread">RFIDThread</link></para>
+
+<para>Rfid Thread to manage rfid detection functionality. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Handle our rfid detection thread. </para>
+</section>
+</section>

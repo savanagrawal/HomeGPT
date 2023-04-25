@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_spi_8h" xml:lang="en-US">
+<title>src/dependencies/spidevpp/libs/spidevpp/spi.h File Reference</title>
+<indexterm><primary>src/dependencies/spidevpp/libs/spidevpp/spi.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;linux/spi/spidev.h&gt;<?linebreak?>#include &lt;chrono&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;cstdint&gt;<?linebreak?>#include &lt;cstddef&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting>Include dependency graph for spi.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="spi_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="spi_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classspidevpp_1_1_spi">spidevpp::Spi</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacespidevpp">spidevpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;class Stream &gt; </para><para>Stream &amp; <link linkend="_namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e">spidevpp::operator&lt;&lt;</link> (Stream &amp;out, const Spi &amp;spi)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

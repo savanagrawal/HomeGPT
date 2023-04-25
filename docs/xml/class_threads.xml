@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_threads" kind="class" language="C++" prot="public">
+    <compoundname>Threads</compoundname>
+    <includes refid="_threads_8h" local="no">Threads.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_threads_1ab556056caf816e26322651f139eb48a2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_intruder_thread" kindref="compound">IntruderThread</ref> *</type>
+        <definition>IntruderThread* Threads::intruderThread</definition>
+        <argsstring></argsstring>
+        <name>intruderThread</name>
+        <qualifiedname>Threads::intruderThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Threads.h" line="26" column="24" bodyfile="src/utils/Threads.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_threads_1a98cc1f4bb6e9e01ab87c86471fa840a3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_mood_thread" kindref="compound">MoodThread</ref></type>
+        <definition>MoodThread Threads::moodThread</definition>
+        <argsstring></argsstring>
+        <name>moodThread</name>
+        <qualifiedname>Threads::moodThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Threads.h" line="27" column="20" bodyfile="src/utils/Threads.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_threads_1a5ecd94bd7d9420d676a75a4974f32e11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Threads::setIntruderThread</definition>
+        <argsstring>(IntruderThread *it)</argsstring>
+        <name>setIntruderThread</name>
+        <qualifiedname>Threads::setIntruderThread</qualifiedname>
+        <param>
+          <type><ref refid="class_intruder_thread" kindref="compound">IntruderThread</ref> *</type>
+          <declname>it</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Threads.h" line="17" column="14" bodyfile="src/utils/Threads.h" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_intruder_thread" kindref="compound">IntruderThread</ref></type>
+        <definition>IntruderThread Threads::getIntruderThread</definition>
+        <argsstring>()</argsstring>
+        <name>getIntruderThread</name>
+        <qualifiedname>Threads::getIntruderThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/Threads.h" line="21" column="24" bodyfile="src/utils/Threads.h" bodystart="21" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/utils/Threads.h" line="15" column="1" bodyfile="src/utils/Threads.h" bodystart="15" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce" prot="public" virt="non-virtual"><scope>Threads</scope><name>getIntruderThread</name></member>
+      <member refid="class_threads_1ab556056caf816e26322651f139eb48a2" prot="private" virt="non-virtual"><scope>Threads</scope><name>intruderThread</name></member>
+      <member refid="class_threads_1a98cc1f4bb6e9e01ab87c86471fa840a3" prot="private" virt="non-virtual"><scope>Threads</scope><name>moodThread</name></member>
+      <member refid="class_threads_1a5ecd94bd7d9420d676a75a4974f32e11" prot="public" virt="non-virtual"><scope>Threads</scope><name>setIntruderThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

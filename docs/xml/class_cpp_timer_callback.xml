@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_cpp_timer_callback" kind="class" language="C++" prot="public">
+    <compoundname>CppTimerCallback</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">CppTimer</basecompoundref>
+    <includes refid="_cpp_timer_callback_8h" local="no">CppTimerCallback.h</includes>
+    <innerclass refid="class_cpp_timer_callback_1_1_runnable" prot="public">CppTimerCallback::Runnable</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cpp_timer_callback_1a578cc701cee7be10f3afab2859eac74f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cpp_timer_callback_1_1_runnable" kindref="compound">Runnable</ref> *</type>
+        <definition>Runnable* CppTimerCallback::cppTimerEventRunnable</definition>
+        <argsstring></argsstring>
+        <name>cppTimerEventRunnable</name>
+        <qualifiedname>CppTimerCallback::cppTimerEventRunnable</qualifiedname>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CppTimerCallback.h" line="36" column="18" bodyfile="src/utils/CppTimerCallback.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cpp_timer_callback_1ae6e815f1c3b65ea4f10fe0332e13acb9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppTimerCallback::registerEventRunnable</definition>
+        <argsstring>(Runnable &amp;h)</argsstring>
+        <name>registerEventRunnable</name>
+        <qualifiedname>CppTimerCallback::registerEventRunnable</qualifiedname>
+        <param>
+          <type><ref refid="class_cpp_timer_callback_1_1_runnable" kindref="compound">Runnable</ref> &amp;</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CppTimerCallback.h" line="21" column="14" bodyfile="src/utils/CppTimerCallback.h" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_timer_callback_1a29d8d5a426a3d15bca8a42c2c897f50f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppTimerCallback::unregisterEventRunnable</definition>
+        <argsstring>()</argsstring>
+        <name>unregisterEventRunnable</name>
+        <qualifiedname>CppTimerCallback::unregisterEventRunnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CppTimerCallback.h" line="25" column="14" bodyfile="src/utils/CppTimerCallback.h" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_timer_callback_1af6b39f5eb8e98bfc1b301ac3f25276e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppTimerCallback::timerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>timerEvent</name>
+        <qualifiedname>CppTimerCallback::timerEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CppTimerCallback.h" line="29" column="14" bodyfile="src/utils/CppTimerCallback.h" bodystart="29" bodyend="33"/>
+        <references refid="class_cpp_timer_callback_1_1_runnable_1af8d11a3b580e76431151e76ac1886e6e">CppTimerCallback::Runnable::run</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>CppTimerCallback</label>
+        <link refid="class_cpp_timer_callback"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>CppTimerCallback</label>
+        <link refid="class_cpp_timer_callback"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/utils/CppTimerCallback.h" line="8" column="1" bodyfile="src/utils/CppTimerCallback.h" bodystart="8" bodyend="38"/>
+    <listofallmembers>
+      <member refid="class_cpp_timer_callback_1a578cc701cee7be10f3afab2859eac74f" prot="private" virt="non-virtual"><scope>CppTimerCallback</scope><name>cppTimerEventRunnable</name></member>
+      <member refid="class_cpp_timer_callback_1ae6e815f1c3b65ea4f10fe0332e13acb9" prot="public" virt="non-virtual"><scope>CppTimerCallback</scope><name>registerEventRunnable</name></member>
+      <member refid="class_cpp_timer_callback_1af6b39f5eb8e98bfc1b301ac3f25276e9" prot="public" virt="non-virtual"><scope>CppTimerCallback</scope><name>timerEvent</name></member>
+      <member refid="class_cpp_timer_callback_1a29d8d5a426a3d15bca8a42c2c897f50f" prot="public" virt="non-virtual"><scope>CppTimerCallback</scope><name>unregisterEventRunnable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

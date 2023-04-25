@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__controller_thread_8h_source" xml:lang="en-US">
+<title>ControllerThread.h</title>
+<indexterm><primary>src/thread/ControllerThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;CONTROLLER_THREAD_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;CONTROLLER_THREAD_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__cpp_thread_8h">CppThread.h</link>&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+15 <emphasis role="comment">//&#32;#include&#32;&quot;Controller.h&quot;</emphasis>
+16 
+21 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_controller_thread">ControllerThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_cpp_thread">CppThread</link>&#32;{
+22 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_controller_thread_1a00cd6502504f5f1e680e6be3f60a987d">ControllerThread</link>()&#32;{}
+27 
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_controller_thread_1a53ad3a44cd24e685c06262380ea6c5b8">setArgs</link>(<emphasis role="keywordtype">int</emphasis>&#32;ac,&#32;std::vector&lt;std::string&gt;&#32;av)&#32;{
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ControllerThread::argc&#32;=&#32;ac;
+30 
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(ac&#32;&gt;&#32;1)&#32;{
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;ac;&#32;i++){
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ControllerThread::argv.push_back(av[i]);
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;run();
+39 &#32;&#32;&#32;&#32;
+40 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;argc&#32;=&#32;1;
+42 
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;argv;
+44 
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;argvEnum&#32;{
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CreateIntruderDataset,
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;TrainIntruderModel,
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DetectIntruder,
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DetectClap,
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;RfidStart,
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Debug,
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;IntruderMoodDetectionStart
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+54 
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;std::string,&#32;argvEnum&gt;&#32;argvValues&#32;=&#32;{
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--create-intruder-dataset&quot;</emphasis>,&#32;CreateIntruderDataset},
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--cid&quot;</emphasis>,&#32;CreateIntruderDataset},
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--train-intruder-model&quot;</emphasis>,&#32;TrainIntruderModel},
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--tim&quot;</emphasis>,&#32;TrainIntruderModel},
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--detect-intruder&quot;</emphasis>,&#32;DetectIntruder},
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--di&quot;</emphasis>,&#32;DetectIntruder},
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--detect-clap&quot;</emphasis>,&#32;DetectClap},
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--dc&quot;</emphasis>,&#32;DetectClap},
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--rfid&quot;</emphasis>,&#32;RfidStart},
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--d&quot;</emphasis>,&#32;Debug},
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="stringliteral">&quot;--imd&quot;</emphasis>,&#32;IntruderMoodDetectionStart}
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+68 };
+69 
+70 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

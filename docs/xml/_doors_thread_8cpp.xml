@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_doors_thread_8cpp" kind="file" language="C++">
+    <compoundname>DoorsThread.cpp</compoundname>
+    <includes local="yes">EventHandler.h</includes>
+    <includes refid="_globals_8h" local="yes">../../utils/Globals.h</includes>
+    <includes refid="_servo_motor_8h" local="yes">ServoMotor.h</includes>
+    <includes refid="_l_e_d_controller_8h" local="yes">LEDController.h</includes>
+    <includes refid="_doors_thread_8h" local="yes">DoorsThread.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">thread</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>LEDController.h</label>
+        <link refid="_l_e_d_controller_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>ServoMotor.h</label>
+        <link refid="_servo_motor_8h"/>
+      </node>
+      <node id="10">
+        <label>../CppThread.h</label>
+        <link refid="_cpp_thread_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/thread/doors/DoorsThread.cpp</label>
+        <link refid="_doors_thread_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DoorsThread.h</label>
+        <link refid="_doors_thread_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../../utils/Globals.h</label>
+        <link refid="_globals_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>EventHandler.h</label>
+      </node>
+      <node id="4">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="12">
+        <label>stdio.h</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>thread</label>
+      </node>
+      <node id="7">
+        <label>wiringPi.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EVENT_OP_CODES</name>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" prot="public">
+          <name>EXIT_APPLICATION</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/doors/DoorsThread.cpp" line="17" column="1" bodyfile="src/thread/doors/DoorsThread.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;EventHandler.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../utils/Globals.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_servo_motor_8h" kindref="compound">ServoMotor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_e_d_controller_8h" kindref="compound">LEDController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_doors_thread_8h" kindref="compound">DoorsThread.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kindref="member">EVENT_OP_CODES</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kindref="member">EXIT_APPLICATION</ref><sp/>=<sp/>255</highlight></codeline>
+<codeline lineno="21" refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DoorsThread::run(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Doors<sp/>Thread...\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_event_handler" kindref="compound">EventHandler</ref>&amp;<sp/>eventHandler<sp/>=<sp/><ref refid="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" kindref="member">EventHandler::getInstance</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!eventHandler.<ref refid="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" kindref="member">isEventRegistered</ref>(Event::OpenGarageDoor)){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" kindref="member">addListener</ref>(Event::OpenGarageDoor,<sp/>[&amp;](){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>are<sp/>authenticated,<sp/>so<sp/>we<sp/>will<sp/>open<sp/>our<sp/>garage<sp/>door.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_servo_motor" kindref="compound">ServoMotor</ref><sp/>garageDoor(globals.<ref refid="class_globals_1a55bec70a13f8568891d2562c90a61aaf" kindref="member">getGarageDoorPin</ref>());</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_globals" kindref="compound">Globals</ref><sp/>globals;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_l_e_d_controller" kindref="compound">LEDController</ref><sp/>ledController(globals.<ref refid="class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1" kindref="member">getLedPin</ref>(),<sp/>globals.<ref refid="class_globals_1a01698796b983f7841a3b5511efdac98a" kindref="member">getLedRedPin</ref>(),<sp/>globals.<ref refid="class_globals_1a27e735a20b539795eaa6e85e0e11d439" kindref="member">getLedGreenPin</ref>(),<sp/>globals.<ref refid="class_globals_1ad26e9e618106929950d8e3db73503192" kindref="member">getLedBluePin</ref>());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ledController.<ref refid="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" kindref="member">turnOnLED</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>garageDoor.<ref refid="class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d" kindref="member">write</ref>(90);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kindref="member">emit</ref>(Event::OpenedGarageDoor);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::sleep_for(std::chrono::seconds(5));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kindref="member">emit</ref>(Event::CloseGarageDoor);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>garageDoor.<ref refid="class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d" kindref="member">write</ref>(0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eventHandler.<ref refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kindref="member">emit</ref>(Event::ClosedGarageDoor);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::sleep_for(std::chrono::seconds(10));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ledController.<ref refid="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" kindref="member">turnOffLED</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/thread/doors/DoorsThread.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2040 @@
+.TH "mfrc522::MFRC522" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mfrc522::MFRC522
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mfrc522\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBMIFARE_Key\fP"
+.br
+.ti -1c
+.RI "struct \fBUid\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPCD_Register\fP { \fBCommandReg\fP = 0x01 << 1, \fBComIEnReg\fP = 0x02 << 1, \fBDivIEnReg\fP = 0x03 << 1, \fBComIrqReg\fP = 0x04 << 1, \fBDivIrqReg\fP = 0x05 << 1, \fBErrorReg\fP = 0x06 << 1, \fBStatus1Reg\fP = 0x07 << 1, \fBStatus2Reg\fP = 0x08 << 1, \fBFIFODataReg\fP = 0x09 << 1, \fBFIFOLevelReg\fP = 0x0A << 1, \fBWaterLevelReg\fP = 0x0B << 1, \fBControlReg\fP = 0x0C << 1, \fBBitFramingReg\fP = 0x0D << 1, \fBCollReg\fP = 0x0E << 1, \fBModeReg\fP = 0x11 << 1, \fBTxModeReg\fP = 0x12 << 1, \fBRxModeReg\fP = 0x13 << 1, \fBTxControlReg\fP = 0x14 << 1, \fBTxASKReg\fP = 0x15 << 1, \fBTxSelReg\fP = 0x16 << 1, \fBRxSelReg\fP = 0x17 << 1, \fBRxThresholdReg\fP = 0x18 << 1, \fBDemodReg\fP = 0x19 << 1, \fBMfTxReg\fP = 0x1C << 1, \fBMfRxReg\fP = 0x1D << 1, \fBSerialSpeedReg\fP = 0x1F << 1, \fBCRCResultRegH\fP = 0x21 << 1, \fBCRCResultRegL\fP = 0x22 << 1, \fBModWidthReg\fP = 0x24 << 1, \fBRFCfgReg\fP = 0x26 << 1, \fBGsNReg\fP = 0x27 << 1, \fBCWGsPReg\fP = 0x28 << 1, \fBModGsPReg\fP = 0x29 << 1, \fBTModeReg\fP = 0x2A << 1, \fBTPrescalerReg\fP = 0x2B << 1, \fBTReloadRegH\fP = 0x2C << 1, \fBTReloadRegL\fP = 0x2D << 1, \fBTCounterValueRegH\fP = 0x2E << 1, \fBTCounterValueRegL\fP = 0x2F << 1, \fBTestSel1Reg\fP = 0x31 << 1, \fBTestSel2Reg\fP = 0x32 << 1, \fBTestPinEnReg\fP = 0x33 << 1, \fBTestPinValueReg\fP = 0x34 << 1, \fBTestBusReg\fP = 0x35 << 1, \fBAutoTestReg\fP = 0x36 << 1, \fBVersionReg\fP = 0x37 << 1, \fBAnalogTestReg\fP = 0x38 << 1, \fBTestDAC1Reg\fP = 0x39 << 1, \fBTestDAC2Reg\fP = 0x3A << 1, \fBTestADCReg\fP = 0x3B << 1, \fBCommandReg\fP = 0x01 << 1, \fBComIEnReg\fP = 0x02 << 1, \fBDivIEnReg\fP = 0x03 << 1, \fBComIrqReg\fP = 0x04 << 1, \fBDivIrqReg\fP = 0x05 << 1, \fBErrorReg\fP = 0x06 << 1, \fBStatus1Reg\fP = 0x07 << 1, \fBStatus2Reg\fP = 0x08 << 1, \fBFIFODataReg\fP = 0x09 << 1, \fBFIFOLevelReg\fP = 0x0A << 1, \fBWaterLevelReg\fP = 0x0B << 1, \fBControlReg\fP = 0x0C << 1, \fBBitFramingReg\fP = 0x0D << 1, \fBCollReg\fP = 0x0E << 1, \fBModeReg\fP = 0x11 << 1, \fBTxModeReg\fP = 0x12 << 1, \fBRxModeReg\fP = 0x13 << 1, \fBTxControlReg\fP = 0x14 << 1, \fBTxASKReg\fP = 0x15 << 1, \fBTxSelReg\fP = 0x16 << 1, \fBRxSelReg\fP = 0x17 << 1, \fBRxThresholdReg\fP = 0x18 << 1, \fBDemodReg\fP = 0x19 << 1, \fBMfTxReg\fP = 0x1C << 1, \fBMfRxReg\fP = 0x1D << 1, \fBSerialSpeedReg\fP = 0x1F << 1, \fBCRCResultRegH\fP = 0x21 << 1, \fBCRCResultRegL\fP = 0x22 << 1, \fBModWidthReg\fP = 0x24 << 1, \fBRFCfgReg\fP = 0x26 << 1, \fBGsNReg\fP = 0x27 << 1, \fBCWGsPReg\fP = 0x28 << 1, \fBModGsPReg\fP = 0x29 << 1, \fBTModeReg\fP = 0x2A << 1, \fBTPrescalerReg\fP = 0x2B << 1, \fBTReloadRegH\fP = 0x2C << 1, \fBTReloadRegL\fP = 0x2D << 1, \fBTCounterValueRegH\fP = 0x2E << 1, \fBTCounterValueRegL\fP = 0x2F << 1, \fBTestSel1Reg\fP = 0x31 << 1, \fBTestSel2Reg\fP = 0x32 << 1, \fBTestPinEnReg\fP = 0x33 << 1, \fBTestPinValueReg\fP = 0x34 << 1, \fBTestBusReg\fP = 0x35 << 1, \fBAutoTestReg\fP = 0x36 << 1, \fBVersionReg\fP = 0x37 << 1, \fBAnalogTestReg\fP = 0x38 << 1, \fBTestDAC1Reg\fP = 0x39 << 1, \fBTestDAC2Reg\fP = 0x3A << 1, \fBTestADCReg\fP = 0x3B << 1 }"
+.br
+.ti -1c
+.RI "enum \fBPCD_Command\fP { \fBPCD_Idle\fP = 0x00, \fBPCD_Mem\fP = 0x01, \fBPCD_GenerateRandomID\fP = 0x02, \fBPCD_CalcCRC\fP = 0x03, \fBPCD_Transmit\fP = 0x04, \fBPCD_NoCmdChange\fP = 0x07, \fBPCD_Receive\fP = 0x08, \fBPCD_Transceive\fP = 0x0C, \fBPCD_MFAuthent\fP = 0x0E, \fBPCD_SoftReset\fP = 0x0F, \fBPCD_Idle\fP = 0x00, \fBPCD_Mem\fP = 0x01, \fBPCD_GenerateRandomID\fP = 0x02, \fBPCD_CalcCRC\fP = 0x03, \fBPCD_Transmit\fP = 0x04, \fBPCD_NoCmdChange\fP = 0x07, \fBPCD_Receive\fP = 0x08, \fBPCD_Transceive\fP = 0x0C, \fBPCD_MFAuthent\fP = 0x0E, \fBPCD_SoftReset\fP = 0x0F }"
+.br
+.ti -1c
+.RI "enum \fBPCD_RxGain\fP { \fBRxGain_18dB\fP = 0x00 << 4, \fBRxGain_23dB\fP = 0x01 << 4, \fBRxGain_18dB_2\fP = 0x02 << 4, \fBRxGain_23dB_2\fP = 0x03 << 4, \fBRxGain_33dB\fP = 0x04 << 4, \fBRxGain_38dB\fP = 0x05 << 4, \fBRxGain_43dB\fP = 0x06 << 4, \fBRxGain_48dB\fP = 0x07 << 4, \fBRxGain_min\fP = 0x00 << 4, \fBRxGain_avg\fP = 0x04 << 4, \fBRxGain_max\fP = 0x07 << 4, \fBRxGain_18dB\fP = 0x00 << 4, \fBRxGain_23dB\fP = 0x01 << 4, \fBRxGain_18dB_2\fP = 0x02 << 4, \fBRxGain_23dB_2\fP = 0x03 << 4, \fBRxGain_33dB\fP = 0x04 << 4, \fBRxGain_38dB\fP = 0x05 << 4, \fBRxGain_43dB\fP = 0x06 << 4, \fBRxGain_48dB\fP = 0x07 << 4, \fBRxGain_min\fP = 0x00 << 4, \fBRxGain_avg\fP = 0x04 << 4, \fBRxGain_max\fP = 0x07 << 4 }"
+.br
+.ti -1c
+.RI "enum \fBPICC_Command\fP { \fBPICC_CMD_REQA\fP = 0x26, \fBPICC_CMD_WUPA\fP = 0x52, \fBPICC_CMD_CT\fP = 0x88, \fBPICC_CMD_SEL_CL1\fP = 0x93, \fBPICC_CMD_SEL_CL2\fP = 0x95, \fBPICC_CMD_SEL_CL3\fP = 0x97, \fBPICC_CMD_HLTA\fP = 0x50, \fBPICC_CMD_MF_AUTH_KEY_A\fP = 0x60, \fBPICC_CMD_MF_AUTH_KEY_B\fP = 0x61, \fBPICC_CMD_MF_READ\fP = 0x30, \fBPICC_CMD_MF_WRITE\fP = 0xA0, \fBPICC_CMD_MF_DECREMENT\fP = 0xC0, \fBPICC_CMD_MF_INCREMENT\fP = 0xC1, \fBPICC_CMD_MF_RESTORE\fP = 0xC2, \fBPICC_CMD_MF_TRANSFER\fP = 0xB0, \fBPICC_CMD_UL_WRITE\fP = 0xA2, \fBPICC_CMD_REQA\fP = 0x26, \fBPICC_CMD_WUPA\fP = 0x52, \fBPICC_CMD_CT\fP = 0x88, \fBPICC_CMD_SEL_CL1\fP = 0x93, \fBPICC_CMD_SEL_CL2\fP = 0x95, \fBPICC_CMD_SEL_CL3\fP = 0x97, \fBPICC_CMD_HLTA\fP = 0x50, \fBPICC_CMD_MF_AUTH_KEY_A\fP = 0x60, \fBPICC_CMD_MF_AUTH_KEY_B\fP = 0x61, \fBPICC_CMD_MF_READ\fP = 0x30, \fBPICC_CMD_MF_WRITE\fP = 0xA0, \fBPICC_CMD_MF_DECREMENT\fP = 0xC0, \fBPICC_CMD_MF_INCREMENT\fP = 0xC1, \fBPICC_CMD_MF_RESTORE\fP = 0xC2, \fBPICC_CMD_MF_TRANSFER\fP = 0xB0, \fBPICC_CMD_UL_WRITE\fP = 0xA2 }"
+.br
+.ti -1c
+.RI "enum \fBMIFARE_Misc\fP { \fBMF_ACK\fP = 0xA, \fBMF_KEY_SIZE\fP = 6, \fBMF_ACK\fP = 0xA, \fBMF_KEY_SIZE\fP = 6 }"
+.br
+.ti -1c
+.RI "enum \fBPICC_Type\fP { \fBPICC_TYPE_UNKNOWN\fP = 0, \fBPICC_TYPE_ISO_14443_4\fP = 1, \fBPICC_TYPE_ISO_18092\fP = 2, \fBPICC_TYPE_MIFARE_MINI\fP = 3, \fBPICC_TYPE_MIFARE_1K\fP = 4, \fBPICC_TYPE_MIFARE_4K\fP = 5, \fBPICC_TYPE_MIFARE_UL\fP = 6, \fBPICC_TYPE_MIFARE_PLUS\fP = 7, \fBPICC_TYPE_TNP3XXX\fP = 8, \fBPICC_TYPE_NOT_COMPLETE\fP = 255, \fBPICC_TYPE_UNKNOWN\fP = 0, \fBPICC_TYPE_ISO_14443_4\fP = 1, \fBPICC_TYPE_ISO_18092\fP = 2, \fBPICC_TYPE_MIFARE_MINI\fP = 3, \fBPICC_TYPE_MIFARE_1K\fP = 4, \fBPICC_TYPE_MIFARE_4K\fP = 5, \fBPICC_TYPE_MIFARE_UL\fP = 6, \fBPICC_TYPE_MIFARE_PLUS\fP = 7, \fBPICC_TYPE_TNP3XXX\fP = 8, \fBPICC_TYPE_NOT_COMPLETE\fP = 255 }"
+.br
+.ti -1c
+.RI "enum \fBStatusCode\fP { \fBSTATUS_OK\fP = 1, \fBSTATUS_ERROR\fP = 2, \fBSTATUS_COLLISION\fP = 3, \fBSTATUS_TIMEOUT\fP = 4, \fBSTATUS_NO_ROOM\fP = 5, \fBSTATUS_INTERNAL_ERROR\fP = 6, \fBSTATUS_INVALID\fP = 7, \fBSTATUS_CRC_WRONG\fP = 8, \fBSTATUS_MIFARE_NACK\fP = 9, \fBSTATUS_OK\fP = 1, \fBSTATUS_ERROR\fP = 2, \fBSTATUS_COLLISION\fP = 3, \fBSTATUS_TIMEOUT\fP = 4, \fBSTATUS_NO_ROOM\fP = 5, \fBSTATUS_INTERNAL_ERROR\fP = 6, \fBSTATUS_INVALID\fP = 7, \fBSTATUS_CRC_WRONG\fP = 8, \fBSTATUS_MIFARE_NACK\fP = 9 }"
+.br
+.ti -1c
+.RI "enum \fBPCD_Register\fP { \fBCommandReg\fP = 0x01 << 1, \fBComIEnReg\fP = 0x02 << 1, \fBDivIEnReg\fP = 0x03 << 1, \fBComIrqReg\fP = 0x04 << 1, \fBDivIrqReg\fP = 0x05 << 1, \fBErrorReg\fP = 0x06 << 1, \fBStatus1Reg\fP = 0x07 << 1, \fBStatus2Reg\fP = 0x08 << 1, \fBFIFODataReg\fP = 0x09 << 1, \fBFIFOLevelReg\fP = 0x0A << 1, \fBWaterLevelReg\fP = 0x0B << 1, \fBControlReg\fP = 0x0C << 1, \fBBitFramingReg\fP = 0x0D << 1, \fBCollReg\fP = 0x0E << 1, \fBModeReg\fP = 0x11 << 1, \fBTxModeReg\fP = 0x12 << 1, \fBRxModeReg\fP = 0x13 << 1, \fBTxControlReg\fP = 0x14 << 1, \fBTxASKReg\fP = 0x15 << 1, \fBTxSelReg\fP = 0x16 << 1, \fBRxSelReg\fP = 0x17 << 1, \fBRxThresholdReg\fP = 0x18 << 1, \fBDemodReg\fP = 0x19 << 1, \fBMfTxReg\fP = 0x1C << 1, \fBMfRxReg\fP = 0x1D << 1, \fBSerialSpeedReg\fP = 0x1F << 1, \fBCRCResultRegH\fP = 0x21 << 1, \fBCRCResultRegL\fP = 0x22 << 1, \fBModWidthReg\fP = 0x24 << 1, \fBRFCfgReg\fP = 0x26 << 1, \fBGsNReg\fP = 0x27 << 1, \fBCWGsPReg\fP = 0x28 << 1, \fBModGsPReg\fP = 0x29 << 1, \fBTModeReg\fP = 0x2A << 1, \fBTPrescalerReg\fP = 0x2B << 1, \fBTReloadRegH\fP = 0x2C << 1, \fBTReloadRegL\fP = 0x2D << 1, \fBTCounterValueRegH\fP = 0x2E << 1, \fBTCounterValueRegL\fP = 0x2F << 1, \fBTestSel1Reg\fP = 0x31 << 1, \fBTestSel2Reg\fP = 0x32 << 1, \fBTestPinEnReg\fP = 0x33 << 1, \fBTestPinValueReg\fP = 0x34 << 1, \fBTestBusReg\fP = 0x35 << 1, \fBAutoTestReg\fP = 0x36 << 1, \fBVersionReg\fP = 0x37 << 1, \fBAnalogTestReg\fP = 0x38 << 1, \fBTestDAC1Reg\fP = 0x39 << 1, \fBTestDAC2Reg\fP = 0x3A << 1, \fBTestADCReg\fP = 0x3B << 1, \fBCommandReg\fP = 0x01 << 1, \fBComIEnReg\fP = 0x02 << 1, \fBDivIEnReg\fP = 0x03 << 1, \fBComIrqReg\fP = 0x04 << 1, \fBDivIrqReg\fP = 0x05 << 1, \fBErrorReg\fP = 0x06 << 1, \fBStatus1Reg\fP = 0x07 << 1, \fBStatus2Reg\fP = 0x08 << 1, \fBFIFODataReg\fP = 0x09 << 1, \fBFIFOLevelReg\fP = 0x0A << 1, \fBWaterLevelReg\fP = 0x0B << 1, \fBControlReg\fP = 0x0C << 1, \fBBitFramingReg\fP = 0x0D << 1, \fBCollReg\fP = 0x0E << 1, \fBModeReg\fP = 0x11 << 1, \fBTxModeReg\fP = 0x12 << 1, \fBRxModeReg\fP = 0x13 << 1, \fBTxControlReg\fP = 0x14 << 1, \fBTxASKReg\fP = 0x15 << 1, \fBTxSelReg\fP = 0x16 << 1, \fBRxSelReg\fP = 0x17 << 1, \fBRxThresholdReg\fP = 0x18 << 1, \fBDemodReg\fP = 0x19 << 1, \fBMfTxReg\fP = 0x1C << 1, \fBMfRxReg\fP = 0x1D << 1, \fBSerialSpeedReg\fP = 0x1F << 1, \fBCRCResultRegH\fP = 0x21 << 1, \fBCRCResultRegL\fP = 0x22 << 1, \fBModWidthReg\fP = 0x24 << 1, \fBRFCfgReg\fP = 0x26 << 1, \fBGsNReg\fP = 0x27 << 1, \fBCWGsPReg\fP = 0x28 << 1, \fBModGsPReg\fP = 0x29 << 1, \fBTModeReg\fP = 0x2A << 1, \fBTPrescalerReg\fP = 0x2B << 1, \fBTReloadRegH\fP = 0x2C << 1, \fBTReloadRegL\fP = 0x2D << 1, \fBTCounterValueRegH\fP = 0x2E << 1, \fBTCounterValueRegL\fP = 0x2F << 1, \fBTestSel1Reg\fP = 0x31 << 1, \fBTestSel2Reg\fP = 0x32 << 1, \fBTestPinEnReg\fP = 0x33 << 1, \fBTestPinValueReg\fP = 0x34 << 1, \fBTestBusReg\fP = 0x35 << 1, \fBAutoTestReg\fP = 0x36 << 1, \fBVersionReg\fP = 0x37 << 1, \fBAnalogTestReg\fP = 0x38 << 1, \fBTestDAC1Reg\fP = 0x39 << 1, \fBTestDAC2Reg\fP = 0x3A << 1, \fBTestADCReg\fP = 0x3B << 1 }"
+.br
+.ti -1c
+.RI "enum \fBPCD_Command\fP { \fBPCD_Idle\fP = 0x00, \fBPCD_Mem\fP = 0x01, \fBPCD_GenerateRandomID\fP = 0x02, \fBPCD_CalcCRC\fP = 0x03, \fBPCD_Transmit\fP = 0x04, \fBPCD_NoCmdChange\fP = 0x07, \fBPCD_Receive\fP = 0x08, \fBPCD_Transceive\fP = 0x0C, \fBPCD_MFAuthent\fP = 0x0E, \fBPCD_SoftReset\fP = 0x0F, \fBPCD_Idle\fP = 0x00, \fBPCD_Mem\fP = 0x01, \fBPCD_GenerateRandomID\fP = 0x02, \fBPCD_CalcCRC\fP = 0x03, \fBPCD_Transmit\fP = 0x04, \fBPCD_NoCmdChange\fP = 0x07, \fBPCD_Receive\fP = 0x08, \fBPCD_Transceive\fP = 0x0C, \fBPCD_MFAuthent\fP = 0x0E, \fBPCD_SoftReset\fP = 0x0F }"
+.br
+.ti -1c
+.RI "enum \fBPCD_RxGain\fP { \fBRxGain_18dB\fP = 0x00 << 4, \fBRxGain_23dB\fP = 0x01 << 4, \fBRxGain_18dB_2\fP = 0x02 << 4, \fBRxGain_23dB_2\fP = 0x03 << 4, \fBRxGain_33dB\fP = 0x04 << 4, \fBRxGain_38dB\fP = 0x05 << 4, \fBRxGain_43dB\fP = 0x06 << 4, \fBRxGain_48dB\fP = 0x07 << 4, \fBRxGain_min\fP = 0x00 << 4, \fBRxGain_avg\fP = 0x04 << 4, \fBRxGain_max\fP = 0x07 << 4, \fBRxGain_18dB\fP = 0x00 << 4, \fBRxGain_23dB\fP = 0x01 << 4, \fBRxGain_18dB_2\fP = 0x02 << 4, \fBRxGain_23dB_2\fP = 0x03 << 4, \fBRxGain_33dB\fP = 0x04 << 4, \fBRxGain_38dB\fP = 0x05 << 4, \fBRxGain_43dB\fP = 0x06 << 4, \fBRxGain_48dB\fP = 0x07 << 4, \fBRxGain_min\fP = 0x00 << 4, \fBRxGain_avg\fP = 0x04 << 4, \fBRxGain_max\fP = 0x07 << 4 }"
+.br
+.ti -1c
+.RI "enum \fBPICC_Command\fP { \fBPICC_CMD_REQA\fP = 0x26, \fBPICC_CMD_WUPA\fP = 0x52, \fBPICC_CMD_CT\fP = 0x88, \fBPICC_CMD_SEL_CL1\fP = 0x93, \fBPICC_CMD_SEL_CL2\fP = 0x95, \fBPICC_CMD_SEL_CL3\fP = 0x97, \fBPICC_CMD_HLTA\fP = 0x50, \fBPICC_CMD_MF_AUTH_KEY_A\fP = 0x60, \fBPICC_CMD_MF_AUTH_KEY_B\fP = 0x61, \fBPICC_CMD_MF_READ\fP = 0x30, \fBPICC_CMD_MF_WRITE\fP = 0xA0, \fBPICC_CMD_MF_DECREMENT\fP = 0xC0, \fBPICC_CMD_MF_INCREMENT\fP = 0xC1, \fBPICC_CMD_MF_RESTORE\fP = 0xC2, \fBPICC_CMD_MF_TRANSFER\fP = 0xB0, \fBPICC_CMD_UL_WRITE\fP = 0xA2, \fBPICC_CMD_REQA\fP = 0x26, \fBPICC_CMD_WUPA\fP = 0x52, \fBPICC_CMD_CT\fP = 0x88, \fBPICC_CMD_SEL_CL1\fP = 0x93, \fBPICC_CMD_SEL_CL2\fP = 0x95, \fBPICC_CMD_SEL_CL3\fP = 0x97, \fBPICC_CMD_HLTA\fP = 0x50, \fBPICC_CMD_MF_AUTH_KEY_A\fP = 0x60, \fBPICC_CMD_MF_AUTH_KEY_B\fP = 0x61, \fBPICC_CMD_MF_READ\fP = 0x30, \fBPICC_CMD_MF_WRITE\fP = 0xA0, \fBPICC_CMD_MF_DECREMENT\fP = 0xC0, \fBPICC_CMD_MF_INCREMENT\fP = 0xC1, \fBPICC_CMD_MF_RESTORE\fP = 0xC2, \fBPICC_CMD_MF_TRANSFER\fP = 0xB0, \fBPICC_CMD_UL_WRITE\fP = 0xA2 }"
+.br
+.ti -1c
+.RI "enum \fBMIFARE_Misc\fP { \fBMF_ACK\fP = 0xA, \fBMF_KEY_SIZE\fP = 6, \fBMF_ACK\fP = 0xA, \fBMF_KEY_SIZE\fP = 6 }"
+.br
+.ti -1c
+.RI "enum \fBPICC_Type\fP { \fBPICC_TYPE_UNKNOWN\fP = 0, \fBPICC_TYPE_ISO_14443_4\fP = 1, \fBPICC_TYPE_ISO_18092\fP = 2, \fBPICC_TYPE_MIFARE_MINI\fP = 3, \fBPICC_TYPE_MIFARE_1K\fP = 4, \fBPICC_TYPE_MIFARE_4K\fP = 5, \fBPICC_TYPE_MIFARE_UL\fP = 6, \fBPICC_TYPE_MIFARE_PLUS\fP = 7, \fBPICC_TYPE_TNP3XXX\fP = 8, \fBPICC_TYPE_NOT_COMPLETE\fP = 255, \fBPICC_TYPE_UNKNOWN\fP = 0, \fBPICC_TYPE_ISO_14443_4\fP = 1, \fBPICC_TYPE_ISO_18092\fP = 2, \fBPICC_TYPE_MIFARE_MINI\fP = 3, \fBPICC_TYPE_MIFARE_1K\fP = 4, \fBPICC_TYPE_MIFARE_4K\fP = 5, \fBPICC_TYPE_MIFARE_UL\fP = 6, \fBPICC_TYPE_MIFARE_PLUS\fP = 7, \fBPICC_TYPE_TNP3XXX\fP = 8, \fBPICC_TYPE_NOT_COMPLETE\fP = 255 }"
+.br
+.ti -1c
+.RI "enum \fBStatusCode\fP { \fBSTATUS_OK\fP = 1, \fBSTATUS_ERROR\fP = 2, \fBSTATUS_COLLISION\fP = 3, \fBSTATUS_TIMEOUT\fP = 4, \fBSTATUS_NO_ROOM\fP = 5, \fBSTATUS_INTERNAL_ERROR\fP = 6, \fBSTATUS_INVALID\fP = 7, \fBSTATUS_CRC_WRONG\fP = 8, \fBSTATUS_MIFARE_NACK\fP = 9, \fBSTATUS_OK\fP = 1, \fBSTATUS_ERROR\fP = 2, \fBSTATUS_COLLISION\fP = 3, \fBSTATUS_TIMEOUT\fP = 4, \fBSTATUS_NO_ROOM\fP = 5, \fBSTATUS_INTERNAL_ERROR\fP = 6, \fBSTATUS_INVALID\fP = 7, \fBSTATUS_CRC_WRONG\fP = 8, \fBSTATUS_MIFARE_NACK\fP = 9 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMFRC522\fP (\fBISpi\fP &, \fBIGpio\fP &resetPin)"
+.br
+.ti -1c
+.RI "void \fBPCD_WriteRegister\fP (uint8_t reg, uint8_t value)"
+.br
+.ti -1c
+.RI "void \fBPCD_WriteRegister\fP (uint8_t reg, uint8_t count, uint8_t *values)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_ReadRegister\fP (uint8_t reg)"
+.br
+.ti -1c
+.RI "void \fBPCD_ReadRegister\fP (uint8_t reg, uint8_t count, uint8_t *values, uint8_t rxAlign=0)"
+.br
+.ti -1c
+.RI "void \fBsetBitMask\fP (unsigned char reg, unsigned char mask)"
+.br
+.ti -1c
+.RI "void \fBPCD_SetRegisterBitMask\fP (uint8_t reg, uint8_t mask)"
+.br
+.ti -1c
+.RI "void \fBPCD_ClearRegisterBitMask\fP (uint8_t reg, uint8_t mask)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_CalculateCRC\fP (uint8_t *data, uint8_t length, uint8_t *result)"
+.br
+.ti -1c
+.RI "void \fBPCD_Init\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_Reset\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_AntennaOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_AntennaOff\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_GetAntennaGain\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_SetAntennaGain\fP (uint8_t mask)"
+.br
+.ti -1c
+.RI "bool \fBPCD_PerformSelfTest\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_TransceiveData\fP (uint8_t *sendData, uint8_t sendLen, uint8_t *backData, uint8_t *backLen, uint8_t *validBits=NULL, uint8_t rxAlign=0, bool checkCRC=false)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_CommunicateWithPICC\fP (uint8_t command, uint8_t waitIRq, uint8_t *sendData, uint8_t sendLen, uint8_t *backData=NULL, uint8_t *backLen=NULL, uint8_t *validBits=NULL, uint8_t rxAlign=0, bool checkCRC=false)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_RequestA\fP (uint8_t *bufferATQA, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_WakeupA\fP (uint8_t *bufferATQA, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_REQA_or_WUPA\fP (uint8_t command, uint8_t *bufferATQA, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_Select\fP (\fBUid\fP *\fBuid\fP, uint8_t validBits=0)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_HaltA\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_Authenticate\fP (uint8_t command, uint8_t blockAddr, \fBMIFARE_Key\fP *key, \fBUid\fP *\fBuid\fP)"
+.br
+.ti -1c
+.RI "void \fBPCD_StopCrypto1\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Read\fP (uint8_t blockAddr, uint8_t *buffer, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Write\fP (uint8_t blockAddr, uint8_t *buffer, uint8_t bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Decrement\fP (uint8_t blockAddr, long delta)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Increment\fP (uint8_t blockAddr, long delta)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Restore\fP (uint8_t blockAddr)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Transfer\fP (uint8_t blockAddr)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Ultralight_Write\fP (uint8_t page, uint8_t *buffer, uint8_t bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_GetValue\fP (uint8_t blockAddr, long *value)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_SetValue\fP (uint8_t blockAddr, long value)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_MIFARE_Transceive\fP (uint8_t *sendData, uint8_t sendLen, bool acceptTimeout=false)"
+.br
+.ti -1c
+.RI "const string \fBGetStatusCodeName\fP (uint8_t code)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_GetType\fP (uint8_t sak)"
+.br
+.ti -1c
+.RI "const string \fBPICC_GetTypeName\fP (uint8_t type)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpToSerial\fP (\fBUid\fP *\fBuid\fP)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpMifareClassicToSerial\fP (\fBUid\fP *\fBuid\fP, uint8_t piccType, \fBMIFARE_Key\fP *key)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpMifareClassicSectorToSerial\fP (\fBUid\fP *\fBuid\fP, \fBMIFARE_Key\fP *key, uint8_t sector)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpMifareUltralightToSerial\fP ()"
+.br
+.ti -1c
+.RI "void \fBMIFARE_SetAccessBits\fP (uint8_t *accessBitBuffer, uint8_t g0, uint8_t g1, uint8_t g2, uint8_t g3)"
+.br
+.ti -1c
+.RI "bool \fBMIFARE_OpenUidBackdoor\fP (bool logErrors)"
+.br
+.ti -1c
+.RI "bool \fBMIFARE_SetUid\fP (uint8_t *newUid, uint8_t uidSize, bool logErrors)"
+.br
+.ti -1c
+.RI "bool \fBMIFARE_UnbrickUidSector\fP (bool logErrors)"
+.br
+.ti -1c
+.RI "bool \fBPICC_IsNewCardPresent\fP ()"
+.br
+.ti -1c
+.RI "bool \fBPICC_ReadCardSerial\fP ()"
+.br
+.ti -1c
+.RI "\fBMFRC522\fP (\fBISpi\fP &, \fBIGpio\fP &resetPin)"
+.br
+.ti -1c
+.RI "void \fBPCD_WriteRegister\fP (uint8_t reg, uint8_t value)"
+.br
+.ti -1c
+.RI "void \fBPCD_WriteRegister\fP (uint8_t reg, uint8_t count, uint8_t *values)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_ReadRegister\fP (uint8_t reg)"
+.br
+.ti -1c
+.RI "void \fBPCD_ReadRegister\fP (uint8_t reg, uint8_t count, uint8_t *values, uint8_t rxAlign=0)"
+.br
+.ti -1c
+.RI "void \fBsetBitMask\fP (unsigned char reg, unsigned char mask)"
+.br
+.ti -1c
+.RI "void \fBPCD_SetRegisterBitMask\fP (uint8_t reg, uint8_t mask)"
+.br
+.ti -1c
+.RI "void \fBPCD_ClearRegisterBitMask\fP (uint8_t reg, uint8_t mask)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_CalculateCRC\fP (uint8_t *data, uint8_t length, uint8_t *result)"
+.br
+.ti -1c
+.RI "void \fBPCD_Init\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_Reset\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_AntennaOn\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_AntennaOff\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_GetAntennaGain\fP ()"
+.br
+.ti -1c
+.RI "void \fBPCD_SetAntennaGain\fP (uint8_t mask)"
+.br
+.ti -1c
+.RI "bool \fBPCD_PerformSelfTest\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_TransceiveData\fP (uint8_t *sendData, uint8_t sendLen, uint8_t *backData, uint8_t *backLen, uint8_t *validBits=NULL, uint8_t rxAlign=0, bool checkCRC=false)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_CommunicateWithPICC\fP (uint8_t command, uint8_t waitIRq, uint8_t *sendData, uint8_t sendLen, uint8_t *backData=NULL, uint8_t *backLen=NULL, uint8_t *validBits=NULL, uint8_t rxAlign=0, bool checkCRC=false)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_RequestA\fP (uint8_t *bufferATQA, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_WakeupA\fP (uint8_t *bufferATQA, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_REQA_or_WUPA\fP (uint8_t command, uint8_t *bufferATQA, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_Select\fP (\fBUid\fP *\fBuid\fP, uint8_t validBits=0)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_HaltA\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_Authenticate\fP (uint8_t command, uint8_t blockAddr, \fBMIFARE_Key\fP *key, \fBUid\fP *\fBuid\fP)"
+.br
+.ti -1c
+.RI "void \fBPCD_StopCrypto1\fP ()"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Read\fP (uint8_t blockAddr, uint8_t *buffer, uint8_t *bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Write\fP (uint8_t blockAddr, uint8_t *buffer, uint8_t bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Decrement\fP (uint8_t blockAddr, long delta)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Increment\fP (uint8_t blockAddr, long delta)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Restore\fP (uint8_t blockAddr)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Transfer\fP (uint8_t blockAddr)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_Ultralight_Write\fP (uint8_t page, uint8_t *buffer, uint8_t bufferSize)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_GetValue\fP (uint8_t blockAddr, long *value)"
+.br
+.ti -1c
+.RI "uint8_t \fBMIFARE_SetValue\fP (uint8_t blockAddr, long value)"
+.br
+.ti -1c
+.RI "uint8_t \fBPCD_MIFARE_Transceive\fP (uint8_t *sendData, uint8_t sendLen, bool acceptTimeout=false)"
+.br
+.ti -1c
+.RI "const string \fBGetStatusCodeName\fP (uint8_t code)"
+.br
+.ti -1c
+.RI "uint8_t \fBPICC_GetType\fP (uint8_t sak)"
+.br
+.ti -1c
+.RI "const string \fBPICC_GetTypeName\fP (uint8_t type)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpToSerial\fP (\fBUid\fP *\fBuid\fP)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpMifareClassicToSerial\fP (\fBUid\fP *\fBuid\fP, uint8_t piccType, \fBMIFARE_Key\fP *key)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpMifareClassicSectorToSerial\fP (\fBUid\fP *\fBuid\fP, \fBMIFARE_Key\fP *key, uint8_t sector)"
+.br
+.ti -1c
+.RI "void \fBPICC_DumpMifareUltralightToSerial\fP ()"
+.br
+.ti -1c
+.RI "void \fBMIFARE_SetAccessBits\fP (uint8_t *accessBitBuffer, uint8_t g0, uint8_t g1, uint8_t g2, uint8_t g3)"
+.br
+.ti -1c
+.RI "bool \fBMIFARE_OpenUidBackdoor\fP (bool logErrors)"
+.br
+.ti -1c
+.RI "bool \fBMIFARE_SetUid\fP (uint8_t *newUid, uint8_t uidSize, bool logErrors)"
+.br
+.ti -1c
+.RI "bool \fBMIFARE_UnbrickUidSector\fP (bool logErrors)"
+.br
+.ti -1c
+.RI "bool \fBPICC_IsNewCardPresent\fP ()"
+.br
+.ti -1c
+.RI "bool \fBPICC_ReadCardSerial\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBUid\fP \fBuid\fP"
+.br
+.ti -1c
+.RI "\fBISpi\fP & \fBmSpi\fP"
+.br
+.ti -1c
+.RI "\fBIGpio\fP & \fBmResetPin\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static const uint8_t \fBFIFO_SIZE\fP = 64"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBmfrc522::MFRC522::MIFARE_Misc\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMF_ACK \fP\fP
+.TP
+\fB\fIMF_KEY_SIZE \fP\fP
+.TP
+\fB\fIMF_ACK \fP\fP
+.TP
+\fB\fIMF_KEY_SIZE \fP\fP
+.SS "enum \fBmfrc522::MFRC522::MIFARE_Misc\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMF_ACK \fP\fP
+.TP
+\fB\fIMF_KEY_SIZE \fP\fP
+.TP
+\fB\fIMF_ACK \fP\fP
+.TP
+\fB\fIMF_KEY_SIZE \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PCD_Command\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPCD_Idle \fP\fP
+.TP
+\fB\fIPCD_Mem \fP\fP
+.TP
+\fB\fIPCD_GenerateRandomID \fP\fP
+.TP
+\fB\fIPCD_CalcCRC \fP\fP
+.TP
+\fB\fIPCD_Transmit \fP\fP
+.TP
+\fB\fIPCD_NoCmdChange \fP\fP
+.TP
+\fB\fIPCD_Receive \fP\fP
+.TP
+\fB\fIPCD_Transceive \fP\fP
+.TP
+\fB\fIPCD_MFAuthent \fP\fP
+.TP
+\fB\fIPCD_SoftReset \fP\fP
+.TP
+\fB\fIPCD_Idle \fP\fP
+.TP
+\fB\fIPCD_Mem \fP\fP
+.TP
+\fB\fIPCD_GenerateRandomID \fP\fP
+.TP
+\fB\fIPCD_CalcCRC \fP\fP
+.TP
+\fB\fIPCD_Transmit \fP\fP
+.TP
+\fB\fIPCD_NoCmdChange \fP\fP
+.TP
+\fB\fIPCD_Receive \fP\fP
+.TP
+\fB\fIPCD_Transceive \fP\fP
+.TP
+\fB\fIPCD_MFAuthent \fP\fP
+.TP
+\fB\fIPCD_SoftReset \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PCD_Command\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPCD_Idle \fP\fP
+.TP
+\fB\fIPCD_Mem \fP\fP
+.TP
+\fB\fIPCD_GenerateRandomID \fP\fP
+.TP
+\fB\fIPCD_CalcCRC \fP\fP
+.TP
+\fB\fIPCD_Transmit \fP\fP
+.TP
+\fB\fIPCD_NoCmdChange \fP\fP
+.TP
+\fB\fIPCD_Receive \fP\fP
+.TP
+\fB\fIPCD_Transceive \fP\fP
+.TP
+\fB\fIPCD_MFAuthent \fP\fP
+.TP
+\fB\fIPCD_SoftReset \fP\fP
+.TP
+\fB\fIPCD_Idle \fP\fP
+.TP
+\fB\fIPCD_Mem \fP\fP
+.TP
+\fB\fIPCD_GenerateRandomID \fP\fP
+.TP
+\fB\fIPCD_CalcCRC \fP\fP
+.TP
+\fB\fIPCD_Transmit \fP\fP
+.TP
+\fB\fIPCD_NoCmdChange \fP\fP
+.TP
+\fB\fIPCD_Receive \fP\fP
+.TP
+\fB\fIPCD_Transceive \fP\fP
+.TP
+\fB\fIPCD_MFAuthent \fP\fP
+.TP
+\fB\fIPCD_SoftReset \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PCD_Register\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICommandReg \fP\fP
+.TP
+\fB\fIComIEnReg \fP\fP
+.TP
+\fB\fIDivIEnReg \fP\fP
+.TP
+\fB\fIComIrqReg \fP\fP
+.TP
+\fB\fIDivIrqReg \fP\fP
+.TP
+\fB\fIErrorReg \fP\fP
+.TP
+\fB\fIStatus1Reg \fP\fP
+.TP
+\fB\fIStatus2Reg \fP\fP
+.TP
+\fB\fIFIFODataReg \fP\fP
+.TP
+\fB\fIFIFOLevelReg \fP\fP
+.TP
+\fB\fIWaterLevelReg \fP\fP
+.TP
+\fB\fIControlReg \fP\fP
+.TP
+\fB\fIBitFramingReg \fP\fP
+.TP
+\fB\fICollReg \fP\fP
+.TP
+\fB\fIModeReg \fP\fP
+.TP
+\fB\fITxModeReg \fP\fP
+.TP
+\fB\fIRxModeReg \fP\fP
+.TP
+\fB\fITxControlReg \fP\fP
+.TP
+\fB\fITxASKReg \fP\fP
+.TP
+\fB\fITxSelReg \fP\fP
+.TP
+\fB\fIRxSelReg \fP\fP
+.TP
+\fB\fIRxThresholdReg \fP\fP
+.TP
+\fB\fIDemodReg \fP\fP
+.TP
+\fB\fIMfTxReg \fP\fP
+.TP
+\fB\fIMfRxReg \fP\fP
+.TP
+\fB\fISerialSpeedReg \fP\fP
+.TP
+\fB\fICRCResultRegH \fP\fP
+.TP
+\fB\fICRCResultRegL \fP\fP
+.TP
+\fB\fIModWidthReg \fP\fP
+.TP
+\fB\fIRFCfgReg \fP\fP
+.TP
+\fB\fIGsNReg \fP\fP
+.TP
+\fB\fICWGsPReg \fP\fP
+.TP
+\fB\fIModGsPReg \fP\fP
+.TP
+\fB\fITModeReg \fP\fP
+.TP
+\fB\fITPrescalerReg \fP\fP
+.TP
+\fB\fITReloadRegH \fP\fP
+.TP
+\fB\fITReloadRegL \fP\fP
+.TP
+\fB\fITCounterValueRegH \fP\fP
+.TP
+\fB\fITCounterValueRegL \fP\fP
+.TP
+\fB\fITestSel1Reg \fP\fP
+.TP
+\fB\fITestSel2Reg \fP\fP
+.TP
+\fB\fITestPinEnReg \fP\fP
+.TP
+\fB\fITestPinValueReg \fP\fP
+.TP
+\fB\fITestBusReg \fP\fP
+.TP
+\fB\fIAutoTestReg \fP\fP
+.TP
+\fB\fIVersionReg \fP\fP
+.TP
+\fB\fIAnalogTestReg \fP\fP
+.TP
+\fB\fITestDAC1Reg \fP\fP
+.TP
+\fB\fITestDAC2Reg \fP\fP
+.TP
+\fB\fITestADCReg \fP\fP
+.TP
+\fB\fICommandReg \fP\fP
+.TP
+\fB\fIComIEnReg \fP\fP
+.TP
+\fB\fIDivIEnReg \fP\fP
+.TP
+\fB\fIComIrqReg \fP\fP
+.TP
+\fB\fIDivIrqReg \fP\fP
+.TP
+\fB\fIErrorReg \fP\fP
+.TP
+\fB\fIStatus1Reg \fP\fP
+.TP
+\fB\fIStatus2Reg \fP\fP
+.TP
+\fB\fIFIFODataReg \fP\fP
+.TP
+\fB\fIFIFOLevelReg \fP\fP
+.TP
+\fB\fIWaterLevelReg \fP\fP
+.TP
+\fB\fIControlReg \fP\fP
+.TP
+\fB\fIBitFramingReg \fP\fP
+.TP
+\fB\fICollReg \fP\fP
+.TP
+\fB\fIModeReg \fP\fP
+.TP
+\fB\fITxModeReg \fP\fP
+.TP
+\fB\fIRxModeReg \fP\fP
+.TP
+\fB\fITxControlReg \fP\fP
+.TP
+\fB\fITxASKReg \fP\fP
+.TP
+\fB\fITxSelReg \fP\fP
+.TP
+\fB\fIRxSelReg \fP\fP
+.TP
+\fB\fIRxThresholdReg \fP\fP
+.TP
+\fB\fIDemodReg \fP\fP
+.TP
+\fB\fIMfTxReg \fP\fP
+.TP
+\fB\fIMfRxReg \fP\fP
+.TP
+\fB\fISerialSpeedReg \fP\fP
+.TP
+\fB\fICRCResultRegH \fP\fP
+.TP
+\fB\fICRCResultRegL \fP\fP
+.TP
+\fB\fIModWidthReg \fP\fP
+.TP
+\fB\fIRFCfgReg \fP\fP
+.TP
+\fB\fIGsNReg \fP\fP
+.TP
+\fB\fICWGsPReg \fP\fP
+.TP
+\fB\fIModGsPReg \fP\fP
+.TP
+\fB\fITModeReg \fP\fP
+.TP
+\fB\fITPrescalerReg \fP\fP
+.TP
+\fB\fITReloadRegH \fP\fP
+.TP
+\fB\fITReloadRegL \fP\fP
+.TP
+\fB\fITCounterValueRegH \fP\fP
+.TP
+\fB\fITCounterValueRegL \fP\fP
+.TP
+\fB\fITestSel1Reg \fP\fP
+.TP
+\fB\fITestSel2Reg \fP\fP
+.TP
+\fB\fITestPinEnReg \fP\fP
+.TP
+\fB\fITestPinValueReg \fP\fP
+.TP
+\fB\fITestBusReg \fP\fP
+.TP
+\fB\fIAutoTestReg \fP\fP
+.TP
+\fB\fIVersionReg \fP\fP
+.TP
+\fB\fIAnalogTestReg \fP\fP
+.TP
+\fB\fITestDAC1Reg \fP\fP
+.TP
+\fB\fITestDAC2Reg \fP\fP
+.TP
+\fB\fITestADCReg \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PCD_Register\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICommandReg \fP\fP
+.TP
+\fB\fIComIEnReg \fP\fP
+.TP
+\fB\fIDivIEnReg \fP\fP
+.TP
+\fB\fIComIrqReg \fP\fP
+.TP
+\fB\fIDivIrqReg \fP\fP
+.TP
+\fB\fIErrorReg \fP\fP
+.TP
+\fB\fIStatus1Reg \fP\fP
+.TP
+\fB\fIStatus2Reg \fP\fP
+.TP
+\fB\fIFIFODataReg \fP\fP
+.TP
+\fB\fIFIFOLevelReg \fP\fP
+.TP
+\fB\fIWaterLevelReg \fP\fP
+.TP
+\fB\fIControlReg \fP\fP
+.TP
+\fB\fIBitFramingReg \fP\fP
+.TP
+\fB\fICollReg \fP\fP
+.TP
+\fB\fIModeReg \fP\fP
+.TP
+\fB\fITxModeReg \fP\fP
+.TP
+\fB\fIRxModeReg \fP\fP
+.TP
+\fB\fITxControlReg \fP\fP
+.TP
+\fB\fITxASKReg \fP\fP
+.TP
+\fB\fITxSelReg \fP\fP
+.TP
+\fB\fIRxSelReg \fP\fP
+.TP
+\fB\fIRxThresholdReg \fP\fP
+.TP
+\fB\fIDemodReg \fP\fP
+.TP
+\fB\fIMfTxReg \fP\fP
+.TP
+\fB\fIMfRxReg \fP\fP
+.TP
+\fB\fISerialSpeedReg \fP\fP
+.TP
+\fB\fICRCResultRegH \fP\fP
+.TP
+\fB\fICRCResultRegL \fP\fP
+.TP
+\fB\fIModWidthReg \fP\fP
+.TP
+\fB\fIRFCfgReg \fP\fP
+.TP
+\fB\fIGsNReg \fP\fP
+.TP
+\fB\fICWGsPReg \fP\fP
+.TP
+\fB\fIModGsPReg \fP\fP
+.TP
+\fB\fITModeReg \fP\fP
+.TP
+\fB\fITPrescalerReg \fP\fP
+.TP
+\fB\fITReloadRegH \fP\fP
+.TP
+\fB\fITReloadRegL \fP\fP
+.TP
+\fB\fITCounterValueRegH \fP\fP
+.TP
+\fB\fITCounterValueRegL \fP\fP
+.TP
+\fB\fITestSel1Reg \fP\fP
+.TP
+\fB\fITestSel2Reg \fP\fP
+.TP
+\fB\fITestPinEnReg \fP\fP
+.TP
+\fB\fITestPinValueReg \fP\fP
+.TP
+\fB\fITestBusReg \fP\fP
+.TP
+\fB\fIAutoTestReg \fP\fP
+.TP
+\fB\fIVersionReg \fP\fP
+.TP
+\fB\fIAnalogTestReg \fP\fP
+.TP
+\fB\fITestDAC1Reg \fP\fP
+.TP
+\fB\fITestDAC2Reg \fP\fP
+.TP
+\fB\fITestADCReg \fP\fP
+.TP
+\fB\fICommandReg \fP\fP
+.TP
+\fB\fIComIEnReg \fP\fP
+.TP
+\fB\fIDivIEnReg \fP\fP
+.TP
+\fB\fIComIrqReg \fP\fP
+.TP
+\fB\fIDivIrqReg \fP\fP
+.TP
+\fB\fIErrorReg \fP\fP
+.TP
+\fB\fIStatus1Reg \fP\fP
+.TP
+\fB\fIStatus2Reg \fP\fP
+.TP
+\fB\fIFIFODataReg \fP\fP
+.TP
+\fB\fIFIFOLevelReg \fP\fP
+.TP
+\fB\fIWaterLevelReg \fP\fP
+.TP
+\fB\fIControlReg \fP\fP
+.TP
+\fB\fIBitFramingReg \fP\fP
+.TP
+\fB\fICollReg \fP\fP
+.TP
+\fB\fIModeReg \fP\fP
+.TP
+\fB\fITxModeReg \fP\fP
+.TP
+\fB\fIRxModeReg \fP\fP
+.TP
+\fB\fITxControlReg \fP\fP
+.TP
+\fB\fITxASKReg \fP\fP
+.TP
+\fB\fITxSelReg \fP\fP
+.TP
+\fB\fIRxSelReg \fP\fP
+.TP
+\fB\fIRxThresholdReg \fP\fP
+.TP
+\fB\fIDemodReg \fP\fP
+.TP
+\fB\fIMfTxReg \fP\fP
+.TP
+\fB\fIMfRxReg \fP\fP
+.TP
+\fB\fISerialSpeedReg \fP\fP
+.TP
+\fB\fICRCResultRegH \fP\fP
+.TP
+\fB\fICRCResultRegL \fP\fP
+.TP
+\fB\fIModWidthReg \fP\fP
+.TP
+\fB\fIRFCfgReg \fP\fP
+.TP
+\fB\fIGsNReg \fP\fP
+.TP
+\fB\fICWGsPReg \fP\fP
+.TP
+\fB\fIModGsPReg \fP\fP
+.TP
+\fB\fITModeReg \fP\fP
+.TP
+\fB\fITPrescalerReg \fP\fP
+.TP
+\fB\fITReloadRegH \fP\fP
+.TP
+\fB\fITReloadRegL \fP\fP
+.TP
+\fB\fITCounterValueRegH \fP\fP
+.TP
+\fB\fITCounterValueRegL \fP\fP
+.TP
+\fB\fITestSel1Reg \fP\fP
+.TP
+\fB\fITestSel2Reg \fP\fP
+.TP
+\fB\fITestPinEnReg \fP\fP
+.TP
+\fB\fITestPinValueReg \fP\fP
+.TP
+\fB\fITestBusReg \fP\fP
+.TP
+\fB\fIAutoTestReg \fP\fP
+.TP
+\fB\fIVersionReg \fP\fP
+.TP
+\fB\fIAnalogTestReg \fP\fP
+.TP
+\fB\fITestDAC1Reg \fP\fP
+.TP
+\fB\fITestDAC2Reg \fP\fP
+.TP
+\fB\fITestADCReg \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PCD_RxGain\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRxGain_18dB \fP\fP
+.TP
+\fB\fIRxGain_23dB \fP\fP
+.TP
+\fB\fIRxGain_18dB_2 \fP\fP
+.TP
+\fB\fIRxGain_23dB_2 \fP\fP
+.TP
+\fB\fIRxGain_33dB \fP\fP
+.TP
+\fB\fIRxGain_38dB \fP\fP
+.TP
+\fB\fIRxGain_43dB \fP\fP
+.TP
+\fB\fIRxGain_48dB \fP\fP
+.TP
+\fB\fIRxGain_min \fP\fP
+.TP
+\fB\fIRxGain_avg \fP\fP
+.TP
+\fB\fIRxGain_max \fP\fP
+.TP
+\fB\fIRxGain_18dB \fP\fP
+.TP
+\fB\fIRxGain_23dB \fP\fP
+.TP
+\fB\fIRxGain_18dB_2 \fP\fP
+.TP
+\fB\fIRxGain_23dB_2 \fP\fP
+.TP
+\fB\fIRxGain_33dB \fP\fP
+.TP
+\fB\fIRxGain_38dB \fP\fP
+.TP
+\fB\fIRxGain_43dB \fP\fP
+.TP
+\fB\fIRxGain_48dB \fP\fP
+.TP
+\fB\fIRxGain_min \fP\fP
+.TP
+\fB\fIRxGain_avg \fP\fP
+.TP
+\fB\fIRxGain_max \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PCD_RxGain\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRxGain_18dB \fP\fP
+.TP
+\fB\fIRxGain_23dB \fP\fP
+.TP
+\fB\fIRxGain_18dB_2 \fP\fP
+.TP
+\fB\fIRxGain_23dB_2 \fP\fP
+.TP
+\fB\fIRxGain_33dB \fP\fP
+.TP
+\fB\fIRxGain_38dB \fP\fP
+.TP
+\fB\fIRxGain_43dB \fP\fP
+.TP
+\fB\fIRxGain_48dB \fP\fP
+.TP
+\fB\fIRxGain_min \fP\fP
+.TP
+\fB\fIRxGain_avg \fP\fP
+.TP
+\fB\fIRxGain_max \fP\fP
+.TP
+\fB\fIRxGain_18dB \fP\fP
+.TP
+\fB\fIRxGain_23dB \fP\fP
+.TP
+\fB\fIRxGain_18dB_2 \fP\fP
+.TP
+\fB\fIRxGain_23dB_2 \fP\fP
+.TP
+\fB\fIRxGain_33dB \fP\fP
+.TP
+\fB\fIRxGain_38dB \fP\fP
+.TP
+\fB\fIRxGain_43dB \fP\fP
+.TP
+\fB\fIRxGain_48dB \fP\fP
+.TP
+\fB\fIRxGain_min \fP\fP
+.TP
+\fB\fIRxGain_avg \fP\fP
+.TP
+\fB\fIRxGain_max \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PICC_Command\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPICC_CMD_REQA \fP\fP
+.TP
+\fB\fIPICC_CMD_WUPA \fP\fP
+.TP
+\fB\fIPICC_CMD_CT \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL1 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL2 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL3 \fP\fP
+.TP
+\fB\fIPICC_CMD_HLTA \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_A \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_B \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_READ \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_WRITE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_DECREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_INCREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_RESTORE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_TRANSFER \fP\fP
+.TP
+\fB\fIPICC_CMD_UL_WRITE \fP\fP
+.TP
+\fB\fIPICC_CMD_REQA \fP\fP
+.TP
+\fB\fIPICC_CMD_WUPA \fP\fP
+.TP
+\fB\fIPICC_CMD_CT \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL1 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL2 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL3 \fP\fP
+.TP
+\fB\fIPICC_CMD_HLTA \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_A \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_B \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_READ \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_WRITE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_DECREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_INCREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_RESTORE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_TRANSFER \fP\fP
+.TP
+\fB\fIPICC_CMD_UL_WRITE \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PICC_Command\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPICC_CMD_REQA \fP\fP
+.TP
+\fB\fIPICC_CMD_WUPA \fP\fP
+.TP
+\fB\fIPICC_CMD_CT \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL1 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL2 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL3 \fP\fP
+.TP
+\fB\fIPICC_CMD_HLTA \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_A \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_B \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_READ \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_WRITE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_DECREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_INCREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_RESTORE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_TRANSFER \fP\fP
+.TP
+\fB\fIPICC_CMD_UL_WRITE \fP\fP
+.TP
+\fB\fIPICC_CMD_REQA \fP\fP
+.TP
+\fB\fIPICC_CMD_WUPA \fP\fP
+.TP
+\fB\fIPICC_CMD_CT \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL1 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL2 \fP\fP
+.TP
+\fB\fIPICC_CMD_SEL_CL3 \fP\fP
+.TP
+\fB\fIPICC_CMD_HLTA \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_A \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_AUTH_KEY_B \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_READ \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_WRITE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_DECREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_INCREMENT \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_RESTORE \fP\fP
+.TP
+\fB\fIPICC_CMD_MF_TRANSFER \fP\fP
+.TP
+\fB\fIPICC_CMD_UL_WRITE \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PICC_Type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPICC_TYPE_UNKNOWN \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_14443_4 \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_18092 \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_MINI \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_1K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_4K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_UL \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_PLUS \fP\fP
+.TP
+\fB\fIPICC_TYPE_TNP3XXX \fP\fP
+.TP
+\fB\fIPICC_TYPE_NOT_COMPLETE \fP\fP
+.TP
+\fB\fIPICC_TYPE_UNKNOWN \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_14443_4 \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_18092 \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_MINI \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_1K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_4K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_UL \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_PLUS \fP\fP
+.TP
+\fB\fIPICC_TYPE_TNP3XXX \fP\fP
+.TP
+\fB\fIPICC_TYPE_NOT_COMPLETE \fP\fP
+.SS "enum \fBmfrc522::MFRC522::PICC_Type\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPICC_TYPE_UNKNOWN \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_14443_4 \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_18092 \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_MINI \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_1K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_4K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_UL \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_PLUS \fP\fP
+.TP
+\fB\fIPICC_TYPE_TNP3XXX \fP\fP
+.TP
+\fB\fIPICC_TYPE_NOT_COMPLETE \fP\fP
+.TP
+\fB\fIPICC_TYPE_UNKNOWN \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_14443_4 \fP\fP
+.TP
+\fB\fIPICC_TYPE_ISO_18092 \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_MINI \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_1K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_4K \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_UL \fP\fP
+.TP
+\fB\fIPICC_TYPE_MIFARE_PLUS \fP\fP
+.TP
+\fB\fIPICC_TYPE_TNP3XXX \fP\fP
+.TP
+\fB\fIPICC_TYPE_NOT_COMPLETE \fP\fP
+.SS "enum \fBmfrc522::MFRC522::StatusCode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISTATUS_OK \fP\fP
+.TP
+\fB\fISTATUS_ERROR \fP\fP
+.TP
+\fB\fISTATUS_COLLISION \fP\fP
+.TP
+\fB\fISTATUS_TIMEOUT \fP\fP
+.TP
+\fB\fISTATUS_NO_ROOM \fP\fP
+.TP
+\fB\fISTATUS_INTERNAL_ERROR \fP\fP
+.TP
+\fB\fISTATUS_INVALID \fP\fP
+.TP
+\fB\fISTATUS_CRC_WRONG \fP\fP
+.TP
+\fB\fISTATUS_MIFARE_NACK \fP\fP
+.TP
+\fB\fISTATUS_OK \fP\fP
+.TP
+\fB\fISTATUS_ERROR \fP\fP
+.TP
+\fB\fISTATUS_COLLISION \fP\fP
+.TP
+\fB\fISTATUS_TIMEOUT \fP\fP
+.TP
+\fB\fISTATUS_NO_ROOM \fP\fP
+.TP
+\fB\fISTATUS_INTERNAL_ERROR \fP\fP
+.TP
+\fB\fISTATUS_INVALID \fP\fP
+.TP
+\fB\fISTATUS_CRC_WRONG \fP\fP
+.TP
+\fB\fISTATUS_MIFARE_NACK \fP\fP
+.SS "enum \fBmfrc522::MFRC522::StatusCode\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fISTATUS_OK \fP\fP
+.TP
+\fB\fISTATUS_ERROR \fP\fP
+.TP
+\fB\fISTATUS_COLLISION \fP\fP
+.TP
+\fB\fISTATUS_TIMEOUT \fP\fP
+.TP
+\fB\fISTATUS_NO_ROOM \fP\fP
+.TP
+\fB\fISTATUS_INTERNAL_ERROR \fP\fP
+.TP
+\fB\fISTATUS_INVALID \fP\fP
+.TP
+\fB\fISTATUS_CRC_WRONG \fP\fP
+.TP
+\fB\fISTATUS_MIFARE_NACK \fP\fP
+.TP
+\fB\fISTATUS_OK \fP\fP
+.TP
+\fB\fISTATUS_ERROR \fP\fP
+.TP
+\fB\fISTATUS_COLLISION \fP\fP
+.TP
+\fB\fISTATUS_TIMEOUT \fP\fP
+.TP
+\fB\fISTATUS_NO_ROOM \fP\fP
+.TP
+\fB\fISTATUS_INTERNAL_ERROR \fP\fP
+.TP
+\fB\fISTATUS_INVALID \fP\fP
+.TP
+\fB\fISTATUS_CRC_WRONG \fP\fP
+.TP
+\fB\fISTATUS_MIFARE_NACK \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "mfrc522::MFRC522::MFRC522 (\fBISpi\fP & spi, \fBIGpio\fP & resetPin)"
+Constructor\&. 
+.SS "mfrc522::MFRC522::MFRC522 (\fBISpi\fP &, \fBIGpio\fP & resetPin)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "const string mfrc522::MFRC522::GetStatusCodeName (uint8_t code)"
+Returns a __FlashStringHelper pointer to a status code name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcode\fP One of the StatusCode enums\&. 
+.RE
+.PP
+
+.SS "const string mfrc522::MFRC522::GetStatusCodeName (uint8_t code)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Decrement (uint8_t blockAddr, long delta)"
+MIFARE Decrement subtracts the delta from the value of the addressed block, and stores the result in a volatile memory\&. For MIFARE Classic only\&. The sector containing the block must be authenticated before calling this function\&. Only for blocks in 'value block' mode, ie with access bits [C1 C2 C3] = [110] or [001]\&. Use \fBMIFARE_Transfer()\fP to store the result in a block\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP The block (0-0xff) number\&.
+.br
+\fIdelta\fP This number is subtracted from the value of block blockAddr\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Decrement (uint8_t blockAddr, long delta)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_GetValue (uint8_t blockAddr, long * value)"
+Helper routine to read the current value from a Value Block\&.
+.PP
+Only for MIFARE Classic and only for blocks in 'value block' mode, that is: with access bits [C1 C2 C3] = [110] or [001]\&. The sector containing the block must be authenticated before calling this function\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP The block (0x00-0xff) number\&. 
+.br
+\fIvalue\fP Current value of the Value Block\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_GetValue (uint8_t blockAddr, long * value)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Increment (uint8_t blockAddr, long delta)"
+MIFARE Increment adds the delta to the value of the addressed block, and stores the result in a volatile memory\&. For MIFARE Classic only\&. The sector containing the block must be authenticated before calling this function\&. Only for blocks in 'value block' mode, ie with access bits [C1 C2 C3] = [110] or [001]\&. Use \fBMIFARE_Transfer()\fP to store the result in a block\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP The block (0-0xff) number\&.
+.br
+\fIdelta\fP This number is added to the value of block blockAddr\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Increment (uint8_t blockAddr, long delta)"
+
+.SS "bool mfrc522::MFRC522::MIFARE_OpenUidBackdoor (bool logErrors)"
+Performs the 'magic sequence' needed to get Chinese UID changeable Mifare cards to allow writing to sector 0, where the card UID is stored\&.
+.PP
+Note that you do not need to have selected the card through REQA or WUPA, this sequence works immediately when the card is in the reader vicinity\&. This means you can use this method even on 'bricked' cards that your reader does not recognise anymore (see \fBMFRC522::MIFARE_UnbrickUidSector\fP)\&.
+.PP
+Of course with non-bricked devices, you're free to select them before calling this function\&. 
+.SS "bool mfrc522::MFRC522::MIFARE_OpenUidBackdoor (bool logErrors)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Read (uint8_t blockAddr, uint8_t * buffer, uint8_t * bufferSize)"
+Reads 16 bytes (+ 2 bytes CRC_A) from the active PICC\&.
+.PP
+For MIFARE Classic the sector containing the block must be authenticated before calling this function\&.
+.PP
+For MIFARE Ultralight only addresses 00h to 0Fh are decoded\&. The MF0ICU1 returns a NAK for higher addresses\&. The MF0ICU1 responds to the READ command by sending 16 bytes starting from the page address defined by the command argument\&. For example; if blockAddr is 03h then pages 03h, 04h, 05h, 06h are returned\&. A roll-back is implemented: If blockAddr is 0Eh, then the contents of pages 0Eh, 0Fh, 00h and 01h are returned\&.
+.PP
+The buffer must be at least 18 bytes because a CRC_A is also returned\&. Checks the CRC_A before returning STATUS_OK\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP MIFARE Classic: The block (0-0xff) number\&. MIFARE Ultralight: The first page to return data from\&.
+.br
+\fIbuffer\fP The buffer to store the data in
+.br
+\fIbufferSize\fP Buffer size, at least 18 bytes\&. Also number of bytes returned if STATUS_OK\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Read (uint8_t blockAddr, uint8_t * buffer, uint8_t * bufferSize)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Restore (uint8_t blockAddr)"
+MIFARE Restore copies the value of the addressed block into a volatile memory\&. For MIFARE Classic only\&. The sector containing the block must be authenticated before calling this function\&. Only for blocks in 'value block' mode, ie with access bits [C1 C2 C3] = [110] or [001]\&. Use \fBMIFARE_Transfer()\fP to store the result in a block\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP The block (0-0xff) number\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Restore (uint8_t blockAddr)"
+
+.SS "void mfrc522::MFRC522::MIFARE_SetAccessBits (uint8_t * accessBitBuffer, uint8_t g0, uint8_t g1, uint8_t g2, uint8_t g3)"
+Calculates the bit pattern needed for the specified access bits\&. In the [C1 C2 C3] tupples C1 is MSB (=4) and C3 is LSB (=1)\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaccessBitBuffer\fP Pointer to byte 6, 7 and 8 in the sector trailer\&. Bytes [0\&.\&.2] will be set\&.
+.br
+\fIg0\fP Access bits [C1 C2 C3] for block 0 (for sectors 0-31) or blocks 0-4 (for sectors 32-39)
+.br
+\fIg1\fP Access bits C1 C2 C3] for block 1 (for sectors 0-31) or blocks 5-9 (for sectors 32-39)
+.br
+\fIg2\fP Access bits C1 C2 C3] for block 2 (for sectors 0-31) or blocks 10-14 (for sectors 32-39)
+.br
+\fIg3\fP Access bits C1 C2 C3] for the sector trailer, block 3 (for sectors 0-31) or block 15 (for sectors 32-39) 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::MIFARE_SetAccessBits (uint8_t * accessBitBuffer, uint8_t g0, uint8_t g1, uint8_t g2, uint8_t g3)"
+
+.SS "bool mfrc522::MFRC522::MIFARE_SetUid (uint8_t * newUid, uint8_t uidSize, bool logErrors)"
+Reads entire block 0, including all manufacturer data, and overwrites that block with the new UID, a freshly calculated BCC, and the original manufacturer data\&.
+.PP
+It assumes a default KEY A of 0xFFFFFFFFFFFF\&. Make sure to have selected the card before this function is called\&. 
+.SS "bool mfrc522::MFRC522::MIFARE_SetUid (uint8_t * newUid, uint8_t uidSize, bool logErrors)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_SetValue (uint8_t blockAddr, long value)"
+Helper routine to write a specific value into a Value Block\&.
+.PP
+Only for MIFARE Classic and only for blocks in 'value block' mode, that is: with access bits [C1 C2 C3] = [110] or [001]\&. The sector containing the block must be authenticated before calling this function\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP The block (0x00-0xff) number\&. 
+.br
+\fIvalue\fP New value of the Value Block\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_SetValue (uint8_t blockAddr, long value)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Transfer (uint8_t blockAddr)"
+MIFARE Transfer writes the value stored in the volatile memory into one MIFARE Classic block\&. For MIFARE Classic only\&. The sector containing the block must be authenticated before calling this function\&. Only for blocks in 'value block' mode, ie with access bits [C1 C2 C3] = [110] or [001]\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP The block (0-0xff) number\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Transfer (uint8_t blockAddr)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Ultralight_Write (uint8_t page, uint8_t * buffer, uint8_t bufferSize)"
+Writes a 4 byte page to the active MIFARE Ultralight PICC\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIpage\fP The page (2-15) to write to\&.
+.br
+\fIbuffer\fP The 4 bytes to write to the PICC
+.br
+\fIbufferSize\fP Buffer size, must be at least 4 bytes\&. Exactly 4 bytes are written\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Ultralight_Write (uint8_t page, uint8_t * buffer, uint8_t bufferSize)"
+
+.SS "bool mfrc522::MFRC522::MIFARE_UnbrickUidSector (bool logErrors)"
+Resets entire sector 0 to zeroes, so the card can be read again by readers\&. 
+.SS "bool mfrc522::MFRC522::MIFARE_UnbrickUidSector (bool logErrors)"
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Write (uint8_t blockAddr, uint8_t * buffer, uint8_t bufferSize)"
+Writes 16 bytes to the active PICC\&.
+.PP
+For MIFARE Classic the sector containing the block must be authenticated before calling this function\&.
+.PP
+For MIFARE Ultralight the operation is called 'COMPATIBILITY WRITE'\&. Even though 16 bytes are transferred to the Ultralight PICC, only the least significant 4 bytes (bytes 0 to 3) are written to the specified address\&. It is recommended to set the remaining bytes 04h to 0Fh to all logic 0\&.
+.IP "\(bu" 2
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIblockAddr\fP MIFARE Classic: The block (0-0xff) number\&. MIFARE Ultralight: The page (2-15) to write to\&.
+.br
+\fIbuffer\fP The 16 bytes to write to the PICC
+.br
+\fIbufferSize\fP Buffer size, must be at least 16 bytes\&. Exactly 16 bytes are written\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::MIFARE_Write (uint8_t blockAddr, uint8_t * buffer, uint8_t bufferSize)"
+
+.SS "void mfrc522::MFRC522::PCD_AntennaOff ()"
+Turns the antenna off by disabling pins TX1 and TX2\&. 
+.SS "void mfrc522::MFRC522::PCD_AntennaOff ()"
+
+.SS "void mfrc522::MFRC522::PCD_AntennaOn ()"
+Turns the antenna on by enabling pins TX1 and TX2\&. After a reset these pins are disabled\&. 
+.SS "void mfrc522::MFRC522::PCD_AntennaOn ()"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_Authenticate (uint8_t command, uint8_t blockAddr, \fBMIFARE_Key\fP * key, \fBUid\fP * uid)"
+Executes the \fBMFRC522\fP MFAuthent command\&. This command manages MIFARE authentication to enable a secure communication to any MIFARE Mini, MIFARE 1K and MIFARE 4K card\&. The authentication is described in the \fBMFRC522\fP datasheet section 10\&.3\&.1\&.9 and http://www.nxp.com/documents/data_sheet/MF1S503x.pdf section 10\&.1\&. For use with MIFARE Classic PICCs\&. The PICC must be selected - ie in state ACTIVE(*) - before calling this function\&. Remember to call \fBPCD_StopCrypto1()\fP after communicating with the authenticated PICC - otherwise no new communications can start\&.
+.PP
+All keys are set to FFFFFFFFFFFFh at chip delivery\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. Probably STATUS_TIMEOUT if you supply the wrong key\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP PICC_CMD_MF_AUTH_KEY_A or PICC_CMD_MF_AUTH_KEY_B
+.br
+\fIblockAddr\fP The block number\&. See numbering in the comments in the \&.h file\&.
+.br
+\fIkey\fP Pointer to the Crypteo1 key to use (6 bytes)
+.br
+\fIuid\fP Pointer to \fBUid\fP struct\&. The first 4 bytes of the UID is used\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_Authenticate (uint8_t command, uint8_t blockAddr, \fBMIFARE_Key\fP * key, \fBUid\fP * uid)"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_CalculateCRC (uint8_t * data, uint8_t length, uint8_t * result)"
+Use the CRC coprocessor in the \fBMFRC522\fP to calculate a CRC_A\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP In: Pointer to the data to transfer to the FIFO for CRC calculation\&.
+.br
+\fIlength\fP In: The number of bytes to transfer\&.
+.br
+\fIresult\fP Out: Pointer to result buffer\&. Result is written to result[0\&.\&.1], low byte first\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_CalculateCRC (uint8_t * data, uint8_t length, uint8_t * result)"
+
+.SS "void mfrc522::MFRC522::PCD_ClearRegisterBitMask (uint8_t reg, uint8_t mask)"
+Clears the bits given in mask from register reg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP The register to update\&. One of the PCD_Register enums\&.
+.br
+\fImask\fP The bits to clear\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PCD_ClearRegisterBitMask (uint8_t reg, uint8_t mask)"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_CommunicateWithPICC (uint8_t command, uint8_t waitIRq, uint8_t * sendData, uint8_t sendLen, uint8_t * backData = \fCNULL\fP, uint8_t * backLen = \fCNULL\fP, uint8_t * validBits = \fCNULL\fP, uint8_t rxAlign = \fC0\fP, bool checkCRC = \fCfalse\fP)"
+Transfers data to the \fBMFRC522\fP FIFO, executes a command, waits for completion and transfers data back from the FIFO\&. CRC validation can only be done if backData and backLen are specified\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The command to execute\&. One of the PCD_Command enums\&.
+.br
+\fIwaitIRq\fP The bits in the ComIrqReg register that signals successful completion of the command\&.
+.br
+\fIsendData\fP Pointer to the data to transfer to the FIFO\&.
+.br
+\fIsendLen\fP Number of bytes to transfer to the FIFO\&.
+.br
+\fIbackData\fP NULL or pointer to buffer if data should be read back after executing the command\&.
+.br
+\fIbackLen\fP In: Max number of bytes to write to *backData\&. Out: The number of bytes returned\&.
+.br
+\fIvalidBits\fP In/Out: The number of valid bits in the last byte\&. 0 for 8 valid bits\&.
+.br
+\fIrxAlign\fP In: Defines the bit position in backData[0] for the first bit received\&. Default 0\&.
+.br
+\fIcheckCRC\fP In: True => The last two bytes of the response is assumed to be a CRC_A that must be validated\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_CommunicateWithPICC (uint8_t command, uint8_t waitIRq, uint8_t * sendData, uint8_t sendLen, uint8_t * backData = \fCNULL\fP, uint8_t * backLen = \fCNULL\fP, uint8_t * validBits = \fCNULL\fP, uint8_t rxAlign = \fC0\fP, bool checkCRC = \fCfalse\fP)"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_GetAntennaGain ()"
+Get the current \fBMFRC522\fP Receiver Gain (RxGain[2:0]) value\&. See 9\&.3\&.3\&.6 / table 98 in http://www.nxp.com/documents/data_sheet/MFRC522.pdf NOTE: Return value scrubbed with (0x07<<4)=01110000b as RCFfgReg may use reserved bits\&.
+.PP
+\fBReturns\fP
+.RS 4
+Value of the RxGain, scrubbed to the 3 bits used\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_GetAntennaGain ()"
+
+.SS "void mfrc522::MFRC522::PCD_Init ()"
+Initializes the \fBMFRC522\fP chip\&. 
+.SS "void mfrc522::MFRC522::PCD_Init ()"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_MIFARE_Transceive (uint8_t * sendData, uint8_t sendLen, bool acceptTimeout = \fCfalse\fP)"
+Wrapper for MIFARE protocol communication\&. Adds CRC_A, executes the Transceive command and checks that the response is MF_ACK or a timeout\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsendData\fP Pointer to the data to transfer to the FIFO\&. Do NOT include the CRC_A\&.
+.br
+\fIsendLen\fP Number of bytes in sendData\&.
+.br
+\fIacceptTimeout\fP True => A timeout is also success 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_MIFARE_Transceive (uint8_t * sendData, uint8_t sendLen, bool acceptTimeout = \fCfalse\fP)"
+
+.SS "bool mfrc522::MFRC522::PCD_PerformSelfTest ()"
+Performs a self-test of the \fBMFRC522\fP See 16\&.1\&.1 in http://www.nxp.com/documents/data_sheet/MFRC522.pdf
+.PP
+\fBReturns\fP
+.RS 4
+Whether or not the test passed\&. 
+.RE
+.PP
+
+.SS "bool mfrc522::MFRC522::PCD_PerformSelfTest ()"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_ReadRegister (uint8_t reg)"
+Reads a byte from the specified register in the \fBMFRC522\fP chip\&. The interface is described in the datasheet section 8\&.1\&.2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP The register to read from\&. One of the PCD_Register enums\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_ReadRegister (uint8_t reg)"
+
+.SS "void mfrc522::MFRC522::PCD_ReadRegister (uint8_t reg, uint8_t count, uint8_t * values, uint8_t rxAlign = \fC0\fP)"
+Reads a number of bytes from the specified register in the \fBMFRC522\fP chip\&. The interface is described in the datasheet section 8\&.1\&.2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP The register to read from\&. One of the PCD_Register enums\&.
+.br
+\fIcount\fP The number of bytes to read
+.br
+\fIvalues\fP Byte array to store the values in\&.
+.br
+\fIrxAlign\fP Only bit positions rxAlign\&.\&.7 in values[0] are updated\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PCD_ReadRegister (uint8_t reg, uint8_t count, uint8_t * values, uint8_t rxAlign = \fC0\fP)"
+
+.SS "void mfrc522::MFRC522::PCD_Reset ()"
+Performs a soft reset on the \fBMFRC522\fP chip and waits for it to be ready again\&. 
+.SS "void mfrc522::MFRC522::PCD_Reset ()"
+
+.SS "void mfrc522::MFRC522::PCD_SetAntennaGain (uint8_t mask)"
+Set the \fBMFRC522\fP Receiver Gain (RxGain) to value specified by given mask\&. See 9\&.3\&.3\&.6 / table 98 in http://www.nxp.com/documents/data_sheet/MFRC522.pdf NOTE: Given mask is scrubbed with (0x07<<4)=01110000b as RCFfgReg may use reserved bits\&. 
+.SS "void mfrc522::MFRC522::PCD_SetAntennaGain (uint8_t mask)"
+
+.SS "void mfrc522::MFRC522::PCD_SetRegisterBitMask (uint8_t reg, uint8_t mask)"
+Sets the bits given in mask in register reg\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP The register to update\&. One of the PCD_Register enums\&.
+.br
+\fImask\fP The bits to set\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PCD_SetRegisterBitMask (uint8_t reg, uint8_t mask)"
+
+.SS "void mfrc522::MFRC522::PCD_StopCrypto1 ()"
+Used to exit the PCD from its authenticated state\&. Remember to call this function after communicating with an authenticated PICC - otherwise no new communications can start\&. 
+.SS "void mfrc522::MFRC522::PCD_StopCrypto1 ()"
+
+.SS "uint8_t mfrc522::MFRC522::PCD_TransceiveData (uint8_t * sendData, uint8_t sendLen, uint8_t * backData, uint8_t * backLen, uint8_t * validBits = \fCNULL\fP, uint8_t rxAlign = \fC0\fP, bool checkCRC = \fCfalse\fP)"
+Executes the Transceive command\&. CRC validation can only be done if backData and backLen are specified\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsendData\fP Pointer to the data to transfer to the FIFO\&.
+.br
+\fIsendLen\fP Number of bytes to transfer to the FIFO\&.
+.br
+\fIbackData\fP NULL or pointer to buffer if data should be read back after executing the command\&.
+.br
+\fIbackLen\fP In: Max number of bytes to write to *backData\&. Out: The number of bytes returned\&.
+.br
+\fIvalidBits\fP In/Out: The number of valid bits in the last byte\&. 0 for 8 valid bits\&. Default NULL\&.
+.br
+\fIrxAlign\fP In: Defines the bit position in backData[0] for the first bit received\&. Default 0\&.
+.br
+\fIcheckCRC\fP In: True => The last two bytes of the response is assumed to be a CRC_A that must be validated\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PCD_TransceiveData (uint8_t * sendData, uint8_t sendLen, uint8_t * backData, uint8_t * backLen, uint8_t * validBits = \fCNULL\fP, uint8_t rxAlign = \fC0\fP, bool checkCRC = \fCfalse\fP)"
+
+.SS "void mfrc522::MFRC522::PCD_WriteRegister (uint8_t reg, uint8_t count, uint8_t * values)"
+Writes a number of bytes to the specified register in the \fBMFRC522\fP chip\&. The interface is described in the datasheet section 8\&.1\&.2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP The register to write to\&. One of the PCD_Register enums\&.
+.br
+\fIcount\fP The number of bytes to write to the register
+.br
+\fIvalues\fP The values to write\&. Byte array\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PCD_WriteRegister (uint8_t reg, uint8_t count, uint8_t * values)"
+
+.SS "void mfrc522::MFRC522::PCD_WriteRegister (uint8_t reg, uint8_t value)"
+Writes a byte to the specified register in the \fBMFRC522\fP chip\&. The interface is described in the datasheet section 8\&.1\&.2\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIreg\fP The register to write to\&. One of the PCD_Register enums\&.
+.br
+\fIvalue\fP The value to write\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PCD_WriteRegister (uint8_t reg, uint8_t value)"
+
+.SS "void mfrc522::MFRC522::PICC_DumpMifareClassicSectorToSerial (\fBUid\fP * uid, \fBMIFARE_Key\fP * key, uint8_t sector)"
+Dumps memory contents of a sector of a MIFARE Classic PICC\&. Uses \fBPCD_Authenticate()\fP, \fBMIFARE_Read()\fP and PCD_StopCrypto1\&. Always uses PICC_CMD_MF_AUTH_KEY_A because only Key A can always read the sector trailer access bits\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuid\fP Pointer to \fBUid\fP struct returned from a successful \fBPICC_Select()\fP\&.
+.br
+\fIkey\fP Key A for the sector\&.
+.br
+\fIsector\fP The sector to dump, 0\&.\&.39\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PICC_DumpMifareClassicSectorToSerial (\fBUid\fP * uid, \fBMIFARE_Key\fP * key, uint8_t sector)"
+
+.SS "void mfrc522::MFRC522::PICC_DumpMifareClassicToSerial (\fBUid\fP * uid, uint8_t piccType, \fBMIFARE_Key\fP * key)"
+Dumps memory contents of a MIFARE Classic PICC\&. On success the PICC is halted after dumping the data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuid\fP Pointer to \fBUid\fP struct returned from a successful \fBPICC_Select()\fP\&.
+.br
+\fIpiccType\fP One of the PICC_Type enums\&.
+.br
+\fIkey\fP Key A used for all sectors\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PICC_DumpMifareClassicToSerial (\fBUid\fP * uid, uint8_t piccType, \fBMIFARE_Key\fP * key)"
+
+.SS "void mfrc522::MFRC522::PICC_DumpMifareUltralightToSerial ()"
+Dumps memory contents of a MIFARE Ultralight PICC\&. 
+.SS "void mfrc522::MFRC522::PICC_DumpMifareUltralightToSerial ()"
+
+.SS "void mfrc522::MFRC522::PICC_DumpToSerial (\fBUid\fP * uid)"
+Dumps debug info about the selected PICC to Serial\&. On success the PICC is halted after dumping the data\&. For MIFARE Classic the factory default key of 0xFFFFFFFFFFFF is tried\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIuid\fP Pointer to \fBUid\fP struct returned from a successful \fBPICC_Select()\fP\&. 
+.RE
+.PP
+
+.SS "void mfrc522::MFRC522::PICC_DumpToSerial (\fBUid\fP * uid)"
+
+.SS "uint8_t mfrc522::MFRC522::PICC_GetType (uint8_t sak)"
+Translates the SAK (Select Acknowledge) to a PICC type\&.
+.PP
+\fBReturns\fP
+.RS 4
+PICC_Type 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIsak\fP The SAK byte returned from \fBPICC_Select()\fP\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PICC_GetType (uint8_t sak)"
+
+.SS "const string mfrc522::MFRC522::PICC_GetTypeName (uint8_t piccType)"
+Returns a String pointer to the PICC type name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpiccType\fP One of the PICC_Type enums\&. 
+.RE
+.PP
+
+.SS "const string mfrc522::MFRC522::PICC_GetTypeName (uint8_t type)"
+
+.SS "uint8_t mfrc522::MFRC522::PICC_HaltA ()"
+Instructs a PICC in state ACTIVE(*) to go to state HALT\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PICC_HaltA ()"
+
+.SS "bool mfrc522::MFRC522::PICC_IsNewCardPresent ()"
+Returns true if a PICC responds to PICC_CMD_REQA\&. Only 'new' cards in state IDLE are invited\&. Sleeping cards in state HALT are ignored\&.
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mfrc522::MFRC522::PICC_IsNewCardPresent ()"
+
+.SS "bool mfrc522::MFRC522::PICC_ReadCardSerial ()"
+Simple wrapper around PICC_Select\&. Returns true if a UID could be read\&. Remember to call \fBPICC_IsNewCardPresent()\fP, \fBPICC_RequestA()\fP or \fBPICC_WakeupA()\fP first\&. The read UID is available in the class variable uid\&.
+.PP
+\fBReturns\fP
+.RS 4
+bool 
+.RE
+.PP
+
+.SS "bool mfrc522::MFRC522::PICC_ReadCardSerial ()"
+
+.SS "uint8_t mfrc522::MFRC522::PICC_REQA_or_WUPA (uint8_t command, uint8_t * bufferATQA, uint8_t * bufferSize)"
+Transmits REQA or WUPA commands\&. Beware: When two PICCs are in the field at the same time I often get STATUS_TIMEOUT - probably due do bad antenna design\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIcommand\fP The command to send - PICC_CMD_REQA or PICC_CMD_WUPA
+.br
+\fIbufferATQA\fP The buffer to store the ATQA (Answer to request) in
+.br
+\fIbufferSize\fP Buffer size, at least two bytes\&. Also number of bytes returned if STATUS_OK\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PICC_REQA_or_WUPA (uint8_t command, uint8_t * bufferATQA, uint8_t * bufferSize)"
+
+.SS "uint8_t mfrc522::MFRC522::PICC_RequestA (uint8_t * bufferATQA, uint8_t * bufferSize)"
+Transmits a REQuest command, Type A\&. Invites PICCs in state IDLE to go to READY and prepare for anticollision or selection\&. 7 bit frame\&. Beware: When two PICCs are in the field at the same time I often get STATUS_TIMEOUT - probably due do bad antenna design\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIbufferATQA\fP The buffer to store the ATQA (Answer to request) in
+.br
+\fIbufferSize\fP Buffer size, at least two bytes\&. Also number of bytes returned if STATUS_OK\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PICC_RequestA (uint8_t * bufferATQA, uint8_t * bufferSize)"
+
+.SS "uint8_t mfrc522::MFRC522::PICC_Select (\fBUid\fP * uid, uint8_t validBits = \fC0\fP)"
+Transmits SELECT/ANTICOLLISION commands to select a single PICC\&. Before calling this function the PICCs must be placed in the READY(*) state by calling \fBPICC_RequestA()\fP or \fBPICC_WakeupA()\fP\&. On success:
+.IP "\(bu" 2
+The chosen PICC is in state ACTIVE(*) and all other PICCs have returned to state IDLE/HALT\&. (Figure 7 of the ISO/IEC 14443-3 draft\&.)
+.IP "\(bu" 2
+The UID size and value of the chosen PICC is returned in *uid along with the SAK\&.
+.PP
+.PP
+A PICC UID consists of 4, 7 or 10 bytes\&. Only 4 bytes can be specified in a SELECT command, so for the longer UIDs two or three iterations are used: UID size Number of UID bytes Cascade levels Example of PICC ======== =================== ============== =============== single 4 1 MIFARE Classic double 7 2 MIFARE Ultralight triple 10 3 Not currently in use?
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIuid\fP Pointer to \fBUid\fP struct\&. Normally output, but can also be used to supply a known UID\&.
+.br
+\fIvalidBits\fP The number of known UID bits supplied in *uid\&. Normally 0\&. If set you must also supply uid->size\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PICC_Select (\fBUid\fP * uid, uint8_t validBits = \fC0\fP)"
+
+.SS "uint8_t mfrc522::MFRC522::PICC_WakeupA (uint8_t * bufferATQA, uint8_t * bufferSize)"
+Transmits a Wake-UP command, Type A\&. Invites PICCs in state IDLE and HALT to go to READY(*) and prepare for anticollision or selection\&. 7 bit frame\&. Beware: When two PICCs are in the field at the same time I often get STATUS_TIMEOUT - probably due do bad antenna design\&.
+.PP
+\fBReturns\fP
+.RS 4
+STATUS_OK on success, STATUS_??? otherwise\&. 
+.RE
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIbufferATQA\fP The buffer to store the ATQA (Answer to request) in
+.br
+\fIbufferSize\fP Buffer size, at least two bytes\&. Also number of bytes returned if STATUS_OK\&. 
+.RE
+.PP
+
+.SS "uint8_t mfrc522::MFRC522::PICC_WakeupA (uint8_t * bufferATQA, uint8_t * bufferSize)"
+
+.SS "void mfrc522::MFRC522::setBitMask (unsigned char reg, unsigned char mask)"
+
+.SS "void mfrc522::MFRC522::setBitMask (unsigned char reg, unsigned char mask)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "static const uint8_t mfrc522::MFRC522::FIFO_SIZE = 64\fC [static]\fP"
+
+.SS "\fBIGpio\fP & mfrc522::MFRC522::mResetPin"
+
+.SS "\fBISpi\fP & mfrc522::MFRC522::mSpi"
+
+.SS "\fBUid\fP mfrc522::MFRC522::uid"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

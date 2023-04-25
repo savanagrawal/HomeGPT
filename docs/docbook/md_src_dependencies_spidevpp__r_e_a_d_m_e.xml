@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md_src_dependencies_spidevpp__r_e_a_d_m_e" xml:lang="en-US">
+
+<para>spidevpp provides a simple wrapper to easily use spidev from C++ applications. Many Raspberry Pi projects use the <link xlink:href="http://www.airspayce.com/mikem/bcm2835/">bcm2835 library</link> to access the SPI interface. The downside is that it requires root privileges to access /dev/mem and is therefire not suitable for many applications. Using spidev to access the SPI interface is a promising alternative that allows access to non-root users based on udev rules.</para>
+
+<para>The library provides the spidev interface and a GPIO interface (without any dependencies like wiringPi etc.) to drive additional CS lines, reset lines or any other output that needs to be set for an SPI slave device to work properly.</para>
+
+<para>The project can be pulled in as a submodule and integrates with cmake (Check <link xlink:href="https://github.com/twyleg/mfrc522-cpp">mfrc522-cpp</link> for an example). It was successfully tested on a Raspberry Pi 3B+ with Raspbian GNU/Linux 10 (buster) but should be compatible with every linux that provides spidev kernel support.</para>
+<section xml:id="_md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md33">
+<title>Prerequisites</title>
+
+<para>To make SPI and GPIO accessible to non-root users, make sure that you have udev rules like the following in place: <literallayout><computeroutput>SUBSYSTEM==&quot;spidev&quot;, GROUP=&quot;spi&quot;, MODE=&quot;0660&quot;
+SUBSYSTEM==&quot;bcm2835-gpiomem&quot;, GROUP=&quot;gpio&quot;, MODE=&quot;0660&quot;
+</computeroutput></literallayout> On Raspbian/Raspberry Pi OS this should already be included in **/dev/udev/rules.d/99-com.rules** and will cause the spidev and GPIO devices to be assigned to the spi/gpio groups with read/write access.</para>
+
+<para>Make sure that your user is a member of the groups <emphasis role="bold">spi</emphasis> and <emphasis role="bold">gpio</emphasis> or create the groups and add the user witht he following commands: <literallayout><computeroutput>sudo groupadd spi
+sudo groupadd gpio
+sudo adduser opendashboard spi
+sudo adduser opendashboard gpio
+</computeroutput></literallayout> </para>
+</section>
+<section xml:id="_md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md34">
+<title>Building</title>
+
+<para>Clone the repo: <literallayout><computeroutput>git clone https://github.com/twyleg/spidevpp
+</computeroutput></literallayout> Create a build directory: <literallayout><computeroutput>cd spidev
+mkdir build
+</computeroutput></literallayout> Run cmake: <literallayout><computeroutput>cd build
+cmake ..
+</computeroutput></literallayout> Build: <literallayout><computeroutput>make
+</computeroutput></literallayout> </para>
+</section>
+<section xml:id="_md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md35">
+<title>Example application for smoke testing</title>
+
+<para>The project provides a loopback example for smoke testing that expects the MISO and MOSI pin to be connected. This way the write and read functionality can be tested without an additional slave device by simply writting some data and receiving the data at the same time. <literallayout><computeroutput>cd spidevpp/build/apps/loopback_example_app
+./loopback_example_app /dev/spidev0.0
+</computeroutput></literallayout> This should create the following result: <literallayout><computeroutput>read check PASSED
+write check PASSED
+readWrite check PASSED
+</computeroutput></literallayout> </para>
+</section>
+<section xml:id="_md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md36">
+<title>Troubleshooting</title>
+<section xml:id="_md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md37">
+<title>Conflict between bcm2835 and spidev on RPi</title>
+
+<para>Be aware that running an application that uses the bcm2835 spi implementation can cause spidev to malfunction. The reason seem to be that bcm2835 keeps ownership of the CS pins which makes it impossible for the spidev driver to drive the CS lines and enable the slave devices. A quick and dirty fix is to restart the RPi or to simply reload the following kernel modules: <literallayout><computeroutput>sudo rmmod spi_bcm2835
+sudo modprobe spi_bcm2835
+</computeroutput></literallayout> </para>
+</section>
+</section>
+</section>

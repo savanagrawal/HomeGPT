@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__g_p_i_o_driver_8cpp" xml:lang="en-US">
+<title>src/peripherals/GPIODriver.cpp File Reference</title>
+<indexterm><primary>src/peripherals/GPIODriver.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;GPIODriver.h&quot;<?linebreak?>#include &quot;RelayBoard.h&quot;<?linebreak?>#include &lt;errno.h&gt;<?linebreak?>#include &lt;fcntl.h&gt;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?>#include &lt;sys/stat.h&gt;<?linebreak?>#include &lt;sys/types.h&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;sys/mman.h&gt;<?linebreak?></programlisting>Include dependency graph for GPIODriver.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_g_p_i_o_driver_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1ac2bbd6d630a06a980d9a92ddb9a49928">IN</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1aec78e7a9e90a406a56f859ee456e8eae">OUT</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1ab811d8c6ff3a505312d3276590444289">LOW</link>&#160;&#160;&#160;0</para>
+</listitem>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1a5bb885982ff66a2e0a0a45a8ee9c35e2">HIGH</link>&#160;&#160;&#160;1</para>
+</listitem>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1a437e2826e590435de33777cdab13faef">GPIO_STRING_LENGTH</link>&#160;&#160;&#160;3</para>
+
+<para>Define B. </para>
+</listitem>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1ad0ca8f10a33dc934babb22393b1eee16">DIRECTION_STRING_MAX_LENGTH</link>&#160;&#160;&#160;35</para>
+</listitem>
+            <listitem><para>#define <link linkend="__g_p_i_o_driver_8cpp_1aad53eaa9f18598639a489d0a5c05cd02">VALUE_STRING_MAX_LENGTH</link>&#160;&#160;&#160;30</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+This file contains the functions for GPIO driver class. </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1ad0ca8f10a33dc934babb22393b1eee16"/><section>
+    <title>DIRECTION_STRING_MAX_LENGTH</title>
+<indexterm><primary>DIRECTION_STRING_MAX_LENGTH</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>DIRECTION_STRING_MAX_LENGTH</secondary></indexterm>
+<para><computeroutput>#define DIRECTION_STRING_MAX_LENGTH&#160;&#160;&#160;35</computeroutput></para></section>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1a437e2826e590435de33777cdab13faef"/><section>
+    <title>GPIO_STRING_LENGTH</title>
+<indexterm><primary>GPIO_STRING_LENGTH</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>GPIO_STRING_LENGTH</secondary></indexterm>
+<para><computeroutput>#define GPIO_STRING_LENGTH&#160;&#160;&#160;3</computeroutput></para><para>
+
+<para>Define B. </para>
+</para>
+</section>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1a5bb885982ff66a2e0a0a45a8ee9c35e2"/><section>
+    <title>HIGH</title>
+<indexterm><primary>HIGH</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>HIGH</secondary></indexterm>
+<para><computeroutput>#define HIGH&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1ac2bbd6d630a06a980d9a92ddb9a49928"/><section>
+    <title>IN</title>
+<indexterm><primary>IN</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>IN</secondary></indexterm>
+<para><computeroutput>#define IN&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1ab811d8c6ff3a505312d3276590444289"/><section>
+    <title>LOW</title>
+<indexterm><primary>LOW</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>LOW</secondary></indexterm>
+<para><computeroutput>#define LOW&#160;&#160;&#160;0</computeroutput></para></section>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1aec78e7a9e90a406a56f859ee456e8eae"/><section>
+    <title>OUT</title>
+<indexterm><primary>OUT</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>OUT</secondary></indexterm>
+<para><computeroutput>#define OUT&#160;&#160;&#160;1</computeroutput></para></section>
+<anchor xml:id="__g_p_i_o_driver_8cpp_1aad53eaa9f18598639a489d0a5c05cd02"/><section>
+    <title>VALUE_STRING_MAX_LENGTH</title>
+<indexterm><primary>VALUE_STRING_MAX_LENGTH</primary><secondary>GPIODriver.cpp</secondary></indexterm>
+<indexterm><primary>GPIODriver.cpp</primary><secondary>VALUE_STRING_MAX_LENGTH</secondary></indexterm>
+<para><computeroutput>#define VALUE_STRING_MAX_LENGTH&#160;&#160;&#160;30</computeroutput></para></section>
+</section>
+</section>

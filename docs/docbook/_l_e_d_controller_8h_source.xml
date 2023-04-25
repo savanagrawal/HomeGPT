@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__l_e_d_controller_8h_source" xml:lang="en-US">
+<title>LEDController.h</title>
+<indexterm><primary>src/peripherals/LEDController.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="preprocessor">#ifndef&#32;LED_CONTROLLER_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;LED_CONTROLLER_H</emphasis>
+11 
+12 <emphasis role="preprocessor">#include&#32;&lt;wiringPi.h&gt;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+14 
+15 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_l_e_d_controller">LEDController</link>&#32;{
+16 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_l_e_d_controller">LEDController</link>(<emphasis role="keywordtype">int</emphasis>&#32;ledPin,&#32;<emphasis role="keywordtype">int</emphasis>&#32;redPin,&#32;<emphasis role="keywordtype">int</emphasis>&#32;greenPin,&#32;<emphasis role="keywordtype">int</emphasis>&#32;bluePin);
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a">turnOnLED</link>();
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de">turnOffLED</link>();
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108">setRGBColor</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;color);
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa">turnOffRGBLED</link>();
+22 
+23 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ledPin;
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;redPin;
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;greenPin;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;bluePin;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;setColor(<emphasis role="keywordtype">int</emphasis>&#32;red,&#32;<emphasis role="keywordtype">int</emphasis>&#32;green,&#32;<emphasis role="keywordtype">int</emphasis>&#32;blue);
+29 };
+30 
+31 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;LEDCONTROLLER_H</emphasis>
+32 
+33 
+34 <emphasis role="comment">//g++&#32;-o&#32;led_test&#32;LEDMain.cpp&#32;LEDController.cpp&#32;-lwiringPi</emphasis>
+</programlisting></section>

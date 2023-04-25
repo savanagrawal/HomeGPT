@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__servo_motor_8h_source" xml:lang="en-US">
+<title>ServoMotor.h</title>
+<indexterm><primary>src/peripherals/ServoMotor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;SERVO_MOTOR_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;SERVO_MOTOR_H</emphasis>
+10 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_servo_motor">ServoMotor</link>&#32;{
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+13 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_servo_motor">ServoMotor</link>(<emphasis role="keywordtype">int</emphasis>&#32;pin);
+14 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_servo_motor_1a13ae02109c52def30f2ab15a8114436c">~ServoMotor</link>();
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d">write</link>(<emphasis role="keywordtype">int</emphasis>&#32;angle);
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;_pin;
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;_angle;
+20 };
+21 
+22 <emphasis role="preprocessor">#endif</emphasis>
+23 
+</programlisting></section>

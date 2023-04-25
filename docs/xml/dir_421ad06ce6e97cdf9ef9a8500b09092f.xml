@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_421ad06ce6e97cdf9ef9a8500b09092f" kind="dir">
+    <compoundname>src/thread/intruder-detection</compoundname>
+    <innerfile refid="_intruder_thread_8cpp">IntruderThread.cpp</innerfile>
+    <innerfile refid="_intruder_thread_8h">IntruderThread.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/thread/intruder-detection/"/>
+  </compounddef>
+</doxygen>

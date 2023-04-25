@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_clap_thread" xml:lang="en-US">
+<title>ClapThread Class Reference</title>
+<indexterm><primary>ClapThread</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ClapThread.h&gt;</computeroutput>
+</para>
+Inheritance diagram for ClapThread:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_thread__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ClapThread:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_thread__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_clap_thread_1a644933e1db3c5f968168dce690a63707">ClapThread</link> (<link linkend="_class_clap_detection">ClapDetection</link> *clapDetection)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_thread_1a1be46d1be000f41a763289300623c609">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f">join</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_clap_thread_1a644933e1db3c5f968168dce690a63707"/><section>
+    <title>ClapThread()</title>
+<indexterm><primary>ClapThread</primary><secondary>ClapThread</secondary></indexterm>
+<indexterm><primary>ClapThread</primary><secondary>ClapThread</secondary></indexterm>
+<para><computeroutput>ClapThread::ClapThread (<link linkend="_class_clap_detection">ClapDetection</link> * clapDetection)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f"/><section>
+    <title>join()</title>
+<indexterm><primary>join</primary><secondary>ClapThread</secondary></indexterm>
+<indexterm><primary>ClapThread</primary><secondary>join</secondary></indexterm>
+<para><computeroutput>void CppThread::join ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para>
+<para>Waits for the thread to terminate. </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a8ff0fda6b913cc53764caef0e1200f3f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_cpp_thread_1a1be46d1be000f41a763289300623c609"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>ClapThread</secondary></indexterm>
+<indexterm><primary>ClapThread</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void CppThread::start ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para>
+<para>Starts the thread. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a1be46d1be000f41a763289300623c609_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a1be46d1be000f41a763289300623c609_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/thread/clap-detection/<link linkend="__clap_thread_8h">ClapThread.h</link>src/thread/clap-detection/<link linkend="__clap_thread_8cpp">ClapThread.cpp</link></section>
+</section>

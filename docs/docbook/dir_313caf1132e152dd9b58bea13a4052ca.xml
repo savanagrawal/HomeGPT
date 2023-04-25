@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_313caf1132e152dd9b58bea13a4052ca" xml:lang="en-US">
+<title>src/utils Directory Reference</title>
+<indexterm><primary>src/utils Directory Reference</primary></indexterm>
+Directory dependency graph for utils:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_313caf1132e152dd9b58bea13a4052ca_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_cadbc4a4244c254fcf188f6541d24429">EventTest</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__circular_queue_8h">CircularQueue.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__cpp_timer_callback_8h">CppTimerCallback.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__event_handler_8cpp">EventHandler.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__event_handler_8h">EventHandler.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__events_8h">Events.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__globals_8h">Globals.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__threads_8h">Threads.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__utility_8h">Utility.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

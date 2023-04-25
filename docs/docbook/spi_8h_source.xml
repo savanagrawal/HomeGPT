@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_spi_8h_source" xml:lang="en-US">
+<title>spi.h</title>
+<indexterm><primary>src/dependencies/spidevpp/libs/spidevpp/spi.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;linux/spi/spidev.h&gt;</emphasis>
+5 
+6 <emphasis role="preprocessor">#include&#32;&lt;chrono&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&lt;cstdint&gt;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&lt;cstddef&gt;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+11 
+12 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacespidevpp">spidevpp</link>&#32;{
+13 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classspidevpp_1_1_spi">Spi</link>&#32;{
+15 
+16 <emphasis role="keyword">public</emphasis>:
+17 
+18 &#32;&#32;&#32;&#32;<emphasis role="keyword">explicit</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi">Spi</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;device);
+19 
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7">setBitsPerWord</link>(uint8_t&#32;bitsPerWord);
+21 &#32;&#32;&#32;&#32;uint8_t&#32;<link linkend="_classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2">getBitsPerWord</link>()&#32;<emphasis role="keyword">const</emphasis>;
+22 
+23 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb">setSpeed</link>(uint32_t&#32;speed);
+24 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207">getSpeed</link>()&#32;<emphasis role="keyword">const</emphasis>;
+25 
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1">setMode</link>(uint32_t&#32;mode);
+27 &#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980">getMode</link>()&#32;<emphasis role="keyword">const</emphasis>;
+28 
+29 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849">setDelay</link>(std::chrono::microseconds);
+30 &#32;&#32;&#32;&#32;std::chrono::microseconds&#32;<link linkend="_classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e">getDelay</link>()&#32;<emphasis role="keyword">const</emphasis>;
+31 
+32 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4">write</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len);
+33 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962">read</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len);
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8">writeRead</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len);
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8">writeRead</link>(<emphasis role="keywordtype">char</emphasis>&#32;data);
+36 
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">class</emphasis>&#32;Stream&gt;
+38 &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;Stream&amp;&#32;<link linkend="_classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311">operator&lt;&lt;</link>(Stream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi">Spi</link>&amp;);
+39 
+40 <emphasis role="keyword">private</emphasis>:
+41 
+42 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;mDevice;
+43 
+44 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;mFd;
+45 &#32;&#32;&#32;&#32;uint8_t&#32;mBitsPerWord&#32;=&#32;8;
+46 &#32;&#32;&#32;&#32;std::chrono::microseconds&#32;mDelay&#32;=&#32;std::chrono::microseconds(0);
+47 &#32;&#32;&#32;&#32;uint32_t&#32;mMode&#32;=&#32;0;
+48 &#32;&#32;&#32;&#32;uint32_t&#32;mSpeed&#32;=&#32;500000;
+49 
+50 };
+51 
+52 <emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">class</emphasis>&#32;Stream&gt;
+53 Stream&amp;&#32;<link linkend="_namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e">operator&lt;&lt;</link>(Stream&amp;&#32;out,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classspidevpp_1_1_spi">Spi</link>&amp;&#32;spi)
+54 {
+55 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;SPI&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;spi.mDevice&#32;&lt;&lt;&#32;std::endl;
+56 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\tMode:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;spi.<link linkend="_classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980">getMode</link>()&#32;&lt;&lt;&#32;std::endl;
+57 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\tSpeed&#32;[Hz]:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;spi.<link linkend="_classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207">getSpeed</link>()&#32;&lt;&lt;&#32;std::endl;
+58 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\tWord&#32;length&#32;[bits]:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<emphasis role="keyword">static_cast&lt;</emphasis><emphasis role="keywordtype">int</emphasis><emphasis role="keyword">&gt;</emphasis>(spi.<link linkend="_classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2">getBitsPerWord</link>())&#32;&lt;&lt;&#32;std::endl;
+59 &#32;&#32;&#32;&#32;out&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\tDelay&#32;[us]:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;spi.<link linkend="_classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e">getDelay</link>().count()&#32;&lt;&lt;&#32;std::endl;
+60 
+61 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;out;
+62 }
+63 
+64 }
+65 
+</programlisting></section>

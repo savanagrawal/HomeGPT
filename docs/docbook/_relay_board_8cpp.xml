@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__relay_board_8cpp" xml:lang="en-US">
+<title>src/peripherals/RelayBoard.cpp File Reference</title>
+<indexterm><primary>src/peripherals/RelayBoard.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;RelayBoard.h&quot;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;stdlib.h&gt;<?linebreak?></programlisting>Include dependency graph for RelayBoard.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_relay_board_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+This file contains the functions for the Relay Board class. </para>
+</section>
+</section>

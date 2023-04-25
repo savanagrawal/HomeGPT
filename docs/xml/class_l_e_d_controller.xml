@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_l_e_d_controller" kind="class" language="C++" prot="public">
+    <compoundname>LEDController</compoundname>
+    <includes refid="_l_e_d_controller_8h" local="no">LEDController.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_l_e_d_controller_1a69f8d1c97d89181dbb80e5855a94f45e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LEDController::ledPin</definition>
+        <argsstring></argsstring>
+        <name>ledPin</name>
+        <qualifiedname>LEDController::ledPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="24" column="13" bodyfile="src/peripherals/LEDController.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_e_d_controller_1aa48f79b2a91a6d7b6610705bc7c35cdb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LEDController::redPin</definition>
+        <argsstring></argsstring>
+        <name>redPin</name>
+        <qualifiedname>LEDController::redPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="25" column="13" bodyfile="src/peripherals/LEDController.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_e_d_controller_1a9632ac10d1aadd287a2b23d3da013e73" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LEDController::greenPin</definition>
+        <argsstring></argsstring>
+        <name>greenPin</name>
+        <qualifiedname>LEDController::greenPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="26" column="13" bodyfile="src/peripherals/LEDController.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_l_e_d_controller_1a2c23e91dd83f30f97a8c0d8cf89dffd3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LEDController::bluePin</definition>
+        <argsstring></argsstring>
+        <name>bluePin</name>
+        <qualifiedname>LEDController::bluePin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="27" column="13" bodyfile="src/peripherals/LEDController.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LEDController::LEDController</definition>
+        <argsstring>(int ledPin, int redPin, int greenPin, int bluePin)</argsstring>
+        <name>LEDController</name>
+        <qualifiedname>LEDController::LEDController</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ledPin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>redPin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>greenPin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bluePin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="17" column="9" bodyfile="src/peripherals/LEDController.cpp" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LEDController::turnOnLED</definition>
+        <argsstring>()</argsstring>
+        <name>turnOnLED</name>
+        <qualifiedname>LEDController::turnOnLED</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="18" column="14" bodyfile="src/peripherals/LEDController.cpp" bodystart="20" bodyend="22"/>
+        <references refid="_g_p_i_o_driver_8cpp_1a5bb885982ff66a2e0a0a45a8ee9c35e2" compoundref="_g_p_i_o_driver_8cpp" startline="27">HIGH</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LEDController::turnOffLED</definition>
+        <argsstring>()</argsstring>
+        <name>turnOffLED</name>
+        <qualifiedname>LEDController::turnOffLED</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="19" column="14" bodyfile="src/peripherals/LEDController.cpp" bodystart="24" bodyend="26"/>
+        <references refid="_g_p_i_o_driver_8cpp_1ab811d8c6ff3a505312d3276590444289" compoundref="_g_p_i_o_driver_8cpp" startline="26">LOW</references>
+      </memberdef>
+      <memberdef kind="function" id="class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LEDController::setRGBColor</definition>
+        <argsstring>(const std::string &amp;color)</argsstring>
+        <name>setRGBColor</name>
+        <qualifiedname>LEDController::setRGBColor</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="20" column="14" bodyfile="src/peripherals/LEDController.cpp" bodystart="28" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LEDController::turnOffRGBLED</definition>
+        <argsstring>()</argsstring>
+        <name>turnOffRGBLED</name>
+        <qualifiedname>LEDController::turnOffRGBLED</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="21" column="14" bodyfile="src/peripherals/LEDController.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_l_e_d_controller_1a624dea029b933af2ce13622d4c251b10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LEDController::setColor</definition>
+        <argsstring>(int red, int green, int blue)</argsstring>
+        <name>setColor</name>
+        <qualifiedname>LEDController::setColor</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>red</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>green</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>blue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/LEDController.h" line="28" column="14" bodyfile="src/peripherals/LEDController.cpp" bodystart="60" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/peripherals/LEDController.h" line="15" column="1" bodyfile="src/peripherals/LEDController.h" bodystart="15" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_l_e_d_controller_1a2c23e91dd83f30f97a8c0d8cf89dffd3" prot="private" virt="non-virtual"><scope>LEDController</scope><name>bluePin</name></member>
+      <member refid="class_l_e_d_controller_1a9632ac10d1aadd287a2b23d3da013e73" prot="private" virt="non-virtual"><scope>LEDController</scope><name>greenPin</name></member>
+      <member refid="class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823" prot="public" virt="non-virtual"><scope>LEDController</scope><name>LEDController</name></member>
+      <member refid="class_l_e_d_controller_1a69f8d1c97d89181dbb80e5855a94f45e" prot="private" virt="non-virtual"><scope>LEDController</scope><name>ledPin</name></member>
+      <member refid="class_l_e_d_controller_1aa48f79b2a91a6d7b6610705bc7c35cdb" prot="private" virt="non-virtual"><scope>LEDController</scope><name>redPin</name></member>
+      <member refid="class_l_e_d_controller_1a624dea029b933af2ce13622d4c251b10" prot="private" virt="non-virtual"><scope>LEDController</scope><name>setColor</name></member>
+      <member refid="class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108" prot="public" virt="non-virtual"><scope>LEDController</scope><name>setRGBColor</name></member>
+      <member refid="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" prot="public" virt="non-virtual"><scope>LEDController</scope><name>turnOffLED</name></member>
+      <member refid="class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa" prot="public" virt="non-virtual"><scope>LEDController</scope><name>turnOffRGBLED</name></member>
+      <member refid="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" prot="public" virt="non-virtual"><scope>LEDController</scope><name>turnOnLED</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

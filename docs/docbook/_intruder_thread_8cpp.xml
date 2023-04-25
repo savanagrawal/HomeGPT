@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__intruder_thread_8cpp" xml:lang="en-US">
+<title>src/thread/intruder-detection/IntruderThread.cpp File Reference</title>
+<indexterm><primary>src/thread/intruder-detection/IntruderThread.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;EventHandler.h&quot;<?linebreak?>#include &quot;DatasetCreator.h&quot;<?linebreak?>#include &quot;DatasetTrainer.h&quot;<?linebreak?>#include &quot;IntruderThread.h&quot;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;thread&gt;<?linebreak?></programlisting>Include dependency graph for IntruderThread.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_intruder_thread_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115">EVENT_OP_CODES</link> { <?linebreak?><link linkend="__audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <link linkend="__clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <link linkend="__controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <link linkend="__doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <?linebreak?><link linkend="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <link linkend="__intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <link linkend="__mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+, <link linkend="__r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">EXIT_APPLICATION</link> = 255
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Functions related to intruder detection thread.</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale &amp; Savan Agrawal </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Functions related to intruder detection thread. </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115"/><section>
+    <title>EVENT_OP_CODES</title>
+<indexterm><primary>EVENT_OP_CODES</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EVENT_OP_CODES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="__audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115">EVENT_OP_CODES</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row><row><entry><indexterm><primary>EXIT_APPLICATION</primary><secondary>IntruderThread.cpp</secondary></indexterm>
+<indexterm><primary>IntruderThread.cpp</primary><secondary>EXIT_APPLICATION</secondary></indexterm>
+<anchor xml:id="__intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e"/>EXIT_APPLICATION</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+</section>

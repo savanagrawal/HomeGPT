@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sys__gpio__impl_8h_source" xml:lang="en-US">
+<title>sys_gpio_impl.h</title>
+<indexterm><primary>src/peripherals/spi/sys_gpio_impl.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_dependencies_2mfrc522_2igpio_8h">mfrc522/igpio.h</link>&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_gpio_8h">spidevpp/gpio.h</link>&gt;</emphasis>
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_sys_gpio">SysGpio</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_gpio">mfrc522::IGpio</link>&#32;{
+8 
+9 <emphasis role="keyword">public</emphasis>:
+10 &#32;&#32;&#32;&#32;<link linkend="_class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309">SysGpio</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;pin,&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">spidevpp::Gpio::Direction</link>&#32;direction,&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">spidevpp::Gpio::Value</link>&#32;value)
+11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;<link linkend="_class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a">mGpio</link>(pin,&#32;direction,&#32;value)
+12 &#32;&#32;&#32;&#32;{}
+13 
+14 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9">setValue</link>(<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>&#32;value)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a">mGpio</link>.<link linkend="_classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024">setValue</link>(<emphasis role="keyword">static_cast&lt;</emphasis><link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">spidevpp::Gpio::Value</link><emphasis role="keyword">&gt;</emphasis>(value));
+16 &#32;&#32;&#32;&#32;}
+17 
+18 &#32;&#32;&#32;&#32;<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link>&#32;<link linkend="_class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b">getValue</link>()&#32;final&#32;{
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">static_cast&lt;</emphasis><link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">mfrc522::IGpio::Value</link><emphasis role="keyword">&gt;</emphasis>(<link linkend="_class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a">mGpio</link>.<link linkend="_classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5">getValue</link>());
+20 &#32;&#32;&#32;&#32;}
+21 
+22 &#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio">spidevpp::Gpio</link>&#32;<link linkend="_class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a">mGpio</link>;
+23 
+24 };
+</programlisting></section>

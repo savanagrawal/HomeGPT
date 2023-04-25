@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_clap_thread" kind="class" language="C++" prot="public">
+    <compoundname>ClapThread</compoundname>
+    <basecompoundref refid="class_cpp_thread" prot="public" virt="non-virtual">CppThread</basecompoundref>
+    <includes refid="_clap_thread_8h" local="no">ClapThread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_clap_thread_1add58caf216fc923d3171a04515130641" prot="private" static="no" mutable="no">
+        <type><ref refid="class_globals" kindref="compound">Globals</ref></type>
+        <definition>Globals ClapThread::globals</definition>
+        <argsstring></argsstring>
+        <name>globals</name>
+        <qualifiedname>ClapThread::globals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/clap-detection/ClapThread.h" line="27" column="17" bodyfile="src/thread/clap-detection/ClapThread.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_clap_thread_1a6e317491e65919a3ec55599cc3af9ec2" prot="private" static="no" mutable="no">
+        <type><ref refid="class_clap_detection" kindref="compound">ClapDetection</ref> *</type>
+        <definition>ClapDetection* ClapThread::clapDetection</definition>
+        <argsstring></argsstring>
+        <name>clapDetection</name>
+        <qualifiedname>ClapThread::clapDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/clap-detection/ClapThread.h" line="29" column="23" bodyfile="src/thread/clap-detection/ClapThread.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_clap_thread_1a644933e1db3c5f968168dce690a63707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ClapThread::ClapThread</definition>
+        <argsstring>(ClapDetection *clapDetection)</argsstring>
+        <name>ClapThread</name>
+        <qualifiedname>ClapThread::ClapThread</qualifiedname>
+        <param>
+          <type><ref refid="class_clap_detection" kindref="compound">ClapDetection</ref> *</type>
+          <declname>clapDetection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/clap-detection/ClapThread.h" line="19" column="9" bodyfile="src/thread/clap-detection/ClapThread.h" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_clap_thread_1ab13d24bd87c16181ba04b4d9847ecc70" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ClapThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>ClapThread::run</qualifiedname>
+        <reimplements refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manage the intruder detection thread runnable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/clap-detection/ClapThread.h" line="24" column="14" bodyfile="src/thread/clap-detection/ClapThread.cpp" bodystart="26" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ClapThread</label>
+        <link refid="class_clap_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ClapThread</label>
+        <link refid="class_clap_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/thread/clap-detection/ClapThread.h" line="17" column="1" bodyfile="src/thread/clap-detection/ClapThread.h" bodystart="17" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_clap_thread_1a6e317491e65919a3ec55599cc3af9ec2" prot="private" virt="non-virtual"><scope>ClapThread</scope><name>clapDetection</name></member>
+      <member refid="class_clap_thread_1a644933e1db3c5f968168dce690a63707" prot="public" virt="non-virtual"><scope>ClapThread</scope><name>ClapThread</name></member>
+      <member refid="class_clap_thread_1add58caf216fc923d3171a04515130641" prot="private" virt="non-virtual"><scope>ClapThread</scope><name>globals</name></member>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>ClapThread</scope><name>join</name></member>
+      <member refid="class_clap_thread_1ab13d24bd87c16181ba04b4d9847ecc70" prot="private" virt="virtual"><scope>ClapThread</scope><name>run</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>ClapThread</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

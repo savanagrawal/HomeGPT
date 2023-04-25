@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_globals" xml:lang="en-US">
+<title>Globals Class Reference</title>
+<indexterm><primary>Globals</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Globals.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_class_globals_1a7e9e2b31d0484acc038684bd8aceff1a">setMoodSvm</link> ()</para>
+</listitem>
+            <listitem><para>cv::Ptr&lt; cv::ml::SVM &gt; <link linkend="_class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd">getMoodSvm</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_globals_1a55bec70a13f8568891d2562c90a61aaf">getGarageDoorPin</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_globals_1ae6cfcdccf6b6a84f36b129bee772e349">getMainDoorPin</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1">getLedPin</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_globals_1a01698796b983f7841a3b5511efdac98a">getLedRedPin</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_globals_1a27e735a20b539795eaa6e85e0e11d439">getLedGreenPin</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_globals_1ad26e9e618106929950d8e3db73503192">getLedBluePin</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_globals_1a55bec70a13f8568891d2562c90a61aaf"/><section>
+    <title>getGarageDoorPin()</title>
+<indexterm><primary>getGarageDoorPin</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getGarageDoorPin</secondary></indexterm>
+<para><computeroutput>int Globals::getGarageDoorPin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_globals_1ad26e9e618106929950d8e3db73503192"/><section>
+    <title>getLedBluePin()</title>
+<indexterm><primary>getLedBluePin</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getLedBluePin</secondary></indexterm>
+<para><computeroutput>int Globals::getLedBluePin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_globals_1a27e735a20b539795eaa6e85e0e11d439"/><section>
+    <title>getLedGreenPin()</title>
+<indexterm><primary>getLedGreenPin</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getLedGreenPin</secondary></indexterm>
+<para><computeroutput>int Globals::getLedGreenPin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1"/><section>
+    <title>getLedPin()</title>
+<indexterm><primary>getLedPin</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getLedPin</secondary></indexterm>
+<para><computeroutput>int Globals::getLedPin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_globals_1a01698796b983f7841a3b5511efdac98a"/><section>
+    <title>getLedRedPin()</title>
+<indexterm><primary>getLedRedPin</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getLedRedPin</secondary></indexterm>
+<para><computeroutput>int Globals::getLedRedPin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_globals_1ae6cfcdccf6b6a84f36b129bee772e349"/><section>
+    <title>getMainDoorPin()</title>
+<indexterm><primary>getMainDoorPin</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getMainDoorPin</secondary></indexterm>
+<para><computeroutput>int Globals::getMainDoorPin ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd"/><section>
+    <title>getMoodSvm()</title>
+<indexterm><primary>getMoodSvm</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>getMoodSvm</secondary></indexterm>
+<para><computeroutput>cv::Ptr&lt; cv::ml::SVM &gt; Globals::getMoodSvm ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_globals_a6175ae15868ba84a14fd1cf1823d8dbd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_globals_1a7e9e2b31d0484acc038684bd8aceff1a"/><section>
+    <title>setMoodSvm()</title>
+<indexterm><primary>setMoodSvm</primary><secondary>Globals</secondary></indexterm>
+<indexterm><primary>Globals</primary><secondary>setMoodSvm</secondary></indexterm>
+<para><computeroutput>void Globals::setMoodSvm ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_globals_a7e9e2b31d0484acc038684bd8aceff1a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/utils/<link linkend="__globals_8h">Globals.h</link></section>
+</section>

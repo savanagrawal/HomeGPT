@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_c1e389959dffe7e0e9ddc72ba20f11c5" kind="dir">
+    <compoundname>src/dependencies/spidevpp/libs/spidevpp</compoundname>
+    <innerfile refid="gpio_8cc">gpio.cc</innerfile>
+    <innerfile refid="gpio_8h">gpio.h</innerfile>
+    <innerfile refid="spi_8cc">spi.cc</innerfile>
+    <innerfile refid="spi_8h">spi.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/libs/spidevpp/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,631 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i2_c_driver" xml:lang="en-US">
+<title>I2CDriver Class Reference</title>
+<indexterm><primary>I2CDriver</primary></indexterm>
+<para>
+
+<para>I2C Driver class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;I2CDriver.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1ae25c889f0a2540eee34d53e0228fe914">I2C_Setup_File</link> (int addres)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a6480a0e3e5022ac90944f319ca5a5f4e">I2C_Close_File</link> (int fd)</para>
+</listitem>
+            <listitem><para><link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link> <link linkend="_class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41">Plain_I2C_Write_Read</link> (int fd, uint16_t command, uint8_t *buffer, uint8_t readLength, uint16_t delay=10)</para>
+</listitem>
+            <listitem><para><link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link> <link linkend="_class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572">Plain_I2C_Write_Read_CRC8</link> (int fd, uint16_t command, uint16_t *buffer, uint8_t readlen, uint16_t delay=10)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0">Delay</link> (unsigned int timeMs)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1acd90c5e9215accc2baf66757054e2906">I2C_Read_Byte</link> (int fd)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1aab652313af52fe19360bc928baf80fae">I2C_Read_8bitReg</link> (int fd, int command)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a8639cbc95b98be425f6b30dd591384c6">I2C_Read_16bitReg</link> (int fd, int command)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a7b5eb92afa9ed0b5af264836d0944520">I2C_Write_Byte</link> (int fd, int data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a6ff7dfdd4aca26c83c6047f45cce1a9e">I2C_Write_8bitReg</link> (int fd, int command, int data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a445d2ef0ba5f742fb8264c202dae4a8d">I2C_Write_16bitReg</link> (int fd, int command, int data)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a389bf23234176e0fd0421e078e1fa00d">I2C_Write_Block</link> (int fd, int command, uint8_t length, uint8_t *buff)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_i2_c_driver_1a3877a689d16c30835569c7fa5f064359">I2C_Read_Block</link> (int fd, int command, uint8_t *buff)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>I2C Driver class. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale</para>
+</formalpara>
+This is class is responsilbe for handling I2C communication. </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0"/><section>
+    <title>Delay()</title>
+<indexterm><primary>Delay</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>Delay</secondary></indexterm>
+<para><computeroutput>void I2CDriver::Delay (unsigned int timeMs)</computeroutput></para>
+<para>Suspends the execution of the calling thread until at least the time specified has elapsed.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>timeMs</entry><entry>
+<para>Time to wait in miliseconds.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>none </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i2_c_driver_a01453a7adeb358f269faabb33953eee0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a6480a0e3e5022ac90944f319ca5a5f4e"/><section>
+    <title>I2C_Close_File()</title>
+<indexterm><primary>I2C_Close_File</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Close_File</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Close_File (int fd)</computeroutput></para>
+<para>Close file descriptor</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>result of file descriptor close operation. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a8639cbc95b98be425f6b30dd591384c6"/><section>
+    <title>I2C_Read_16bitReg()</title>
+<indexterm><primary>I2C_Read_16bitReg</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Read_16bitReg</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Read_16bitReg (int fd, int command)</computeroutput></para>
+<para>Use SMBUS to Write a byte word and read 2 bytes.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A 16-bit unsigned word received from the device else negative errno </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1aab652313af52fe19360bc928baf80fae"/><section>
+    <title>I2C_Read_8bitReg()</title>
+<indexterm><primary>I2C_Read_8bitReg</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Read_8bitReg</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Read_8bitReg (int fd, int command)</computeroutput></para>
+<para>Use SMBUS to Write a byte word and read one byte from.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A data byte received from the device elese negative errno. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a3877a689d16c30835569c7fa5f064359"/><section>
+    <title>I2C_Read_Block()</title>
+<indexterm><primary>I2C_Read_Block</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Read_Block</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Read_Block (int fd, int command, uint8_t * buffer)</computeroutput></para>
+<para>Use SMBUS to Read n-bytes using a command / addressing specific register.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer</entry><entry>
+<para>Buffer to read the data to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>The number of read bytes </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1acd90c5e9215accc2baf66757054e2906"/><section>
+    <title>I2C_Read_Byte()</title>
+<indexterm><primary>I2C_Read_Byte</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Read_Byte</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Read_Byte (int fd)</computeroutput></para>
+<para>Use SMBUS to read one byte.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>A data byte received from the device elese negative errno. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1ae25c889f0a2540eee34d53e0228fe914"/><section>
+    <title>I2C_Setup_File()</title>
+<indexterm><primary>I2C_Setup_File</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Setup_File</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Setup_File (int addr)</computeroutput></para>
+<para>Open I2C File descriptor for target slave device.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>addr</entry><entry>
+<para>Address of the slave device.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>I2C File descriptor for specified address of the slave device. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a445d2ef0ba5f742fb8264c202dae4a8d"/><section>
+    <title>I2C_Write_16bitReg()</title>
+<indexterm><primary>I2C_Write_16bitReg</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Write_16bitReg</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Write_16bitReg (int fd, int command, int data)</computeroutput></para>
+<para>Use SMBUS to Write a 2-byte word using a command / addressing specific register.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Data to be written.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else negative errno </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a6ff7dfdd4aca26c83c6047f45cce1a9e"/><section>
+    <title>I2C_Write_8bitReg()</title>
+<indexterm><primary>I2C_Write_8bitReg</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Write_8bitReg</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Write_8bitReg (int fd, int command, int data)</computeroutput></para>
+<para>Use SMBUS to Write a byte word uing a command / addressing specific register.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Data to be written.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else negative errno </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a389bf23234176e0fd0421e078e1fa00d"/><section>
+    <title>I2C_Write_Block()</title>
+<indexterm><primary>I2C_Write_Block</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Write_Block</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Write_Block (int fd, int command, uint8_t length, uint8_t * buffer)</computeroutput></para>
+<para>Use SMBUS to Write n-bytes using a command / addressing specific register.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>length</entry><entry>
+<para>Number of bytes to be written from the data buffer. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer</entry><entry>
+<para>Buffer containing data to be written.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else negative errno </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a7b5eb92afa9ed0b5af264836d0944520"/><section>
+    <title>I2C_Write_Byte()</title>
+<indexterm><primary>I2C_Write_Byte</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>I2C_Write_Byte</secondary></indexterm>
+<para><computeroutput>int I2CDriver::I2C_Write_Byte (int fd, int data)</computeroutput></para>
+<para>Use SMBUS to Write a byte word.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>data</entry><entry>
+<para>Data to be written.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else negative errno </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41"/><section>
+    <title>Plain_I2C_Write_Read()</title>
+<indexterm><primary>Plain_I2C_Write_Read</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>Plain_I2C_Write_Read</secondary></indexterm>
+<para><computeroutput><link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link> I2CDriver::Plain_I2C_Write_Read (int fd, uint16_t command, uint8_t * buffer, uint8_t readLength, uint16_t delay = <computeroutput>10</computeroutput>
+)</computeroutput></para>
+<para>Use Plain I2C to read n-bytes a using a 2byte command. Pass 0 for readLength to just write.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer</entry><entry>
+<para>Buffer to read the data to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>readLength</entry><entry>
+<para>Number of bytes to recieve </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delay</entry><entry>
+<para>Delay between read and write (10ms by default)</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i2_c_driver_a1e025ccfccece30b7d42acd1bf7e8e41_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i2_c_driver_a1e025ccfccece30b7d42acd1bf7e8e41_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572"/><section>
+    <title>Plain_I2C_Write_Read_CRC8()</title>
+<indexterm><primary>Plain_I2C_Write_Read_CRC8</primary><secondary>I2CDriver</secondary></indexterm>
+<indexterm><primary>I2CDriver</primary><secondary>Plain_I2C_Write_Read_CRC8</secondary></indexterm>
+<para><computeroutput><link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link> I2CDriver::Plain_I2C_Write_Read_CRC8 (int fd, uint16_t command, uint16_t * buffer, uint8_t readlen, uint16_t delay = <computeroutput>10</computeroutput>
+)</computeroutput></para>
+<para>Use Plain I2C to read n-bytes using a uint16_t command and perform a CRC8 on reply uint16_ts . Pass 0 for readLength to just write.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>fd</entry><entry>
+<para>File descriptor of the device. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>command</entry><entry>
+<para>Command / Register to address. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>buffer</entry><entry>
+<para>Buffer to read the data to. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>readlen</entry><entry>
+<para>number of uint16_t to read </para>
+</entry>
+                            </row>
+                            <row>
+<entry>delay</entry><entry>
+<para>Delay between read and write</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else error number</para>
+</formalpara>
+<para><link linkend="_todo_1_todo000001">Todo</link> 
+<para>: Appopriate command bytes </para>
+</para></para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i2_c_driver_a732c5b799a0aecde0d908ee981872572_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/peripherals/<link linkend="__i2_c_driver_8h">I2CDriver.h</link>src/peripherals/<link linkend="__i2_c_driver_8cpp">I2CDriver.cpp</link></section>
+</section>

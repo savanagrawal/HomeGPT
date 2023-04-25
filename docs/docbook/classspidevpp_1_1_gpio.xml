@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classspidevpp_1_1_gpio" xml:lang="en-US">
+<title>spidevpp::Gpio Class Reference</title>
+<indexterm><primary>spidevpp::Gpio</primary></indexterm>
+<para>
+<computeroutput>#include &lt;gpio.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">Direction</link> { <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08aa84cc046d48610b05c21fd3670d0c829">INPUT</link>
+, <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34">OUTPUT</link>
+ }</para>
+</listitem>
+            <listitem><para>enum class <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link> { <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">low</link> = 0
+, <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243">high</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded">Gpio</link> (unsigned int pin, <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">Direction</link> direction, <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link> initialValue=<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">Value::low</link>)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024">setValue</link> (<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link> <link linkend="_classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5">getValue</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08"/><section>
+    <title>Direction</title>
+<indexterm><primary>Direction</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>Direction</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">spidevpp::Gpio::Direction</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>INPUT</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>INPUT</secondary></indexterm>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08aa84cc046d48610b05c21fd3670d0c829"/>INPUT</entry><entry></entry></row><row><entry><indexterm><primary>OUTPUT</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>OUTPUT</secondary></indexterm>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34"/>OUTPUT</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b"/><section>
+    <title>Value</title>
+<indexterm><primary>Value</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">spidevpp::Gpio::Value</link><computeroutput>[strong]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>low</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>low</secondary></indexterm>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7"/>low</entry><entry></entry></row><row><entry><indexterm><primary>high</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>high</secondary></indexterm>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243"/>high</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded"/><section>
+    <title>Gpio()</title>
+<indexterm><primary>Gpio</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>Gpio</secondary></indexterm>
+<para><computeroutput>spidevpp::Gpio::Gpio (unsigned int pin, <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">Direction</link> direction, <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link> initialValue = <computeroutput><link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">Value::low</link></computeroutput>
+)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_gpio_a6eef0d9a6619fba0e2af6d364f792ded_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5"/><section>
+    <title>getValue()</title>
+<indexterm><primary>getValue</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>getValue</secondary></indexterm>
+<para><computeroutput><link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Gpio::Value</link> spidevpp::Gpio::getValue ( )</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_gpio_adf895aa115a073e285f3ff79abe629c5_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024"/><section>
+    <title>setValue()</title>
+<indexterm><primary>setValue</primary><secondary>spidevpp::Gpio</secondary></indexterm>
+<indexterm><primary>spidevpp::Gpio</primary><secondary>setValue</secondary></indexterm>
+<para><computeroutput>void spidevpp::Gpio::setValue (<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link> value)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classspidevpp_1_1_gpio_aeb4dea7570af80386b138a33f656f024_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/dependencies/spidevpp/libs/spidevpp/<link linkend="_gpio_8h">gpio.h</link>src/dependencies/spidevpp/libs/spidevpp/<link linkend="_gpio_8cc">gpio.cc</link></section>
+</section>

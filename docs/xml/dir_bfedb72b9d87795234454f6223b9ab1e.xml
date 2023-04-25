@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_bfedb72b9d87795234454f6223b9ab1e" kind="dir">
+    <compoundname>src/thread</compoundname>
+    <innerdir refid="dir_fdf2be5c872b4412d2592845a31da987">src/thread/clap-detection</innerdir>
+    <innerdir refid="dir_d28ec03fa6655750732c8b63ba718a4b">src/thread/doors</innerdir>
+    <innerdir refid="dir_421ad06ce6e97cdf9ef9a8500b09092f">src/thread/intruder-detection</innerdir>
+    <innerdir refid="dir_bd8432c283f20be3a03e46f628658360">src/thread/intruder-mood-detection</innerdir>
+    <innerdir refid="dir_e923e1c0ad1632d573a60428a9bafaeb">src/thread/mood-detection</innerdir>
+    <innerdir refid="dir_f95f23c60d883e548890bd04b5e49194">src/thread/rfid</innerdir>
+    <innerfile refid="_controller_thread_8cpp">ControllerThread.cpp</innerfile>
+    <innerfile refid="_controller_thread_8h">ControllerThread.h</innerfile>
+    <innerfile refid="_cpp_thread_8h">CppThread.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/thread/"/>
+  </compounddef>
+</doxygen>

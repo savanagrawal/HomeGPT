@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_peripherals_2bcm2835_2ispi_8h_source" xml:lang="en-US">
+<title>ispi.h</title>
+<indexterm><primary>src/peripherals/bcm2835/ispi.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;cstddef&gt;</emphasis>
+5 
+6 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacemfrc522">mfrc522</link>&#32;{
+7 
+8 <emphasis role="keyword">struct&#32;</emphasis>ISpi&#32;{
+9 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed">write</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;=&#32;0;
+10 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7">read</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;=&#32;0;
+11 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac">writeRead</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;=&#32;0;
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683">writeRead</link>(<emphasis role="keywordtype">char</emphasis>&#32;data)&#32;=&#32;0;
+13 };
+14 
+15 }
+</programlisting></section>

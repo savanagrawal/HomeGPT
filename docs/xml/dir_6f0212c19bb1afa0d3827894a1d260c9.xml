@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_6f0212c19bb1afa0d3827894a1d260c9" kind="dir">
+    <compoundname>src/clap-detection</compoundname>
+    <innerfile refid="_clap_detection_8cpp">ClapDetection.cpp</innerfile>
+    <innerfile refid="_clap_detection_8h">ClapDetection.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/clap-detection/"/>
+  </compounddef>
+</doxygen>

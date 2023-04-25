@@ -1,0 +1,57 @@
+.TH "BcmSpi" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BcmSpi
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <bcm2835_spi_impl\&.h>\fP
+.PP
+Inherits \fBmfrc522::ISpi\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBcmSpi\fP ()"
+.br
+.ti -1c
+.RI "void \fBwrite\fP (char *pData, size_t len) final"
+.br
+.ti -1c
+.RI "void \fBread\fP (char *pData, size_t len) final"
+.br
+.ti -1c
+.RI "void \fBwriteRead\fP (char *pData, size_t len) final"
+.br
+.ti -1c
+.RI "char \fBwriteRead\fP (char data) final"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BcmSpi::BcmSpi ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void BcmSpi::read (char * pData, size_t len)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SS "void BcmSpi::write (char * pData, size_t len)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SS "void BcmSpi::writeRead (char * pData, size_t len)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SS "char BcmSpi::writeRead (char data)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

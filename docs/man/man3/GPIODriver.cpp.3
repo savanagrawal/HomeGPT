@@ -1,0 +1,95 @@
+.TH "src/peripherals/GPIODriver.cpp" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/peripherals/GPIODriver.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'GPIODriver\&.h'\fP
+.br
+\fC#include 'RelayBoard\&.h'\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <sys/mman\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIN\fP   0"
+.br
+.ti -1c
+.RI "#define \fBOUT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOW\fP   0"
+.br
+.ti -1c
+.RI "#define \fBHIGH\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGPIO_STRING_LENGTH\fP   3"
+.br
+.RI "Define B\&. "
+.ti -1c
+.RI "#define \fBDIRECTION_STRING_MAX_LENGTH\fP   35"
+.br
+.ti -1c
+.RI "#define \fBVALUE_STRING_MAX_LENGTH\fP   30"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+0\&.1
+.RE
+.PP
+This file contains the functions for GPIO driver class\&. 
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DIRECTION_STRING_MAX_LENGTH   35"
+
+.SS "#define GPIO_STRING_LENGTH   3"
+
+.PP
+Define B\&. 
+.SS "#define HIGH   1"
+
+.SS "#define IN   0"
+
+.SS "#define LOW   0"
+
+.SS "#define OUT   1"
+
+.SS "#define VALUE_STRING_MAX_LENGTH   30"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.
