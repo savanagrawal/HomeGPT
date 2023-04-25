@@ -34,6 +34,17 @@ class IntruderMoodThread : public CppThread {
             
             camera.release();
         }
+        
+        void unlock() {
+            intruderMoodDetection.unlock();
+        }
+        
+        void restart() {
+            camera.open(0);
+            
+            intruderMoodDetection.restart();
+            intruderMoodDetection.start();
+        }
 
     private:
         // void run();

@@ -13,7 +13,7 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../peripherals )
 # include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/spidevpp/libs )
 # include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../dependencies/mfrc522 )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../controller )
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../mood-detection )
+#include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../mood-detection )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../intruder-detection )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../intruder-mood-detection )
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../clap-detection )
@@ -29,7 +29,7 @@ set(INCLUDE_DIRS
 # Set source files
 set( SOURCES 
     ${CMAKE_CURRENT_SOURCE_DIR}/ControllerThread.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.cpp
+    #${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-mood-detection/IntruderMoodThread.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/ClapThread.cpp
@@ -41,7 +41,7 @@ set( SOURCES
 # Set header files
 set( HEADERS 
     ${CMAKE_CURRENT_SOURCE_DIR}/CppThread.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.h
+    #${CMAKE_CURRENT_SOURCE_DIR}/mood-detection/MoodThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-detection/IntruderThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/intruder-mood-detection/IntruderMoodThread.h
     ${CMAKE_CURRENT_SOURCE_DIR}/clap-detection/ClapThread.h
@@ -62,7 +62,7 @@ target_link_libraries( ${PROJECT_NAME}_ThreadLib
     mfrc522
     ${PROJECT_NAME}_UtilsLib
     ${PROJECT_NAME}_PeripheralsLib
-    ${PROJECT_NAME}_MoodDetectionLib
+    #${PROJECT_NAME}_MoodDetectionLib
     ${PROJECT_NAME}_IntruderDetectionLib
     ${PROJECT_NAME}_IntruderMoodDetectionLib
     ${PROJECT_NAME}_ClapDetectionLib
