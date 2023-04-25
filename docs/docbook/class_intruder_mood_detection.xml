@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_intruder_mood_detection" xml:lang="en-US">
+<title>IntruderMoodDetection Class Reference</title>
+<indexterm><primary>IntruderMoodDetection</primary></indexterm>
+<para>
+<computeroutput>#include &lt;IntruderMoodDetection.h&gt;</computeroutput>
+</para>
+Inheritance diagram for IntruderMoodDetection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for IntruderMoodDetection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_intruder_mood_detection_1a7e549103c5719225c1c8124f6cef4e86">IntruderMoodDetection</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de">Initialize</link> (cv::VideoCapture camera)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324">stop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49">unlock</link> ()</para>
+</listitem>
+            <listitem><para>std::map&lt; int, std::string &gt; <link linkend="_class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead">readFileToMap</link> (const std::string &amp;fileName)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6">restart</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1aad2cd7218cbcca74cd2680bb3c6c028c">setCameraId</link> (int id)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1ac54c4363522d4a161b360a1773e14cde">setContrasts</link> (int low, int high)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1a8b061d00a4f66142bb7469f60da73c97">setShutter</link> (int shutter)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_intruder_mood_detection_1a980a792d358cd66cc9769d30c19815a6">checkCameraOpen</link> (cv::VideoCapture camera)</para>
+</listitem>
+            <listitem><para>cv::Mat <link linkend="_class_intruder_mood_detection_1abb06d66df53434a740d983ae59847c1f">takePicture</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_mood_detection_1a1c49ac265494278a27a2ea6dbfa97dae">savePicture</link> (cv::VideoCapture *, std::string filename)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_intruder_mood_detection_1a7e549103c5719225c1c8124f6cef4e86"/><section>
+    <title>IntruderMoodDetection()</title>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<para><computeroutput>IntruderMoodDetection::IntruderMoodDetection ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_intruder_mood_detection_1a980a792d358cd66cc9769d30c19815a6"/><section>
+    <title>checkCameraOpen()</title>
+<indexterm><primary>checkCameraOpen</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>checkCameraOpen</secondary></indexterm>
+<para><computeroutput>int IntruderMoodDetection::checkCameraOpen (cv::VideoCapture camera)</computeroutput></para></section>
+<anchor xml:id="_class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::Initialize (cv::VideoCapture camera)</computeroutput></para>
+<para>Initializes our Intruder &amp; Mood Detection.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry></entry>
+<entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                return </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_a00ea796d16ff36f9bd3145b6f6eeb0de_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead"/><section>
+    <title>readFileToMap()</title>
+<indexterm><primary>readFileToMap</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>readFileToMap</secondary></indexterm>
+<para><computeroutput>std::map&lt; int, std::string &gt; IntruderMoodDetection::readFileToMap (const std::string &amp; fileName)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_ad4ff8dcdfa8a083536e3317b2367eead_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6"/><section>
+    <title>restart()</title>
+<indexterm><primary>restart</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>restart</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::restart ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_a64d7c2528c01013729ef4b3ec492bec6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1a1c49ac265494278a27a2ea6dbfa97dae"/><section>
+    <title>savePicture()</title>
+<indexterm><primary>savePicture</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>savePicture</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::savePicture (cv::VideoCapture * , std::string filename)</computeroutput></para></section>
+<anchor xml:id="_class_intruder_mood_detection_1aad2cd7218cbcca74cd2680bb3c6c028c"/><section>
+    <title>setCameraId()</title>
+<indexterm><primary>setCameraId</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>setCameraId</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::setCameraId (int id)</computeroutput></para>
+<para><link linkend="_class_camera">Camera</link> setup functions </para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1ac54c4363522d4a161b360a1773e14cde"/><section>
+    <title>setContrasts()</title>
+<indexterm><primary>setContrasts</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>setContrasts</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::setContrasts (int low, int high)</computeroutput></para></section>
+<anchor xml:id="_class_intruder_mood_detection_1a8b061d00a4f66142bb7469f60da73c97"/><section>
+    <title>setShutter()</title>
+<indexterm><primary>setShutter</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>setShutter</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::setShutter (int shutter)</computeroutput></para></section>
+<anchor xml:id="_class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::start ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_acd6daec24bb0d856325a912a92936a93_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_acd6daec24bb0d856325a912a92936a93_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::stop ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_a6457a5a1d28a943c2a20fbf929df7324_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_a6457a5a1d28a943c2a20fbf929df7324_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1abb06d66df53434a740d983ae59847c1f"/><section>
+    <title>takePicture()</title>
+<indexterm><primary>takePicture</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>takePicture</secondary></indexterm>
+<para><computeroutput>cv::Mat IntruderMoodDetection::takePicture ( )</computeroutput></para>
+<para><link linkend="_class_camera">Camera</link> functions </para>
+</section>
+<anchor xml:id="_class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49"/><section>
+    <title>unlock()</title>
+<indexterm><primary>unlock</primary><secondary>IntruderMoodDetection</secondary></indexterm>
+<indexterm><primary>IntruderMoodDetection</primary><secondary>unlock</secondary></indexterm>
+<para><computeroutput>void IntruderMoodDetection::unlock ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_a5c1ef131ee35d806ab207615a0e7bd49_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_mood_detection_a5c1ef131ee35d806ab207615a0e7bd49_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/intruder-mood-detection/<link linkend="__intruder_mood_detection_8h">IntruderMoodDetection.h</link>src/intruder-mood-detection/<link linkend="__intruder_mood_detection_8cpp">IntruderMoodDetection.cpp</link></section>
+</section>

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_camera" kind="class" language="C++" prot="public">
+    <compoundname>Camera</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">cv::VideoCapture</basecompoundref>
+    <includes refid="_camera_8h" local="no">Camera.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_camera_1ad0e7828ca457177dce3004991e96c8ca" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture Camera::cam</definition>
+        <argsstring></argsstring>
+        <name>cam</name>
+        <qualifiedname>Camera::cam</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/Camera.h" line="26" column="26" bodyfile="src/peripherals/Camera.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_camera_1af59c63e75ba3b669675eacbb43abe4be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Camera::Camera</definition>
+        <argsstring>(int id)</argsstring>
+        <name>Camera</name>
+        <qualifiedname>Camera::Camera</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/Camera.h" line="15" column="9" bodyfile="src/peripherals/Camera.h" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_camera_1a5873ce618d501a93c011291b03d1156c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture Camera::getCamera</definition>
+        <argsstring>()</argsstring>
+        <name>getCamera</name>
+        <qualifiedname>Camera::getCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/Camera.h" line="19" column="26" bodyfile="src/peripherals/Camera.h" bodystart="19" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Camera</label>
+        <link refid="class_camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv::VideoCapture</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Camera</label>
+        <link refid="class_camera"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cv::VideoCapture</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/peripherals/Camera.h" line="13" column="1" bodyfile="src/peripherals/Camera.h" bodystart="13" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_camera_1ad0e7828ca457177dce3004991e96c8ca" prot="private" virt="non-virtual"><scope>Camera</scope><name>cam</name></member>
+      <member refid="class_camera_1af59c63e75ba3b669675eacbb43abe4be" prot="public" virt="non-virtual"><scope>Camera</scope><name>Camera</name></member>
+      <member refid="class_camera_1a5873ce618d501a93c011291b03d1156c" prot="public" virt="non-virtual"><scope>Camera</scope><name>getCamera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+.TH "MoodThread" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MoodThread \- Mood Thread to manage mood detection functionality\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MoodThread\&.h>\fP
+.PP
+Inherits \fBCppThread\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMoodThread\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBjoin\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Mood Thread to manage mood detection functionality\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MoodThread::MoodThread (cv::VideoCapture camera)\fC [inline]\fP"
+Contructor for our mood thread\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIcamera\fP \fBCamera\fP Object\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void CppThread::join ()\fC [inline]\fP, \fC [inherited]\fP"
+Waits for the thread to terminate\&. 
+.SS "void CppThread::start ()\fC [inline]\fP, \fC [inherited]\fP"
+Starts the thread\&. 
+.SS "void MoodThread::stop ()\fC [inline]\fP"
+Stop our thread's inner functionality\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

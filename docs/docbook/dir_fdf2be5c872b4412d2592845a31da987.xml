@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_fdf2be5c872b4412d2592845a31da987" xml:lang="en-US">
+<title>src/thread/clap-detection Directory Reference</title>
+<indexterm><primary>src/thread/clap-detection Directory Reference</primary></indexterm>
+Directory dependency graph for clap-detection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_fdf2be5c872b4412d2592845a31da987_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__audio_record_thread_8cpp">AudioRecordThread.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__audio_record_thread_8h">AudioRecordThread.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__clap_thread_8cpp">ClapThread.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__clap_thread_8h">ClapThread.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

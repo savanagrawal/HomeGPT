@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_controller_thread" xml:lang="en-US">
+<title>ControllerThread Class Reference</title>
+<indexterm><primary>ControllerThread</primary></indexterm>
+<para>
+
+<para><link linkend="_class_controller">Controller</link> Thread to manage all child threads. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ControllerThread.h&gt;</computeroutput>
+</para>
+Inheritance diagram for ControllerThread:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_controller_thread__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for ControllerThread:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_controller_thread__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_controller_thread_1a00cd6502504f5f1e680e6be3f60a987d">ControllerThread</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_controller_thread_1a53ad3a44cd24e685c06262380ea6c5b8">setArgs</link> (int ac, std::vector&lt; std::string &gt; av)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_thread_1a1be46d1be000f41a763289300623c609">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f">join</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><link linkend="_class_controller">Controller</link> Thread to manage all child threads. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale &amp; Savan Agrawal </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_controller_thread_1a00cd6502504f5f1e680e6be3f60a987d"/><section>
+    <title>ControllerThread()</title>
+<indexterm><primary>ControllerThread</primary><secondary>ControllerThread</secondary></indexterm>
+<indexterm><primary>ControllerThread</primary><secondary>ControllerThread</secondary></indexterm>
+<para><computeroutput>ControllerThread::ControllerThread ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Contructor for our controller thread. All child threads are initiallized here. </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f"/><section>
+    <title>join()</title>
+<indexterm><primary>join</primary><secondary>ControllerThread</secondary></indexterm>
+<indexterm><primary>ControllerThread</primary><secondary>join</secondary></indexterm>
+<para><computeroutput>void CppThread::join ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para>
+<para>Waits for the thread to terminate. </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a8ff0fda6b913cc53764caef0e1200f3f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_controller_thread_1a53ad3a44cd24e685c06262380ea6c5b8"/><section>
+    <title>setArgs()</title>
+<indexterm><primary>setArgs</primary><secondary>ControllerThread</secondary></indexterm>
+<indexterm><primary>ControllerThread</primary><secondary>setArgs</secondary></indexterm>
+<para><computeroutput>void ControllerThread::setArgs (int ac, std::vector&lt; std::string &gt; av)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_controller_thread_a53ad3a44cd24e685c06262380ea6c5b8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_cpp_thread_1a1be46d1be000f41a763289300623c609"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>ControllerThread</secondary></indexterm>
+<indexterm><primary>ControllerThread</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void CppThread::start ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para>
+<para>Starts the thread. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a1be46d1be000f41a763289300623c609_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_cpp_thread_a1be46d1be000f41a763289300623c609_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/thread/<link linkend="__controller_thread_8h">ControllerThread.h</link>src/thread/<link linkend="__controller_thread_8cpp">ControllerThread.cpp</link></section>
+</section>

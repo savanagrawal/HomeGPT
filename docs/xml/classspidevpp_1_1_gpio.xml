@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classspidevpp_1_1_gpio" kind="class" language="C++" prot="public">
+    <compoundname>spidevpp::Gpio</compoundname>
+    <includes refid="gpio_8h" local="no">gpio.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Direction</name>
+        <qualifiedname>spidevpp::Gpio::Direction</qualifiedname>
+        <enumvalue id="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08aa84cc046d48610b05c21fd3670d0c829" prot="public">
+          <name>INPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34" prot="public">
+          <name>OUTPUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="12" column="1" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="enum" id="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Value</name>
+        <qualifiedname>spidevpp::Gpio::Value</qualifiedname>
+        <enumvalue id="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7" prot="public">
+          <name>low</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243" prot="public">
+          <name>high</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="17" column="1" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="17" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classspidevpp_1_1_gpio_1a2dfb928f1104ab2a133c9f1f8fa9bbcc" prot="private" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int spidevpp::Gpio::mPin</definition>
+        <argsstring></argsstring>
+        <name>mPin</name>
+        <qualifiedname>spidevpp::Gpio::mPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="29" column="20" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_gpio_1a2988ab79d93e8f5195c22969b327ce9a" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kindref="member">Direction</ref></type>
+        <definition>const Direction spidevpp::Gpio::mDirection</definition>
+        <argsstring></argsstring>
+        <name>mDirection</name>
+        <qualifiedname>spidevpp::Gpio::mDirection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="30" column="17" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_gpio_1a480fbfde382ffe0e34b276fab2eff969" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string spidevpp::Gpio::mDirectionFilePath</definition>
+        <argsstring></argsstring>
+        <name>mDirectionFilePath</name>
+        <qualifiedname>spidevpp::Gpio::mDirectionFilePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="31" column="19" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_gpio_1aedb529e05bea02cd4e40e6f00ba7ab88" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string spidevpp::Gpio::mValueFilePath</definition>
+        <argsstring></argsstring>
+        <name>mValueFilePath</name>
+        <qualifiedname>spidevpp::Gpio::mValueFilePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="32" column="19" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_gpio_1ab8156bc7bef8eee67a0cc5fdb906670e" prot="private" static="no" mutable="no">
+        <type><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Value</ref></type>
+        <definition>Value spidevpp::Gpio::mValue</definition>
+        <argsstring></argsstring>
+        <name>mValue</name>
+        <qualifiedname>spidevpp::Gpio::mValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="34" column="7" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spidevpp::Gpio::Gpio</definition>
+        <argsstring>(unsigned int pin, Direction direction, Value initialValue=Value::low)</argsstring>
+        <name>Gpio</name>
+        <qualifiedname>spidevpp::Gpio::Gpio</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type><ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kindref="member">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <param>
+          <type><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Value</ref></type>
+          <declname>initialValue</declname>
+          <defval><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7" kindref="member">Value::low</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="22" column="1" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.cc" bodystart="38" bodyend="54"/>
+        <references refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" compoundref="gpio_8cc" startline="56" endline="61">setValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Gpio::setValue</definition>
+        <argsstring>(Value)</argsstring>
+        <name>setValue</name>
+        <qualifiedname>spidevpp::Gpio::setValue</qualifiedname>
+        <param>
+          <type><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Value</ref></type>
+          <defname>value</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="24" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.cc" bodystart="56" bodyend="61"/>
+        <referencedby refid="classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded" compoundref="gpio_8cc" startline="38" endline="54">Gpio</referencedby>
+        <referencedby refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" compoundref="sys__gpio__impl_8h" startline="14" endline="16">SysGpio::setValue</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Value</ref></type>
+        <definition>Gpio::Value spidevpp::Gpio::getValue</definition>
+        <argsstring>()</argsstring>
+        <name>getValue</name>
+        <qualifiedname>spidevpp::Gpio::getValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="25" column="7" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.cc" bodystart="63" bodyend="69"/>
+        <references refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243">high</references>
+        <references refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">low</references>
+        <referencedby refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" compoundref="sys__gpio__impl_8h" startline="18" endline="20">SysGpio::getValue</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.h" line="8" column="1" bodyfile="src/dependencies/spidevpp/libs/spidevpp/gpio.h" bodystart="8" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" prot="public" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>Direction</name></member>
+      <member refid="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" prot="public" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>getValue</name></member>
+      <member refid="classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded" prot="public" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>Gpio</name></member>
+      <member refid="classspidevpp_1_1_gpio_1a2988ab79d93e8f5195c22969b327ce9a" prot="private" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>mDirection</name></member>
+      <member refid="classspidevpp_1_1_gpio_1a480fbfde382ffe0e34b276fab2eff969" prot="private" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>mDirectionFilePath</name></member>
+      <member refid="classspidevpp_1_1_gpio_1a2dfb928f1104ab2a133c9f1f8fa9bbcc" prot="private" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>mPin</name></member>
+      <member refid="classspidevpp_1_1_gpio_1ab8156bc7bef8eee67a0cc5fdb906670e" prot="private" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>mValue</name></member>
+      <member refid="classspidevpp_1_1_gpio_1aedb529e05bea02cd4e40e6f00ba7ab88" prot="private" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>mValueFilePath</name></member>
+      <member refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" prot="public" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>setValue</name></member>
+      <member refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" prot="public" virt="non-virtual"><scope>spidevpp::Gpio</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

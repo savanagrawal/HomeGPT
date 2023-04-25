@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__globals_8h_source" xml:lang="en-US">
+<title>Globals.h</title>
+<indexterm><primary>src/utils/Globals.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;GLOBALS_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;GLOBALS_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+12 
+13 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_globals">Globals</link>&#32;{
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_globals_1a7e9e2b31d0484acc038684bd8aceff1a">setMoodSvm</link>()&#32;{
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mood_svm&#32;=&#32;cv::ml::SVM::load(<emphasis role="stringliteral">&quot;../src/resources/svmhog.xml&quot;</emphasis>);
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+19 
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::ml::SVM&gt;&#32;<link linkend="_class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd">getMoodSvm</link>()&#32;{
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;mood_svm;
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_globals_1a55bec70a13f8568891d2562c90a61aaf">getGarageDoorPin</link>()&#32;{
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;garageDoorPin;
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_globals_1ae6cfcdccf6b6a84f36b129bee772e349">getMainDoorPin</link>()&#32;{
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;mainDoorPin;
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1">getLedPin</link>()&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ledPin;
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_globals_1a01698796b983f7841a3b5511efdac98a">getLedRedPin</link>()&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ledRedPin;
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_globals_1a27e735a20b539795eaa6e85e0e11d439">getLedGreenPin</link>()&#32;{
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ledGreenPin;
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_globals_1ad26e9e618106929950d8e3db73503192">getLedBluePin</link>()&#32;{
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ledBluePin;
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+48 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::ml::SVM&gt;&#32;mood_svm;
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;garageDoorPin&#32;=&#32;27;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;mainDoorPin&#32;=&#32;22;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ledPin&#32;=&#32;16;
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ledRedPin&#32;=&#32;13;
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ledGreenPin&#32;=&#32;19;
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;ledBluePin&#32;=&#32;12;
+58 };
+59 
+60 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_fbf0f2406da70b7242e9fe36900a795c" kind="dir">
+    <compoundname>src/peripherals</compoundname>
+    <innerdir refid="dir_caead8f2f932779b81c885c4b6cdb410">src/peripherals/bcm2835</innerdir>
+    <innerdir refid="dir_816bb509503637d460c7583c6da44985">src/peripherals/spi</innerdir>
+    <innerfile refid="_camera_8cpp">Camera.cpp</innerfile>
+    <innerfile refid="_camera_8h">Camera.h</innerfile>
+    <innerfile refid="_g_p_i_o_driver_8cpp">GPIODriver.cpp</innerfile>
+    <innerfile refid="_g_p_i_o_driver_8h">GPIODriver.h</innerfile>
+    <innerfile refid="_i2_c_driver_8cpp">I2CDriver.cpp</innerfile>
+    <innerfile refid="_i2_c_driver_8h">I2CDriver.h</innerfile>
+    <innerfile refid="_i2_c_sensor_8h">I2CSensor.h</innerfile>
+    <innerfile refid="_l_e_d_controller_8cpp">LEDController.cpp</innerfile>
+    <innerfile refid="_l_e_d_controller_8h">LEDController.h</innerfile>
+    <innerfile refid="_m_f_r_c522_8cpp">MFRC522.cpp</innerfile>
+    <innerfile refid="peripherals_2mfrc522_8h">MFRC522.h</innerfile>
+    <innerfile refid="_relay_board_8cpp">RelayBoard.cpp</innerfile>
+    <innerfile refid="_relay_board_8h">RelayBoard.h</innerfile>
+    <innerfile refid="_r_f_i_d_8cpp">RFID.cpp</innerfile>
+    <innerfile refid="_r_f_i_d_8h">RFID.h</innerfile>
+    <innerfile refid="_servo_motor_8cpp">ServoMotor.cpp</innerfile>
+    <innerfile refid="_servo_motor_8h">ServoMotor.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/peripherals/"/>
+  </compounddef>
+</doxygen>

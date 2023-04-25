@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_test_2_event_handler_8h_source" xml:lang="en-US">
+<title>EventHandler.h</title>
+<indexterm><primary>src/utils/EventTest/EventHandler.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;EVENT_HANDLER_H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;EVENT_HANDLER_H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;unordered_map&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;functional&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;any&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&lt;tuple&gt;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+10 
+11 <emphasis role="keyword">enum&#32;class</emphasis>&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;{
+12 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6">test</link>,
+13 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62">DatasetCreatorComplete</link>,
+14 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd">DatasetTrainerComplete</link>,
+15 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35">IntruderThreadKill</link>,
+16 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120">IntruderMoodThreadKill</link>,
+17 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b">RfidAuthenticated</link>,
+18 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850">OpenGarageDoor</link>,
+19 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf">OpenedGarageDoor</link>,
+20 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8">CloseGarageDoor</link>,
+21 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de">ClosedGarageDoor</link>,
+22 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329">OpenMainDoor</link>,
+23 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881">OpenedMainDoor</link>,
+24 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93">CloseMainDoor</link>,
+25 &#32;&#32;&#32;&#32;<link linkend="__event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3">ClosedMainDoor</link>
+26 };
+27 
+28 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_event_handler">EventHandler</link>&#32;{
+29 <emphasis role="keyword">public</emphasis>:
+30 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;<link linkend="_class_event_handler_1ad068c59fb303da8c70ec208c48d44550">getInstance</link>();
+31 
+32 &#32;&#32;&#32;&#32;<link linkend="_class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3">EventHandler</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+33 &#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;<link linkend="_class_event_handler_1ab9a987809515877a612451f1afcb8089">operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;)&#32;=&#32;<emphasis role="keyword">delete</emphasis>;
+34 
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd">addListener</link>(<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;event,&#32;std::function&lt;<emphasis role="keywordtype">void</emphasis>()&gt;&#32;callback);
+36 
+37 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>...&#32;Args&gt;
+38 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_event_handler_1a1e51daafb4d3a30c0182a5be27873473">addListener</link>(<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;event,&#32;std::function&lt;<emphasis role="keywordtype">void</emphasis>(Args...)&gt;&#32;callback);
+39 
+40 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>(<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;event);
+41 
+42 &#32;&#32;&#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>...&#32;Args&gt;
+43 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2">emit</link>(<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;event,&#32;Args...&#32;args);
+44 
+45 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a">isEventRegistered</link>(<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;event)&#32;<emphasis role="keyword">const</emphasis>;
+46 
+47 <emphasis role="keyword">private</emphasis>:
+48 &#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+49 &#32;&#32;&#32;&#32;<link linkend="_class_event_handler">~EventHandler</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+50 
+51 &#32;&#32;&#32;&#32;std::unordered_map&lt;<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>,&#32;std::vector&lt;std::function&lt;void(std::any)&gt;&gt;&gt;&#32;listeners;
+52 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;eventToString(<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link>&#32;event);
+53 };
+54 
+55 
+56 <emphasis role="preprocessor">#include&#32;&quot;EventHandler.tpp&quot;</emphasis>
+57 
+58 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;EVENT_HANDLER_H</emphasis>
+</programlisting></section>

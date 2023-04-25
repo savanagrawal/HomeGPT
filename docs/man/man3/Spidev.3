@@ -1,0 +1,68 @@
+.TH "Spidev" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Spidev
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <spidev_impl\&.h>\fP
+.PP
+Inherits \fBmfrc522::ISpi\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpidev\fP (const std::string &device)"
+.br
+.ti -1c
+.RI "void \fBwrite\fP (char *pData, size_t len) final"
+.br
+.ti -1c
+.RI "void \fBread\fP (char *pData, size_t len) final"
+.br
+.ti -1c
+.RI "void \fBwriteRead\fP (char *pData, size_t len) final"
+.br
+.ti -1c
+.RI "char \fBwriteRead\fP (char data) final"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBspidevpp::Spi\fP \fBmSpi\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Spidev::Spidev (const std::string & device)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Spidev::read (char * pData, size_t len)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SS "void Spidev::write (char * pData, size_t len)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SS "void Spidev::writeRead (char * pData, size_t len)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SS "char Spidev::writeRead (char data)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::ISpi\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBspidevpp::Spi\fP Spidev::mSpi"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

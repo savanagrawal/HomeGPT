@@ -1,0 +1,17 @@
+digraph "mfrc522::MFRC522::PCD_AntennaOn"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [label="mfrc522::MFRC522::PCD\l_AntennaOn",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="steelblue1",style="solid"];
+  Node2 [label="mfrc522::MFRC522::PCD\l_ReadRegister",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmfrc522_1_1_m_f_r_c522.html#a54b1e0960ffe689bb512b9ed79dcdece",tooltip=" "];
+  Node2 -> Node3 [color="steelblue1",style="solid"];
+  Node3 [label="mfrc522::ISpi::writeRead",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structmfrc522_1_1_i_spi.html#a251598542df9d4026fc28e832d4770ac",tooltip=" "];
+  Node1 -> Node4 [color="steelblue1",style="solid"];
+  Node4 [label="mfrc522::MFRC522::PCD\l_WriteRegister",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classmfrc522_1_1_m_f_r_c522.html#aef8efdbb515b419df6c0038312c4f4e3",tooltip=" "];
+  Node4 -> Node5 [color="steelblue1",style="solid"];
+  Node5 [label="mfrc522::ISpi::write",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$structmfrc522_1_1_i_spi.html#a9f98a44742d44089eee210f9d5908bed",tooltip=" "];
+}

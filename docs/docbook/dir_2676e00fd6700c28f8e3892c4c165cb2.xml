@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2676e00fd6700c28f8e3892c4c165cb2" xml:lang="en-US">
+<title>src/dependencies Directory Reference</title>
+<indexterm><primary>src/dependencies Directory Reference</primary></indexterm>
+Directory dependency graph for dependencies:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_2676e00fd6700c28f8e3892c4c165cb2_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_fdae27ba2f4a82a2d3a85d3ed1014509">mfrc522</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_e451559dbced65c7b1cf71f0ff58086b">spidevpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mood_thread_8h_source" xml:lang="en-US">
+<title>MoodThread.h</title>
+<indexterm><primary>src/thread/mood-detection/MoodThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;MOOD_THREAD_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;MOOD_THREAD_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;../CppThread.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__mood_detection_8h">MoodDetection.h</link>&quot;</emphasis>
+13 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+15 
+20 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_mood_thread">MoodThread</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_cpp_thread">CppThread</link>&#32;{
+21 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mood_thread_1a08726d915a8ff3f416d68f58e6c6a2e4">MoodThread</link>(cv::VideoCapture&#32;camera)&#32;{
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MoodThread::camera&#32;=&#32;camera;
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+30 
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_thread_1a59724b4a9d28c6ac2df6a55c1139bf71">stop</link>(){
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moodDetection.<link linkend="_class_mood_detection_1aba994443b5bd0c82346d4f546317b934">stop</link>();
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+37 
+38 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;run();
+40 &#32;&#32;&#32;&#32;
+41 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;camera;
+43 
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mood_detection">MoodDetection</link>&#32;moodDetection;
+45 };
+46 
+47 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

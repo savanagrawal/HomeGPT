@@ -1,0 +1,67 @@
+.TH "spidevpp::Gpio" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+spidevpp::Gpio
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gpio\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBDirection\fP { \fBINPUT\fP, \fBOUTPUT\fP }"
+.br
+.ti -1c
+.RI "enum class \fBValue\fP { \fBlow\fP = 0, \fBhigh\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGpio\fP (unsigned int pin, \fBDirection\fP direction, \fBValue\fP initialValue=\fBValue::low\fP)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (\fBValue\fP)"
+.br
+.ti -1c
+.RI "\fBValue\fP \fBgetValue\fP ()"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum class \fBspidevpp::Gpio::Direction\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIINPUT \fP\fP
+.TP
+\fB\fIOUTPUT \fP\fP
+.SS "enum class \fBspidevpp::Gpio::Value\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIlow \fP\fP
+.TP
+\fB\fIhigh \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "spidevpp::Gpio::Gpio (unsigned int pin, \fBDirection\fP direction, \fBValue\fP initialValue = \fC\fBValue::low\fP\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBGpio::Value\fP spidevpp::Gpio::getValue ()"
+
+.SS "void spidevpp::Gpio::setValue (\fBValue\fP value)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

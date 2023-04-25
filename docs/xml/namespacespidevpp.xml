@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespacespidevpp" kind="namespace" language="C++">
+    <compoundname>spidevpp</compoundname>
+    <innerclass refid="classspidevpp_1_1_gpio" prot="public">spidevpp::Gpio</innerclass>
+    <innerclass refid="classspidevpp_1_1_spi" prot="public">spidevpp::Spi</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Stream</type>
+          </param>
+        </templateparamlist>
+        <type>Stream &amp;</type>
+        <definition>Stream &amp; spidevpp::operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;out, const Spi &amp;spi)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>spidevpp::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classspidevpp_1_1_spi" kindref="compound">Spi</ref> &amp;</type>
+          <declname>spi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="53" column="1" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="53" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.cc" line="9" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_g_p_i_o_driver" xml:lang="en-US">
+<title>GPIODriver Class Reference</title>
+<indexterm><primary>GPIODriver</primary></indexterm>
+<para>
+
+<para>GPIO Driver Class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;GPIODriver.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_g_p_i_o_driver_1a74b0f69ce300c94de3d4fdd75042dec3">GPIODriver</link> (void)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad">SetGPIOState</link> (int gpioPinNumber, int value)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32">GPIORead</link> (int gpioPinNumber)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7">SetUpPin</link> (int gpioPinNumber)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>GPIO Driver Class. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Chhinmay Nagrale</para>
+</formalpara>
+This is class is responsilbe for handling GPIO Pins. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_g_p_i_o_driver_1a74b0f69ce300c94de3d4fdd75042dec3"/><section>
+    <title>GPIODriver()</title>
+<indexterm><primary>GPIODriver</primary><secondary>GPIODriver</secondary></indexterm>
+<indexterm><primary>GPIODriver</primary><secondary>GPIODriver</secondary></indexterm>
+<para><computeroutput>GPIODriver::GPIODriver (void )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32"/><section>
+    <title>GPIORead()</title>
+<indexterm><primary>GPIORead</primary><secondary>GPIODriver</secondary></indexterm>
+<indexterm><primary>GPIODriver</primary><secondary>GPIORead</secondary></indexterm>
+<para><computeroutput>int GPIODriver::GPIORead (int gpioPinNumber)</computeroutput></para>
+<para>Get the current state of the GPIO pin. LOW = 0 HIGH = 1</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gpioPinNumber</entry><entry>
+<para>GPIO Pin number state to read.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>State of the GPIO Pin </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_p_i_o_driver_a68be60ab1fb0e9c29f60818654766a32_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad"/><section>
+    <title>SetGPIOState()</title>
+<indexterm><primary>SetGPIOState</primary><secondary>GPIODriver</secondary></indexterm>
+<indexterm><primary>GPIODriver</primary><secondary>SetGPIOState</secondary></indexterm>
+<para><computeroutput>int GPIODriver::SetGPIOState (int gpioPinNumber, int value)</computeroutput></para>
+<para>Set state of the GPIO pin. LOW - value = 0 HIGH - value = 1</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gpioPinNumber</entry><entry>
+<para>GPIO Pin number state to read. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>value</entry><entry>
+<para>State to set the pin to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else negative error number </para>
+</formalpara>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_p_i_o_driver_a32a483cec3179d1d13acb1dad37b21ad_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7"/><section>
+    <title>SetUpPin()</title>
+<indexterm><primary>SetUpPin</primary><secondary>GPIODriver</secondary></indexterm>
+<indexterm><primary>GPIODriver</primary><secondary>SetUpPin</secondary></indexterm>
+<para><computeroutput>int GPIODriver::SetUpPin (int gpioPinNumber)</computeroutput></para>
+<para>Initialize GPIO Pins for output use. Export Pin Set Direction to output Set GPIO state value to high</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>gpioPinNumber</entry><entry>
+<para>GPIO pin number to set up for output use.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success error </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_p_i_o_driver_a314ce5622d8049f62b662b62fd3debe7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_g_p_i_o_driver_a314ce5622d8049f62b662b62fd3debe7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/peripherals/<link linkend="__g_p_i_o_driver_8h">GPIODriver.h</link>src/peripherals/<link linkend="__g_p_i_o_driver_8cpp">GPIODriver.cpp</link></section>
+</section>

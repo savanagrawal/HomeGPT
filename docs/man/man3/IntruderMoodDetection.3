@@ -1,0 +1,95 @@
+.TH "IntruderMoodDetection" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntruderMoodDetection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IntruderMoodDetection\&.h>\fP
+.PP
+Inherits CppTimer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntruderMoodDetection\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBunlock\fP ()"
+.br
+.ti -1c
+.RI "std::map< int, std::string > \fBreadFileToMap\fP (const std::string &fileName)"
+.br
+.ti -1c
+.RI "void \fBrestart\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetCameraId\fP (int id)"
+.br
+.ti -1c
+.RI "void \fBsetContrasts\fP (int low, int high)"
+.br
+.ti -1c
+.RI "void \fBsetShutter\fP (int shutter)"
+.br
+.ti -1c
+.RI "int \fBcheckCameraOpen\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "cv::Mat \fBtakePicture\fP ()"
+.br
+.ti -1c
+.RI "void \fBsavePicture\fP (cv::VideoCapture *, std::string filename)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IntruderMoodDetection::IntruderMoodDetection ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int IntruderMoodDetection::checkCameraOpen (cv::VideoCapture camera)"
+
+.SS "void IntruderMoodDetection::Initialize (cv::VideoCapture camera)"
+Initializes our Intruder & Mood Detection\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fP .RE
+.PP
+return 
+.SS "std::map< int, std::string > IntruderMoodDetection::readFileToMap (const std::string & fileName)\fC [inline]\fP"
+
+.SS "void IntruderMoodDetection::restart ()\fC [inline]\fP"
+
+.SS "void IntruderMoodDetection::savePicture (cv::VideoCapture *, std::string filename)"
+
+.SS "void IntruderMoodDetection::setCameraId (int id)"
+\fBCamera\fP setup functions 
+.SS "void IntruderMoodDetection::setContrasts (int low, int high)"
+
+.SS "void IntruderMoodDetection::setShutter (int shutter)"
+
+.SS "void IntruderMoodDetection::start ()\fC [inline]\fP"
+
+.SS "void IntruderMoodDetection::stop ()\fC [inline]\fP"
+
+.SS "cv::Mat IntruderMoodDetection::takePicture ()"
+\fBCamera\fP functions 
+.SS "void IntruderMoodDetection::unlock ()\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

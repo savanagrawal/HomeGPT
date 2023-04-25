@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_sys_gpio" xml:lang="en-US">
+<title>SysGpio Class Reference</title>
+<indexterm><primary>SysGpio</primary></indexterm>
+<para>
+<computeroutput>#include &lt;sys_gpio_impl.h&gt;</computeroutput>
+</para>
+Inheritance diagram for SysGpio:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sys_gpio__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for SysGpio:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sys_gpio__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum class <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link> { <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7">low</link> = 0
+, <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243">high</link> = 1
+, <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33">l</link> = 0
+, <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91">h</link> = 1
+ }</para>
+</listitem>
+            <listitem><para>enum class <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link> { <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7">low</link> = 0
+, <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243">high</link> = 1
+, <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33">l</link> = 0
+, <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91">h</link> = 1
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309">SysGpio</link> (unsigned int pin, <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">spidevpp::Gpio::Direction</link> direction, <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">spidevpp::Gpio::Value</link> value)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9">setValue</link> (<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link> value) final</para>
+</listitem>
+            <listitem><para><link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link> <link linkend="_class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b">getValue</link> () final</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classspidevpp_1_1_gpio">spidevpp::Gpio</link> <link linkend="_class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a">mGpio</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9"/><section>
+    <title>Value<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">mfrc522::IGpio::Value</link><computeroutput>[strong]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>low</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>low</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7"/>low</entry><entry></entry></row><row><entry><indexterm><primary>high</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>high</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243"/>high</entry><entry></entry></row><row><entry><indexterm><primary>l</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>l</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33"/>l</entry><entry></entry></row><row><entry><indexterm><primary>h</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>h</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91"/>h</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9"/><section>
+    <title>Value<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Value</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>Value</secondary></indexterm>
+<para><computeroutput>enum class <link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">mfrc522::IGpio::Value</link><computeroutput>[strong]</computeroutput>, <computeroutput>[inherited]</computeroutput></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>low</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>low</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7"/>low</entry><entry></entry></row><row><entry><indexterm><primary>high</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>high</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243"/>high</entry><entry></entry></row><row><entry><indexterm><primary>l</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>l</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33"/>l</entry><entry></entry></row><row><entry><indexterm><primary>h</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>h</secondary></indexterm>
+<anchor xml:id="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91"/>h</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309"/><section>
+    <title>SysGpio()</title>
+<indexterm><primary>SysGpio</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>SysGpio</secondary></indexterm>
+<para><computeroutput>SysGpio::SysGpio (unsigned int pin, <link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">spidevpp::Gpio::Direction</link> direction, <link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">spidevpp::Gpio::Value</link> value)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b"/><section>
+    <title>getValue()</title>
+<indexterm><primary>getValue</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>getValue</secondary></indexterm>
+<para><computeroutput><link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link> SysGpio::getValue ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2">mfrc522::IGpio</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sys_gpio_a71909fb86a71f59b4263f39121dbe16b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9"/><section>
+    <title>setValue()</title>
+<indexterm><primary>setValue</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>setValue</secondary></indexterm>
+<para><computeroutput>void SysGpio::setValue (<link linkend="_structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9">Value</link> value)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188">mfrc522::IGpio</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_sys_gpio_a9baa7e752011933cbbdb85645038e7f9_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a"/><section>
+    <title>mGpio</title>
+<indexterm><primary>mGpio</primary><secondary>SysGpio</secondary></indexterm>
+<indexterm><primary>SysGpio</primary><secondary>mGpio</secondary></indexterm>
+<para><computeroutput><link linkend="_classspidevpp_1_1_gpio">spidevpp::Gpio</link> SysGpio::mGpio</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/peripherals/spi/<link linkend="_sys__gpio__impl_8h">sys_gpio_impl.h</link></section>
+</section>

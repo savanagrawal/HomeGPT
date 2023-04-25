@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_g_p_i_o_driver" kind="class" language="C++" prot="public">
+    <compoundname>GPIODriver</compoundname>
+    <includes refid="_g_p_i_o_driver_8h" local="no">GPIODriver.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a74b0f69ce300c94de3d4fdd75042dec3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>GPIODriver::GPIODriver</definition>
+        <argsstring>(void)</argsstring>
+        <name>GPIODriver</name>
+        <qualifiedname>GPIODriver::GPIODriver</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="22" column="1" bodyfile="src/peripherals/GPIODriver.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GPIODriver::SetGPIOState</definition>
+        <argsstring>(int gpioPinNumber, int value)</argsstring>
+        <name>SetGPIOState</name>
+        <qualifiedname>GPIODriver::SetGPIOState</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>gpioPinNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set state of the GPIO pin. LOW - value = 0 HIGH - value = 1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpioPinNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO Pin number state to read. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State to set the pin to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else negative error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="24" column="5" bodyfile="src/peripherals/GPIODriver.cpp" bodystart="187" bodyend="216"/>
+        <references refid="_g_p_i_o_driver_8cpp_1ab811d8c6ff3a505312d3276590444289" compoundref="_g_p_i_o_driver_8cpp" startline="26">LOW</references>
+        <references refid="_g_p_i_o_driver_8cpp_1aad53eaa9f18598639a489d0a5c05cd02" compoundref="_g_p_i_o_driver_8cpp" startline="32">VALUE_STRING_MAX_LENGTH</references>
+        <referencedby refid="class_relay_board_1aa14251b65f8b4872cdf95c56951f0959" compoundref="_relay_board_8cpp" startline="114" endline="122">RelayBoard::Airflow</referencedby>
+        <referencedby refid="class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98" compoundref="_relay_board_8cpp" startline="87" endline="95">RelayBoard::Heating</referencedby>
+        <referencedby refid="class_relay_board_1a0ce37124540bae0827a1b81e28841f70" compoundref="_relay_board_8cpp" startline="57" endline="66">RelayBoard::Lighting</referencedby>
+        <referencedby refid="class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7" compoundref="_g_p_i_o_driver_8cpp" startline="229" endline="255">SetUpPin</referencedby>
+        <referencedby refid="class_relay_board_1a2339920ca78f22d9bbab349056ca261a" compoundref="_relay_board_8cpp" startline="170" endline="190">RelayBoard::Turn_Relays_Off</referencedby>
+        <referencedby refid="class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f" compoundref="_relay_board_8cpp" startline="143" endline="151">RelayBoard::Watering</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GPIODriver::GPIORead</definition>
+        <argsstring>(int gpioPinNumber)</argsstring>
+        <name>GPIORead</name>
+        <qualifiedname>GPIODriver::GPIORead</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>gpioPinNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the current state of the GPIO pin. LOW = 0 HIGH = 1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpioPinNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO Pin number state to read.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>State of the GPIO Pin </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="25" column="5" bodyfile="src/peripherals/GPIODriver.cpp" bodystart="145" bodyend="174"/>
+        <references refid="_g_p_i_o_driver_8cpp_1aad53eaa9f18598639a489d0a5c05cd02" compoundref="_g_p_i_o_driver_8cpp" startline="32">VALUE_STRING_MAX_LENGTH</references>
+        <referencedby refid="class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8" compoundref="_relay_board_8cpp" startline="130" endline="132">RelayBoard::GetAirflowState</referencedby>
+        <referencedby refid="class_relay_board_1a4725ac8db57d591dbe338f646cdda254" compoundref="_relay_board_8cpp" startline="103" endline="105">RelayBoard::GetHeatingState</referencedby>
+        <referencedby refid="class_relay_board_1a32270d45de9d23698cf85fd3224f88c6" compoundref="_relay_board_8cpp" startline="74" endline="76">RelayBoard::GetLightingState</referencedby>
+        <referencedby refid="class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65" compoundref="_relay_board_8cpp" startline="159" endline="161">RelayBoard::GetWateringState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GPIODriver::SetUpPin</definition>
+        <argsstring>(int gpioPinNumber)</argsstring>
+        <name>SetUpPin</name>
+        <qualifiedname>GPIODriver::SetUpPin</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>gpioPinNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize GPIO Pins for output use. Export Pin Set Direction to output Set GPIO state value to high</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpioPinNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO pin number to set up for output use.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="26" column="5" bodyfile="src/peripherals/GPIODriver.cpp" bodystart="229" bodyend="255"/>
+        <references refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" compoundref="_g_p_i_o_driver_8cpp" startline="187" endline="216">SetGPIOState</references>
+        <referencedby refid="class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f" compoundref="_relay_board_8cpp" startline="21" endline="46">RelayBoard::Initialize</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a5e480dbffe553649faaa457579c7e847" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GPIODriver::ExportGPIO</definition>
+        <argsstring>(int gpioPinNumber)</argsstring>
+        <name>ExportGPIO</name>
+        <qualifiedname>GPIODriver::ExportGPIO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>gpioPinNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Export GPIO Pin</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpioPinNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO Pin number to export.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="29" column="5" bodyfile="src/peripherals/GPIODriver.cpp" bodystart="41" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a28f9117bc71b9cde6c2d27f896ab7251" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GPIODriver::UnexportGPIO</definition>
+        <argsstring>(int gpioPinNumber)</argsstring>
+        <name>UnexportGPIO</name>
+        <qualifiedname>GPIODriver::UnexportGPIO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>gpioPinNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unexport GPIO Pin</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpioPinNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO Pin number to unexport.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="30" column="5" bodyfile="src/peripherals/GPIODriver.cpp" bodystart="72" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_g_p_i_o_driver_1a9e694366a04bc8662865ea758a74eabe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int GPIODriver::SetGPIODirection</definition>
+        <argsstring>(int gpioPinNumber, int direction)</argsstring>
+        <name>SetGPIODirection</name>
+        <qualifiedname>GPIODriver::SetGPIODirection</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>gpioPinNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set Direction of GPIO Pin Input = 0 Output = 1</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gpioPinNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>GPIO Pin number to export. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Direction of the pin.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success error </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/GPIODriver.h" line="31" column="5" bodyfile="src/peripherals/GPIODriver.cpp" bodystart="103" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>GPIO Driver Class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chhinmay Nagrale</para>
+</simplesect>
+This is class is responsilbe for handling GPIO Pins. </para>
+    </detaileddescription>
+    <location file="src/peripherals/GPIODriver.h" line="19" column="1" bodyfile="src/peripherals/GPIODriver.h" bodystart="19" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_g_p_i_o_driver_1a5e480dbffe553649faaa457579c7e847" prot="private" virt="non-virtual"><scope>GPIODriver</scope><name>ExportGPIO</name></member>
+      <member refid="class_g_p_i_o_driver_1a74b0f69ce300c94de3d4fdd75042dec3" prot="public" virt="non-virtual"><scope>GPIODriver</scope><name>GPIODriver</name></member>
+      <member refid="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" prot="public" virt="non-virtual"><scope>GPIODriver</scope><name>GPIORead</name></member>
+      <member refid="class_g_p_i_o_driver_1a9e694366a04bc8662865ea758a74eabe" prot="private" virt="non-virtual"><scope>GPIODriver</scope><name>SetGPIODirection</name></member>
+      <member refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" prot="public" virt="non-virtual"><scope>GPIODriver</scope><name>SetGPIOState</name></member>
+      <member refid="class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7" prot="public" virt="non-virtual"><scope>GPIODriver</scope><name>SetUpPin</name></member>
+      <member refid="class_g_p_i_o_driver_1a28f9117bc71b9cde6c2d27f896ab7251" prot="private" virt="non-virtual"><scope>GPIODriver</scope><name>UnexportGPIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

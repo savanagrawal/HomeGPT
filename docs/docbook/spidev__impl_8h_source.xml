@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_spidev__impl_8h_source" xml:lang="en-US">
+<title>spidev_impl.h</title>
+<indexterm><primary>src/peripherals/spi/spidev_impl.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_dependencies_2mfrc522_2ispi_8h">mfrc522/ispi.h</link>&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_spi_8h">spidevpp/spi.h</link>&gt;</emphasis>
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_spidev">Spidev</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_structmfrc522_1_1_i_spi">mfrc522::ISpi</link>&#32;{
+8 
+9 <emphasis role="keyword">public</emphasis>:
+10 &#32;&#32;&#32;&#32;<link linkend="_class_spidev_1a31a4acfa97d5d0f2a2bd41c019a74323">Spidev</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;device)
+11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&#32;<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>(device)
+12 &#32;&#32;&#32;&#32;{}
+13 
+14 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spidev_1a40c147da19e908a2e8e76b8b586b1170">write</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4">write</link>(pData,&#32;len);
+16 &#32;&#32;&#32;&#32;}
+17 
+18 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b">read</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962">read</link>(pData,&#32;len);
+20 &#32;&#32;&#32;&#32;}
+21 
+22 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_spidev_1a38c616bb4143f726ce083c947d7a6956">writeRead</link>(<emphasis role="keywordtype">char</emphasis>*&#32;pData,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;len)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8">writeRead</link>(pData,&#32;len);
+24 &#32;&#32;&#32;&#32;}
+25 
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1">writeRead</link>(<emphasis role="keywordtype">char</emphasis>&#32;data)&#32;<emphasis role="keyword">final</emphasis>&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8">writeRead</link>(data);
+28 &#32;&#32;&#32;&#32;}
+29 
+30 &#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_spi">spidevpp::Spi</link>&#32;<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>;
+31 
+32 };
+</programlisting></section>

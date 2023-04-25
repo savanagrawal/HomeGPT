@@ -1,0 +1,1478 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.6" xml:lang="en-US">
+  <compound refid="class_audio_record_thread" kind="class"><name>AudioRecordThread</name>
+    <member refid="class_audio_record_thread_1a992a7f69e87d804ab7f67b26397dd79d" kind="variable"><name>globals</name></member>
+    <member refid="class_audio_record_thread_1a72f010167c47c11a89c2d28cd8aa3404" kind="variable"><name>clapDetection</name></member>
+    <member refid="class_audio_record_thread_1a0dc8dcec38f3cccbb5e5bcc21e11f9c6" kind="function"><name>AudioRecordThread</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_audio_record_thread_1aab437f1af45b9742868320900130f402" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_bcm_gpio" kind="class"><name>BcmGpio</name>
+    <member refid="class_bcm_gpio_1a149c3f07409dd9fdbc9758ae3ae8aa81" kind="variable"><name>mPin</name></member>
+    <member refid="class_bcm_gpio_1a6761a8868f49983abe1a9788c5aa958a" kind="function"><name>BcmGpio</name></member>
+    <member refid="class_bcm_gpio_1a8e4bca04c8b1a4547b201d9db1ea5e79" kind="function"><name>setValue</name></member>
+    <member refid="class_bcm_gpio_1a48efab3311c06a6edfbdef5674463405" kind="function"><name>getValue</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kind="enum"><name>Value</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" kind="enumvalue"><name>l</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" kind="enumvalue"><name>h</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kind="enum"><name>Value</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" kind="enumvalue"><name>l</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" kind="enumvalue"><name>h</name></member>
+  </compound>
+  <compound refid="class_bcm_spi" kind="class"><name>BcmSpi</name>
+    <member refid="class_bcm_spi_1afb263d8e186dc50bfbe1f514f148ae08" kind="function"><name>BcmSpi</name></member>
+    <member refid="class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481" kind="function"><name>write</name></member>
+    <member refid="class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3" kind="function"><name>read</name></member>
+    <member refid="class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104" kind="function"><name>writeRead</name></member>
+    <member refid="class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de" kind="function"><name>writeRead</name></member>
+  </compound>
+  <compound refid="class_camera" kind="class"><name>Camera</name>
+    <member refid="class_camera_1ad0e7828ca457177dce3004991e96c8ca" kind="variable"><name>cam</name></member>
+    <member refid="class_camera_1af59c63e75ba3b669675eacbb43abe4be" kind="function"><name>Camera</name></member>
+    <member refid="class_camera_1a5873ce618d501a93c011291b03d1156c" kind="function"><name>getCamera</name></member>
+  </compound>
+  <compound refid="class_circular_queue" kind="class"><name>CircularQueue</name>
+    <member refid="class_circular_queue_1a706f2e5c38acff4db3e820e29d8a3a26" kind="variable"><name>front</name></member>
+    <member refid="class_circular_queue_1a69d47fabef01e136a6b55ddcbbbbd19f" kind="variable"><name>rear</name></member>
+    <member refid="class_circular_queue_1a2e3685e56d9b5f6442cab7fe3fa7dadc" kind="variable"><name>size</name></member>
+    <member refid="class_circular_queue_1a6ea39d79d20b6943c8c7bc886e0dd37c" kind="variable"><name>queue</name></member>
+    <member refid="class_circular_queue_1ab7baf5bddbec783e8b44cf55bfc6ecdc" kind="function"><name>CircularQueue</name></member>
+    <member refid="class_circular_queue_1ac353e7d7ba809f5412a31f0694d6f607" kind="function"><name>~CircularQueue</name></member>
+    <member refid="class_circular_queue_1aace42e1cb5bcf6ed610226cbc6e37f1a" kind="function"><name>enqueue</name></member>
+    <member refid="class_circular_queue_1a1bf33fbac157d2a246893370ac04e39c" kind="function"><name>dequeue</name></member>
+    <member refid="class_circular_queue_1af389c378a68797e7fe12a7351520090c" kind="function"><name>display</name></member>
+    <member refid="class_circular_queue_1ae59d7c591b977609b0c1c7e9a297cc0f" kind="function"><name>countQueue</name></member>
+  </compound>
+  <compound refid="class_clap_detection" kind="class"><name>ClapDetection</name>
+    <member refid="class_clap_detection_1ad92772919761201818620b973ba6313a" kind="variable"><name>y_find</name></member>
+    <member refid="class_clap_detection_1a32308a76036ef1bba15fdc66e1c859c0" kind="variable"><name>clapSamplePath</name></member>
+    <member refid="class_clap_detection_1a71c5cc0c68409c731c70c603c3d5d815" kind="variable"><name>audioData</name></member>
+    <member refid="class_clap_detection_1a7b4f6e093066f87038a867b1bee8a869" kind="variable"><name>recorded</name></member>
+    <member refid="class_clap_detection_1abc17556656b7faa4611b882507910cfe" kind="variable"><name>err</name></member>
+    <member refid="class_clap_detection_1a9714e7ad360d57c3a6a1ff3856ed09c1" kind="variable"><name>stream</name></member>
+    <member refid="class_clap_detection_1a5938b90c7e5183b075069bc44f323300" kind="variable"><name>inputParameters</name></member>
+    <member refid="class_clap_detection_1ad09d0337bddaa18620767867de175de5" kind="variable"><name>y_findPtr</name></member>
+    <member refid="class_clap_detection_1aa18e197850922b6e636e0fdf76346204" kind="function"><name>ClapDetection</name></member>
+    <member refid="class_clap_detection_1a93c7a6332be7f0b126135a9319daa745" kind="function"><name>Initialize</name></member>
+    <member refid="class_clap_detection_1a905ea0c10c5b8ce07c8cdda94e37535a" kind="function"><name>openStream</name></member>
+    <member refid="class_clap_detection_1a441f8b04980a0e2e7b20e83a6748ec8a" kind="function"><name>closeStream</name></member>
+    <member refid="class_clap_detection_1a800366c00fe876aa905a59a072436957" kind="function"><name>start</name></member>
+    <member refid="class_clap_detection_1a14d7a4329f238978b15abc40f6066340" kind="function"><name>stop</name></member>
+    <member refid="class_clap_detection_1a6505beb6c7931e5508b0b72d9365a387" kind="function"><name>record</name></member>
+    <member refid="class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15" kind="function"><name>detectClap</name></member>
+    <member refid="class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc" kind="function"><name>reverse_bits</name></member>
+    <member refid="class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa" kind="function"><name>fft</name></member>
+    <member refid="class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc" kind="function"><name>convolve</name></member>
+    <member refid="class_clap_detection_1a955c7cf2960391a7af5309db688356e6" kind="function"><name>load_audio_file</name></member>
+    <member refid="class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf" kind="function"><name>percentage_above_threshold</name></member>
+    <member refid="class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4" kind="function"><name>find_per</name></member>
+    <member refid="class_clap_detection_1aa9f00a28382879aaba458015d3e6acce" kind="function"><name>find_per_data</name></member>
+    <member refid="class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da" kind="function"><name>result</name></member>
+    <member refid="class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8" kind="function"><name>paCallback</name></member>
+  </compound>
+  <compound refid="class_clap_thread" kind="class"><name>ClapThread</name>
+    <member refid="class_clap_thread_1add58caf216fc923d3171a04515130641" kind="variable"><name>globals</name></member>
+    <member refid="class_clap_thread_1a6e317491e65919a3ec55599cc3af9ec2" kind="variable"><name>clapDetection</name></member>
+    <member refid="class_clap_thread_1a644933e1db3c5f968168dce690a63707" kind="function"><name>ClapThread</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_clap_thread_1ab13d24bd87c16181ba04b4d9847ecc70" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_controller" kind="class"><name>Controller</name>
+    <member refid="class_controller_1a95c56822d667e94b031451729ce069a9" kind="function"><name>Controller</name></member>
+    <member refid="class_controller_1a7fbcb9d38feea7c3ee105e77dbf2d2fa" kind="function"><name>RFIDHandler</name></member>
+  </compound>
+  <compound refid="class_controller_thread" kind="class"><name>ControllerThread</name>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbe" kind="enum"><name>argvEnum</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea76d83f1a28344d0b17ad806b8aa0a60a" kind="enumvalue"><name>CreateIntruderDataset</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea931afb94113c261750c1408dda4448ac" kind="enumvalue"><name>TrainIntruderModel</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeab31721ecda4b88dbe7089c202ee3d3ec" kind="enumvalue"><name>DetectIntruder</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeac193abf2156af5e5ea20130590c78830" kind="enumvalue"><name>DetectClap</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea94a0504099ba4d47c625eee6fe732d34" kind="enumvalue"><name>RfidStart</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeaa167c0265c7e3b2e576401f3f16780a8" kind="enumvalue"><name>Debug</name></member>
+    <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea452854db9c3d14c400ba6de715e44c9c" kind="enumvalue"><name>IntruderMoodDetectionStart</name></member>
+    <member refid="class_controller_thread_1a3fa5c6ebe6170eafc00148a18ee34614" kind="variable"><name>argc</name></member>
+    <member refid="class_controller_thread_1a7410967472a0a8a0876d2d3f81eaf44a" kind="variable"><name>argv</name></member>
+    <member refid="class_controller_thread_1ae9582038f5aecce75634e99c7763f756" kind="variable"><name>argvValues</name></member>
+    <member refid="class_controller_thread_1a00cd6502504f5f1e680e6be3f60a987d" kind="function"><name>ControllerThread</name></member>
+    <member refid="class_controller_thread_1a53ad3a44cd24e685c06262380ea6c5b8" kind="function"><name>setArgs</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_controller_thread_1ae8206a23ab1a414f2956424def2e759c" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_cpp_thread" kind="class"><name>CppThread</name>
+    <member refid="class_cpp_thread_1ab66c0576f6f925bd5ce5ba714737b5e6" kind="variable"><name>uthread</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_cpp_thread_1a792b79e72250710147c452648def4a78" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_cpp_timer_callback" kind="class"><name>CppTimerCallback</name>
+    <member refid="class_cpp_timer_callback_1a578cc701cee7be10f3afab2859eac74f" kind="variable"><name>cppTimerEventRunnable</name></member>
+    <member refid="class_cpp_timer_callback_1ae6e815f1c3b65ea4f10fe0332e13acb9" kind="function"><name>registerEventRunnable</name></member>
+    <member refid="class_cpp_timer_callback_1a29d8d5a426a3d15bca8a42c2c897f50f" kind="function"><name>unregisterEventRunnable</name></member>
+    <member refid="class_cpp_timer_callback_1af6b39f5eb8e98bfc1b301ac3f25276e9" kind="function"><name>timerEvent</name></member>
+  </compound>
+  <compound refid="class_doors_thread" kind="class"><name>DoorsThread</name>
+    <member refid="class_doors_thread_1a432e1fa4ecfc06c48ecb1c2c2f93b982" kind="variable"><name>globals</name></member>
+    <member refid="class_doors_thread_1a08b56bb7cccad9e7e3ec0ac6979015e6" kind="function"><name>DoorsThread</name></member>
+    <member refid="class_doors_thread_1a5ea394ef57bc544806a7bfb2afb19003" kind="function"><name>stop</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_doors_thread_1ac3a2de2984ec878b0c62a7c9efa071b8" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_event_handler" kind="class"><name>EventHandler</name>
+    <member refid="class_event_handler_1a419f3a7fb8376e0520c256c7d2bd0fac" kind="variable"><name>listeners</name></member>
+    <member refid="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" kind="function"><name>getInstance</name></member>
+    <member refid="class_event_handler_1ad068c59fb303da8c70ec208c48d44550" kind="function"><name>getInstance</name></member>
+    <member refid="class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3" kind="function"><name>EventHandler</name></member>
+    <member refid="class_event_handler_1ab9a987809515877a612451f1afcb8089" kind="function"><name>operator=</name></member>
+    <member refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" kind="function"><name>addListener</name></member>
+    <member refid="class_event_handler_1a1e51daafb4d3a30c0182a5be27873473" kind="function"><name>addListener</name></member>
+    <member refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kind="function"><name>emit</name></member>
+    <member refid="class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2" kind="function"><name>emit</name></member>
+    <member refid="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" kind="function"><name>isEventRegistered</name></member>
+    <member refid="class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3" kind="function"><name>EventHandler</name></member>
+    <member refid="class_event_handler_1ab9a987809515877a612451f1afcb8089" kind="function"><name>operator=</name></member>
+    <member refid="class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd" kind="function"><name>addListener</name></member>
+    <member refid="class_event_handler_1a1e51daafb4d3a30c0182a5be27873473" kind="function"><name>addListener</name></member>
+    <member refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" kind="function"><name>emit</name></member>
+    <member refid="class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2" kind="function"><name>emit</name></member>
+    <member refid="class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a" kind="function"><name>isEventRegistered</name></member>
+    <member refid="class_event_handler_1a175f18f852b466f845ed9f2b011f2295" kind="function"><name>EventHandler</name></member>
+    <member refid="class_event_handler_1a08c12344c83fd59f4e92e5892b7b139d" kind="function"><name>~EventHandler</name></member>
+    <member refid="class_event_handler_1a175f18f852b466f845ed9f2b011f2295" kind="function"><name>EventHandler</name></member>
+    <member refid="class_event_handler_1a08c12344c83fd59f4e92e5892b7b139d" kind="function"><name>~EventHandler</name></member>
+    <member refid="class_event_handler_1a7a0b4392bbe6d546d0bbdd626d610a1d" kind="function"><name>eventToString</name></member>
+    <member refid="class_event_handler_1af2dc7e6c2adde42ea9e57c8372e2c002" kind="function"><name>eventToString</name></member>
+  </compound>
+  <compound refid="class_events" kind="class"><name>Events</name>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c" kind="enum"><name>EVENT_CODES</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca09696eae844ccb123b205d9d8acd149e" kind="enumvalue"><name>CLAP_DETECTED</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9b99fabdfb0f7ee9d5f3f1019d893a7a" kind="enumvalue"><name>CLAP_DETECTED_THREAD</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde" kind="enumvalue"><name>DATASET_CREATOR_COMPLETE</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7" kind="enumvalue"><name>DATASET_CREATOR_ERROR</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6" kind="enumvalue"><name>DATASET_TRAINER_COMPLETE</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088" kind="enumvalue"><name>DATASET_TRAINER_ERROR</name></member>
+    <member refid="class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cac9e306cb81bc6f3653a8d5047bc0f0dc" kind="enumvalue"><name>INTRUDER_THREAD_KILL</name></member>
+    <member refid="class_events_1a5835913d7c7f73cf0646c2f50bdc636c" kind="variable"><name>dispatcher</name></member>
+    <member refid="class_events_1a599a464388efa7cc667dee0f5acbaf62" kind="function"><name>getInstance</name></member>
+    <member refid="class_events_1af492aa81f2ef321fff34e61d81531586" kind="function"><name>Events</name></member>
+    <member refid="class_events_1a3ac3dea8075d8cb500fcef5d902e6146" kind="function"><name>operator=</name></member>
+    <member refid="class_events_1a1674530b62fa0bc5390d5bc6da484234" kind="function"><name>getDispatcher</name></member>
+    <member refid="class_events_1aa34d20a6375098cacbff1648b3047523" kind="function"><name>appendListener</name></member>
+    <member refid="class_events_1a72e92c46b35623f161d4800b50f36555" kind="function"><name>dispatch</name></member>
+    <member refid="class_events_1a0fd2c1f78be572e38245ac3551995c14" kind="function"><name>Events</name></member>
+    <member refid="class_events_1a4304d47703bb8f2e6d377654b11d92bd" kind="function"><name>~Events</name></member>
+  </compound>
+  <compound refid="class_globals" kind="class"><name>Globals</name>
+    <member refid="class_globals_1a925fb095d7649b46c33b64d49001d826" kind="variable"><name>mood_svm</name></member>
+    <member refid="class_globals_1a442b855f1d7cf07373bbb49bf8ed2fd1" kind="variable"><name>garageDoorPin</name></member>
+    <member refid="class_globals_1a3421d2a47f8be79fd41606664163daf0" kind="variable"><name>mainDoorPin</name></member>
+    <member refid="class_globals_1a35851fdb3cfc48107ae8759e39d50ec2" kind="variable"><name>ledPin</name></member>
+    <member refid="class_globals_1abe1ccd3ba06e59c5f08189b3b42cf1a4" kind="variable"><name>ledRedPin</name></member>
+    <member refid="class_globals_1a642ad0cfe92e1ddce715a368defd6b04" kind="variable"><name>ledGreenPin</name></member>
+    <member refid="class_globals_1a86f910f5b2d10c5f23347070b100d1bf" kind="variable"><name>ledBluePin</name></member>
+    <member refid="class_globals_1a7e9e2b31d0484acc038684bd8aceff1a" kind="function"><name>setMoodSvm</name></member>
+    <member refid="class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd" kind="function"><name>getMoodSvm</name></member>
+    <member refid="class_globals_1a55bec70a13f8568891d2562c90a61aaf" kind="function"><name>getGarageDoorPin</name></member>
+    <member refid="class_globals_1ae6cfcdccf6b6a84f36b129bee772e349" kind="function"><name>getMainDoorPin</name></member>
+    <member refid="class_globals_1a88e9d6fe344700f3bbaf9939dc754ee1" kind="function"><name>getLedPin</name></member>
+    <member refid="class_globals_1a01698796b983f7841a3b5511efdac98a" kind="function"><name>getLedRedPin</name></member>
+    <member refid="class_globals_1a27e735a20b539795eaa6e85e0e11d439" kind="function"><name>getLedGreenPin</name></member>
+    <member refid="class_globals_1ad26e9e618106929950d8e3db73503192" kind="function"><name>getLedBluePin</name></member>
+  </compound>
+  <compound refid="classspidevpp_1_1_gpio" kind="class"><name>spidevpp::Gpio</name>
+    <member refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kind="enum"><name>Direction</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08aa84cc046d48610b05c21fd3670d0c829" kind="enumvalue"><name>INPUT</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34" kind="enumvalue"><name>OUTPUT</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kind="enum"><name>Value</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a2dfb928f1104ab2a133c9f1f8fa9bbcc" kind="variable"><name>mPin</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a2988ab79d93e8f5195c22969b327ce9a" kind="variable"><name>mDirection</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a480fbfde382ffe0e34b276fab2eff969" kind="variable"><name>mDirectionFilePath</name></member>
+    <member refid="classspidevpp_1_1_gpio_1aedb529e05bea02cd4e40e6f00ba7ab88" kind="variable"><name>mValueFilePath</name></member>
+    <member refid="classspidevpp_1_1_gpio_1ab8156bc7bef8eee67a0cc5fdb906670e" kind="variable"><name>mValue</name></member>
+    <member refid="classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded" kind="function"><name>Gpio</name></member>
+    <member refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" kind="function"><name>setValue</name></member>
+    <member refid="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" kind="function"><name>getValue</name></member>
+  </compound>
+  <compound refid="class_g_p_i_o_driver" kind="class"><name>GPIODriver</name>
+    <member refid="class_g_p_i_o_driver_1a74b0f69ce300c94de3d4fdd75042dec3" kind="function"><name>GPIODriver</name></member>
+    <member refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" kind="function"><name>SetGPIOState</name></member>
+    <member refid="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" kind="function"><name>GPIORead</name></member>
+    <member refid="class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7" kind="function"><name>SetUpPin</name></member>
+    <member refid="class_g_p_i_o_driver_1a5e480dbffe553649faaa457579c7e847" kind="function"><name>ExportGPIO</name></member>
+    <member refid="class_g_p_i_o_driver_1a28f9117bc71b9cde6c2d27f896ab7251" kind="function"><name>UnexportGPIO</name></member>
+    <member refid="class_g_p_i_o_driver_1a9e694366a04bc8662865ea758a74eabe" kind="function"><name>SetGPIODirection</name></member>
+  </compound>
+  <compound refid="class_i2_c_driver" kind="class"><name>I2CDriver</name>
+    <member refid="class_i2_c_driver_1ae25c889f0a2540eee34d53e0228fe914" kind="function"><name>I2C_Setup_File</name></member>
+    <member refid="class_i2_c_driver_1a6480a0e3e5022ac90944f319ca5a5f4e" kind="function"><name>I2C_Close_File</name></member>
+    <member refid="class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41" kind="function"><name>Plain_I2C_Write_Read</name></member>
+    <member refid="class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572" kind="function"><name>Plain_I2C_Write_Read_CRC8</name></member>
+    <member refid="class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0" kind="function"><name>Delay</name></member>
+    <member refid="class_i2_c_driver_1acd90c5e9215accc2baf66757054e2906" kind="function"><name>I2C_Read_Byte</name></member>
+    <member refid="class_i2_c_driver_1aab652313af52fe19360bc928baf80fae" kind="function"><name>I2C_Read_8bitReg</name></member>
+    <member refid="class_i2_c_driver_1a8639cbc95b98be425f6b30dd591384c6" kind="function"><name>I2C_Read_16bitReg</name></member>
+    <member refid="class_i2_c_driver_1a7b5eb92afa9ed0b5af264836d0944520" kind="function"><name>I2C_Write_Byte</name></member>
+    <member refid="class_i2_c_driver_1a6ff7dfdd4aca26c83c6047f45cce1a9e" kind="function"><name>I2C_Write_8bitReg</name></member>
+    <member refid="class_i2_c_driver_1a445d2ef0ba5f742fb8264c202dae4a8d" kind="function"><name>I2C_Write_16bitReg</name></member>
+    <member refid="class_i2_c_driver_1a389bf23234176e0fd0421e078e1fa00d" kind="function"><name>I2C_Write_Block</name></member>
+    <member refid="class_i2_c_driver_1a3877a689d16c30835569c7fa5f064359" kind="function"><name>I2C_Read_Block</name></member>
+  </compound>
+  <compound refid="class_i2_c_sensor" kind="class"><name>I2CSensor</name>
+    <member refid="class_i2_c_sensor_1a0fb4755ddff3fe2cf5a9651d9d1fe5cd" kind="function"><name>Initialize</name></member>
+    <member refid="class_i2_c_sensor_1a0622266d335944782d2bfa6352f01095" kind="function"><name>Reset</name></member>
+    <member refid="class_i2_c_sensor_1acee1633439e97bae412441ac085fabba" kind="function"><name>Close_Device</name></member>
+  </compound>
+  <compound refid="structmfrc522_1_1_i_gpio" kind="struct"><name>mfrc522::IGpio</name>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kind="enum"><name>Value</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" kind="enumvalue"><name>l</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" kind="enumvalue"><name>h</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kind="enum"><name>Value</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" kind="enumvalue"><name>l</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" kind="enumvalue"><name>h</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188" kind="function"><name>setValue</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2" kind="function"><name>getValue</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a1d5cffeab7b6f7ca38093d98866d1188" kind="function"><name>setValue</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a27cabe804a7b1d36c2a3696ff6445ff2" kind="function"><name>getValue</name></member>
+  </compound>
+  <compound refid="class_intruder_dataset_creator" kind="class"><name>IntruderDatasetCreator</name>
+    <member refid="class_intruder_dataset_creator_1ac5f22715493f60833a692158717d4175" kind="variable"><name>masterCamera</name></member>
+    <member refid="class_intruder_dataset_creator_1a88b5909de5adbc12c06a97f9bc0f4e3d" kind="variable"><name>detector</name></member>
+    <member refid="class_intruder_dataset_creator_1a6f888033f4cde4798f5da82db448320a" kind="variable"><name>cascadePath</name></member>
+    <member refid="class_intruder_dataset_creator_1a017a138144956239e6cdc45c79a489c4" kind="variable"><name>fileName</name></member>
+    <member refid="class_intruder_dataset_creator_1a3d5799be713c7ad10f7aa0056e949d74" kind="variable"><name>newUser</name></member>
+    <member refid="class_intruder_dataset_creator_1ad900739c662b2ab8e557e5d3ad653b6b" kind="variable"><name>samples</name></member>
+    <member refid="class_intruder_dataset_creator_1af1652b060305698d9e4e39367821bc9d" kind="variable"><name>CameraID</name></member>
+    <member refid="class_intruder_dataset_creator_1a88996a3f73b84c0e9a62c1001a87f429" kind="variable"><name>gray</name></member>
+    <member refid="class_intruder_dataset_creator_1a12f35b6ada45b7c5e048744ec46f6977" kind="variable"><name>faces</name></member>
+    <member refid="class_intruder_dataset_creator_1a0544f8c7971bad326d2a7c3709f2d1fc" kind="function"><name>timerEvent</name></member>
+    <member refid="class_intruder_dataset_creator_1aa0a4cc17b842a4350d4ff8c2b128ecc9" kind="function"><name>IntruderDatasetCreator</name></member>
+    <member refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" kind="function"><name>Initialize</name></member>
+    <member refid="class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900" kind="function"><name>stop</name></member>
+    <member refid="class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611" kind="function"><name>trim</name></member>
+    <member refid="class_intruder_dataset_creator_1ab6a94beca84ac2602bcb45bbbbd9264f" kind="function"><name>count_name</name></member>
+    <member refid="class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb" kind="function"><name>replace_spaces_with_underscores</name></member>
+    <member refid="class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162" kind="function"><name>is_valid_name</name></member>
+    <member refid="class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07" kind="function"><name>findStringInFile</name></member>
+    <member refid="class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35" kind="function"><name>getLastIntegerInFile</name></member>
+    <member refid="class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9" kind="function"><name>appendLineToFile</name></member>
+    <member refid="class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea" kind="function"><name>checkCameraOpen</name></member>
+  </compound>
+  <compound refid="class_intruder_dataset_trainer" kind="class"><name>IntruderDatasetTrainer</name>
+    <member refid="class_intruder_dataset_trainer_1a052f469e8c147d5af107c606d428bd2b" kind="variable"><name>detector</name></member>
+    <member refid="class_intruder_dataset_trainer_1a95285ef0e37bfbfe3a4f62026bc0603d" kind="variable"><name>cascadePath</name></member>
+    <member refid="class_intruder_dataset_trainer_1a820114a89589f2b89edabe9b4f158482" kind="variable"><name>recognizer</name></member>
+    <member refid="class_intruder_dataset_trainer_1ada21a72edb32405ef1f9111e763c779f" kind="variable"><name>faceSamples</name></member>
+    <member refid="class_intruder_dataset_trainer_1aefd6a7a92f6cae3056aad558f35ca510" kind="variable"><name>Ids</name></member>
+    <member refid="class_intruder_dataset_trainer_1a4f6f1eb7e72299f597340a2bd066278a" kind="variable"><name>base_path</name></member>
+    <member refid="class_intruder_dataset_trainer_1ae7f4bd9d6ca77c6f7e39e8ed6756f074" kind="variable"><name>imagePaths</name></member>
+    <member refid="class_intruder_dataset_trainer_1aa2bc633b2bd587fae28b0e0d9e230573" kind="variable"><name>fileName</name></member>
+    <member refid="class_intruder_dataset_trainer_1adc8b7e40212a9efdf9649b3f30197c6f" kind="variable"><name>users</name></member>
+    <member refid="class_intruder_dataset_trainer_1a0cdcc173875737dd676e397e939a04c9" kind="function"><name>IntruderDatasetTrainer</name></member>
+    <member refid="class_intruder_dataset_trainer_1a5549116f8bbdfa9571aeb50031a11a07" kind="function"><name>Initialize</name></member>
+    <member refid="class_intruder_dataset_trainer_1a0a9936a9e4fc9250c4ad580b51051f79" kind="function"><name>extract_username</name></member>
+    <member refid="class_intruder_dataset_trainer_1aee1a34251ed611fb6c7499b4e034156b" kind="function"><name>readFileToMap</name></member>
+    <member refid="class_intruder_dataset_trainer_1a6d2299bbf12e0484dc930a7e53634c4a" kind="function"><name>generateModel</name></member>
+  </compound>
+  <compound refid="class_intruder_detection" kind="class"><name>IntruderDetection</name>
+    <member refid="class_intruder_detection_1a9eeb52647fb94537e828f7eb5228ae56" kind="variable"><name>masterCamera</name></member>
+    <member refid="class_intruder_detection_1a875c6d3643614660d9fee77ed842655f" kind="variable"><name>im</name></member>
+    <member refid="class_intruder_detection_1a3eea780b065647057580e3ec7b293063" kind="variable"><name>gray</name></member>
+    <member refid="class_intruder_detection_1a3c4032f4993d85a1a66f485558cdb01e" kind="variable"><name>detector</name></member>
+    <member refid="class_intruder_detection_1a337464759ab4506a8a72195aa4c23c2b" kind="variable"><name>cascadePath</name></member>
+    <member refid="class_intruder_detection_1a003b285eb27bec78e3b0fb2b334ec1e8" kind="variable"><name>trainedModelPath</name></member>
+    <member refid="class_intruder_detection_1a549faa6d01de0d71d15dd66cab001e32" kind="variable"><name>recognizer</name></member>
+    <member refid="class_intruder_detection_1a0720accdb6367bbc1728459083bfe2e6" kind="variable"><name>fileName</name></member>
+    <member refid="class_intruder_detection_1a95f68153c69bd3f56f59b8fe387bd890" kind="variable"><name>users</name></member>
+    <member refid="class_intruder_detection_1af3edaaf61f20a647ec70d04ecd74fcb1" kind="function"><name>timerEvent</name></member>
+    <member refid="class_intruder_detection_1a6977d021a0c0ba13fa5967824b4c1cd5" kind="function"><name>IntruderDetection</name></member>
+    <member refid="class_intruder_detection_1a1f5c2435c70378d425088e735683af29" kind="function"><name>Initialize</name></member>
+    <member refid="class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529" kind="function"><name>stop</name></member>
+    <member refid="class_intruder_detection_1ae7434a5c6a619b5a50fe4dd70daba809" kind="function"><name>readFileToMap</name></member>
+  </compound>
+  <compound refid="class_intruder_mood_detection" kind="class"><name>IntruderMoodDetection</name>
+    <member refid="class_intruder_mood_detection_1a430d9fcc676bfdcac8d9924cbd1bbd47" kind="variable"><name>CameraID</name></member>
+    <member refid="class_intruder_mood_detection_1a902b6205079e1d64c6408e2a0fec68dc" kind="variable"><name>nbins</name></member>
+    <member refid="class_intruder_mood_detection_1a7156280f86c4d6a49eee0e0e4fe22d1b" kind="variable"><name>globals</name></member>
+    <member refid="class_intruder_mood_detection_1a3b76ec7fc5e7df9b5e9c76f3c410fc71" kind="variable"><name>masterCamera</name></member>
+    <member refid="class_intruder_mood_detection_1af97bbe5aa7c4412f2054fcf4f1faa49b" kind="variable"><name>im</name></member>
+    <member refid="class_intruder_mood_detection_1a4bdf7590b6bf2c5051c28ae8c59dbc6c" kind="variable"><name>gray</name></member>
+    <member refid="class_intruder_mood_detection_1ad9613d19674f5f93e29384c2b2948614" kind="variable"><name>roi</name></member>
+    <member refid="class_intruder_mood_detection_1a6d9d357520d31032aee8739093beadff" kind="variable"><name>detector</name></member>
+    <member refid="class_intruder_mood_detection_1a4777468130924f7c2cf36c82d9a88c50" kind="variable"><name>cascadePath</name></member>
+    <member refid="class_intruder_mood_detection_1ab9384e6463f78a6a9f161ab4ee92fba8" kind="variable"><name>trainedModelPath</name></member>
+    <member refid="class_intruder_mood_detection_1a003ecbd658f3c4a21b51ec3c9f99a160" kind="variable"><name>recognizer</name></member>
+    <member refid="class_intruder_mood_detection_1a2f54e4468dec454596100259f5bf4fe2" kind="variable"><name>fileName</name></member>
+    <member refid="class_intruder_mood_detection_1a893e13ae1a537abcba15fceaa89a935f" kind="variable"><name>users</name></member>
+    <member refid="class_intruder_mood_detection_1a4e2017bf7d546cce1a94a0f26cfb023d" kind="variable"><name>svm</name></member>
+    <member refid="class_intruder_mood_detection_1a8511a42af94d8064f9694b55be923319" kind="variable"><name>block_size</name></member>
+    <member refid="class_intruder_mood_detection_1acfdcb48a68ad15d334b609a740841691" kind="variable"><name>block_stride</name></member>
+    <member refid="class_intruder_mood_detection_1a091cc4ddd40a3e6eb63a1d47afe3bff9" kind="variable"><name>cell_size</name></member>
+    <member refid="class_intruder_mood_detection_1abb1a1786f27dad48718131ea72331515" kind="variable"><name>hog</name></member>
+    <member refid="class_intruder_mood_detection_1aba3b3c060f092b83b7c4e16a4f61b858" kind="variable"><name>running</name></member>
+    <member refid="class_intruder_mood_detection_1a1b1c68a49d1dbd08232cddf09b045d15" kind="variable"><name>locked</name></member>
+    <member refid="class_intruder_mood_detection_1a297737ec34e45ee49f0a3f1f4db6434a" kind="variable"><name>emits</name></member>
+    <member refid="class_intruder_mood_detection_1a5658d8eb48f7090104fe8652bcdd862b" kind="variable"><name>faces</name></member>
+    <member refid="class_intruder_mood_detection_1a514cd8a2c09b60b925b931a9e9d1dafa" kind="variable"><name>emotion</name></member>
+    <member refid="class_intruder_mood_detection_1a2e5825bbc8a76f475d0c2612cc3985e0" kind="function"><name>timerEvent</name></member>
+    <member refid="class_intruder_mood_detection_1a7e549103c5719225c1c8124f6cef4e86" kind="function"><name>IntruderMoodDetection</name></member>
+    <member refid="class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de" kind="function"><name>Initialize</name></member>
+    <member refid="class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324" kind="function"><name>stop</name></member>
+    <member refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" kind="function"><name>start</name></member>
+    <member refid="class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49" kind="function"><name>unlock</name></member>
+    <member refid="class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead" kind="function"><name>readFileToMap</name></member>
+    <member refid="class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6" kind="function"><name>restart</name></member>
+    <member refid="class_intruder_mood_detection_1aad2cd7218cbcca74cd2680bb3c6c028c" kind="function"><name>setCameraId</name></member>
+    <member refid="class_intruder_mood_detection_1ac54c4363522d4a161b360a1773e14cde" kind="function"><name>setContrasts</name></member>
+    <member refid="class_intruder_mood_detection_1a8b061d00a4f66142bb7469f60da73c97" kind="function"><name>setShutter</name></member>
+    <member refid="class_intruder_mood_detection_1a980a792d358cd66cc9769d30c19815a6" kind="function"><name>checkCameraOpen</name></member>
+    <member refid="class_intruder_mood_detection_1abb06d66df53434a740d983ae59847c1f" kind="function"><name>takePicture</name></member>
+    <member refid="class_intruder_mood_detection_1a1c49ac265494278a27a2ea6dbfa97dae" kind="function"><name>savePicture</name></member>
+  </compound>
+  <compound refid="class_intruder_mood_thread" kind="class"><name>IntruderMoodThread</name>
+    <member refid="class_intruder_mood_thread_1ab6ef028c8b9590864afc9f59bf4ab117" kind="variable"><name>camera</name></member>
+    <member refid="class_intruder_mood_thread_1a7b511333caaac77e015111d6553044cd" kind="variable"><name>intruderMoodDetection</name></member>
+    <member refid="class_intruder_mood_thread_1a48999f732098373e056e25a6565067f9" kind="function"><name>IntruderMoodThread</name></member>
+    <member refid="class_intruder_mood_thread_1ade454d5fa7c9f6fdf3b11a8d4d6fc92d" kind="function"><name>stop</name></member>
+    <member refid="class_intruder_mood_thread_1a44ae2cf509b7afa810c8ee861c6b1ad2" kind="function"><name>unlock</name></member>
+    <member refid="class_intruder_mood_thread_1a4ca398b2c77685a25ca8983afc8bb50d" kind="function"><name>restart</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_intruder_mood_thread_1a020deddefcdda0a02863f4e11a73dd31" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_intruder_thread" kind="class"><name>IntruderThread</name>
+    <member refid="class_intruder_thread_1abe4ebd54688af0b2122f52d3750227b2" kind="variable"><name>globals</name></member>
+    <member refid="class_intruder_thread_1a7382debe69565dea29e3bd1090cef517" kind="variable"><name>camera</name></member>
+    <member refid="class_intruder_thread_1a7176a96009645a249de5f309382ff0bd" kind="variable"><name>intruderDetection</name></member>
+    <member refid="class_intruder_thread_1ab7f73a4a83066e719b91cf0fe4ea3a85" kind="variable"><name>datasetCreator</name></member>
+    <member refid="class_intruder_thread_1a017765a14c49ebb7a3709453ad737be1" kind="variable"><name>datasetTrainer</name></member>
+    <member refid="class_intruder_thread_1a6ef383b9e4d403db98b1b47002bacdd1" kind="variable"><name>module</name></member>
+    <member refid="class_intruder_thread_1aba91f64ea333b14ff62a6d528d719523" kind="variable"><name>modules</name></member>
+    <member refid="class_intruder_thread_1a25f3a0973f527ca005b0434bce782da0" kind="function"><name>IntruderThread</name></member>
+    <member refid="class_intruder_thread_1a12d01e47a01c1ca8975c8cb1efb7c135" kind="function"><name>setModule</name></member>
+    <member refid="class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d" kind="function"><name>stop</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_intruder_thread_1a8d9f8a138310a20a8539f78c8ebc8da8" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="structmfrc522_1_1_i_spi" kind="struct"><name>mfrc522::ISpi</name>
+    <member refid="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed" kind="function"><name>write</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7" kind="function"><name>read</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac" kind="function"><name>writeRead</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683" kind="function"><name>writeRead</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed" kind="function"><name>write</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7" kind="function"><name>read</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac" kind="function"><name>writeRead</name></member>
+    <member refid="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683" kind="function"><name>writeRead</name></member>
+  </compound>
+  <compound refid="class_l_e_d_controller" kind="class"><name>LEDController</name>
+    <member refid="class_l_e_d_controller_1a69f8d1c97d89181dbb80e5855a94f45e" kind="variable"><name>ledPin</name></member>
+    <member refid="class_l_e_d_controller_1aa48f79b2a91a6d7b6610705bc7c35cdb" kind="variable"><name>redPin</name></member>
+    <member refid="class_l_e_d_controller_1a9632ac10d1aadd287a2b23d3da013e73" kind="variable"><name>greenPin</name></member>
+    <member refid="class_l_e_d_controller_1a2c23e91dd83f30f97a8c0d8cf89dffd3" kind="variable"><name>bluePin</name></member>
+    <member refid="class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823" kind="function"><name>LEDController</name></member>
+    <member refid="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" kind="function"><name>turnOnLED</name></member>
+    <member refid="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" kind="function"><name>turnOffLED</name></member>
+    <member refid="class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108" kind="function"><name>setRGBColor</name></member>
+    <member refid="class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa" kind="function"><name>turnOffRGBLED</name></member>
+    <member refid="class_l_e_d_controller_1a624dea029b933af2ce13622d4c251b10" kind="function"><name>setColor</name></member>
+  </compound>
+  <compound refid="classmfrc522_1_1_m_f_r_c522" kind="class"><name>mfrc522::MFRC522</name>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11" kind="enum"><name>PCD_Register</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aec944136235d455b5a6fa522ac362bb7" kind="enumvalue"><name>CommandReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2f50c41848a90f7cdf4f0800dcdd43a9" kind="enumvalue"><name>ComIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab0eea90d8cadb6473795b6afa2403916" kind="enumvalue"><name>DivIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a36d880f3febe92018582ed4d147ee406" kind="enumvalue"><name>ComIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a8aa211e282986d84b2e47d67b5bf6337" kind="enumvalue"><name>DivIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6803bc2b2af9b1b60d4b33f25e29a0a" kind="enumvalue"><name>ErrorReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a37caf50e5570a887ebc9958dea7fcea0" kind="enumvalue"><name>Status1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a77750cd41045db5305665ccfceb7ca77" kind="enumvalue"><name>Status2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae479f4fb5840e001a90ca6e19ec87a4b" kind="enumvalue"><name>FIFODataReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adf909659c714fa0a8938ef4bef5d72ac" kind="enumvalue"><name>FIFOLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adba422f51894c1b1d644e6f7d77c8f19" kind="enumvalue"><name>WaterLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a950cb7f8d39d0d1fe78d1c877a6d44a0" kind="enumvalue"><name>ControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aeef1ebc2d45524d9e3e2327f9cb3066b" kind="enumvalue"><name>BitFramingReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ac58131928da13c94b3a465c6a0276976" kind="enumvalue"><name>CollReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3afd4e5e104dc9c24af4687e3d51da56" kind="enumvalue"><name>ModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab6cd4c5dcfa675bbf5b2c162d47ba78e" kind="enumvalue"><name>TxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad9f6e967e3390192a00ac4256a56251b" kind="enumvalue"><name>RxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a414850094de7c1e66a844e1a40978a33" kind="enumvalue"><name>TxControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2bdde783dcc91f1f456d188f3d4d71a6" kind="enumvalue"><name>TxASKReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad0479359a7a1697baed406f972601bdd" kind="enumvalue"><name>TxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a033d032ceede4ad4fe79788aa5f6962f" kind="enumvalue"><name>RxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae2d1f8b133337135b58f6d76b9d7033a" kind="enumvalue"><name>RxThresholdReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a703240a6a220c43910e28703a74e3f52" kind="enumvalue"><name>DemodReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a62977c895c8ac99961603aa8dd58c8f6" kind="enumvalue"><name>MfTxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab08f244016fd8cfe5c6e40795a056e61" kind="enumvalue"><name>MfRxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1af7727119be183eb6ef7630d659a208" kind="enumvalue"><name>SerialSpeedReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa16b747cac59415d63c9aa61d4ca2eb1" kind="enumvalue"><name>CRCResultRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7436bf87e87a12e003f0d36c6ee93c74" kind="enumvalue"><name>CRCResultRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a9133e895e83898c0132e967eac11733a" kind="enumvalue"><name>ModWidthReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a299d24d290d0d45196a9753fead96fcc" kind="enumvalue"><name>RFCfgReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6857839ec7c1ca85c546cca3a9371b0" kind="enumvalue"><name>GsNReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1f1437ca4438162e0c1905ca39f9e28a" kind="enumvalue"><name>CWGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11af2f78bc8b98861e3762bfb39e9330410" kind="enumvalue"><name>ModGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a49e463ef0637de855d7f18f1b45d2183" kind="enumvalue"><name>TModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa2858d5ecb5db42b20bf9f26e8a82a85" kind="enumvalue"><name>TPrescalerReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7bc82b693e1f953c6ece972628b974d0" kind="enumvalue"><name>TReloadRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a053386cc993ce5f6432efcf222758356" kind="enumvalue"><name>TReloadRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3ac38e27924e94a67fb817a883309183" kind="enumvalue"><name>TCounterValueRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa8d709a47229dd8591f5a620fc892cab" kind="enumvalue"><name>TCounterValueRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a6995fdac6117f20475b18d8f3ac3b37c" kind="enumvalue"><name>TestSel1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aee2f6cf70362951f686e90fb3e935d50" kind="enumvalue"><name>TestSel2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa3bebfe547d6c53c3d0efe77a40c9935" kind="enumvalue"><name>TestPinEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a94cf3b29f1e8ef62a57563fc6c443fa3" kind="enumvalue"><name>TestPinValueReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a649cac3dfc392bc43209500fb785dc14" kind="enumvalue"><name>TestBusReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7673b1f3f1e0620ba14ab84eca449017" kind="enumvalue"><name>AutoTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a987d995305be7f2a8fe9c058ec4bd902" kind="enumvalue"><name>VersionReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a50244824f81dc258ffe75f2cfa79f4f3" kind="enumvalue"><name>AnalogTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a38dd71ef93140244120bb7b91f816e68" kind="enumvalue"><name>TestDAC1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11abea8ddee770eff435fbb6bacac13a481" kind="enumvalue"><name>TestDAC2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a941ecf7c53cf726968861607c4b5e5f7" kind="enumvalue"><name>TestADCReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aec944136235d455b5a6fa522ac362bb7" kind="enumvalue"><name>CommandReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2f50c41848a90f7cdf4f0800dcdd43a9" kind="enumvalue"><name>ComIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab0eea90d8cadb6473795b6afa2403916" kind="enumvalue"><name>DivIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a36d880f3febe92018582ed4d147ee406" kind="enumvalue"><name>ComIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a8aa211e282986d84b2e47d67b5bf6337" kind="enumvalue"><name>DivIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6803bc2b2af9b1b60d4b33f25e29a0a" kind="enumvalue"><name>ErrorReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a37caf50e5570a887ebc9958dea7fcea0" kind="enumvalue"><name>Status1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a77750cd41045db5305665ccfceb7ca77" kind="enumvalue"><name>Status2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae479f4fb5840e001a90ca6e19ec87a4b" kind="enumvalue"><name>FIFODataReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adf909659c714fa0a8938ef4bef5d72ac" kind="enumvalue"><name>FIFOLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adba422f51894c1b1d644e6f7d77c8f19" kind="enumvalue"><name>WaterLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a950cb7f8d39d0d1fe78d1c877a6d44a0" kind="enumvalue"><name>ControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aeef1ebc2d45524d9e3e2327f9cb3066b" kind="enumvalue"><name>BitFramingReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ac58131928da13c94b3a465c6a0276976" kind="enumvalue"><name>CollReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3afd4e5e104dc9c24af4687e3d51da56" kind="enumvalue"><name>ModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab6cd4c5dcfa675bbf5b2c162d47ba78e" kind="enumvalue"><name>TxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad9f6e967e3390192a00ac4256a56251b" kind="enumvalue"><name>RxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a414850094de7c1e66a844e1a40978a33" kind="enumvalue"><name>TxControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2bdde783dcc91f1f456d188f3d4d71a6" kind="enumvalue"><name>TxASKReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad0479359a7a1697baed406f972601bdd" kind="enumvalue"><name>TxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a033d032ceede4ad4fe79788aa5f6962f" kind="enumvalue"><name>RxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae2d1f8b133337135b58f6d76b9d7033a" kind="enumvalue"><name>RxThresholdReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a703240a6a220c43910e28703a74e3f52" kind="enumvalue"><name>DemodReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a62977c895c8ac99961603aa8dd58c8f6" kind="enumvalue"><name>MfTxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab08f244016fd8cfe5c6e40795a056e61" kind="enumvalue"><name>MfRxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1af7727119be183eb6ef7630d659a208" kind="enumvalue"><name>SerialSpeedReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa16b747cac59415d63c9aa61d4ca2eb1" kind="enumvalue"><name>CRCResultRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7436bf87e87a12e003f0d36c6ee93c74" kind="enumvalue"><name>CRCResultRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a9133e895e83898c0132e967eac11733a" kind="enumvalue"><name>ModWidthReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a299d24d290d0d45196a9753fead96fcc" kind="enumvalue"><name>RFCfgReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6857839ec7c1ca85c546cca3a9371b0" kind="enumvalue"><name>GsNReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1f1437ca4438162e0c1905ca39f9e28a" kind="enumvalue"><name>CWGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11af2f78bc8b98861e3762bfb39e9330410" kind="enumvalue"><name>ModGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a49e463ef0637de855d7f18f1b45d2183" kind="enumvalue"><name>TModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa2858d5ecb5db42b20bf9f26e8a82a85" kind="enumvalue"><name>TPrescalerReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7bc82b693e1f953c6ece972628b974d0" kind="enumvalue"><name>TReloadRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a053386cc993ce5f6432efcf222758356" kind="enumvalue"><name>TReloadRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3ac38e27924e94a67fb817a883309183" kind="enumvalue"><name>TCounterValueRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa8d709a47229dd8591f5a620fc892cab" kind="enumvalue"><name>TCounterValueRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a6995fdac6117f20475b18d8f3ac3b37c" kind="enumvalue"><name>TestSel1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aee2f6cf70362951f686e90fb3e935d50" kind="enumvalue"><name>TestSel2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa3bebfe547d6c53c3d0efe77a40c9935" kind="enumvalue"><name>TestPinEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a94cf3b29f1e8ef62a57563fc6c443fa3" kind="enumvalue"><name>TestPinValueReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a649cac3dfc392bc43209500fb785dc14" kind="enumvalue"><name>TestBusReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7673b1f3f1e0620ba14ab84eca449017" kind="enumvalue"><name>AutoTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a987d995305be7f2a8fe9c058ec4bd902" kind="enumvalue"><name>VersionReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a50244824f81dc258ffe75f2cfa79f4f3" kind="enumvalue"><name>AnalogTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a38dd71ef93140244120bb7b91f816e68" kind="enumvalue"><name>TestDAC1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11abea8ddee770eff435fbb6bacac13a481" kind="enumvalue"><name>TestDAC2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a941ecf7c53cf726968861607c4b5e5f7" kind="enumvalue"><name>TestADCReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1" kind="enum"><name>PCD_Command</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a9c68698c25dc780fc93c3d6623597ea6" kind="enumvalue"><name>PCD_Idle</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a33f0596a331add734571b0907bb8cd0c" kind="enumvalue"><name>PCD_Mem</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4520d1c5a6c460b2e3313fb26b93afc3" kind="enumvalue"><name>PCD_GenerateRandomID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1aee3289cb1accb952792affb0fc01a814" kind="enumvalue"><name>PCD_CalcCRC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a7648059b11bf420c077f83ad6c2df532" kind="enumvalue"><name>PCD_Transmit</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a1aee4ac74a9b29beb57a6e5947f0b261" kind="enumvalue"><name>PCD_NoCmdChange</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1af2436d9a2474b647ab1564f3c3ef7b81" kind="enumvalue"><name>PCD_Receive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1abef11bde1e2742480aa45fb1a8f99211" kind="enumvalue"><name>PCD_Transceive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4504a068cace1f0b9164b2f3a3255d2b" kind="enumvalue"><name>PCD_MFAuthent</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a0e7e9956d273665874c0eaebd8c1557b" kind="enumvalue"><name>PCD_SoftReset</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a9c68698c25dc780fc93c3d6623597ea6" kind="enumvalue"><name>PCD_Idle</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a33f0596a331add734571b0907bb8cd0c" kind="enumvalue"><name>PCD_Mem</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4520d1c5a6c460b2e3313fb26b93afc3" kind="enumvalue"><name>PCD_GenerateRandomID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1aee3289cb1accb952792affb0fc01a814" kind="enumvalue"><name>PCD_CalcCRC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a7648059b11bf420c077f83ad6c2df532" kind="enumvalue"><name>PCD_Transmit</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a1aee4ac74a9b29beb57a6e5947f0b261" kind="enumvalue"><name>PCD_NoCmdChange</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1af2436d9a2474b647ab1564f3c3ef7b81" kind="enumvalue"><name>PCD_Receive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1abef11bde1e2742480aa45fb1a8f99211" kind="enumvalue"><name>PCD_Transceive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4504a068cace1f0b9164b2f3a3255d2b" kind="enumvalue"><name>PCD_MFAuthent</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a0e7e9956d273665874c0eaebd8c1557b" kind="enumvalue"><name>PCD_SoftReset</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67" kind="enum"><name>PCD_RxGain</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a48d975686baa49a14c64c615165a2648" kind="enumvalue"><name>RxGain_18dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a1f76a9a1002b4f5a214a744fdfd1e485" kind="enumvalue"><name>RxGain_23dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a50c86eecc33ab1bc3ea765b381cbcc4f" kind="enumvalue"><name>RxGain_18dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a94f97cd2d56becc29b2f6d2aaf52390e" kind="enumvalue"><name>RxGain_23dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a8141508391403bda01e36b1b014bb3df" kind="enumvalue"><name>RxGain_33dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aeb2fa15224b6a3fc4ff9181771f49d26" kind="enumvalue"><name>RxGain_38dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67af75e837882d2876e7cc43cefe08c658c" kind="enumvalue"><name>RxGain_43dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67abf1cf1c7c0bbc05b36d2039af8edb778" kind="enumvalue"><name>RxGain_48dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a521090cb926c7ec89ac919dc03221ec9" kind="enumvalue"><name>RxGain_min</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a710cffcf94202bae75baf1446864aa8d" kind="enumvalue"><name>RxGain_avg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aab79eef054b19d0c816203470aa2b00c" kind="enumvalue"><name>RxGain_max</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a48d975686baa49a14c64c615165a2648" kind="enumvalue"><name>RxGain_18dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a1f76a9a1002b4f5a214a744fdfd1e485" kind="enumvalue"><name>RxGain_23dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a50c86eecc33ab1bc3ea765b381cbcc4f" kind="enumvalue"><name>RxGain_18dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a94f97cd2d56becc29b2f6d2aaf52390e" kind="enumvalue"><name>RxGain_23dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a8141508391403bda01e36b1b014bb3df" kind="enumvalue"><name>RxGain_33dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aeb2fa15224b6a3fc4ff9181771f49d26" kind="enumvalue"><name>RxGain_38dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67af75e837882d2876e7cc43cefe08c658c" kind="enumvalue"><name>RxGain_43dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67abf1cf1c7c0bbc05b36d2039af8edb778" kind="enumvalue"><name>RxGain_48dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a521090cb926c7ec89ac919dc03221ec9" kind="enumvalue"><name>RxGain_min</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a710cffcf94202bae75baf1446864aa8d" kind="enumvalue"><name>RxGain_avg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aab79eef054b19d0c816203470aa2b00c" kind="enumvalue"><name>RxGain_max</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40" kind="enum"><name>PICC_Command</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abf8bb05ffb365cb0d01679abc678b7d1" kind="enumvalue"><name>PICC_CMD_REQA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac69de174e9f3b7d8cc0b3e4b8be978ae" kind="enumvalue"><name>PICC_CMD_WUPA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a16883066555df303700ee5b7635a11f0" kind="enumvalue"><name>PICC_CMD_CT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac018ecee156fed326cdac2ceb29a38bd" kind="enumvalue"><name>PICC_CMD_SEL_CL1</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a1eb5f3af0ce3d4728e6efc8f2d6d8a9c" kind="enumvalue"><name>PICC_CMD_SEL_CL2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aa3f6c8c1f347fb9fef575e09e6b4d26b" kind="enumvalue"><name>PICC_CMD_SEL_CL3</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a4571c00e0e50ced328c148c72e8c8c8b" kind="enumvalue"><name>PICC_CMD_HLTA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abaeb71903ba91b26195148e8b7080432" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_A</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaae1e4ebe0ba780376417fa3cbbc492a" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_B</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a6e7b073f0a517053c124c3e539f97c7d" kind="enumvalue"><name>PICC_CMD_MF_READ</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaa1ee47263d5557db433506506d38644" kind="enumvalue"><name>PICC_CMD_MF_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a23b6cd831f9cf639542261446eaf3e88" kind="enumvalue"><name>PICC_CMD_MF_DECREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac206f2ba080fd8bae26a60cf8e9aa0f0" kind="enumvalue"><name>PICC_CMD_MF_INCREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a03960da2ba6fe363307249c0ebda4794" kind="enumvalue"><name>PICC_CMD_MF_RESTORE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aca11dd8f22ee92e74dea6eccb04acdbf" kind="enumvalue"><name>PICC_CMD_MF_TRANSFER</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a05ab0577fc5ebef596758d0435caff6a" kind="enumvalue"><name>PICC_CMD_UL_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abf8bb05ffb365cb0d01679abc678b7d1" kind="enumvalue"><name>PICC_CMD_REQA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac69de174e9f3b7d8cc0b3e4b8be978ae" kind="enumvalue"><name>PICC_CMD_WUPA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a16883066555df303700ee5b7635a11f0" kind="enumvalue"><name>PICC_CMD_CT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac018ecee156fed326cdac2ceb29a38bd" kind="enumvalue"><name>PICC_CMD_SEL_CL1</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a1eb5f3af0ce3d4728e6efc8f2d6d8a9c" kind="enumvalue"><name>PICC_CMD_SEL_CL2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aa3f6c8c1f347fb9fef575e09e6b4d26b" kind="enumvalue"><name>PICC_CMD_SEL_CL3</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a4571c00e0e50ced328c148c72e8c8c8b" kind="enumvalue"><name>PICC_CMD_HLTA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abaeb71903ba91b26195148e8b7080432" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_A</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaae1e4ebe0ba780376417fa3cbbc492a" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_B</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a6e7b073f0a517053c124c3e539f97c7d" kind="enumvalue"><name>PICC_CMD_MF_READ</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaa1ee47263d5557db433506506d38644" kind="enumvalue"><name>PICC_CMD_MF_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a23b6cd831f9cf639542261446eaf3e88" kind="enumvalue"><name>PICC_CMD_MF_DECREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac206f2ba080fd8bae26a60cf8e9aa0f0" kind="enumvalue"><name>PICC_CMD_MF_INCREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a03960da2ba6fe363307249c0ebda4794" kind="enumvalue"><name>PICC_CMD_MF_RESTORE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aca11dd8f22ee92e74dea6eccb04acdbf" kind="enumvalue"><name>PICC_CMD_MF_TRANSFER</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a05ab0577fc5ebef596758d0435caff6a" kind="enumvalue"><name>PICC_CMD_UL_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41ca" kind="enum"><name>MIFARE_Misc</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caaea67bb493542ac43ee33b3dcf32a73d3" kind="enumvalue"><name>MF_ACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caa6b49626dcb7cc58cb460378caf71908f" kind="enumvalue"><name>MF_KEY_SIZE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caaea67bb493542ac43ee33b3dcf32a73d3" kind="enumvalue"><name>MF_ACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caa6b49626dcb7cc58cb460378caf71908f" kind="enumvalue"><name>MF_KEY_SIZE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493" kind="enum"><name>PICC_Type</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a15db395f3889e5937b6d019b1ba4d0e7" kind="enumvalue"><name>PICC_TYPE_UNKNOWN</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a97e77275960067a9507621a414d9ee77" kind="enumvalue"><name>PICC_TYPE_ISO_14443_4</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a6a7364b7bdd89dfdeb953c9d3e089d38" kind="enumvalue"><name>PICC_TYPE_ISO_18092</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a7d80d9d0a5adf15d762b9ce105bcc56e" kind="enumvalue"><name>PICC_TYPE_MIFARE_MINI</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ab8e5defa66b9600f4d872c3b47276ebc" kind="enumvalue"><name>PICC_TYPE_MIFARE_1K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a83a507121e0ba4b01826cfabea916d98" kind="enumvalue"><name>PICC_TYPE_MIFARE_4K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493abf543718b1dd9b3a1e067cf7b909a751" kind="enumvalue"><name>PICC_TYPE_MIFARE_UL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ac3a75d9038b6298fe8294c1d142e450c" kind="enumvalue"><name>PICC_TYPE_MIFARE_PLUS</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a275fd46fd853ab8925afb1580ce1c3cb" kind="enumvalue"><name>PICC_TYPE_TNP3XXX</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ad18c78cf2973ca2f136bfb1ddbc31843" kind="enumvalue"><name>PICC_TYPE_NOT_COMPLETE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a15db395f3889e5937b6d019b1ba4d0e7" kind="enumvalue"><name>PICC_TYPE_UNKNOWN</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a97e77275960067a9507621a414d9ee77" kind="enumvalue"><name>PICC_TYPE_ISO_14443_4</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a6a7364b7bdd89dfdeb953c9d3e089d38" kind="enumvalue"><name>PICC_TYPE_ISO_18092</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a7d80d9d0a5adf15d762b9ce105bcc56e" kind="enumvalue"><name>PICC_TYPE_MIFARE_MINI</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ab8e5defa66b9600f4d872c3b47276ebc" kind="enumvalue"><name>PICC_TYPE_MIFARE_1K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a83a507121e0ba4b01826cfabea916d98" kind="enumvalue"><name>PICC_TYPE_MIFARE_4K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493abf543718b1dd9b3a1e067cf7b909a751" kind="enumvalue"><name>PICC_TYPE_MIFARE_UL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ac3a75d9038b6298fe8294c1d142e450c" kind="enumvalue"><name>PICC_TYPE_MIFARE_PLUS</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a275fd46fd853ab8925afb1580ce1c3cb" kind="enumvalue"><name>PICC_TYPE_TNP3XXX</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ad18c78cf2973ca2f136bfb1ddbc31843" kind="enumvalue"><name>PICC_TYPE_NOT_COMPLETE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9e" kind="enum"><name>StatusCode</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea57045c67d26b41b679c172ec2497dd08" kind="enumvalue"><name>STATUS_OK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea76ceaae23d0b59f4bf067ac708e9a5d3" kind="enumvalue"><name>STATUS_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa7af9254cbdc5fbf97708399cba3560b" kind="enumvalue"><name>STATUS_COLLISION</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa9cb84ece9b715db0d27c4c019ade935" kind="enumvalue"><name>STATUS_TIMEOUT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea55eec210026c49f46dcf883ef2ff17aa" kind="enumvalue"><name>STATUS_NO_ROOM</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1c572582a06e252ccf3cccdfdaf051b2" kind="enumvalue"><name>STATUS_INTERNAL_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1627f22aa06120d8df1f7d7acb1c0b21" kind="enumvalue"><name>STATUS_INVALID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eac29e2590ded4d4c1d9b6e2d6ebeefb31" kind="enumvalue"><name>STATUS_CRC_WRONG</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea991d8d22bd15cb327ce413664f43b314" kind="enumvalue"><name>STATUS_MIFARE_NACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea57045c67d26b41b679c172ec2497dd08" kind="enumvalue"><name>STATUS_OK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea76ceaae23d0b59f4bf067ac708e9a5d3" kind="enumvalue"><name>STATUS_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa7af9254cbdc5fbf97708399cba3560b" kind="enumvalue"><name>STATUS_COLLISION</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa9cb84ece9b715db0d27c4c019ade935" kind="enumvalue"><name>STATUS_TIMEOUT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea55eec210026c49f46dcf883ef2ff17aa" kind="enumvalue"><name>STATUS_NO_ROOM</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1c572582a06e252ccf3cccdfdaf051b2" kind="enumvalue"><name>STATUS_INTERNAL_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1627f22aa06120d8df1f7d7acb1c0b21" kind="enumvalue"><name>STATUS_INVALID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eac29e2590ded4d4c1d9b6e2d6ebeefb31" kind="enumvalue"><name>STATUS_CRC_WRONG</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea991d8d22bd15cb327ce413664f43b314" kind="enumvalue"><name>STATUS_MIFARE_NACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11" kind="enum"><name>PCD_Register</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aec944136235d455b5a6fa522ac362bb7" kind="enumvalue"><name>CommandReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2f50c41848a90f7cdf4f0800dcdd43a9" kind="enumvalue"><name>ComIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab0eea90d8cadb6473795b6afa2403916" kind="enumvalue"><name>DivIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a36d880f3febe92018582ed4d147ee406" kind="enumvalue"><name>ComIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a8aa211e282986d84b2e47d67b5bf6337" kind="enumvalue"><name>DivIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6803bc2b2af9b1b60d4b33f25e29a0a" kind="enumvalue"><name>ErrorReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a37caf50e5570a887ebc9958dea7fcea0" kind="enumvalue"><name>Status1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a77750cd41045db5305665ccfceb7ca77" kind="enumvalue"><name>Status2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae479f4fb5840e001a90ca6e19ec87a4b" kind="enumvalue"><name>FIFODataReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adf909659c714fa0a8938ef4bef5d72ac" kind="enumvalue"><name>FIFOLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adba422f51894c1b1d644e6f7d77c8f19" kind="enumvalue"><name>WaterLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a950cb7f8d39d0d1fe78d1c877a6d44a0" kind="enumvalue"><name>ControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aeef1ebc2d45524d9e3e2327f9cb3066b" kind="enumvalue"><name>BitFramingReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ac58131928da13c94b3a465c6a0276976" kind="enumvalue"><name>CollReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3afd4e5e104dc9c24af4687e3d51da56" kind="enumvalue"><name>ModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab6cd4c5dcfa675bbf5b2c162d47ba78e" kind="enumvalue"><name>TxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad9f6e967e3390192a00ac4256a56251b" kind="enumvalue"><name>RxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a414850094de7c1e66a844e1a40978a33" kind="enumvalue"><name>TxControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2bdde783dcc91f1f456d188f3d4d71a6" kind="enumvalue"><name>TxASKReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad0479359a7a1697baed406f972601bdd" kind="enumvalue"><name>TxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a033d032ceede4ad4fe79788aa5f6962f" kind="enumvalue"><name>RxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae2d1f8b133337135b58f6d76b9d7033a" kind="enumvalue"><name>RxThresholdReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a703240a6a220c43910e28703a74e3f52" kind="enumvalue"><name>DemodReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a62977c895c8ac99961603aa8dd58c8f6" kind="enumvalue"><name>MfTxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab08f244016fd8cfe5c6e40795a056e61" kind="enumvalue"><name>MfRxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1af7727119be183eb6ef7630d659a208" kind="enumvalue"><name>SerialSpeedReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa16b747cac59415d63c9aa61d4ca2eb1" kind="enumvalue"><name>CRCResultRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7436bf87e87a12e003f0d36c6ee93c74" kind="enumvalue"><name>CRCResultRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a9133e895e83898c0132e967eac11733a" kind="enumvalue"><name>ModWidthReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a299d24d290d0d45196a9753fead96fcc" kind="enumvalue"><name>RFCfgReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6857839ec7c1ca85c546cca3a9371b0" kind="enumvalue"><name>GsNReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1f1437ca4438162e0c1905ca39f9e28a" kind="enumvalue"><name>CWGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11af2f78bc8b98861e3762bfb39e9330410" kind="enumvalue"><name>ModGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a49e463ef0637de855d7f18f1b45d2183" kind="enumvalue"><name>TModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa2858d5ecb5db42b20bf9f26e8a82a85" kind="enumvalue"><name>TPrescalerReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7bc82b693e1f953c6ece972628b974d0" kind="enumvalue"><name>TReloadRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a053386cc993ce5f6432efcf222758356" kind="enumvalue"><name>TReloadRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3ac38e27924e94a67fb817a883309183" kind="enumvalue"><name>TCounterValueRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa8d709a47229dd8591f5a620fc892cab" kind="enumvalue"><name>TCounterValueRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a6995fdac6117f20475b18d8f3ac3b37c" kind="enumvalue"><name>TestSel1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aee2f6cf70362951f686e90fb3e935d50" kind="enumvalue"><name>TestSel2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa3bebfe547d6c53c3d0efe77a40c9935" kind="enumvalue"><name>TestPinEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a94cf3b29f1e8ef62a57563fc6c443fa3" kind="enumvalue"><name>TestPinValueReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a649cac3dfc392bc43209500fb785dc14" kind="enumvalue"><name>TestBusReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7673b1f3f1e0620ba14ab84eca449017" kind="enumvalue"><name>AutoTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a987d995305be7f2a8fe9c058ec4bd902" kind="enumvalue"><name>VersionReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a50244824f81dc258ffe75f2cfa79f4f3" kind="enumvalue"><name>AnalogTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a38dd71ef93140244120bb7b91f816e68" kind="enumvalue"><name>TestDAC1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11abea8ddee770eff435fbb6bacac13a481" kind="enumvalue"><name>TestDAC2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a941ecf7c53cf726968861607c4b5e5f7" kind="enumvalue"><name>TestADCReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aec944136235d455b5a6fa522ac362bb7" kind="enumvalue"><name>CommandReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2f50c41848a90f7cdf4f0800dcdd43a9" kind="enumvalue"><name>ComIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab0eea90d8cadb6473795b6afa2403916" kind="enumvalue"><name>DivIEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a36d880f3febe92018582ed4d147ee406" kind="enumvalue"><name>ComIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a8aa211e282986d84b2e47d67b5bf6337" kind="enumvalue"><name>DivIrqReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6803bc2b2af9b1b60d4b33f25e29a0a" kind="enumvalue"><name>ErrorReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a37caf50e5570a887ebc9958dea7fcea0" kind="enumvalue"><name>Status1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a77750cd41045db5305665ccfceb7ca77" kind="enumvalue"><name>Status2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae479f4fb5840e001a90ca6e19ec87a4b" kind="enumvalue"><name>FIFODataReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adf909659c714fa0a8938ef4bef5d72ac" kind="enumvalue"><name>FIFOLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11adba422f51894c1b1d644e6f7d77c8f19" kind="enumvalue"><name>WaterLevelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a950cb7f8d39d0d1fe78d1c877a6d44a0" kind="enumvalue"><name>ControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aeef1ebc2d45524d9e3e2327f9cb3066b" kind="enumvalue"><name>BitFramingReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ac58131928da13c94b3a465c6a0276976" kind="enumvalue"><name>CollReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3afd4e5e104dc9c24af4687e3d51da56" kind="enumvalue"><name>ModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab6cd4c5dcfa675bbf5b2c162d47ba78e" kind="enumvalue"><name>TxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad9f6e967e3390192a00ac4256a56251b" kind="enumvalue"><name>RxModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a414850094de7c1e66a844e1a40978a33" kind="enumvalue"><name>TxControlReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a2bdde783dcc91f1f456d188f3d4d71a6" kind="enumvalue"><name>TxASKReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ad0479359a7a1697baed406f972601bdd" kind="enumvalue"><name>TxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a033d032ceede4ad4fe79788aa5f6962f" kind="enumvalue"><name>RxSelReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ae2d1f8b133337135b58f6d76b9d7033a" kind="enumvalue"><name>RxThresholdReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a703240a6a220c43910e28703a74e3f52" kind="enumvalue"><name>DemodReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a62977c895c8ac99961603aa8dd58c8f6" kind="enumvalue"><name>MfTxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11ab08f244016fd8cfe5c6e40795a056e61" kind="enumvalue"><name>MfRxReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1af7727119be183eb6ef7630d659a208" kind="enumvalue"><name>SerialSpeedReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa16b747cac59415d63c9aa61d4ca2eb1" kind="enumvalue"><name>CRCResultRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7436bf87e87a12e003f0d36c6ee93c74" kind="enumvalue"><name>CRCResultRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a9133e895e83898c0132e967eac11733a" kind="enumvalue"><name>ModWidthReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a299d24d290d0d45196a9753fead96fcc" kind="enumvalue"><name>RFCfgReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa6857839ec7c1ca85c546cca3a9371b0" kind="enumvalue"><name>GsNReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a1f1437ca4438162e0c1905ca39f9e28a" kind="enumvalue"><name>CWGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11af2f78bc8b98861e3762bfb39e9330410" kind="enumvalue"><name>ModGsPReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a49e463ef0637de855d7f18f1b45d2183" kind="enumvalue"><name>TModeReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa2858d5ecb5db42b20bf9f26e8a82a85" kind="enumvalue"><name>TPrescalerReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7bc82b693e1f953c6ece972628b974d0" kind="enumvalue"><name>TReloadRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a053386cc993ce5f6432efcf222758356" kind="enumvalue"><name>TReloadRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a3ac38e27924e94a67fb817a883309183" kind="enumvalue"><name>TCounterValueRegH</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa8d709a47229dd8591f5a620fc892cab" kind="enumvalue"><name>TCounterValueRegL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a6995fdac6117f20475b18d8f3ac3b37c" kind="enumvalue"><name>TestSel1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aee2f6cf70362951f686e90fb3e935d50" kind="enumvalue"><name>TestSel2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11aa3bebfe547d6c53c3d0efe77a40c9935" kind="enumvalue"><name>TestPinEnReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a94cf3b29f1e8ef62a57563fc6c443fa3" kind="enumvalue"><name>TestPinValueReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a649cac3dfc392bc43209500fb785dc14" kind="enumvalue"><name>TestBusReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a7673b1f3f1e0620ba14ab84eca449017" kind="enumvalue"><name>AutoTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a987d995305be7f2a8fe9c058ec4bd902" kind="enumvalue"><name>VersionReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a50244824f81dc258ffe75f2cfa79f4f3" kind="enumvalue"><name>AnalogTestReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a38dd71ef93140244120bb7b91f816e68" kind="enumvalue"><name>TestDAC1Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11abea8ddee770eff435fbb6bacac13a481" kind="enumvalue"><name>TestDAC2Reg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a79379909c9677dab97379aa6e73d3c11a941ecf7c53cf726968861607c4b5e5f7" kind="enumvalue"><name>TestADCReg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1" kind="enum"><name>PCD_Command</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a9c68698c25dc780fc93c3d6623597ea6" kind="enumvalue"><name>PCD_Idle</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a33f0596a331add734571b0907bb8cd0c" kind="enumvalue"><name>PCD_Mem</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4520d1c5a6c460b2e3313fb26b93afc3" kind="enumvalue"><name>PCD_GenerateRandomID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1aee3289cb1accb952792affb0fc01a814" kind="enumvalue"><name>PCD_CalcCRC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a7648059b11bf420c077f83ad6c2df532" kind="enumvalue"><name>PCD_Transmit</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a1aee4ac74a9b29beb57a6e5947f0b261" kind="enumvalue"><name>PCD_NoCmdChange</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1af2436d9a2474b647ab1564f3c3ef7b81" kind="enumvalue"><name>PCD_Receive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1abef11bde1e2742480aa45fb1a8f99211" kind="enumvalue"><name>PCD_Transceive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4504a068cace1f0b9164b2f3a3255d2b" kind="enumvalue"><name>PCD_MFAuthent</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a0e7e9956d273665874c0eaebd8c1557b" kind="enumvalue"><name>PCD_SoftReset</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a9c68698c25dc780fc93c3d6623597ea6" kind="enumvalue"><name>PCD_Idle</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a33f0596a331add734571b0907bb8cd0c" kind="enumvalue"><name>PCD_Mem</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4520d1c5a6c460b2e3313fb26b93afc3" kind="enumvalue"><name>PCD_GenerateRandomID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1aee3289cb1accb952792affb0fc01a814" kind="enumvalue"><name>PCD_CalcCRC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a7648059b11bf420c077f83ad6c2df532" kind="enumvalue"><name>PCD_Transmit</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a1aee4ac74a9b29beb57a6e5947f0b261" kind="enumvalue"><name>PCD_NoCmdChange</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1af2436d9a2474b647ab1564f3c3ef7b81" kind="enumvalue"><name>PCD_Receive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1abef11bde1e2742480aa45fb1a8f99211" kind="enumvalue"><name>PCD_Transceive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a4504a068cace1f0b9164b2f3a3255d2b" kind="enumvalue"><name>PCD_MFAuthent</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac7dcc49f03949baad359d102b61141f1a0e7e9956d273665874c0eaebd8c1557b" kind="enumvalue"><name>PCD_SoftReset</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67" kind="enum"><name>PCD_RxGain</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a48d975686baa49a14c64c615165a2648" kind="enumvalue"><name>RxGain_18dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a1f76a9a1002b4f5a214a744fdfd1e485" kind="enumvalue"><name>RxGain_23dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a50c86eecc33ab1bc3ea765b381cbcc4f" kind="enumvalue"><name>RxGain_18dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a94f97cd2d56becc29b2f6d2aaf52390e" kind="enumvalue"><name>RxGain_23dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a8141508391403bda01e36b1b014bb3df" kind="enumvalue"><name>RxGain_33dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aeb2fa15224b6a3fc4ff9181771f49d26" kind="enumvalue"><name>RxGain_38dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67af75e837882d2876e7cc43cefe08c658c" kind="enumvalue"><name>RxGain_43dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67abf1cf1c7c0bbc05b36d2039af8edb778" kind="enumvalue"><name>RxGain_48dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a521090cb926c7ec89ac919dc03221ec9" kind="enumvalue"><name>RxGain_min</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a710cffcf94202bae75baf1446864aa8d" kind="enumvalue"><name>RxGain_avg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aab79eef054b19d0c816203470aa2b00c" kind="enumvalue"><name>RxGain_max</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a48d975686baa49a14c64c615165a2648" kind="enumvalue"><name>RxGain_18dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a1f76a9a1002b4f5a214a744fdfd1e485" kind="enumvalue"><name>RxGain_23dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a50c86eecc33ab1bc3ea765b381cbcc4f" kind="enumvalue"><name>RxGain_18dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a94f97cd2d56becc29b2f6d2aaf52390e" kind="enumvalue"><name>RxGain_23dB_2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a8141508391403bda01e36b1b014bb3df" kind="enumvalue"><name>RxGain_33dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aeb2fa15224b6a3fc4ff9181771f49d26" kind="enumvalue"><name>RxGain_38dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67af75e837882d2876e7cc43cefe08c658c" kind="enumvalue"><name>RxGain_43dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67abf1cf1c7c0bbc05b36d2039af8edb778" kind="enumvalue"><name>RxGain_48dB</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a521090cb926c7ec89ac919dc03221ec9" kind="enumvalue"><name>RxGain_min</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67a710cffcf94202bae75baf1446864aa8d" kind="enumvalue"><name>RxGain_avg</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a35d4bf0d1e8383ee59b68056e619ad67aab79eef054b19d0c816203470aa2b00c" kind="enumvalue"><name>RxGain_max</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40" kind="enum"><name>PICC_Command</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abf8bb05ffb365cb0d01679abc678b7d1" kind="enumvalue"><name>PICC_CMD_REQA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac69de174e9f3b7d8cc0b3e4b8be978ae" kind="enumvalue"><name>PICC_CMD_WUPA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a16883066555df303700ee5b7635a11f0" kind="enumvalue"><name>PICC_CMD_CT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac018ecee156fed326cdac2ceb29a38bd" kind="enumvalue"><name>PICC_CMD_SEL_CL1</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a1eb5f3af0ce3d4728e6efc8f2d6d8a9c" kind="enumvalue"><name>PICC_CMD_SEL_CL2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aa3f6c8c1f347fb9fef575e09e6b4d26b" kind="enumvalue"><name>PICC_CMD_SEL_CL3</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a4571c00e0e50ced328c148c72e8c8c8b" kind="enumvalue"><name>PICC_CMD_HLTA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abaeb71903ba91b26195148e8b7080432" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_A</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaae1e4ebe0ba780376417fa3cbbc492a" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_B</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a6e7b073f0a517053c124c3e539f97c7d" kind="enumvalue"><name>PICC_CMD_MF_READ</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaa1ee47263d5557db433506506d38644" kind="enumvalue"><name>PICC_CMD_MF_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a23b6cd831f9cf639542261446eaf3e88" kind="enumvalue"><name>PICC_CMD_MF_DECREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac206f2ba080fd8bae26a60cf8e9aa0f0" kind="enumvalue"><name>PICC_CMD_MF_INCREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a03960da2ba6fe363307249c0ebda4794" kind="enumvalue"><name>PICC_CMD_MF_RESTORE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aca11dd8f22ee92e74dea6eccb04acdbf" kind="enumvalue"><name>PICC_CMD_MF_TRANSFER</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a05ab0577fc5ebef596758d0435caff6a" kind="enumvalue"><name>PICC_CMD_UL_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abf8bb05ffb365cb0d01679abc678b7d1" kind="enumvalue"><name>PICC_CMD_REQA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac69de174e9f3b7d8cc0b3e4b8be978ae" kind="enumvalue"><name>PICC_CMD_WUPA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a16883066555df303700ee5b7635a11f0" kind="enumvalue"><name>PICC_CMD_CT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac018ecee156fed326cdac2ceb29a38bd" kind="enumvalue"><name>PICC_CMD_SEL_CL1</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a1eb5f3af0ce3d4728e6efc8f2d6d8a9c" kind="enumvalue"><name>PICC_CMD_SEL_CL2</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aa3f6c8c1f347fb9fef575e09e6b4d26b" kind="enumvalue"><name>PICC_CMD_SEL_CL3</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a4571c00e0e50ced328c148c72e8c8c8b" kind="enumvalue"><name>PICC_CMD_HLTA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40abaeb71903ba91b26195148e8b7080432" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_A</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaae1e4ebe0ba780376417fa3cbbc492a" kind="enumvalue"><name>PICC_CMD_MF_AUTH_KEY_B</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a6e7b073f0a517053c124c3e539f97c7d" kind="enumvalue"><name>PICC_CMD_MF_READ</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aaa1ee47263d5557db433506506d38644" kind="enumvalue"><name>PICC_CMD_MF_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a23b6cd831f9cf639542261446eaf3e88" kind="enumvalue"><name>PICC_CMD_MF_DECREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40ac206f2ba080fd8bae26a60cf8e9aa0f0" kind="enumvalue"><name>PICC_CMD_MF_INCREMENT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a03960da2ba6fe363307249c0ebda4794" kind="enumvalue"><name>PICC_CMD_MF_RESTORE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40aca11dd8f22ee92e74dea6eccb04acdbf" kind="enumvalue"><name>PICC_CMD_MF_TRANSFER</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9b3f991c32821250de1144672ebf9f40a05ab0577fc5ebef596758d0435caff6a" kind="enumvalue"><name>PICC_CMD_UL_WRITE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41ca" kind="enum"><name>MIFARE_Misc</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caaea67bb493542ac43ee33b3dcf32a73d3" kind="enumvalue"><name>MF_ACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caa6b49626dcb7cc58cb460378caf71908f" kind="enumvalue"><name>MF_KEY_SIZE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caaea67bb493542ac43ee33b3dcf32a73d3" kind="enumvalue"><name>MF_ACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caa6b49626dcb7cc58cb460378caf71908f" kind="enumvalue"><name>MF_KEY_SIZE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493" kind="enum"><name>PICC_Type</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a15db395f3889e5937b6d019b1ba4d0e7" kind="enumvalue"><name>PICC_TYPE_UNKNOWN</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a97e77275960067a9507621a414d9ee77" kind="enumvalue"><name>PICC_TYPE_ISO_14443_4</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a6a7364b7bdd89dfdeb953c9d3e089d38" kind="enumvalue"><name>PICC_TYPE_ISO_18092</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a7d80d9d0a5adf15d762b9ce105bcc56e" kind="enumvalue"><name>PICC_TYPE_MIFARE_MINI</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ab8e5defa66b9600f4d872c3b47276ebc" kind="enumvalue"><name>PICC_TYPE_MIFARE_1K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a83a507121e0ba4b01826cfabea916d98" kind="enumvalue"><name>PICC_TYPE_MIFARE_4K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493abf543718b1dd9b3a1e067cf7b909a751" kind="enumvalue"><name>PICC_TYPE_MIFARE_UL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ac3a75d9038b6298fe8294c1d142e450c" kind="enumvalue"><name>PICC_TYPE_MIFARE_PLUS</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a275fd46fd853ab8925afb1580ce1c3cb" kind="enumvalue"><name>PICC_TYPE_TNP3XXX</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ad18c78cf2973ca2f136bfb1ddbc31843" kind="enumvalue"><name>PICC_TYPE_NOT_COMPLETE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a15db395f3889e5937b6d019b1ba4d0e7" kind="enumvalue"><name>PICC_TYPE_UNKNOWN</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a97e77275960067a9507621a414d9ee77" kind="enumvalue"><name>PICC_TYPE_ISO_14443_4</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a6a7364b7bdd89dfdeb953c9d3e089d38" kind="enumvalue"><name>PICC_TYPE_ISO_18092</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a7d80d9d0a5adf15d762b9ce105bcc56e" kind="enumvalue"><name>PICC_TYPE_MIFARE_MINI</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ab8e5defa66b9600f4d872c3b47276ebc" kind="enumvalue"><name>PICC_TYPE_MIFARE_1K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a83a507121e0ba4b01826cfabea916d98" kind="enumvalue"><name>PICC_TYPE_MIFARE_4K</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493abf543718b1dd9b3a1e067cf7b909a751" kind="enumvalue"><name>PICC_TYPE_MIFARE_UL</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ac3a75d9038b6298fe8294c1d142e450c" kind="enumvalue"><name>PICC_TYPE_MIFARE_PLUS</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493a275fd46fd853ab8925afb1580ce1c3cb" kind="enumvalue"><name>PICC_TYPE_TNP3XXX</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a09ebe345aa2d535c9a82ba4d4972f493ad18c78cf2973ca2f136bfb1ddbc31843" kind="enumvalue"><name>PICC_TYPE_NOT_COMPLETE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9e" kind="enum"><name>StatusCode</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea57045c67d26b41b679c172ec2497dd08" kind="enumvalue"><name>STATUS_OK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea76ceaae23d0b59f4bf067ac708e9a5d3" kind="enumvalue"><name>STATUS_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa7af9254cbdc5fbf97708399cba3560b" kind="enumvalue"><name>STATUS_COLLISION</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa9cb84ece9b715db0d27c4c019ade935" kind="enumvalue"><name>STATUS_TIMEOUT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea55eec210026c49f46dcf883ef2ff17aa" kind="enumvalue"><name>STATUS_NO_ROOM</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1c572582a06e252ccf3cccdfdaf051b2" kind="enumvalue"><name>STATUS_INTERNAL_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1627f22aa06120d8df1f7d7acb1c0b21" kind="enumvalue"><name>STATUS_INVALID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eac29e2590ded4d4c1d9b6e2d6ebeefb31" kind="enumvalue"><name>STATUS_CRC_WRONG</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea991d8d22bd15cb327ce413664f43b314" kind="enumvalue"><name>STATUS_MIFARE_NACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea57045c67d26b41b679c172ec2497dd08" kind="enumvalue"><name>STATUS_OK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea76ceaae23d0b59f4bf067ac708e9a5d3" kind="enumvalue"><name>STATUS_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa7af9254cbdc5fbf97708399cba3560b" kind="enumvalue"><name>STATUS_COLLISION</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eaa9cb84ece9b715db0d27c4c019ade935" kind="enumvalue"><name>STATUS_TIMEOUT</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea55eec210026c49f46dcf883ef2ff17aa" kind="enumvalue"><name>STATUS_NO_ROOM</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1c572582a06e252ccf3cccdfdaf051b2" kind="enumvalue"><name>STATUS_INTERNAL_ERROR</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea1627f22aa06120d8df1f7d7acb1c0b21" kind="enumvalue"><name>STATUS_INVALID</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9eac29e2590ded4d4c1d9b6e2d6ebeefb31" kind="enumvalue"><name>STATUS_CRC_WRONG</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae0c9943da47bfcc78133235ab90fab9ea991d8d22bd15cb327ce413664f43b314" kind="enumvalue"><name>STATUS_MIFARE_NACK</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6597992fa684ba75342a587a65cbc3e5" kind="variable"><name>uid</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a05a6e11382dd107aaab12fc2b3fbdb13" kind="variable"><name>mSpi</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aa2d9006d9f17fb26ee1af3fea5dea2b2" kind="variable"><name>mResetPin</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ab27df5c7a8d40f5918edd091621efb92" kind="variable"><name>FIFO_SIZE</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9c32316768c27c643781df0d0a0bf248" kind="function"><name>MFRC522</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aef8efdbb515b419df6c0038312c4f4e3" kind="function"><name>PCD_WriteRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8f615a621af28925c38122b08ed3d03b" kind="function"><name>PCD_WriteRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a54b1e0960ffe689bb512b9ed79dcdece" kind="function"><name>PCD_ReadRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8243247e881823152bfe9295651b0056" kind="function"><name>PCD_ReadRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac54b5af1f98b9ac438e4164bce8ce927" kind="function"><name>setBitMask</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1af7304dd35540a5e47f1f34890c455286" kind="function"><name>PCD_SetRegisterBitMask</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a24112afc3d08921c21d718c74dc8ca71" kind="function"><name>PCD_ClearRegisterBitMask</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a5db7f98b9ace325a290f0d72e12bd05b" kind="function"><name>PCD_CalculateCRC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1affff6fd4010044cc4337803de579b4f0" kind="function"><name>PCD_Init</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aa3a0f87af9a7217c87de0b55592c1c60" kind="function"><name>PCD_Reset</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a984248652522e8fd580a526a7a9b27d9" kind="function"><name>PCD_AntennaOn</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a773b673bf8567d2cad97b136b9e269c9" kind="function"><name>PCD_AntennaOff</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6df2b2a81b0259de285892bc61f247fc" kind="function"><name>PCD_GetAntennaGain</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a245f57d7ea35bfb3ea818171abb18b4b" kind="function"><name>PCD_SetAntennaGain</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aabf66fe43403f40968049a2a87f0026d" kind="function"><name>PCD_PerformSelfTest</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6ae256b84102fb140f600f452f4ef231" kind="function"><name>PCD_TransceiveData</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a366fced589c1009264d5c2410c06b03e" kind="function"><name>PCD_CommunicateWithPICC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a44dd708016d31efc20bd2dbdb1f67aaf" kind="function"><name>PICC_RequestA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1add1b450123e4670d88e0b6cb2ddca0c7" kind="function"><name>PICC_WakeupA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3a28f6484ea6b1ed85745512da6ab775" kind="function"><name>PICC_REQA_or_WUPA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a73adcb5681de77c62ac14b6347d909d2" kind="function"><name>PICC_Select</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1adbb992156ffda4bfc7847620921454f3" kind="function"><name>PICC_HaltA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a86a252950d51b7cca3ca72f70d8cb24c" kind="function"><name>PCD_Authenticate</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a427680e47e8032e2db54eee4e551e48b" kind="function"><name>PCD_StopCrypto1</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a039f9df6672ed1c6b23678a374022959" kind="function"><name>MIFARE_Read</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a50b62d0ea4b1ab35d5275227fcbfaa5f" kind="function"><name>MIFARE_Write</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a56515c1027c5a471f56b128a1404f437" kind="function"><name>MIFARE_Decrement</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1af3a8dd85230de88fea86fa21d72ab742" kind="function"><name>MIFARE_Increment</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aaba45a947ba5a47f11ab346a764cedaf" kind="function"><name>MIFARE_Restore</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3b85e9b839756a4eb516195ef498ce58" kind="function"><name>MIFARE_Transfer</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1afcd5d913410ed3694fab339f311b93de" kind="function"><name>MIFARE_Ultralight_Write</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1abf16c5a992c8692c2cf4f65e6ad19a13" kind="function"><name>MIFARE_GetValue</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a1733fb64ad8fa119e3fe945d6287d059" kind="function"><name>MIFARE_SetValue</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a73c639f5869b7d6c23d8c1cc5aa2178e" kind="function"><name>PCD_MIFARE_Transceive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a0c4d480120813209751676c76149585a" kind="function"><name>GetStatusCodeName</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a51d41355c15a2e3aebe43bffc2445212" kind="function"><name>PICC_GetType</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae32295310fef34afe04407f307e583a9" kind="function"><name>PICC_GetTypeName</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a98d66dfc8460ae366a56d3762bcd278a" kind="function"><name>PICC_DumpToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6a0c6040b5f66d0a37b407f11a1a531a" kind="function"><name>PICC_DumpMifareClassicToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8517bd5b6752cc42da0bb6cb0ade3e0b" kind="function"><name>PICC_DumpMifareClassicSectorToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a4ca5c68d509a9ead4d6d551e8c10bd40" kind="function"><name>PICC_DumpMifareUltralightToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a622c5bd3b19e4093ebc774fc3a874f20" kind="function"><name>MIFARE_SetAccessBits</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ad10ff428a8a4e48a816237093a19849a" kind="function"><name>MIFARE_OpenUidBackdoor</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a2f11484ff5d5ff2b70590b1c04c313fd" kind="function"><name>MIFARE_SetUid</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a2ff9002344e9ee1fa0be91d2f56e1d5c" kind="function"><name>MIFARE_UnbrickUidSector</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8b123b82f4f6dffa7a88e8b61f2806a3" kind="function"><name>PICC_IsNewCardPresent</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1abc5229168077788c4ba0c67c568f479e" kind="function"><name>PICC_ReadCardSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a9c32316768c27c643781df0d0a0bf248" kind="function"><name>MFRC522</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aef8efdbb515b419df6c0038312c4f4e3" kind="function"><name>PCD_WriteRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8f615a621af28925c38122b08ed3d03b" kind="function"><name>PCD_WriteRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a54b1e0960ffe689bb512b9ed79dcdece" kind="function"><name>PCD_ReadRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8243247e881823152bfe9295651b0056" kind="function"><name>PCD_ReadRegister</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ac54b5af1f98b9ac438e4164bce8ce927" kind="function"><name>setBitMask</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1af7304dd35540a5e47f1f34890c455286" kind="function"><name>PCD_SetRegisterBitMask</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a24112afc3d08921c21d718c74dc8ca71" kind="function"><name>PCD_ClearRegisterBitMask</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a5db7f98b9ace325a290f0d72e12bd05b" kind="function"><name>PCD_CalculateCRC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1affff6fd4010044cc4337803de579b4f0" kind="function"><name>PCD_Init</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aa3a0f87af9a7217c87de0b55592c1c60" kind="function"><name>PCD_Reset</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a984248652522e8fd580a526a7a9b27d9" kind="function"><name>PCD_AntennaOn</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a773b673bf8567d2cad97b136b9e269c9" kind="function"><name>PCD_AntennaOff</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6df2b2a81b0259de285892bc61f247fc" kind="function"><name>PCD_GetAntennaGain</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a245f57d7ea35bfb3ea818171abb18b4b" kind="function"><name>PCD_SetAntennaGain</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aabf66fe43403f40968049a2a87f0026d" kind="function"><name>PCD_PerformSelfTest</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6ae256b84102fb140f600f452f4ef231" kind="function"><name>PCD_TransceiveData</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a366fced589c1009264d5c2410c06b03e" kind="function"><name>PCD_CommunicateWithPICC</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a44dd708016d31efc20bd2dbdb1f67aaf" kind="function"><name>PICC_RequestA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1add1b450123e4670d88e0b6cb2ddca0c7" kind="function"><name>PICC_WakeupA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3a28f6484ea6b1ed85745512da6ab775" kind="function"><name>PICC_REQA_or_WUPA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a73adcb5681de77c62ac14b6347d909d2" kind="function"><name>PICC_Select</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1adbb992156ffda4bfc7847620921454f3" kind="function"><name>PICC_HaltA</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a86a252950d51b7cca3ca72f70d8cb24c" kind="function"><name>PCD_Authenticate</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a427680e47e8032e2db54eee4e551e48b" kind="function"><name>PCD_StopCrypto1</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a039f9df6672ed1c6b23678a374022959" kind="function"><name>MIFARE_Read</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a50b62d0ea4b1ab35d5275227fcbfaa5f" kind="function"><name>MIFARE_Write</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a56515c1027c5a471f56b128a1404f437" kind="function"><name>MIFARE_Decrement</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1af3a8dd85230de88fea86fa21d72ab742" kind="function"><name>MIFARE_Increment</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1aaba45a947ba5a47f11ab346a764cedaf" kind="function"><name>MIFARE_Restore</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a3b85e9b839756a4eb516195ef498ce58" kind="function"><name>MIFARE_Transfer</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1afcd5d913410ed3694fab339f311b93de" kind="function"><name>MIFARE_Ultralight_Write</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1abf16c5a992c8692c2cf4f65e6ad19a13" kind="function"><name>MIFARE_GetValue</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a1733fb64ad8fa119e3fe945d6287d059" kind="function"><name>MIFARE_SetValue</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a73c639f5869b7d6c23d8c1cc5aa2178e" kind="function"><name>PCD_MIFARE_Transceive</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a0c4d480120813209751676c76149585a" kind="function"><name>GetStatusCodeName</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a51d41355c15a2e3aebe43bffc2445212" kind="function"><name>PICC_GetType</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ae32295310fef34afe04407f307e583a9" kind="function"><name>PICC_GetTypeName</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a98d66dfc8460ae366a56d3762bcd278a" kind="function"><name>PICC_DumpToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a6a0c6040b5f66d0a37b407f11a1a531a" kind="function"><name>PICC_DumpMifareClassicToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8517bd5b6752cc42da0bb6cb0ade3e0b" kind="function"><name>PICC_DumpMifareClassicSectorToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a4ca5c68d509a9ead4d6d551e8c10bd40" kind="function"><name>PICC_DumpMifareUltralightToSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a622c5bd3b19e4093ebc774fc3a874f20" kind="function"><name>MIFARE_SetAccessBits</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1ad10ff428a8a4e48a816237093a19849a" kind="function"><name>MIFARE_OpenUidBackdoor</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a2f11484ff5d5ff2b70590b1c04c313fd" kind="function"><name>MIFARE_SetUid</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a2ff9002344e9ee1fa0be91d2f56e1d5c" kind="function"><name>MIFARE_UnbrickUidSector</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a8b123b82f4f6dffa7a88e8b61f2806a3" kind="function"><name>PICC_IsNewCardPresent</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1abc5229168077788c4ba0c67c568f479e" kind="function"><name>PICC_ReadCardSerial</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a70f8b628c510acde463803fa05452c78" kind="function"><name>MIFARE_TwoStepHelper</name></member>
+    <member refid="classmfrc522_1_1_m_f_r_c522_1a70f8b628c510acde463803fa05452c78" kind="function"><name>MIFARE_TwoStepHelper</name></member>
+  </compound>
+  <compound refid="structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key" kind="struct"><name>mfrc522::MFRC522::MIFARE_Key</name>
+    <member refid="structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key_1aa794e440258b611c8049d4f233b38bb9" kind="variable"><name>keyByte</name></member>
+  </compound>
+  <compound refid="class_mood_detection" kind="class"><name>MoodDetection</name>
+    <member refid="class_mood_detection_1a849a4095eb97f15ac2052c7818909336" kind="variable"><name>CameraID</name></member>
+    <member refid="class_mood_detection_1ae2ad3f03b2d4a8e4fc74d7b169fc5e75" kind="variable"><name>nbins</name></member>
+    <member refid="class_mood_detection_1a5e180d2d26615b1cff897977c616806e" kind="variable"><name>globals</name></member>
+    <member refid="class_mood_detection_1a90e4815a8dd94429688a412518e37b22" kind="variable"><name>masterCamera</name></member>
+    <member refid="class_mood_detection_1a1ffee781e4b8063b6701b2a40bc0e567" kind="variable"><name>faceCascade</name></member>
+    <member refid="class_mood_detection_1aff738209c4e766e20cf72b1420278fbe" kind="variable"><name>im</name></member>
+    <member refid="class_mood_detection_1a9fc473b7c23830867228fb733ab5118f" kind="variable"><name>gray</name></member>
+    <member refid="class_mood_detection_1a3934f95aed74fdbc9b8edd0de1c49451" kind="variable"><name>roi</name></member>
+    <member refid="class_mood_detection_1a7d0d3c92ebe9ff7444904f63b1f92c21" kind="variable"><name>color</name></member>
+    <member refid="class_mood_detection_1a4264212e3c1897b26a3b49eee3d939fa" kind="variable"><name>cascadePath</name></member>
+    <member refid="class_mood_detection_1a41e19a9ce79669caac090fb96c50838b" kind="variable"><name>svm</name></member>
+    <member refid="class_mood_detection_1a98484630d75e9a4e8f5caebab68e400d" kind="variable"><name>block_size</name></member>
+    <member refid="class_mood_detection_1a64f942222c3036126704c00e32cfeb41" kind="variable"><name>block_stride</name></member>
+    <member refid="class_mood_detection_1afd4e4fb4593c7fc725e3846354444cdd" kind="variable"><name>cell_size</name></member>
+    <member refid="class_mood_detection_1af29161caae5a7e918cc8c503283d8d86" kind="variable"><name>hog</name></member>
+    <member refid="class_mood_detection_1a86781968bebd5ec7365f766d852b9f35" kind="variable"><name>faces</name></member>
+    <member refid="class_mood_detection_1a7f9923e5bf44725a3b8b6d620441ac3d" kind="variable"><name>emotion</name></member>
+    <member refid="class_mood_detection_1afb9133130bb1572a0aa6bdae87ff1b34" kind="function"><name>timerEvent</name></member>
+    <member refid="class_mood_detection_1a410945568417f247ee6239a4e787dc4c" kind="function"><name>MoodDetection</name></member>
+    <member refid="class_mood_detection_1aba994443b5bd0c82346d4f546317b934" kind="function"><name>stop</name></member>
+    <member refid="class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2" kind="function"><name>Initialize</name></member>
+    <member refid="class_mood_detection_1a90d59cfc694ff31ede33ea2dd7bdf01b" kind="function"><name>setCameraId</name></member>
+    <member refid="class_mood_detection_1a94b0201f1b1bf7d3e071a61ac17309b0" kind="function"><name>setContrasts</name></member>
+    <member refid="class_mood_detection_1a0f48eaee6ef92b02b44b392d20dbb651" kind="function"><name>setShutter</name></member>
+    <member refid="class_mood_detection_1a44f66eda0c282ddc24f7d804fcf74465" kind="function"><name>checkCameraOpen</name></member>
+    <member refid="class_mood_detection_1a6ccbb7812ef82e7adefda31bbf688c6d" kind="function"><name>takePicture</name></member>
+    <member refid="class_mood_detection_1a31af342d62bf05a390849c25596b3be0" kind="function"><name>savePicture</name></member>
+  </compound>
+  <compound refid="class_mood_thread" kind="class"><name>MoodThread</name>
+    <member refid="class_mood_thread_1aa44ca697b033b67b1cffd667404e60ce" kind="variable"><name>camera</name></member>
+    <member refid="class_mood_thread_1ad521a83d1ffde5246edd2563904e4743" kind="variable"><name>moodDetection</name></member>
+    <member refid="class_mood_thread_1a08726d915a8ff3f416d68f58e6c6a2e4" kind="function"><name>MoodThread</name></member>
+    <member refid="class_mood_thread_1a59724b4a9d28c6ac2df6a55c1139bf71" kind="function"><name>stop</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_mood_thread_1a11ebe69a8234c58fdb81e499dcfb7c63" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_relay_board" kind="class"><name>RelayBoard</name>
+    <member refid="class_relay_board_1acda1026ec1a4a11016812efc2e7fe732" kind="variable"><name>m_heaterGPIOState</name></member>
+    <member refid="class_relay_board_1aff19bd04e757a2442243d9f863b435ae" kind="variable"><name>m_lightsGPIOState</name></member>
+    <member refid="class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98" kind="variable"><name>m_fanGPIOState</name></member>
+    <member refid="class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d" kind="variable"><name>m_waterPumpGPIOState</name></member>
+    <member refid="class_relay_board_1a56817d4c93db75ccb542f8ee403d8440" kind="variable"><name>m_heaterGPIO</name></member>
+    <member refid="class_relay_board_1aa781c5647863245c5ae7afbf6e185e59" kind="variable"><name>m_lightsGPIO</name></member>
+    <member refid="class_relay_board_1af541df432f4ef6b385ee2e69c466b344" kind="variable"><name>m_fanGPIO</name></member>
+    <member refid="class_relay_board_1a45807effbe5aaf2798d4f91dcf3c42d8" kind="variable"><name>m_waterPumpGPIO</name></member>
+    <member refid="class_relay_board_1ab567d2b303df89856d0e1e599aa538bc" kind="variable"><name>m_pGPIODriver</name></member>
+    <member refid="class_relay_board_1ad96963754490cea54db92cf32ccccf90" kind="function"><name>RelayBoard</name></member>
+    <member refid="class_relay_board_1af05bb34a287c76312104a427c86c658e" kind="function"><name>~RelayBoard</name></member>
+    <member refid="class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f" kind="function"><name>Initialize</name></member>
+    <member refid="class_relay_board_1a0ce37124540bae0827a1b81e28841f70" kind="function"><name>Lighting</name></member>
+    <member refid="class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98" kind="function"><name>Heating</name></member>
+    <member refid="class_relay_board_1aa14251b65f8b4872cdf95c56951f0959" kind="function"><name>Airflow</name></member>
+    <member refid="class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f" kind="function"><name>Watering</name></member>
+    <member refid="class_relay_board_1a2339920ca78f22d9bbab349056ca261a" kind="function"><name>Turn_Relays_Off</name></member>
+    <member refid="class_relay_board_1a8d4fba9b90f8a65a0f02ad9d5a35c148" kind="function"><name>Close_Relay_Board</name></member>
+    <member refid="class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65" kind="function"><name>GetWateringState</name></member>
+    <member refid="class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8" kind="function"><name>GetAirflowState</name></member>
+    <member refid="class_relay_board_1a4725ac8db57d591dbe338f646cdda254" kind="function"><name>GetHeatingState</name></member>
+    <member refid="class_relay_board_1a32270d45de9d23698cf85fd3224f88c6" kind="function"><name>GetLightingState</name></member>
+  </compound>
+  <compound refid="class_r_f_i_d" kind="class"><name>RFID</name>
+    <member refid="class_r_f_i_d_1a6165c51c600a649934e3fa2cf3977353" kind="variable"><name>mfrcptr</name></member>
+    <member refid="class_r_f_i_d_1ac92681bd7f5964c5be152b9464ade677" kind="variable"><name>spi</name></member>
+    <member refid="class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed" kind="function"><name>RFID</name></member>
+    <member refid="class_r_f_i_d_1a55ae95ac576404d49352dfcbb47556ad" kind="function"><name>Initialize</name></member>
+    <member refid="class_r_f_i_d_1af938284435e7988901f9b0ff77ef8aa2" kind="function"><name>setMfrc</name></member>
+    <member refid="class_r_f_i_d_1a8a7a0e6133646a29c2102cc1b1633650" kind="function"><name>start</name></member>
+  </compound>
+  <compound refid="class_r_f_i_d_thread" kind="class"><name>RFIDThread</name>
+    <member refid="class_r_f_i_d_thread_1a591f7e463de5850c3ed2cc0617ce1d78" kind="function"><name>RFIDThread</name></member>
+    <member refid="class_r_f_i_d_thread_1ae23e0326ccb037b194d2ca6208cb6e13" kind="function"><name>stop</name></member>
+    <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" kind="function"><name>start</name></member>
+    <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" kind="function"><name>join</name></member>
+    <member refid="class_r_f_i_d_thread_1a87a340c87736f22b96cc0fbaff2e67e4" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_cpp_timer_callback_1_1_runnable" kind="class"><name>CppTimerCallback::Runnable</name>
+    <member refid="class_cpp_timer_callback_1_1_runnable_1af8d11a3b580e76431151e76ac1886e6e" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="class_servo_motor" kind="class"><name>ServoMotor</name>
+    <member refid="class_servo_motor_1a12ed04387437936597c469153823dd81" kind="variable"><name>_pin</name></member>
+    <member refid="class_servo_motor_1a0486fec9c90853e87abf2f5f577966f4" kind="variable"><name>_angle</name></member>
+    <member refid="class_servo_motor_1a72613ce89f6ab8b62c45ce4512d0488b" kind="function"><name>ServoMotor</name></member>
+    <member refid="class_servo_motor_1a13ae02109c52def30f2ab15a8114436c" kind="function"><name>~ServoMotor</name></member>
+    <member refid="class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d" kind="function"><name>write</name></member>
+  </compound>
+  <compound refid="classspidevpp_1_1_spi" kind="class"><name>spidevpp::Spi</name>
+    <member refid="classspidevpp_1_1_spi_1a2a716d322942326352423d4bacdfac2b" kind="variable"><name>mDevice</name></member>
+    <member refid="classspidevpp_1_1_spi_1a0fca479d49be45eaa4ea445dd7dc36f0" kind="variable"><name>mFd</name></member>
+    <member refid="classspidevpp_1_1_spi_1a80e0cb4e69d78d94d733eba154e52a52" kind="variable"><name>mBitsPerWord</name></member>
+    <member refid="classspidevpp_1_1_spi_1a25d29262a8ea34f6b550e88a91e8178b" kind="variable"><name>mDelay</name></member>
+    <member refid="classspidevpp_1_1_spi_1aa25c1b2e14581127669f791ff9298552" kind="variable"><name>mMode</name></member>
+    <member refid="classspidevpp_1_1_spi_1a24a27b5ae80dbb7d62b6612314baec32" kind="variable"><name>mSpeed</name></member>
+    <member refid="classspidevpp_1_1_spi_1a1aeafa9a432b1132b1e741b00a2a9fbf" kind="function"><name>Spi</name></member>
+    <member refid="classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7" kind="function"><name>setBitsPerWord</name></member>
+    <member refid="classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2" kind="function"><name>getBitsPerWord</name></member>
+    <member refid="classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb" kind="function"><name>setSpeed</name></member>
+    <member refid="classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207" kind="function"><name>getSpeed</name></member>
+    <member refid="classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1" kind="function"><name>setMode</name></member>
+    <member refid="classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980" kind="function"><name>getMode</name></member>
+    <member refid="classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849" kind="function"><name>setDelay</name></member>
+    <member refid="classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e" kind="function"><name>getDelay</name></member>
+    <member refid="classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4" kind="function"><name>write</name></member>
+    <member refid="classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962" kind="function"><name>read</name></member>
+    <member refid="classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8" kind="function"><name>writeRead</name></member>
+    <member refid="classspidevpp_1_1_spi_1a1979af4d7e1c36aefc7d5b011bcc2968" kind="function"><name>writeRead</name></member>
+    <member refid="classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="class_spidev" kind="class"><name>Spidev</name>
+    <member refid="class_spidev_1a2a5b2fcdd52b384d28381940b95aa553" kind="variable"><name>mSpi</name></member>
+    <member refid="class_spidev_1a31a4acfa97d5d0f2a2bd41c019a74323" kind="function"><name>Spidev</name></member>
+    <member refid="class_spidev_1a40c147da19e908a2e8e76b8b586b1170" kind="function"><name>write</name></member>
+    <member refid="class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b" kind="function"><name>read</name></member>
+    <member refid="class_spidev_1a38c616bb4143f726ce083c947d7a6956" kind="function"><name>writeRead</name></member>
+    <member refid="class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1" kind="function"><name>writeRead</name></member>
+  </compound>
+  <compound refid="class_sys_gpio" kind="class"><name>SysGpio</name>
+    <member refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" kind="variable"><name>mGpio</name></member>
+    <member refid="class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309" kind="function"><name>SysGpio</name></member>
+    <member refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" kind="function"><name>setValue</name></member>
+    <member refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" kind="function"><name>getValue</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kind="enum"><name>Value</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" kind="enumvalue"><name>l</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" kind="enumvalue"><name>h</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kind="enum"><name>Value</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a53cced8d281a1a0ace3cb6594daaa4f7" kind="enumvalue"><name>low</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a8d966b2253a917086c8604959e152243" kind="enumvalue"><name>high</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2db95e8e1a9267b7a1188556b2013b33" kind="enumvalue"><name>l</name></member>
+    <member refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9a2510c39011c5be704182423e3a695e91" kind="enumvalue"><name>h</name></member>
+  </compound>
+  <compound refid="class_threads" kind="class"><name>Threads</name>
+    <member refid="class_threads_1ab556056caf816e26322651f139eb48a2" kind="variable"><name>intruderThread</name></member>
+    <member refid="class_threads_1a98cc1f4bb6e9e01ab87c86471fa840a3" kind="variable"><name>moodThread</name></member>
+    <member refid="class_threads_1a5ecd94bd7d9420d676a75a4974f32e11" kind="function"><name>setIntruderThread</name></member>
+    <member refid="class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce" kind="function"><name>getIntruderThread</name></member>
+  </compound>
+  <compound refid="structmfrc522_1_1_m_f_r_c522_1_1_uid" kind="struct"><name>mfrc522::MFRC522::Uid</name>
+    <member refid="structmfrc522_1_1_m_f_r_c522_1_1_uid_1a3d5653ea12fd20b8c755b34cd0ea74de" kind="variable"><name>size</name></member>
+    <member refid="structmfrc522_1_1_m_f_r_c522_1_1_uid_1a1e24dca2d0702fbb6352a41cb598a0a9" kind="variable"><name>uidByte</name></member>
+    <member refid="structmfrc522_1_1_m_f_r_c522_1_1_uid_1a765eeb2bc53a0e2a00d5842916241745" kind="variable"><name>sak</name></member>
+  </compound>
+  <compound refid="namespacecv" kind="namespace"><name>cv</name>
+  </compound>
+  <compound refid="namespacemfrc522" kind="namespace"><name>mfrc522</name>
+    <member refid="namespacemfrc522_1a6e204398594060a281d6f9157a612549" kind="typedef"><name>word</name></member>
+    <member refid="namespacemfrc522_1a749840d7381e94883d25086e7fc02a5c" kind="variable"><name>MFRC522_firmware_referenceV1_0</name></member>
+    <member refid="namespacemfrc522_1aaca23097cb085bc7fb1336ced2e0f592" kind="variable"><name>MFRC522_firmware_referenceV2_0</name></member>
+  </compound>
+  <compound refid="namespacespidevpp" kind="namespace"><name>spidevpp</name>
+    <member refid="namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="namespacespidevpp_1_1_0d9" kind="namespace"><name>spidevpp::@9</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_c_o_d_e___o_f___c_o_n_d_u_c_t_8md" kind="file"><name>CODE_OF_CONDUCT.md</name>
+  </compound>
+  <compound refid="hardware_2_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="src_2dependencies_2spidevpp_2_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_clap_detection_8cpp" kind="file"><name>ClapDetection.cpp</name>
+  </compound>
+  <compound refid="_clap_detection_8h" kind="file"><name>ClapDetection.h</name>
+  </compound>
+  <compound refid="_controller_8cpp" kind="file"><name>Controller.cpp</name>
+  </compound>
+  <compound refid="_controller_8h" kind="file"><name>Controller.h</name>
+  </compound>
+  <compound refid="dependencies_2mfrc522_2igpio_8h" kind="file"><name>igpio.h</name>
+  </compound>
+  <compound refid="peripherals_2bcm2835_2igpio_8h" kind="file"><name>igpio.h</name>
+  </compound>
+  <compound refid="dependencies_2mfrc522_2ispi_8h" kind="file"><name>ispi.h</name>
+  </compound>
+  <compound refid="peripherals_2bcm2835_2ispi_8h" kind="file"><name>ispi.h</name>
+  </compound>
+  <compound refid="mfrc522_8cc" kind="file"><name>mfrc522.cc</name>
+  </compound>
+  <compound refid="dependencies_2mfrc522_2mfrc522_8h" kind="file"><name>mfrc522.h</name>
+  </compound>
+  <compound refid="peripherals_2mfrc522_8h" kind="file"><name>MFRC522.h</name>
+  </compound>
+  <compound refid="main_8cc" kind="file"><name>main.cc</name>
+    <member refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="gpio_8cc" kind="file"><name>gpio.cc</name>
+  </compound>
+  <compound refid="gpio_8h" kind="file"><name>gpio.h</name>
+  </compound>
+  <compound refid="spi_8cc" kind="file"><name>spi.cc</name>
+  </compound>
+  <compound refid="spi_8h" kind="file"><name>spi.h</name>
+  </compound>
+  <compound refid="_dataset_creator_8cpp" kind="file"><name>DatasetCreator.cpp</name>
+  </compound>
+  <compound refid="_dataset_creator_8h" kind="file"><name>DatasetCreator.h</name>
+  </compound>
+  <compound refid="_dataset_trainer_8cpp" kind="file"><name>DatasetTrainer.cpp</name>
+  </compound>
+  <compound refid="_dataset_trainer_8h" kind="file"><name>DatasetTrainer.h</name>
+  </compound>
+  <compound refid="_intruder_detection_8cpp" kind="file"><name>IntruderDetection.cpp</name>
+  </compound>
+  <compound refid="_intruder_detection_8h" kind="file"><name>IntruderDetection.h</name>
+  </compound>
+  <compound refid="_intruder_mood_detection_8cpp" kind="file"><name>IntruderMoodDetection.cpp</name>
+  </compound>
+  <compound refid="_intruder_mood_detection_8h" kind="file"><name>IntruderMoodDetection.h</name>
+  </compound>
+  <compound refid="src_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="src_2utils_2_event_test_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="src_2utils_2_event_test_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test_2main_8cpp" kind="file"><name>main.cpp</name>
+  </compound>
+  <compound refid="_mood_detection_8cpp" kind="file"><name>MoodDetection.cpp</name>
+  </compound>
+  <compound refid="_mood_detection_8h" kind="file"><name>MoodDetection.h</name>
+  </compound>
+  <compound refid="bcm2835__gpio__impl_8h" kind="file"><name>bcm2835_gpio_impl.h</name>
+  </compound>
+  <compound refid="bcm2835__spi__impl_8h" kind="file"><name>bcm2835_spi_impl.h</name>
+  </compound>
+  <compound refid="_camera_8cpp" kind="file"><name>Camera.cpp</name>
+  </compound>
+  <compound refid="_camera_8h" kind="file"><name>Camera.h</name>
+  </compound>
+  <compound refid="_g_p_i_o_driver_8cpp" kind="file"><name>GPIODriver.cpp</name>
+    <member refid="_g_p_i_o_driver_8cpp_1ac2bbd6d630a06a980d9a92ddb9a49928" kind="define"><name>IN</name></member>
+    <member refid="_g_p_i_o_driver_8cpp_1aec78e7a9e90a406a56f859ee456e8eae" kind="define"><name>OUT</name></member>
+    <member refid="_g_p_i_o_driver_8cpp_1ab811d8c6ff3a505312d3276590444289" kind="define"><name>LOW</name></member>
+    <member refid="_g_p_i_o_driver_8cpp_1a5bb885982ff66a2e0a0a45a8ee9c35e2" kind="define"><name>HIGH</name></member>
+    <member refid="_g_p_i_o_driver_8cpp_1a437e2826e590435de33777cdab13faef" kind="define"><name>GPIO_STRING_LENGTH</name></member>
+    <member refid="_g_p_i_o_driver_8cpp_1ad0ca8f10a33dc934babb22393b1eee16" kind="define"><name>DIRECTION_STRING_MAX_LENGTH</name></member>
+    <member refid="_g_p_i_o_driver_8cpp_1aad53eaa9f18598639a489d0a5c05cd02" kind="define"><name>VALUE_STRING_MAX_LENGTH</name></member>
+  </compound>
+  <compound refid="_g_p_i_o_driver_8h" kind="file"><name>GPIODriver.h</name>
+  </compound>
+  <compound refid="_i2_c_driver_8cpp" kind="file"><name>I2CDriver.cpp</name>
+    <member refid="_i2_c_driver_8cpp_1a2694a39dfd1fa087ca6f9f391c91dae7" kind="define"><name>CLOCKID</name></member>
+  </compound>
+  <compound refid="_i2_c_driver_8h" kind="file"><name>I2CDriver.h</name>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f" kind="enum"><name>I2C_Return</name></member>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faeceba296bdda2b90e8835c431fe7a72a" kind="enumvalue"><name>I2C_OK</name></member>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faa978b8c99ba81b70dcb4a660ec190c8b" kind="enumvalue"><name>I2C_IOCTL_FAILED</name></member>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa43b4aeb860553fe1c22ab94cb6b4a446" kind="enumvalue"><name>I2C_WRITE_FAILED</name></member>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fac86dfc8232f86c65e33a1b9491763a21" kind="enumvalue"><name>I2C_READ_FAILED</name></member>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa63b31d0c504bdae545fb5da13d59c986" kind="enumvalue"><name>I2C_CRC_FAILED</name></member>
+    <member refid="_i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa2fa4d728abcc354ab37d4ff073289900" kind="enumvalue"><name>I2C_FAIL</name></member>
+  </compound>
+  <compound refid="_i2_c_sensor_8h" kind="file"><name>I2CSensor.h</name>
+  </compound>
+  <compound refid="_l_e_d_controller_8cpp" kind="file"><name>LEDController.cpp</name>
+  </compound>
+  <compound refid="_l_e_d_controller_8h" kind="file"><name>LEDController.h</name>
+  </compound>
+  <compound refid="_m_f_r_c522_8cpp" kind="file"><name>MFRC522.cpp</name>
+  </compound>
+  <compound refid="_relay_board_8cpp" kind="file"><name>RelayBoard.cpp</name>
+  </compound>
+  <compound refid="_relay_board_8h" kind="file"><name>RelayBoard.h</name>
+  </compound>
+  <compound refid="_r_f_i_d_8cpp" kind="file"><name>RFID.cpp</name>
+  </compound>
+  <compound refid="_r_f_i_d_8h" kind="file"><name>RFID.h</name>
+  </compound>
+  <compound refid="_servo_motor_8cpp" kind="file"><name>ServoMotor.cpp</name>
+  </compound>
+  <compound refid="_servo_motor_8h" kind="file"><name>ServoMotor.h</name>
+  </compound>
+  <compound refid="spidev__impl_8h" kind="file"><name>spidev_impl.h</name>
+  </compound>
+  <compound refid="sys__gpio__impl_8h" kind="file"><name>sys_gpio_impl.h</name>
+  </compound>
+  <compound refid="_audio_record_thread_8cpp" kind="file"><name>AudioRecordThread.cpp</name>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_audio_record_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_audio_record_thread_8h" kind="file"><name>AudioRecordThread.h</name>
+  </compound>
+  <compound refid="_clap_thread_8cpp" kind="file"><name>ClapThread.cpp</name>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_clap_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_clap_thread_8h" kind="file"><name>ClapThread.h</name>
+  </compound>
+  <compound refid="_controller_thread_8cpp" kind="file"><name>ControllerThread.cpp</name>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_controller_thread_8cpp_1a2f45113638a0b749a8a205d2cd7fb42b" kind="variable"><name>running</name></member>
+    <member refid="_controller_thread_8cpp_1a844160e16f1a3e514df9ce65683e17bd" kind="function"><name>sigHandler</name></member>
+    <member refid="_controller_thread_8cpp_1a20a45737018ec41ab19cb4f5164b26ac" kind="function"><name>setHUPHandler</name></member>
+  </compound>
+  <compound refid="_controller_thread_8h" kind="file"><name>ControllerThread.h</name>
+  </compound>
+  <compound refid="_cpp_thread_8h" kind="file"><name>CppThread.h</name>
+  </compound>
+  <compound refid="_doors_thread_8cpp" kind="file"><name>DoorsThread.cpp</name>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_doors_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_doors_thread_8h" kind="file"><name>DoorsThread.h</name>
+  </compound>
+  <compound refid="_intruder_thread_8cpp" kind="file"><name>IntruderThread.cpp</name>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_intruder_thread_8h" kind="file"><name>IntruderThread.h</name>
+  </compound>
+  <compound refid="_intruder_mood_thread_8cpp" kind="file"><name>IntruderMoodThread.cpp</name>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_intruder_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_intruder_mood_thread_8h" kind="file"><name>IntruderMoodThread.h</name>
+  </compound>
+  <compound refid="_mood_thread_8cpp" kind="file"><name>MoodThread.cpp</name>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_mood_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_mood_thread_8h" kind="file"><name>MoodThread.h</name>
+  </compound>
+  <compound refid="_r_f_i_d_thread_8cpp" kind="file"><name>RFIDThread.cpp</name>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115" kind="enum"><name>EVENT_OP_CODES</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+    <member refid="_r_f_i_d_thread_8cpp_1a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e" kind="enumvalue"><name>EXIT_APPLICATION</name></member>
+  </compound>
+  <compound refid="_r_f_i_d_thread_8h" kind="file"><name>RFIDThread.h</name>
+  </compound>
+  <compound refid="_circular_queue_8h" kind="file"><name>CircularQueue.h</name>
+  </compound>
+  <compound refid="_cpp_timer_callback_8h" kind="file"><name>CppTimerCallback.h</name>
+  </compound>
+  <compound refid="_event_handler_8cpp" kind="file"><name>EventHandler.cpp</name>
+  </compound>
+  <compound refid="_event_test_2_event_handler_8cpp" kind="file"><name>EventHandler.cpp</name>
+  </compound>
+  <compound refid="_event_handler_8h" kind="file"><name>EventHandler.h</name>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kind="enum"><name>Event</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6" kind="enumvalue"><name>test</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62" kind="enumvalue"><name>DatasetCreatorComplete</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd" kind="enumvalue"><name>DatasetTrainerComplete</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35" kind="enumvalue"><name>IntruderThreadKill</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120" kind="enumvalue"><name>IntruderMoodThreadKill</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b" kind="enumvalue"><name>RfidAuthenticated</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850" kind="enumvalue"><name>OpenGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf" kind="enumvalue"><name>OpenedGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8" kind="enumvalue"><name>CloseGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de" kind="enumvalue"><name>ClosedGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329" kind="enumvalue"><name>OpenMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881" kind="enumvalue"><name>OpenedMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93" kind="enumvalue"><name>CloseMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3" kind="enumvalue"><name>ClosedMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6" kind="enumvalue"><name>test</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62" kind="enumvalue"><name>DatasetCreatorComplete</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd" kind="enumvalue"><name>DatasetTrainerComplete</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35" kind="enumvalue"><name>IntruderThreadKill</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120" kind="enumvalue"><name>IntruderMoodThreadKill</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b" kind="enumvalue"><name>RfidAuthenticated</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850" kind="enumvalue"><name>OpenGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf" kind="enumvalue"><name>OpenedGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8" kind="enumvalue"><name>CloseGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de" kind="enumvalue"><name>ClosedGarageDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329" kind="enumvalue"><name>OpenMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881" kind="enumvalue"><name>OpenedMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93" kind="enumvalue"><name>CloseMainDoor</name></member>
+    <member refid="_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3" kind="enumvalue"><name>ClosedMainDoor</name></member>
+  </compound>
+  <compound refid="_event_test_2_event_handler_8h" kind="file"><name>EventHandler.h</name>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3" kind="enum"><name>Event</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6" kind="enumvalue"><name>test</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62" kind="enumvalue"><name>DatasetCreatorComplete</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd" kind="enumvalue"><name>DatasetTrainerComplete</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35" kind="enumvalue"><name>IntruderThreadKill</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120" kind="enumvalue"><name>IntruderMoodThreadKill</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b" kind="enumvalue"><name>RfidAuthenticated</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850" kind="enumvalue"><name>OpenGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf" kind="enumvalue"><name>OpenedGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8" kind="enumvalue"><name>CloseGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de" kind="enumvalue"><name>ClosedGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329" kind="enumvalue"><name>OpenMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881" kind="enumvalue"><name>OpenedMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93" kind="enumvalue"><name>CloseMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3" kind="enumvalue"><name>ClosedMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6" kind="enumvalue"><name>test</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62" kind="enumvalue"><name>DatasetCreatorComplete</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd" kind="enumvalue"><name>DatasetTrainerComplete</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a56aea57a0991217619e4e2fc61e97c35" kind="enumvalue"><name>IntruderThreadKill</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a891ea580a9d494a80438c8569c4fe120" kind="enumvalue"><name>IntruderMoodThreadKill</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b" kind="enumvalue"><name>RfidAuthenticated</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a1e0c08bd3d323fe4cb2cfd68df5e7850" kind="enumvalue"><name>OpenGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0a2f48b04430b73f0e3b636d7e5fc4bf" kind="enumvalue"><name>OpenedGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3add24450a81c0469b300506a21d205ad8" kind="enumvalue"><name>CloseGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a26147268069dbde940040db82e2408de" kind="enumvalue"><name>ClosedGarageDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a0668cafc7caff317d69004652e150329" kind="enumvalue"><name>OpenMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3ac939299f9afd527ed4ac744da1ca3881" kind="enumvalue"><name>OpenedMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3a6468f12f4f12ceb8389afea4c1983a93" kind="enumvalue"><name>CloseMainDoor</name></member>
+    <member refid="_event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3aeb88ca8128a500ee2fd7bc5e369c70b3" kind="enumvalue"><name>ClosedMainDoor</name></member>
+  </compound>
+  <compound refid="_events_8h" kind="file"><name>Events.h</name>
+  </compound>
+  <compound refid="_globals_8h" kind="file"><name>Globals.h</name>
+  </compound>
+  <compound refid="_threads_8h" kind="file"><name>Threads.h</name>
+  </compound>
+  <compound refid="_utility_8h" kind="file"><name>Utility.h</name>
+  </compound>
+  <compound refid="md__c_o_d_e__o_f__c_o_n_d_u_c_t" kind="page"><name>md_CODE_OF_CONDUCT</name>
+  </compound>
+  <compound refid="md_hardware__r_e_a_d_m_e" kind="page"><name>md_hardware_README</name>
+  </compound>
+  <compound refid="md_src_dependencies_spidevpp__r_e_a_d_m_e" kind="page"><name>md_src_dependencies_spidevpp_README</name>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="dir_1d9436301166ba06e970b1b5ea20a1af" kind="dir"><name>src/dependencies/spidevpp/apps</name>
+  </compound>
+  <compound refid="dir_caead8f2f932779b81c885c4b6cdb410" kind="dir"><name>src/peripherals/bcm2835</name>
+  </compound>
+  <compound refid="dir_6f0212c19bb1afa0d3827894a1d260c9" kind="dir"><name>src/clap-detection</name>
+  </compound>
+  <compound refid="dir_fdf2be5c872b4412d2592845a31da987" kind="dir"><name>src/thread/clap-detection</name>
+  </compound>
+  <compound refid="dir_41ef5d8a90b9cc03a02949a5c062e6f0" kind="dir"><name>src/controller</name>
+  </compound>
+  <compound refid="dir_2676e00fd6700c28f8e3892c4c165cb2" kind="dir"><name>src/dependencies</name>
+  </compound>
+  <compound refid="dir_d28ec03fa6655750732c8b63ba718a4b" kind="dir"><name>src/thread/doors</name>
+  </compound>
+  <compound refid="dir_cadbc4a4244c254fcf188f6541d24429" kind="dir"><name>src/utils/EventTest</name>
+  </compound>
+  <compound refid="dir_f4316de2dfb04db90651672103de31d6" kind="dir"><name>hardware</name>
+  </compound>
+  <compound refid="dir_84c01faae84cc359912680153beabf6c" kind="dir"><name>src/intruder-detection</name>
+  </compound>
+  <compound refid="dir_421ad06ce6e97cdf9ef9a8500b09092f" kind="dir"><name>src/thread/intruder-detection</name>
+  </compound>
+  <compound refid="dir_6bdc88b2989357d4fa7c175bb154cd2d" kind="dir"><name>src/intruder-mood-detection</name>
+  </compound>
+  <compound refid="dir_bd8432c283f20be3a03e46f628658360" kind="dir"><name>src/thread/intruder-mood-detection</name>
+  </compound>
+  <compound refid="dir_0d8d94cdeec3d074a9579998e577f841" kind="dir"><name>src/dependencies/spidevpp/libs</name>
+  </compound>
+  <compound refid="dir_fa5b4c88f94ff4e53235730f59c4127c" kind="dir"><name>src/dependencies/spidevpp/apps/loopback_example_app</name>
+  </compound>
+  <compound refid="dir_fdae27ba2f4a82a2d3a85d3ed1014509" kind="dir"><name>src/dependencies/mfrc522</name>
+  </compound>
+  <compound refid="dir_8eb9addc559afccb814fe5975f6c2253" kind="dir"><name>src/mood-detection</name>
+  </compound>
+  <compound refid="dir_e923e1c0ad1632d573a60428a9bafaeb" kind="dir"><name>src/thread/mood-detection</name>
+  </compound>
+  <compound refid="dir_fbf0f2406da70b7242e9fe36900a795c" kind="dir"><name>src/peripherals</name>
+  </compound>
+  <compound refid="dir_f95f23c60d883e548890bd04b5e49194" kind="dir"><name>src/thread/rfid</name>
+  </compound>
+  <compound refid="dir_816bb509503637d460c7583c6da44985" kind="dir"><name>src/peripherals/spi</name>
+  </compound>
+  <compound refid="dir_e451559dbced65c7b1cf71f0ff58086b" kind="dir"><name>src/dependencies/spidevpp</name>
+  </compound>
+  <compound refid="dir_c1e389959dffe7e0e9ddc72ba20f11c5" kind="dir"><name>src/dependencies/spidevpp/libs/spidevpp</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+  <compound refid="dir_bfedb72b9d87795234454f6223b9ab1e" kind="dir"><name>src/thread</name>
+  </compound>
+  <compound refid="dir_313caf1132e152dd9b58bea13a4052ca" kind="dir"><name>src/utils</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

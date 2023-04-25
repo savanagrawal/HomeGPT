@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_i2_c_sensor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>I2CSensor</compoundname>
+    <includes refid="_i2_c_sensor_8h" local="no">I2CSensor.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_i2_c_sensor_1a0fb4755ddff3fe2cf5a9651d9d1fe5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int I2CSensor::Initialize</definition>
+        <argsstring>(I2CDriver &amp;i2c)=0</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>I2CSensor::Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_i2_c_driver" kindref="compound">I2CDriver</ref> &amp;</type>
+          <declname>i2c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize sensor Assign I2C Driver Open file descriptor Initial write to sensor to set it up using appropriate driver </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CSensor.h" line="31" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_sensor_1a0622266d335944782d2bfa6352f01095" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int I2CSensor::Reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>Reset</name>
+        <qualifiedname>I2CSensor::Reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the sensor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CSensor.h" line="37" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_i2_c_sensor_1acee1633439e97bae412441ac085fabba" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int I2CSensor::Close_Device</definition>
+        <argsstring>()=0</argsstring>
+        <name>Close_Device</name>
+        <qualifiedname>I2CSensor::Close_Device</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Read Data from the sensor and Reset Sensor Close File Descriptor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/I2CSensor.h" line="50" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Generic Sensor Class which implements function for peripherial. </para>
+    </detaileddescription>
+    <location file="src/peripherals/I2CSensor.h" line="22" column="1" bodyfile="src/peripherals/I2CSensor.h" bodystart="22" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_i2_c_sensor_1acee1633439e97bae412441ac085fabba" prot="public" virt="pure-virtual"><scope>I2CSensor</scope><name>Close_Device</name></member>
+      <member refid="class_i2_c_sensor_1a0fb4755ddff3fe2cf5a9651d9d1fe5cd" prot="public" virt="pure-virtual"><scope>I2CSensor</scope><name>Initialize</name></member>
+      <member refid="class_i2_c_sensor_1a0622266d335944782d2bfa6352f01095" prot="public" virt="pure-virtual"><scope>I2CSensor</scope><name>Reset</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

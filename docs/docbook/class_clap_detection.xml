@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_clap_detection" xml:lang="en-US">
+<title>ClapDetection Class Reference</title>
+<indexterm><primary>ClapDetection</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ClapDetection.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_clap_detection_1aa18e197850922b6e636e0fdf76346204">ClapDetection</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_clap_detection_1a93c7a6332be7f0b126135a9319daa745">Initialize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_clap_detection_1a905ea0c10c5b8ce07c8cdda94e37535a">openStream</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_clap_detection_1a441f8b04980a0e2e7b20e83a6748ec8a">closeStream</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_clap_detection_1a800366c00fe876aa905a59a072436957">start</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_clap_detection_1a14d7a4329f238978b15abc40f6066340">stop</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_clap_detection_1a6505beb6c7931e5508b0b72d9365a387">record</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15">detectClap</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc">reverse_bits</link> (int num, int bit_length)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa">fft</link> (std::vector&lt; std::complex&lt; double &gt; &gt; &amp;a, bool inverse)</para>
+</listitem>
+            <listitem><para>static std::vector&lt; double &gt; <link linkend="_class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc">convolve</link> (const std::vector&lt; double &gt; &amp;a, const std::vector&lt; double &gt; &amp;b)</para>
+</listitem>
+            <listitem><para>static std::vector&lt; double &gt; <link linkend="_class_clap_detection_1a955c7cf2960391a7af5309db688356e6">load_audio_file</link> (const std::string &amp;filename)</para>
+</listitem>
+            <listitem><para>static double <link linkend="_class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf">percentage_above_threshold</link> (const std::vector&lt; double &gt; &amp;a, double threshold)</para>
+</listitem>
+            <listitem><para>static double <link linkend="_class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4">find_per</link> (const std::string &amp;within_file, const std::string &amp;find_file)</para>
+</listitem>
+            <listitem><para>static double <link linkend="_class_clap_detection_1aa9f00a28382879aaba458015d3e6acce">find_per_data</link> (const std::vector&lt; double &gt; &amp;within_data, const std::vector&lt; double &gt; &amp;y_find)</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da">result</link> (double per, double check)</para>
+</listitem>
+            <listitem><para>static int <link linkend="_class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8">paCallback</link> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_clap_detection_1aa18e197850922b6e636e0fdf76346204"/><section>
+    <title>ClapDetection()</title>
+<indexterm><primary>ClapDetection</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>ClapDetection</secondary></indexterm>
+<para><computeroutput>ClapDetection::ClapDetection ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_clap_detection_1a441f8b04980a0e2e7b20e83a6748ec8a"/><section>
+    <title>closeStream()</title>
+<indexterm><primary>closeStream</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>closeStream</secondary></indexterm>
+<para><computeroutput>void ClapDetection::closeStream ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a441f8b04980a0e2e7b20e83a6748ec8a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a71206899c9fbc9e7687d3305beeb15cc"/><section>
+    <title>convolve()</title>
+<indexterm><primary>convolve</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>convolve</secondary></indexterm>
+<para><computeroutput>static std::vector&lt; double &gt; ClapDetection::convolve (const std::vector&lt; double &gt; &amp; a, const std::vector&lt; double &gt; &amp; b)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a71206899c9fbc9e7687d3305beeb15cc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a71206899c9fbc9e7687d3305beeb15cc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a94762cfcae59ebbdea790fef53c9bc15"/><section>
+    <title>detectClap()</title>
+<indexterm><primary>detectClap</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>detectClap</secondary></indexterm>
+<para><computeroutput>bool ClapDetection::detectClap ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a94762cfcae59ebbdea790fef53c9bc15_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a457a526ff1d5c5d9cef68b62f4f6a0aa"/><section>
+    <title>fft()</title>
+<indexterm><primary>fft</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>fft</secondary></indexterm>
+<para><computeroutput>static void ClapDetection::fft (std::vector&lt; std::complex&lt; double &gt; &gt; &amp; a, bool inverse)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a457a526ff1d5c5d9cef68b62f4f6a0aa_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a457a526ff1d5c5d9cef68b62f4f6a0aa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a909b33bb375c84ab4b348eb9da0a1cf4"/><section>
+    <title>find_per()</title>
+<indexterm><primary>find_per</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>find_per</secondary></indexterm>
+<para><computeroutput>static double ClapDetection::find_per (const std::string &amp; within_file, const std::string &amp; find_file)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a909b33bb375c84ab4b348eb9da0a1cf4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1aa9f00a28382879aaba458015d3e6acce"/><section>
+    <title>find_per_data()</title>
+<indexterm><primary>find_per_data</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>find_per_data</secondary></indexterm>
+<para><computeroutput>static double ClapDetection::find_per_data (const std::vector&lt; double &gt; &amp; within_data, const std::vector&lt; double &gt; &amp; y_find)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_aa9f00a28382879aaba458015d3e6acce_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_aa9f00a28382879aaba458015d3e6acce_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a93c7a6332be7f0b126135a9319daa745"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void ClapDetection::Initialize ( )</computeroutput></para>
+<para>Initializes our Clap Detector.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry></entry>
+<entry></entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                return </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a93c7a6332be7f0b126135a9319daa745_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a955c7cf2960391a7af5309db688356e6"/><section>
+    <title>load_audio_file()</title>
+<indexterm><primary>load_audio_file</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>load_audio_file</secondary></indexterm>
+<para><computeroutput>static std::vector&lt; double &gt; ClapDetection::load_audio_file (const std::string &amp; filename)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a955c7cf2960391a7af5309db688356e6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a905ea0c10c5b8ce07c8cdda94e37535a"/><section>
+    <title>openStream()</title>
+<indexterm><primary>openStream</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>openStream</secondary></indexterm>
+<para><computeroutput>void ClapDetection::openStream ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a905ea0c10c5b8ce07c8cdda94e37535a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a2c26276e3b68b25282e33d809788c6c8"/><section>
+    <title>paCallback()</title>
+<indexterm><primary>paCallback</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>paCallback</secondary></indexterm>
+<para><computeroutput>static int ClapDetection::paCallback (const void * inputBuffer, void * outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo * timeInfo, PaStreamCallbackFlags statusFlags, void * userData)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a2c26276e3b68b25282e33d809788c6c8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a4a303e4a95761d63c8348838c6c580bf"/><section>
+    <title>percentage_above_threshold()</title>
+<indexterm><primary>percentage_above_threshold</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>percentage_above_threshold</secondary></indexterm>
+<para><computeroutput>static double ClapDetection::percentage_above_threshold (const std::vector&lt; double &gt; &amp; a, double threshold)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a4a303e4a95761d63c8348838c6c580bf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a6505beb6c7931e5508b0b72d9365a387"/><section>
+    <title>record()</title>
+<indexterm><primary>record</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>record</secondary></indexterm>
+<para><computeroutput>void ClapDetection::record ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_clap_detection_1a3d70aed7d269a7aa9fdd099a7b2334da"/><section>
+    <title>result()</title>
+<indexterm><primary>result</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>result</secondary></indexterm>
+<para><computeroutput>static bool ClapDetection::result (double per, double check)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a3d70aed7d269a7aa9fdd099a7b2334da_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1ae3b186d18ddec06fc0d88821fe78dccc"/><section>
+    <title>reverse_bits()</title>
+<indexterm><primary>reverse_bits</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>reverse_bits</secondary></indexterm>
+<para><computeroutput>static int ClapDetection::reverse_bits (int num, int bit_length)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_ae3b186d18ddec06fc0d88821fe78dccc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_ae3b186d18ddec06fc0d88821fe78dccc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a800366c00fe876aa905a59a072436957"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void ClapDetection::start ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a800366c00fe876aa905a59a072436957_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_clap_detection_1a14d7a4329f238978b15abc40f6066340"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>ClapDetection</secondary></indexterm>
+<indexterm><primary>ClapDetection</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void ClapDetection::stop ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_clap_detection_a14d7a4329f238978b15abc40f6066340_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/clap-detection/<link linkend="__clap_detection_8h">ClapDetection.h</link>src/clap-detection/<link linkend="__clap_detection_8cpp">ClapDetection.cpp</link></section>
+</section>

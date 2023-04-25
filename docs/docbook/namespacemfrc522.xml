@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacemfrc522" xml:lang="en-US">
+<title>mfrc522 Namespace Reference</title>
+<indexterm><primary>mfrc522</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structmfrc522_1_1_i_gpio">IGpio</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structmfrc522_1_1_i_spi">ISpi</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classmfrc522_1_1_m_f_r_c522">MFRC522</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef uint16_t <link linkend="_namespacemfrc522_1a6e204398594060a281d6f9157a612549">word</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const uint8_t <link linkend="_namespacemfrc522_1a749840d7381e94883d25086e7fc02a5c">MFRC522_firmware_referenceV1_0</link> []</para>
+</listitem>
+            <listitem><para>const uint8_t <link linkend="_namespacemfrc522_1aaca23097cb085bc7fb1336ced2e0f592">MFRC522_firmware_referenceV2_0</link> []</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacemfrc522_1a6e204398594060a281d6f9157a612549"/><section>
+    <title>word</title>
+<indexterm><primary>word</primary><secondary>mfrc522</secondary></indexterm>
+<indexterm><primary>mfrc522</primary><secondary>word</secondary></indexterm>
+<para><computeroutput>typedef uint16_t <link linkend="_namespacemfrc522_1a6e204398594060a281d6f9157a612549">mfrc522::word</link></computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacemfrc522_1a749840d7381e94883d25086e7fc02a5c"/><section>
+    <title>MFRC522_firmware_referenceV1_0</title>
+<indexterm><primary>MFRC522_firmware_referenceV1_0</primary><secondary>mfrc522</secondary></indexterm>
+<indexterm><primary>mfrc522</primary><secondary>MFRC522_firmware_referenceV1_0</secondary></indexterm>
+<para><computeroutput>const uint8_t mfrc522::MFRC522_firmware_referenceV1_0</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;0x00,&#32;0xC6,&#32;0x37,&#32;0xD5,&#32;0x32,&#32;0xB7,&#32;0x57,&#32;0x5C,
+&#32;&#32;&#32;&#32;0xC2,&#32;0xD8,&#32;0x7C,&#32;0x4D,&#32;0xD9,&#32;0x70,&#32;0xC7,&#32;0x73,
+&#32;&#32;&#32;&#32;0x10,&#32;0xE6,&#32;0xD2,&#32;0xAA,&#32;0x5E,&#32;0xA1,&#32;0x3E,&#32;0x5A,
+&#32;&#32;&#32;&#32;0x14,&#32;0xAF,&#32;0x30,&#32;0x61,&#32;0xC9,&#32;0x70,&#32;0xDB,&#32;0x2E,
+&#32;&#32;&#32;&#32;0x64,&#32;0x22,&#32;0x72,&#32;0xB5,&#32;0xBD,&#32;0x65,&#32;0xF4,&#32;0xEC,
+&#32;&#32;&#32;&#32;0x22,&#32;0xBC,&#32;0xD3,&#32;0x72,&#32;0x35,&#32;0xCD,&#32;0xAA,&#32;0x41,
+&#32;&#32;&#32;&#32;0x1F,&#32;0xA7,&#32;0xF3,&#32;0x53,&#32;0x14,&#32;0xDE,&#32;0x7E,&#32;0x02,
+&#32;&#32;&#32;&#32;0xD9,&#32;0x0F,&#32;0xB5,&#32;0x5E,&#32;0x25,&#32;0x1D,&#32;0x29,&#32;0x79
+}
+</programlisting></section>
+<anchor xml:id="_namespacemfrc522_1aaca23097cb085bc7fb1336ced2e0f592"/><section>
+    <title>MFRC522_firmware_referenceV2_0</title>
+<indexterm><primary>MFRC522_firmware_referenceV2_0</primary><secondary>mfrc522</secondary></indexterm>
+<indexterm><primary>mfrc522</primary><secondary>MFRC522_firmware_referenceV2_0</secondary></indexterm>
+<para><computeroutput>const uint8_t mfrc522::MFRC522_firmware_referenceV2_0</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;0x00,&#32;0xEB,&#32;0x66,&#32;0xBA,&#32;0x57,&#32;0xBF,&#32;0x23,&#32;0x95,
+&#32;&#32;&#32;&#32;0xD0,&#32;0xE3,&#32;0x0D,&#32;0x3D,&#32;0x27,&#32;0x89,&#32;0x5C,&#32;0xDE,
+&#32;&#32;&#32;&#32;0x9D,&#32;0x3B,&#32;0xA7,&#32;0x00,&#32;0x21,&#32;0x5B,&#32;0x89,&#32;0x82,
+&#32;&#32;&#32;&#32;0x51,&#32;0x3A,&#32;0xEB,&#32;0x02,&#32;0x0C,&#32;0xA5,&#32;0x00,&#32;0x49,
+&#32;&#32;&#32;&#32;0x7C,&#32;0x84,&#32;0x4D,&#32;0xB3,&#32;0xCC,&#32;0xD2,&#32;0x1B,&#32;0x81,
+&#32;&#32;&#32;&#32;0x5D,&#32;0x48,&#32;0x76,&#32;0xD5,&#32;0x71,&#32;0x61,&#32;0x21,&#32;0xA9,
+&#32;&#32;&#32;&#32;0x86,&#32;0x96,&#32;0x83,&#32;0x38,&#32;0xCF,&#32;0x9D,&#32;0x5B,&#32;0x6D,
+&#32;&#32;&#32;&#32;0xDC,&#32;0x15,&#32;0xBA,&#32;0x3E,&#32;0x7D,&#32;0x95,&#32;0x3B,&#32;0x2F
+}
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i2_c_driver_8h_source" xml:lang="en-US">
+<title>I2CDriver.h</title>
+<indexterm><primary>src/peripherals/I2CDriver.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+9 <emphasis role="preprocessor">#ifndef&#32;I2C_DRIVER_H</emphasis>
+10 <emphasis role="preprocessor">#define&#32;I2C_DRIVER_H</emphasis>
+11 
+12 <emphasis role="preprocessor">#include&#32;&lt;stdint.h&gt;</emphasis>
+13 
+14 
+18 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">enum</emphasis>&#32;{
+19 &#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faeceba296bdda2b90e8835c431fe7a72a">I2C_OK</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;0,
+20 &#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3faa978b8c99ba81b70dcb4a660ec190c8b">I2C_IOCTL_FAILED</link>&#32;&#32;&#32;&#32;=&#32;-1,
+21 &#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa43b4aeb860553fe1c22ab94cb6b4a446">I2C_WRITE_FAILED</link>&#32;&#32;&#32;&#32;=&#32;-2,
+22 &#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fac86dfc8232f86c65e33a1b9491763a21">I2C_READ_FAILED</link>&#32;&#32;&#32;&#32;&#32;=&#32;-3,
+23 &#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa63b31d0c504bdae545fb5da13d59c986">I2C_CRC_FAILED</link>&#32;&#32;&#32;&#32;&#32;&#32;=&#32;-4,&#32;
+24 &#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3fa2fa4d728abcc354ab37d4ff073289900">I2C_FAIL</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;-5
+25 }&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link>;
+26 
+27 
+35 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_i2_c_driver">I2CDriver</link>&#32;{
+36 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Setup&#32;I2C&#32;fd*/</emphasis>
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1ae25c889f0a2540eee34d53e0228fe914">I2C_Setup_File</link>(<emphasis role="keywordtype">int</emphasis>&#32;addres);
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a6480a0e3e5022ac90944f319ca5a5f4e">I2C_Close_File</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd);
+40 
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;Plain&#32;I2C&#32;Functions*/</emphasis>
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link>&#32;<link linkend="_class_i2_c_driver_1a1e025ccfccece30b7d42acd1bf7e8e41">Plain_I2C_Write_Read</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;uint16_t&#32;command,&#32;uint8_t&#32;*buffer,&#32;uint8_t&#32;readLength,&#32;uint16_t&#32;delay=10);
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="__i2_c_driver_8h_1a52c38e7692a76e897b00daa867b29d3f">I2C_Return</link>&#32;<link linkend="_class_i2_c_driver_1a732c5b799a0aecde0d908ee981872572">Plain_I2C_Write_Read_CRC8</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;uint16_t&#32;command,&#32;uint16_t&#32;*buffer,&#32;uint8_t&#32;readlen,&#32;uint16_t&#32;delay=10);
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//I2C_Return&#32;Plain_I2C_Write_CRC8(int&#32;fd,&#32;uint16_t&#32;*command,&#32;uint8_t&#32;writelength,&#32;uint16_t&#32;*buffer,&#32;uint8_t&#32;readlength,&#32;uint16_t&#32;delay=10);</emphasis>
+45 
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i2_c_driver_1a01453a7adeb358f269faabb33953eee0">Delay</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;timeMs);
+47 
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*&#32;SMBUS&#32;Functions*/</emphasis>
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1acd90c5e9215accc2baf66757054e2906">I2C_Read_Byte</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd);
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1aab652313af52fe19360bc928baf80fae">I2C_Read_8bitReg</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;command);
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a8639cbc95b98be425f6b30dd591384c6">I2C_Read_16bitReg</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;command);
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a7b5eb92afa9ed0b5af264836d0944520">I2C_Write_Byte</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;data);
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a6ff7dfdd4aca26c83c6047f45cce1a9e">I2C_Write_8bitReg</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;command,&#32;<emphasis role="keywordtype">int</emphasis>&#32;data);
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a445d2ef0ba5f742fb8264c202dae4a8d">I2C_Write_16bitReg</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;command,&#32;<emphasis role="keywordtype">int</emphasis>&#32;data);
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a389bf23234176e0fd0421e078e1fa00d">I2C_Write_Block</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;command,&#32;uint8_t&#32;length,&#32;uint8_t&#32;*buff);
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_i2_c_driver_1a3877a689d16c30835569c7fa5f064359">I2C_Read_Block</link>(<emphasis role="keywordtype">int</emphasis>&#32;fd,&#32;<emphasis role="keywordtype">int</emphasis>&#32;command,&#32;uint8_t&#32;*buff);
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//int&#32;I2C_Write_Read_Blocks(int&#32;fd,&#32;int&#32;command,&#32;uint8_t&#32;writeLength,&#32;uint8_t&#32;*writeBuff,&#32;uint8_t&#32;readLength,&#32;uint8_t&#32;*readBuff);</emphasis>
+58 };
+59 
+60 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

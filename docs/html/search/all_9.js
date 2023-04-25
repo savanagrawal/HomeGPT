@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['killprocess_0',['killProcess',['../class_globals.html#a4daf220c8a8469f76a639161d559df44',1,'Globals']]]
+  ['join_0',['join',['../class_cpp_thread.html#a8ff0fda6b913cc53764caef0e1200f3f',1,'CppThread']]]
 ];

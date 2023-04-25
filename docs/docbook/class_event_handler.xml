@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_event_handler" xml:lang="en-US">
+<title>EventHandler Class Reference</title>
+<indexterm><primary>EventHandler</primary></indexterm>
+<para>
+<computeroutput>#include &lt;EventHandler.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3">EventHandler</link> (const <link linkend="_class_event_handler">EventHandler</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_event_handler">EventHandler</link> &amp; <link linkend="_class_event_handler_1ab9a987809515877a612451f1afcb8089">operator=</link> (const <link linkend="_class_event_handler">EventHandler</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd">addListener</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void()&gt; callback)</para>
+</listitem>
+            <listitem><para>template&lt;typename... Args&gt; </para><para>void <link linkend="_class_event_handler_1a1e51daafb4d3a30c0182a5be27873473">addListener</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void(Args...)&gt; callback)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event)</para>
+</listitem>
+            <listitem><para>template&lt;typename... Args&gt; </para><para>void <link linkend="_class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2">emit</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, Args... args)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a">isEventRegistered</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event) const</para>
+</listitem>
+            <listitem><para><link linkend="_class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3">EventHandler</link> (const <link linkend="_class_event_handler">EventHandler</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_event_handler">EventHandler</link> &amp; <link linkend="_class_event_handler_1ab9a987809515877a612451f1afcb8089">operator=</link> (const <link linkend="_class_event_handler">EventHandler</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd">addListener</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void()&gt; callback)</para>
+</listitem>
+            <listitem><para>template&lt;typename... Args&gt; </para><para>void <link linkend="_class_event_handler_1a1e51daafb4d3a30c0182a5be27873473">addListener</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void(Args...)&gt; callback)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event)</para>
+</listitem>
+            <listitem><para>template&lt;typename... Args&gt; </para><para>void <link linkend="_class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2">emit</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, Args... args)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a">isEventRegistered</link> (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_event_handler">EventHandler</link> &amp; <link linkend="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604">getInstance</link> ()</para>
+</listitem>
+            <listitem><para>static <link linkend="_class_event_handler">EventHandler</link> &amp; <link linkend="_class_event_handler_1ad068c59fb303da8c70ec208c48d44550">getInstance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3"/><section>
+    <title>EventHandler()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>EventHandler</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>EventHandler</secondary></indexterm>
+<para><computeroutput>EventHandler::EventHandler (const <link linkend="_class_event_handler">EventHandler</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a60e6d02d517a43f2da9d8c23d8a8f8f3"/><section>
+    <title>EventHandler()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>EventHandler</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>EventHandler</secondary></indexterm>
+<para><computeroutput>EventHandler::EventHandler (const <link linkend="_class_event_handler">EventHandler</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd"/><section>
+    <title>addListener()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>addListener</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>addListener</secondary></indexterm>
+<para><computeroutput>void EventHandler::addListener (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void()&gt; callback)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_event_handler_a4d3a9170bf42c684997f46ac0e3fafcd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_event_handler_1a4d3a9170bf42c684997f46ac0e3fafcd"/><section>
+    <title>addListener()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>addListener</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>addListener</secondary></indexterm>
+<para><computeroutput>void EventHandler::addListener (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void()&gt; callback)</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a1e51daafb4d3a30c0182a5be27873473"/><section>
+    <title>addListener()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>addListener</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>addListener</secondary></indexterm>
+<computeroutput>template&lt;typename... Args&gt; </computeroutput><para><computeroutput>void EventHandler::addListener (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void(Args...)&gt; callback)</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a1e51daafb4d3a30c0182a5be27873473"/><section>
+    <title>addListener()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>addListener</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>addListener</secondary></indexterm>
+<computeroutput>template&lt;typename... Args&gt; </computeroutput><para><computeroutput>void EventHandler::addListener (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, std::function&lt; void(Args...)&gt; callback)</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd"/><section>
+    <title>emit()<computeroutput>[1/4]</computeroutput></title>
+<indexterm><primary>emit</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>emit</secondary></indexterm>
+<para><computeroutput>void EventHandler::emit (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_event_handler_a78ac6d7c899898fbb2c7b24117b272dd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd"/><section>
+    <title>emit()<computeroutput>[2/4]</computeroutput></title>
+<indexterm><primary>emit</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>emit</secondary></indexterm>
+<para><computeroutput>void EventHandler::emit (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event)</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2"/><section>
+    <title>emit()<computeroutput>[3/4]</computeroutput></title>
+<indexterm><primary>emit</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>emit</secondary></indexterm>
+<computeroutput>template&lt;typename... Args&gt; </computeroutput><para><computeroutput>void EventHandler::emit (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, Args... args)</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a71397887f7e1adda63e9dd201b6d4dc2"/><section>
+    <title>emit()<computeroutput>[4/4]</computeroutput></title>
+<indexterm><primary>emit</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>emit</secondary></indexterm>
+<computeroutput>template&lt;typename... Args&gt; </computeroutput><para><computeroutput>void EventHandler::emit (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event, Args... args)</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604"/><section>
+    <title>getInstance()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getInstance</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>getInstance</secondary></indexterm>
+<para><computeroutput><link linkend="_class_event_handler">EventHandler</link> &amp; EventHandler::getInstance ( )<computeroutput>[static]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_event_handler_a54e992984633e36c76f7b62edfbf7604_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_event_handler_1ad068c59fb303da8c70ec208c48d44550"/><section>
+    <title>getInstance()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getInstance</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>getInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_event_handler">EventHandler</link> &amp; EventHandler::getInstance ( )<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a"/><section>
+    <title>isEventRegistered()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>isEventRegistered</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>isEventRegistered</secondary></indexterm>
+<para><computeroutput>bool EventHandler::isEventRegistered (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event) const</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1aaa3013bda48eb77f9d91c0f60f063e5a"/><section>
+    <title>isEventRegistered()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>isEventRegistered</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>isEventRegistered</secondary></indexterm>
+<para><computeroutput>bool EventHandler::isEventRegistered (<link linkend="__event_test_2_event_handler_8h_1a5667b805d857c6d28f83f6038a0272d3">Event</link> event) const</computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1ab9a987809515877a612451f1afcb8089"/><section>
+    <title>operator=()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_event_handler">EventHandler</link> &amp; EventHandler::operator= (const <link linkend="_class_event_handler">EventHandler</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_event_handler_1ab9a987809515877a612451f1afcb8089"/><section>
+    <title>operator=()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator=</primary><secondary>EventHandler</secondary></indexterm>
+<indexterm><primary>EventHandler</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_event_handler">EventHandler</link> &amp; EventHandler::operator= (const <link linkend="_class_event_handler">EventHandler</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/utils/<link linkend="__event_handler_8h">EventHandler.h</link>src/utils/EventTest/<link linkend="__event_test_2_event_handler_8h">EventHandler.h</link>src/utils/<link linkend="__event_handler_8cpp">EventHandler.cpp</link>src/utils/EventTest/<link linkend="__event_test_2_event_handler_8cpp">EventHandler.cpp</link></section>
+</section>

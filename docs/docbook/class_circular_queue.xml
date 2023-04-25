@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_circular_queue" xml:lang="en-US">
+<title>CircularQueue Class Reference</title>
+<indexterm><primary>CircularQueue</primary></indexterm>
+<para>
+<computeroutput>#include &lt;CircularQueue.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_circular_queue_1ab7baf5bddbec783e8b44cf55bfc6ecdc">CircularQueue</link> (int size)</para>
+</listitem>
+            <listitem><para><link linkend="_class_circular_queue_1ac353e7d7ba809f5412a31f0694d6f607">~CircularQueue</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_circular_queue_1aace42e1cb5bcf6ed610226cbc6e37f1a">enqueue</link> (int value)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_circular_queue_1a1bf33fbac157d2a246893370ac04e39c">dequeue</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_circular_queue_1af389c378a68797e7fe12a7351520090c">display</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_circular_queue_1ae59d7c591b977609b0c1c7e9a297cc0f">countQueue</link> (int value)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_circular_queue_1ab7baf5bddbec783e8b44cf55bfc6ecdc"/><section>
+    <title>CircularQueue()</title>
+<indexterm><primary>CircularQueue</primary><secondary>CircularQueue</secondary></indexterm>
+<indexterm><primary>CircularQueue</primary><secondary>CircularQueue</secondary></indexterm>
+<para><computeroutput>CircularQueue::CircularQueue (int size)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_circular_queue_1ac353e7d7ba809f5412a31f0694d6f607"/><section>
+    <title>~CircularQueue()</title>
+<indexterm><primary>~CircularQueue</primary><secondary>CircularQueue</secondary></indexterm>
+<indexterm><primary>CircularQueue</primary><secondary>~CircularQueue</secondary></indexterm>
+<para><computeroutput>CircularQueue::~CircularQueue ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_circular_queue_1ae59d7c591b977609b0c1c7e9a297cc0f"/><section>
+    <title>countQueue()</title>
+<indexterm><primary>countQueue</primary><secondary>CircularQueue</secondary></indexterm>
+<indexterm><primary>CircularQueue</primary><secondary>countQueue</secondary></indexterm>
+<para><computeroutput>int CircularQueue::countQueue (int value)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_circular_queue_1a1bf33fbac157d2a246893370ac04e39c"/><section>
+    <title>dequeue()</title>
+<indexterm><primary>dequeue</primary><secondary>CircularQueue</secondary></indexterm>
+<indexterm><primary>CircularQueue</primary><secondary>dequeue</secondary></indexterm>
+<para><computeroutput>int CircularQueue::dequeue ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_circular_queue_1af389c378a68797e7fe12a7351520090c"/><section>
+    <title>display()</title>
+<indexterm><primary>display</primary><secondary>CircularQueue</secondary></indexterm>
+<indexterm><primary>CircularQueue</primary><secondary>display</secondary></indexterm>
+<para><computeroutput>void CircularQueue::display ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_circular_queue_1aace42e1cb5bcf6ed610226cbc6e37f1a"/><section>
+    <title>enqueue()</title>
+<indexterm><primary>enqueue</primary><secondary>CircularQueue</secondary></indexterm>
+<indexterm><primary>CircularQueue</primary><secondary>enqueue</secondary></indexterm>
+<para><computeroutput>void CircularQueue::enqueue (int value)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/utils/<link linkend="__circular_queue_8h">CircularQueue.h</link></section>
+</section>

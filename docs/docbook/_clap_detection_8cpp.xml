@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__clap_detection_8cpp" xml:lang="en-US">
+<title>src/clap-detection/ClapDetection.cpp File Reference</title>
+<indexterm><primary>src/clap-detection/ClapDetection.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;ClapDetection.h&quot;<?linebreak?></programlisting>Include dependency graph for ClapDetection.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_clap_detection_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Savan Agrawal &amp; Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Functions for Clap Detection. </para>
+</section>
+</section>

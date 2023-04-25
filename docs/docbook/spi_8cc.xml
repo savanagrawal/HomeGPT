@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_spi_8cc" xml:lang="en-US">
+<title>src/dependencies/spidevpp/libs/spidevpp/spi.cc File Reference</title>
+<indexterm><primary>src/dependencies/spidevpp/libs/spidevpp/spi.cc</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;spi.h&quot;<?linebreak?>#include &lt;fcntl.h&gt;<?linebreak?>#include &lt;sys/ioctl.h&gt;<?linebreak?>#include &lt;linux/spi/spidev.h&gt;<?linebreak?></programlisting>Include dependency graph for spi.cc:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="spi_8cc__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacespidevpp">spidevpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

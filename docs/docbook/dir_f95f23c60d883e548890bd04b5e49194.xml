@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f95f23c60d883e548890bd04b5e49194" xml:lang="en-US">
+<title>src/thread/rfid Directory Reference</title>
+<indexterm><primary>src/thread/rfid Directory Reference</primary></indexterm>
+Directory dependency graph for rfid:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_f95f23c60d883e548890bd04b5e49194_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__r_f_i_d_thread_8cpp">RFIDThread.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__r_f_i_d_thread_8h">RFIDThread.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

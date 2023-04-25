@@ -1,0 +1,93 @@
+.TH "GPIODriver" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIODriver \- GPIO Driver Class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GPIODriver\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGPIODriver\fP (void)"
+.br
+.ti -1c
+.RI "int \fBSetGPIOState\fP (int gpioPinNumber, int value)"
+.br
+.ti -1c
+.RI "int \fBGPIORead\fP (int gpioPinNumber)"
+.br
+.ti -1c
+.RI "int \fBSetUpPin\fP (int gpioPinNumber)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+GPIO Driver Class\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chhinmay Nagrale
+.RE
+.PP
+This is class is responsilbe for handling GPIO Pins\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GPIODriver::GPIODriver (void)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int GPIODriver::GPIORead (int gpioPinNumber)"
+Get the current state of the GPIO pin\&. LOW = 0 HIGH = 1
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpioPinNumber\fP GPIO Pin number state to read\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+State of the GPIO Pin 
+.RE
+.PP
+
+.SS "int GPIODriver::SetGPIOState (int gpioPinNumber, int value)"
+Set state of the GPIO pin\&. LOW - value = 0 HIGH - value = 1
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpioPinNumber\fP GPIO Pin number state to read\&. 
+.br
+\fIvalue\fP State to set the pin to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else negative error number 
+.RE
+.PP
+
+.SS "int GPIODriver::SetUpPin (int gpioPinNumber)"
+Initialize GPIO Pins for output use\&. Export Pin Set Direction to output Set GPIO state value to high
+.PP
+\fBParameters\fP
+.RS 4
+\fIgpioPinNumber\fP GPIO pin number to set up for output use\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success error 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

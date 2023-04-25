@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__intruder_detection_8h_source" xml:lang="en-US">
+<title>IntruderDetection.h</title>
+<indexterm><primary>src/intruder-detection/IntruderDetection.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;INTRUDER_DETECTION_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;INTRUDER_DETECTION_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;CppTimer.h&quot;</emphasis>
+12 
+13 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;opencv2/face.hpp&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;sstream&gt;</emphasis>
+20 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+21 
+22 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_intruder_detection">IntruderDetection</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;CppTimer&#32;{
+23 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;timerEvent&#32;()&#32;{
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!masterCamera.isOpened())&#32;{
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;opening&#32;camera.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+28 
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users&#32;=&#32;<link linkend="_class_intruder_detection_1ae7434a5c6a619b5a50fe4dd70daba809">readFileToMap</link>(fileName);
+30 
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera&#32;&gt;&gt;&#32;im;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(im.empty())&#32;<emphasis role="keywordflow">return</emphasis>;
+33 
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::namedWindow(<emphasis role="stringliteral">&quot;Face&#32;Recognition&quot;</emphasis>,&#32;cv::WINDOW_NORMAL);
+35 
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvtColor(im,&#32;gray,&#32;cv::COLOR_BGR2GRAY);
+37 
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;detector.detectMultiScale(gray,&#32;faces,&#32;1.2,&#32;5);
+41 
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;faces.size();&#32;i++)&#32;{
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::rectangle(im,&#32;faces[i],&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;predictedLabel&#32;=&#32;-1;
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;confidence&#32;=&#32;0.0;
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recognizer-&gt;predict(gray(faces[i]),&#32;predictedLabel,&#32;confidence);
+47 
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;label&#32;=&#32;<emphasis role="stringliteral">&quot;Intruder&quot;</emphasis>;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;users.find(predictedLabel);
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(confidence&#32;&lt;&#32;55&#32;&amp;&amp;&#32;it&#32;!=&#32;users.end())&#32;{
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(confidence&#32;&lt;&#32;55&#32;)&#32;{</emphasis>
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;label&#32;=&#32;it-&gt;second;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//label&#32;=&#32;predictedLabel;</emphasis>
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;label&#32;=&#32;<emphasis role="stringliteral">&quot;Intruder&quot;</emphasis>;
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+57 
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Predicted&#32;label:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;predictedLabel&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Name:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;label&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Confidence:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;confidence&#32;&lt;&lt;&#32;std::endl;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;putText(im,&#32;label,&#32;cv::Point(faces[i].x,&#32;faces[i].y&#32;-&#32;10),&#32;cv::FONT_HERSHEY_SIMPLEX,&#32;0.8,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imshow(<emphasis role="stringliteral">&quot;Face&#32;Recognition&quot;</emphasis>,&#32;im);
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(cv::Exception&#32;e)&#32;{
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Expect&#32;a&#32;segmentation&#32;fault&#32;to&#32;stop&#32;intruder&#32;detection.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;wait&#32;for&#32;10&#32;milliseconds</emphasis>
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::waitKey(10);
+71 &#32;&#32;&#32;&#32;}
+72 
+73 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_detection_1a6977d021a0c0ba13fa5967824b4c1cd5">IntruderDetection</link>()&#32;{}
+75 
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_detection_1a1f5c2435c70378d425088e735683af29">Initialize</link>(cv::VideoCapture&#32;camera);
+77 
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529">stop</link>()&#32;{
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera.release();
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::destroyAllWindows();
+81 
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529">stop</link>();
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+84 
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;<link linkend="_class_intruder_detection_1ae7434a5c6a619b5a50fe4dd70daba809">readFileToMap</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;fileName)&#32;{
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ifstream&#32;file(fileName);
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;users;
+89 
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(file,&#32;line))&#32;{
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(line);
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;name;
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;name,&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;numStr;
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;numStr);
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;num&#32;=&#32;std::stoi(numStr);
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users[num]&#32;=&#32;name;
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+99 
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;users;
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+102 
+103 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;masterCamera;
+105 
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;im,&#32;gray;
+107 
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::CascadeClassifier&#32;detector;
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;cascadePath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/haarcascade_frontalface_default.xml&quot;</emphasis>;
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;trainedModelPath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/trainer/trainer.yml&quot;</emphasis>;
+111 
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::face::LBPHFaceRecognizer&gt;&#32;recognizer&#32;=&#32;cv::face::LBPHFaceRecognizer::create();
+113 
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;fileName&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/Users.txt&quot;</emphasis>;
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;users;
+116 };
+117 
+118 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

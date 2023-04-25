@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__circular_queue_8h_source" xml:lang="en-US">
+<title>CircularQueue.h</title>
+<indexterm><primary>src/utils/CircularQueue.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;CIRCULAR_QUEUE_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;CIRCULAR_QUEUE_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+12 
+13 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_circular_queue">CircularQueue</link>&#32;{
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;front,&#32;rear;
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;size;
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;*queue;
+19 
+20 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_circular_queue_1ab7baf5bddbec783e8b44cf55bfc6ecdc">CircularQueue</link>(<emphasis role="keywordtype">int</emphasis>&#32;size)&#32;:&#32;front(0),&#32;rear(-1),&#32;size(size)&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;queue&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>[size];
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+24 
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_circular_queue_1ac353e7d7ba809f5412a31f0694d6f607">~CircularQueue</link>()&#32;{
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">delete</emphasis>[]&#32;queue;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+28 
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_circular_queue_1aace42e1cb5bcf6ed610226cbc6e37f1a">enqueue</link>(<emphasis role="keywordtype">int</emphasis>&#32;value)&#32;{
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rear&#32;=&#32;(rear&#32;+&#32;1)&#32;%&#32;size;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;queue[rear]&#32;=&#32;value;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;the&#32;queue&#32;is&#32;full,&#32;update&#32;the&#32;front&#32;to&#32;overwrite&#32;the&#32;oldest&#32;element.</emphasis>
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((rear&#32;+&#32;1)&#32;%&#32;size&#32;==&#32;front)&#32;{
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;front&#32;=&#32;(front&#32;+&#32;1)&#32;%&#32;size;
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+38 
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_circular_queue_1a1bf33fbac157d2a246893370ac04e39c">dequeue</link>()&#32;{
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(front&#32;==&#32;(rear&#32;+&#32;1)&#32;%&#32;size)&#32;{
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Queue&#32;is&#32;empty,&#32;cannot&#32;dequeue.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;-1;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;value&#32;=&#32;queue[front];
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;front&#32;=&#32;(front&#32;+&#32;1)&#32;%&#32;size;
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;value;
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+48 
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_circular_queue_1af389c378a68797e7fe12a7351520090c">display</link>()&#32;{
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(front&#32;==&#32;(rear&#32;+&#32;1)&#32;%&#32;size)&#32;{
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Queue&#32;is&#32;empty.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Elements&#32;in&#32;the&#32;Circular&#32;Queue&#32;are:&#32;&quot;</emphasis>;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;front;
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(i&#32;!=&#32;rear)&#32;{
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;queue[i]&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>;
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;=&#32;(i&#32;+&#32;1)&#32;%&#32;size;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;queue[i]&#32;&lt;&lt;&#32;std::endl;&#32;<emphasis role="comment">//&#32;Display&#32;the&#32;last&#32;element</emphasis>
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+62 
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_circular_queue_1ae59d7c591b977609b0c1c7e9a297cc0f">countQueue</link>(<emphasis role="keywordtype">int</emphasis>&#32;value)&#32;{
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;count&#32;=&#32;0;
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(front&#32;==&#32;(rear&#32;+&#32;1)&#32;%&#32;size)&#32;{
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;count;&#32;<emphasis role="comment">//&#32;Queue&#32;is&#32;empty</emphasis>
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;front;
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(i&#32;!=&#32;rear)&#32;{
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(queue[i]&#32;==&#32;value)&#32;{
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;=&#32;(i&#32;+&#32;1)&#32;%&#32;size;
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(queue[i]&#32;==&#32;value)&#32;{&#32;<emphasis role="comment">//&#32;Check&#32;the&#32;last&#32;element</emphasis>
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count++;
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;count;
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+80 };
+81 
+82 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

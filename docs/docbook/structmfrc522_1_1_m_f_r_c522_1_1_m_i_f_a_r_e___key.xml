@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key" xml:lang="en-US">
+<title>mfrc522::MFRC522::MIFARE_Key Struct Reference</title>
+<indexterm><primary>mfrc522::MFRC522::MIFARE_Key</primary></indexterm>
+<para>
+<computeroutput>#include &lt;mfrc522.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>uint8_t <link linkend="_structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key_1aa794e440258b611c8049d4f233b38bb9">keyByte</link> [<link linkend="_classmfrc522_1_1_m_f_r_c522_1a3f3bd54c208c88176a1e0dff67ff41caa6b49626dcb7cc58cb460378caf71908f">MF_KEY_SIZE</link>]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structmfrc522_1_1_m_f_r_c522_1_1_m_i_f_a_r_e___key_1aa794e440258b611c8049d4f233b38bb9"/><section>
+    <title>keyByte</title>
+<indexterm><primary>keyByte</primary><secondary>mfrc522::MFRC522::MIFARE_Key</secondary></indexterm>
+<indexterm><primary>mfrc522::MFRC522::MIFARE_Key</primary><secondary>keyByte</secondary></indexterm>
+<para><computeroutput>uint8_t mfrc522::MFRC522::MIFARE_Key::keyByte</computeroutput></para></section>
+<para>
+The documentation for this struct was generated from the following files:</para>
+src/dependencies/mfrc522/<link linkend="_dependencies_2mfrc522_2mfrc522_8h">mfrc522.h</link>src/peripherals/<link linkend="_peripherals_2mfrc522_8h">MFRC522.h</link></section>
+</section>

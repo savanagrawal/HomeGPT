@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_caead8f2f932779b81c885c4b6cdb410" kind="dir">
+    <compoundname>src/peripherals/bcm2835</compoundname>
+    <innerfile refid="bcm2835__gpio__impl_8h">bcm2835_gpio_impl.h</innerfile>
+    <innerfile refid="bcm2835__spi__impl_8h">bcm2835_spi_impl.h</innerfile>
+    <innerfile refid="peripherals_2bcm2835_2igpio_8h">igpio.h</innerfile>
+    <innerfile refid="peripherals_2bcm2835_2ispi_8h">ispi.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/peripherals/bcm2835/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_6bdc88b2989357d4fa7c175bb154cd2d" kind="dir">
+    <compoundname>src/intruder-mood-detection</compoundname>
+    <innerfile refid="_intruder_mood_detection_8cpp">IntruderMoodDetection.cpp</innerfile>
+    <innerfile refid="_intruder_mood_detection_8h">IntruderMoodDetection.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/intruder-mood-detection/"/>
+  </compounddef>
+</doxygen>

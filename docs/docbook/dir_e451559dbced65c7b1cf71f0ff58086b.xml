@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_e451559dbced65c7b1cf71f0ff58086b" xml:lang="en-US">
+<title>src/dependencies/spidevpp Directory Reference</title>
+<indexterm><primary>src/dependencies/spidevpp Directory Reference</primary></indexterm>
+Directory dependency graph for spidevpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_e451559dbced65c7b1cf71f0ff58086b_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_1d9436301166ba06e970b1b5ea20a1af">apps</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_0d8d94cdeec3d074a9579998e577f841">libs</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

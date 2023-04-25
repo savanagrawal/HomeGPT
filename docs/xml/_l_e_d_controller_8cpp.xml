@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_l_e_d_controller_8cpp" kind="file" language="C++">
+    <compoundname>LEDController.cpp</compoundname>
+    <includes refid="_l_e_d_controller_8h" local="yes">LEDController.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/peripherals/LEDController.cpp</label>
+        <link refid="_l_e_d_controller_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>LEDController.h</label>
+        <link refid="_l_e_d_controller_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>wiringPi.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Savan Agrawal </para>
+</simplesect>
+<simplesect kind="version"><para>0.1</para>
+</simplesect>
+LED <ref refid="class_controller" kindref="compound">Controller</ref> CPP file to control normal and RGB ligth </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_l_e_d_controller_8h" kindref="compound">LEDController.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823" refkind="member"><highlight class="normal"><ref refid="class_l_e_d_controller_1ae3f36ff6b05caad1c6b447f4e56b8823" kindref="member">LEDController::LEDController</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledPin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>redPin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>greenPin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bluePin)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>ledPin(ledPin),<sp/>redPin(redPin),<sp/>greenPin(greenPin),<sp/>bluePin(bluePin)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>wiringPiSetupGpio();<sp/></highlight><highlight class="comment">//<sp/>Use<sp/>BCM<sp/>numbering</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(ledPin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(redPin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(greenPin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(bluePin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" kindref="member">LEDController::turnOnLED</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(ledPin,<sp/><ref refid="_g_p_i_o_driver_8cpp_1a5bb885982ff66a2e0a0a45a8ee9c35e2" kindref="member">HIGH</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" kindref="member">LEDController::turnOffLED</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(ledPin,<sp/><ref refid="_g_p_i_o_driver_8cpp_1ab811d8c6ff3a505312d3276590444289" kindref="member">LOW</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108" kindref="member">LEDController::setRGBColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>color)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;red&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(255,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;green&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(0,<sp/>255,<sp/>0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;blue&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(0,<sp/>0,<sp/>255);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;white&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(255,<sp/>255,<sp/>255);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Angry&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(255,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Disgust&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(0,<sp/>255,<sp/>0);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Fear&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(0,<sp/>0,<sp/>255);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Happy&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(255,<sp/>255,<sp/>0);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Neutral&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(255,<sp/>0,<sp/>255);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(color<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Sad&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(0,<sp/>255,<sp/>255);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setColor(255,<sp/>255,<sp/>255);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa" kindref="member">LEDController::turnOffRGBLED</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>setColor(0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LEDController::setColor(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>red,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>green,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blue)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(redPin,<sp/>red);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(greenPin,<sp/>green);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(bluePin,<sp/>blue);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/peripherals/LEDController.cpp"/>
+  </compounddef>
+</doxygen>

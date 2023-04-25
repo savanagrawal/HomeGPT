@@ -1,0 +1,211 @@
+.TH "RelayBoard" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RelayBoard \- Relay Board class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RelayBoard\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRelayBoard\fP ()"
+.br
+.ti -1c
+.RI "\fB~RelayBoard\fP (void)"
+.br
+.ti -1c
+.RI "int \fBInitialize\fP (\fBGPIODriver\fP &driver)"
+.br
+.ti -1c
+.RI "int \fBLighting\fP (int state)"
+.br
+.ti -1c
+.RI "int \fBHeating\fP (int state)"
+.br
+.ti -1c
+.RI "int \fBAirflow\fP (int state)"
+.br
+.ti -1c
+.RI "int \fBWatering\fP (int state)"
+.br
+.ti -1c
+.RI "int \fBTurn_Relays_Off\fP ()"
+.br
+.ti -1c
+.RI "int \fBClose_Relay_Board\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetWateringState\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetAirflowState\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetHeatingState\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetLightingState\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBm_heaterGPIOState\fP"
+.br
+.ti -1c
+.RI "int \fBm_lightsGPIOState\fP"
+.br
+.ti -1c
+.RI "int \fBm_fanGPIOState\fP"
+.br
+.ti -1c
+.RI "int \fBm_waterPumpGPIOState\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Relay Board class\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale
+.RE
+.PP
+This is class is responsilbe for the Elego Relay Board\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RelayBoard::RelayBoard ()\fC [inline]\fP"
+
+.SS "RelayBoard::~RelayBoard (void)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "int RelayBoard::Airflow (int state)"
+Changes the state of the Airflow GPIO pin
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number 
+.RE
+.PP
+
+.SS "int RelayBoard::Close_Relay_Board ()"
+
+.SS "int RelayBoard::GetAirflowState ()"
+Wrapper for reading airflow GPIO pin state
+.PP
+\fBReturns\fP
+.RS 4
+Value of the lighting pin else negative error number 
+.RE
+.PP
+
+.SS "int RelayBoard::GetHeatingState ()"
+Wrapper for reading heating GPIO state
+.PP
+\fBReturns\fP
+.RS 4
+Value of the lighting pin else negative error number 
+.RE
+.PP
+
+.SS "int RelayBoard::GetLightingState ()"
+Wrapper for reading Lighting GPIO pin state
+.PP
+\fBReturns\fP
+.RS 4
+Value of the lighting pin, else negative error number 
+.RE
+.PP
+
+.SS "int RelayBoard::GetWateringState ()"
+Wrapper for reading airflow GPIO pin state
+.PP
+\fBReturns\fP
+.RS 4
+Value of the lighting pin else negative error number 
+.RE
+.PP
+
+.SS "int RelayBoard::Heating (int state)"
+Changes the state of the Heating GPIO pin
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP State to change the Heating GPIO pin to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number 
+.RE
+.PP
+
+.SS "int RelayBoard::Initialize (\fBGPIODriver\fP & driver)"
+Initializes actuation gpio pins
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else negative error number 
+.RE
+.PP
+
+.SS "int RelayBoard::Lighting (int state)"
+Changes the state of the lighting GPIO pin
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP State to change the lighting GPIO pin to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number 
+.RE
+.PP
+
+.SS "int RelayBoard::Turn_Relays_Off ()"
+Turns each Relay off by setting the GPIO pin high
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number 
+.RE
+.PP
+
+.SS "int RelayBoard::Watering (int state)"
+Changes the state of the Watering GPIO pin
+.PP
+\fBParameters\fP
+.RS 4
+\fIstate\fP State to change the watering GPIO pin to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "int RelayBoard::m_fanGPIOState"
+
+.SS "int RelayBoard::m_heaterGPIOState"
+
+.SS "int RelayBoard::m_lightsGPIOState"
+
+.SS "int RelayBoard::m_waterPumpGPIOState"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_events" xml:lang="en-US">
+<title>Events Class Reference</title>
+<indexterm><primary>Events</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Events.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link> { <?linebreak?><link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca09696eae844ccb123b205d9d8acd149e">CLAP_DETECTED</link>
+, <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9b99fabdfb0f7ee9d5f3f1019d893a7a">CLAP_DETECTED_THREAD</link>
+, <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde">DATASET_CREATOR_COMPLETE</link>
+, <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7">DATASET_CREATOR_ERROR</link>
+, <?linebreak?><link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6">DATASET_TRAINER_COMPLETE</link>
+, <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088">DATASET_TRAINER_ERROR</link>
+, <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cac9e306cb81bc6f3653a8d5047bc0f0dc">INTRUDER_THREAD_KILL</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_events_1af492aa81f2ef321fff34e61d81531586">Events</link> (const <link linkend="_class_events">Events</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para><link linkend="_class_events">Events</link> &amp; <link linkend="_class_events_1a3ac3dea8075d8cb500fcef5d902e6146">operator=</link> (const <link linkend="_class_events">Events</link> &amp;)=delete</para>
+</listitem>
+            <listitem><para>eventpp::EventDispatcher&lt; <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>, void()&gt; <link linkend="_class_events_1a1674530b62fa0bc5390d5bc6da484234">getDispatcher</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_events_1aa34d20a6375098cacbff1648b3047523">appendListener</link> (<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link> ev, std::function&lt; void()&gt; cb)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_events_1a72e92c46b35623f161d4800b50f36555">dispatch</link> (<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link> ev)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_class_events">Events</link> &amp; <link linkend="_class_events_1a599a464388efa7cc667dee0f5acbaf62">getInstance</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c"/><section>
+    <title>EVENT_CODES</title>
+<indexterm><primary>EVENT_CODES</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>EVENT_CODES</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">Events::EVENT_CODES</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CLAP_DETECTED</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>CLAP_DETECTED</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca09696eae844ccb123b205d9d8acd149e"/>CLAP_DETECTED</entry><entry></entry></row><row><entry><indexterm><primary>CLAP_DETECTED_THREAD</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>CLAP_DETECTED_THREAD</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9b99fabdfb0f7ee9d5f3f1019d893a7a"/>CLAP_DETECTED_THREAD</entry><entry></entry></row><row><entry><indexterm><primary>DATASET_CREATOR_COMPLETE</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>DATASET_CREATOR_COMPLETE</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde"/>DATASET_CREATOR_COMPLETE</entry><entry></entry></row><row><entry><indexterm><primary>DATASET_CREATOR_ERROR</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>DATASET_CREATOR_ERROR</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7"/>DATASET_CREATOR_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>DATASET_TRAINER_COMPLETE</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>DATASET_TRAINER_COMPLETE</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6"/>DATASET_TRAINER_COMPLETE</entry><entry></entry></row><row><entry><indexterm><primary>DATASET_TRAINER_ERROR</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>DATASET_TRAINER_ERROR</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088"/>DATASET_TRAINER_ERROR</entry><entry></entry></row><row><entry><indexterm><primary>INTRUDER_THREAD_KILL</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>INTRUDER_THREAD_KILL</secondary></indexterm>
+<anchor xml:id="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3cac9e306cb81bc6f3653a8d5047bc0f0dc"/>INTRUDER_THREAD_KILL</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_events_1af492aa81f2ef321fff34e61d81531586"/><section>
+    <title>Events()</title>
+<indexterm><primary>Events</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>Events</secondary></indexterm>
+<para><computeroutput>Events::Events (const <link linkend="_class_events">Events</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_events_1aa34d20a6375098cacbff1648b3047523"/><section>
+    <title>appendListener()</title>
+<indexterm><primary>appendListener</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>appendListener</secondary></indexterm>
+<para><computeroutput>void Events::appendListener (<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link> ev, std::function&lt; void()&gt; cb)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_events_1a72e92c46b35623f161d4800b50f36555"/><section>
+    <title>dispatch()</title>
+<indexterm><primary>dispatch</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>dispatch</secondary></indexterm>
+<para><computeroutput>void Events::dispatch (<link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link> ev)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_events_1a1674530b62fa0bc5390d5bc6da484234"/><section>
+    <title>getDispatcher()</title>
+<indexterm><primary>getDispatcher</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>getDispatcher</secondary></indexterm>
+<para><computeroutput>eventpp::EventDispatcher&lt; <link linkend="_class_events_1a1ab66ec3f545c0e6f7897e7f6181fd3c">EVENT_CODES</link>, void()&gt; Events::getDispatcher ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_events_1a599a464388efa7cc667dee0f5acbaf62"/><section>
+    <title>getInstance()</title>
+<indexterm><primary>getInstance</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>getInstance</secondary></indexterm>
+<para><computeroutput>static <link linkend="_class_events">Events</link> &amp; Events::getInstance ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_events_1a3ac3dea8075d8cb500fcef5d902e6146"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>Events</secondary></indexterm>
+<indexterm><primary>Events</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_class_events">Events</link> &amp; Events::operator= (const <link linkend="_class_events">Events</link> &amp; )<computeroutput>[delete]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/utils/<link linkend="__events_8h">Events.h</link></section>
+</section>

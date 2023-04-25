@@ -1,0 +1,350 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__intruder_mood_detection_8h_source" xml:lang="en-US">
+<title>IntruderMoodDetection.h</title>
+<indexterm><primary>src/intruder-mood-detection/IntruderMoodDetection.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;/**</emphasis>
+2 <emphasis role="comment">//&#32;&#32;*&#32;@file&#32;IntruderMoodDetection.cpp</emphasis>
+3 <emphasis role="comment">//&#32;&#32;*&#32;@author&#32;Savan&#32;Agrawal</emphasis>
+4 <emphasis role="comment">//&#32;&#32;*&#32;@version&#32;0.1</emphasis>
+5 <emphasis role="comment">//&#32;&#32;*&#32;</emphasis>
+6 <emphasis role="comment">//&#32;&#32;*&#32;Header&#32;file&#32;for&#32;Intruder&#32;and&#32;Mood&#32;Detection&#32;Combined.</emphasis>
+7 <emphasis role="comment">//&#32;&#32;&#32;*</emphasis>
+8 <emphasis role="comment">//&#32;&#32;*&#32;https://opencv.org/</emphasis>
+9 <emphasis role="comment">//&#32;*/</emphasis>
+10 
+11 <emphasis role="preprocessor">#ifndef&#32;INTRUDER_MOOD_DETECTION_H</emphasis>
+12 <emphasis role="preprocessor">#define&#32;INTRUDER_MOOD_DETECTION_H</emphasis>
+13 
+14 <emphasis role="preprocessor">#include&#32;&quot;CppTimer.h&quot;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&quot;../utils/Globals.h&quot;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&quot;EventHandler.h&quot;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+18 <emphasis role="preprocessor">#include&#32;&lt;opencv2/face.hpp&gt;</emphasis>
+19 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+20 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+21 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+22 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+23 <emphasis role="preprocessor">#include&#32;&lt;sstream&gt;</emphasis>
+24 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+25 <emphasis role="preprocessor">#include&#32;&lt;deque&gt;</emphasis>
+26 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
+27 
+28 
+29 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_intruder_mood_detection">IntruderMoodDetection</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;CppTimer&#32;{
+30 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;timerEvent&#32;()&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!masterCamera.isOpened())&#32;{
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;opening&#32;camera.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+35 &#32;&#32;&#32;&#32;
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;eventHandler&#32;=&#32;<link linkend="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604">EventHandler::getInstance</link>();
+37 
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users&#32;=&#32;<link linkend="_class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead">readFileToMap</link>(fileName);
+39 
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera&#32;&gt;&gt;&#32;im;
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(im.empty())&#32;<emphasis role="keywordflow">return</emphasis>;
+42 
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::namedWindow(<emphasis role="stringliteral">&quot;Face&#32;&amp;&#32;Mood&#32;Recognition&quot;</emphasis>,&#32;cv::WINDOW_NORMAL);
+44 
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvtColor(im,&#32;gray,&#32;cv::COLOR_BGR2GRAY);
+46 
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;detector.detectMultiScale(gray,&#32;faces,&#32;1.2,&#32;5);
+50 
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialize&#32;queues</emphasis>
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::deque&lt;std::string&gt;&#32;intruderValue;</emphasis>
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::deque&lt;int&gt;&#32;predValue;</emphasis>
+54 
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&amp;&#32;face&#32;:&#32;faces)&#32;{
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::rectangle(im,&#32;face,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;predictedLabel&#32;=&#32;-1;
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;confidence&#32;=&#32;0.0;
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recognizer-&gt;predict(gray(face),&#32;predictedLabel,&#32;confidence);
+60 
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;label;
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;users.find(predictedLabel);
+63 
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;roi&#32;=&#32;gray(face);
+65 
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//resize(this-&gt;roi,&#32;this-&gt;roi,&#32;cv::Size(64,&#32;128));</emphasis>
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::vector&lt;float&gt;&#32;hog_features;</emphasis>
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//hog.compute(roi,&#32;hog_features);</emphasis>
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;pred&#32;=&#32;-1;
+72 
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;intruderValue&#32;queue</emphasis>
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(intruderValue.size()&#32;==&#32;10)&#32;{</emphasis>
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;intruderValue.pop_front();</emphasis>
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+77 
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;predValue&#32;queue</emphasis>
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(predValue.size()&#32;==&#32;10)&#32;{</emphasis>
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;predValue.pop_front();</emphasis>
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(confidence&#32;&lt;&#32;90&#32;&amp;&amp;&#32;it&#32;!=&#32;users.end())&#32;{
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;label&#32;=&#32;it-&gt;second;
+86 
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//hog.compute(roi,&#32;hog_features);</emphasis>
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//float&#32;prediction&#32;=&#32;svm-&gt;predict(hog_features);</emphasis>
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//pred&#32;=&#32;static_cast&lt;int&gt;(prediction);</emphasis>
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//intruderValue.push_back(label);</emphasis>
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//predValue.push_back(pred);</emphasis>
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventHandler.<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>&lt;<emphasis role="keywordtype">int</emphasis>&gt;(Event::OpenMainDoor,&#32;0);
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventHandler.<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>(Event::IntruderMoodThreadKill);
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;label&#32;=&#32;<emphasis role="stringliteral">&quot;Intruder&quot;</emphasis>;
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+99 
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Calculate&#32;the&#32;percentage&#32;of&#32;&quot;Intruder&quot;&#32;values&#32;in&#32;intruderValue&#32;queue</emphasis>
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//int&#32;intruderCount&#32;=&#32;std::count(intruderValue.begin(),&#32;intruderValue.end(),&#32;&quot;Intruder&quot;);</emphasis>
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//double&#32;intruderPercentage&#32;=&#32;(static_cast&lt;double&gt;(intruderCount)&#32;/&#32;intruderValue.size())&#32;*&#32;100;</emphasis>
+103 
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//if&#32;(intruderPercentage&#32;&lt;=&#32;20)&#32;{</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;&quot;User&#32;Welcome&quot;&#32;&lt;&lt;&#32;std::endl;</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+107 
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Find&#32;the&#32;most&#32;frequent&#32;integer&#32;in&#32;the&#32;predValue&#32;queue</emphasis>
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::map&lt;int,&#32;int&gt;&#32;predFrequency;</emphasis>
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//for&#32;(int&#32;p&#32;:&#32;predValue)&#32;{</emphasis>
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;predFrequency[p]++;</emphasis>
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//}</emphasis>
+113 
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//int&#32;maxRepetitiveInteger&#32;=&#32;std::max_element(</emphasis>
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;predFrequency.begin(),&#32;predFrequency.end(),</emphasis>
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;[](const&#32;std::pair&lt;int,&#32;int&gt;&amp;&#32;a,&#32;const&#32;std::pair&lt;int,&#32;int&gt;&amp;&#32;b)&#32;{</emphasis>
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;return&#32;a.second&#32;&lt;&#32;b.second;</emphasis>
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;}</emphasis>
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//)-&gt;first;</emphasis>
+120 
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::cout&#32;&lt;&lt;&#32;&quot;Max&#32;repetitive&#32;emotion:&#32;&quot;&#32;&lt;&lt;&#32;emotion[maxRepetitiveInteger]&#32;&lt;&lt;&#32;std::endl;</emphasis>
+122 
+123 
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Predicted&#32;label:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;predictedLabel&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Name:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;label&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Confidence:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;confidence&#32;&lt;&lt;&#32;std::endl;
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::cout&#32;&lt;&lt;&#32;&quot;Emotion:&#32;&quot;&#32;&lt;&lt;&#32;emotion[pred]&#32;&lt;&lt;&#32;std::endl;</emphasis>
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;putText(im,&#32;label,&#32;cv::Point(face.x,&#32;face.y&#32;-&#32;10),&#32;cv::FONT_HERSHEY_SIMPLEX,&#32;0.8,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Clean&#32;up&#32;the&#32;memory</emphasis>
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//intruderValue.clear();</emphasis>
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//predValue.clear();</emphasis>
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imshow(<emphasis role="stringliteral">&quot;Face&#32;&amp;&#32;Mood&#32;Recognition&quot;</emphasis>,&#32;im);
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(cv::Exception&#32;e)&#32;{
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Expect&#32;a&#32;segmentation&#32;fault&#32;to&#32;stop&#32;intruder&#32;detection.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;wait&#32;for&#32;10&#32;milliseconds</emphasis>
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::waitKey(10);
+141 &#32;&#32;&#32;&#32;}
+142 
+143 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_mood_detection_1a7e549103c5719225c1c8124f6cef4e86">IntruderMoodDetection</link>()&#32;{
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;win_size(64,&#32;128);
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_size(16,&#32;16);
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_stride(8,&#32;8);
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;cell_size(8,&#32;8);
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::HOGDescriptor&#32;hog(win_size,&#32;block_size,&#32;block_stride,&#32;cell_size,&#32;nbins);
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+153 
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de">Initialize</link>(cv::VideoCapture&#32;camera);
+155 
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324">stop</link>()&#32;{
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera.release();
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::destroyAllWindows();
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;running&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324">stop</link>();
+162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93">start</link>()&#32;{
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(running)&#32;{
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!masterCamera.isOpened())&#32;{
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error&#32;opening&#32;camera.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;eventHandler&#32;=&#32;<link linkend="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604">EventHandler::getInstance</link>();
+172 
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users&#32;=&#32;<link linkend="_class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead">readFileToMap</link>(fileName);
+174 
+175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera&#32;&gt;&gt;&#32;im;
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(im.empty())&#32;<emphasis role="keywordflow">break</emphasis>;
+177 
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::namedWindow(<emphasis role="stringliteral">&quot;Face&#32;&amp;&#32;Mood&#32;Recognition&quot;</emphasis>,&#32;cv::WINDOW_NORMAL);
+179 
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvtColor(im,&#32;gray,&#32;cv::COLOR_BGR2GRAY);
+181 
+182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;detector.detectMultiScale(gray,&#32;faces,&#32;1.2,&#32;5);
+185 
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&amp;&#32;face&#32;:&#32;faces)&#32;{
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::rectangle(im,&#32;face,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;predictedLabel&#32;=&#32;-1;
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">double</emphasis>&#32;confidence&#32;=&#32;0.0;
+190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;recognizer-&gt;predict(gray(face),&#32;predictedLabel,&#32;confidence);
+191 
+192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;label;
+193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;users.find(predictedLabel);
+194 
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;roi&#32;=&#32;gray(face);
+196 
+197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;resize(this-&gt;roi,&#32;this-&gt;roi,&#32;cv::Size(64,&#32;128));
+198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;float&gt;&#32;hog_features;
+200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hog.compute(roi,&#32;hog_features);
+202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;pred&#32;=&#32;-1;
+203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(confidence&#32;&lt;&#32;90&#32;&amp;&amp;&#32;it&#32;!=&#32;users.end())&#32;{
+205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;label&#32;=&#32;it-&gt;second;
+206 
+207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hog.compute(roi,&#32;hog_features);
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;prediction&#32;=&#32;svm-&gt;predict(hog_features);
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pred&#32;=&#32;<emphasis role="keyword">static_cast&lt;</emphasis><emphasis role="keywordtype">int</emphasis><emphasis role="keyword">&gt;</emphasis>(prediction);
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//ledControllerPtr-&gt;setRGBColor(emotion.at(pred));</emphasis>
+213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//sleep(3);</emphasis>
+214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//ledControllerPtr-&gt;turnOffRGBLED();</emphasis>
+215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;running&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+216 
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Predicted&#32;label:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;predictedLabel&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Name:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;label&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Confidence:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;confidence&#32;&lt;&lt;&#32;std::endl;
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Emotion:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;emotion[pred]&#32;&lt;&lt;&#32;std::endl;
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;putText(im,&#32;label+<emphasis role="stringliteral">&quot;,&#32;&quot;</emphasis>+emotion[pred],&#32;cv::Point(face.x,&#32;face.y&#32;-&#32;10),&#32;cv::FONT_HERSHEY_SIMPLEX,&#32;0.8,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imshow(<emphasis role="stringliteral">&quot;Face&#32;&amp;&#32;Mood&#32;Recognition&quot;</emphasis>,&#32;im);
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(cv::Exception&#32;e)&#32;{
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Expect&#32;a&#32;segmentation&#32;fault&#32;to&#32;stop&#32;intruder&#32;detection.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+226 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;wait&#32;for&#32;10&#32;milliseconds</emphasis>
+229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::waitKey(10);
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventHandler.<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>&lt;<emphasis role="keywordtype">int</emphasis>&gt;(Event::OpenMainDoor,&#32;pred);
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//sleep(2);</emphasis>
+233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//eventHandler.emit(Event::IntruderMoodThreadKill);</emphasis>
+234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//return;</emphasis>
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;label&#32;=&#32;<emphasis role="stringliteral">&quot;Intruder&quot;</emphasis>;
+237 
+238 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Predicted&#32;label:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;predictedLabel&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Name:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;label&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Confidence:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;confidence&#32;&lt;&lt;&#32;std::endl;
+239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Emotion:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;emotion[pred]&#32;&lt;&lt;&#32;std::endl;
+240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;putText(im,&#32;label+<emphasis role="stringliteral">&quot;,&#32;&quot;</emphasis>+emotion[pred],&#32;cv::Point(face.x,&#32;face.y&#32;-&#32;10),&#32;cv::FONT_HERSHEY_SIMPLEX,&#32;0.8,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+241 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imshow(<emphasis role="stringliteral">&quot;Face&#32;&amp;&#32;Mood&#32;Recognition&quot;</emphasis>,&#32;im);
+244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(cv::Exception&#32;e)&#32;{
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Expect&#32;a&#32;segmentation&#32;fault&#32;to&#32;stop&#32;intruder&#32;detection.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;wait&#32;for&#32;10&#32;milliseconds</emphasis>
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::waitKey(10);
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+252 
+253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::cout&#32;&lt;&lt;&#32;&quot;Predicted&#32;label:&#32;&quot;&#32;&lt;&lt;&#32;predictedLabel&#32;&lt;&lt;&#32;&quot;,&#32;Name:&#32;&quot;&#32;&lt;&lt;&#32;label&#32;&lt;&lt;&#32;&quot;,&#32;Confidence:&#32;&quot;&#32;&lt;&lt;&#32;confidence&#32;&lt;&lt;&#32;std::endl;</emphasis>
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::cout&#32;&lt;&lt;&#32;&quot;Emotion:&#32;&quot;&#32;&lt;&lt;&#32;emotion[pred]&#32;&lt;&lt;&#32;std::endl;</emphasis>
+255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//putText(im,&#32;label+&quot;,&#32;&quot;+emotion[pred],&#32;cv::Point(face.x,&#32;face.y&#32;-&#32;10),&#32;cv::FONT_HERSHEY_SIMPLEX,&#32;0.8,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);</emphasis>
+256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49">unlock</link>()&#32;{
+261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;running&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93">start</link>();
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+264 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;<link linkend="_class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead">readFileToMap</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;fileName)&#32;{
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ifstream&#32;file(fileName);
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;users;
+269 
+270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(file,&#32;line))&#32;{
+271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(line);
+272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;name;
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;name,&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;numStr;
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;numStr);
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;num&#32;=&#32;std::stoi(numStr);
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;users[num]&#32;=&#32;name;
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+279 
+280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;users;
+281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6">restart</link>()&#32;{
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera.open(CameraID);
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1aad2cd7218cbcca74cd2680bb3c6c028c">setCameraId</link>(<emphasis role="keywordtype">int</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>);
+289 
+290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1ac54c4363522d4a161b360a1773e14cde">setContrasts</link>(<emphasis role="keywordtype">int</emphasis>&#32;low,&#32;<emphasis role="keywordtype">int</emphasis>&#32;high);
+291 
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a8b061d00a4f66142bb7469f60da73c97">setShutter</link>(<emphasis role="keywordtype">int</emphasis>&#32;shutter);
+293 
+294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a980a792d358cd66cc9769d30c19815a6">checkCameraOpen</link>(cv::VideoCapture&#32;camera);
+295 
+297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;<link linkend="_class_intruder_mood_detection_1abb06d66df53434a740d983ae59847c1f">takePicture</link>();
+298 
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_mood_detection_1a1c49ac265494278a27a2ea6dbfa97dae">savePicture</link>(cv::VideoCapture*,&#32;std::string&#32;filename);
+300 
+301 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;CameraID&#32;=&#32;0;
+304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nbins&#32;=&#32;9;
+305 
+306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_globals">Globals</link>&#32;globals;
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;masterCamera;
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;im,&#32;gray,&#32;roi;
+310 
+311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::CascadeClassifier&#32;detector;
+312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;cascadePath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/haarcascade_frontalface_default.xml&quot;</emphasis>;
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;trainedModelPath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/trainer/trainer.yml&quot;</emphasis>;
+314 
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::face::LBPHFaceRecognizer&gt;&#32;recognizer&#32;=&#32;cv::face::LBPHFaceRecognizer::create();
+316 
+317 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;fileName&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/Users.txt&quot;</emphasis>;
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;users;
+319 
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::ml::SVM&gt;&#32;svm;
+321 
+322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_size;
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_stride;
+324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;cell_size;
+325 
+326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::HOGDescriptor&#32;hog;
+327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;running&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;locked&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;emits&#32;=&#32;0;
+333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;LEDController*&#32;ledControllerPtr;</emphasis>
+335 
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;emotion&#32;=&#32;{
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{0,&#32;<emphasis role="stringliteral">&quot;Angry&quot;</emphasis>},
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{1,&#32;<emphasis role="stringliteral">&quot;Disgust&quot;</emphasis>},
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{2,&#32;<emphasis role="stringliteral">&quot;Fear&quot;</emphasis>},
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{3,&#32;<emphasis role="stringliteral">&quot;Happy&quot;</emphasis>},
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{4,&#32;<emphasis role="stringliteral">&quot;Neutral&quot;</emphasis>},
+343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{5,&#32;<emphasis role="stringliteral">&quot;Sad&quot;</emphasis>},
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{6,&#32;<emphasis role="stringliteral">&quot;Surprise&quot;</emphasis>}
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+346 };
+347 
+348 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

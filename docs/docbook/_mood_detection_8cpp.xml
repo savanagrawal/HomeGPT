@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mood_detection_8cpp" xml:lang="en-US">
+<title>src/mood-detection/MoodDetection.cpp File Reference</title>
+<indexterm><primary>src/mood-detection/MoodDetection.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;MoodDetection.h&quot;<?linebreak?></programlisting>Include dependency graph for MoodDetection.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_mood_detection_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Savan Agrawal &amp; Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Functions for mood detection.</para>
+
+<para><link xlink:href="https://opencv.org/">https://opencv.org/</link> </para>
+</section>
+</section>

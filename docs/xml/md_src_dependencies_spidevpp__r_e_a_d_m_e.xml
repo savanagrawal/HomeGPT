@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="md_src_dependencies_spidevpp__r_e_a_d_m_e" kind="page">
+    <compoundname>md_src_dependencies_spidevpp_README</compoundname>
+    <title>spidevpp - C++ wrapper for spidev</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>spidevpp provides a simple wrapper to easily use spidev from C++ applications. Many Raspberry Pi projects use the <ulink url="http://www.airspayce.com/mikem/bcm2835/">bcm2835 library</ulink> to access the SPI interface. The downside is that it requires root privileges to access /dev/mem and is therefire not suitable for many applications. Using spidev to access the SPI interface is a promising alternative that allows access to non-root users based on udev rules.</para>
+<para>The library provides the spidev interface and a GPIO interface (without any dependencies like wiringPi etc.) to drive additional CS lines, reset lines or any other output that needs to be set for an SPI slave device to work properly.</para>
+<para>The project can be pulled in as a submodule and integrates with cmake (Check <ulink url="https://github.com/twyleg/mfrc522-cpp">mfrc522-cpp</ulink> for an example). It was successfully tested on a Raspberry Pi 3B+ with Raspbian GNU/Linux 10 (buster) but should be compatible with every linux that provides spidev kernel support.</para>
+<sect1 id="md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md33">
+<title>Prerequisites</title>
+<para>To make SPI and GPIO accessible to non-root users, make sure that you have udev rules like the following in place: <verbatim>SUBSYSTEM==&quot;spidev&quot;, GROUP=&quot;spi&quot;, MODE=&quot;0660&quot;
+SUBSYSTEM==&quot;bcm2835-gpiomem&quot;, GROUP=&quot;gpio&quot;, MODE=&quot;0660&quot;
+</verbatim> On Raspbian/Raspberry Pi OS this should already be included in **/dev/udev/rules.d/99-com.rules** and will cause the spidev and GPIO devices to be assigned to the spi/gpio groups with read/write access.</para>
+<para>Make sure that your user is a member of the groups <bold>spi</bold> and <bold>gpio</bold> or create the groups and add the user witht he following commands: <verbatim>sudo groupadd spi
+sudo groupadd gpio
+sudo adduser opendashboard spi
+sudo adduser opendashboard gpio
+</verbatim> </para>
+</sect1>
+<sect1 id="md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md34">
+<title>Building</title>
+<para>Clone the repo: <verbatim>git clone https://github.com/twyleg/spidevpp
+</verbatim> Create a build directory: <verbatim>cd spidev
+mkdir build
+</verbatim> Run cmake: <verbatim>cd build
+cmake ..
+</verbatim> Build: <verbatim>make
+</verbatim> </para>
+</sect1>
+<sect1 id="md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md35">
+<title>Example application for smoke testing</title>
+<para>The project provides a loopback example for smoke testing that expects the MISO and MOSI pin to be connected. This way the write and read functionality can be tested without an additional slave device by simply writting some data and receiving the data at the same time. <verbatim>cd spidevpp/build/apps/loopback_example_app
+./loopback_example_app /dev/spidev0.0
+</verbatim> This should create the following result: <verbatim>read check PASSED
+write check PASSED
+readWrite check PASSED
+</verbatim> </para>
+</sect1>
+<sect1 id="md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md36">
+<title>Troubleshooting</title>
+<sect2 id="md_src_dependencies_spidevpp__r_e_a_d_m_e_1autotoc_md37">
+<title>Conflict between bcm2835 and spidev on RPi</title>
+<para>Be aware that running an application that uses the bcm2835 spi implementation can cause spidev to malfunction. The reason seem to be that bcm2835 keeps ownership of the CS pins which makes it impossible for the spidev driver to drive the CS lines and enable the slave devices. A quick and dirty fix is to restart the RPi or to simply reload the following kernel modules: <verbatim>sudo rmmod spi_bcm2835
+sudo modprobe spi_bcm2835
+</verbatim> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_r_f_i_d_8cpp" kind="file" language="C++">
+    <compoundname>RFID.cpp</compoundname>
+    <includes refid="_r_f_i_d_8h" local="yes">RFID.h</includes>
+    <incdepgraph>
+      <node id="14">
+        <label>mfrc522/igpio.h</label>
+        <link refid="dependencies_2mfrc522_2igpio_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>mfrc522/ispi.h</label>
+        <link refid="dependencies_2mfrc522_2ispi_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>mfrc522/mfrc522.h</label>
+        <link refid="dependencies_2mfrc522_2mfrc522_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>spidevpp/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>spidevpp/spi.h</label>
+        <link refid="spi_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/peripherals/RFID.cpp</label>
+        <link refid="_r_f_i_d_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RFID.h</label>
+        <link refid="_r_f_i_d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>spi/spidev_impl.h</label>
+        <link refid="spidev__impl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>spi/sys_gpio_impl.h</label>
+        <link refid="sys__gpio__impl_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>EventHandler.h</label>
+      </node>
+      <node id="9">
+        <label>chrono</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="11">
+        <label>cstdint</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>linux/spi/spidev.h</label>
+      </node>
+      <node id="17">
+        <label>stdint.h</label>
+      </node>
+      <node id="18">
+        <label>stdio.h</label>
+      </node>
+      <node id="10">
+        <label>string</label>
+      </node>
+      <node id="19">
+        <label>thread</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_r_f_i_d_8h" kindref="compound">RFID.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_r_f_i_d_1a55ae95ac576404d49352dfcbb47556ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_r_f_i_d_1a55ae95ac576404d49352dfcbb47556ad" kindref="member">RFID::Initialize</ref>(){</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/peripherals/RFID.cpp"/>
+  </compounddef>
+</doxygen>

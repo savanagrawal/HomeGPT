@@ -1,0 +1,117 @@
+.TH "ClapDetection" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ClapDetection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ClapDetection\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBClapDetection\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP ()"
+.br
+.ti -1c
+.RI "void \fBopenStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBcloseStream\fP ()"
+.br
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.ti -1c
+.RI "void \fBstop\fP () const"
+.br
+.ti -1c
+.RI "void \fBrecord\fP ()"
+.br
+.ti -1c
+.RI "bool \fBdetectClap\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static int \fBreverse_bits\fP (int num, int bit_length)"
+.br
+.ti -1c
+.RI "static void \fBfft\fP (std::vector< std::complex< double > > &a, bool inverse)"
+.br
+.ti -1c
+.RI "static std::vector< double > \fBconvolve\fP (const std::vector< double > &a, const std::vector< double > &b)"
+.br
+.ti -1c
+.RI "static std::vector< double > \fBload_audio_file\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "static double \fBpercentage_above_threshold\fP (const std::vector< double > &a, double threshold)"
+.br
+.ti -1c
+.RI "static double \fBfind_per\fP (const std::string &within_file, const std::string &find_file)"
+.br
+.ti -1c
+.RI "static double \fBfind_per_data\fP (const std::vector< double > &within_data, const std::vector< double > &y_find)"
+.br
+.ti -1c
+.RI "static bool \fBresult\fP (double per, double check)"
+.br
+.ti -1c
+.RI "static int \fBpaCallback\fP (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ClapDetection::ClapDetection ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ClapDetection::closeStream ()\fC [inline]\fP"
+
+.SS "static std::vector< double > ClapDetection::convolve (const std::vector< double > & a, const std::vector< double > & b)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "bool ClapDetection::detectClap ()\fC [inline]\fP"
+
+.SS "static void ClapDetection::fft (std::vector< std::complex< double > > & a, bool inverse)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static double ClapDetection::find_per (const std::string & within_file, const std::string & find_file)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static double ClapDetection::find_per_data (const std::vector< double > & within_data, const std::vector< double > & y_find)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void ClapDetection::Initialize ()"
+Initializes our Clap Detector\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fP .RE
+.PP
+return 
+.SS "static std::vector< double > ClapDetection::load_audio_file (const std::string & filename)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void ClapDetection::openStream ()\fC [inline]\fP"
+
+.SS "static int ClapDetection::paCallback (const void * inputBuffer, void * outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo * timeInfo, PaStreamCallbackFlags statusFlags, void * userData)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static double ClapDetection::percentage_above_threshold (const std::vector< double > & a, double threshold)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void ClapDetection::record ()\fC [inline]\fP"
+
+.SS "static bool ClapDetection::result (double per, double check)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "static int ClapDetection::reverse_bits (int num, int bit_length)\fC [inline]\fP, \fC [static]\fP"
+
+.SS "void ClapDetection::start ()\fC [inline]\fP"
+
+.SS "void ClapDetection::stop () const\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

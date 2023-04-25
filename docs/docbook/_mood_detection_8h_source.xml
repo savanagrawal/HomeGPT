@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__mood_detection_8h_source" xml:lang="en-US">
+<title>MoodDetection.h</title>
+<indexterm><primary>src/mood-detection/MoodDetection.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;MOOD_DETECTION_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;MOOD_DETECTION_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;CppTimer.h&quot;</emphasis>
+12 <emphasis role="comment">//&#32;#include&#32;&quot;Camera.h&quot;</emphasis>
+13 
+14 <emphasis role="preprocessor">#include&#32;&quot;../utils/Globals.h&quot;</emphasis>
+15 
+16 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+17 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+18 
+19 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_mood_detection">MoodDetection</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;CppTimer&#32;{
+21 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;timerEvent()&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Color&#32;values</emphasis>
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Scalar&#32;color(255,&#32;0,&#32;255);
+24 
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Take&#32;input&#32;from&#32;camera&#32;and&#32;return&#32;if&#32;no&#32;image&#32;could&#32;be&#32;found.</emphasis>
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera&#32;&gt;&gt;&#32;im;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(im.empty())&#32;<emphasis role="keywordflow">return</emphasis>;
+28 
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;color&#32;to&#32;grayscale&#32;for&#32;easier&#32;detection.</emphasis>
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvtColor(im,&#32;gray,&#32;cv::COLOR_BGR2GRAY);
+31 
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Try&#32;to&#32;detect&#32;faces&#32;for&#32;multiple&#32;people.</emphasis>
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;faceCascade.detectMultiScale(gray,&#32;faces,&#32;1.2,&#32;5);
+34 
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;some&#32;neutral&#32;value&#32;for&#32;mood&#32;detection.</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pred&#32;=&#32;4;
+37 
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Go&#32;through&#32;all&#32;faces&#32;and&#32;detect&#32;the&#32;emotion.</emphasis>
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&amp;&#32;face&#32;:&#32;faces)&#32;{
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::rectangle(im,&#32;face,&#32;cv::Scalar(225,&#32;0,&#32;0),&#32;2);
+41 
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this-&gt;roi&#32;=&#32;gray(face);
+43 
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;resize(this-&gt;roi,&#32;this-&gt;roi,&#32;cv::Size(64,&#32;128));
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;float&gt;&#32;hog_features;
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;hog.compute(roi,&#32;hog_features);
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;prediction&#32;=&#32;svm-&gt;predict(hog_features);
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pred&#32;=&#32;<emphasis role="keyword">static_cast&lt;</emphasis><emphasis role="keywordtype">int</emphasis><emphasis role="keyword">&gt;</emphasis>(prediction);
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;emotion[pred]&#32;&lt;&lt;&#32;std::endl;
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;putText(im,&#32;emotion[pred],&#32;cv::Point(face.x,&#32;face.y&#32;-&#32;5),&#32;cv::FONT_HERSHEY_SIMPLEX,&#32;1,&#32;color,&#32;2);
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+56 
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">try</emphasis>&#32;{
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imshow(<emphasis role="stringliteral">&quot;im&quot;</emphasis>,&#32;im);
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">catch</emphasis>&#32;(cv::Exception&#32;e)&#32;{
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Expect&#32;a&#32;segmentation&#32;fault&#32;to&#32;stop&#32;mood&#32;detection.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+63 
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;wait&#32;for&#32;10&#32;milliseconds</emphasis>
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::waitKey(10);
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;char&#32;c&#32;=&#32;(char)cv::waitKey(10);</emphasis>
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;if&#32;(c&#32;==&#32;&apos;q&apos;)&#32;raise(SIGHUP);</emphasis>
+68 &#32;&#32;&#32;&#32;}
+69 
+70 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mood_detection_1a410945568417f247ee6239a4e787dc4c">MoodDetection</link>()&#32;{
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;win_size(64,&#32;128);
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_size(16,&#32;16);
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_stride(8,&#32;8);
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;cell_size(8,&#32;8);
+77 
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::HOGDescriptor&#32;hog(win_size,&#32;block_size,&#32;block_stride,&#32;cell_size,&#32;nbins);
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+80 
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_detection_1aba994443b5bd0c82346d4f546317b934">stop</link>()&#32;{
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera.release();
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::destroyAllWindows();
+85 
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_mood_detection_1aba994443b5bd0c82346d4f546317b934">stop</link>();
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+88 
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2">Initialize</link>(cv::VideoCapture&#32;camera);
+90 
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_detection_1a90d59cfc694ff31ede33ea2dd7bdf01b">setCameraId</link>(<emphasis role="keywordtype">int</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>);
+93 
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_detection_1a94b0201f1b1bf7d3e071a61ac17309b0">setContrasts</link>(<emphasis role="keywordtype">int</emphasis>&#32;low,&#32;<emphasis role="keywordtype">int</emphasis>&#32;high);
+95 
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_detection_1a0f48eaee6ef92b02b44b392d20dbb651">setShutter</link>(<emphasis role="keywordtype">int</emphasis>&#32;shutter);
+97 
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_mood_detection_1a44f66eda0c282ddc24f7d804fcf74465">checkCameraOpen</link>(cv::VideoCapture&#32;camera);
+99 
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;<link linkend="_class_mood_detection_1a6ccbb7812ef82e7adefda31bbf688c6d">takePicture</link>();
+102 
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_mood_detection_1a31af342d62bf05a390849c25596b3be0">savePicture</link>(cv::VideoCapture*,&#32;std::string&#32;filename);
+104 
+108 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;CameraID&#32;=&#32;0;
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nbins&#32;=&#32;9;
+112 
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_globals">Globals</link>&#32;globals;
+114 
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;masterCamera;
+116 
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::CascadeClassifier&#32;faceCascade;
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;im;
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;gray;
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;roi;
+122 
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Scalar&#32;color;
+124 
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;cascadePath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/haarcascade_frontalface_default.xml&quot;</emphasis>;
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Ptr&lt;cv::ml::SVM&gt;&#32;svm;
+127 
+128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_size;
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;block_stride;
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Size&#32;cell_size;
+131 
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::HOGDescriptor&#32;hog;
+133 
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::map&lt;int,&#32;std::string&gt;&#32;emotion&#32;=&#32;{
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{0,&#32;<emphasis role="stringliteral">&quot;Angry&quot;</emphasis>},
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{1,&#32;<emphasis role="stringliteral">&quot;Disgust&quot;</emphasis>},
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{2,&#32;<emphasis role="stringliteral">&quot;Fear&quot;</emphasis>},
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{3,&#32;<emphasis role="stringliteral">&quot;Happy&quot;</emphasis>},
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{4,&#32;<emphasis role="stringliteral">&quot;Neutral&quot;</emphasis>},
+141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{5,&#32;<emphasis role="stringliteral">&quot;Sad&quot;</emphasis>},
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{6,&#32;<emphasis role="stringliteral">&quot;Surprise&quot;</emphasis>}
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+144 };
+145 
+146 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

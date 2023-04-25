@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_r_f_i_d" xml:lang="en-US">
+<title>RFID Class Reference</title>
+<indexterm><primary>RFID</primary></indexterm>
+<para>
+<computeroutput>#include &lt;RFID.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed">RFID</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_r_f_i_d_1a55ae95ac576404d49352dfcbb47556ad">Initialize</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_r_f_i_d_1af938284435e7988901f9b0ff77ef8aa2">setMfrc</link> (<link linkend="_classmfrc522_1_1_m_f_r_c522">mfrc522::MFRC522</link> *mfrc)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_r_f_i_d_1a8a7a0e6133646a29c2102cc1b1633650">start</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed"/><section>
+    <title>RFID()</title>
+<indexterm><primary>RFID</primary><secondary>RFID</secondary></indexterm>
+<indexterm><primary>RFID</primary><secondary>RFID</secondary></indexterm>
+<para><computeroutput>RFID::RFID ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_r_f_i_d_a91e8d4d6abb74ae099f9144d553db6ed_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_r_f_i_d_1a55ae95ac576404d49352dfcbb47556ad"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>RFID</secondary></indexterm>
+<indexterm><primary>RFID</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void RFID::Initialize ( )</computeroutput></para></section>
+<anchor xml:id="_class_r_f_i_d_1af938284435e7988901f9b0ff77ef8aa2"/><section>
+    <title>setMfrc()</title>
+<indexterm><primary>setMfrc</primary><secondary>RFID</secondary></indexterm>
+<indexterm><primary>RFID</primary><secondary>setMfrc</secondary></indexterm>
+<para><computeroutput>void RFID::setMfrc (<link linkend="_classmfrc522_1_1_m_f_r_c522">mfrc522::MFRC522</link> * mfrc)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_r_f_i_d_1a8a7a0e6133646a29c2102cc1b1633650"/><section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>RFID</secondary></indexterm>
+<indexterm><primary>RFID</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void RFID::start ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_r_f_i_d_a8a7a0e6133646a29c2102cc1b1633650_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/peripherals/<link linkend="__r_f_i_d_8h">RFID.h</link>src/peripherals/<link linkend="__r_f_i_d_8cpp">RFID.cpp</link></section>
+</section>

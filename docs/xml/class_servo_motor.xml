@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_servo_motor" kind="class" language="C++" prot="public">
+    <compoundname>ServoMotor</compoundname>
+    <includes refid="_servo_motor_8h" local="no">ServoMotor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_servo_motor_1a12ed04387437936597c469153823dd81" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ServoMotor::_pin</definition>
+        <argsstring></argsstring>
+        <name>_pin</name>
+        <qualifiedname>ServoMotor::_pin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/ServoMotor.h" line="18" column="13" bodyfile="src/peripherals/ServoMotor.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_servo_motor_1a0486fec9c90853e87abf2f5f577966f4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ServoMotor::_angle</definition>
+        <argsstring></argsstring>
+        <name>_angle</name>
+        <qualifiedname>ServoMotor::_angle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/ServoMotor.h" line="19" column="13" bodyfile="src/peripherals/ServoMotor.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_servo_motor_1a72613ce89f6ab8b62c45ce4512d0488b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ServoMotor::ServoMotor</definition>
+        <argsstring>(int pin)</argsstring>
+        <name>ServoMotor</name>
+        <qualifiedname>ServoMotor::ServoMotor</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/ServoMotor.h" line="13" column="9" bodyfile="src/peripherals/ServoMotor.cpp" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_servo_motor_1a13ae02109c52def30f2ab15a8114436c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ServoMotor::~ServoMotor</definition>
+        <argsstring>()</argsstring>
+        <name>~ServoMotor</name>
+        <qualifiedname>ServoMotor::~ServoMotor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/ServoMotor.h" line="14" column="9" bodyfile="src/peripherals/ServoMotor.cpp" bodystart="20" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServoMotor::write</definition>
+        <argsstring>(int angle)</argsstring>
+        <name>write</name>
+        <qualifiedname>ServoMotor::write</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/ServoMotor.h" line="15" column="14" bodyfile="src/peripherals/ServoMotor.cpp" bodystart="23" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/peripherals/ServoMotor.h" line="11" column="1" bodyfile="src/peripherals/ServoMotor.h" bodystart="11" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_servo_motor_1a0486fec9c90853e87abf2f5f577966f4" prot="private" virt="non-virtual"><scope>ServoMotor</scope><name>_angle</name></member>
+      <member refid="class_servo_motor_1a12ed04387437936597c469153823dd81" prot="private" virt="non-virtual"><scope>ServoMotor</scope><name>_pin</name></member>
+      <member refid="class_servo_motor_1a72613ce89f6ab8b62c45ce4512d0488b" prot="public" virt="non-virtual"><scope>ServoMotor</scope><name>ServoMotor</name></member>
+      <member refid="class_servo_motor_1a2d32fc486c0b05d45101926428f2a18d" prot="public" virt="non-virtual"><scope>ServoMotor</scope><name>write</name></member>
+      <member refid="class_servo_motor_1a13ae02109c52def30f2ab15a8114436c" prot="public" virt="non-virtual"><scope>ServoMotor</scope><name>~ServoMotor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_fdae27ba2f4a82a2d3a85d3ed1014509" kind="dir">
+    <compoundname>src/dependencies/mfrc522</compoundname>
+    <innerfile refid="dependencies_2mfrc522_2igpio_8h">igpio.h</innerfile>
+    <innerfile refid="dependencies_2mfrc522_2ispi_8h">ispi.h</innerfile>
+    <innerfile refid="mfrc522_8cc">mfrc522.cc</innerfile>
+    <innerfile refid="dependencies_2mfrc522_2mfrc522_8h">mfrc522.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/mfrc522/"/>
+  </compounddef>
+</doxygen>

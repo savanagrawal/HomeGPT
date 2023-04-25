@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_bcm_spi" kind="class" language="C++" prot="public">
+    <compoundname>BcmSpi</compoundname>
+    <basecompoundref refid="structmfrc522_1_1_i_spi" prot="public" virt="non-virtual">mfrc522::ISpi</basecompoundref>
+    <includes refid="bcm2835__spi__impl_8h" local="no">bcm2835_spi_impl.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bcm_spi_1afb263d8e186dc50bfbe1f514f148ae08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BcmSpi::BcmSpi</definition>
+        <argsstring>()</argsstring>
+        <name>BcmSpi</name>
+        <qualifiedname>BcmSpi::BcmSpi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/bcm2835_spi_impl.h" line="11" column="1" bodyfile="src/peripherals/bcm2835/bcm2835_spi_impl.h" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BcmSpi::write</definition>
+        <argsstring>(char *pData, size_t len) final</argsstring>
+        <name>write</name>
+        <qualifiedname>BcmSpi::write</qualifiedname>
+        <reimplements refid="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed">write</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/bcm2835_spi_impl.h" line="20" column="6" bodyfile="src/peripherals/bcm2835/bcm2835_spi_impl.h" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BcmSpi::read</definition>
+        <argsstring>(char *pData, size_t len) final</argsstring>
+        <name>read</name>
+        <qualifiedname>BcmSpi::read</qualifiedname>
+        <reimplements refid="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7">read</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/bcm2835_spi_impl.h" line="24" column="6" bodyfile="src/peripherals/bcm2835/bcm2835_spi_impl.h" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BcmSpi::writeRead</definition>
+        <argsstring>(char *pData, size_t len) final</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>BcmSpi::writeRead</qualifiedname>
+        <reimplements refid="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac">writeRead</reimplements>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/bcm2835_spi_impl.h" line="28" column="6" bodyfile="src/peripherals/bcm2835/bcm2835_spi_impl.h" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de" prot="public" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>char</type>
+        <definition>char BcmSpi::writeRead</definition>
+        <argsstring>(char data) final</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>BcmSpi::writeRead</qualifiedname>
+        <reimplements refid="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683">writeRead</reimplements>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/bcm2835_spi_impl.h" line="32" column="6" bodyfile="src/peripherals/bcm2835/bcm2835_spi_impl.h" bodystart="32" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BcmSpi</label>
+        <link refid="class_bcm_spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mfrc522::ISpi</label>
+        <link refid="structmfrc522_1_1_i_spi"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BcmSpi</label>
+        <link refid="class_bcm_spi"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mfrc522::ISpi</label>
+        <link refid="structmfrc522_1_1_i_spi"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/peripherals/bcm2835/bcm2835_spi_impl.h" line="8" column="1" bodyfile="src/peripherals/bcm2835/bcm2835_spi_impl.h" bodystart="8" bodyend="36"/>
+    <listofallmembers>
+      <member refid="class_bcm_spi_1afb263d8e186dc50bfbe1f514f148ae08" prot="public" virt="non-virtual"><scope>BcmSpi</scope><name>BcmSpi</name></member>
+      <member refid="class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3" prot="public" virt="virtual"><scope>BcmSpi</scope><name>read</name></member>
+      <member refid="class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481" prot="public" virt="virtual"><scope>BcmSpi</scope><name>write</name></member>
+      <member refid="class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104" prot="public" virt="virtual"><scope>BcmSpi</scope><name>writeRead</name></member>
+      <member refid="class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de" prot="public" virt="virtual"><scope>BcmSpi</scope><name>writeRead</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

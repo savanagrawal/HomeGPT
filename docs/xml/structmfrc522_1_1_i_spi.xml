@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structmfrc522_1_1_i_spi" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>mfrc522::ISpi</compoundname>
+    <derivedcompoundref refid="class_bcm_spi" prot="public" virt="non-virtual">BcmSpi</derivedcompoundref>
+    <derivedcompoundref refid="class_spidev" prot="public" virt="non-virtual">Spidev</derivedcompoundref>
+    <includes refid="dependencies_2mfrc522_2ispi_8h" local="no">ispi.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::ISpi::write</definition>
+        <argsstring>(char *pData, size_t len)=0</argsstring>
+        <name>write</name>
+        <qualifiedname>mfrc522::ISpi::write</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481">write</reimplementedby>
+        <reimplementedby refid="class_spidev_1a40c147da19e908a2e8e76b8b586b1170">write</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/ispi.h" line="9" column="14"/>
+        <referencedby refid="classmfrc522_1_1_m_f_r_c522_1aef8efdbb515b419df6c0038312c4f4e3" compoundref="mfrc522_8cc" startline="40" endline="49">mfrc522::MFRC522::PCD_WriteRegister</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::ISpi::read</definition>
+        <argsstring>(char *pData, size_t len)=0</argsstring>
+        <name>read</name>
+        <qualifiedname>mfrc522::ISpi::read</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3">read</reimplementedby>
+        <reimplementedby refid="class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b">read</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/ispi.h" line="10" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::ISpi::writeRead</definition>
+        <argsstring>(char *pData, size_t len)=0</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>mfrc522::ISpi::writeRead</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104">writeRead</reimplementedby>
+        <reimplementedby refid="class_spidev_1a38c616bb4143f726ce083c947d7a6956">writeRead</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/ispi.h" line="11" column="14"/>
+        <referencedby refid="classmfrc522_1_1_m_f_r_c522_1a54b1e0960ffe689bb512b9ed79dcdece" compoundref="mfrc522_8cc" startline="69" endline="76">mfrc522::MFRC522::PCD_ReadRegister</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>char</type>
+        <definition>virtual char mfrc522::ISpi::writeRead</definition>
+        <argsstring>(char data)=0</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>mfrc522::ISpi::writeRead</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de">writeRead</reimplementedby>
+        <reimplementedby refid="class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1">writeRead</reimplementedby>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/mfrc522/ispi.h" line="12" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::ISpi::write</definition>
+        <argsstring>(char *pData, size_t len)=0</argsstring>
+        <name>write</name>
+        <qualifiedname>mfrc522::ISpi::write</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481">write</reimplementedby>
+        <reimplementedby refid="class_spidev_1a40c147da19e908a2e8e76b8b586b1170">write</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/ispi.h" line="9" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::ISpi::read</definition>
+        <argsstring>(char *pData, size_t len)=0</argsstring>
+        <name>read</name>
+        <qualifiedname>mfrc522::ISpi::read</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3">read</reimplementedby>
+        <reimplementedby refid="class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b">read</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/ispi.h" line="10" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void mfrc522::ISpi::writeRead</definition>
+        <argsstring>(char *pData, size_t len)=0</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>mfrc522::ISpi::writeRead</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104">writeRead</reimplementedby>
+        <reimplementedby refid="class_spidev_1a38c616bb4143f726ce083c947d7a6956">writeRead</reimplementedby>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/ispi.h" line="11" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>char</type>
+        <definition>virtual char mfrc522::ISpi::writeRead</definition>
+        <argsstring>(char data)=0</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>mfrc522::ISpi::writeRead</qualifiedname>
+        <reimplementedby refid="class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de">writeRead</reimplementedby>
+        <reimplementedby refid="class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1">writeRead</reimplementedby>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/bcm2835/ispi.h" line="12" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BcmSpi</label>
+        <link refid="class_bcm_spi"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Spidev</label>
+        <link refid="class_spidev"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>mfrc522::ISpi</label>
+        <link refid="structmfrc522_1_1_i_spi"/>
+      </node>
+    </inheritancegraph>
+    <location file="src/dependencies/mfrc522/ispi.h" line="8" column="1" bodyfile="src/dependencies/mfrc522/ispi.h" bodystart="8" bodyend="13"/>
+    <listofallmembers>
+      <member refid="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>read</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>read</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>write</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>write</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>writeRead</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>writeRead</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>writeRead</name></member>
+      <member refid="structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683" prot="public" virt="pure-virtual"><scope>mfrc522::ISpi</scope><name>writeRead</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_1d9436301166ba06e970b1b5ea20a1af" kind="dir">
+    <compoundname>src/dependencies/spidevpp/apps</compoundname>
+    <innerdir refid="dir_fa5b4c88f94ff4e53235730f59c4127c">src/dependencies/spidevpp/apps/loopback_example_app</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/apps/"/>
+  </compounddef>
+</doxygen>

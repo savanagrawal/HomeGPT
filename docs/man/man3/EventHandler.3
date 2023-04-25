@@ -1,0 +1,106 @@
+.TH "EventHandler" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EventHandler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EventHandler\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEventHandler\fP (const \fBEventHandler\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBEventHandler\fP & \fBoperator=\fP (const \fBEventHandler\fP &)=delete"
+.br
+.ti -1c
+.RI "void \fBaddListener\fP (\fBEvent\fP event, std::function< void()> callback)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBaddListener\fP (\fBEvent\fP event, std::function< void(Args\&.\&.\&.)> callback)"
+.br
+.ti -1c
+.RI "void \fBemit\fP (\fBEvent\fP event)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBemit\fP (\fBEvent\fP event, Args\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "bool \fBisEventRegistered\fP (\fBEvent\fP event) const"
+.br
+.ti -1c
+.RI "\fBEventHandler\fP (const \fBEventHandler\fP &)=delete"
+.br
+.ti -1c
+.RI "\fBEventHandler\fP & \fBoperator=\fP (const \fBEventHandler\fP &)=delete"
+.br
+.ti -1c
+.RI "void \fBaddListener\fP (\fBEvent\fP event, std::function< void()> callback)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBaddListener\fP (\fBEvent\fP event, std::function< void(Args\&.\&.\&.)> callback)"
+.br
+.ti -1c
+.RI "void \fBemit\fP (\fBEvent\fP event)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBemit\fP (\fBEvent\fP event, Args\&.\&.\&. args)"
+.br
+.ti -1c
+.RI "bool \fBisEventRegistered\fP (\fBEvent\fP event) const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBEventHandler\fP & \fBgetInstance\fP ()"
+.br
+.ti -1c
+.RI "static \fBEventHandler\fP & \fBgetInstance\fP ()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "EventHandler::EventHandler (const \fBEventHandler\fP &)\fC [delete]\fP"
+
+.SS "EventHandler::EventHandler (const \fBEventHandler\fP &)\fC [delete]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void EventHandler::addListener (\fBEvent\fP event, std::function< void()> callback)"
+
+.SS "void EventHandler::addListener (\fBEvent\fP event, std::function< void()> callback)"
+
+.SS "template<typename\&.\&.\&. Args> void EventHandler::addListener (\fBEvent\fP event, std::function< void(Args\&.\&.\&.)> callback)"
+
+.SS "template<typename\&.\&.\&. Args> void EventHandler::addListener (\fBEvent\fP event, std::function< void(Args\&.\&.\&.)> callback)"
+
+.SS "void EventHandler::emit (\fBEvent\fP event)"
+
+.SS "void EventHandler::emit (\fBEvent\fP event)"
+
+.SS "template<typename\&.\&.\&. Args> void EventHandler::emit (\fBEvent\fP event, Args\&.\&.\&. args)"
+
+.SS "template<typename\&.\&.\&. Args> void EventHandler::emit (\fBEvent\fP event, Args\&.\&.\&. args)"
+
+.SS "\fBEventHandler\fP & EventHandler::getInstance ()\fC [static]\fP"
+
+.SS "static \fBEventHandler\fP & EventHandler::getInstance ()\fC [static]\fP"
+
+.SS "bool EventHandler::isEventRegistered (\fBEvent\fP event) const"
+
+.SS "bool EventHandler::isEventRegistered (\fBEvent\fP event) const"
+
+.SS "\fBEventHandler\fP & EventHandler::operator= (const \fBEventHandler\fP &)\fC [delete]\fP"
+
+.SS "\fBEventHandler\fP & EventHandler::operator= (const \fBEventHandler\fP &)\fC [delete]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

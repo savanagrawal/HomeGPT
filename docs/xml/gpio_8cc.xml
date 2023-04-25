@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="gpio_8cc" kind="file" language="C++">
+    <compoundname>gpio.cc</compoundname>
+    <includes refid="gpio_8h" local="yes">gpio.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">thread</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/dependencies/spidevpp/libs/spidevpp/gpio.cc</label>
+        <link refid="gpio_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>thread</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacespidevpp">spidevpp</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2021<sp/>twyleg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gpio_8h" kindref="compound">gpio.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespacespidevpp" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacespidevpp" kindref="compound">spidevpp</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">std::string<sp/>getDirectionFilePath(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>oss;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/sys/class/gpio/gpio&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>pin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/direction&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oss.str();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">std::string<sp/>getValueFilePath(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>oss;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/sys/class/gpio/gpio&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>pin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;/value&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oss.str();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">std::string<sp/>directionToString(<ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kindref="member">Gpio::Direction</ref><sp/>direction)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(direction)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08aa84cc046d48610b05c21fd3670d0c829" kindref="member">Gpio::Direction::INPUT</ref>:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;in&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34" kindref="member">Gpio::Direction::OUTPUT</ref>:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;out&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>direction&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded" refkind="member"><highlight class="normal"><ref refid="classspidevpp_1_1_gpio_1a6eef0d9a6619fba0e2af6d364f792ded" kindref="member">Gpio::Gpio</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin,<sp/><ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kindref="member">Direction</ref><sp/>direction,<sp/><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Value</ref><sp/>initialValue)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>mPin(pin),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mDirection(direction),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mDirectionFilePath(getDirectionFilePath(pin)),</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mValueFilePath(getValueFilePath(pin)),</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>mValue(initialValue)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>exportFileStream(</highlight><highlight class="stringliteral">&quot;/sys/class/gpio/export&quot;</highlight><highlight class="normal">,<sp/>std::ios_base::out);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>exportFileStream<sp/>&lt;&lt;<sp/>mPin;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>exportFileStream.close();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>directionFileStream(mDirectionFilePath,<sp/>std::ios_base::out);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>directionFileStream<sp/>&lt;&lt;<sp/>directionToString(mDirection);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>directionFileStream.close();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" kindref="member">setValue</ref>(mValue);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" kindref="member">Gpio::setValue</ref>(<ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Value</ref><sp/>value)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>mValue<sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>valueFileStream(mValueFilePath,<sp/>std::ios_base::out);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>valueFileStream<sp/>&lt;&lt;<sp/>static_cast&lt;int&gt;(value);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>valueFileStream.close();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" refkind="member"><highlight class="normal"><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">Gpio::Value</ref><sp/><ref refid="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" kindref="member">Gpio::getValue</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/>valueFileStream(mValueFilePath,<sp/>std::ios_base::in);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>valueFileStream<sp/>&gt;&gt;<sp/>value;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>mValue<sp/>=<sp/>value<sp/>?<sp/><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243" kindref="member">Value::high</ref><sp/>:<sp/><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7" kindref="member">Value::low</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mValue;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/dependencies/spidevpp/libs/spidevpp/gpio.cc"/>
+  </compounddef>
+</doxygen>

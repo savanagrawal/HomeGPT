@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_relay_board" kind="class" language="C++" prot="public">
+    <compoundname>RelayBoard</compoundname>
+    <includes refid="_relay_board_8h" local="no">RelayBoard.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_relay_board_1acda1026ec1a4a11016812efc2e7fe732" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_heaterGPIOState</definition>
+        <argsstring></argsstring>
+        <name>m_heaterGPIOState</name>
+        <qualifiedname>RelayBoard::m_heaterGPIOState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="52" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98" compoundref="_relay_board_8cpp" startline="87" endline="95">Heating</referencedby>
+        <referencedby refid="class_relay_board_1ad96963754490cea54db92cf32ccccf90" compoundref="_relay_board_8h" startline="23" endline="33">RelayBoard</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1aff19bd04e757a2442243d9f863b435ae" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_lightsGPIOState</definition>
+        <argsstring></argsstring>
+        <name>m_lightsGPIOState</name>
+        <qualifiedname>RelayBoard::m_lightsGPIOState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="53" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_relay_board_1a0ce37124540bae0827a1b81e28841f70" compoundref="_relay_board_8cpp" startline="57" endline="66">Lighting</referencedby>
+        <referencedby refid="class_relay_board_1ad96963754490cea54db92cf32ccccf90" compoundref="_relay_board_8h" startline="23" endline="33">RelayBoard</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_fanGPIOState</definition>
+        <argsstring></argsstring>
+        <name>m_fanGPIOState</name>
+        <qualifiedname>RelayBoard::m_fanGPIOState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="54" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_relay_board_1aa14251b65f8b4872cdf95c56951f0959" compoundref="_relay_board_8cpp" startline="114" endline="122">Airflow</referencedby>
+        <referencedby refid="class_relay_board_1ad96963754490cea54db92cf32ccccf90" compoundref="_relay_board_8h" startline="23" endline="33">RelayBoard</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_waterPumpGPIOState</definition>
+        <argsstring></argsstring>
+        <name>m_waterPumpGPIOState</name>
+        <qualifiedname>RelayBoard::m_waterPumpGPIOState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="55" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_relay_board_1ad96963754490cea54db92cf32ccccf90" compoundref="_relay_board_8h" startline="23" endline="33">RelayBoard</referencedby>
+        <referencedby refid="class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f" compoundref="_relay_board_8cpp" startline="143" endline="151">Watering</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_relay_board_1a56817d4c93db75ccb542f8ee403d8440" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_heaterGPIO</definition>
+        <argsstring></argsstring>
+        <name>m_heaterGPIO</name>
+        <qualifiedname>RelayBoard::m_heaterGPIO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="58" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1aa781c5647863245c5ae7afbf6e185e59" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_lightsGPIO</definition>
+        <argsstring></argsstring>
+        <name>m_lightsGPIO</name>
+        <qualifiedname>RelayBoard::m_lightsGPIO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="59" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1af541df432f4ef6b385ee2e69c466b344" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_fanGPIO</definition>
+        <argsstring></argsstring>
+        <name>m_fanGPIO</name>
+        <qualifiedname>RelayBoard::m_fanGPIO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="60" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1a45807effbe5aaf2798d4f91dcf3c42d8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RelayBoard::m_waterPumpGPIO</definition>
+        <argsstring></argsstring>
+        <name>m_waterPumpGPIO</name>
+        <qualifiedname>RelayBoard::m_waterPumpGPIO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="61" column="5" bodyfile="src/peripherals/RelayBoard.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_relay_board_1ab567d2b303df89856d0e1e599aa538bc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_g_p_i_o_driver" kindref="compound">GPIODriver</ref> *</type>
+        <definition>GPIODriver* RelayBoard::m_pGPIODriver</definition>
+        <argsstring></argsstring>
+        <name>m_pGPIODriver</name>
+        <qualifiedname>RelayBoard::m_pGPIODriver</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="62" column="12" bodyfile="src/peripherals/RelayBoard.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_relay_board_1ad96963754490cea54db92cf32ccccf90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RelayBoard::RelayBoard</definition>
+        <argsstring>()</argsstring>
+        <name>RelayBoard</name>
+        <qualifiedname>RelayBoard::RelayBoard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="23" column="1" bodyfile="src/peripherals/RelayBoard.h" bodystart="23" bodyend="33"/>
+        <references refid="class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98" compoundref="_relay_board_8h" startline="54">m_fanGPIOState</references>
+        <references refid="class_relay_board_1acda1026ec1a4a11016812efc2e7fe732" compoundref="_relay_board_8h" startline="52">m_heaterGPIOState</references>
+        <references refid="class_relay_board_1aff19bd04e757a2442243d9f863b435ae" compoundref="_relay_board_8h" startline="53">m_lightsGPIOState</references>
+        <references refid="class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d" compoundref="_relay_board_8h" startline="55">m_waterPumpGPIOState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1af05bb34a287c76312104a427c86c658e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RelayBoard::~RelayBoard</definition>
+        <argsstring>(void)</argsstring>
+        <name>~RelayBoard</name>
+        <qualifiedname>RelayBoard::~RelayBoard</qualifiedname>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="35" column="1" bodyfile="src/peripherals/RelayBoard.h" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Initialize</definition>
+        <argsstring>(GPIODriver &amp;driver)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>RelayBoard::Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_g_p_i_o_driver" kindref="compound">GPIODriver</ref> &amp;</type>
+          <declname>driver</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes actuation gpio pins</para>
+<para><simplesect kind="return"><para>Zero on success else negative error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="39" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="21" bodyend="46"/>
+        <references refid="class_g_p_i_o_driver_1a314ce5622d8049f62b662b62fd3debe7" compoundref="_g_p_i_o_driver_8cpp" startline="229" endline="255">GPIODriver::SetUpPin</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a0ce37124540bae0827a1b81e28841f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Lighting</definition>
+        <argsstring>(int state)</argsstring>
+        <name>Lighting</name>
+        <qualifiedname>RelayBoard::Lighting</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes the state of the lighting GPIO pin</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State to change the lighting GPIO pin to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="40" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="57" bodyend="66"/>
+        <references refid="class_relay_board_1aff19bd04e757a2442243d9f863b435ae" compoundref="_relay_board_8h" startline="53">m_lightsGPIOState</references>
+        <references refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" compoundref="_g_p_i_o_driver_8cpp" startline="187" endline="216">GPIODriver::SetGPIOState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Heating</definition>
+        <argsstring>(int state)</argsstring>
+        <name>Heating</name>
+        <qualifiedname>RelayBoard::Heating</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes the state of the Heating GPIO pin</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State to change the Heating GPIO pin to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="41" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="87" bodyend="95"/>
+        <references refid="class_relay_board_1acda1026ec1a4a11016812efc2e7fe732" compoundref="_relay_board_8h" startline="52">m_heaterGPIOState</references>
+        <references refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" compoundref="_g_p_i_o_driver_8cpp" startline="187" endline="216">GPIODriver::SetGPIOState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1aa14251b65f8b4872cdf95c56951f0959" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Airflow</definition>
+        <argsstring>(int state)</argsstring>
+        <name>Airflow</name>
+        <qualifiedname>RelayBoard::Airflow</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes the state of the Airflow GPIO pin</para>
+<para><simplesect kind="return"><para>Zero on success else error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="42" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="114" bodyend="122"/>
+        <references refid="class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98" compoundref="_relay_board_8h" startline="54">m_fanGPIOState</references>
+        <references refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" compoundref="_g_p_i_o_driver_8cpp" startline="187" endline="216">GPIODriver::SetGPIOState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Watering</definition>
+        <argsstring>(int state)</argsstring>
+        <name>Watering</name>
+        <qualifiedname>RelayBoard::Watering</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes the state of the Watering GPIO pin</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>State to change the watering GPIO pin to.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zero on success else error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="43" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="143" bodyend="151"/>
+        <references refid="class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d" compoundref="_relay_board_8h" startline="55">m_waterPumpGPIOState</references>
+        <references refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" compoundref="_g_p_i_o_driver_8cpp" startline="187" endline="216">GPIODriver::SetGPIOState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a2339920ca78f22d9bbab349056ca261a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Turn_Relays_Off</definition>
+        <argsstring>()</argsstring>
+        <name>Turn_Relays_Off</name>
+        <qualifiedname>RelayBoard::Turn_Relays_Off</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns each Relay off by setting the GPIO pin high</para>
+<para><simplesect kind="return"><para>Zero on success else error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="44" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="170" bodyend="190"/>
+        <references refid="class_g_p_i_o_driver_1a32a483cec3179d1d13acb1dad37b21ad" compoundref="_g_p_i_o_driver_8cpp" startline="187" endline="216">GPIODriver::SetGPIOState</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a8d4fba9b90f8a65a0f02ad9d5a35c148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::Close_Relay_Board</definition>
+        <argsstring>()</argsstring>
+        <name>Close_Relay_Board</name>
+        <qualifiedname>RelayBoard::Close_Relay_Board</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::GetWateringState</definition>
+        <argsstring>()</argsstring>
+        <name>GetWateringState</name>
+        <qualifiedname>RelayBoard::GetWateringState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper for reading airflow GPIO pin state</para>
+<para><simplesect kind="return"><para>Value of the lighting pin else negative error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="47" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="159" bodyend="161"/>
+        <references refid="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" compoundref="_g_p_i_o_driver_8cpp" startline="145" endline="174">GPIODriver::GPIORead</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::GetAirflowState</definition>
+        <argsstring>()</argsstring>
+        <name>GetAirflowState</name>
+        <qualifiedname>RelayBoard::GetAirflowState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper for reading airflow GPIO pin state</para>
+<para><simplesect kind="return"><para>Value of the lighting pin else negative error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="48" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="130" bodyend="132"/>
+        <references refid="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" compoundref="_g_p_i_o_driver_8cpp" startline="145" endline="174">GPIODriver::GPIORead</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a4725ac8db57d591dbe338f646cdda254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::GetHeatingState</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeatingState</name>
+        <qualifiedname>RelayBoard::GetHeatingState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper for reading heating GPIO state</para>
+<para><simplesect kind="return"><para>Value of the lighting pin else negative error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="49" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="103" bodyend="105"/>
+        <references refid="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" compoundref="_g_p_i_o_driver_8cpp" startline="145" endline="174">GPIODriver::GPIORead</references>
+      </memberdef>
+      <memberdef kind="function" id="class_relay_board_1a32270d45de9d23698cf85fd3224f88c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int RelayBoard::GetLightingState</definition>
+        <argsstring>()</argsstring>
+        <name>GetLightingState</name>
+        <qualifiedname>RelayBoard::GetLightingState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrapper for reading Lighting GPIO pin state</para>
+<para><simplesect kind="return"><para>Value of the lighting pin, else negative error number </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/peripherals/RelayBoard.h" line="50" column="5" bodyfile="src/peripherals/RelayBoard.cpp" bodystart="74" bodyend="76"/>
+        <references refid="class_g_p_i_o_driver_1a68be60ab1fb0e9c29f60818654766a32" compoundref="_g_p_i_o_driver_8cpp" startline="145" endline="174">GPIODriver::GPIORead</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Relay Board class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale</para>
+</simplesect>
+This is class is responsilbe for the Elego Relay Board. </para>
+    </detaileddescription>
+    <location file="src/peripherals/RelayBoard.h" line="20" column="1" bodyfile="src/peripherals/RelayBoard.h" bodystart="20" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_relay_board_1aa14251b65f8b4872cdf95c56951f0959" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Airflow</name></member>
+      <member refid="class_relay_board_1a8d4fba9b90f8a65a0f02ad9d5a35c148" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Close_Relay_Board</name></member>
+      <member refid="class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>GetAirflowState</name></member>
+      <member refid="class_relay_board_1a4725ac8db57d591dbe338f646cdda254" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>GetHeatingState</name></member>
+      <member refid="class_relay_board_1a32270d45de9d23698cf85fd3224f88c6" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>GetLightingState</name></member>
+      <member refid="class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>GetWateringState</name></member>
+      <member refid="class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Heating</name></member>
+      <member refid="class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Initialize</name></member>
+      <member refid="class_relay_board_1a0ce37124540bae0827a1b81e28841f70" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Lighting</name></member>
+      <member refid="class_relay_board_1af541df432f4ef6b385ee2e69c466b344" prot="private" virt="non-virtual"><scope>RelayBoard</scope><name>m_fanGPIO</name></member>
+      <member refid="class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>m_fanGPIOState</name></member>
+      <member refid="class_relay_board_1a56817d4c93db75ccb542f8ee403d8440" prot="private" virt="non-virtual"><scope>RelayBoard</scope><name>m_heaterGPIO</name></member>
+      <member refid="class_relay_board_1acda1026ec1a4a11016812efc2e7fe732" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>m_heaterGPIOState</name></member>
+      <member refid="class_relay_board_1aa781c5647863245c5ae7afbf6e185e59" prot="private" virt="non-virtual"><scope>RelayBoard</scope><name>m_lightsGPIO</name></member>
+      <member refid="class_relay_board_1aff19bd04e757a2442243d9f863b435ae" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>m_lightsGPIOState</name></member>
+      <member refid="class_relay_board_1ab567d2b303df89856d0e1e599aa538bc" prot="private" virt="non-virtual"><scope>RelayBoard</scope><name>m_pGPIODriver</name></member>
+      <member refid="class_relay_board_1a45807effbe5aaf2798d4f91dcf3c42d8" prot="private" virt="non-virtual"><scope>RelayBoard</scope><name>m_waterPumpGPIO</name></member>
+      <member refid="class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>m_waterPumpGPIOState</name></member>
+      <member refid="class_relay_board_1ad96963754490cea54db92cf32ccccf90" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>RelayBoard</name></member>
+      <member refid="class_relay_board_1a2339920ca78f22d9bbab349056ca261a" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Turn_Relays_Off</name></member>
+      <member refid="class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>Watering</name></member>
+      <member refid="class_relay_board_1af05bb34a287c76312104a427c86c658e" prot="public" virt="non-virtual"><scope>RelayBoard</scope><name>~RelayBoard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

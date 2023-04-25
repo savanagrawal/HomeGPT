@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gpio_8cc" xml:lang="en-US">
+<title>src/dependencies/spidevpp/libs/spidevpp/gpio.cc File Reference</title>
+<indexterm><primary>src/dependencies/spidevpp/libs/spidevpp/gpio.cc</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;gpio.h&quot;<?linebreak?>#include &lt;fstream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;thread&gt;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting>Include dependency graph for gpio.cc:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gpio_8cc__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacespidevpp">spidevpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

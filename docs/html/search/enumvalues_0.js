@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['exit_5fapplication_0',['EXIT_APPLICATION',['../_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;ClapThread.cpp'],['../_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;ControllerThread.cpp'],['../_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;IntruderThread.cpp'],['../_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;MoodThread.cpp']]]
+  ['analogtestreg_0',['AnalogTestReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a50244824f81dc258ffe75f2cfa79f4f3',1,'mfrc522::MFRC522']]],
+  ['autotestreg_1',['AutoTestReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a7673b1f3f1e0620ba14ab84eca449017',1,'mfrc522::MFRC522']]]
 ];

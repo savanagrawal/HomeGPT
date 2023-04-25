@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,11 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="HomeGPT LogoSmall.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="HomeGPT.png"/></td>
   <td id="projectalign">
-   <div id="projectname">HomeGPT<span id="projectnumber">&#160;Final Submission v1.0</span>
+   <div id="projectname">HomeGPT<span id="projectnumber">&#160;v.1.0</span>
    </div>
-   <div id="projectbrief">Real Time Embedded Project</div>
+   <div id="projectbrief">HomeGPT revolutionizes home automation with advanced features such as facial recognition for secure access, mood-responsive lighting, RFID-enabled garage entry, and clap-activated door closures. This system elevates the living experience by seamlessly blending security, convenience, and ambiance-enhancing technology.</div>
   </td>
  </tr>
  </tbody>
@@ -53,22 +49,6 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('globals.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -91,21 +71,80 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all file members with links to the files they belong to:</div><ul>
-<li>EVENT_OP_CODES&#160;:&#160;<a class="el" href="_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">ClapThread.cpp</a>, <a class="el" href="_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">ControllerThread.cpp</a>, <a class="el" href="_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">IntruderThread.cpp</a>, <a class="el" href="_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">MoodThread.cpp</a></li>
-<li>EXIT_APPLICATION&#160;:&#160;<a class="el" href="_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">ClapThread.cpp</a>, <a class="el" href="_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">ControllerThread.cpp</a>, <a class="el" href="_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">IntruderThread.cpp</a>, <a class="el" href="_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">MoodThread.cpp</a></li>
-<li>main()&#160;:&#160;<a class="el" href="src_2main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main.cpp</a></li>
+<div class="textblock">Here is a list of all file members with links to the files they belong to:</div>
+
+<h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
+<li>CLOCKID&#160;:&#160;<a class="el" href="_i2_c_driver_8cpp.html#a2694a39dfd1fa087ca6f9f391c91dae7">I2CDriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
+<li>DIRECTION_STRING_MAX_LENGTH&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#ad0ca8f10a33dc934babb22393b1eee16">GPIODriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
+<li>Event&#160;:&#160;<a class="el" href="_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3">EventHandler.h</a></li>
+<li>EVENT_OP_CODES&#160;:&#160;<a class="el" href="_audio_record_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">AudioRecordThread.cpp</a>, <a class="el" href="_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">ClapThread.cpp</a>, <a class="el" href="_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">ControllerThread.cpp</a>, <a class="el" href="_doors_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">DoorsThread.cpp</a>, <a class="el" href="_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">IntruderThread.cpp</a>, <a class="el" href="_intruder_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">IntruderMoodThread.cpp</a>, <a class="el" href="_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">MoodThread.cpp</a>, <a class="el" href="_r_f_i_d_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115">RFIDThread.cpp</a></li>
+<li>EXIT_APPLICATION&#160;:&#160;<a class="el" href="_audio_record_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">AudioRecordThread.cpp</a>, <a class="el" href="_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">ClapThread.cpp</a>, <a class="el" href="_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">ControllerThread.cpp</a>, <a class="el" href="_doors_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">DoorsThread.cpp</a>, <a class="el" href="_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">IntruderThread.cpp</a>, <a class="el" href="_intruder_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">IntruderMoodThread.cpp</a>, <a class="el" href="_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">MoodThread.cpp</a>, <a class="el" href="_r_f_i_d_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e">RFIDThread.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
+<li>GPIO_STRING_LENGTH&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#a437e2826e590435de33777cdab13faef">GPIODriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
+<li>HIGH&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">GPIODriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>I2C_CRC_FAILED&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3fa63b31d0c504bdae545fb5da13d59c986">I2CDriver.h</a></li>
+<li>I2C_FAIL&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3fa2fa4d728abcc354ab37d4ff073289900">I2CDriver.h</a></li>
+<li>I2C_IOCTL_FAILED&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3faa978b8c99ba81b70dcb4a660ec190c8b">I2CDriver.h</a></li>
+<li>I2C_OK&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3faeceba296bdda2b90e8835c431fe7a72a">I2CDriver.h</a></li>
+<li>I2C_READ_FAILED&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3fac86dfc8232f86c65e33a1b9491763a21">I2CDriver.h</a></li>
+<li>I2C_Return&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3f">I2CDriver.h</a></li>
+<li>I2C_WRITE_FAILED&#160;:&#160;<a class="el" href="_i2_c_driver_8h.html#a52c38e7692a76e897b00daa867b29d3fa43b4aeb860553fe1c22ab94cb6b4a446">I2CDriver.h</a></li>
+<li>IN&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#ac2bbd6d630a06a980d9a92ddb9a49928">GPIODriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>LOW&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#ab811d8c6ff3a505312d3276590444289">GPIODriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
+<li>main()&#160;:&#160;<a class="el" href="main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97">main.cc</a>, <a class="el" href="src_2main_8cpp.html#ac0f2228420376f4db7e1274f2b41667c">main.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
+<li>OUT&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#aec78e7a9e90a406a56f859ee456e8eae">GPIODriver.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>running&#160;:&#160;<a class="el" href="_controller_thread_8cpp.html#a2f45113638a0b749a8a205d2cd7fb42b">ControllerThread.cpp</a></li>
+</ul>
+
+
+<h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>setHUPHandler()&#160;:&#160;<a class="el" href="_controller_thread_8cpp.html#a20a45737018ec41ab19cb4f5164b26ac">ControllerThread.cpp</a></li>
 <li>sigHandler()&#160;:&#160;<a class="el" href="_controller_thread_8cpp.html#a844160e16f1a3e514df9ce65683e17bd">ControllerThread.cpp</a></li>
 </ul>
+
+
+<h3><a id="index_v" name="index_v"></a>- v -</h3><ul>
+<li>VALUE_STRING_MAX_LENGTH&#160;:&#160;<a class="el" href="_g_p_i_o_driver_8cpp.html#aad53eaa9f18598639a489d0a5c05cd02">GPIODriver.cpp</a></li>
+</ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
 </body>
 </html>

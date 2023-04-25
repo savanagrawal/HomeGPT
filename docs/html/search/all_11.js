@@ -1,4 +1,32 @@
 var searchData=
 [
-  ['_7ecircularqueue_0',['~CircularQueue',['../class_circular_queue.html#ac353e7d7ba809f5412a31f0694d6f607',1,'CircularQueue']]]
+  ['takepicture_0',['takePicture',['../class_intruder_mood_detection.html#abb06d66df53434a740d983ae59847c1f',1,'IntruderMoodDetection::takePicture()'],['../class_mood_detection.html#a6ccbb7812ef82e7adefda31bbf688c6d',1,'MoodDetection::takePicture()']]],
+  ['tcountervalueregh_1',['TCounterValueRegH',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a3ac38e27924e94a67fb817a883309183',1,'mfrc522::MFRC522']]],
+  ['tcountervalueregl_2',['TCounterValueRegL',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11aa8d709a47229dd8591f5a620fc892cab',1,'mfrc522::MFRC522']]],
+  ['test_3',['test',['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6',1,'test():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6',1,'test():&#160;EventHandler.h'],['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6',1,'test():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a098f6bcd4621d373cade4e832627b4f6',1,'test():&#160;EventHandler.h']]],
+  ['testadcreg_4',['TestADCReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a941ecf7c53cf726968861607c4b5e5f7',1,'mfrc522::MFRC522']]],
+  ['testbusreg_5',['TestBusReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a649cac3dfc392bc43209500fb785dc14',1,'mfrc522::MFRC522']]],
+  ['testdac1reg_6',['TestDAC1Reg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a38dd71ef93140244120bb7b91f816e68',1,'mfrc522::MFRC522']]],
+  ['testdac2reg_7',['TestDAC2Reg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11abea8ddee770eff435fbb6bacac13a481',1,'mfrc522::MFRC522']]],
+  ['testpinenreg_8',['TestPinEnReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11aa3bebfe547d6c53c3d0efe77a40c9935',1,'mfrc522::MFRC522']]],
+  ['testpinvaluereg_9',['TestPinValueReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a94cf3b29f1e8ef62a57563fc6c443fa3',1,'mfrc522::MFRC522']]],
+  ['testsel1reg_10',['TestSel1Reg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a6995fdac6117f20475b18d8f3ac3b37c',1,'mfrc522::MFRC522']]],
+  ['testsel2reg_11',['TestSel2Reg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11aee2f6cf70362951f686e90fb3e935d50',1,'mfrc522::MFRC522']]],
+  ['threads_12',['Threads',['../class_threads.html',1,'']]],
+  ['threads_2eh_13',['Threads.h',['../_threads_8h.html',1,'']]],
+  ['timerevent_14',['timerEvent',['../class_cpp_timer_callback.html#af6b39f5eb8e98bfc1b301ac3f25276e9',1,'CppTimerCallback']]],
+  ['tmodereg_15',['TModeReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a49e463ef0637de855d7f18f1b45d2183',1,'mfrc522::MFRC522']]],
+  ['todo_20list_16',['Todo List',['../todo.html',1,'']]],
+  ['tprescalerreg_17',['TPrescalerReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11aa2858d5ecb5db42b20bf9f26e8a82a85',1,'mfrc522::MFRC522']]],
+  ['treloadregh_18',['TReloadRegH',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a7bc82b693e1f953c6ece972628b974d0',1,'mfrc522::MFRC522']]],
+  ['treloadregl_19',['TReloadRegL',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a053386cc993ce5f6432efcf222758356',1,'mfrc522::MFRC522']]],
+  ['trim_20',['trim',['../class_intruder_dataset_creator.html#ac5acff14ff6ccb3f26c0af29c53bb611',1,'IntruderDatasetCreator']]],
+  ['turn_5frelays_5foff_21',['Turn_Relays_Off',['../class_relay_board.html#a2339920ca78f22d9bbab349056ca261a',1,'RelayBoard']]],
+  ['turnoffled_22',['turnOffLED',['../class_l_e_d_controller.html#ade5fb7f7f056675c85777f55579277de',1,'LEDController']]],
+  ['turnoffrgbled_23',['turnOffRGBLED',['../class_l_e_d_controller.html#a31ed805398ebb90fe4c8662b702c40aa',1,'LEDController']]],
+  ['turnonled_24',['turnOnLED',['../class_l_e_d_controller.html#af800f0bcab25071bb430382bebb3298a',1,'LEDController']]],
+  ['txaskreg_25',['TxASKReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a2bdde783dcc91f1f456d188f3d4d71a6',1,'mfrc522::MFRC522']]],
+  ['txcontrolreg_26',['TxControlReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a414850094de7c1e66a844e1a40978a33',1,'mfrc522::MFRC522']]],
+  ['txmodereg_27',['TxModeReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11ab6cd4c5dcfa675bbf5b2c162d47ba78e',1,'mfrc522::MFRC522']]],
+  ['txselreg_28',['TxSelReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11ad0479359a7a1697baed406f972601bdd',1,'mfrc522::MFRC522']]]
 ];

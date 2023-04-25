@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gpio_8h_source" xml:lang="en-US">
+<title>gpio.h</title>
+<indexterm><primary>src/dependencies/spidevpp/libs/spidevpp/gpio.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;Copyright&#32;(C)&#32;2021&#32;twyleg</emphasis>
+2 <emphasis role="preprocessor">#pragma&#32;once</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+5 
+6 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacespidevpp">spidevpp</link>&#32;{
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classspidevpp_1_1_gpio">Gpio</link>&#32;{
+9 
+10 <emphasis role="keyword">public</emphasis>:
+11 
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum&#32;class</emphasis>&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">Direction</link>&#32;{
+13 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08aa84cc046d48610b05c21fd3670d0c829">INPUT</link>,
+14 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34">OUTPUT</link>
+15 &#32;&#32;&#32;&#32;};
+16 
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">enum&#32;class</emphasis>&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link>&#32;{
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">low</link>&#32;=&#32;0,
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba8d966b2253a917086c8604959e152243">high</link>&#32;=&#32;1
+20 &#32;&#32;&#32;&#32;};
+21 
+22 &#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio">Gpio</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;pin,&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">Direction</link>&#32;direction,&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link>&#32;initialValue&#32;=&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">Value::low</link>);
+23 
+24 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024">setValue</link>(<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link>);
+25 &#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link>&#32;<link linkend="_classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5">getValue</link>();
+26 
+27 <emphasis role="keyword">private</emphasis>:
+28 
+29 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;mPin;
+30 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08">Direction</link>&#32;mDirection;
+31 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;mDirectionFilePath;
+32 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;mValueFilePath;
+33 
+34 &#32;&#32;&#32;&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b">Value</link>&#32;mValue;
+35 
+36 };
+37 
+38 }
+</programlisting></section>

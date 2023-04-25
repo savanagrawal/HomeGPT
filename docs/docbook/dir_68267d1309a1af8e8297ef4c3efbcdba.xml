@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba" xml:lang="en-US">
+<title>src Directory Reference</title>
+<indexterm><primary>src Directory Reference</primary></indexterm>
+Directory dependency graph for src:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_6f0212c19bb1afa0d3827894a1d260c9">clap-detection</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_41ef5d8a90b9cc03a02949a5c062e6f0">controller</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_2676e00fd6700c28f8e3892c4c165cb2">dependencies</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_84c01faae84cc359912680153beabf6c">intruder-detection</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_6bdc88b2989357d4fa7c175bb154cd2d">intruder-mood-detection</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_8eb9addc559afccb814fe5975f6c2253">mood-detection</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_fbf0f2406da70b7242e9fe36900a795c">peripherals</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_bfedb72b9d87795234454f6223b9ab1e">thread</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_313caf1132e152dd9b58bea13a4052ca">utils</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src_2main_8cpp">main.cpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

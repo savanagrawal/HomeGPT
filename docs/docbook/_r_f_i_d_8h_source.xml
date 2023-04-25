@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__r_f_i_d_8h_source" xml:lang="en-US">
+<title>RFID.h</title>
+<indexterm><primary>src/peripherals/RFID.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+2 <emphasis role="preprocessor">#ifndef&#32;RFID_H</emphasis>
+3 <emphasis role="preprocessor">#define&#32;RFID_H</emphasis>
+4 
+5 <emphasis role="preprocessor">#include&#32;&quot;EventHandler.h&quot;</emphasis>
+6 
+7 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_spidev__impl_8h">spi/spidev_impl.h</link>&quot;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_sys__gpio__impl_8h">spi/sys_gpio_impl.h</link>&quot;</emphasis>
+9 
+10 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_dependencies_2mfrc522_2mfrc522_8h">mfrc522/mfrc522.h</link>&gt;</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&lt;<link linkend="_gpio_8h">spidevpp/gpio.h</link>&gt;</emphasis>
+12 
+13 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+14 <emphasis role="preprocessor">#include&#32;&lt;thread&gt;</emphasis>
+15 
+16 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_r_f_i_d">RFID</link>&#32;{
+17 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed">RFID</link>()&#32;:&#32;spi(<emphasis role="stringliteral">&quot;/dev/spidev0.0&quot;</emphasis>)&#32;{
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spi.<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7">setBitsPerWord</link>(8);
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spi.<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb">setSpeed</link>(488000);
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;spi.<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>.<link linkend="_classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1">setMode</link>(0);
+22 
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;spi.<link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link>&#32;&lt;&lt;&#32;std::endl;
+24 
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_sys_gpio">SysGpio</link>&#32;resetPin(25,&#32;<link linkend="_classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08a50a87f0d71f7221582dad4bf507a0f34">spidevpp::Gpio::Direction::OUTPUT</link>,&#32;<link linkend="_classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509ba53cced8d281a1a0ace3cb6594daaa4f7">spidevpp::Gpio::Value::low</link>);
+26 
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmfrc522_1_1_m_f_r_c522">mfrc522::MFRC522</link>&#32;mfrc(spi,&#32;resetPin);
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mfrc.<link linkend="_classmfrc522_1_1_m_f_r_c522_1affff6fd4010044cc4337803de579b4f0">PCD_Init</link>();
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Start&#32;read&#32;loop!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(<emphasis role="keyword">true</emphasis>)&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;eventHandler&#32;=&#32;<link linkend="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604">EventHandler::getInstance</link>();
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Look&#32;for&#32;a&#32;card</emphasis>
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!mfrc.<link linkend="_classmfrc522_1_1_m_f_r_c522_1a8b123b82f4f6dffa7a88e8b61f2806a3">PICC_IsNewCardPresent</link>())&#32;{
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::this_thread::sleep_for(std::chrono::milliseconds(100));
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+39 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+40 
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!mfrc.<link linkend="_classmfrc522_1_1_m_f_r_c522_1abc5229168077788c4ba0c67c568f479e">PICC_ReadCardSerial</link>())&#32;{
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;UID</emphasis>
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;UID&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(uint8_t&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;mfrc.<link linkend="_classmfrc522_1_1_m_f_r_c522_1a6597992fa684ba75342a587a65cbc3e5">uid</link>.<link linkend="_structmfrc522_1_1_m_f_r_c522_1_1_uid_1a3d5653ea12fd20b8c755b34cd0ea74de">size</link>;&#32;++i)&#32;{
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UID&#32;+=&#32;std::to_string(mfrc.<link linkend="_classmfrc522_1_1_m_f_r_c522_1a6597992fa684ba75342a587a65cbc3e5">uid</link>.<link linkend="_structmfrc522_1_1_m_f_r_c522_1_1_uid_1a1e24dca2d0702fbb6352a41cb598a0a9">uidByte</link>[i]);
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+50 
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(UID&#32;==&#32;<emphasis role="stringliteral">&quot;249240189176&quot;</emphasis>)&#32;{
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Emit&#32;event.</emphasis>
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Welcome...\n&quot;</emphasis>);
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventHandler.<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>(Event::RfidAuthenticated);
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//std::this_thread::sleep_for(std::chrono::seconds(3));</emphasis>
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//return;</emphasis>
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Emit&#32;fail&#32;event.</emphasis>
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Invalid&#32;rfid!&#32;Try&#32;again&#32;in&#32;few&#32;seconds...\n&quot;</emphasis>);
+60 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::this_thread::sleep_for(std::chrono::seconds(3));
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+62 
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+64 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+65 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_r_f_i_d_1a55ae95ac576404d49352dfcbb47556ad">Initialize</link>();
+67 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_r_f_i_d_1af938284435e7988901f9b0ff77ef8aa2">setMfrc</link>(<link linkend="_classmfrc522_1_1_m_f_r_c522">mfrc522::MFRC522</link>*&#32;mfrc)&#32;{
+69 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mfrcptr&#32;=&#32;mfrc;
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+71 
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_r_f_i_d_1a8a7a0e6133646a29c2102cc1b1633650">start</link>()&#32;{
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Start&#32;read&#32;loop!&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;return;</emphasis>
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(<emphasis role="keyword">true</emphasis>)&#32;{
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;eventHandler&#32;=&#32;<link linkend="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604">EventHandler::getInstance</link>();
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;std::to_string(mfrcptr-&gt;<link linkend="_classmfrc522_1_1_m_f_r_c522_1a8b123b82f4f6dffa7a88e8b61f2806a3">PICC_IsNewCardPresent</link>())&#32;&lt;&lt;&#32;std::endl;
+80 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Look&#32;for&#32;a&#32;card</emphasis>
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!mfrcptr-&gt;<link linkend="_classmfrc522_1_1_m_f_r_c522_1a8b123b82f4f6dffa7a88e8b61f2806a3">PICC_IsNewCardPresent</link>())&#32;{
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::this_thread::sleep_for(std::chrono::seconds(1));
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+87 
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!mfrcptr-&gt;<link linkend="_classmfrc522_1_1_m_f_r_c522_1abc5229168077788c4ba0c67c568f479e">PICC_ReadCardSerial</link>())&#32;{
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;UID</emphasis>
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;UID&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(uint8_t&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;mfrcptr-&gt;<link linkend="_classmfrc522_1_1_m_f_r_c522_1a6597992fa684ba75342a587a65cbc3e5">uid</link>.<link linkend="_structmfrc522_1_1_m_f_r_c522_1_1_uid_1a3d5653ea12fd20b8c755b34cd0ea74de">size</link>;&#32;++i)&#32;{
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;UID&#32;+=&#32;std::to_string(mfrcptr-&gt;<link linkend="_classmfrc522_1_1_m_f_r_c522_1a6597992fa684ba75342a587a65cbc3e5">uid</link>.<link linkend="_structmfrc522_1_1_m_f_r_c522_1_1_uid_1a1e24dca2d0702fbb6352a41cb598a0a9">uidByte</link>[i]);
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+97 
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(UID&#32;==&#32;<emphasis role="stringliteral">&quot;249240189176&quot;</emphasis>)&#32;{
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Emit&#32;event.</emphasis>
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Welcome...&quot;</emphasis>);
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventHandler.<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>(Event::RfidAuthenticated);
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Emit&#32;fail&#32;event.</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;Invalid&#32;rfid!&quot;</emphasis>);
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;printf(<emphasis role="stringliteral">&quot;\n&quot;</emphasis>);
+108 
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+112 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classmfrc522_1_1_m_f_r_c522">mfrc522::MFRC522</link>*&#32;mfrcptr;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_spidev">Spidev</link>&#32;spi;
+115 };
+116 
+117 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

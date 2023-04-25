@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['generatemodel_0',['generateModel',['../class_intruder_dataset_trainer.html#a6d2299bbf12e0484dc930a7e53634c4a',1,'IntruderDatasetTrainer']]],
-  ['getcamera_1',['getCamera',['../class_camera.html#a5873ce618d501a93c011291b03d1156c',1,'Camera']]],
-  ['getintruderthread_2',['getIntruderThread',['../class_threads.html#ad677d5456c87b4d15ee87bdbfa8ac7ce',1,'Threads']]],
-  ['getlastintegerinfile_3',['getLastIntegerInFile',['../class_intruder_dataset_creator.html#a7eb468d36cfbef516594a453b516de35',1,'IntruderDatasetCreator']]],
-  ['getmoodsvm_4',['getMoodSvm',['../class_globals.html#a6175ae15868ba84a14fd1cf1823d8dbd',1,'Globals']]]
+  ['fft_0',['fft',['../class_clap_detection.html#a457a526ff1d5c5d9cef68b62f4f6a0aa',1,'ClapDetection']]],
+  ['find_5fper_1',['find_per',['../class_clap_detection.html#a909b33bb375c84ab4b348eb9da0a1cf4',1,'ClapDetection']]],
+  ['find_5fper_5fdata_2',['find_per_data',['../class_clap_detection.html#aa9f00a28382879aaba458015d3e6acce',1,'ClapDetection']]],
+  ['findstringinfile_3',['findStringInFile',['../class_intruder_dataset_creator.html#a73e5387e5dfa8223ea253ac17352ea07',1,'IntruderDatasetCreator']]]
 ];

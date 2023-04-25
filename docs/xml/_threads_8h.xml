@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_threads_8h" kind="file" language="C++">
+    <compoundname>Threads.h</compoundname>
+    <includes refid="_intruder_thread_8h" local="yes">../thread/intruder-detection/IntruderThread.h</includes>
+    <includes refid="_mood_thread_8h" local="yes">../thread/mood-detection/MoodThread.h</includes>
+    <incdepgraph>
+      <node id="17">
+        <label>DatasetCreator.h</label>
+        <link refid="_dataset_creator_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>DatasetTrainer.h</label>
+        <link refid="_dataset_trainer_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>IntruderDetection.h</label>
+        <link refid="_intruder_detection_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>MoodDetection.h</label>
+        <link refid="_mood_detection_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../CppThread.h</label>
+        <link refid="_cpp_thread_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../thread/intruder-detection/IntruderThread.h</label>
+        <link refid="_intruder_thread_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../thread/mood-detection/MoodThread.h</label>
+        <link refid="_mood_thread_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../utils/Globals.h</label>
+        <link refid="_globals_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/utils/Threads.h</label>
+        <link refid="_threads_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>CppTimer.h</label>
+      </node>
+      <node id="7">
+        <label>EventHandler.h</label>
+      </node>
+      <node id="14">
+        <label>fstream</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>opencv2/face.hpp</label>
+      </node>
+      <node id="6">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+      <node id="15">
+        <label>sstream</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>thread</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_threads" prot="public">Threads</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale </para>
+</simplesect>
+<simplesect kind="version"><para>0.1</para>
+</simplesect>
+Store all threads at a single class and use them to kill whenever we want. Note the difference an &apos;s&apos; makes for this class. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>THREADS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>THREADS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../thread/intruder-detection/IntruderThread.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../thread/mood-detection/MoodThread.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_threads" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_threads" kindref="compound">Threads</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="class_threads_1a5ecd94bd7d9420d676a75a4974f32e11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_threads_1a5ecd94bd7d9420d676a75a4974f32e11" kindref="member">setIntruderThread</ref>(<ref refid="class_intruder_thread" kindref="compound">IntruderThread</ref>*<sp/>it)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intruderThread<sp/>=<sp/>it;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_intruder_thread" kindref="compound">IntruderThread</ref><sp/><ref refid="class_threads_1ad677d5456c87b4d15ee87bdbfa8ac7ce" kindref="member">getIntruderThread</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;intruderThread;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_intruder_thread" kindref="compound">IntruderThread</ref>*<sp/>intruderThread;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mood_thread" kindref="compound">MoodThread</ref><sp/>moodThread;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/utils/Threads.h"/>
+  </compounddef>
+</doxygen>

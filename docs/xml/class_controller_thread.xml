@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_controller_thread" kind="class" language="C++" prot="public">
+    <compoundname>ControllerThread</compoundname>
+    <basecompoundref refid="class_cpp_thread" prot="public" virt="non-virtual">CppThread</basecompoundref>
+    <includes refid="_controller_thread_8h" local="no">ControllerThread.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbe" prot="private" static="no" strong="no">
+        <type></type>
+        <name>argvEnum</name>
+        <qualifiedname>ControllerThread::argvEnum</qualifiedname>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea76d83f1a28344d0b17ad806b8aa0a60a" prot="private">
+          <name>CreateIntruderDataset</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea931afb94113c261750c1408dda4448ac" prot="private">
+          <name>TrainIntruderModel</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeab31721ecda4b88dbe7089c202ee3d3ec" prot="private">
+          <name>DetectIntruder</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeac193abf2156af5e5ea20130590c78830" prot="private">
+          <name>DetectClap</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea94a0504099ba4d47c625eee6fe732d34" prot="private">
+          <name>RfidStart</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeaa167c0265c7e3b2e576401f3f16780a8" prot="private">
+          <name>Debug</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea452854db9c3d14c400ba6de715e44c9c" prot="private">
+          <name>IntruderMoodDetectionStart</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="45" column="9" bodyfile="src/thread/ControllerThread.h" bodystart="45" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_controller_thread_1a3fa5c6ebe6170eafc00148a18ee34614" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ControllerThread::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <qualifiedname>ControllerThread::argc</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="41" column="13" bodyfile="src/thread/ControllerThread.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_thread_1a7410967472a0a8a0876d2d3f81eaf44a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; ControllerThread::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <qualifiedname>ControllerThread::argv</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="43" column="21" bodyfile="src/thread/ControllerThread.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_thread_1ae9582038f5aecce75634e99c7763f756" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, argvEnum &gt;</type>
+        <definition>std::map&lt;std::string, argvEnum&gt; ControllerThread::argvValues</definition>
+        <argsstring></argsstring>
+        <name>argvValues</name>
+        <qualifiedname>ControllerThread::argvValues</qualifiedname>
+        <initializer>= {
+            {&quot;--create-intruder-dataset&quot;, CreateIntruderDataset},
+            {&quot;--cid&quot;, CreateIntruderDataset},
+            {&quot;--train-intruder-model&quot;, TrainIntruderModel},
+            {&quot;--tim&quot;, TrainIntruderModel},
+            {&quot;--detect-intruder&quot;, DetectIntruder},
+            {&quot;--di&quot;, DetectIntruder},
+            {&quot;--detect-clap&quot;, DetectClap},
+            {&quot;--dc&quot;, DetectClap},
+            {&quot;--rfid&quot;, RfidStart},
+            {&quot;--d&quot;, Debug},
+            {&quot;--imd&quot;, IntruderMoodDetectionStart}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="55" column="18" bodyfile="src/thread/ControllerThread.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_controller_thread_1a00cd6502504f5f1e680e6be3f60a987d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ControllerThread::ControllerThread</definition>
+        <argsstring>()</argsstring>
+        <name>ControllerThread</name>
+        <qualifiedname>ControllerThread::ControllerThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor for our controller thread. All child threads are initiallized here. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="26" column="9" bodyfile="src/thread/ControllerThread.h" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_thread_1a53ad3a44cd24e685c06262380ea6c5b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ControllerThread::setArgs</definition>
+        <argsstring>(int ac, std::vector&lt; std::string &gt; av)</argsstring>
+        <name>setArgs</name>
+        <qualifiedname>ControllerThread::setArgs</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>ac</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>av</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="28" column="14" bodyfile="src/thread/ControllerThread.h" bodystart="28" bodyend="36"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_controller_thread_1ae8206a23ab1a414f2956424def2e759c" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ControllerThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>ControllerThread::run</qualifiedname>
+        <reimplements refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manage the controller thread runnable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/ControllerThread.h" line="38" column="14" bodyfile="src/thread/ControllerThread.cpp" bodystart="79" bodyend="286"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_controller" kindref="compound">Controller</ref> Thread to manage all child threads. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale &amp; Savan Agrawal </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ControllerThread</label>
+        <link refid="class_controller_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ControllerThread</label>
+        <link refid="class_controller_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/thread/ControllerThread.h" line="21" column="1" bodyfile="src/thread/ControllerThread.h" bodystart="21" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_controller_thread_1a3fa5c6ebe6170eafc00148a18ee34614" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>argc</name></member>
+      <member refid="class_controller_thread_1a7410967472a0a8a0876d2d3f81eaf44a" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>argv</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbe" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>argvEnum</name></member>
+      <member refid="class_controller_thread_1ae9582038f5aecce75634e99c7763f756" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>argvValues</name></member>
+      <member refid="class_controller_thread_1a00cd6502504f5f1e680e6be3f60a987d" prot="public" virt="non-virtual"><scope>ControllerThread</scope><name>ControllerThread</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea76d83f1a28344d0b17ad806b8aa0a60a" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>CreateIntruderDataset</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeaa167c0265c7e3b2e576401f3f16780a8" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>Debug</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeac193abf2156af5e5ea20130590c78830" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>DetectClap</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbeab31721ecda4b88dbe7089c202ee3d3ec" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>DetectIntruder</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea452854db9c3d14c400ba6de715e44c9c" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>IntruderMoodDetectionStart</name></member>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>ControllerThread</scope><name>join</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea94a0504099ba4d47c625eee6fe732d34" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>RfidStart</name></member>
+      <member refid="class_controller_thread_1ae8206a23ab1a414f2956424def2e759c" prot="private" virt="virtual"><scope>ControllerThread</scope><name>run</name></member>
+      <member refid="class_controller_thread_1a53ad3a44cd24e685c06262380ea6c5b8" prot="public" virt="non-virtual"><scope>ControllerThread</scope><name>setArgs</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>ControllerThread</scope><name>start</name></member>
+      <member refid="class_controller_thread_1ade73b68c224ca20d8bd61fe1b54e7cbea931afb94113c261750c1408dda4448ac" prot="private" virt="non-virtual"><scope>ControllerThread</scope><name>TrainIntruderModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

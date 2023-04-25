@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__cpp_thread_8h_source" xml:lang="en-US">
+<title>CppThread.h</title>
+<indexterm><primary>src/thread/CppThread.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;__CPP_THREAD_H_</emphasis>
+2 <emphasis role="preprocessor">#define&#32;__CPP_THREAD_H_</emphasis>
+3 
+11 <emphasis role="preprocessor">#include&#32;&lt;thread&gt;</emphasis>
+12 
+20 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_cpp_thread">CppThread</link>&#32;{
+21 
+22 <emphasis role="keyword">public</emphasis>:
+26 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_thread_1a1be46d1be000f41a763289300623c609">start</link>()&#32;{
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uthread&#32;=&#32;std::thread(&amp;<link linkend="_class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</link>,&#32;<emphasis role="keyword">this</emphasis>);
+28 &#32;&#32;&#32;&#32;}
+29 
+33 &#32;&#32;&#32;&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f">join</link>()&#32;{
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uthread.join();
+35 &#32;&#32;&#32;&#32;}
+36 
+37 <emphasis role="keyword">protected</emphasis>:
+43 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_thread_1a792b79e72250710147c452648def4a78">run</link>()&#32;=&#32;0;&#32;
+44 
+45 <emphasis role="keyword">private</emphasis>:
+46 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;pointer&#32;to&#32;the&#32;thread</emphasis>
+47 &#32;&#32;&#32;&#32;std::thread&#32;uthread;
+48 };
+49 
+50 
+51 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

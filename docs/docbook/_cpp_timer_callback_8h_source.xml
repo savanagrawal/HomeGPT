@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__cpp_timer_callback_8h_source" xml:lang="en-US">
+<title>CppTimerCallback.h</title>
+<indexterm><primary>src/utils/CppTimerCallback.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;__CPP_TIMER_CALLBACK</emphasis>
+2 <emphasis role="preprocessor">#define&#32;__CPP_TIMER_CALLBACK</emphasis>
+3 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+4 <emphasis role="preprocessor">#include&#32;&quot;CppTimer.h&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+6 
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_cpp_timer_callback">CppTimerCallback</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;CppTimer&#32;{
+9 
+10 <emphasis role="keyword">public</emphasis>:
+11 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_cpp_timer_callback_1_1_runnable">Runnable</link>&#32;{
+12 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+13 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_timer_callback_1_1_runnable_1af8d11a3b580e76431151e76ac1886e6e">run</link>()&#32;=&#32;0;
+14 
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;void&#32;unregisterSelf()&#32;{</emphasis>
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;CppTimerCallback&#32;cb;</emphasis>
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;cb.unregisterEventRunnable();</emphasis>
+18 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;}</emphasis>
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+20 
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_timer_callback_1ae6e815f1c3b65ea4f10fe0332e13acb9">registerEventRunnable</link>(<link linkend="_class_cpp_timer_callback_1_1_runnable">Runnable</link>&#32;&amp;h)&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cppTimerEventRunnable&#32;=&#32;&amp;h;
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+24 
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_timer_callback_1a29d8d5a426a3d15bca8a42c2c897f50f">unregisterEventRunnable</link>()&#32;{
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cppTimerEventRunnable&#32;=&#32;NULL;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_cpp_timer_callback_1af6b39f5eb8e98bfc1b301ac3f25276e9">timerEvent</link>()&#32;{
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(cppTimerEventRunnable)&#32;{
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cppTimerEventRunnable-&gt;<link linkend="_class_cpp_timer_callback_1_1_runnable_1af8d11a3b580e76431151e76ac1886e6e">run</link>();
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+34 
+35 <emphasis role="keyword">private</emphasis>:
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Runnable*&#32;cppTimerEventRunnable&#32;=&#32;NULL;
+37 
+38 };
+39 
+40 
+41 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

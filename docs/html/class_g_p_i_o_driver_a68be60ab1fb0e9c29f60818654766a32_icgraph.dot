@@ -1,0 +1,17 @@
+digraph "GPIODriver::GPIORead"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="GPIODriver::GPIORead",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="RelayBoard::GetAirflowState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_relay_board.html#a4b5cecaeadec360c688868a230a7d3a8",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="RelayBoard::GetHeatingState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_relay_board.html#a4725ac8db57d591dbe338f646cdda254",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="RelayBoard::GetLightingState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_relay_board.html#a32270d45de9d23698cf85fd3224f88c6",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="RelayBoard::GetWateringState",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_relay_board.html#a2f9f8154a49a9d8ed3b7c54c39a5ed65",tooltip=" "];
+}

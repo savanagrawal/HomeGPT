@@ -1,0 +1,299 @@
+.TH "I2CDriver" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2CDriver \- I2C Driver class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <I2CDriver\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBI2C_Setup_File\fP (int addres)"
+.br
+.ti -1c
+.RI "int \fBI2C_Close_File\fP (int fd)"
+.br
+.ti -1c
+.RI "\fBI2C_Return\fP \fBPlain_I2C_Write_Read\fP (int fd, uint16_t command, uint8_t *buffer, uint8_t readLength, uint16_t delay=10)"
+.br
+.ti -1c
+.RI "\fBI2C_Return\fP \fBPlain_I2C_Write_Read_CRC8\fP (int fd, uint16_t command, uint16_t *buffer, uint8_t readlen, uint16_t delay=10)"
+.br
+.ti -1c
+.RI "void \fBDelay\fP (unsigned int timeMs)"
+.br
+.ti -1c
+.RI "int \fBI2C_Read_Byte\fP (int fd)"
+.br
+.ti -1c
+.RI "int \fBI2C_Read_8bitReg\fP (int fd, int command)"
+.br
+.ti -1c
+.RI "int \fBI2C_Read_16bitReg\fP (int fd, int command)"
+.br
+.ti -1c
+.RI "int \fBI2C_Write_Byte\fP (int fd, int data)"
+.br
+.ti -1c
+.RI "int \fBI2C_Write_8bitReg\fP (int fd, int command, int data)"
+.br
+.ti -1c
+.RI "int \fBI2C_Write_16bitReg\fP (int fd, int command, int data)"
+.br
+.ti -1c
+.RI "int \fBI2C_Write_Block\fP (int fd, int command, uint8_t length, uint8_t *buff)"
+.br
+.ti -1c
+.RI "int \fBI2C_Read_Block\fP (int fd, int command, uint8_t *buff)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+I2C Driver class\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Chinmay Nagrale
+.RE
+.PP
+This is class is responsilbe for handling I2C communication\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "void I2CDriver::Delay (unsigned int timeMs)"
+Suspends the execution of the calling thread until at least the time specified has elapsed\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fItimeMs\fP Time to wait in miliseconds\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Close_File (int fd)"
+Close file descriptor
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+result of file descriptor close operation\&. 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Read_16bitReg (int fd, int command)"
+Use SMBUS to Write a byte word and read 2 bytes\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A 16-bit unsigned word received from the device else negative errno 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Read_8bitReg (int fd, int command)"
+Use SMBUS to Write a byte word and read one byte from\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A data byte received from the device elese negative errno\&. 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Read_Block (int fd, int command, uint8_t * buffer)"
+Use SMBUS to Read n-bytes using a command / addressing specific register\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&. 
+.br
+\fIbuffer\fP Buffer to read the data to\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The number of read bytes 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Read_Byte (int fd)"
+Use SMBUS to read one byte\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A data byte received from the device elese negative errno\&. 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Setup_File (int addr)"
+Open I2C File descriptor for target slave device\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddr\fP Address of the slave device\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+I2C File descriptor for specified address of the slave device\&. 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Write_16bitReg (int fd, int command, int data)"
+Use SMBUS to Write a 2-byte word using a command / addressing specific register\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&. 
+.br
+\fIdata\fP Data to be written\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else negative errno 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Write_8bitReg (int fd, int command, int data)"
+Use SMBUS to Write a byte word uing a command / addressing specific register\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&. 
+.br
+\fIdata\fP Data to be written\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else negative errno 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Write_Block (int fd, int command, uint8_t length, uint8_t * buffer)"
+Use SMBUS to Write n-bytes using a command / addressing specific register\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&. 
+.br
+\fIlength\fP Number of bytes to be written from the data buffer\&. 
+.br
+\fIbuffer\fP Buffer containing data to be written\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else negative errno 
+.RE
+.PP
+
+.SS "int I2CDriver::I2C_Write_Byte (int fd, int data)"
+Use SMBUS to Write a byte word\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIdata\fP Data to be written\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else negative errno 
+.RE
+.PP
+
+.SS "\fBI2C_Return\fP I2CDriver::Plain_I2C_Write_Read (int fd, uint16_t command, uint8_t * buffer, uint8_t readLength, uint16_t delay = \fC10\fP)"
+Use Plain I2C to read n-bytes a using a 2byte command\&. Pass 0 for readLength to just write\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&. 
+.br
+\fIbuffer\fP Buffer to read the data to\&. 
+.br
+\fIreadLength\fP Number of bytes to recieve 
+.br
+\fIdelay\fP Delay between read and write (10ms by default)
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number 
+.RE
+.PP
+
+.SS "\fBI2C_Return\fP I2CDriver::Plain_I2C_Write_Read_CRC8 (int fd, uint16_t command, uint16_t * buffer, uint8_t readlen, uint16_t delay = \fC10\fP)"
+Use Plain I2C to read n-bytes using a uint16_t command and perform a CRC8 on reply uint16_ts \&. Pass 0 for readLength to just write\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fIfd\fP File descriptor of the device\&. 
+.br
+\fIcommand\fP Command / Register to address\&. 
+.br
+\fIbuffer\fP Buffer to read the data to\&. 
+.br
+\fIreadlen\fP number of uint16_t to read 
+.br
+\fIdelay\fP Delay between read and write
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Zero on success else error number
+.RE
+.PP
+\fBTodo\fP
+.RS 4
+: Appopriate command bytes 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

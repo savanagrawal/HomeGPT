@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_spidev" xml:lang="en-US">
+<title>Spidev Class Reference</title>
+<indexterm><primary>Spidev</primary></indexterm>
+<para>
+<computeroutput>#include &lt;spidev_impl.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Spidev:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spidev__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Spidev:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spidev__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_spidev_1a31a4acfa97d5d0f2a2bd41c019a74323">Spidev</link> (const std::string &amp;device)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spidev_1a40c147da19e908a2e8e76b8b586b1170">write</link> (char *pData, size_t len) final</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b">read</link> (char *pData, size_t len) final</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_spidev_1a38c616bb4143f726ce083c947d7a6956">writeRead</link> (char *pData, size_t len) final</para>
+</listitem>
+            <listitem><para>char <link linkend="_class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1">writeRead</link> (char data) final</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classspidevpp_1_1_spi">spidevpp::Spi</link> <link linkend="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553">mSpi</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_spidev_1a31a4acfa97d5d0f2a2bd41c019a74323"/><section>
+    <title>Spidev()</title>
+<indexterm><primary>Spidev</primary><secondary>Spidev</secondary></indexterm>
+<indexterm><primary>Spidev</primary><secondary>Spidev</secondary></indexterm>
+<para><computeroutput>Spidev::Spidev (const std::string &amp; device)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>Spidev</secondary></indexterm>
+<indexterm><primary>Spidev</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>void Spidev::read (char * pData, size_t len)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7">mfrc522::ISpi</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spidev_a7832e3c327f0c0df825728f6aabe0a0b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_spidev_1a40c147da19e908a2e8e76b8b586b1170"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>Spidev</secondary></indexterm>
+<indexterm><primary>Spidev</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>void Spidev::write (char * pData, size_t len)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed">mfrc522::ISpi</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spidev_a40c147da19e908a2e8e76b8b586b1170_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_spidev_1a38c616bb4143f726ce083c947d7a6956"/><section>
+    <title>writeRead()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>Spidev</secondary></indexterm>
+<indexterm><primary>Spidev</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>void Spidev::writeRead (char * pData, size_t len)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac">mfrc522::ISpi</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spidev_a38c616bb4143f726ce083c947d7a6956_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_spidev_1afccf95fa06e9ea6ef9629935d73d28f1"/><section>
+    <title>writeRead()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>Spidev</secondary></indexterm>
+<indexterm><primary>Spidev</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>char Spidev::writeRead (char data)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683">mfrc522::ISpi</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_spidev_afccf95fa06e9ea6ef9629935d73d28f1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_spidev_1a2a5b2fcdd52b384d28381940b95aa553"/><section>
+    <title>mSpi</title>
+<indexterm><primary>mSpi</primary><secondary>Spidev</secondary></indexterm>
+<indexterm><primary>Spidev</primary><secondary>mSpi</secondary></indexterm>
+<para><computeroutput><link linkend="_classspidevpp_1_1_spi">spidevpp::Spi</link> Spidev::mSpi</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/peripherals/spi/<link linkend="_spidev__impl_8h">spidev_impl.h</link></section>
+</section>

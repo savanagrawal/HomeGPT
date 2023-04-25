@@ -1,0 +1,92 @@
+.TH "SysGpio" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SysGpio
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sys_gpio_impl\&.h>\fP
+.PP
+Inherits \fBmfrc522::IGpio\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBValue\fP { \fBlow\fP = 0, \fBhigh\fP = 1, \fBl\fP = 0, \fBh\fP = 1 }"
+.br
+.ti -1c
+.RI "enum class \fBValue\fP { \fBlow\fP = 0, \fBhigh\fP = 1, \fBl\fP = 0, \fBh\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSysGpio\fP (unsigned int pin, \fBspidevpp::Gpio::Direction\fP direction, \fBspidevpp::Gpio::Value\fP value)"
+.br
+.ti -1c
+.RI "void \fBsetValue\fP (\fBValue\fP value) final"
+.br
+.ti -1c
+.RI "\fBValue\fP \fBgetValue\fP () final"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBspidevpp::Gpio\fP \fBmGpio\fP"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum class \fBmfrc522::IGpio::Value\fP\fC [strong]\fP, \fC [inherited]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIlow \fP\fP
+.TP
+\fB\fIhigh \fP\fP
+.TP
+\fB\fIl \fP\fP
+.TP
+\fB\fIh \fP\fP
+.SS "enum class \fBmfrc522::IGpio::Value\fP\fC [strong]\fP, \fC [inherited]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIlow \fP\fP
+.TP
+\fB\fIhigh \fP\fP
+.TP
+\fB\fIl \fP\fP
+.TP
+\fB\fIh \fP\fP
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "SysGpio::SysGpio (unsigned int pin, \fBspidevpp::Gpio::Direction\fP direction, \fBspidevpp::Gpio::Value\fP value)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBValue\fP SysGpio::getValue ()\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::IGpio\fP\&.
+.SS "void SysGpio::setValue (\fBValue\fP value)\fC [inline]\fP, \fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBmfrc522::IGpio\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBspidevpp::Gpio\fP SysGpio::mGpio"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

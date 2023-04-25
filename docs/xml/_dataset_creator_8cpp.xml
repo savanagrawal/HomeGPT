@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_dataset_creator_8cpp" kind="file" language="C++">
+    <compoundname>DatasetCreator.cpp</compoundname>
+    <includes refid="_dataset_creator_8h" local="yes">DatasetCreator.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>src/intruder-detection/DatasetCreator.cpp</label>
+        <link refid="_dataset_creator_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>DatasetCreator.h</label>
+        <link refid="_dataset_creator_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CppTimer.h</label>
+      </node>
+      <node id="4">
+        <label>EventHandler.h</label>
+      </node>
+      <node id="6">
+        <label>fstream</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>opencv2/opencv.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Savan Agrawal &amp; Chinmay Nagrale </para>
+</simplesect>
+<simplesect kind="version"><para>0.1</para>
+</simplesect>
+Functions for Intruder Detection - Dataset Creator. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_dataset_creator_8h" kindref="compound">DatasetCreator.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" kindref="member">IntruderDatasetCreator::Initialize</ref>(cv::VideoCapture<sp/>camera)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>IntruderDatasetCreator::masterCamera<sp/>=<sp/>camera;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>detector.load(cascadePath);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Enter<sp/>new<sp/>user:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::getline(std::cin,<sp/>IntruderDatasetCreator::newUser);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IntruderDatasetCreator::newUser<sp/>=<sp/><ref refid="class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611" kindref="member">IntruderDatasetCreator::trim</ref>(newUser);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162" kindref="member">IntruderDatasetCreator::is_valid_name</ref>(IntruderDatasetCreator::newUser))<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IntruderDatasetCreator::newUser<sp/>=<sp/><ref refid="class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb" kindref="member">IntruderDatasetCreator::replace_spaces_with_underscores</ref>(IntruderDatasetCreator::newUser);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07" kindref="member">IntruderDatasetCreator::findStringInFile</ref>(IntruderDatasetCreator::fileName,<sp/>IntruderDatasetCreator::newUser))<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lastInteger<sp/>=<sp/><ref refid="class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35" kindref="member">IntruderDatasetCreator::getLastIntegerInFile</ref>(IntruderDatasetCreator::fileName);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>newLine<sp/>=<sp/>IntruderDatasetCreator::newUser<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(lastInteger<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9" kindref="member">IntruderDatasetCreator::appendLineToFile</ref>(IntruderDatasetCreator::fileName,<sp/>newLine);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Added<sp/>new<sp/>user:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>newLine<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;User<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>IntruderDatasetCreator::newUser<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>already<sp/>exists<sp/>in<sp/>the<sp/>file.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>name.<sp/>Please<sp/>enter<sp/>a<sp/>valid<sp/>name:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea" kindref="member">IntruderDatasetCreator::checkCameraOpen</ref>(cv::VideoCapture<sp/>camera){</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!camera.isOpened()){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr&lt;&lt;</highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>camera<sp/>at<sp/>ID<sp/>=<sp/>&quot;</highlight><highlight class="normal">&lt;&lt;IntruderDatasetCreator::CameraID&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;Camera<sp/>opened<sp/>successfully.&quot;</highlight><highlight class="normal">&lt;&lt;std::endl;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/intruder-detection/DatasetCreator.cpp"/>
+  </compounddef>
+</doxygen>

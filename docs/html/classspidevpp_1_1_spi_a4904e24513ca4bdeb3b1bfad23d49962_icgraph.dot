@@ -1,0 +1,13 @@
+digraph "spidevpp::Spi::read"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [label="spidevpp::Spi::read",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="main",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$main_8cc.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="Spidev::read",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$class_spidev.html#a7832e3c327f0c0df825728f6aabe0a0b",tooltip=" "];
+}

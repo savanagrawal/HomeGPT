@@ -1,0 +1,542 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_mood_detection" kind="class" language="C++" prot="public">
+    <compoundname>MoodDetection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">CppTimer</basecompoundref>
+    <includes refid="_mood_detection_8h" local="no">MoodDetection.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_mood_detection_1a849a4095eb97f15ac2052c7818909336" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoodDetection::CameraID</definition>
+        <argsstring></argsstring>
+        <name>CameraID</name>
+        <qualifiedname>MoodDetection::CameraID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mood detection related functions Variables for camera </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="110" column="13" bodyfile="src/mood-detection/MoodDetection.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1ae2ad3f03b2d4a8e4fc74d7b169fc5e75" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoodDetection::nbins</definition>
+        <argsstring></argsstring>
+        <name>nbins</name>
+        <qualifiedname>MoodDetection::nbins</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="111" column="13" bodyfile="src/mood-detection/MoodDetection.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a5e180d2d26615b1cff897977c616806e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_globals" kindref="compound">Globals</ref></type>
+        <definition>Globals MoodDetection::globals</definition>
+        <argsstring></argsstring>
+        <name>globals</name>
+        <qualifiedname>MoodDetection::globals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="113" column="17" bodyfile="src/mood-detection/MoodDetection.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a90e4815a8dd94429688a412518e37b22" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture MoodDetection::masterCamera</definition>
+        <argsstring></argsstring>
+        <name>masterCamera</name>
+        <qualifiedname>MoodDetection::masterCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="115" column="22" bodyfile="src/mood-detection/MoodDetection.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a1ffee781e4b8063b6701b2a40bc0e567" prot="private" static="no" mutable="no">
+        <type>cv::CascadeClassifier</type>
+        <definition>cv::CascadeClassifier MoodDetection::faceCascade</definition>
+        <argsstring></argsstring>
+        <name>faceCascade</name>
+        <qualifiedname>MoodDetection::faceCascade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variables </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="118" column="31" bodyfile="src/mood-detection/MoodDetection.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1aff738209c4e766e20cf72b1420278fbe" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MoodDetection::im</definition>
+        <argsstring></argsstring>
+        <name>im</name>
+        <qualifiedname>MoodDetection::im</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="119" column="17" bodyfile="src/mood-detection/MoodDetection.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a9fc473b7c23830867228fb733ab5118f" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MoodDetection::gray</definition>
+        <argsstring></argsstring>
+        <name>gray</name>
+        <qualifiedname>MoodDetection::gray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="120" column="17" bodyfile="src/mood-detection/MoodDetection.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a3934f95aed74fdbc9b8edd0de1c49451" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MoodDetection::roi</definition>
+        <argsstring></argsstring>
+        <name>roi</name>
+        <qualifiedname>MoodDetection::roi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="121" column="17" bodyfile="src/mood-detection/MoodDetection.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a7d0d3c92ebe9ff7444904f63b1f92c21" prot="private" static="no" mutable="no">
+        <type>cv::Scalar</type>
+        <definition>cv::Scalar MoodDetection::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>MoodDetection::color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="123" column="20" bodyfile="src/mood-detection/MoodDetection.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a4264212e3c1897b26a3b49eee3d939fa" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string MoodDetection::cascadePath</definition>
+        <argsstring></argsstring>
+        <name>cascadePath</name>
+        <qualifiedname>MoodDetection::cascadePath</qualifiedname>
+        <initializer>= &quot;../src/resources/haarcascade_frontalface_default.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="125" column="21" bodyfile="src/mood-detection/MoodDetection.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a41e19a9ce79669caac090fb96c50838b" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; cv::ml::SVM &gt;</type>
+        <definition>cv::Ptr&lt;cv::ml::SVM&gt; MoodDetection::svm</definition>
+        <argsstring></argsstring>
+        <name>svm</name>
+        <qualifiedname>MoodDetection::svm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="126" column="17" bodyfile="src/mood-detection/MoodDetection.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a98484630d75e9a4e8f5caebab68e400d" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size MoodDetection::block_size</definition>
+        <argsstring></argsstring>
+        <name>block_size</name>
+        <qualifiedname>MoodDetection::block_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="128" column="18" bodyfile="src/mood-detection/MoodDetection.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a64f942222c3036126704c00e32cfeb41" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size MoodDetection::block_stride</definition>
+        <argsstring></argsstring>
+        <name>block_stride</name>
+        <qualifiedname>MoodDetection::block_stride</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="129" column="18" bodyfile="src/mood-detection/MoodDetection.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1afd4e4fb4593c7fc725e3846354444cdd" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size MoodDetection::cell_size</definition>
+        <argsstring></argsstring>
+        <name>cell_size</name>
+        <qualifiedname>MoodDetection::cell_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="130" column="18" bodyfile="src/mood-detection/MoodDetection.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1af29161caae5a7e918cc8c503283d8d86" prot="private" static="no" mutable="no">
+        <type>cv::HOGDescriptor</type>
+        <definition>cv::HOGDescriptor MoodDetection::hog</definition>
+        <argsstring></argsstring>
+        <name>hog</name>
+        <qualifiedname>MoodDetection::hog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="132" column="27" bodyfile="src/mood-detection/MoodDetection.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a86781968bebd5ec7365f766d852b9f35" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Rect &gt;</type>
+        <definition>std::vector&lt;cv::Rect&gt; MoodDetection::faces</definition>
+        <argsstring></argsstring>
+        <name>faces</name>
+        <qualifiedname>MoodDetection::faces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="134" column="21" bodyfile="src/mood-detection/MoodDetection.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mood_detection_1a7f9923e5bf44725a3b8b6d620441ac3d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; MoodDetection::emotion</definition>
+        <argsstring></argsstring>
+        <name>emotion</name>
+        <qualifiedname>MoodDetection::emotion</qualifiedname>
+        <initializer>= {
+            {0, &quot;Angry&quot;},
+            {1, &quot;Disgust&quot;},
+            {2, &quot;Fear&quot;},
+            {3, &quot;Happy&quot;},
+            {4, &quot;Neutral&quot;},
+            {5, &quot;Sad&quot;},
+            {6, &quot;Surprise&quot;}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="135" column="18" bodyfile="src/mood-detection/MoodDetection.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_mood_detection_1afb9133130bb1572a0aa6bdae87ff1b34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::timerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>timerEvent</name>
+        <qualifiedname>MoodDetection::timerEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer function for Mood detection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="21" column="10" bodyfile="src/mood-detection/MoodDetection.h" bodystart="21" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mood_detection_1a410945568417f247ee6239a4e787dc4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MoodDetection::MoodDetection</definition>
+        <argsstring>()</argsstring>
+        <name>MoodDetection</name>
+        <qualifiedname>MoodDetection::MoodDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="72" column="9" bodyfile="src/mood-detection/MoodDetection.h" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1aba994443b5bd0c82346d4f546317b934" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>MoodDetection::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handling class functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="82" column="14" bodyfile="src/mood-detection/MoodDetection.h" bodystart="82" bodyend="87"/>
+        <references refid="class_mood_detection_1aba994443b5bd0c82346d4f546317b934" compoundref="_mood_detection_8h" startline="82" endline="87">stop</references>
+        <referencedby refid="class_mood_detection_1aba994443b5bd0c82346d4f546317b934" compoundref="_mood_detection_8h" startline="82" endline="87">stop</referencedby>
+        <referencedby refid="class_mood_thread_1a59724b4a9d28c6ac2df6a55c1139bf71" compoundref="_mood_thread_8h" startline="34" endline="36">MoodThread::stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::Initialize</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>MoodDetection::Initialize</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes our Mood Detection</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="89" column="14" bodyfile="src/mood-detection/MoodDetection.cpp" bodystart="19" bodyend="28"/>
+        <references refid="class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd" compoundref="_globals_8h" startline="20" endline="22">Globals::getMoodSvm</references>
+        <references refid="class_globals_1a7e9e2b31d0484acc038684bd8aceff1a" compoundref="_globals_8h" startline="16" endline="18">Globals::setMoodSvm</references>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1a90d59cfc694ff31ede33ea2dd7bdf01b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::setCameraId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>setCameraId</name>
+        <qualifiedname>MoodDetection::setCameraId</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> setup functions</para>
+<para>Set the Mood Detection <ref refid="class_camera" kindref="compound">Camera</ref> ID object.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set a <ref refid="class_camera" kindref="compound">Camera</ref> ID.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Updated MoodDetection::CameraID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="92" column="14" bodyfile="src/mood-detection/MoodDetection.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1a94b0201f1b1bf7d3e071a61ac17309b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::setContrasts</definition>
+        <argsstring>(int low, int high)</argsstring>
+        <name>setContrasts</name>
+        <qualifiedname>MoodDetection::setContrasts</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="94" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1a0f48eaee6ef92b02b44b392d20dbb651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::setShutter</definition>
+        <argsstring>(int shutter)</argsstring>
+        <name>setShutter</name>
+        <qualifiedname>MoodDetection::setShutter</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>shutter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="96" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1a44f66eda0c282ddc24f7d804fcf74465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int MoodDetection::checkCameraOpen</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>checkCameraOpen</name>
+        <qualifiedname>MoodDetection::checkCameraOpen</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if camera is open. Mainly used for debugging.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Error Code </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="98" column="13" bodyfile="src/mood-detection/MoodDetection.cpp" bodystart="48" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1a6ccbb7812ef82e7adefda31bbf688c6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Mat</type>
+        <definition>cv::Mat MoodDetection::takePicture</definition>
+        <argsstring>()</argsstring>
+        <name>takePicture</name>
+        <qualifiedname>MoodDetection::takePicture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="101" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mood_detection_1a31af342d62bf05a390849c25596b3be0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoodDetection::savePicture</definition>
+        <argsstring>(cv::VideoCapture *, std::string filename)</argsstring>
+        <name>savePicture</name>
+        <qualifiedname>MoodDetection::savePicture</qualifiedname>
+        <param>
+          <type>cv::VideoCapture *</type>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/mood-detection/MoodDetection.h" line="103" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>MoodDetection</label>
+        <link refid="class_mood_detection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>MoodDetection</label>
+        <link refid="class_mood_detection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/mood-detection/MoodDetection.h" line="19" column="1" bodyfile="src/mood-detection/MoodDetection.h" bodystart="19" bodyend="144"/>
+    <listofallmembers>
+      <member refid="class_mood_detection_1a98484630d75e9a4e8f5caebab68e400d" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>block_size</name></member>
+      <member refid="class_mood_detection_1a64f942222c3036126704c00e32cfeb41" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>block_stride</name></member>
+      <member refid="class_mood_detection_1a849a4095eb97f15ac2052c7818909336" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>CameraID</name></member>
+      <member refid="class_mood_detection_1a4264212e3c1897b26a3b49eee3d939fa" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>cascadePath</name></member>
+      <member refid="class_mood_detection_1afd4e4fb4593c7fc725e3846354444cdd" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>cell_size</name></member>
+      <member refid="class_mood_detection_1a44f66eda0c282ddc24f7d804fcf74465" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>checkCameraOpen</name></member>
+      <member refid="class_mood_detection_1a7d0d3c92ebe9ff7444904f63b1f92c21" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>color</name></member>
+      <member refid="class_mood_detection_1a7f9923e5bf44725a3b8b6d620441ac3d" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>emotion</name></member>
+      <member refid="class_mood_detection_1a1ffee781e4b8063b6701b2a40bc0e567" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>faceCascade</name></member>
+      <member refid="class_mood_detection_1a86781968bebd5ec7365f766d852b9f35" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>faces</name></member>
+      <member refid="class_mood_detection_1a5e180d2d26615b1cff897977c616806e" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>globals</name></member>
+      <member refid="class_mood_detection_1a9fc473b7c23830867228fb733ab5118f" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>gray</name></member>
+      <member refid="class_mood_detection_1af29161caae5a7e918cc8c503283d8d86" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>hog</name></member>
+      <member refid="class_mood_detection_1aff738209c4e766e20cf72b1420278fbe" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>im</name></member>
+      <member refid="class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>Initialize</name></member>
+      <member refid="class_mood_detection_1a90e4815a8dd94429688a412518e37b22" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>masterCamera</name></member>
+      <member refid="class_mood_detection_1a410945568417f247ee6239a4e787dc4c" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>MoodDetection</name></member>
+      <member refid="class_mood_detection_1ae2ad3f03b2d4a8e4fc74d7b169fc5e75" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>nbins</name></member>
+      <member refid="class_mood_detection_1a3934f95aed74fdbc9b8edd0de1c49451" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>roi</name></member>
+      <member refid="class_mood_detection_1a31af342d62bf05a390849c25596b3be0" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>savePicture</name></member>
+      <member refid="class_mood_detection_1a90d59cfc694ff31ede33ea2dd7bdf01b" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>setCameraId</name></member>
+      <member refid="class_mood_detection_1a94b0201f1b1bf7d3e071a61ac17309b0" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>setContrasts</name></member>
+      <member refid="class_mood_detection_1a0f48eaee6ef92b02b44b392d20dbb651" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>setShutter</name></member>
+      <member refid="class_mood_detection_1aba994443b5bd0c82346d4f546317b934" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>stop</name></member>
+      <member refid="class_mood_detection_1a41e19a9ce79669caac090fb96c50838b" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>svm</name></member>
+      <member refid="class_mood_detection_1a6ccbb7812ef82e7adefda31bbf688c6d" prot="public" virt="non-virtual"><scope>MoodDetection</scope><name>takePicture</name></member>
+      <member refid="class_mood_detection_1afb9133130bb1572a0aa6bdae87ff1b34" prot="private" virt="non-virtual"><scope>MoodDetection</scope><name>timerEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_caead8f2f932779b81c885c4b6cdb410" xml:lang="en-US">
+<title>src/peripherals/bcm2835 Directory Reference</title>
+<indexterm><primary>src/peripherals/bcm2835 Directory Reference</primary></indexterm>
+Directory dependency graph for bcm2835:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_caead8f2f932779b81c885c4b6cdb410_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_bcm2835__gpio__impl_8h">bcm2835_gpio_impl.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_bcm2835__spi__impl_8h">bcm2835_spi_impl.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_peripherals_2bcm2835_2igpio_8h">igpio.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_peripherals_2bcm2835_2ispi_8h">ispi.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_intruder_dataset_creator" xml:lang="en-US">
+<title>IntruderDatasetCreator Class Reference</title>
+<indexterm><primary>IntruderDatasetCreator</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DatasetCreator.h&gt;</computeroutput>
+</para>
+Inheritance diagram for IntruderDatasetCreator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for IntruderDatasetCreator:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_intruder_dataset_creator_1aa0a4cc17b842a4350d4ff8c2b128ecc9">IntruderDatasetCreator</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585">Initialize</link> (cv::VideoCapture camera)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900">stop</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611">trim</link> (const std::string &amp;str)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_intruder_dataset_creator_1ab6a94beca84ac2602bcb45bbbbd9264f">count_name</link> (const std::string &amp;str)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb">replace_spaces_with_underscores</link> (const std::string &amp;str)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162">is_valid_name</link> (const std::string &amp;name)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07">findStringInFile</link> (const std::string &amp;fileName, const std::string &amp;searchString)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35">getLastIntegerInFile</link> (const std::string &amp;fileName)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9">appendLineToFile</link> (const std::string &amp;fileName, const std::string &amp;line)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea">checkCameraOpen</link> (cv::VideoCapture camera)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_intruder_dataset_creator_1aa0a4cc17b842a4350d4ff8c2b128ecc9"/><section>
+    <title>IntruderDatasetCreator()</title>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<para><computeroutput>IntruderDatasetCreator::IntruderDatasetCreator ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Constructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9"/><section>
+    <title>appendLineToFile()</title>
+<indexterm><primary>appendLineToFile</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>appendLineToFile</secondary></indexterm>
+<para><computeroutput>void IntruderDatasetCreator::appendLineToFile (const std::string &amp; fileName, const std::string &amp; line)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a699ae5e742ed3212b3172b4369f6f0e9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea"/><section>
+    <title>checkCameraOpen()</title>
+<indexterm><primary>checkCameraOpen</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>checkCameraOpen</secondary></indexterm>
+<para><computeroutput>int IntruderDatasetCreator::checkCameraOpen (cv::VideoCapture camera)</computeroutput></para></section>
+<anchor xml:id="_class_intruder_dataset_creator_1ab6a94beca84ac2602bcb45bbbbd9264f"/><section>
+    <title>count_name()</title>
+<indexterm><primary>count_name</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>count_name</secondary></indexterm>
+<para><computeroutput>int IntruderDatasetCreator::count_name (const std::string &amp; str)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07"/><section>
+    <title>findStringInFile()</title>
+<indexterm><primary>findStringInFile</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>findStringInFile</secondary></indexterm>
+<para><computeroutput>bool IntruderDatasetCreator::findStringInFile (const std::string &amp; fileName, const std::string &amp; searchString)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a73e5387e5dfa8223ea253ac17352ea07_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35"/><section>
+    <title>getLastIntegerInFile()</title>
+<indexterm><primary>getLastIntegerInFile</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>getLastIntegerInFile</secondary></indexterm>
+<para><computeroutput>int IntruderDatasetCreator::getLastIntegerInFile (const std::string &amp; fileName)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a7eb468d36cfbef516594a453b516de35_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void IntruderDatasetCreator::Initialize (cv::VideoCapture camera)</computeroutput></para>
+<para>Initializes our Dataset Creator.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>camera</entry><entry>
+<para><link linkend="_class_camera">Camera</link> object.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a41d4ed8f8ab42b57db50dd9560ce2585_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162"/><section>
+    <title>is_valid_name()</title>
+<indexterm><primary>is_valid_name</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>is_valid_name</secondary></indexterm>
+<para><computeroutput>bool IntruderDatasetCreator::is_valid_name (const std::string &amp; name)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_ad4ff1abe5a7d08e7f119d76bc3d10162_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb"/><section>
+    <title>replace_spaces_with_underscores()</title>
+<indexterm><primary>replace_spaces_with_underscores</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>replace_spaces_with_underscores</secondary></indexterm>
+<para><computeroutput>std::string IntruderDatasetCreator::replace_spaces_with_underscores (const std::string &amp; str)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a96b37cbd8c72a17879fd0fbc849589fb_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void IntruderDatasetCreator::stop ( )<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a30367789143221e7d4144c953700b900_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_a30367789143221e7d4144c953700b900_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611"/><section>
+    <title>trim()</title>
+<indexterm><primary>trim</primary><secondary>IntruderDatasetCreator</secondary></indexterm>
+<indexterm><primary>IntruderDatasetCreator</primary><secondary>trim</secondary></indexterm>
+<para><computeroutput>std::string IntruderDatasetCreator::trim (const std::string &amp; str)<computeroutput>[inline]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_intruder_dataset_creator_ac5acff14ff6ccb3f26c0af29c53bb611_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/intruder-detection/<link linkend="__dataset_creator_8h">DatasetCreator.h</link>src/intruder-detection/<link linkend="__dataset_creator_8cpp">DatasetCreator.cpp</link></section>
+</section>

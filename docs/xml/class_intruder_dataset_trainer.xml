@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_intruder_dataset_trainer" kind="class" language="C++" prot="public">
+    <compoundname>IntruderDatasetTrainer</compoundname>
+    <includes refid="_dataset_trainer_8h" local="no">DatasetTrainer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1a052f469e8c147d5af107c606d428bd2b" prot="private" static="no" mutable="no">
+        <type>cv::CascadeClassifier</type>
+        <definition>cv::CascadeClassifier IntruderDatasetTrainer::detector</definition>
+        <argsstring></argsstring>
+        <name>detector</name>
+        <qualifiedname>IntruderDatasetTrainer::detector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="86" column="31" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1a95285ef0e37bfbfe3a4f62026bc0603d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetTrainer::cascadePath</definition>
+        <argsstring></argsstring>
+        <name>cascadePath</name>
+        <qualifiedname>IntruderDatasetTrainer::cascadePath</qualifiedname>
+        <initializer>= &quot;../src/resources/haarcascade_frontalface_default.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="87" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1a820114a89589f2b89edabe9b4f158482" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; cv::face::LBPHFaceRecognizer &gt;</type>
+        <definition>cv::Ptr&lt;cv::face::LBPHFaceRecognizer&gt; IntruderDatasetTrainer::recognizer</definition>
+        <argsstring></argsstring>
+        <name>recognizer</name>
+        <qualifiedname>IntruderDatasetTrainer::recognizer</qualifiedname>
+        <initializer>= cv::face::LBPHFaceRecognizer::create()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="89" column="17" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1ada21a72edb32405ef1f9111e763c779f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Mat &gt;</type>
+        <definition>std::vector&lt;cv::Mat&gt; IntruderDatasetTrainer::faceSamples</definition>
+        <argsstring></argsstring>
+        <name>faceSamples</name>
+        <qualifiedname>IntruderDatasetTrainer::faceSamples</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="91" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1aefd6a7a92f6cae3056aad558f35ca510" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; IntruderDatasetTrainer::Ids</definition>
+        <argsstring></argsstring>
+        <name>Ids</name>
+        <qualifiedname>IntruderDatasetTrainer::Ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="92" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1a4f6f1eb7e72299f597340a2bd066278a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetTrainer::base_path</definition>
+        <argsstring></argsstring>
+        <name>base_path</name>
+        <qualifiedname>IntruderDatasetTrainer::base_path</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="94" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1ae7f4bd9d6ca77c6f7e39e8ed6756f074" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; IntruderDatasetTrainer::imagePaths</definition>
+        <argsstring></argsstring>
+        <name>imagePaths</name>
+        <qualifiedname>IntruderDatasetTrainer::imagePaths</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="95" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1aa2bc633b2bd587fae28b0e0d9e230573" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetTrainer::fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <qualifiedname>IntruderDatasetTrainer::fileName</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection/Users.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="97" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_trainer_1adc8b7e40212a9efdf9649b3f30197c6f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, int &gt;</type>
+        <definition>std::map&lt;std::string, int&gt; IntruderDatasetTrainer::users</definition>
+        <argsstring></argsstring>
+        <name>users</name>
+        <qualifiedname>IntruderDatasetTrainer::users</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="98" column="18" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_intruder_dataset_trainer_1a0cdcc173875737dd676e397e939a04c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntruderDatasetTrainer::IntruderDatasetTrainer</definition>
+        <argsstring>()</argsstring>
+        <name>IntruderDatasetTrainer</name>
+        <qualifiedname>IntruderDatasetTrainer::IntruderDatasetTrainer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="21" column="9" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="21" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_trainer_1a5549116f8bbdfa9571aeb50031a11a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDatasetTrainer::Initialize</definition>
+        <argsstring>()</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>IntruderDatasetTrainer::Initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes our Dataset Trainer.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+return </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="24" column="14" bodyfile="src/intruder-detection/DatasetTrainer.cpp" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_trainer_1a0a9936a9e4fc9250c4ad580b51051f79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetTrainer::extract_username</definition>
+        <argsstring>(std::string &amp;input)</argsstring>
+        <name>extract_username</name>
+        <qualifiedname>IntruderDatasetTrainer::extract_username</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="26" column="21" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="26" bodyend="32"/>
+        <referencedby refid="class_intruder_dataset_trainer_1a6d2299bbf12e0484dc930a7e53634c4a" compoundref="_dataset_trainer_8h" startline="52" endline="83">generateModel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_trainer_1aee1a34251ed611fb6c7499b4e034156b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; std::string, int &gt;</type>
+        <definition>std::map&lt; std::string, int &gt; IntruderDatasetTrainer::readFileToMap</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>readFileToMap</name>
+        <qualifiedname>IntruderDatasetTrainer::readFileToMap</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="34" column="18" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="34" bodyend="50"/>
+        <referencedby refid="class_intruder_dataset_trainer_1a6d2299bbf12e0484dc930a7e53634c4a" compoundref="_dataset_trainer_8h" startline="52" endline="83">generateModel</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_trainer_1a6d2299bbf12e0484dc930a7e53634c4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDatasetTrainer::generateModel</definition>
+        <argsstring>()</argsstring>
+        <name>generateModel</name>
+        <qualifiedname>IntruderDatasetTrainer::generateModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetTrainer.h" line="52" column="14" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="52" bodyend="83"/>
+        <references refid="class_intruder_dataset_trainer_1a0a9936a9e4fc9250c4ad580b51051f79" compoundref="_dataset_trainer_8h" startline="26" endline="32">extract_username</references>
+        <references refid="class_intruder_dataset_trainer_1aee1a34251ed611fb6c7499b4e034156b" compoundref="_dataset_trainer_8h" startline="34" endline="50">readFileToMap</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/intruder-detection/DatasetTrainer.h" line="19" column="1" bodyfile="src/intruder-detection/DatasetTrainer.h" bodystart="19" bodyend="100"/>
+    <listofallmembers>
+      <member refid="class_intruder_dataset_trainer_1a4f6f1eb7e72299f597340a2bd066278a" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>base_path</name></member>
+      <member refid="class_intruder_dataset_trainer_1a95285ef0e37bfbfe3a4f62026bc0603d" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>cascadePath</name></member>
+      <member refid="class_intruder_dataset_trainer_1a052f469e8c147d5af107c606d428bd2b" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>detector</name></member>
+      <member refid="class_intruder_dataset_trainer_1a0a9936a9e4fc9250c4ad580b51051f79" prot="public" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>extract_username</name></member>
+      <member refid="class_intruder_dataset_trainer_1ada21a72edb32405ef1f9111e763c779f" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>faceSamples</name></member>
+      <member refid="class_intruder_dataset_trainer_1aa2bc633b2bd587fae28b0e0d9e230573" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>fileName</name></member>
+      <member refid="class_intruder_dataset_trainer_1a6d2299bbf12e0484dc930a7e53634c4a" prot="public" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>generateModel</name></member>
+      <member refid="class_intruder_dataset_trainer_1aefd6a7a92f6cae3056aad558f35ca510" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>Ids</name></member>
+      <member refid="class_intruder_dataset_trainer_1ae7f4bd9d6ca77c6f7e39e8ed6756f074" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>imagePaths</name></member>
+      <member refid="class_intruder_dataset_trainer_1a5549116f8bbdfa9571aeb50031a11a07" prot="public" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>Initialize</name></member>
+      <member refid="class_intruder_dataset_trainer_1a0cdcc173875737dd676e397e939a04c9" prot="public" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>IntruderDatasetTrainer</name></member>
+      <member refid="class_intruder_dataset_trainer_1aee1a34251ed611fb6c7499b4e034156b" prot="public" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>readFileToMap</name></member>
+      <member refid="class_intruder_dataset_trainer_1a820114a89589f2b89edabe9b4f158482" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>recognizer</name></member>
+      <member refid="class_intruder_dataset_trainer_1adc8b7e40212a9efdf9649b3f30197c6f" prot="private" virt="non-virtual"><scope>IntruderDatasetTrainer</scope><name>users</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_bcm_spi" xml:lang="en-US">
+<title>BcmSpi Class Reference</title>
+<indexterm><primary>BcmSpi</primary></indexterm>
+<para>
+<computeroutput>#include &lt;bcm2835_spi_impl.h&gt;</computeroutput>
+</para>
+Inheritance diagram for BcmSpi:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bcm_spi__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for BcmSpi:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bcm_spi__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_bcm_spi_1afb263d8e186dc50bfbe1f514f148ae08">BcmSpi</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481">write</link> (char *pData, size_t len) final</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3">read</link> (char *pData, size_t len) final</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104">writeRead</link> (char *pData, size_t len) final</para>
+</listitem>
+            <listitem><para>char <link linkend="_class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de">writeRead</link> (char data) final</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_bcm_spi_1afb263d8e186dc50bfbe1f514f148ae08"/><section>
+    <title>BcmSpi()</title>
+<indexterm><primary>BcmSpi</primary><secondary>BcmSpi</secondary></indexterm>
+<indexterm><primary>BcmSpi</primary><secondary>BcmSpi</secondary></indexterm>
+<para><computeroutput>BcmSpi::BcmSpi ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_bcm_spi_1a3d44c5d6162ba0ea6d0e146bcb7768b3"/><section>
+    <title>read()</title>
+<indexterm><primary>read</primary><secondary>BcmSpi</secondary></indexterm>
+<indexterm><primary>BcmSpi</primary><secondary>read</secondary></indexterm>
+<para><computeroutput>void BcmSpi::read (char * pData, size_t len)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1adf7887cd18b819e3be452ba83fec27d7">mfrc522::ISpi</link>.</para>
+</section>
+<anchor xml:id="_class_bcm_spi_1a7b6469d4c17366c5fa1097375acb8481"/><section>
+    <title>write()</title>
+<indexterm><primary>write</primary><secondary>BcmSpi</secondary></indexterm>
+<indexterm><primary>BcmSpi</primary><secondary>write</secondary></indexterm>
+<para><computeroutput>void BcmSpi::write (char * pData, size_t len)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1a9f98a44742d44089eee210f9d5908bed">mfrc522::ISpi</link>.</para>
+</section>
+<anchor xml:id="_class_bcm_spi_1a1ada3e12caf2df3aadec21fc1c334104"/><section>
+    <title>writeRead()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>BcmSpi</secondary></indexterm>
+<indexterm><primary>BcmSpi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>void BcmSpi::writeRead (char * pData, size_t len)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1a251598542df9d4026fc28e832d4770ac">mfrc522::ISpi</link>.</para>
+</section>
+<anchor xml:id="_class_bcm_spi_1a3e77b73679854ea834dbf50d33e0c8de"/><section>
+    <title>writeRead()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>writeRead</primary><secondary>BcmSpi</secondary></indexterm>
+<indexterm><primary>BcmSpi</primary><secondary>writeRead</secondary></indexterm>
+<para><computeroutput>char BcmSpi::writeRead (char data)<computeroutput>[inline]</computeroutput>, <computeroutput>[final]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_structmfrc522_1_1_i_spi_1a04e3c98a7e42500433bbf3834a404683">mfrc522::ISpi</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+src/peripherals/bcm2835/<link linkend="_bcm2835__spi__impl_8h">bcm2835_spi_impl.h</link></section>
+</section>

@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_circular_queue" kind="class" language="C++" prot="public">
+    <compoundname>CircularQueue</compoundname>
+    <includes refid="_circular_queue_8h" local="no">CircularQueue.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_circular_queue_1a706f2e5c38acff4db3e820e29d8a3a26" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CircularQueue::front</definition>
+        <argsstring></argsstring>
+        <name>front</name>
+        <qualifiedname>CircularQueue::front</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="16" column="13" bodyfile="src/utils/CircularQueue.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_circular_queue_1a69d47fabef01e136a6b55ddcbbbbd19f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CircularQueue::rear</definition>
+        <argsstring></argsstring>
+        <name>rear</name>
+        <qualifiedname>CircularQueue::rear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="16" column="19" bodyfile="src/utils/CircularQueue.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_circular_queue_1a2e3685e56d9b5f6442cab7fe3fa7dadc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CircularQueue::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <qualifiedname>CircularQueue::size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="17" column="13" bodyfile="src/utils/CircularQueue.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_circular_queue_1a6ea39d79d20b6943c8c7bc886e0dd37c" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* CircularQueue::queue</definition>
+        <argsstring></argsstring>
+        <name>queue</name>
+        <qualifiedname>CircularQueue::queue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="18" column="13" bodyfile="src/utils/CircularQueue.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_circular_queue_1ab7baf5bddbec783e8b44cf55bfc6ecdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CircularQueue::CircularQueue</definition>
+        <argsstring>(int size)</argsstring>
+        <name>CircularQueue</name>
+        <qualifiedname>CircularQueue::CircularQueue</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="21" column="9" bodyfile="src/utils/CircularQueue.h" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_circular_queue_1ac353e7d7ba809f5412a31f0694d6f607" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CircularQueue::~CircularQueue</definition>
+        <argsstring>()</argsstring>
+        <name>~CircularQueue</name>
+        <qualifiedname>CircularQueue::~CircularQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="25" column="9" bodyfile="src/utils/CircularQueue.h" bodystart="25" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_circular_queue_1aace42e1cb5bcf6ed610226cbc6e37f1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CircularQueue::enqueue</definition>
+        <argsstring>(int value)</argsstring>
+        <name>enqueue</name>
+        <qualifiedname>CircularQueue::enqueue</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="29" column="14" bodyfile="src/utils/CircularQueue.h" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_circular_queue_1a1bf33fbac157d2a246893370ac04e39c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CircularQueue::dequeue</definition>
+        <argsstring>()</argsstring>
+        <name>dequeue</name>
+        <qualifiedname>CircularQueue::dequeue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="39" column="13" bodyfile="src/utils/CircularQueue.h" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_circular_queue_1af389c378a68797e7fe12a7351520090c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CircularQueue::display</definition>
+        <argsstring>()</argsstring>
+        <name>display</name>
+        <qualifiedname>CircularQueue::display</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="49" column="14" bodyfile="src/utils/CircularQueue.h" bodystart="49" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_circular_queue_1ae59d7c591b977609b0c1c7e9a297cc0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CircularQueue::countQueue</definition>
+        <argsstring>(int value)</argsstring>
+        <name>countQueue</name>
+        <qualifiedname>CircularQueue::countQueue</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/utils/CircularQueue.h" line="63" column="13" bodyfile="src/utils/CircularQueue.h" bodystart="63" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/utils/CircularQueue.h" line="14" column="1" bodyfile="src/utils/CircularQueue.h" bodystart="14" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_circular_queue_1ab7baf5bddbec783e8b44cf55bfc6ecdc" prot="public" virt="non-virtual"><scope>CircularQueue</scope><name>CircularQueue</name></member>
+      <member refid="class_circular_queue_1ae59d7c591b977609b0c1c7e9a297cc0f" prot="public" virt="non-virtual"><scope>CircularQueue</scope><name>countQueue</name></member>
+      <member refid="class_circular_queue_1a1bf33fbac157d2a246893370ac04e39c" prot="public" virt="non-virtual"><scope>CircularQueue</scope><name>dequeue</name></member>
+      <member refid="class_circular_queue_1af389c378a68797e7fe12a7351520090c" prot="public" virt="non-virtual"><scope>CircularQueue</scope><name>display</name></member>
+      <member refid="class_circular_queue_1aace42e1cb5bcf6ed610226cbc6e37f1a" prot="public" virt="non-virtual"><scope>CircularQueue</scope><name>enqueue</name></member>
+      <member refid="class_circular_queue_1a706f2e5c38acff4db3e820e29d8a3a26" prot="private" virt="non-virtual"><scope>CircularQueue</scope><name>front</name></member>
+      <member refid="class_circular_queue_1a6ea39d79d20b6943c8c7bc886e0dd37c" prot="private" virt="non-virtual"><scope>CircularQueue</scope><name>queue</name></member>
+      <member refid="class_circular_queue_1a69d47fabef01e136a6b55ddcbbbbd19f" prot="private" virt="non-virtual"><scope>CircularQueue</scope><name>rear</name></member>
+      <member refid="class_circular_queue_1a2e3685e56d9b5f6442cab7fe3fa7dadc" prot="private" virt="non-virtual"><scope>CircularQueue</scope><name>size</name></member>
+      <member refid="class_circular_queue_1ac353e7d7ba809f5412a31f0694d6f607" prot="public" virt="non-virtual"><scope>CircularQueue</scope><name>~CircularQueue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

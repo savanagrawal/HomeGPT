@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_r_f_i_d_thread" kind="class" language="C++" prot="public">
+    <compoundname>RFIDThread</compoundname>
+    <basecompoundref refid="class_cpp_thread" prot="public" virt="non-virtual">CppThread</basecompoundref>
+    <includes refid="_r_f_i_d_thread_8h" local="no">RFIDThread.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_r_f_i_d_thread_1a591f7e463de5850c3ed2cc0617ce1d78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RFIDThread::RFIDThread</definition>
+        <argsstring>()</argsstring>
+        <name>RFIDThread</name>
+        <qualifiedname>RFIDThread::RFIDThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor for our rfid thread.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/rfid/RFIDThread.h" line="25" column="9" bodyfile="src/thread/rfid/RFIDThread.h" bodystart="25" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_f_i_d_thread_1ae23e0326ccb037b194d2ca6208cb6e13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RFIDThread::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>RFIDThread::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop our thread&apos;s inner functionality. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/rfid/RFIDThread.h" line="31" column="14" bodyfile="src/thread/rfid/RFIDThread.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_r_f_i_d_thread_1a87a340c87736f22b96cc0fbaff2e67e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RFIDThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>RFIDThread::run</qualifiedname>
+        <reimplements refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manage the rfid thread runnable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/rfid/RFIDThread.h" line="34" column="14" bodyfile="src/thread/rfid/RFIDThread.cpp" bodystart="26" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Rfid Thread to manage rfid detection functionality. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>RFIDThread</label>
+        <link refid="class_r_f_i_d_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>RFIDThread</label>
+        <link refid="class_r_f_i_d_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/thread/rfid/RFIDThread.h" line="18" column="1" bodyfile="src/thread/rfid/RFIDThread.h" bodystart="18" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>RFIDThread</scope><name>join</name></member>
+      <member refid="class_r_f_i_d_thread_1a591f7e463de5850c3ed2cc0617ce1d78" prot="public" virt="non-virtual"><scope>RFIDThread</scope><name>RFIDThread</name></member>
+      <member refid="class_r_f_i_d_thread_1a87a340c87736f22b96cc0fbaff2e67e4" prot="private" virt="virtual"><scope>RFIDThread</scope><name>run</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>RFIDThread</scope><name>start</name></member>
+      <member refid="class_r_f_i_d_thread_1ae23e0326ccb037b194d2ca6208cb6e13" prot="public" virt="non-virtual"><scope>RFIDThread</scope><name>stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

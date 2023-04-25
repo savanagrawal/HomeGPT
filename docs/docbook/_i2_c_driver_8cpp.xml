@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i2_c_driver_8cpp" xml:lang="en-US">
+<title>src/peripherals/I2CDriver.cpp File Reference</title>
+<indexterm><primary>src/peripherals/I2CDriver.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;I2CDriver.h&quot;<?linebreak?>#include &lt;stdio.h&gt;<?linebreak?>#include &lt;unistd.h&gt;<?linebreak?>#include &lt;time.h&gt;<?linebreak?>#include &lt;fcntl.h&gt;<?linebreak?>#include &lt;sys/ioctl.h&gt;<?linebreak?>#include &lt;errno.h&gt;<?linebreak?>#include &lt;string.h&gt;<?linebreak?>#include &quot;i2c/smbus.h&quot;<?linebreak?>#include &lt;linux/i2c-dev.h&gt;<?linebreak?>#include &lt;linux/i2c.h&gt;<?linebreak?>#include &quot;utils.h&quot;<?linebreak?></programlisting>Include dependency graph for I2CDriver.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_i2_c_driver_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__i2_c_driver_8cpp_1a2694a39dfd1fa087ca6f9f391c91dae7">CLOCKID</link>&#160;&#160;&#160;CLOCK_MONOTONIC</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+This file contains the functions for I2C Driver Class. Essentially this is a wrapper for the API provided for I2C Linux Driver. Conatins functions for plain I2C and SMBUS</para>
+
+<para><link xlink:href="https://www.kernel.org/doc/html/latest/driver-api/i2c">https://www.kernel.org/doc/html/latest/driver-api/i2c</link>. <link xlink:href="https://www.i2c-bus.org/smbus/">https://www.i2c-bus.org/smbus/</link> </para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__i2_c_driver_8cpp_1a2694a39dfd1fa087ca6f9f391c91dae7"/><section>
+    <title>CLOCKID</title>
+<indexterm><primary>CLOCKID</primary><secondary>I2CDriver.cpp</secondary></indexterm>
+<indexterm><primary>I2CDriver.cpp</primary><secondary>CLOCKID</secondary></indexterm>
+<para><computeroutput>#define CLOCKID&#160;&#160;&#160;CLOCK_MONOTONIC</computeroutput></para></section>
+</section>
+</section>

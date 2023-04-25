@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="classspidevpp_1_1_spi" kind="class" language="C++" prot="public">
+    <compoundname>spidevpp::Spi</compoundname>
+    <includes refid="spi_8h" local="no">spi.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classspidevpp_1_1_spi_1a2a716d322942326352423d4bacdfac2b" prot="private" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string spidevpp::Spi::mDevice</definition>
+        <argsstring></argsstring>
+        <name>mDevice</name>
+        <qualifiedname>spidevpp::Spi::mDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="42" column="19" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_spi_1a0fca479d49be45eaa4ea445dd7dc36f0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int spidevpp::Spi::mFd</definition>
+        <argsstring></argsstring>
+        <name>mFd</name>
+        <qualifiedname>spidevpp::Spi::mFd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="44" column="5" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_spi_1a80e0cb4e69d78d94d733eba154e52a52" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t spidevpp::Spi::mBitsPerWord</definition>
+        <argsstring></argsstring>
+        <name>mBitsPerWord</name>
+        <qualifiedname>spidevpp::Spi::mBitsPerWord</qualifiedname>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="45" column="9" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_spi_1a25d29262a8ea34f6b550e88a91e8178b" prot="private" static="no" mutable="no">
+        <type>std::chrono::microseconds</type>
+        <definition>std::chrono::microseconds spidevpp::Spi::mDelay</definition>
+        <argsstring></argsstring>
+        <name>mDelay</name>
+        <qualifiedname>spidevpp::Spi::mDelay</qualifiedname>
+        <initializer>= std::chrono::microseconds(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="46" column="27" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_spi_1aa25c1b2e14581127669f791ff9298552" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t spidevpp::Spi::mMode</definition>
+        <argsstring></argsstring>
+        <name>mMode</name>
+        <qualifiedname>spidevpp::Spi::mMode</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="47" column="10" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classspidevpp_1_1_spi_1a24a27b5ae80dbb7d62b6612314baec32" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t spidevpp::Spi::mSpeed</definition>
+        <argsstring></argsstring>
+        <name>mSpeed</name>
+        <qualifiedname>spidevpp::Spi::mSpeed</qualifiedname>
+        <initializer>= 500000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="48" column="10" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a1aeafa9a432b1132b1e741b00a2a9fbf" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>spidevpp::Spi::Spi</definition>
+        <argsstring>(const std::string &amp;device)</argsstring>
+        <name>Spi</name>
+        <qualifiedname>spidevpp::Spi::Spi</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="18" column="10" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::setBitsPerWord</definition>
+        <argsstring>(uint8_t bitsPerWord)</argsstring>
+        <name>setBitsPerWord</name>
+        <qualifiedname>spidevpp::Spi::setBitsPerWord</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>bitsPerWord</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="20" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="18" bodyend="23"/>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="6" endline="55">main</referencedby>
+        <referencedby refid="class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed" compoundref="_r_f_i_d_8h" startline="18" endline="64">RFID::RFID</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t spidevpp::Spi::getBitsPerWord</definition>
+        <argsstring>() const</argsstring>
+        <name>getBitsPerWord</name>
+        <qualifiedname>spidevpp::Spi::getBitsPerWord</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="21" column="9" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="25" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::setSpeed</definition>
+        <argsstring>(uint32_t speed)</argsstring>
+        <name>setSpeed</name>
+        <qualifiedname>spidevpp::Spi::setSpeed</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="23" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="33" bodyend="38"/>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="6" endline="55">main</referencedby>
+        <referencedby refid="class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed" compoundref="_r_f_i_d_8h" startline="18" endline="64">RFID::RFID</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t spidevpp::Spi::getSpeed</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpeed</name>
+        <qualifiedname>spidevpp::Spi::getSpeed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="24" column="10" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::setMode</definition>
+        <argsstring>(uint32_t mode)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>spidevpp::Spi::setMode</qualifiedname>
+        <param>
+          <type>uint32_t</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="26" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="48" bodyend="53"/>
+        <referencedby refid="class_r_f_i_d_1a91e8d4d6abb74ae099f9144d553db6ed" compoundref="_r_f_i_d_8h" startline="18" endline="64">RFID::RFID</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t spidevpp::Spi::getMode</definition>
+        <argsstring>() const</argsstring>
+        <name>getMode</name>
+        <qualifiedname>spidevpp::Spi::getMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="27" column="10" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="55" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::setDelay</definition>
+        <argsstring>(std::chrono::microseconds)</argsstring>
+        <name>setDelay</name>
+        <qualifiedname>spidevpp::Spi::setDelay</qualifiedname>
+        <param>
+          <type>std::chrono::microseconds</type>
+          <defname>delay</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="29" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::chrono::microseconds</type>
+        <definition>std::chrono::microseconds spidevpp::Spi::getDelay</definition>
+        <argsstring>() const</argsstring>
+        <name>getDelay</name>
+        <qualifiedname>spidevpp::Spi::getDelay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="30" column="27" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::write</definition>
+        <argsstring>(char *pData, size_t len)</argsstring>
+        <name>write</name>
+        <qualifiedname>spidevpp::Spi::write</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="32" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="71" bodyend="87"/>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="6" endline="55">main</referencedby>
+        <referencedby refid="class_spidev_1a40c147da19e908a2e8e76b8b586b1170" compoundref="spidev__impl_8h" startline="14" endline="16">Spidev::write</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::read</definition>
+        <argsstring>(char *pData, size_t len)</argsstring>
+        <name>read</name>
+        <qualifiedname>spidevpp::Spi::read</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="33" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="89" bodyend="105"/>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="6" endline="55">main</referencedby>
+        <referencedby refid="class_spidev_1a7832e3c327f0c0df825728f6aabe0a0b" compoundref="spidev__impl_8h" startline="18" endline="20">Spidev::read</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void spidevpp::Spi::writeRead</definition>
+        <argsstring>(char *pData, size_t len)</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>spidevpp::Spi::writeRead</qualifiedname>
+        <param>
+          <type>char *</type>
+          <declname>pData</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="34" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="107" bodyend="123"/>
+        <referencedby refid="main_8cc_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="main_8cc" startline="6" endline="55">main</referencedby>
+        <referencedby refid="class_spidev_1a38c616bb4143f726ce083c947d7a6956" compoundref="spidev__impl_8h" startline="22" endline="24">Spidev::writeRead</referencedby>
+        <referencedby refid="classspidevpp_1_1_spi_1a1979af4d7e1c36aefc7d5b011bcc2968" compoundref="spi_8cc" startline="125" endline="128">writeRead</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classspidevpp_1_1_spi_1a1979af4d7e1c36aefc7d5b011bcc2968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char spidevpp::Spi::writeRead</definition>
+        <argsstring>(char data)</argsstring>
+        <name>writeRead</name>
+        <qualifiedname>spidevpp::Spi::writeRead</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="35" column="6" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.cc" bodystart="125" bodyend="128"/>
+        <references refid="classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8" compoundref="spi_8cc" startline="107" endline="123">writeRead</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Stream</type>
+          </param>
+        </templateparamlist>
+        <type>Stream &amp;</type>
+        <definition>Stream &amp; operator&lt;&lt;</definition>
+        <argsstring>(Stream &amp;out, const Spi &amp;)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>spidevpp::Spi::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>Stream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classspidevpp_1_1_spi" kindref="compound">Spi</ref> &amp;</type>
+          <defname>spi</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="38" column="8" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="53" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h" line="14" column="1" bodyfile="src/dependencies/spidevpp/libs/spidevpp/spi.h" bodystart="14" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>getBitsPerWord</name></member>
+      <member refid="classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>getDelay</name></member>
+      <member refid="classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>getMode</name></member>
+      <member refid="classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>getSpeed</name></member>
+      <member refid="classspidevpp_1_1_spi_1a80e0cb4e69d78d94d733eba154e52a52" prot="private" virt="non-virtual"><scope>spidevpp::Spi</scope><name>mBitsPerWord</name></member>
+      <member refid="classspidevpp_1_1_spi_1a25d29262a8ea34f6b550e88a91e8178b" prot="private" virt="non-virtual"><scope>spidevpp::Spi</scope><name>mDelay</name></member>
+      <member refid="classspidevpp_1_1_spi_1a2a716d322942326352423d4bacdfac2b" prot="private" virt="non-virtual"><scope>spidevpp::Spi</scope><name>mDevice</name></member>
+      <member refid="classspidevpp_1_1_spi_1a0fca479d49be45eaa4ea445dd7dc36f0" prot="private" virt="non-virtual"><scope>spidevpp::Spi</scope><name>mFd</name></member>
+      <member refid="classspidevpp_1_1_spi_1aa25c1b2e14581127669f791ff9298552" prot="private" virt="non-virtual"><scope>spidevpp::Spi</scope><name>mMode</name></member>
+      <member refid="classspidevpp_1_1_spi_1a24a27b5ae80dbb7d62b6612314baec32" prot="private" virt="non-virtual"><scope>spidevpp::Spi</scope><name>mSpeed</name></member>
+      <member refid="classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>read</name></member>
+      <member refid="classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>setBitsPerWord</name></member>
+      <member refid="classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>setDelay</name></member>
+      <member refid="classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>setMode</name></member>
+      <member refid="classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>setSpeed</name></member>
+      <member refid="classspidevpp_1_1_spi_1a1aeafa9a432b1132b1e741b00a2a9fbf" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>Spi</name></member>
+      <member refid="classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>write</name></member>
+      <member refid="classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>writeRead</name></member>
+      <member refid="classspidevpp_1_1_spi_1a1979af4d7e1c36aefc7d5b011bcc2968" prot="public" virt="non-virtual"><scope>spidevpp::Spi</scope><name>writeRead</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

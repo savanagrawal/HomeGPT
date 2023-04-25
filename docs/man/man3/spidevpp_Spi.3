@@ -1,0 +1,98 @@
+.TH "spidevpp::Spi" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+spidevpp::Spi
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <spi\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSpi\fP (const std::string &device)"
+.br
+.ti -1c
+.RI "void \fBsetBitsPerWord\fP (uint8_t bitsPerWord)"
+.br
+.ti -1c
+.RI "uint8_t \fBgetBitsPerWord\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetSpeed\fP (uint32_t speed)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSpeed\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetMode\fP (uint32_t mode)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetMode\fP () const"
+.br
+.ti -1c
+.RI "void \fBsetDelay\fP (std::chrono::microseconds)"
+.br
+.ti -1c
+.RI "std::chrono::microseconds \fBgetDelay\fP () const"
+.br
+.ti -1c
+.RI "void \fBwrite\fP (char *pData, size_t len)"
+.br
+.ti -1c
+.RI "void \fBread\fP (char *pData, size_t len)"
+.br
+.ti -1c
+.RI "void \fBwriteRead\fP (char *pData, size_t len)"
+.br
+.ti -1c
+.RI "char \fBwriteRead\fP (char data)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "template<class Stream > Stream & \fBoperator<<\fP (Stream &out, const \fBSpi\fP &)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "spidevpp::Spi::Spi (const std::string & device)\fC [explicit]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "uint8_t spidevpp::Spi::getBitsPerWord () const"
+
+.SS "std::chrono::microseconds spidevpp::Spi::getDelay () const"
+
+.SS "uint32_t spidevpp::Spi::getMode () const"
+
+.SS "uint32_t spidevpp::Spi::getSpeed () const"
+
+.SS "void spidevpp::Spi::read (char * pData, size_t len)"
+
+.SS "void spidevpp::Spi::setBitsPerWord (uint8_t bitsPerWord)"
+
+.SS "void spidevpp::Spi::setDelay (std::chrono::microseconds delay)"
+
+.SS "void spidevpp::Spi::setMode (uint32_t mode)"
+
+.SS "void spidevpp::Spi::setSpeed (uint32_t speed)"
+
+.SS "void spidevpp::Spi::write (char * pData, size_t len)"
+
+.SS "void spidevpp::Spi::writeRead (char * pData, size_t len)"
+
+.SS "char spidevpp::Spi::writeRead (char data)"
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "template<class Stream > Stream & operator<< (Stream & out, const \fBSpi\fP & spi)\fC [friend]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

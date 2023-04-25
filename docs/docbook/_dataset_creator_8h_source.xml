@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__dataset_creator_8h_source" xml:lang="en-US">
+<title>DatasetCreator.h</title>
+<indexterm><primary>src/intruder-detection/DatasetCreator.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;DATASET_CREATOR_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;DATASET_CREATOR_H</emphasis>
+10 
+11 <emphasis role="preprocessor">#include&#32;&quot;CppTimer.h&quot;</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&quot;EventHandler.h&quot;</emphasis>
+13 
+14 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+15 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+16 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+17 
+18 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_intruder_dataset_creator">IntruderDatasetCreator</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;CppTimer&#32;{
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;timerEvent()&#32;{
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;std::cout&lt;&lt;&quot;Hi&quot;&lt;&lt;std::endl;</emphasis>
+22 
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_event_handler">EventHandler</link>&amp;&#32;eventHandler&#32;=&#32;<link linkend="_class_event_handler_1a54e992984633e36c76f7b62edfbf7604">EventHandler::getInstance</link>();
+24 
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;break&#32;if&#32;the&#32;sample&#32;number&#32;is&#32;more&#32;than&#32;200</emphasis>
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(samples&#32;&gt;&#32;200){
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Exiting&#32;dataset&#32;creator...&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;eventHandler.<link linkend="_class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd">emit</link>(Event::DatasetCreatorComplete);
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+31 
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(newUser.empty())&#32;{
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Error:&#32;No&#32;User&#32;ID&#32;found.&#32;Try&#32;to&#32;initialize&#32;the&#32;dataset&#32;creator&#32;first&#32;then&#32;start&#32;the&#32;loop.&quot;</emphasis>&#32;&lt;&lt;&#32;std::endl;
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;raise(SIGHUP);
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+37 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+38 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;img;
+39 
+40 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera&#32;&gt;&gt;&#32;img;
+41 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(img.empty())&#32;<emphasis role="keywordflow">return</emphasis>;
+42 
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cvtColor(img,&#32;gray,&#32;cv::COLOR_BGR2GRAY);
+44 
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;detector.detectMultiScale(gray,&#32;faces,&#32;1.2,&#32;5);
+46 
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(cv::Rect&#32;face&#32;:&#32;faces)&#32;{
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::rectangle(img,&#32;face,&#32;cv::Scalar(255,&#32;0,&#32;0),&#32;2);
+49 
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;incrementing&#32;sample&#32;number</emphasis>
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;samples++;
+52 
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;saving&#32;the&#32;captured&#32;face&#32;in&#32;the&#32;dataset&#32;folder</emphasis>
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;filename&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/dataset/User.&quot;</emphasis>&#32;+&#32;newUser&#32;+&#32;<emphasis role="stringliteral">&quot;.&quot;</emphasis>&#32;+&#32;std::to_string(samples)&#32;+&#32;<emphasis role="stringliteral">&quot;.jpg&quot;</emphasis>;
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imwrite(filename,&#32;gray(face));
+56 
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imshow(<emphasis role="stringliteral">&quot;frame&quot;</emphasis>,&#32;img);
+58 
+59 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Sample&#32;#&quot;</emphasis>&#32;&lt;&lt;&#32;std::to_string(samples)&#32;&lt;&lt;&#32;std::endl;
+60 
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;wait&#32;for&#32;10&#32;milliseconds</emphasis>
+62 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::waitKey(10);
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+64 &#32;&#32;&#32;&#32;}
+65 
+66 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+68 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_dataset_creator_1aa0a4cc17b842a4350d4ff8c2b128ecc9">IntruderDatasetCreator</link>()&#32;{
+69 
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+71 
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585">Initialize</link>(cv::VideoCapture&#32;camera);
+73 
+74 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900">stop</link>()&#32;{
+75 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;masterCamera.release();
+76 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::destroyAllWindows();
+77 
+78 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900">stop</link>();
+79 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+80 
+81 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611">trim</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;str)&#32;{
+82 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::size_t&#32;start&#32;=&#32;str.find_first_not_of(<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>);
+83 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::size_t&#32;end&#32;=&#32;str.find_last_not_of(<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>);
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(start&#32;==&#32;std::string::npos&#32;||&#32;end&#32;==&#32;std::string::npos)&#32;{
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;str.substr(start,&#32;end&#32;-&#32;start&#32;+&#32;1);
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+91 
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1ab6a94beca84ac2602bcb45bbbbd9264f">count_name</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;str)&#32;{
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;count&#32;=&#32;0;
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;&amp;c&#32;:&#32;str)&#32;{
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;count&#32;+=&#32;1;
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;count&#32;&lt;&lt;&#32;std::endl;
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;count;
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+100 
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb">replace_spaces_with_underscores</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;str)&#32;{
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;result&#32;=&#32;str;
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">char</emphasis>&#32;&amp;c&#32;:&#32;result)&#32;{
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(c&#32;==&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>)&#32;{
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;c&#32;=&#32;<emphasis role="charliteral">&apos;_&apos;</emphasis>;
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+110 
+111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162">is_valid_name</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;name)&#32;{
+112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(name.empty())&#32;{
+113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;has_alpha&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">char</emphasis>&#32;c&#32;:&#32;name)&#32;{
+118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!std::isalpha(c)&#32;&amp;&amp;&#32;!std::isspace(c))&#32;{
+119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(std::isalpha(c))&#32;{
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;has_alpha&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;has_alpha;
+127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+128 
+129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07">findStringInFile</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;fileName,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;searchString)&#32;{
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ifstream&#32;file(fileName);
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+132 
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(file,&#32;line))&#32;{
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(line);
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;name;
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;name,&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(name&#32;==&#32;searchString)&#32;{
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+141 
+142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+144 
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35">getLastIntegerInFile</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;fileName)&#32;{
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ifstream&#32;file(fileName);
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;lastInteger&#32;=&#32;0;
+149 
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(file,&#32;line))&#32;{
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(line);
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;name;
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;numStr;
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;name,&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(iss,&#32;numStr);
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(numStr&#32;==&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>)&#32;{
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;num&#32;=&#32;std::stoi(numStr);
+162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lastInteger&#32;=&#32;num;
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+164 
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;lastInteger;
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+167 
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9">appendLineToFile</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;fileName,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;line)&#32;{
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ofstream&#32;file(fileName,&#32;std::ios_base::app);
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file&#32;&lt;&lt;&#32;line&#32;&lt;&lt;&#32;std::endl;
+171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea">checkCameraOpen</link>(cv::VideoCapture&#32;camera);
+174 
+175 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;masterCamera;
+177 
+178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::CascadeClassifier&#32;detector;
+179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;cascadePath&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/haarcascade_frontalface_default.xml&quot;</emphasis>;
+180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;EventHandler&amp;&#32;eventHandler&#32;=&#32;EventHandler::getInstance();</emphasis>
+181 
+182 
+183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Events&amp;&#32;eventHandler&#32;=&#32;Events::getInstance();</emphasis>
+184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;using&#32;EVENT_CODES&#32;=&#32;Events::EVENT_CODES;</emphasis>
+185 
+186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;fileName&#32;=&#32;<emphasis role="stringliteral">&quot;../src/resources/intruder-detection/Users.txt&quot;</emphasis>;
+187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;newUser;
+188 
+189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;samples&#32;=&#32;0;
+190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;CameraID&#32;=&#32;0;
+191 
+192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::Mat&#32;gray;
+193 
+194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;cv::Rect&gt;&#32;faces;
+195 };
+196 
+197 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

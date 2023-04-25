@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_doors_thread" kind="class" language="C++" prot="public">
+    <compoundname>DoorsThread</compoundname>
+    <basecompoundref refid="class_cpp_thread" prot="public" virt="non-virtual">CppThread</basecompoundref>
+    <includes refid="_doors_thread_8h" local="no">DoorsThread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_doors_thread_1a432e1fa4ecfc06c48ecb1c2c2f93b982" prot="private" static="no" mutable="no">
+        <type><ref refid="class_globals" kindref="compound">Globals</ref></type>
+        <definition>Globals DoorsThread::globals</definition>
+        <argsstring></argsstring>
+        <name>globals</name>
+        <qualifiedname>DoorsThread::globals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/doors/DoorsThread.h" line="38" column="17" bodyfile="src/thread/doors/DoorsThread.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_doors_thread_1a08b56bb7cccad9e7e3ec0ac6979015e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DoorsThread::DoorsThread</definition>
+        <argsstring>()</argsstring>
+        <name>DoorsThread</name>
+        <qualifiedname>DoorsThread::DoorsThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor for our doors thread.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/doors/DoorsThread.h" line="26" column="9" bodyfile="src/thread/doors/DoorsThread.h" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_doors_thread_1a5ea394ef57bc544806a7bfb2afb19003" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void DoorsThread::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>DoorsThread::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop our thread&apos;s inner functionality. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/doors/DoorsThread.h" line="32" column="14" bodyfile="src/thread/doors/DoorsThread.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_doors_thread_1ac3a2de2984ec878b0c62a7c9efa071b8" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DoorsThread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>DoorsThread::run</qualifiedname>
+        <reimplements refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manage the doors thread runnable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/doors/DoorsThread.h" line="35" column="14" bodyfile="src/thread/doors/DoorsThread.cpp" bodystart="26" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Doors Thread to manage doors detection functionality. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Chinmay Nagrale </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>DoorsThread</label>
+        <link refid="class_doors_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>DoorsThread</label>
+        <link refid="class_doors_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/thread/doors/DoorsThread.h" line="19" column="1" bodyfile="src/thread/doors/DoorsThread.h" bodystart="19" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_doors_thread_1a08b56bb7cccad9e7e3ec0ac6979015e6" prot="public" virt="non-virtual"><scope>DoorsThread</scope><name>DoorsThread</name></member>
+      <member refid="class_doors_thread_1a432e1fa4ecfc06c48ecb1c2c2f93b982" prot="private" virt="non-virtual"><scope>DoorsThread</scope><name>globals</name></member>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>DoorsThread</scope><name>join</name></member>
+      <member refid="class_doors_thread_1ac3a2de2984ec878b0c62a7c9efa071b8" prot="private" virt="virtual"><scope>DoorsThread</scope><name>run</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>DoorsThread</scope><name>start</name></member>
+      <member refid="class_doors_thread_1a5ea394ef57bc544806a7bfb2afb19003" prot="public" virt="non-virtual"><scope>DoorsThread</scope><name>stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

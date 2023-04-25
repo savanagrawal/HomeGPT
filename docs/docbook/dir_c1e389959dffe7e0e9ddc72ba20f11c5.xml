@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_c1e389959dffe7e0e9ddc72ba20f11c5" xml:lang="en-US">
+<title>src/dependencies/spidevpp/libs/spidevpp Directory Reference</title>
+<indexterm><primary>src/dependencies/spidevpp/libs/spidevpp Directory Reference</primary></indexterm>
+Directory dependency graph for spidevpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_c1e389959dffe7e0e9ddc72ba20f11c5_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_gpio_8cc">gpio.cc</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_gpio_8h">gpio.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_spi_8cc">spi.cc</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_spi_8h">spi.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

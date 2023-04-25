@@ -9,10 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -24,11 +20,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="HomeGPT LogoSmall.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="HomeGPT.png"/></td>
   <td id="projectalign">
-   <div id="projectname">HomeGPT<span id="projectnumber">&#160;Final Submission v1.0</span>
+   <div id="projectname">HomeGPT<span id="projectnumber">&#160;v.1.0</span>
    </div>
-   <div id="projectbrief">Real Time Embedded Project</div>
+   <div id="projectbrief">HomeGPT revolutionizes home automation with advanced features such as facial recognition for secure access, mood-responsive lighting, RFID-enabled garage entry, and clap-activated door closures. This system elevates the living experience by seamlessly blending security, convenience, and ambiance-enhancing technology.</div>
   </td>
  </tr>
  </tbody>
@@ -52,23 +48,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('class_clap_detection.html',''); initResizable(); });
-/* @license-end */
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -90,6 +69,7 @@ $(document).ready(function(){initNavTree('class_clap_detection.html',''); initRe
 </div>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -107,10 +87,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa18e197850922b6e636e0fdf76346204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93c7a6332be7f0b126135a9319daa745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a93c7a6332be7f0b126135a9319daa745">Initialize</a> ()</td></tr>
 <tr class="separator:a93c7a6332be7f0b126135a9319daa745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905ea0c10c5b8ce07c8cdda94e37535a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a905ea0c10c5b8ce07c8cdda94e37535a">openStream</a> ()</td></tr>
+<tr class="separator:a905ea0c10c5b8ce07c8cdda94e37535a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a441f8b04980a0e2e7b20e83a6748ec8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a441f8b04980a0e2e7b20e83a6748ec8a">closeStream</a> ()</td></tr>
+<tr class="separator:a441f8b04980a0e2e7b20e83a6748ec8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a800366c00fe876aa905a59a072436957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a800366c00fe876aa905a59a072436957">start</a> ()</td></tr>
 <tr class="separator:a800366c00fe876aa905a59a072436957"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4b672b7474c015efc14990874146742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#ad4b672b7474c015efc14990874146742">stop</a> ()</td></tr>
-<tr class="separator:ad4b672b7474c015efc14990874146742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d7a4329f238978b15abc40f6066340"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a14d7a4329f238978b15abc40f6066340">stop</a> () const</td></tr>
+<tr class="separator:a14d7a4329f238978b15abc40f6066340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6505beb6c7931e5508b0b72d9365a387"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a6505beb6c7931e5508b0b72d9365a387">record</a> ()</td></tr>
+<tr class="separator:a6505beb6c7931e5508b0b72d9365a387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94762cfcae59ebbdea790fef53c9bc15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a94762cfcae59ebbdea790fef53c9bc15">detectClap</a> ()</td></tr>
+<tr class="separator:a94762cfcae59ebbdea790fef53c9bc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -128,8 +116,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a909b33bb375c84ab4b348eb9da0a1cf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9f00a28382879aaba458015d3e6acce"><td class="memItemLeft" align="right" valign="top">static double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#aa9f00a28382879aaba458015d3e6acce">find_per_data</a> (const std::vector&lt; double &gt; &amp;within_data, const std::vector&lt; double &gt; &amp;y_find)</td></tr>
 <tr class="separator:aa9f00a28382879aaba458015d3e6acce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f3f08452273b23aca53fffa58deccfd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a1f3f08452273b23aca53fffa58deccfd">result</a> (double per, double check)</td></tr>
-<tr class="separator:a1f3f08452273b23aca53fffa58deccfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d70aed7d269a7aa9fdd099a7b2334da"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a3d70aed7d269a7aa9fdd099a7b2334da">result</a> (double per, double check)</td></tr>
+<tr class="separator:a3d70aed7d269a7aa9fdd099a7b2334da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c26276e3b68b25282e33d809788c6c8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_clap_detection.html#a2c26276e3b68b25282e33d809788c6c8">paCallback</a> (const void *inputBuffer, void *outputBuffer, unsigned long framesPerBuffer, const PaStreamCallbackTimeInfo *timeInfo, PaStreamCallbackFlags statusFlags, void *userData)</td></tr>
 <tr class="separator:a2c26276e3b68b25282e33d809788c6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -160,6 +148,36 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a441f8b04980a0e2e7b20e83a6748ec8a" name="a441f8b04980a0e2e7b20e83a6748ec8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a441f8b04980a0e2e7b20e83a6748ec8a">&#9670;&#160;</a></span>closeStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClapDetection::closeStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_clap_detection_a441f8b04980a0e2e7b20e83a6748ec8a_icgraph.png" border="0" usemap="#aclass_clap_detection_a441f8b04980a0e2e7b20e83a6748ec8a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a71206899c9fbc9e7687d3305beeb15cc" name="a71206899c9fbc9e7687d3305beeb15cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71206899c9fbc9e7687d3305beeb15cc">&#9670;&#160;</a></span>convolve()</h2>
 
@@ -214,6 +232,36 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_clap_detection.html#aa9f00a28382879aaba458015d3e6acce" title=" " alt="" coords="203,55,334,95"/>
 <area shape="rect" href="class_clap_detection.html#a800366c00fe876aa905a59a072436957" title=" " alt="" coords="5,63,143,88"/>
 </map>
+</div>
+
+</div>
+</div>
+<a id="a94762cfcae59ebbdea790fef53c9bc15" name="a94762cfcae59ebbdea790fef53c9bc15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94762cfcae59ebbdea790fef53c9bc15">&#9670;&#160;</a></span>detectClap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClapDetection::detectClap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_clap_detection_a94762cfcae59ebbdea790fef53c9bc15_cgraph.png" border="0" usemap="#aclass_clap_detection_a94762cfcae59ebbdea790fef53c9bc15_cgraph" alt=""/></div>
 </div>
 
 </div>
@@ -454,6 +502,36 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a905ea0c10c5b8ce07c8cdda94e37535a" name="a905ea0c10c5b8ce07c8cdda94e37535a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905ea0c10c5b8ce07c8cdda94e37535a">&#9670;&#160;</a></span>openStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClapDetection::openStream </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_clap_detection_a905ea0c10c5b8ce07c8cdda94e37535a_cgraph.png" border="0" usemap="#aclass_clap_detection_a905ea0c10c5b8ce07c8cdda94e37535a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
 <a id="a2c26276e3b68b25282e33d809788c6c8" name="a2c26276e3b68b25282e33d809788c6c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c26276e3b68b25282e33d809788c6c8">&#9670;&#160;</a></span>paCallback()</h2>
 
@@ -570,8 +648,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a1f3f08452273b23aca53fffa58deccfd" name="a1f3f08452273b23aca53fffa58deccfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f3f08452273b23aca53fffa58deccfd">&#9670;&#160;</a></span>result()</h2>
+<a id="a6505beb6c7931e5508b0b72d9365a387" name="a6505beb6c7931e5508b0b72d9365a387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6505beb6c7931e5508b0b72d9365a387">&#9670;&#160;</a></span>record()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -580,7 +658,32 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ClapDetection::result </td>
+          <td class="memname">void ClapDetection::record </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d70aed7d269a7aa9fdd099a7b2334da" name="a3d70aed7d269a7aa9fdd099a7b2334da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d70aed7d269a7aa9fdd099a7b2334da">&#9670;&#160;</a></span>result()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ClapDetection::result </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>per</em>, </td>
@@ -606,16 +709,7 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_clap_detection_a1f3f08452273b23aca53fffa58deccfd_icgraph.png" border="0" usemap="#aclass_clap_detection_a1f3f08452273b23aca53fffa58deccfd_icgraph" alt=""/></div>
-<map name="aclass_clap_detection_a1f3f08452273b23aca53fffa58deccfd_icgraph" id="aclass_clap_detection_a1f3f08452273b23aca53fffa58deccfd_icgraph">
-<area shape="rect" title=" " alt="" coords="999,43,1141,69"/>
-<area shape="rect" href="class_clap_detection.html#a71206899c9fbc9e7687d3305beeb15cc" title=" " alt="" coords="395,69,553,94"/>
-<area shape="rect" href="class_clap_detection.html#a800366c00fe876aa905a59a072436957" title=" " alt="" coords="5,47,143,73"/>
-<area shape="rect" href="class_clap_detection.html#ae3b186d18ddec06fc0d88821fe78dccc" title=" " alt="" coords="771,94,951,119"/>
-<area shape="rect" href="class_clap_detection.html#a909b33bb375c84ab4b348eb9da0a1cf4" title=" " alt="" coords="191,43,347,69"/>
-<area shape="rect" href="class_clap_detection.html#aa9f00a28382879aaba458015d3e6acce" title=" " alt="" coords="203,93,334,133"/>
-<area shape="rect" href="class_clap_detection.html#a457a526ff1d5c5d9cef68b62f4f6a0aa" title=" " alt="" coords="601,94,723,119"/>
-</map>
+<div class="center"><img src="class_clap_detection_a3d70aed7d269a7aa9fdd099a7b2334da_icgraph.png" border="0" usemap="#aclass_clap_detection_a3d70aed7d269a7aa9fdd099a7b2334da_icgraph" alt=""/></div>
 </div>
 
 </div>
@@ -718,8 +812,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ad4b672b7474c015efc14990874146742" name="ad4b672b7474c015efc14990874146742"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4b672b7474c015efc14990874146742">&#9670;&#160;</a></span>stop()</h2>
+<a id="a14d7a4329f238978b15abc40f6066340" name="a14d7a4329f238978b15abc40f6066340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d7a4329f238978b15abc40f6066340">&#9670;&#160;</a></span>stop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -731,7 +825,7 @@ Here is the call graph for this function:</div>
           <td class="memname">void ClapDetection::stop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -740,6 +834,11 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_clap_detection_a14d7a4329f238978b15abc40f6066340_icgraph.png" border="0" usemap="#aclass_clap_detection_a14d7a4329f238978b15abc40f6066340_icgraph" alt=""/></div>
+</div>
 
 </div>
 </div>
@@ -748,13 +847,9 @@ Here is the call graph for this function:</div>
 <li>src/clap-detection/<a class="el" href="_clap_detection_8cpp.html">ClapDetection.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_clap_detection.html">ClapDetection</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
 </body>
 </html>

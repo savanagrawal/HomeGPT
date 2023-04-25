@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__camera_8h_source" xml:lang="en-US">
+<title>Camera.h</title>
+<indexterm><primary>src/peripherals/Camera.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+8 <emphasis role="preprocessor">#ifndef&#32;CAMERA_H</emphasis>
+9 <emphasis role="preprocessor">#define&#32;CAMERA_H</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&lt;opencv2/opencv.hpp&gt;</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+12 
+13 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_camera">Camera</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;cv::VideoCapture&#32;{
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">public</emphasis>:
+15 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_camera_1af59c63e75ba3b669675eacbb43abe4be">Camera</link>(<emphasis role="keywordtype">int</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>)&#32;{
+16 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;cam(<emphasis role="keywordtype">id</emphasis>);
+17 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+18 
+19 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;<link linkend="_class_camera_1a5873ce618d501a93c011291b03d1156c">getCamera</link>()&#32;{
+20 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;cam;
+21 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+22 
+23 
+24 &#32;&#32;&#32;&#32;
+25 &#32;&#32;&#32;&#32;<emphasis role="keyword">private</emphasis>:
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cv::VideoCapture&#32;cam;
+27 };
+28 
+29 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

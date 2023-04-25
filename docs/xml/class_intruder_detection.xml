@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_intruder_detection" kind="class" language="C++" prot="public">
+    <compoundname>IntruderDetection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">CppTimer</basecompoundref>
+    <includes refid="_intruder_detection_8h" local="no">IntruderDetection.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_intruder_detection_1a9eeb52647fb94537e828f7eb5228ae56" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture IntruderDetection::masterCamera</definition>
+        <argsstring></argsstring>
+        <name>masterCamera</name>
+        <qualifiedname>IntruderDetection::masterCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="104" column="26" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a875c6d3643614660d9fee77ed842655f" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderDetection::im</definition>
+        <argsstring></argsstring>
+        <name>im</name>
+        <qualifiedname>IntruderDetection::im</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="106" column="17" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a3eea780b065647057580e3ec7b293063" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderDetection::gray</definition>
+        <argsstring></argsstring>
+        <name>gray</name>
+        <qualifiedname>IntruderDetection::gray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="106" column="20" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a3c4032f4993d85a1a66f485558cdb01e" prot="private" static="no" mutable="no">
+        <type>cv::CascadeClassifier</type>
+        <definition>cv::CascadeClassifier IntruderDetection::detector</definition>
+        <argsstring></argsstring>
+        <name>detector</name>
+        <qualifiedname>IntruderDetection::detector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="108" column="31" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a337464759ab4506a8a72195aa4c23c2b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDetection::cascadePath</definition>
+        <argsstring></argsstring>
+        <name>cascadePath</name>
+        <qualifiedname>IntruderDetection::cascadePath</qualifiedname>
+        <initializer>= &quot;../src/resources/haarcascade_frontalface_default.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="109" column="21" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a003b285eb27bec78e3b0fb2b334ec1e8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDetection::trainedModelPath</definition>
+        <argsstring></argsstring>
+        <name>trainedModelPath</name>
+        <qualifiedname>IntruderDetection::trainedModelPath</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection/trainer/trainer.yml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="110" column="21" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a549faa6d01de0d71d15dd66cab001e32" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; cv::face::LBPHFaceRecognizer &gt;</type>
+        <definition>cv::Ptr&lt;cv::face::LBPHFaceRecognizer&gt; IntruderDetection::recognizer</definition>
+        <argsstring></argsstring>
+        <name>recognizer</name>
+        <qualifiedname>IntruderDetection::recognizer</qualifiedname>
+        <initializer>= cv::face::LBPHFaceRecognizer::create()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="112" column="17" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a0720accdb6367bbc1728459083bfe2e6" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDetection::fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <qualifiedname>IntruderDetection::fileName</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection/Users.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="114" column="21" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_detection_1a95f68153c69bd3f56f59b8fe387bd890" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; IntruderDetection::users</definition>
+        <argsstring></argsstring>
+        <name>users</name>
+        <qualifiedname>IntruderDetection::users</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="115" column="18" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_intruder_detection_1af3edaaf61f20a647ec70d04ecd74fcb1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDetection::timerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>timerEvent</name>
+        <qualifiedname>IntruderDetection::timerEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="23" column="10" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="23" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_intruder_detection_1a6977d021a0c0ba13fa5967824b4c1cd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntruderDetection::IntruderDetection</definition>
+        <argsstring>()</argsstring>
+        <name>IntruderDetection</name>
+        <qualifiedname>IntruderDetection::IntruderDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="74" column="9" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_detection_1a1f5c2435c70378d425088e735683af29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDetection::Initialize</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>IntruderDetection::Initialize</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes our Intruder Detection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+return </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="76" column="14" bodyfile="src/intruder-detection/IntruderDetection.cpp" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDetection::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>IntruderDetection::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="78" column="14" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="78" bodyend="83"/>
+        <references refid="class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529" compoundref="_intruder_detection_8h" startline="78" endline="83">stop</references>
+        <referencedby refid="class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529" compoundref="_intruder_detection_8h" startline="78" endline="83">stop</referencedby>
+        <referencedby refid="class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d" compoundref="_intruder_thread_8h" startline="44" endline="50">IntruderThread::stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_detection_1ae7434a5c6a619b5a50fe4dd70daba809" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt; int, std::string &gt; IntruderDetection::readFileToMap</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>readFileToMap</name>
+        <qualifiedname>IntruderDetection::readFileToMap</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/IntruderDetection.h" line="85" column="18" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="85" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>IntruderDetection</label>
+        <link refid="class_intruder_detection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>IntruderDetection</label>
+        <link refid="class_intruder_detection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/intruder-detection/IntruderDetection.h" line="22" column="1" bodyfile="src/intruder-detection/IntruderDetection.h" bodystart="22" bodyend="116"/>
+    <listofallmembers>
+      <member refid="class_intruder_detection_1a337464759ab4506a8a72195aa4c23c2b" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>cascadePath</name></member>
+      <member refid="class_intruder_detection_1a3c4032f4993d85a1a66f485558cdb01e" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>detector</name></member>
+      <member refid="class_intruder_detection_1a0720accdb6367bbc1728459083bfe2e6" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>fileName</name></member>
+      <member refid="class_intruder_detection_1a3eea780b065647057580e3ec7b293063" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>gray</name></member>
+      <member refid="class_intruder_detection_1a875c6d3643614660d9fee77ed842655f" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>im</name></member>
+      <member refid="class_intruder_detection_1a1f5c2435c70378d425088e735683af29" prot="public" virt="non-virtual"><scope>IntruderDetection</scope><name>Initialize</name></member>
+      <member refid="class_intruder_detection_1a6977d021a0c0ba13fa5967824b4c1cd5" prot="public" virt="non-virtual"><scope>IntruderDetection</scope><name>IntruderDetection</name></member>
+      <member refid="class_intruder_detection_1a9eeb52647fb94537e828f7eb5228ae56" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>masterCamera</name></member>
+      <member refid="class_intruder_detection_1ae7434a5c6a619b5a50fe4dd70daba809" prot="public" virt="non-virtual"><scope>IntruderDetection</scope><name>readFileToMap</name></member>
+      <member refid="class_intruder_detection_1a549faa6d01de0d71d15dd66cab001e32" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>recognizer</name></member>
+      <member refid="class_intruder_detection_1a7ca7019eb7f23361b0a8ac3d8cdcc529" prot="public" virt="non-virtual"><scope>IntruderDetection</scope><name>stop</name></member>
+      <member refid="class_intruder_detection_1af3edaaf61f20a647ec70d04ecd74fcb1" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>timerEvent</name></member>
+      <member refid="class_intruder_detection_1a003b285eb27bec78e3b0fb2b334ec1e8" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>trainedModelPath</name></member>
+      <member refid="class_intruder_detection_1a95f68153c69bd3f56f59b8fe387bd890" prot="private" virt="non-virtual"><scope>IntruderDetection</scope><name>users</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

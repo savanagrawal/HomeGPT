@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_fdae27ba2f4a82a2d3a85d3ed1014509" xml:lang="en-US">
+<title>src/dependencies/mfrc522 Directory Reference</title>
+<indexterm><primary>src/dependencies/mfrc522 Directory Reference</primary></indexterm>
+Directory dependency graph for mfrc522:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_fdae27ba2f4a82a2d3a85d3ed1014509_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_dependencies_2mfrc522_2igpio_8h">igpio.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_dependencies_2mfrc522_2ispi_8h">ispi.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_mfrc522_8cc">mfrc522.cc</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_dependencies_2mfrc522_2mfrc522_8h">mfrc522.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

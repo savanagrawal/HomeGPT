@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_mood_detection" xml:lang="en-US">
+<title>MoodDetection Class Reference</title>
+<indexterm><primary>MoodDetection</primary></indexterm>
+<para>
+<computeroutput>#include &lt;MoodDetection.h&gt;</computeroutput>
+</para>
+Inheritance diagram for MoodDetection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mood_detection__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for MoodDetection:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mood_detection__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_mood_detection_1a410945568417f247ee6239a4e787dc4c">MoodDetection</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mood_detection_1aba994443b5bd0c82346d4f546317b934">stop</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2">Initialize</link> (cv::VideoCapture camera)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mood_detection_1a90d59cfc694ff31ede33ea2dd7bdf01b">setCameraId</link> (int id)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mood_detection_1a94b0201f1b1bf7d3e071a61ac17309b0">setContrasts</link> (int low, int high)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mood_detection_1a0f48eaee6ef92b02b44b392d20dbb651">setShutter</link> (int shutter)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_mood_detection_1a44f66eda0c282ddc24f7d804fcf74465">checkCameraOpen</link> (cv::VideoCapture camera)</para>
+</listitem>
+            <listitem><para>cv::Mat <link linkend="_class_mood_detection_1a6ccbb7812ef82e7adefda31bbf688c6d">takePicture</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_mood_detection_1a31af342d62bf05a390849c25596b3be0">savePicture</link> (cv::VideoCapture *, std::string filename)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_mood_detection_1a410945568417f247ee6239a4e787dc4c"/><section>
+    <title>MoodDetection()</title>
+<indexterm><primary>MoodDetection</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>MoodDetection</secondary></indexterm>
+<para><computeroutput>MoodDetection::MoodDetection ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Constructor </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_mood_detection_1a44f66eda0c282ddc24f7d804fcf74465"/><section>
+    <title>checkCameraOpen()</title>
+<indexterm><primary>checkCameraOpen</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>checkCameraOpen</secondary></indexterm>
+<para><computeroutput>int MoodDetection::checkCameraOpen (cv::VideoCapture camera)</computeroutput></para>
+<para>Checks if camera is open. Mainly used for debugging.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>camera</entry><entry>
+<para><link linkend="_class_camera">Camera</link> object.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Error Code </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_mood_detection_1ae2d8fa4358b2105c4e862a041fddc9d2"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>void MoodDetection::Initialize (cv::VideoCapture camera)</computeroutput></para>
+<para>Initializes our Mood Detection</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>camera</entry><entry>
+<para><link linkend="_class_camera">Camera</link> object.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para></para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mood_detection_ae2d8fa4358b2105c4e862a041fddc9d2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_mood_detection_1a31af342d62bf05a390849c25596b3be0"/><section>
+    <title>savePicture()</title>
+<indexterm><primary>savePicture</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>savePicture</secondary></indexterm>
+<para><computeroutput>void MoodDetection::savePicture (cv::VideoCapture * , std::string filename)</computeroutput></para></section>
+<anchor xml:id="_class_mood_detection_1a90d59cfc694ff31ede33ea2dd7bdf01b"/><section>
+    <title>setCameraId()</title>
+<indexterm><primary>setCameraId</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>setCameraId</secondary></indexterm>
+<para><computeroutput>void MoodDetection::setCameraId (int id)</computeroutput></para>
+<para><link linkend="_class_camera">Camera</link> setup functions</para>
+
+<para>Set the Mood Detection <link linkend="_class_camera">Camera</link> ID object.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>Set a <link linkend="_class_camera">Camera</link> ID.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Updated MoodDetection::CameraID </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_mood_detection_1a94b0201f1b1bf7d3e071a61ac17309b0"/><section>
+    <title>setContrasts()</title>
+<indexterm><primary>setContrasts</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>setContrasts</secondary></indexterm>
+<para><computeroutput>void MoodDetection::setContrasts (int low, int high)</computeroutput></para></section>
+<anchor xml:id="_class_mood_detection_1a0f48eaee6ef92b02b44b392d20dbb651"/><section>
+    <title>setShutter()</title>
+<indexterm><primary>setShutter</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>setShutter</secondary></indexterm>
+<para><computeroutput>void MoodDetection::setShutter (int shutter)</computeroutput></para></section>
+<anchor xml:id="_class_mood_detection_1aba994443b5bd0c82346d4f546317b934"/><section>
+    <title>stop()</title>
+<indexterm><primary>stop</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>stop</secondary></indexterm>
+<para><computeroutput>void MoodDetection::stop ( )<computeroutput>[inline]</computeroutput></computeroutput></para>
+<para>Handling class functions </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mood_detection_aba994443b5bd0c82346d4f546317b934_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_mood_detection_aba994443b5bd0c82346d4f546317b934_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_mood_detection_1a6ccbb7812ef82e7adefda31bbf688c6d"/><section>
+    <title>takePicture()</title>
+<indexterm><primary>takePicture</primary><secondary>MoodDetection</secondary></indexterm>
+<indexterm><primary>MoodDetection</primary><secondary>takePicture</secondary></indexterm>
+<para><computeroutput>cv::Mat MoodDetection::takePicture ( )</computeroutput></para>
+<para><link linkend="_class_camera">Camera</link> functions </para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/mood-detection/<link linkend="__mood_detection_8h">MoodDetection.h</link>src/mood-detection/<link linkend="__mood_detection_8cpp">MoodDetection.cpp</link></section>
+</section>

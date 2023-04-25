@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="sys__gpio__impl_8h" kind="file" language="C++">
+    <compoundname>sys_gpio_impl.h</compoundname>
+    <includes refid="dependencies_2mfrc522_2igpio_8h" local="no">mfrc522/igpio.h</includes>
+    <includes refid="gpio_8h" local="no">spidevpp/gpio.h</includes>
+    <includedby refid="_r_f_i_d_8h" local="yes">src/peripherals/RFID.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>mfrc522/igpio.h</label>
+        <link refid="dependencies_2mfrc522_2igpio_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>spidevpp/gpio.h</label>
+        <link refid="gpio_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/peripherals/spi/sys_gpio_impl.h</label>
+        <link refid="sys__gpio__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/peripherals/RFID.cpp</label>
+        <link refid="_r_f_i_d_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/peripherals/RFID.h</label>
+        <link refid="_r_f_i_d_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/peripherals/spi/sys_gpio_impl.h</label>
+        <link refid="sys__gpio__impl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/thread/ControllerThread.cpp</label>
+        <link refid="_controller_thread_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/thread/rfid/RFIDThread.cpp</label>
+        <link refid="_r_f_i_d_thread_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/thread/rfid/RFIDThread.h</label>
+        <link refid="_r_f_i_d_thread_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sys_gpio" prot="public">SysGpio</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2021<sp/>twyleg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="dependencies_2mfrc522_2igpio_8h" kindref="compound">mfrc522/igpio.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="gpio_8h" kindref="compound">spidevpp/gpio.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_sys_gpio" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sys_gpio" kindref="compound">SysGpio</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structmfrc522_1_1_i_gpio" kindref="compound">mfrc522::IGpio</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10" refid="class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sys_gpio_1a32c0bf5b37804ed1bfcd8d60fb6eb309" kindref="member">SysGpio</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin,<sp/><ref refid="classspidevpp_1_1_gpio_1a658b6cb561d8ee2216e9cb21835aea08" kindref="member">spidevpp::Gpio::Direction</ref><sp/>direction,<sp/><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">spidevpp::Gpio::Value</ref><sp/>value)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><sp/><ref refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" kindref="member">mGpio</ref>(pin,<sp/>direction,<sp/>value)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sys_gpio_1a9baa7e752011933cbbdb85645038e7f9" kindref="member">setValue</ref>(<ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref><sp/>value)<sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" kindref="member">mGpio</ref>.<ref refid="classspidevpp_1_1_gpio_1aeb4dea7570af80386b138a33f656f024" kindref="member">setValue</ref>(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="classspidevpp_1_1_gpio_1a8307745d5351f75c50104a9cb8d0509b" kindref="member">spidevpp::Gpio::Value</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(value));</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">Value</ref><sp/><ref refid="class_sys_gpio_1a71909fb86a71f59b4263f39121dbe16b" kindref="member">getValue</ref>()<sp/>final<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structmfrc522_1_1_i_gpio_1a8acb54d4651db39bea52c834b8570be9" kindref="member">mfrc522::IGpio::Value</ref></highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" kindref="member">mGpio</ref>.<ref refid="classspidevpp_1_1_gpio_1adf895aa115a073e285f3ff79abe629c5" kindref="member">getValue</ref>());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classspidevpp_1_1_gpio" kindref="compound">spidevpp::Gpio</ref><sp/><ref refid="class_sys_gpio_1aaf92047121084d239a8b8559707e0a1a" kindref="member">mGpio</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="src/peripherals/spi/sys_gpio_impl.h"/>
+  </compounddef>
+</doxygen>

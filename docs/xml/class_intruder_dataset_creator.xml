@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_intruder_dataset_creator" kind="class" language="C++" prot="public">
+    <compoundname>IntruderDatasetCreator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">CppTimer</basecompoundref>
+    <includes refid="_dataset_creator_8h" local="no">DatasetCreator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1ac5f22715493f60833a692158717d4175" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture IntruderDatasetCreator::masterCamera</definition>
+        <argsstring></argsstring>
+        <name>masterCamera</name>
+        <qualifiedname>IntruderDatasetCreator::masterCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="176" column="26" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1a88b5909de5adbc12c06a97f9bc0f4e3d" prot="private" static="no" mutable="no">
+        <type>cv::CascadeClassifier</type>
+        <definition>cv::CascadeClassifier IntruderDatasetCreator::detector</definition>
+        <argsstring></argsstring>
+        <name>detector</name>
+        <qualifiedname>IntruderDatasetCreator::detector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="178" column="31" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1a6f888033f4cde4798f5da82db448320a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetCreator::cascadePath</definition>
+        <argsstring></argsstring>
+        <name>cascadePath</name>
+        <qualifiedname>IntruderDatasetCreator::cascadePath</qualifiedname>
+        <initializer>= &quot;../src/resources/haarcascade_frontalface_default.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="179" column="21" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1a017a138144956239e6cdc45c79a489c4" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetCreator::fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <qualifiedname>IntruderDatasetCreator::fileName</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection/Users.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="186" column="21" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1a3d5799be713c7ad10f7aa0056e949d74" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetCreator::newUser</definition>
+        <argsstring></argsstring>
+        <name>newUser</name>
+        <qualifiedname>IntruderDatasetCreator::newUser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="187" column="21" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1ad900739c662b2ab8e557e5d3ad653b6b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntruderDatasetCreator::samples</definition>
+        <argsstring></argsstring>
+        <name>samples</name>
+        <qualifiedname>IntruderDatasetCreator::samples</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="189" column="13" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1af1652b060305698d9e4e39367821bc9d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntruderDatasetCreator::CameraID</definition>
+        <argsstring></argsstring>
+        <name>CameraID</name>
+        <qualifiedname>IntruderDatasetCreator::CameraID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="190" column="13" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1a88996a3f73b84c0e9a62c1001a87f429" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderDatasetCreator::gray</definition>
+        <argsstring></argsstring>
+        <name>gray</name>
+        <qualifiedname>IntruderDatasetCreator::gray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="192" column="17" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_dataset_creator_1a12f35b6ada45b7c5e048744ec46f6977" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Rect &gt;</type>
+        <definition>std::vector&lt;cv::Rect&gt; IntruderDatasetCreator::faces</definition>
+        <argsstring></argsstring>
+        <name>faces</name>
+        <qualifiedname>IntruderDatasetCreator::faces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="194" column="21" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a0544f8c7971bad326d2a7c3709f2d1fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDatasetCreator::timerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>timerEvent</name>
+        <qualifiedname>IntruderDatasetCreator::timerEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Timer function for intruder detector&apos;s dataset creation functionality. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="20" column="10" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="20" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_intruder_dataset_creator_1aa0a4cc17b842a4350d4ff8c2b128ecc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntruderDatasetCreator::IntruderDatasetCreator</definition>
+        <argsstring>()</argsstring>
+        <name>IntruderDatasetCreator</name>
+        <qualifiedname>IntruderDatasetCreator::IntruderDatasetCreator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="68" column="9" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDatasetCreator::Initialize</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>IntruderDatasetCreator::Initialize</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes our Dataset Creator.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>camera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> object.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="72" column="14" bodyfile="src/intruder-detection/DatasetCreator.cpp" bodystart="18" bodyend="45"/>
+        <references refid="class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9" compoundref="_dataset_creator_8h" startline="168" endline="171">appendLineToFile</references>
+        <references refid="class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07" compoundref="_dataset_creator_8h" startline="129" endline="143">findStringInFile</references>
+        <references refid="class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35" compoundref="_dataset_creator_8h" startline="145" endline="166">getLastIntegerInFile</references>
+        <references refid="class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162" compoundref="_dataset_creator_8h" startline="111" endline="127">is_valid_name</references>
+        <references refid="class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb" compoundref="_dataset_creator_8h" startline="101" endline="109">replace_spaces_with_underscores</references>
+        <references refid="class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611" compoundref="_dataset_creator_8h" startline="81" endline="90">trim</references>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDatasetCreator::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>IntruderDatasetCreator::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="74" column="14" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="74" bodyend="79"/>
+        <references refid="class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900" compoundref="_dataset_creator_8h" startline="74" endline="79">stop</references>
+        <referencedby refid="class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900" compoundref="_dataset_creator_8h" startline="74" endline="79">stop</referencedby>
+        <referencedby refid="class_intruder_thread_1adca3a9fd9fadc77fa40e2a36dbd7df7d" compoundref="_intruder_thread_8h" startline="44" endline="50">IntruderThread::stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetCreator::trim</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>trim</name>
+        <qualifiedname>IntruderDatasetCreator::trim</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="81" column="21" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="81" bodyend="90"/>
+        <referencedby refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" compoundref="_dataset_creator_8cpp" startline="18" endline="45">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1ab6a94beca84ac2602bcb45bbbbd9264f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int IntruderDatasetCreator::count_name</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>count_name</name>
+        <qualifiedname>IntruderDatasetCreator::count_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="92" column="13" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string IntruderDatasetCreator::replace_spaces_with_underscores</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>replace_spaces_with_underscores</name>
+        <qualifiedname>IntruderDatasetCreator::replace_spaces_with_underscores</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="101" column="21" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="101" bodyend="109"/>
+        <referencedby refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" compoundref="_dataset_creator_8cpp" startline="18" endline="45">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IntruderDatasetCreator::is_valid_name</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>is_valid_name</name>
+        <qualifiedname>IntruderDatasetCreator::is_valid_name</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="111" column="14" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="111" bodyend="127"/>
+        <referencedby refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" compoundref="_dataset_creator_8cpp" startline="18" endline="45">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IntruderDatasetCreator::findStringInFile</definition>
+        <argsstring>(const std::string &amp;fileName, const std::string &amp;searchString)</argsstring>
+        <name>findStringInFile</name>
+        <qualifiedname>IntruderDatasetCreator::findStringInFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>searchString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="129" column="14" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="129" bodyend="143"/>
+        <referencedby refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" compoundref="_dataset_creator_8cpp" startline="18" endline="45">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int IntruderDatasetCreator::getLastIntegerInFile</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>getLastIntegerInFile</name>
+        <qualifiedname>IntruderDatasetCreator::getLastIntegerInFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="145" column="13" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="145" bodyend="166"/>
+        <referencedby refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" compoundref="_dataset_creator_8cpp" startline="18" endline="45">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderDatasetCreator::appendLineToFile</definition>
+        <argsstring>(const std::string &amp;fileName, const std::string &amp;line)</argsstring>
+        <name>appendLineToFile</name>
+        <qualifiedname>IntruderDatasetCreator::appendLineToFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="168" column="14" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="168" bodyend="171"/>
+        <referencedby refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" compoundref="_dataset_creator_8cpp" startline="18" endline="45">Initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int IntruderDatasetCreator::checkCameraOpen</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>checkCameraOpen</name>
+        <qualifiedname>IntruderDatasetCreator::checkCameraOpen</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-detection/DatasetCreator.h" line="173" column="13" bodyfile="src/intruder-detection/DatasetCreator.cpp" bodystart="47" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>IntruderDatasetCreator</label>
+        <link refid="class_intruder_dataset_creator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>IntruderDatasetCreator</label>
+        <link refid="class_intruder_dataset_creator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/intruder-detection/DatasetCreator.h" line="18" column="1" bodyfile="src/intruder-detection/DatasetCreator.h" bodystart="18" bodyend="195"/>
+    <listofallmembers>
+      <member refid="class_intruder_dataset_creator_1a699ae5e742ed3212b3172b4369f6f0e9" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>appendLineToFile</name></member>
+      <member refid="class_intruder_dataset_creator_1af1652b060305698d9e4e39367821bc9d" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>CameraID</name></member>
+      <member refid="class_intruder_dataset_creator_1a6f888033f4cde4798f5da82db448320a" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>cascadePath</name></member>
+      <member refid="class_intruder_dataset_creator_1a9e413f861af4e8daa508eb9c80c6a8ea" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>checkCameraOpen</name></member>
+      <member refid="class_intruder_dataset_creator_1ab6a94beca84ac2602bcb45bbbbd9264f" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>count_name</name></member>
+      <member refid="class_intruder_dataset_creator_1a88b5909de5adbc12c06a97f9bc0f4e3d" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>detector</name></member>
+      <member refid="class_intruder_dataset_creator_1a12f35b6ada45b7c5e048744ec46f6977" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>faces</name></member>
+      <member refid="class_intruder_dataset_creator_1a017a138144956239e6cdc45c79a489c4" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>fileName</name></member>
+      <member refid="class_intruder_dataset_creator_1a73e5387e5dfa8223ea253ac17352ea07" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>findStringInFile</name></member>
+      <member refid="class_intruder_dataset_creator_1a7eb468d36cfbef516594a453b516de35" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>getLastIntegerInFile</name></member>
+      <member refid="class_intruder_dataset_creator_1a88996a3f73b84c0e9a62c1001a87f429" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>gray</name></member>
+      <member refid="class_intruder_dataset_creator_1a41d4ed8f8ab42b57db50dd9560ce2585" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>Initialize</name></member>
+      <member refid="class_intruder_dataset_creator_1aa0a4cc17b842a4350d4ff8c2b128ecc9" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>IntruderDatasetCreator</name></member>
+      <member refid="class_intruder_dataset_creator_1ad4ff1abe5a7d08e7f119d76bc3d10162" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>is_valid_name</name></member>
+      <member refid="class_intruder_dataset_creator_1ac5f22715493f60833a692158717d4175" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>masterCamera</name></member>
+      <member refid="class_intruder_dataset_creator_1a3d5799be713c7ad10f7aa0056e949d74" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>newUser</name></member>
+      <member refid="class_intruder_dataset_creator_1a96b37cbd8c72a17879fd0fbc849589fb" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>replace_spaces_with_underscores</name></member>
+      <member refid="class_intruder_dataset_creator_1ad900739c662b2ab8e557e5d3ad653b6b" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>samples</name></member>
+      <member refid="class_intruder_dataset_creator_1a30367789143221e7d4144c953700b900" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>stop</name></member>
+      <member refid="class_intruder_dataset_creator_1a0544f8c7971bad326d2a7c3709f2d1fc" prot="private" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>timerEvent</name></member>
+      <member refid="class_intruder_dataset_creator_1ac5acff14ff6ccb3f26c0af29c53bb611" prot="public" virt="non-virtual"><scope>IntruderDatasetCreator</scope><name>trim</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

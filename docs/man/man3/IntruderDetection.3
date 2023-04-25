@@ -1,0 +1,50 @@
+.TH "IntruderDetection" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IntruderDetection
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IntruderDetection\&.h>\fP
+.PP
+Inherits CppTimer\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIntruderDetection\fP ()"
+.br
+.ti -1c
+.RI "void \fBInitialize\fP (cv::VideoCapture camera)"
+.br
+.ti -1c
+.RI "void \fBstop\fP ()"
+.br
+.ti -1c
+.RI "std::map< int, std::string > \fBreadFileToMap\fP (const std::string &fileName)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IntruderDetection::IntruderDetection ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void IntruderDetection::Initialize (cv::VideoCapture camera)"
+Initializes our Intruder Detection\&.
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fP .RE
+.PP
+return 
+.SS "std::map< int, std::string > IntruderDetection::readFileToMap (const std::string & fileName)\fC [inline]\fP"
+
+.SS "void IntruderDetection::stop ()\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

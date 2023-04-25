@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="spi_8h" kind="file" language="C++">
+    <compoundname>spi.h</compoundname>
+    <includes local="no">linux/spi/spidev.h</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">string</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="main_8cc" local="no">src/dependencies/spidevpp/apps/loopback_example_app/main.cc</includedby>
+    <includedby refid="spi_8cc" local="yes">src/dependencies/spidevpp/libs/spidevpp/spi.cc</includedby>
+    <includedby refid="spidev__impl_8h" local="no">src/peripherals/spi/spidev_impl.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/dependencies/spidevpp/libs/spidevpp/spi.h</label>
+        <link refid="spi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>chrono</label>
+      </node>
+      <node id="6">
+        <label>cstddef</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>linux/spi/spidev.h</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/dependencies/spidevpp/apps/loopback_example_app/main.cc</label>
+        <link refid="main_8cc"/>
+      </node>
+      <node id="3">
+        <label>src/dependencies/spidevpp/libs/spidevpp/spi.cc</label>
+        <link refid="spi_8cc"/>
+      </node>
+      <node id="1">
+        <label>src/dependencies/spidevpp/libs/spidevpp/spi.h</label>
+        <link refid="spi_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>src/peripherals/RFID.cpp</label>
+        <link refid="_r_f_i_d_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/peripherals/RFID.h</label>
+        <link refid="_r_f_i_d_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/peripherals/spi/spidev_impl.h</label>
+        <link refid="spidev__impl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>src/thread/ControllerThread.cpp</label>
+        <link refid="_controller_thread_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/thread/rfid/RFIDThread.cpp</label>
+        <link refid="_r_f_i_d_thread_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/thread/rfid/RFIDThread.h</label>
+        <link refid="_r_f_i_d_thread_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classspidevpp_1_1_spi" prot="public">spidevpp::Spi</innerclass>
+    <innernamespace refid="namespacespidevpp">spidevpp</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2021<sp/>twyleg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;linux/spi/spidev.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacespidevpp" kindref="compound">spidevpp</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classspidevpp_1_1_spi" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classspidevpp_1_1_spi" kindref="compound">Spi</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi" kindref="compound">Spi</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>device);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a11196eac443c99e4ff1aadfaab8e71c7" kindref="member">setBitsPerWord</ref>(uint8_t<sp/>bitsPerWord);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2" kindref="member">getBitsPerWord</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1af1876959b848c59a9a7ff5a8db5399cb" kindref="member">setSpeed</ref>(uint32_t<sp/>speed);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207" kindref="member">getSpeed</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a86c0d72ac83f697168e200a13ed915b1" kindref="member">setMode</ref>(uint32_t<sp/>mode);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980" kindref="member">getMode</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a5938ee274cf9bab71a6c3d163bb98849" kindref="member">setDelay</ref>(std::chrono::microseconds);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::microseconds<sp/><ref refid="classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e" kindref="member">getDelay</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a43b2fea53e280e1a4bd6d29d969440a4" kindref="member">write</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pData,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a4904e24513ca4bdeb3b1bfad23d49962" kindref="member">read</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pData,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8" kindref="member">writeRead</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>pData,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi_1a4ba82061fa64e934b0fdc1a10bcfccd8" kindref="member">writeRead</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Stream&gt;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>Stream&amp;<sp/><ref refid="classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311" kindref="member">operator&lt;&lt;</ref>(Stream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi" kindref="compound">Spi</ref>&amp;);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>mDevice;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mFd;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>mBitsPerWord<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::chrono::microseconds<sp/>mDelay<sp/>=<sp/>std::chrono::microseconds(0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mMode<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>mSpeed<sp/>=<sp/>500000;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>Stream&gt;</highlight></codeline>
+<codeline lineno="53" refid="classspidevpp_1_1_spi_1af348b22cc3d36a126a7c2c0476933311" refkind="member"><highlight class="normal">Stream&amp;<sp/><ref refid="namespacespidevpp_1aedb0b8cec53d95c5d6f926b38256879e" kindref="member">operator&lt;&lt;</ref>(Stream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classspidevpp_1_1_spi" kindref="compound">Spi</ref>&amp;<sp/>spi)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;SPI<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>spi.mDevice<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tMode:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>spi.<ref refid="classspidevpp_1_1_spi_1a1e0836bc0b45452d5ed1ee84f1108980" kindref="member">getMode</ref>()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tSpeed<sp/>[Hz]:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>spi.<ref refid="classspidevpp_1_1_spi_1a0eb45a45c8188261da01ac1b11b65207" kindref="member">getSpeed</ref>()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tWord<sp/>length<sp/>[bits]:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(spi.<ref refid="classspidevpp_1_1_spi_1a8b9d5713fc4afb5526b87a9b59b1b0a2" kindref="member">getBitsPerWord</ref>())<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\tDelay<sp/>[us]:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>spi.<ref refid="classspidevpp_1_1_spi_1adea74c4a6dcbdba1617a5f4ce36af94e" kindref="member">getDelay</ref>().count()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/dependencies/spidevpp/libs/spidevpp/spi.h"/>
+  </compounddef>
+</doxygen>

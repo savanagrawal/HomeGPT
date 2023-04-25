@@ -1,7 +1,26 @@
 var searchData=
 [
-  ['enqueue_0',['enqueue',['../class_circular_queue.html#aace42e1cb5bcf6ed610226cbc6e37f1a',1,'CircularQueue']]],
-  ['event_5fop_5fcodes_1',['EVENT_OP_CODES',['../_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115',1,'EVENT_OP_CODES():&#160;ClapThread.cpp'],['../_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115',1,'EVENT_OP_CODES():&#160;ControllerThread.cpp'],['../_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115',1,'EVENT_OP_CODES():&#160;IntruderThread.cpp'],['../_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115',1,'EVENT_OP_CODES():&#160;MoodThread.cpp']]],
-  ['exit_5fapplication_2',['EXIT_APPLICATION',['../_clap_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;ClapThread.cpp'],['../_controller_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;ControllerThread.cpp'],['../_intruder_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;IntruderThread.cpp'],['../_mood_thread_8cpp.html#a60176172068ee7057c3fd49521dd0115a945280aa3e9db0f24215a8d9b6ddbd8e',1,'EXIT_APPLICATION():&#160;MoodThread.cpp']]],
-  ['extract_5fusername_3',['extract_username',['../class_intruder_dataset_trainer.html#a0a9936a9e4fc9250c4ad580b51051f79',1,'IntruderDatasetTrainer']]]
+  ['dataset_5fcreator_5fcomplete_0',['DATASET_CREATOR_COMPLETE',['../class_events.html#a1ab66ec3f545c0e6f7897e7f6181fd3ca7cf5eb06f3f2dcff48d2eaa673105bde',1,'Events']]],
+  ['dataset_5fcreator_5ferror_1',['DATASET_CREATOR_ERROR',['../class_events.html#a1ab66ec3f545c0e6f7897e7f6181fd3ca9a537bb02a9a0ea70ccebf4ee39257f7',1,'Events']]],
+  ['dataset_5ftrainer_5fcomplete_2',['DATASET_TRAINER_COMPLETE',['../class_events.html#a1ab66ec3f545c0e6f7897e7f6181fd3cafce14011096d4094d66be2de4f3103c6',1,'Events']]],
+  ['dataset_5ftrainer_5ferror_3',['DATASET_TRAINER_ERROR',['../class_events.html#a1ab66ec3f545c0e6f7897e7f6181fd3caeeeb7a1a18da20bf82025ca4140eb088',1,'Events']]],
+  ['datasetcreator_2ecpp_4',['DatasetCreator.cpp',['../_dataset_creator_8cpp.html',1,'']]],
+  ['datasetcreator_2eh_5',['DatasetCreator.h',['../_dataset_creator_8h.html',1,'']]],
+  ['datasetcreatorcomplete_6',['DatasetCreatorComplete',['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62',1,'DatasetCreatorComplete():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62',1,'DatasetCreatorComplete():&#160;EventHandler.h'],['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62',1,'DatasetCreatorComplete():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a7a9ca7ef31843842172e659a9c1e2b62',1,'DatasetCreatorComplete():&#160;EventHandler.h']]],
+  ['datasettrainer_2ecpp_7',['DatasetTrainer.cpp',['../_dataset_trainer_8cpp.html',1,'']]],
+  ['datasettrainer_2eh_8',['DatasetTrainer.h',['../_dataset_trainer_8h.html',1,'']]],
+  ['datasettrainercomplete_9',['DatasetTrainerComplete',['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd',1,'DatasetTrainerComplete():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd',1,'DatasetTrainerComplete():&#160;EventHandler.h'],['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd',1,'DatasetTrainerComplete():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3af64adfa61e4386d8316f421079f0f5fd',1,'DatasetTrainerComplete():&#160;EventHandler.h']]],
+  ['delay_10',['Delay',['../class_i2_c_driver.html#a01453a7adeb358f269faabb33953eee0',1,'I2CDriver']]],
+  ['demodreg_11',['DemodReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a703240a6a220c43910e28703a74e3f52',1,'mfrc522::MFRC522']]],
+  ['dequeue_12',['dequeue',['../class_circular_queue.html#a1bf33fbac157d2a246893370ac04e39c',1,'CircularQueue']]],
+  ['detectclap_13',['detectClap',['../class_clap_detection.html#a94762cfcae59ebbdea790fef53c9bc15',1,'ClapDetection']]],
+  ['direction_14',['Direction',['../classspidevpp_1_1_gpio.html#a658b6cb561d8ee2216e9cb21835aea08',1,'spidevpp::Gpio']]],
+  ['direction_5fstring_5fmax_5flength_15',['DIRECTION_STRING_MAX_LENGTH',['../_g_p_i_o_driver_8cpp.html#ad0ca8f10a33dc934babb22393b1eee16',1,'GPIODriver.cpp']]],
+  ['dispatch_16',['dispatch',['../class_events.html#a72e92c46b35623f161d4800b50f36555',1,'Events']]],
+  ['display_17',['display',['../class_circular_queue.html#af389c378a68797e7fe12a7351520090c',1,'CircularQueue']]],
+  ['divienreg_18',['DivIEnReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11ab0eea90d8cadb6473795b6afa2403916',1,'mfrc522::MFRC522']]],
+  ['divirqreg_19',['DivIrqReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a8aa211e282986d84b2e47d67b5bf6337',1,'mfrc522::MFRC522']]],
+  ['doorsthread_20',['DoorsThread',['../class_doors_thread.html',1,'DoorsThread'],['../class_doors_thread.html#a08b56bb7cccad9e7e3ec0ac6979015e6',1,'DoorsThread::DoorsThread()']]],
+  ['doorsthread_2ecpp_21',['DoorsThread.cpp',['../_doors_thread_8cpp.html',1,'']]],
+  ['doorsthread_2eh_22',['DoorsThread.h',['../_doors_thread_8h.html',1,'']]]
 ];

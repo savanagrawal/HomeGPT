@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_relay_board" xml:lang="en-US">
+<title>RelayBoard Class Reference</title>
+<indexterm><primary>RelayBoard</primary></indexterm>
+<para>
+
+<para>Relay Board class. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;RelayBoard.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_relay_board_1ad96963754490cea54db92cf32ccccf90">RelayBoard</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_relay_board_1af05bb34a287c76312104a427c86c658e">~RelayBoard</link> (void)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f">Initialize</link> (<link linkend="_class_g_p_i_o_driver">GPIODriver</link> &amp;driver)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a0ce37124540bae0827a1b81e28841f70">Lighting</link> (int state)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98">Heating</link> (int state)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1aa14251b65f8b4872cdf95c56951f0959">Airflow</link> (int state)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f">Watering</link> (int state)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a2339920ca78f22d9bbab349056ca261a">Turn_Relays_Off</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a8d4fba9b90f8a65a0f02ad9d5a35c148">Close_Relay_Board</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65">GetWateringState</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8">GetAirflowState</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a4725ac8db57d591dbe338f646cdda254">GetHeatingState</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a32270d45de9d23698cf85fd3224f88c6">GetLightingState</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_class_relay_board_1acda1026ec1a4a11016812efc2e7fe732">m_heaterGPIOState</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1aff19bd04e757a2442243d9f863b435ae">m_lightsGPIOState</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98">m_fanGPIOState</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d">m_waterPumpGPIOState</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Relay Board class. </para>
+
+
+
+<para><formalpara><title>Author</title>
+
+<para>Chinmay Nagrale</para>
+</formalpara>
+This is class is responsilbe for the Elego Relay Board. </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_relay_board_1ad96963754490cea54db92cf32ccccf90"/><section>
+    <title>RelayBoard()</title>
+<indexterm><primary>RelayBoard</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>RelayBoard</secondary></indexterm>
+<para><computeroutput>RelayBoard::RelayBoard ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_relay_board_1af05bb34a287c76312104a427c86c658e"/><section>
+    <title>~RelayBoard()</title>
+<indexterm><primary>~RelayBoard</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>~RelayBoard</secondary></indexterm>
+<para><computeroutput>RelayBoard::~RelayBoard (void )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_relay_board_1aa14251b65f8b4872cdf95c56951f0959"/><section>
+    <title>Airflow()</title>
+<indexterm><primary>Airflow</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Airflow</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Airflow (int state)</computeroutput></para>
+<para>Changes the state of the Airflow GPIO pin</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero on success else error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_aa14251b65f8b4872cdf95c56951f0959_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1a8d4fba9b90f8a65a0f02ad9d5a35c148"/><section>
+    <title>Close_Relay_Board()</title>
+<indexterm><primary>Close_Relay_Board</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Close_Relay_Board</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Close_Relay_Board ( )</computeroutput></para></section>
+<anchor xml:id="_class_relay_board_1a4b5cecaeadec360c688868a230a7d3a8"/><section>
+    <title>GetAirflowState()</title>
+<indexterm><primary>GetAirflowState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>GetAirflowState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::GetAirflowState ( )</computeroutput></para>
+<para>Wrapper for reading airflow GPIO pin state</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Value of the lighting pin else negative error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_a4b5cecaeadec360c688868a230a7d3a8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1a4725ac8db57d591dbe338f646cdda254"/><section>
+    <title>GetHeatingState()</title>
+<indexterm><primary>GetHeatingState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>GetHeatingState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::GetHeatingState ( )</computeroutput></para>
+<para>Wrapper for reading heating GPIO state</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Value of the lighting pin else negative error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_a4725ac8db57d591dbe338f646cdda254_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1a32270d45de9d23698cf85fd3224f88c6"/><section>
+    <title>GetLightingState()</title>
+<indexterm><primary>GetLightingState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>GetLightingState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::GetLightingState ( )</computeroutput></para>
+<para>Wrapper for reading Lighting GPIO pin state</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Value of the lighting pin, else negative error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_a32270d45de9d23698cf85fd3224f88c6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1a2f9f8154a49a9d8ed3b7c54c39a5ed65"/><section>
+    <title>GetWateringState()</title>
+<indexterm><primary>GetWateringState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>GetWateringState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::GetWateringState ( )</computeroutput></para>
+<para>Wrapper for reading airflow GPIO pin state</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Value of the lighting pin else negative error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_a2f9f8154a49a9d8ed3b7c54c39a5ed65_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1abdfd142dd723bda5fb961f2b83e04d98"/><section>
+    <title>Heating()</title>
+<indexterm><primary>Heating</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Heating</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Heating (int state)</computeroutput></para>
+<para>Changes the state of the Heating GPIO pin</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>State to change the Heating GPIO pin to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_abdfd142dd723bda5fb961f2b83e04d98_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1aee18a60a8063ebc87331cbb8fbb1a42f"/><section>
+    <title>Initialize()</title>
+<indexterm><primary>Initialize</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Initialize</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Initialize (<link linkend="_class_g_p_i_o_driver">GPIODriver</link> &amp; driver)</computeroutput></para>
+<para>Initializes actuation gpio pins</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero on success else negative error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_aee18a60a8063ebc87331cbb8fbb1a42f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1a0ce37124540bae0827a1b81e28841f70"/><section>
+    <title>Lighting()</title>
+<indexterm><primary>Lighting</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Lighting</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Lighting (int state)</computeroutput></para>
+<para>Changes the state of the lighting GPIO pin</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>State to change the lighting GPIO pin to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_a0ce37124540bae0827a1b81e28841f70_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1a2339920ca78f22d9bbab349056ca261a"/><section>
+    <title>Turn_Relays_Off()</title>
+<indexterm><primary>Turn_Relays_Off</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Turn_Relays_Off</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Turn_Relays_Off ( )</computeroutput></para>
+<para>Turns each Relay off by setting the GPIO pin high</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Zero on success else error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_a2339920ca78f22d9bbab349056ca261a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_relay_board_1ab9e7c87d94483e55053722ff0981ff8f"/><section>
+    <title>Watering()</title>
+<indexterm><primary>Watering</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>Watering</secondary></indexterm>
+<para><computeroutput>int RelayBoard::Watering (int state)</computeroutput></para>
+<para>Changes the state of the Watering GPIO pin</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>state</entry><entry>
+<para>State to change the watering GPIO pin to.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Zero on success else error number </para>
+</formalpara>
+</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_relay_board_ab9e7c87d94483e55053722ff0981ff8f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_relay_board_1a1522a4a160fe47ecd96adf81ba372c98"/><section>
+    <title>m_fanGPIOState</title>
+<indexterm><primary>m_fanGPIOState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>m_fanGPIOState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::m_fanGPIOState</computeroutput></para></section>
+<anchor xml:id="_class_relay_board_1acda1026ec1a4a11016812efc2e7fe732"/><section>
+    <title>m_heaterGPIOState</title>
+<indexterm><primary>m_heaterGPIOState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>m_heaterGPIOState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::m_heaterGPIOState</computeroutput></para></section>
+<anchor xml:id="_class_relay_board_1aff19bd04e757a2442243d9f863b435ae"/><section>
+    <title>m_lightsGPIOState</title>
+<indexterm><primary>m_lightsGPIOState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>m_lightsGPIOState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::m_lightsGPIOState</computeroutput></para></section>
+<anchor xml:id="_class_relay_board_1acf0292f25a47eb8facbec7279c0fa69d"/><section>
+    <title>m_waterPumpGPIOState</title>
+<indexterm><primary>m_waterPumpGPIOState</primary><secondary>RelayBoard</secondary></indexterm>
+<indexterm><primary>RelayBoard</primary><secondary>m_waterPumpGPIOState</secondary></indexterm>
+<para><computeroutput>int RelayBoard::m_waterPumpGPIOState</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+src/peripherals/<link linkend="__relay_board_8h">RelayBoard.h</link>src/peripherals/<link linkend="__relay_board_8cpp">RelayBoard.cpp</link></section>
+</section>

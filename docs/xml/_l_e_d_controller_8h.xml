@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="_l_e_d_controller_8h" kind="file" language="C++">
+    <compoundname>LEDController.h</compoundname>
+    <includes local="no">wiringPi.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="_l_e_d_controller_8cpp" local="yes">src/peripherals/LEDController.cpp</includedby>
+    <includedby refid="_controller_thread_8cpp" local="yes">src/thread/ControllerThread.cpp</includedby>
+    <includedby refid="_clap_thread_8cpp" local="yes">src/thread/clap-detection/ClapThread.cpp</includedby>
+    <includedby refid="_doors_thread_8cpp" local="yes">src/thread/doors/DoorsThread.cpp</includedby>
+    <includedby refid="_r_f_i_d_thread_8cpp" local="yes">src/thread/rfid/RFIDThread.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/peripherals/LEDController.h</label>
+        <link refid="_l_e_d_controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="2">
+        <label>wiringPi.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/peripherals/LEDController.cpp</label>
+        <link refid="_l_e_d_controller_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/peripherals/LEDController.h</label>
+        <link refid="_l_e_d_controller_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/thread/ControllerThread.cpp</label>
+        <link refid="_controller_thread_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/thread/clap-detection/ClapThread.cpp</label>
+        <link refid="_clap_thread_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/thread/doors/DoorsThread.cpp</label>
+        <link refid="_doors_thread_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/thread/rfid/RFIDThread.cpp</label>
+        <link refid="_r_f_i_d_thread_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_l_e_d_controller" prot="public">LEDController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Savan Agrawal </para>
+</simplesect>
+<simplesect kind="version"><para>0.1</para>
+</simplesect>
+LED <ref refid="class_controller" kindref="compound">Controller</ref> header file to control normal and RGB ligth </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LED_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LED_CONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wiringPi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_l_e_d_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_l_e_d_controller" kindref="compound">LEDController</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_l_e_d_controller" kindref="compound">LEDController</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledPin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>redPin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>greenPin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bluePin);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1af800f0bcab25071bb430382bebb3298a" kindref="member">turnOnLED</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1ade5fb7f7f056675c85777f55579277de" kindref="member">turnOffLED</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1aa50cb4111bf939350936239d7505e108" kindref="member">setRGBColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>color);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_l_e_d_controller_1a31ed805398ebb90fe4c8662b702c40aa" kindref="member">turnOffRGBLED</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ledPin;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>redPin;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>greenPin;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bluePin;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setColor(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>red,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>green,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blue);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>LEDCONTROLLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//g++<sp/>-o<sp/>led_test<sp/>LEDMain.cpp<sp/>LEDController.cpp<sp/>-lwiringPi</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/peripherals/LEDController.h"/>
+  </compounddef>
+</doxygen>

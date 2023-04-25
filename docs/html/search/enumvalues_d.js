@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['rfcfgreg_0',['RFCfgReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a299d24d290d0d45196a9753fead96fcc',1,'mfrc522::MFRC522']]],
+  ['rfidauthenticated_1',['RfidAuthenticated',['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b',1,'RfidAuthenticated():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b',1,'RfidAuthenticated():&#160;EventHandler.h'],['../_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b',1,'RfidAuthenticated():&#160;EventHandler.h'],['../_event_test_2_event_handler_8h.html#a5667b805d857c6d28f83f6038a0272d3a695ae6fb54c1a21ab2b91689ce2a920b',1,'RfidAuthenticated():&#160;EventHandler.h']]],
+  ['rxgain_5f18db_2',['RxGain_18dB',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a48d975686baa49a14c64c615165a2648',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f18db_5f2_3',['RxGain_18dB_2',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a50c86eecc33ab1bc3ea765b381cbcc4f',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f23db_4',['RxGain_23dB',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a1f76a9a1002b4f5a214a744fdfd1e485',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f23db_5f2_5',['RxGain_23dB_2',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a94f97cd2d56becc29b2f6d2aaf52390e',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f33db_6',['RxGain_33dB',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a8141508391403bda01e36b1b014bb3df',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f38db_7',['RxGain_38dB',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67aeb2fa15224b6a3fc4ff9181771f49d26',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f43db_8',['RxGain_43dB',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67af75e837882d2876e7cc43cefe08c658c',1,'mfrc522::MFRC522']]],
+  ['rxgain_5f48db_9',['RxGain_48dB',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67abf1cf1c7c0bbc05b36d2039af8edb778',1,'mfrc522::MFRC522']]],
+  ['rxgain_5favg_10',['RxGain_avg',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a710cffcf94202bae75baf1446864aa8d',1,'mfrc522::MFRC522']]],
+  ['rxgain_5fmax_11',['RxGain_max',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67aab79eef054b19d0c816203470aa2b00c',1,'mfrc522::MFRC522']]],
+  ['rxgain_5fmin_12',['RxGain_min',['../classmfrc522_1_1_m_f_r_c522.html#a35d4bf0d1e8383ee59b68056e619ad67a521090cb926c7ec89ac919dc03221ec9',1,'mfrc522::MFRC522']]],
+  ['rxmodereg_13',['RxModeReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11ad9f6e967e3390192a00ac4256a56251b',1,'mfrc522::MFRC522']]],
+  ['rxselreg_14',['RxSelReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11a033d032ceede4ad4fe79788aa5f6962f',1,'mfrc522::MFRC522']]],
+  ['rxthresholdreg_15',['RxThresholdReg',['../classmfrc522_1_1_m_f_r_c522.html#a79379909c9677dab97379aa6e73d3c11ae2d1f8b133337135b58f6d76b9d7033a',1,'mfrc522::MFRC522']]]
+];

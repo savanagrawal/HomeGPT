@@ -1,0 +1,677 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_intruder_mood_detection" kind="class" language="C++" prot="public">
+    <compoundname>IntruderMoodDetection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">CppTimer</basecompoundref>
+    <includes refid="_intruder_mood_detection_8h" local="no">IntruderMoodDetection.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a430d9fcc676bfdcac8d9924cbd1bbd47" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntruderMoodDetection::CameraID</definition>
+        <argsstring></argsstring>
+        <name>CameraID</name>
+        <qualifiedname>IntruderMoodDetection::CameraID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Variables for camera </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="303" column="13" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a902b6205079e1d64c6408e2a0fec68dc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntruderMoodDetection::nbins</definition>
+        <argsstring></argsstring>
+        <name>nbins</name>
+        <qualifiedname>IntruderMoodDetection::nbins</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="304" column="13" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a7156280f86c4d6a49eee0e0e4fe22d1b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_globals" kindref="compound">Globals</ref></type>
+        <definition>Globals IntruderMoodDetection::globals</definition>
+        <argsstring></argsstring>
+        <name>globals</name>
+        <qualifiedname>IntruderMoodDetection::globals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="306" column="17" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a3b76ec7fc5e7df9b5e9c76f3c410fc71" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture IntruderMoodDetection::masterCamera</definition>
+        <argsstring></argsstring>
+        <name>masterCamera</name>
+        <qualifiedname>IntruderMoodDetection::masterCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="307" column="26" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1af97bbe5aa7c4412f2054fcf4f1faa49b" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderMoodDetection::im</definition>
+        <argsstring></argsstring>
+        <name>im</name>
+        <qualifiedname>IntruderMoodDetection::im</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="309" column="17" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a4bdf7590b6bf2c5051c28ae8c59dbc6c" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderMoodDetection::gray</definition>
+        <argsstring></argsstring>
+        <name>gray</name>
+        <qualifiedname>IntruderMoodDetection::gray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="309" column="20" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1ad9613d19674f5f93e29384c2b2948614" prot="private" static="no" mutable="no">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderMoodDetection::roi</definition>
+        <argsstring></argsstring>
+        <name>roi</name>
+        <qualifiedname>IntruderMoodDetection::roi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="309" column="25" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a6d9d357520d31032aee8739093beadff" prot="private" static="no" mutable="no">
+        <type>cv::CascadeClassifier</type>
+        <definition>cv::CascadeClassifier IntruderMoodDetection::detector</definition>
+        <argsstring></argsstring>
+        <name>detector</name>
+        <qualifiedname>IntruderMoodDetection::detector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="311" column="31" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a4777468130924f7c2cf36c82d9a88c50" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderMoodDetection::cascadePath</definition>
+        <argsstring></argsstring>
+        <name>cascadePath</name>
+        <qualifiedname>IntruderMoodDetection::cascadePath</qualifiedname>
+        <initializer>= &quot;../src/resources/haarcascade_frontalface_default.xml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="312" column="21" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1ab9384e6463f78a6a9f161ab4ee92fba8" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderMoodDetection::trainedModelPath</definition>
+        <argsstring></argsstring>
+        <name>trainedModelPath</name>
+        <qualifiedname>IntruderMoodDetection::trainedModelPath</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection/trainer/trainer.yml&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="313" column="21" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a003ecbd658f3c4a21b51ec3c9f99a160" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; cv::face::LBPHFaceRecognizer &gt;</type>
+        <definition>cv::Ptr&lt;cv::face::LBPHFaceRecognizer&gt; IntruderMoodDetection::recognizer</definition>
+        <argsstring></argsstring>
+        <name>recognizer</name>
+        <qualifiedname>IntruderMoodDetection::recognizer</qualifiedname>
+        <initializer>= cv::face::LBPHFaceRecognizer::create()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="315" column="17" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a2f54e4468dec454596100259f5bf4fe2" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string IntruderMoodDetection::fileName</definition>
+        <argsstring></argsstring>
+        <name>fileName</name>
+        <qualifiedname>IntruderMoodDetection::fileName</qualifiedname>
+        <initializer>= &quot;../src/resources/intruder-detection/Users.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="317" column="21" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a893e13ae1a537abcba15fceaa89a935f" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; IntruderMoodDetection::users</definition>
+        <argsstring></argsstring>
+        <name>users</name>
+        <qualifiedname>IntruderMoodDetection::users</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="318" column="18" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a4e2017bf7d546cce1a94a0f26cfb023d" prot="private" static="no" mutable="no">
+        <type>cv::Ptr&lt; cv::ml::SVM &gt;</type>
+        <definition>cv::Ptr&lt;cv::ml::SVM&gt; IntruderMoodDetection::svm</definition>
+        <argsstring></argsstring>
+        <name>svm</name>
+        <qualifiedname>IntruderMoodDetection::svm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="320" column="17" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a8511a42af94d8064f9694b55be923319" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size IntruderMoodDetection::block_size</definition>
+        <argsstring></argsstring>
+        <name>block_size</name>
+        <qualifiedname>IntruderMoodDetection::block_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="322" column="18" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1acfdcb48a68ad15d334b609a740841691" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size IntruderMoodDetection::block_stride</definition>
+        <argsstring></argsstring>
+        <name>block_stride</name>
+        <qualifiedname>IntruderMoodDetection::block_stride</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="323" column="18" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a091cc4ddd40a3e6eb63a1d47afe3bff9" prot="private" static="no" mutable="no">
+        <type>cv::Size</type>
+        <definition>cv::Size IntruderMoodDetection::cell_size</definition>
+        <argsstring></argsstring>
+        <name>cell_size</name>
+        <qualifiedname>IntruderMoodDetection::cell_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="324" column="18" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1abb1a1786f27dad48718131ea72331515" prot="private" static="no" mutable="no">
+        <type>cv::HOGDescriptor</type>
+        <definition>cv::HOGDescriptor IntruderMoodDetection::hog</definition>
+        <argsstring></argsstring>
+        <name>hog</name>
+        <qualifiedname>IntruderMoodDetection::hog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="326" column="27" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1aba3b3c060f092b83b7c4e16a4f61b858" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool IntruderMoodDetection::running</definition>
+        <argsstring></argsstring>
+        <name>running</name>
+        <qualifiedname>IntruderMoodDetection::running</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="328" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a1b1c68a49d1dbd08232cddf09b045d15" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool IntruderMoodDetection::locked</definition>
+        <argsstring></argsstring>
+        <name>locked</name>
+        <qualifiedname>IntruderMoodDetection::locked</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="330" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a297737ec34e45ee49f0a3f1f4db6434a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int IntruderMoodDetection::emits</definition>
+        <argsstring></argsstring>
+        <name>emits</name>
+        <qualifiedname>IntruderMoodDetection::emits</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="332" column="13" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a5658d8eb48f7090104fe8652bcdd862b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; cv::Rect &gt;</type>
+        <definition>std::vector&lt;cv::Rect&gt; IntruderMoodDetection::faces</definition>
+        <argsstring></argsstring>
+        <name>faces</name>
+        <qualifiedname>IntruderMoodDetection::faces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="336" column="21" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_detection_1a514cd8a2c09b60b925b931a9e9d1dafa" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt;int, std::string&gt; IntruderMoodDetection::emotion</definition>
+        <argsstring></argsstring>
+        <name>emotion</name>
+        <qualifiedname>IntruderMoodDetection::emotion</qualifiedname>
+        <initializer>= {
+            {0, &quot;Angry&quot;},
+            {1, &quot;Disgust&quot;},
+            {2, &quot;Fear&quot;},
+            {3, &quot;Happy&quot;},
+            {4, &quot;Neutral&quot;},
+            {5, &quot;Sad&quot;},
+            {6, &quot;Surprise&quot;}
+        }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="337" column="18" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_intruder_mood_detection_1a2e5825bbc8a76f475d0c2612cc3985e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::timerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>timerEvent</name>
+        <qualifiedname>IntruderMoodDetection::timerEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="30" column="10" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="30" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_intruder_mood_detection_1a7e549103c5719225c1c8124f6cef4e86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntruderMoodDetection::IntruderMoodDetection</definition>
+        <argsstring>()</argsstring>
+        <name>IntruderMoodDetection</name>
+        <qualifiedname>IntruderMoodDetection::IntruderMoodDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="144" column="9" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="144" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::Initialize</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>IntruderMoodDetection::Initialize</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes our Intruder &amp; Mood Detection.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+return </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="154" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.cpp" bodystart="22" bodyend="34"/>
+        <references refid="class_globals_1a6175ae15868ba84a14fd1cf1823d8dbd" compoundref="_globals_8h" startline="20" endline="22">Globals::getMoodSvm</references>
+        <references refid="class_globals_1a7e9e2b31d0484acc038684bd8aceff1a" compoundref="_globals_8h" startline="16" endline="18">Globals::setMoodSvm</references>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>IntruderMoodDetection::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="156" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="156" bodyend="162"/>
+        <references refid="class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324" compoundref="_intruder_mood_detection_8h" startline="156" endline="162">stop</references>
+        <referencedby refid="class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324" compoundref="_intruder_mood_detection_8h" startline="156" endline="162">stop</referencedby>
+        <referencedby refid="class_intruder_mood_thread_1ade454d5fa7c9f6fdf3b11a8d4d6fc92d" compoundref="_intruder_mood_thread_8h" startline="31" endline="36">IntruderMoodThread::stop</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>IntruderMoodDetection::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="164" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="164" bodyend="258"/>
+        <references refid="class_event_handler_1a78ac6d7c899898fbb2c7b24117b272dd" compoundref="_event_handler_8cpp" startline="97" endline="104">EventHandler::emit</references>
+        <references refid="class_event_handler_1a54e992984633e36c76f7b62edfbf7604" compoundref="_event_handler_8cpp" startline="84" endline="87">EventHandler::getInstance</references>
+        <references refid="class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead" compoundref="_intruder_mood_detection_8h" startline="265" endline="281">readFileToMap</references>
+        <referencedby refid="class_intruder_mood_thread_1a4ca398b2c77685a25ca8983afc8bb50d" compoundref="_intruder_mood_thread_8h" startline="42" endline="47">IntruderMoodThread::restart</referencedby>
+        <referencedby refid="class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49" compoundref="_intruder_mood_detection_8h" startline="260" endline="263">unlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <qualifiedname>IntruderMoodDetection::unlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="260" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="260" bodyend="263"/>
+        <references refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" compoundref="_intruder_mood_detection_8h" startline="164" endline="258">start</references>
+        <referencedby refid="class_intruder_mood_thread_1a44ae2cf509b7afa810c8ee861c6b1ad2" compoundref="_intruder_mood_thread_8h" startline="38" endline="40">IntruderMoodThread::unlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; int, std::string &gt;</type>
+        <definition>std::map&lt; int, std::string &gt; IntruderMoodDetection::readFileToMap</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>readFileToMap</name>
+        <qualifiedname>IntruderMoodDetection::readFileToMap</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="265" column="18" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="265" bodyend="281"/>
+        <referencedby refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" compoundref="_intruder_mood_detection_8h" startline="164" endline="258">start</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::restart</definition>
+        <argsstring>()</argsstring>
+        <name>restart</name>
+        <qualifiedname>IntruderMoodDetection::restart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="283" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="283" bodyend="285"/>
+        <referencedby refid="class_intruder_mood_thread_1a4ca398b2c77685a25ca8983afc8bb50d" compoundref="_intruder_mood_thread_8h" startline="42" endline="47">IntruderMoodThread::restart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1aad2cd7218cbcca74cd2680bb3c6c028c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::setCameraId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>setCameraId</name>
+        <qualifiedname>IntruderMoodDetection::setCameraId</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> setup functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="288" column="14" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.cpp" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1ac54c4363522d4a161b360a1773e14cde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::setContrasts</definition>
+        <argsstring>(int low, int high)</argsstring>
+        <name>setContrasts</name>
+        <qualifiedname>IntruderMoodDetection::setContrasts</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>low</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>high</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="290" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a8b061d00a4f66142bb7469f60da73c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::setShutter</definition>
+        <argsstring>(int shutter)</argsstring>
+        <name>setShutter</name>
+        <qualifiedname>IntruderMoodDetection::setShutter</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>shutter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="292" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a980a792d358cd66cc9769d30c19815a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int IntruderMoodDetection::checkCameraOpen</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>checkCameraOpen</name>
+        <qualifiedname>IntruderMoodDetection::checkCameraOpen</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="294" column="13" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.cpp" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1abb06d66df53434a740d983ae59847c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cv::Mat</type>
+        <definition>cv::Mat IntruderMoodDetection::takePicture</definition>
+        <argsstring>()</argsstring>
+        <name>takePicture</name>
+        <qualifiedname>IntruderMoodDetection::takePicture</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_camera" kindref="compound">Camera</ref> functions </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="297" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_detection_1a1c49ac265494278a27a2ea6dbfa97dae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodDetection::savePicture</definition>
+        <argsstring>(cv::VideoCapture *, std::string filename)</argsstring>
+        <name>savePicture</name>
+        <qualifiedname>IntruderMoodDetection::savePicture</qualifiedname>
+        <param>
+          <type>cv::VideoCapture *</type>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="299" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>IntruderMoodDetection</label>
+        <link refid="class_intruder_mood_detection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppTimer</label>
+      </node>
+      <node id="1">
+        <label>IntruderMoodDetection</label>
+        <link refid="class_intruder_mood_detection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/intruder-mood-detection/IntruderMoodDetection.h" line="29" column="1" bodyfile="src/intruder-mood-detection/IntruderMoodDetection.h" bodystart="29" bodyend="346"/>
+    <listofallmembers>
+      <member refid="class_intruder_mood_detection_1a8511a42af94d8064f9694b55be923319" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>block_size</name></member>
+      <member refid="class_intruder_mood_detection_1acfdcb48a68ad15d334b609a740841691" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>block_stride</name></member>
+      <member refid="class_intruder_mood_detection_1a430d9fcc676bfdcac8d9924cbd1bbd47" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>CameraID</name></member>
+      <member refid="class_intruder_mood_detection_1a4777468130924f7c2cf36c82d9a88c50" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>cascadePath</name></member>
+      <member refid="class_intruder_mood_detection_1a091cc4ddd40a3e6eb63a1d47afe3bff9" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>cell_size</name></member>
+      <member refid="class_intruder_mood_detection_1a980a792d358cd66cc9769d30c19815a6" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>checkCameraOpen</name></member>
+      <member refid="class_intruder_mood_detection_1a6d9d357520d31032aee8739093beadff" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>detector</name></member>
+      <member refid="class_intruder_mood_detection_1a297737ec34e45ee49f0a3f1f4db6434a" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>emits</name></member>
+      <member refid="class_intruder_mood_detection_1a514cd8a2c09b60b925b931a9e9d1dafa" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>emotion</name></member>
+      <member refid="class_intruder_mood_detection_1a5658d8eb48f7090104fe8652bcdd862b" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>faces</name></member>
+      <member refid="class_intruder_mood_detection_1a2f54e4468dec454596100259f5bf4fe2" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>fileName</name></member>
+      <member refid="class_intruder_mood_detection_1a7156280f86c4d6a49eee0e0e4fe22d1b" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>globals</name></member>
+      <member refid="class_intruder_mood_detection_1a4bdf7590b6bf2c5051c28ae8c59dbc6c" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>gray</name></member>
+      <member refid="class_intruder_mood_detection_1abb1a1786f27dad48718131ea72331515" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>hog</name></member>
+      <member refid="class_intruder_mood_detection_1af97bbe5aa7c4412f2054fcf4f1faa49b" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>im</name></member>
+      <member refid="class_intruder_mood_detection_1a00ea796d16ff36f9bd3145b6f6eeb0de" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>Initialize</name></member>
+      <member refid="class_intruder_mood_detection_1a7e549103c5719225c1c8124f6cef4e86" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>IntruderMoodDetection</name></member>
+      <member refid="class_intruder_mood_detection_1a1b1c68a49d1dbd08232cddf09b045d15" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>locked</name></member>
+      <member refid="class_intruder_mood_detection_1a3b76ec7fc5e7df9b5e9c76f3c410fc71" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>masterCamera</name></member>
+      <member refid="class_intruder_mood_detection_1a902b6205079e1d64c6408e2a0fec68dc" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>nbins</name></member>
+      <member refid="class_intruder_mood_detection_1ad4ff8dcdfa8a083536e3317b2367eead" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>readFileToMap</name></member>
+      <member refid="class_intruder_mood_detection_1a003ecbd658f3c4a21b51ec3c9f99a160" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>recognizer</name></member>
+      <member refid="class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>restart</name></member>
+      <member refid="class_intruder_mood_detection_1ad9613d19674f5f93e29384c2b2948614" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>roi</name></member>
+      <member refid="class_intruder_mood_detection_1aba3b3c060f092b83b7c4e16a4f61b858" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>running</name></member>
+      <member refid="class_intruder_mood_detection_1a1c49ac265494278a27a2ea6dbfa97dae" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>savePicture</name></member>
+      <member refid="class_intruder_mood_detection_1aad2cd7218cbcca74cd2680bb3c6c028c" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>setCameraId</name></member>
+      <member refid="class_intruder_mood_detection_1ac54c4363522d4a161b360a1773e14cde" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>setContrasts</name></member>
+      <member refid="class_intruder_mood_detection_1a8b061d00a4f66142bb7469f60da73c97" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>setShutter</name></member>
+      <member refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>start</name></member>
+      <member refid="class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>stop</name></member>
+      <member refid="class_intruder_mood_detection_1a4e2017bf7d546cce1a94a0f26cfb023d" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>svm</name></member>
+      <member refid="class_intruder_mood_detection_1abb06d66df53434a740d983ae59847c1f" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>takePicture</name></member>
+      <member refid="class_intruder_mood_detection_1a2e5825bbc8a76f475d0c2612cc3985e0" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>timerEvent</name></member>
+      <member refid="class_intruder_mood_detection_1ab9384e6463f78a6a9f161ab4ee92fba8" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>trainedModelPath</name></member>
+      <member refid="class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49" prot="public" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>unlock</name></member>
+      <member refid="class_intruder_mood_detection_1a893e13ae1a537abcba15fceaa89a935f" prot="private" virt="non-virtual"><scope>IntruderMoodDetection</scope><name>users</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

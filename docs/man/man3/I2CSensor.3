@@ -1,0 +1,38 @@
+.TH "I2CSensor" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2CSensor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <I2CSensor\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual int \fBInitialize\fP (\fBI2CDriver\fP &i2c)=0"
+.br
+.ti -1c
+.RI "virtual int \fBReset\fP ()=0"
+.br
+.ti -1c
+.RI "virtual int \fBClose_Device\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Generic Sensor Class which implements function for peripherial\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual int I2CSensor::Close_Device ()\fC [pure virtual]\fP"
+Read Data from the sensor and Reset Sensor Close File Descriptor 
+.SS "virtual int I2CSensor::Initialize (\fBI2CDriver\fP & i2c)\fC [pure virtual]\fP"
+Initialize sensor Assign I2C Driver Open file descriptor Initial write to sensor to set it up using appropriate driver 
+.SS "virtual int I2CSensor::Reset ()\fC [pure virtual]\fP"
+Resets the sensor 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

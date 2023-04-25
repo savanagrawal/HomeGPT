@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="class_intruder_mood_thread" kind="class" language="C++" prot="public">
+    <compoundname>IntruderMoodThread</compoundname>
+    <basecompoundref refid="class_cpp_thread" prot="public" virt="non-virtual">CppThread</basecompoundref>
+    <includes refid="_intruder_mood_thread_8h" local="no">IntruderMoodThread.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_intruder_mood_thread_1ab6ef028c8b9590864afc9f59bf4ab117" prot="private" static="no" mutable="no">
+        <type>cv::VideoCapture</type>
+        <definition>cv::VideoCapture IntruderMoodThread::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <qualifiedname>IntruderMoodThread::camera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="57" column="26" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_intruder_mood_thread_1a7b511333caaac77e015111d6553044cd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_intruder_mood_detection" kindref="compound">IntruderMoodDetection</ref></type>
+        <definition>IntruderMoodDetection IntruderMoodThread::intruderMoodDetection</definition>
+        <argsstring></argsstring>
+        <name>intruderMoodDetection</name>
+        <qualifiedname>IntruderMoodThread::intruderMoodDetection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="59" column="31" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_intruder_mood_thread_1a48999f732098373e056e25a6565067f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>IntruderMoodThread::IntruderMoodThread</definition>
+        <argsstring>(cv::VideoCapture camera)</argsstring>
+        <name>IntruderMoodThread</name>
+        <qualifiedname>IntruderMoodThread::IntruderMoodThread</qualifiedname>
+        <param>
+          <type>cv::VideoCapture</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor for our intruder mood thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="27" column="9" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_thread_1ade454d5fa7c9f6fdf3b11a8d4d6fc92d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodThread::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <qualifiedname>IntruderMoodThread::stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="31" column="14" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="31" bodyend="36"/>
+        <references refid="class_intruder_mood_detection_1a6457a5a1d28a943c2a20fbf929df7324" compoundref="_intruder_mood_detection_8h" startline="156" endline="162">IntruderMoodDetection::stop</references>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_thread_1a44ae2cf509b7afa810c8ee861c6b1ad2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodThread::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <qualifiedname>IntruderMoodThread::unlock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="38" column="14" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="38" bodyend="40"/>
+        <references refid="class_intruder_mood_detection_1a5c1ef131ee35d806ab207615a0e7bd49" compoundref="_intruder_mood_detection_8h" startline="260" endline="263">IntruderMoodDetection::unlock</references>
+      </memberdef>
+      <memberdef kind="function" id="class_intruder_mood_thread_1a4ca398b2c77685a25ca8983afc8bb50d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void IntruderMoodThread::restart</definition>
+        <argsstring>()</argsstring>
+        <name>restart</name>
+        <qualifiedname>IntruderMoodThread::restart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="42" column="14" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="42" bodyend="47"/>
+        <references refid="class_intruder_mood_detection_1a64d7c2528c01013729ef4b3ec492bec6" compoundref="_intruder_mood_detection_8h" startline="283" endline="285">IntruderMoodDetection::restart</references>
+        <references refid="class_intruder_mood_detection_1acd6daec24bb0d856325a912a92936a93" compoundref="_intruder_mood_detection_8h" startline="164" endline="258">IntruderMoodDetection::start</references>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <qualifiedname>CppThread::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the thread. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="26" column="13" bodyfile="src/thread/CppThread.h" bodystart="26" bodyend="28"/>
+        <references refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">CppThread::run</references>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CppThread::join</definition>
+        <argsstring>()</argsstring>
+        <name>join</name>
+        <qualifiedname>CppThread::join</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits for the thread to terminate. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/CppThread.h" line="33" column="13" bodyfile="src/thread/CppThread.h" bodystart="33" bodyend="35"/>
+        <referencedby refid="src_2main_8cpp_1ac0f2228420376f4db7e1274f2b41667c" compoundref="src_2main_8cpp" startline="18" endline="49">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_intruder_mood_thread_1a020deddefcdda0a02863f4e11a73dd31" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void IntruderMoodThread::run</definition>
+        <argsstring>(void)</argsstring>
+        <name>run</name>
+        <qualifiedname>IntruderMoodThread::run</qualifiedname>
+        <reimplements refid="class_cpp_thread_1a792b79e72250710147c452648def4a78">run</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Manage the intruder detection thread runnable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="51" column="14" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.cpp" bodystart="28" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>IntruderMoodThread</label>
+        <link refid="class_intruder_mood_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CppThread</label>
+        <link refid="class_cpp_thread"/>
+      </node>
+      <node id="1">
+        <label>IntruderMoodThread</label>
+        <link refid="class_intruder_mood_thread"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/thread/intruder-mood-detection/IntruderMoodThread.h" line="22" column="1" bodyfile="src/thread/intruder-mood-detection/IntruderMoodThread.h" bodystart="22" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_intruder_mood_thread_1ab6ef028c8b9590864afc9f59bf4ab117" prot="private" virt="non-virtual"><scope>IntruderMoodThread</scope><name>camera</name></member>
+      <member refid="class_intruder_mood_thread_1a7b511333caaac77e015111d6553044cd" prot="private" virt="non-virtual"><scope>IntruderMoodThread</scope><name>intruderMoodDetection</name></member>
+      <member refid="class_intruder_mood_thread_1a48999f732098373e056e25a6565067f9" prot="public" virt="non-virtual"><scope>IntruderMoodThread</scope><name>IntruderMoodThread</name></member>
+      <member refid="class_cpp_thread_1a8ff0fda6b913cc53764caef0e1200f3f" prot="public" virt="non-virtual"><scope>IntruderMoodThread</scope><name>join</name></member>
+      <member refid="class_intruder_mood_thread_1a4ca398b2c77685a25ca8983afc8bb50d" prot="public" virt="non-virtual"><scope>IntruderMoodThread</scope><name>restart</name></member>
+      <member refid="class_intruder_mood_thread_1a020deddefcdda0a02863f4e11a73dd31" prot="private" virt="virtual"><scope>IntruderMoodThread</scope><name>run</name></member>
+      <member refid="class_cpp_thread_1a1be46d1be000f41a763289300623c609" prot="public" virt="non-virtual"><scope>IntruderMoodThread</scope><name>start</name></member>
+      <member refid="class_intruder_mood_thread_1ade454d5fa7c9f6fdf3b11a8d4d6fc92d" prot="public" virt="non-virtual"><scope>IntruderMoodThread</scope><name>stop</name></member>
+      <member refid="class_intruder_mood_thread_1a44ae2cf509b7afa810c8ee861c6b1ad2" prot="public" virt="non-virtual"><scope>IntruderMoodThread</scope><name>unlock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

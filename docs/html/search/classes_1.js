@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['globals_0',['Globals',['../class_globals.html',1,'']]]
+  ['bcmgpio_0',['BcmGpio',['../class_bcm_gpio.html',1,'']]],
+  ['bcmspi_1',['BcmSpi',['../class_bcm_spi.html',1,'']]]
 ];

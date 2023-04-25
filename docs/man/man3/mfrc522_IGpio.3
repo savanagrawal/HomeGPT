@@ -1,0 +1,88 @@
+.TH "mfrc522::IGpio" 3 "Tue Apr 25 2023" "Version v.1.0" "HomeGPT" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+mfrc522::IGpio
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <igpio\&.h>\fP
+.PP
+Inherited by \fBBcmGpio\fP, and \fBSysGpio\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum class \fBValue\fP { \fBlow\fP = 0, \fBhigh\fP = 1, \fBl\fP = 0, \fBh\fP = 1 }"
+.br
+.ti -1c
+.RI "enum class \fBValue\fP { \fBlow\fP = 0, \fBhigh\fP = 1, \fBl\fP = 0, \fBh\fP = 1 }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBsetValue\fP (\fBValue\fP)=0"
+.br
+.ti -1c
+.RI "virtual \fBValue\fP \fBgetValue\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetValue\fP (\fBValue\fP)=0"
+.br
+.ti -1c
+.RI "virtual \fBValue\fP \fBgetValue\fP ()=0"
+.br
+.in -1c
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum class \fBmfrc522::IGpio::Value\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIlow \fP\fP
+.TP
+\fB\fIhigh \fP\fP
+.TP
+\fB\fIl \fP\fP
+.TP
+\fB\fIh \fP\fP
+.SS "enum class \fBmfrc522::IGpio::Value\fP\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIlow \fP\fP
+.TP
+\fB\fIhigh \fP\fP
+.TP
+\fB\fIl \fP\fP
+.TP
+\fB\fIh \fP\fP
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBValue\fP mfrc522::IGpio::getValue ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBBcmGpio\fP, and \fBSysGpio\fP\&.
+.SS "virtual \fBValue\fP mfrc522::IGpio::getValue ()\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBBcmGpio\fP, and \fBSysGpio\fP\&.
+.SS "virtual void mfrc522::IGpio::setValue (\fBValue\fP)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBBcmGpio\fP, and \fBSysGpio\fP\&.
+.SS "virtual void mfrc522::IGpio::setValue (\fBValue\fP)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBBcmGpio\fP, and \fBSysGpio\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for HomeGPT from the source code\&.

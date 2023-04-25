@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__event_handler_8cpp" xml:lang="en-US">
+<title>src/utils/EventHandler.cpp File Reference</title>
+<indexterm><primary>src/utils/EventHandler.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;EventHandler.h&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?></programlisting>Include dependency graph for EventHandler.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_event_handler_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para><formalpara><title>Author</title>
+
+<para>Savan Agrawal </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>0.1</para>
+</formalpara>
+Storing all event codes and allowing interfacing with the event managment in global </para>
+</section>
+</section>
